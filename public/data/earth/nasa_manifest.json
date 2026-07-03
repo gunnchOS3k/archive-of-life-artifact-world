@@ -1,0 +1,76 @@
+{
+  "version": "1.0.0",
+  "snapshotId": "mock-nasa-2026-07",
+  "generatedAt": "2026-07-02T00:00:00.000Z",
+  "isMockData": true,
+  "description": "Mock NASA Earth Systems layer registry — sample data for prototype. Replace with ingested Earthdata snapshots in production.",
+  "regionLayersPath": "sample_region_layers.json",
+  "layers": [
+    {
+      "id": "vegetation",
+      "name": "Vegetation",
+      "description": "Harmonized Landsat/Sentinel-2 surface reflectance and NDVI — land cover and vegetation health.",
+      "nasaProduct": "hls",
+      "gibsLayerId": "HLS_NDVI",
+      "citation": "NASA LP DAAC — Harmonized Landsat Sentinel-2 (HLS) v2.0",
+      "isMockData": true
+    },
+    {
+      "id": "fire",
+      "name": "Fire & Wildfire",
+      "description": "FIRMS active fire detections and burn scar context from MODIS/VIIRS.",
+      "nasaProduct": "firms",
+      "gibsLayerId": "MODIS_Terra_Thermal_Anomalies",
+      "citation": "NASA FIRMS — Fire Information for Resource Management System",
+      "isMockData": true
+    },
+    {
+      "id": "water",
+      "name": "Water & Wetlands",
+      "description": "Surface water extent, wetland indicators, and precipitation context.",
+      "nasaProduct": "gibs",
+      "citation": "NASA GIBS / SWOT / GRACE-FO (context layers)",
+      "isMockData": true
+    },
+    {
+      "id": "forest_structure",
+      "name": "Forest Structure",
+      "description": "GEDI lidar canopy height, cover, and vertical forest structure.",
+      "nasaProduct": "gedi",
+      "citation": "NASA GEDI — Global Ecosystem Dynamics Investigation",
+      "isMockData": true
+    },
+    {
+      "id": "ocean_biology",
+      "name": "Ocean Life",
+      "description": "Ocean Color chlorophyll, productivity blooms, and PACE-era marine biology context.",
+      "nasaProduct": "ocean_color",
+      "citation": "NASA OB.DAAC Ocean Color / PACE",
+      "isMockData": true
+    },
+    {
+      "id": "heat_drought",
+      "name": "Heat & Drought",
+      "description": "ECOSTRESS plant water stress, land surface temperature, and drought indicators.",
+      "nasaProduct": "ecostress",
+      "citation": "NASA ECOSTRESS — ECOsystem Spaceborne Thermal Radiometer Experiment",
+      "isMockData": true
+    },
+    {
+      "id": "natural_events",
+      "name": "Natural Events",
+      "description": "EONET natural event metadata — storms, eruptions, dust, ice, and ecological events.",
+      "nasaProduct": "eonet",
+      "citation": "NASA EONET — Earth Observatory Natural Event Tracker",
+      "isMockData": true
+    },
+    {
+      "id": "climate",
+      "name": "Climate",
+      "description": "NASA POWER meteorological and solar climate parameters for field planning.",
+      "nasaProduct": "power",
+      "citation": "NASA POWER — Prediction Of Worldwide Energy Resources",
+      "isMockData": true
+    }
+  ]
+}

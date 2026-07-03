@@ -17,7 +17,7 @@
         "assessed": true,
         "sourceVersion": "mock-iucn-2026-07",
         "lastUpdated": "2026-07-02",
-        "iucnTaxonId": 43484
+        "iucnTaxonId": 67130
       },
       "distribution": {
         "continents": [
@@ -29,11 +29,11 @@
         ],
         "sourceVersion": "mock-gbif-2026-07",
         "lastUpdated": "2026-07-02",
-        "gbifTaxonKey": 8478218,
+        "gbifTaxonKey": 4281479,
         "occurrenceSummaries": [
           {
             "region": "Africa",
-            "occurrenceCount": 3362
+            "occurrenceCount": 3511
           }
         ]
       },
@@ -82,6 +82,23 @@
         ],
         "whyItMatters": "Apex predators regulate herbivore populations and indicate healthy savanna ecosystems."
       },
+      "nasaLayerDependencies": [
+        {
+          "layer": "fire",
+          "product": "firms",
+          "reason": "Fire regime influences grazer distribution and predator hunting"
+        },
+        {
+          "layer": "heat_drought",
+          "product": "ecostress",
+          "reason": "Dry-season stress affects crepuscular activity patterns"
+        },
+        {
+          "layer": "climate",
+          "product": "power",
+          "reason": "Field expedition planning uses local climate baselines"
+        }
+      ],
       "provenance": [
         {
           "source": "game_authored",
@@ -90,8 +107,8 @@
           "license": "GAME-ORIGINAL",
           "citation": "Archive of Life: Artifact World — MVP authored content",
           "citationRequired": false,
-          "retrievedAt": "2026-07-03T02:18:17.374Z",
-          "lastUpdated": "2026-07-03T02:18:17.374Z",
+          "retrievedAt": "2026-07-03T02:38:57.554Z",
+          "lastUpdated": "2026-07-03T02:38:57.554Z",
           "isMockData": true
         },
         {
@@ -102,8 +119,8 @@
           "license": "MOCK-SAMPLE",
           "citation": "MOCK SAMPLE — not sourced from live API",
           "citationRequired": true,
-          "retrievedAt": "2026-07-03T02:18:17.374Z",
-          "lastUpdated": "2026-07-03T02:18:17.374Z",
+          "retrievedAt": "2026-07-03T02:38:57.554Z",
+          "lastUpdated": "2026-07-03T02:38:57.554Z",
           "isMockData": true
         }
       ]
@@ -125,7 +142,7 @@
         "assessed": true,
         "sourceVersion": "mock-iucn-2026-07",
         "lastUpdated": "2026-07-02",
-        "iucnTaxonId": 1932
+        "iucnTaxonId": 31075
       },
       "distribution": {
         "continents": [
@@ -137,11 +154,11 @@
         ],
         "sourceVersion": "mock-gbif-2026-07",
         "lastUpdated": "2026-07-02",
-        "gbifTaxonKey": 7259858,
+        "gbifTaxonKey": 4988476,
         "occurrenceSummaries": [
           {
             "region": "Africa",
-            "occurrenceCount": 700
+            "occurrenceCount": 333
           }
         ]
       },
@@ -189,6 +206,41 @@
         ],
         "whyItMatters": "Keystone species that shape landscapes and support biodiversity."
       },
+      "nasaLayerDependencies": [
+        {
+          "layer": "forest_structure",
+          "product": "gedi",
+          "reason": "Canopy structure shapes arboreal and forest-floor species niches"
+        },
+        {
+          "layer": "vegetation",
+          "product": "hls",
+          "reason": "NDVI tracks seasonal canopy and understory productivity"
+        },
+        {
+          "layer": "fire",
+          "product": "firms",
+          "reason": "Fire regime influences grazer distribution and predator hunting"
+        },
+        {
+          "layer": "heat_drought",
+          "product": "ecostress",
+          "reason": "Dry-season stress affects crepuscular activity patterns"
+        },
+        {
+          "layer": "climate",
+          "product": "power",
+          "reason": "Field expedition planning uses local climate baselines"
+        }
+      ],
+      "requiredHabitatSignals": [
+        {
+          "signal": "dense_canopy",
+          "layer": "forest_structure",
+          "required": true,
+          "description": "Requires closed or partial canopy cover"
+        }
+      ],
       "provenance": [
         {
           "source": "game_authored",
@@ -197,8 +249,8 @@
           "license": "GAME-ORIGINAL",
           "citation": "Archive of Life: Artifact World — MVP authored content",
           "citationRequired": false,
-          "retrievedAt": "2026-07-03T02:18:17.377Z",
-          "lastUpdated": "2026-07-03T02:18:17.377Z",
+          "retrievedAt": "2026-07-03T02:38:57.555Z",
+          "lastUpdated": "2026-07-03T02:38:57.555Z",
           "isMockData": true
         },
         {
@@ -209,8 +261,8 @@
           "license": "MOCK-SAMPLE",
           "citation": "MOCK SAMPLE — not sourced from live API",
           "citationRequired": true,
-          "retrievedAt": "2026-07-03T02:18:17.377Z",
-          "lastUpdated": "2026-07-03T02:18:17.377Z",
+          "retrievedAt": "2026-07-03T02:38:57.555Z",
+          "lastUpdated": "2026-07-03T02:38:57.555Z",
           "isMockData": true
         }
       ]
@@ -232,7 +284,7 @@
         "assessed": true,
         "sourceVersion": "mock-iucn-2026-07",
         "lastUpdated": "2026-07-02",
-        "iucnTaxonId": 53135
+        "iucnTaxonId": 20859
       },
       "distribution": {
         "continents": [
@@ -247,11 +299,11 @@
         ],
         "sourceVersion": "mock-gbif-2026-07",
         "lastUpdated": "2026-07-02",
-        "gbifTaxonKey": 9361997,
+        "gbifTaxonKey": 2794278,
         "occurrenceSummaries": [
           {
             "region": "North America",
-            "occurrenceCount": 2353
+            "occurrenceCount": 1106
           }
         ]
       },
@@ -299,6 +351,31 @@
         ],
         "whyItMatters": "Top predators restore balance through trophic cascades."
       },
+      "nasaLayerDependencies": [
+        {
+          "layer": "forest_structure",
+          "product": "gedi",
+          "reason": "Canopy structure shapes arboreal and forest-floor species niches"
+        },
+        {
+          "layer": "vegetation",
+          "product": "hls",
+          "reason": "NDVI tracks seasonal canopy and understory productivity"
+        },
+        {
+          "layer": "climate",
+          "product": "power",
+          "reason": "Field expedition planning uses local climate baselines"
+        }
+      ],
+      "requiredHabitatSignals": [
+        {
+          "signal": "dense_canopy",
+          "layer": "forest_structure",
+          "required": true,
+          "description": "Requires closed or partial canopy cover"
+        }
+      ],
       "provenance": [
         {
           "source": "game_authored",
@@ -307,8 +384,8 @@
           "license": "GAME-ORIGINAL",
           "citation": "Archive of Life: Artifact World — MVP authored content",
           "citationRequired": false,
-          "retrievedAt": "2026-07-03T02:18:17.377Z",
-          "lastUpdated": "2026-07-03T02:18:17.377Z",
+          "retrievedAt": "2026-07-03T02:38:57.555Z",
+          "lastUpdated": "2026-07-03T02:38:57.555Z",
           "isMockData": true
         },
         {
@@ -319,8 +396,8 @@
           "license": "MOCK-SAMPLE",
           "citation": "MOCK SAMPLE — not sourced from live API",
           "citationRequired": true,
-          "retrievedAt": "2026-07-03T02:18:17.377Z",
-          "lastUpdated": "2026-07-03T02:18:17.377Z",
+          "retrievedAt": "2026-07-03T02:38:57.555Z",
+          "lastUpdated": "2026-07-03T02:38:57.555Z",
           "isMockData": true
         }
       ]
@@ -342,7 +419,7 @@
         "assessed": true,
         "sourceVersion": "mock-iucn-2026-07",
         "lastUpdated": "2026-07-02",
-        "iucnTaxonId": 76109
+        "iucnTaxonId": 35705
       },
       "distribution": {
         "continents": [
@@ -355,11 +432,11 @@
         ],
         "sourceVersion": "mock-gbif-2026-07",
         "lastUpdated": "2026-07-02",
-        "gbifTaxonKey": 2473531,
+        "gbifTaxonKey": 9102733,
         "occurrenceSummaries": [
           {
             "region": "North America",
-            "occurrenceCount": 5084
+            "occurrenceCount": 2943
           }
         ]
       },
@@ -407,6 +484,53 @@
         ],
         "whyItMatters": "Important prey species linking forest and grassland food webs."
       },
+      "nasaLayerDependencies": [
+        {
+          "layer": "forest_structure",
+          "product": "gedi",
+          "reason": "Canopy structure shapes arboreal and forest-floor species niches"
+        },
+        {
+          "layer": "vegetation",
+          "product": "hls",
+          "reason": "NDVI tracks seasonal canopy and understory productivity"
+        },
+        {
+          "layer": "water",
+          "product": "gibs",
+          "reason": "Surface water extent critical for wetland specialists"
+        },
+        {
+          "layer": "water",
+          "product": "gibs",
+          "reason": "Breeding depends on wetland water availability"
+        },
+        {
+          "layer": "heat_drought",
+          "product": "ecostress",
+          "reason": "Temperature and moisture gate amphibian activity"
+        },
+        {
+          "layer": "climate",
+          "product": "power",
+          "reason": "Field expedition planning uses local climate baselines"
+        }
+      ],
+      "requiredHabitatSignals": [
+        {
+          "signal": "dense_canopy",
+          "layer": "forest_structure",
+          "required": true,
+          "description": "Requires closed or partial canopy cover"
+        },
+        {
+          "signal": "surface_water",
+          "layer": "water",
+          "minValue": 0.3,
+          "required": true,
+          "description": "Depends on standing water or saturated soils"
+        }
+      ],
       "provenance": [
         {
           "source": "game_authored",
@@ -415,8 +539,8 @@
           "license": "GAME-ORIGINAL",
           "citation": "Archive of Life: Artifact World — MVP authored content",
           "citationRequired": false,
-          "retrievedAt": "2026-07-03T02:18:17.377Z",
-          "lastUpdated": "2026-07-03T02:18:17.377Z",
+          "retrievedAt": "2026-07-03T02:38:57.555Z",
+          "lastUpdated": "2026-07-03T02:38:57.555Z",
           "isMockData": true
         },
         {
@@ -427,8 +551,8 @@
           "license": "MOCK-SAMPLE",
           "citation": "MOCK SAMPLE — not sourced from live API",
           "citationRequired": true,
-          "retrievedAt": "2026-07-03T02:18:17.377Z",
-          "lastUpdated": "2026-07-03T02:18:17.377Z",
+          "retrievedAt": "2026-07-03T02:38:57.555Z",
+          "lastUpdated": "2026-07-03T02:38:57.555Z",
           "isMockData": true
         }
       ]
@@ -450,7 +574,7 @@
         "assessed": true,
         "sourceVersion": "mock-iucn-2026-07",
         "lastUpdated": "2026-07-02",
-        "iucnTaxonId": 63835
+        "iucnTaxonId": 5083
       },
       "distribution": {
         "continents": [
@@ -462,11 +586,11 @@
         ],
         "sourceVersion": "mock-gbif-2026-07",
         "lastUpdated": "2026-07-02",
-        "gbifTaxonKey": 975565,
+        "gbifTaxonKey": 3908463,
         "occurrenceSummaries": [
           {
             "region": "Global oceans",
-            "occurrenceCount": 4094
+            "occurrenceCount": 2257
           }
         ]
       },
@@ -514,6 +638,32 @@
         ],
         "whyItMatters": "Indicator of ocean health; nutrient cycling through vertical migration."
       },
+      "nasaLayerDependencies": [
+        {
+          "layer": "ocean_biology",
+          "product": "ocean_color",
+          "reason": "Chlorophyll blooms drive marine prey aggregations"
+        },
+        {
+          "layer": "climate",
+          "product": "power",
+          "reason": "Coastal wind and temperature affect migration timing"
+        },
+        {
+          "layer": "climate",
+          "product": "power",
+          "reason": "Field expedition planning uses local climate baselines"
+        }
+      ],
+      "requiredHabitatSignals": [
+        {
+          "signal": "ocean_productivity",
+          "layer": "ocean_biology",
+          "minValue": 0.5,
+          "required": true,
+          "description": "Migration and foraging follow ocean productivity seasons"
+        }
+      ],
       "provenance": [
         {
           "source": "game_authored",
@@ -522,8 +672,8 @@
           "license": "GAME-ORIGINAL",
           "citation": "Archive of Life: Artifact World — MVP authored content",
           "citationRequired": false,
-          "retrievedAt": "2026-07-03T02:18:17.377Z",
-          "lastUpdated": "2026-07-03T02:18:17.377Z",
+          "retrievedAt": "2026-07-03T02:38:57.555Z",
+          "lastUpdated": "2026-07-03T02:38:57.555Z",
           "isMockData": true
         },
         {
@@ -534,8 +684,8 @@
           "license": "MOCK-SAMPLE",
           "citation": "MOCK SAMPLE — not sourced from live API",
           "citationRequired": true,
-          "retrievedAt": "2026-07-03T02:18:17.377Z",
-          "lastUpdated": "2026-07-03T02:18:17.377Z",
+          "retrievedAt": "2026-07-03T02:38:57.555Z",
+          "lastUpdated": "2026-07-03T02:38:57.555Z",
           "isMockData": true
         }
       ]
@@ -557,7 +707,7 @@
         "assessed": true,
         "sourceVersion": "mock-iucn-2026-07",
         "lastUpdated": "2026-07-02",
-        "iucnTaxonId": 58863
+        "iucnTaxonId": 5954
       },
       "distribution": {
         "continents": [
@@ -569,11 +719,11 @@
         ],
         "sourceVersion": "mock-gbif-2026-07",
         "lastUpdated": "2026-07-02",
-        "gbifTaxonKey": 6320091,
+        "gbifTaxonKey": 6727478,
         "occurrenceSummaries": [
           {
             "region": "North America",
-            "occurrenceCount": 200
+            "occurrenceCount": 2165
           }
         ]
       },
@@ -621,6 +771,31 @@
         ],
         "whyItMatters": "Umbrella species for forest conservation planning."
       },
+      "nasaLayerDependencies": [
+        {
+          "layer": "forest_structure",
+          "product": "gedi",
+          "reason": "Canopy structure shapes arboreal and forest-floor species niches"
+        },
+        {
+          "layer": "vegetation",
+          "product": "hls",
+          "reason": "NDVI tracks seasonal canopy and understory productivity"
+        },
+        {
+          "layer": "climate",
+          "product": "power",
+          "reason": "Field expedition planning uses local climate baselines"
+        }
+      ],
+      "requiredHabitatSignals": [
+        {
+          "signal": "dense_canopy",
+          "layer": "forest_structure",
+          "required": true,
+          "description": "Requires closed or partial canopy cover"
+        }
+      ],
       "provenance": [
         {
           "source": "game_authored",
@@ -629,8 +804,8 @@
           "license": "GAME-ORIGINAL",
           "citation": "Archive of Life: Artifact World — MVP authored content",
           "citationRequired": false,
-          "retrievedAt": "2026-07-03T02:18:17.377Z",
-          "lastUpdated": "2026-07-03T02:18:17.377Z",
+          "retrievedAt": "2026-07-03T02:38:57.555Z",
+          "lastUpdated": "2026-07-03T02:38:57.555Z",
           "isMockData": true
         },
         {
@@ -641,8 +816,8 @@
           "license": "MOCK-SAMPLE",
           "citation": "MOCK SAMPLE — not sourced from live API",
           "citationRequired": true,
-          "retrievedAt": "2026-07-03T02:18:17.377Z",
-          "lastUpdated": "2026-07-03T02:18:17.377Z",
+          "retrievedAt": "2026-07-03T02:38:57.555Z",
+          "lastUpdated": "2026-07-03T02:38:57.555Z",
           "isMockData": true
         }
       ]
@@ -664,7 +839,7 @@
         "assessed": true,
         "sourceVersion": "mock-iucn-2026-07",
         "lastUpdated": "2026-07-02",
-        "iucnTaxonId": 68986
+        "iucnTaxonId": 98733
       },
       "distribution": {
         "continents": [
@@ -676,11 +851,11 @@
         ],
         "sourceVersion": "mock-gbif-2026-07",
         "lastUpdated": "2026-07-02",
-        "gbifTaxonKey": 7185382,
+        "gbifTaxonKey": 5474106,
         "occurrenceSummaries": [
           {
             "region": "North America",
-            "occurrenceCount": 4002
+            "occurrenceCount": 2203
           }
         ]
       },
@@ -728,6 +903,37 @@
         ],
         "whyItMatters": "Creates wetlands that filter water and support biodiversity."
       },
+      "nasaLayerDependencies": [
+        {
+          "layer": "water",
+          "product": "gibs",
+          "reason": "Surface water extent critical for wetland specialists"
+        },
+        {
+          "layer": "water",
+          "product": "gibs",
+          "reason": "Breeding depends on wetland water availability"
+        },
+        {
+          "layer": "heat_drought",
+          "product": "ecostress",
+          "reason": "Temperature and moisture gate amphibian activity"
+        },
+        {
+          "layer": "climate",
+          "product": "power",
+          "reason": "Field expedition planning uses local climate baselines"
+        }
+      ],
+      "requiredHabitatSignals": [
+        {
+          "signal": "surface_water",
+          "layer": "water",
+          "minValue": 0.3,
+          "required": true,
+          "description": "Depends on standing water or saturated soils"
+        }
+      ],
       "provenance": [
         {
           "source": "game_authored",
@@ -736,8 +942,8 @@
           "license": "GAME-ORIGINAL",
           "citation": "Archive of Life: Artifact World — MVP authored content",
           "citationRequired": false,
-          "retrievedAt": "2026-07-03T02:18:17.377Z",
-          "lastUpdated": "2026-07-03T02:18:17.377Z",
+          "retrievedAt": "2026-07-03T02:38:57.555Z",
+          "lastUpdated": "2026-07-03T02:38:57.555Z",
           "isMockData": true
         },
         {
@@ -748,8 +954,8 @@
           "license": "MOCK-SAMPLE",
           "citation": "MOCK SAMPLE — not sourced from live API",
           "citationRequired": true,
-          "retrievedAt": "2026-07-03T02:18:17.377Z",
-          "lastUpdated": "2026-07-03T02:18:17.377Z",
+          "retrievedAt": "2026-07-03T02:38:57.555Z",
+          "lastUpdated": "2026-07-03T02:38:57.555Z",
           "isMockData": true
         }
       ]
@@ -771,7 +977,7 @@
         "assessed": true,
         "sourceVersion": "mock-iucn-2026-07",
         "lastUpdated": "2026-07-02",
-        "iucnTaxonId": 79216
+        "iucnTaxonId": 35600
       },
       "distribution": {
         "continents": [
@@ -784,11 +990,11 @@
         ],
         "sourceVersion": "mock-gbif-2026-07",
         "lastUpdated": "2026-07-02",
-        "gbifTaxonKey": 4186662,
+        "gbifTaxonKey": 8450584,
         "occurrenceSummaries": [
           {
             "region": "North America",
-            "occurrenceCount": 1648
+            "occurrenceCount": 2247
           }
         ]
       },
@@ -836,6 +1042,37 @@
         ],
         "whyItMatters": "Indicator species for clean freshwater ecosystems."
       },
+      "nasaLayerDependencies": [
+        {
+          "layer": "water",
+          "product": "gibs",
+          "reason": "Surface water extent critical for wetland specialists"
+        },
+        {
+          "layer": "water",
+          "product": "gibs",
+          "reason": "Breeding depends on wetland water availability"
+        },
+        {
+          "layer": "heat_drought",
+          "product": "ecostress",
+          "reason": "Temperature and moisture gate amphibian activity"
+        },
+        {
+          "layer": "climate",
+          "product": "power",
+          "reason": "Field expedition planning uses local climate baselines"
+        }
+      ],
+      "requiredHabitatSignals": [
+        {
+          "signal": "surface_water",
+          "layer": "water",
+          "minValue": 0.3,
+          "required": true,
+          "description": "Depends on standing water or saturated soils"
+        }
+      ],
       "provenance": [
         {
           "source": "game_authored",
@@ -844,8 +1081,8 @@
           "license": "GAME-ORIGINAL",
           "citation": "Archive of Life: Artifact World — MVP authored content",
           "citationRequired": false,
-          "retrievedAt": "2026-07-03T02:18:17.377Z",
-          "lastUpdated": "2026-07-03T02:18:17.377Z",
+          "retrievedAt": "2026-07-03T02:38:57.555Z",
+          "lastUpdated": "2026-07-03T02:38:57.555Z",
           "isMockData": true
         },
         {
@@ -856,8 +1093,8 @@
           "license": "MOCK-SAMPLE",
           "citation": "MOCK SAMPLE — not sourced from live API",
           "citationRequired": true,
-          "retrievedAt": "2026-07-03T02:18:17.377Z",
-          "lastUpdated": "2026-07-03T02:18:17.377Z",
+          "retrievedAt": "2026-07-03T02:38:57.555Z",
+          "lastUpdated": "2026-07-03T02:38:57.555Z",
           "isMockData": true
         }
       ]
@@ -879,7 +1116,7 @@
         "assessed": true,
         "sourceVersion": "mock-iucn-2026-07",
         "lastUpdated": "2026-07-02",
-        "iucnTaxonId": 20732
+        "iucnTaxonId": 2245
       },
       "distribution": {
         "continents": [
@@ -892,11 +1129,11 @@
         ],
         "sourceVersion": "mock-gbif-2026-07",
         "lastUpdated": "2026-07-02",
-        "gbifTaxonKey": 6338389,
+        "gbifTaxonKey": 9869147,
         "occurrenceSummaries": [
           {
             "region": "North Atlantic",
-            "occurrenceCount": 3580
+            "occurrenceCount": 4455
           }
         ]
       },
@@ -944,6 +1181,32 @@
         ],
         "whyItMatters": "Sentinel species for coastal pollution and fisheries health."
       },
+      "nasaLayerDependencies": [
+        {
+          "layer": "ocean_biology",
+          "product": "ocean_color",
+          "reason": "Chlorophyll blooms drive marine prey aggregations"
+        },
+        {
+          "layer": "climate",
+          "product": "power",
+          "reason": "Coastal wind and temperature affect migration timing"
+        },
+        {
+          "layer": "climate",
+          "product": "power",
+          "reason": "Field expedition planning uses local climate baselines"
+        }
+      ],
+      "requiredHabitatSignals": [
+        {
+          "signal": "ocean_productivity",
+          "layer": "ocean_biology",
+          "minValue": 0.5,
+          "required": true,
+          "description": "Migration and foraging follow ocean productivity seasons"
+        }
+      ],
       "provenance": [
         {
           "source": "game_authored",
@@ -952,8 +1215,8 @@
           "license": "GAME-ORIGINAL",
           "citation": "Archive of Life: Artifact World — MVP authored content",
           "citationRequired": false,
-          "retrievedAt": "2026-07-03T02:18:17.377Z",
-          "lastUpdated": "2026-07-03T02:18:17.377Z",
+          "retrievedAt": "2026-07-03T02:38:57.555Z",
+          "lastUpdated": "2026-07-03T02:38:57.555Z",
           "isMockData": true
         },
         {
@@ -964,8 +1227,8 @@
           "license": "MOCK-SAMPLE",
           "citation": "MOCK SAMPLE — not sourced from live API",
           "citationRequired": true,
-          "retrievedAt": "2026-07-03T02:18:17.377Z",
-          "lastUpdated": "2026-07-03T02:18:17.377Z",
+          "retrievedAt": "2026-07-03T02:38:57.555Z",
+          "lastUpdated": "2026-07-03T02:38:57.555Z",
           "isMockData": true
         }
       ]
@@ -987,7 +1250,7 @@
         "assessed": true,
         "sourceVersion": "mock-iucn-2026-07",
         "lastUpdated": "2026-07-02",
-        "iucnTaxonId": 23826
+        "iucnTaxonId": 12055
       },
       "distribution": {
         "continents": [
@@ -999,11 +1262,11 @@
         ],
         "sourceVersion": "mock-gbif-2026-07",
         "lastUpdated": "2026-07-02",
-        "gbifTaxonKey": 869525,
+        "gbifTaxonKey": 5902609,
         "occurrenceSummaries": [
           {
             "region": "Asia",
-            "occurrenceCount": 4886
+            "occurrenceCount": 2902
           }
         ]
       },
@@ -1051,6 +1314,23 @@
         ],
         "whyItMatters": "Symbol of successful species recovery through captive breeding."
       },
+      "nasaLayerDependencies": [
+        {
+          "layer": "fire",
+          "product": "firms",
+          "reason": "Fire regime influences grazer distribution and predator hunting"
+        },
+        {
+          "layer": "heat_drought",
+          "product": "ecostress",
+          "reason": "Dry-season stress affects crepuscular activity patterns"
+        },
+        {
+          "layer": "climate",
+          "product": "power",
+          "reason": "Field expedition planning uses local climate baselines"
+        }
+      ],
       "provenance": [
         {
           "source": "game_authored",
@@ -1059,8 +1339,8 @@
           "license": "GAME-ORIGINAL",
           "citation": "Archive of Life: Artifact World — MVP authored content",
           "citationRequired": false,
-          "retrievedAt": "2026-07-03T02:18:17.377Z",
-          "lastUpdated": "2026-07-03T02:18:17.377Z",
+          "retrievedAt": "2026-07-03T02:38:57.555Z",
+          "lastUpdated": "2026-07-03T02:38:57.555Z",
           "isMockData": true
         },
         {
@@ -1071,8 +1351,8 @@
           "license": "MOCK-SAMPLE",
           "citation": "MOCK SAMPLE — not sourced from live API",
           "citationRequired": true,
-          "retrievedAt": "2026-07-03T02:18:17.377Z",
-          "lastUpdated": "2026-07-03T02:18:17.377Z",
+          "retrievedAt": "2026-07-03T02:38:57.555Z",
+          "lastUpdated": "2026-07-03T02:38:57.555Z",
           "isMockData": true
         }
       ]
@@ -1094,7 +1374,7 @@
         "assessed": true,
         "sourceVersion": "mock-iucn-2026-07",
         "lastUpdated": "2026-07-02",
-        "iucnTaxonId": 67699
+        "iucnTaxonId": 76320
       },
       "distribution": {
         "continents": [
@@ -1107,11 +1387,11 @@
         ],
         "sourceVersion": "mock-gbif-2026-07",
         "lastUpdated": "2026-07-02",
-        "gbifTaxonKey": 9236329,
+        "gbifTaxonKey": 951157,
         "occurrenceSummaries": [
           {
             "region": "North America",
-            "occurrenceCount": 2576
+            "occurrenceCount": 600
           }
         ]
       },
@@ -1160,6 +1440,53 @@
         ],
         "whyItMatters": "Iconic pollinator whose decline signals habitat loss."
       },
+      "nasaLayerDependencies": [
+        {
+          "layer": "water",
+          "product": "gibs",
+          "reason": "Surface water extent critical for wetland specialists"
+        },
+        {
+          "layer": "vegetation",
+          "product": "hls",
+          "reason": "Flowering plant availability tied to vegetation health"
+        },
+        {
+          "layer": "heat_drought",
+          "product": "ecostress",
+          "reason": "Drought stress reduces nectar resources for pollinators"
+        },
+        {
+          "layer": "water",
+          "product": "gibs",
+          "reason": "Breeding depends on wetland water availability"
+        },
+        {
+          "layer": "heat_drought",
+          "product": "ecostress",
+          "reason": "Temperature and moisture gate amphibian activity"
+        },
+        {
+          "layer": "climate",
+          "product": "power",
+          "reason": "Field expedition planning uses local climate baselines"
+        }
+      ],
+      "requiredHabitatSignals": [
+        {
+          "signal": "surface_water",
+          "layer": "water",
+          "minValue": 0.3,
+          "required": true,
+          "description": "Depends on standing water or saturated soils"
+        },
+        {
+          "signal": "low_fire_activity",
+          "layer": "fire",
+          "required": false,
+          "description": "Pollinator fields benefit from low recent fire activity"
+        }
+      ],
       "provenance": [
         {
           "source": "game_authored",
@@ -1168,8 +1495,8 @@
           "license": "GAME-ORIGINAL",
           "citation": "Archive of Life: Artifact World — MVP authored content",
           "citationRequired": false,
-          "retrievedAt": "2026-07-03T02:18:17.377Z",
-          "lastUpdated": "2026-07-03T02:18:17.377Z",
+          "retrievedAt": "2026-07-03T02:38:57.555Z",
+          "lastUpdated": "2026-07-03T02:38:57.555Z",
           "isMockData": true
         },
         {
@@ -1180,8 +1507,8 @@
           "license": "MOCK-SAMPLE",
           "citation": "MOCK SAMPLE — not sourced from live API",
           "citationRequired": true,
-          "retrievedAt": "2026-07-03T02:18:17.377Z",
-          "lastUpdated": "2026-07-03T02:18:17.377Z",
+          "retrievedAt": "2026-07-03T02:38:57.555Z",
+          "lastUpdated": "2026-07-03T02:38:57.555Z",
           "isMockData": true
         }
       ]
@@ -1203,7 +1530,7 @@
         "assessed": true,
         "sourceVersion": "mock-iucn-2026-07",
         "lastUpdated": "2026-07-02",
-        "iucnTaxonId": 35868
+        "iucnTaxonId": 9930
       },
       "distribution": {
         "continents": [
@@ -1216,11 +1543,11 @@
         ],
         "sourceVersion": "mock-gbif-2026-07",
         "lastUpdated": "2026-07-02",
-        "gbifTaxonKey": 8845630,
+        "gbifTaxonKey": 2868473,
         "occurrenceSummaries": [
           {
             "region": "Global",
-            "occurrenceCount": 1721
+            "occurrenceCount": 1303
           }
         ]
       },
@@ -1268,6 +1595,47 @@
         ],
         "whyItMatters": "Essential pollinator supporting global agriculture and wild plants."
       },
+      "nasaLayerDependencies": [
+        {
+          "layer": "forest_structure",
+          "product": "gedi",
+          "reason": "Canopy structure shapes arboreal and forest-floor species niches"
+        },
+        {
+          "layer": "vegetation",
+          "product": "hls",
+          "reason": "NDVI tracks seasonal canopy and understory productivity"
+        },
+        {
+          "layer": "vegetation",
+          "product": "hls",
+          "reason": "Flowering plant availability tied to vegetation health"
+        },
+        {
+          "layer": "heat_drought",
+          "product": "ecostress",
+          "reason": "Drought stress reduces nectar resources for pollinators"
+        },
+        {
+          "layer": "climate",
+          "product": "power",
+          "reason": "Field expedition planning uses local climate baselines"
+        }
+      ],
+      "requiredHabitatSignals": [
+        {
+          "signal": "dense_canopy",
+          "layer": "forest_structure",
+          "required": true,
+          "description": "Requires closed or partial canopy cover"
+        },
+        {
+          "signal": "low_fire_activity",
+          "layer": "fire",
+          "required": false,
+          "description": "Pollinator fields benefit from low recent fire activity"
+        }
+      ],
       "provenance": [
         {
           "source": "game_authored",
@@ -1276,8 +1644,8 @@
           "license": "GAME-ORIGINAL",
           "citation": "Archive of Life: Artifact World — MVP authored content",
           "citationRequired": false,
-          "retrievedAt": "2026-07-03T02:18:17.377Z",
-          "lastUpdated": "2026-07-03T02:18:17.377Z",
+          "retrievedAt": "2026-07-03T02:38:57.555Z",
+          "lastUpdated": "2026-07-03T02:38:57.555Z",
           "isMockData": true
         },
         {
@@ -1288,8 +1656,8 @@
           "license": "MOCK-SAMPLE",
           "citation": "MOCK SAMPLE — not sourced from live API",
           "citationRequired": true,
-          "retrievedAt": "2026-07-03T02:18:17.377Z",
-          "lastUpdated": "2026-07-03T02:18:17.377Z",
+          "retrievedAt": "2026-07-03T02:38:57.555Z",
+          "lastUpdated": "2026-07-03T02:38:57.555Z",
           "isMockData": true
         }
       ]
@@ -1311,7 +1679,7 @@
         "assessed": true,
         "sourceVersion": "mock-iucn-2026-07",
         "lastUpdated": "2026-07-02",
-        "iucnTaxonId": 25135
+        "iucnTaxonId": 13269
       },
       "distribution": {
         "continents": [
@@ -1322,11 +1690,11 @@
         ],
         "sourceVersion": "mock-gbif-2026-07",
         "lastUpdated": "2026-07-02",
-        "gbifTaxonKey": 4870083,
+        "gbifTaxonKey": 6086627,
         "occurrenceSummaries": [
           {
             "region": "Europe",
-            "occurrenceCount": 4918
+            "occurrenceCount": 4031
           }
         ]
       },
@@ -1374,6 +1742,31 @@
         ],
         "whyItMatters": "Soil aerators and decomposers critical to forest health."
       },
+      "nasaLayerDependencies": [
+        {
+          "layer": "forest_structure",
+          "product": "gedi",
+          "reason": "Canopy structure shapes arboreal and forest-floor species niches"
+        },
+        {
+          "layer": "vegetation",
+          "product": "hls",
+          "reason": "NDVI tracks seasonal canopy and understory productivity"
+        },
+        {
+          "layer": "climate",
+          "product": "power",
+          "reason": "Field expedition planning uses local climate baselines"
+        }
+      ],
+      "requiredHabitatSignals": [
+        {
+          "signal": "dense_canopy",
+          "layer": "forest_structure",
+          "required": true,
+          "description": "Requires closed or partial canopy cover"
+        }
+      ],
       "provenance": [
         {
           "source": "game_authored",
@@ -1382,8 +1775,8 @@
           "license": "GAME-ORIGINAL",
           "citation": "Archive of Life: Artifact World — MVP authored content",
           "citationRequired": false,
-          "retrievedAt": "2026-07-03T02:18:17.377Z",
-          "lastUpdated": "2026-07-03T02:18:17.377Z",
+          "retrievedAt": "2026-07-03T02:38:57.555Z",
+          "lastUpdated": "2026-07-03T02:38:57.555Z",
           "isMockData": true
         },
         {
@@ -1394,8 +1787,8 @@
           "license": "MOCK-SAMPLE",
           "citation": "MOCK SAMPLE — not sourced from live API",
           "citationRequired": true,
-          "retrievedAt": "2026-07-03T02:18:17.377Z",
-          "lastUpdated": "2026-07-03T02:18:17.377Z",
+          "retrievedAt": "2026-07-03T02:38:57.555Z",
+          "lastUpdated": "2026-07-03T02:38:57.555Z",
           "isMockData": true
         }
       ]
@@ -1417,7 +1810,7 @@
         "assessed": true,
         "sourceVersion": "mock-iucn-2026-07",
         "lastUpdated": "2026-07-02",
-        "iucnTaxonId": 39784
+        "iucnTaxonId": 73353
       },
       "distribution": {
         "continents": [
@@ -1430,11 +1823,11 @@
         ],
         "sourceVersion": "mock-gbif-2026-07",
         "lastUpdated": "2026-07-02",
-        "gbifTaxonKey": 6440497,
+        "gbifTaxonKey": 7682389,
         "occurrenceSummaries": [
           {
             "region": "North America",
-            "occurrenceCount": 4230
+            "occurrenceCount": 4804
           }
         ]
       },
@@ -1482,6 +1875,37 @@
         ],
         "whyItMatters": "Controls mosquito populations; indicator of wetland health."
       },
+      "nasaLayerDependencies": [
+        {
+          "layer": "water",
+          "product": "gibs",
+          "reason": "Surface water extent critical for wetland specialists"
+        },
+        {
+          "layer": "water",
+          "product": "gibs",
+          "reason": "Breeding depends on wetland water availability"
+        },
+        {
+          "layer": "heat_drought",
+          "product": "ecostress",
+          "reason": "Temperature and moisture gate amphibian activity"
+        },
+        {
+          "layer": "climate",
+          "product": "power",
+          "reason": "Field expedition planning uses local climate baselines"
+        }
+      ],
+      "requiredHabitatSignals": [
+        {
+          "signal": "surface_water",
+          "layer": "water",
+          "minValue": 0.3,
+          "required": true,
+          "description": "Depends on standing water or saturated soils"
+        }
+      ],
       "provenance": [
         {
           "source": "game_authored",
@@ -1490,8 +1914,8 @@
           "license": "GAME-ORIGINAL",
           "citation": "Archive of Life: Artifact World — MVP authored content",
           "citationRequired": false,
-          "retrievedAt": "2026-07-03T02:18:17.377Z",
-          "lastUpdated": "2026-07-03T02:18:17.377Z",
+          "retrievedAt": "2026-07-03T02:38:57.555Z",
+          "lastUpdated": "2026-07-03T02:38:57.555Z",
           "isMockData": true
         },
         {
@@ -1502,8 +1926,8 @@
           "license": "MOCK-SAMPLE",
           "citation": "MOCK SAMPLE — not sourced from live API",
           "citationRequired": true,
-          "retrievedAt": "2026-07-03T02:18:17.377Z",
-          "lastUpdated": "2026-07-03T02:18:17.377Z",
+          "retrievedAt": "2026-07-03T02:38:57.555Z",
+          "lastUpdated": "2026-07-03T02:38:57.555Z",
           "isMockData": true
         }
       ]
@@ -1525,7 +1949,7 @@
         "assessed": true,
         "sourceVersion": "mock-iucn-2026-07",
         "lastUpdated": "2026-07-02",
-        "iucnTaxonId": 94541
+        "iucnTaxonId": 7001
       },
       "distribution": {
         "continents": [
@@ -1538,11 +1962,11 @@
         ],
         "sourceVersion": "mock-gbif-2026-07",
         "lastUpdated": "2026-07-02",
-        "gbifTaxonKey": 1257134,
+        "gbifTaxonKey": 9740401,
         "occurrenceSummaries": [
           {
             "region": "North America",
-            "occurrenceCount": 3872
+            "occurrenceCount": 4981
           }
         ]
       },
@@ -1590,6 +2014,13 @@
         ],
         "whyItMatters": "Natural pest control; teaches respect for misunderstood species."
       },
+      "nasaLayerDependencies": [
+        {
+          "layer": "climate",
+          "product": "power",
+          "reason": "Field expedition planning uses local climate baselines"
+        }
+      ],
       "provenance": [
         {
           "source": "game_authored",
@@ -1598,8 +2029,8 @@
           "license": "GAME-ORIGINAL",
           "citation": "Archive of Life: Artifact World — MVP authored content",
           "citationRequired": false,
-          "retrievedAt": "2026-07-03T02:18:17.377Z",
-          "lastUpdated": "2026-07-03T02:18:17.377Z",
+          "retrievedAt": "2026-07-03T02:38:57.555Z",
+          "lastUpdated": "2026-07-03T02:38:57.555Z",
           "isMockData": true
         },
         {
@@ -1610,8 +2041,8 @@
           "license": "MOCK-SAMPLE",
           "citation": "MOCK SAMPLE — not sourced from live API",
           "citationRequired": true,
-          "retrievedAt": "2026-07-03T02:18:17.377Z",
-          "lastUpdated": "2026-07-03T02:18:17.377Z",
+          "retrievedAt": "2026-07-03T02:38:57.555Z",
+          "lastUpdated": "2026-07-03T02:38:57.555Z",
           "isMockData": true
         }
       ]
@@ -1633,7 +2064,7 @@
         "assessed": true,
         "sourceVersion": "mock-iucn-2026-07",
         "lastUpdated": "2026-07-02",
-        "iucnTaxonId": 54854
+        "iucnTaxonId": 59270
       },
       "distribution": {
         "continents": [
@@ -1645,11 +2076,11 @@
         ],
         "sourceVersion": "mock-gbif-2026-07",
         "lastUpdated": "2026-07-02",
-        "gbifTaxonKey": 7054582,
+        "gbifTaxonKey": 8476324,
         "occurrenceSummaries": [
           {
             "region": "Central America",
-            "occurrenceCount": 981
+            "occurrenceCount": 1857
           }
         ]
       },
@@ -1697,6 +2128,47 @@
         ],
         "whyItMatters": "Decomposer larvae recycle rainforest nutrients."
       },
+      "nasaLayerDependencies": [
+        {
+          "layer": "forest_structure",
+          "product": "gedi",
+          "reason": "Canopy structure shapes arboreal and forest-floor species niches"
+        },
+        {
+          "layer": "vegetation",
+          "product": "hls",
+          "reason": "NDVI tracks seasonal canopy and understory productivity"
+        },
+        {
+          "layer": "vegetation",
+          "product": "hls",
+          "reason": "Flowering plant availability tied to vegetation health"
+        },
+        {
+          "layer": "heat_drought",
+          "product": "ecostress",
+          "reason": "Drought stress reduces nectar resources for pollinators"
+        },
+        {
+          "layer": "climate",
+          "product": "power",
+          "reason": "Field expedition planning uses local climate baselines"
+        }
+      ],
+      "requiredHabitatSignals": [
+        {
+          "signal": "dense_canopy",
+          "layer": "forest_structure",
+          "required": true,
+          "description": "Requires closed or partial canopy cover"
+        },
+        {
+          "signal": "low_fire_activity",
+          "layer": "fire",
+          "required": false,
+          "description": "Pollinator fields benefit from low recent fire activity"
+        }
+      ],
       "provenance": [
         {
           "source": "game_authored",
@@ -1705,8 +2177,8 @@
           "license": "GAME-ORIGINAL",
           "citation": "Archive of Life: Artifact World — MVP authored content",
           "citationRequired": false,
-          "retrievedAt": "2026-07-03T02:18:17.377Z",
-          "lastUpdated": "2026-07-03T02:18:17.377Z",
+          "retrievedAt": "2026-07-03T02:38:57.555Z",
+          "lastUpdated": "2026-07-03T02:38:57.555Z",
           "isMockData": true
         },
         {
@@ -1717,8 +2189,8 @@
           "license": "MOCK-SAMPLE",
           "citation": "MOCK SAMPLE — not sourced from live API",
           "citationRequired": true,
-          "retrievedAt": "2026-07-03T02:18:17.377Z",
-          "lastUpdated": "2026-07-03T02:18:17.377Z",
+          "retrievedAt": "2026-07-03T02:38:57.555Z",
+          "lastUpdated": "2026-07-03T02:38:57.555Z",
           "isMockData": true
         }
       ]
@@ -1740,7 +2212,7 @@
         "assessed": true,
         "sourceVersion": "mock-iucn-2026-07",
         "lastUpdated": "2026-07-02",
-        "iucnTaxonId": 69961
+        "iucnTaxonId": 9032
       },
       "distribution": {
         "continents": [
@@ -1753,11 +2225,11 @@
         ],
         "sourceVersion": "mock-gbif-2026-07",
         "lastUpdated": "2026-07-02",
-        "gbifTaxonKey": 9753991,
+        "gbifTaxonKey": 3833250,
         "occurrenceSummaries": [
           {
             "region": "Europe",
-            "occurrenceCount": 4707
+            "occurrenceCount": 4071
           }
         ]
       },
@@ -1805,6 +2277,37 @@
         ],
         "whyItMatters": "Top aerial predator in pond ecosystems."
       },
+      "nasaLayerDependencies": [
+        {
+          "layer": "water",
+          "product": "gibs",
+          "reason": "Surface water extent critical for wetland specialists"
+        },
+        {
+          "layer": "water",
+          "product": "gibs",
+          "reason": "Breeding depends on wetland water availability"
+        },
+        {
+          "layer": "heat_drought",
+          "product": "ecostress",
+          "reason": "Temperature and moisture gate amphibian activity"
+        },
+        {
+          "layer": "climate",
+          "product": "power",
+          "reason": "Field expedition planning uses local climate baselines"
+        }
+      ],
+      "requiredHabitatSignals": [
+        {
+          "signal": "surface_water",
+          "layer": "water",
+          "minValue": 0.3,
+          "required": true,
+          "description": "Depends on standing water or saturated soils"
+        }
+      ],
       "provenance": [
         {
           "source": "game_authored",
@@ -1813,8 +2316,8 @@
           "license": "GAME-ORIGINAL",
           "citation": "Archive of Life: Artifact World — MVP authored content",
           "citationRequired": false,
-          "retrievedAt": "2026-07-03T02:18:17.377Z",
-          "lastUpdated": "2026-07-03T02:18:17.377Z",
+          "retrievedAt": "2026-07-03T02:38:57.555Z",
+          "lastUpdated": "2026-07-03T02:38:57.555Z",
           "isMockData": true
         },
         {
@@ -1825,8 +2328,8 @@
           "license": "MOCK-SAMPLE",
           "citation": "MOCK SAMPLE — not sourced from live API",
           "citationRequired": true,
-          "retrievedAt": "2026-07-03T02:18:17.377Z",
-          "lastUpdated": "2026-07-03T02:18:17.377Z",
+          "retrievedAt": "2026-07-03T02:38:57.555Z",
+          "lastUpdated": "2026-07-03T02:38:57.555Z",
           "isMockData": true
         }
       ]
@@ -1848,7 +2351,7 @@
         "assessed": true,
         "sourceVersion": "mock-iucn-2026-07",
         "lastUpdated": "2026-07-02",
-        "iucnTaxonId": 44921
+        "iucnTaxonId": 39590
       },
       "distribution": {
         "continents": [
@@ -1861,11 +2364,11 @@
         ],
         "sourceVersion": "mock-gbif-2026-07",
         "lastUpdated": "2026-07-02",
-        "gbifTaxonKey": 9065989,
+        "gbifTaxonKey": 2294867,
         "occurrenceSummaries": [
           {
             "region": "Europe",
-            "occurrenceCount": 3474
+            "occurrenceCount": 2325
           }
         ]
       },
@@ -1913,6 +2416,47 @@
         ],
         "whyItMatters": "Critical wild pollinator for tomatoes, blueberries, and wildflowers."
       },
+      "nasaLayerDependencies": [
+        {
+          "layer": "forest_structure",
+          "product": "gedi",
+          "reason": "Canopy structure shapes arboreal and forest-floor species niches"
+        },
+        {
+          "layer": "vegetation",
+          "product": "hls",
+          "reason": "NDVI tracks seasonal canopy and understory productivity"
+        },
+        {
+          "layer": "vegetation",
+          "product": "hls",
+          "reason": "Flowering plant availability tied to vegetation health"
+        },
+        {
+          "layer": "heat_drought",
+          "product": "ecostress",
+          "reason": "Drought stress reduces nectar resources for pollinators"
+        },
+        {
+          "layer": "climate",
+          "product": "power",
+          "reason": "Field expedition planning uses local climate baselines"
+        }
+      ],
+      "requiredHabitatSignals": [
+        {
+          "signal": "dense_canopy",
+          "layer": "forest_structure",
+          "required": true,
+          "description": "Requires closed or partial canopy cover"
+        },
+        {
+          "signal": "low_fire_activity",
+          "layer": "fire",
+          "required": false,
+          "description": "Pollinator fields benefit from low recent fire activity"
+        }
+      ],
       "provenance": [
         {
           "source": "game_authored",
@@ -1921,8 +2465,8 @@
           "license": "GAME-ORIGINAL",
           "citation": "Archive of Life: Artifact World — MVP authored content",
           "citationRequired": false,
-          "retrievedAt": "2026-07-03T02:18:17.377Z",
-          "lastUpdated": "2026-07-03T02:18:17.377Z",
+          "retrievedAt": "2026-07-03T02:38:57.555Z",
+          "lastUpdated": "2026-07-03T02:38:57.555Z",
           "isMockData": true
         },
         {
@@ -1933,8 +2477,8 @@
           "license": "MOCK-SAMPLE",
           "citation": "MOCK SAMPLE — not sourced from live API",
           "citationRequired": true,
-          "retrievedAt": "2026-07-03T02:18:17.377Z",
-          "lastUpdated": "2026-07-03T02:18:17.377Z",
+          "retrievedAt": "2026-07-03T02:38:57.555Z",
+          "lastUpdated": "2026-07-03T02:38:57.555Z",
           "isMockData": true
         }
       ]
@@ -1956,7 +2500,7 @@
         "assessed": true,
         "sourceVersion": "mock-iucn-2026-07",
         "lastUpdated": "2026-07-02",
-        "iucnTaxonId": 58335
+        "iucnTaxonId": 81140
       },
       "distribution": {
         "continents": [
@@ -1967,11 +2511,11 @@
         ],
         "sourceVersion": "mock-gbif-2026-07",
         "lastUpdated": "2026-07-02",
-        "gbifTaxonKey": 32334,
+        "gbifTaxonKey": 7285321,
         "occurrenceSummaries": [
           {
             "region": "South America",
-            "occurrenceCount": 4574
+            "occurrenceCount": 1445
           }
         ]
       },
@@ -2019,6 +2563,13 @@
         ],
         "whyItMatters": "Controls insect populations on rainforest floor."
       },
+      "nasaLayerDependencies": [
+        {
+          "layer": "climate",
+          "product": "power",
+          "reason": "Field expedition planning uses local climate baselines"
+        }
+      ],
       "provenance": [
         {
           "source": "game_authored",
@@ -2027,8 +2578,8 @@
           "license": "GAME-ORIGINAL",
           "citation": "Archive of Life: Artifact World — MVP authored content",
           "citationRequired": false,
-          "retrievedAt": "2026-07-03T02:18:17.377Z",
-          "lastUpdated": "2026-07-03T02:18:17.377Z",
+          "retrievedAt": "2026-07-03T02:38:57.555Z",
+          "lastUpdated": "2026-07-03T02:38:57.555Z",
           "isMockData": true
         },
         {
@@ -2039,8 +2590,8 @@
           "license": "MOCK-SAMPLE",
           "citation": "MOCK SAMPLE — not sourced from live API",
           "citationRequired": true,
-          "retrievedAt": "2026-07-03T02:18:17.377Z",
-          "lastUpdated": "2026-07-03T02:18:17.377Z",
+          "retrievedAt": "2026-07-03T02:38:57.555Z",
+          "lastUpdated": "2026-07-03T02:38:57.555Z",
           "isMockData": true
         }
       ]
@@ -2062,7 +2613,7 @@
         "assessed": true,
         "sourceVersion": "mock-iucn-2026-07",
         "lastUpdated": "2026-07-02",
-        "iucnTaxonId": 28925
+        "iucnTaxonId": 28498
       },
       "distribution": {
         "continents": [
@@ -2074,11 +2625,11 @@
         ],
         "sourceVersion": "mock-gbif-2026-07",
         "lastUpdated": "2026-07-02",
-        "gbifTaxonKey": 4272153,
+        "gbifTaxonKey": 2296713,
         "occurrenceSummaries": [
           {
             "region": "Africa",
-            "occurrenceCount": 2021
+            "occurrenceCount": 247
           }
         ]
       },
@@ -2126,6 +2677,23 @@
         ],
         "whyItMatters": "Recycles organic matter in tropical ecosystems."
       },
+      "nasaLayerDependencies": [
+        {
+          "layer": "fire",
+          "product": "firms",
+          "reason": "Fire regime influences grazer distribution and predator hunting"
+        },
+        {
+          "layer": "heat_drought",
+          "product": "ecostress",
+          "reason": "Dry-season stress affects crepuscular activity patterns"
+        },
+        {
+          "layer": "climate",
+          "product": "power",
+          "reason": "Field expedition planning uses local climate baselines"
+        }
+      ],
       "provenance": [
         {
           "source": "game_authored",
@@ -2134,8 +2702,8 @@
           "license": "GAME-ORIGINAL",
           "citation": "Archive of Life: Artifact World — MVP authored content",
           "citationRequired": false,
-          "retrievedAt": "2026-07-03T02:18:17.377Z",
-          "lastUpdated": "2026-07-03T02:18:17.377Z",
+          "retrievedAt": "2026-07-03T02:38:57.555Z",
+          "lastUpdated": "2026-07-03T02:38:57.555Z",
           "isMockData": true
         },
         {
@@ -2146,8 +2714,8 @@
           "license": "MOCK-SAMPLE",
           "citation": "MOCK SAMPLE — not sourced from live API",
           "citationRequired": true,
-          "retrievedAt": "2026-07-03T02:18:17.377Z",
-          "lastUpdated": "2026-07-03T02:18:17.377Z",
+          "retrievedAt": "2026-07-03T02:38:57.555Z",
+          "lastUpdated": "2026-07-03T02:38:57.555Z",
           "isMockData": true
         }
       ]
@@ -2169,7 +2737,7 @@
         "assessed": true,
         "sourceVersion": "mock-iucn-2026-07",
         "lastUpdated": "2026-07-02",
-        "iucnTaxonId": 27123
+        "iucnTaxonId": 24745
       },
       "distribution": {
         "continents": [
@@ -2182,11 +2750,11 @@
         ],
         "sourceVersion": "mock-gbif-2026-07",
         "lastUpdated": "2026-07-02",
-        "gbifTaxonKey": 8963195,
+        "gbifTaxonKey": 3269061,
         "occurrenceSummaries": [
           {
             "region": "Eurasia",
-            "occurrenceCount": 2661
+            "occurrenceCount": 3692
           }
         ]
       },
@@ -2201,7 +2769,7 @@
         "livingRelatives": [
           "Asian Elephant"
         ],
-        "paleobiodbTaxonNo": 27159,
+        "paleobiodbTaxonNo": 567490,
         "sourceVersion": "mock-pbdb-2026-07",
         "lastUpdated": "2026-07-02"
       },
@@ -2258,6 +2826,18 @@
           "Asian Elephant"
         ]
       },
+      "nasaLayerDependencies": [
+        {
+          "layer": "natural_events",
+          "product": "eonet",
+          "reason": "Paleoenvironmental context for extinction events"
+        },
+        {
+          "layer": "climate",
+          "product": "power",
+          "reason": "Field expedition planning uses local climate baselines"
+        }
+      ],
       "provenance": [
         {
           "source": "game_authored",
@@ -2266,20 +2846,20 @@
           "license": "GAME-ORIGINAL",
           "citation": "Archive of Life: Artifact World — MVP authored content",
           "citationRequired": false,
-          "retrievedAt": "2026-07-03T02:18:17.377Z",
-          "lastUpdated": "2026-07-03T02:18:17.377Z",
+          "retrievedAt": "2026-07-03T02:38:57.555Z",
+          "lastUpdated": "2026-07-03T02:38:57.555Z",
           "isMockData": true
         },
         {
           "source": "paleobiodb",
           "sourceVersion": "mock-sample-2026-07",
           "sourceRecordId": "MOCK-mammuthus_primigenius",
-          "paleobiodbTaxonNo": 613430,
+          "paleobiodbTaxonNo": 824319,
           "license": "MOCK-SAMPLE",
           "citation": "MOCK SAMPLE — not sourced from live API",
           "citationRequired": true,
-          "retrievedAt": "2026-07-03T02:18:17.377Z",
-          "lastUpdated": "2026-07-03T02:18:17.377Z",
+          "retrievedAt": "2026-07-03T02:38:57.555Z",
+          "lastUpdated": "2026-07-03T02:38:57.555Z",
           "isMockData": true
         }
       ]
@@ -2301,7 +2881,7 @@
         "assessed": true,
         "sourceVersion": "mock-iucn-2026-07",
         "lastUpdated": "2026-07-02",
-        "iucnTaxonId": 52530
+        "iucnTaxonId": 98317
       },
       "distribution": {
         "continents": [
@@ -2313,11 +2893,11 @@
         ],
         "sourceVersion": "mock-gbif-2026-07",
         "lastUpdated": "2026-07-02",
-        "gbifTaxonKey": 9271524,
+        "gbifTaxonKey": 3669594,
         "occurrenceSummaries": [
           {
             "region": "North America",
-            "occurrenceCount": 2420
+            "occurrenceCount": 2650
           }
         ]
       },
@@ -2333,7 +2913,7 @@
           "Chickens",
           "All birds"
         ],
-        "paleobiodbTaxonNo": 117956,
+        "paleobiodbTaxonNo": 117444,
         "sourceVersion": "mock-pbdb-2026-07",
         "lastUpdated": "2026-07-02"
       },
@@ -2391,6 +2971,36 @@
           "All birds"
         ]
       },
+      "nasaLayerDependencies": [
+        {
+          "layer": "forest_structure",
+          "product": "gedi",
+          "reason": "Canopy structure shapes arboreal and forest-floor species niches"
+        },
+        {
+          "layer": "vegetation",
+          "product": "hls",
+          "reason": "NDVI tracks seasonal canopy and understory productivity"
+        },
+        {
+          "layer": "natural_events",
+          "product": "eonet",
+          "reason": "Paleoenvironmental context for extinction events"
+        },
+        {
+          "layer": "climate",
+          "product": "power",
+          "reason": "Field expedition planning uses local climate baselines"
+        }
+      ],
+      "requiredHabitatSignals": [
+        {
+          "signal": "dense_canopy",
+          "layer": "forest_structure",
+          "required": true,
+          "description": "Requires closed or partial canopy cover"
+        }
+      ],
       "provenance": [
         {
           "source": "game_authored",
@@ -2399,20 +3009,20 @@
           "license": "GAME-ORIGINAL",
           "citation": "Archive of Life: Artifact World — MVP authored content",
           "citationRequired": false,
-          "retrievedAt": "2026-07-03T02:18:17.377Z",
-          "lastUpdated": "2026-07-03T02:18:17.377Z",
+          "retrievedAt": "2026-07-03T02:38:57.555Z",
+          "lastUpdated": "2026-07-03T02:38:57.555Z",
           "isMockData": true
         },
         {
           "source": "paleobiodb",
           "sourceVersion": "mock-sample-2026-07",
           "sourceRecordId": "MOCK-tyrannosaurus_rex",
-          "paleobiodbTaxonNo": 565134,
+          "paleobiodbTaxonNo": 54885,
           "license": "MOCK-SAMPLE",
           "citation": "MOCK SAMPLE — not sourced from live API",
           "citationRequired": true,
-          "retrievedAt": "2026-07-03T02:18:17.377Z",
-          "lastUpdated": "2026-07-03T02:18:17.377Z",
+          "retrievedAt": "2026-07-03T02:38:57.555Z",
+          "lastUpdated": "2026-07-03T02:38:57.555Z",
           "isMockData": true
         }
       ]
@@ -2434,7 +3044,7 @@
         "assessed": true,
         "sourceVersion": "mock-iucn-2026-07",
         "lastUpdated": "2026-07-02",
-        "iucnTaxonId": 71725
+        "iucnTaxonId": 54617
       },
       "distribution": {
         "continents": [
@@ -2445,11 +3055,11 @@
         ],
         "sourceVersion": "mock-gbif-2026-07",
         "lastUpdated": "2026-07-02",
-        "gbifTaxonKey": 6322762,
+        "gbifTaxonKey": 3460941,
         "occurrenceSummaries": [
           {
             "region": "Global ancient oceans",
-            "occurrenceCount": 819
+            "occurrenceCount": 552
           }
         ]
       },
@@ -2465,7 +3075,7 @@
           "Horseshoe crabs",
           "Arachnids"
         ],
-        "paleobiodbTaxonNo": 344792,
+        "paleobiodbTaxonNo": 380829,
         "sourceVersion": "mock-pbdb-2026-07",
         "lastUpdated": "2026-07-02"
       },
@@ -2522,6 +3132,18 @@
           "Arachnids"
         ]
       },
+      "nasaLayerDependencies": [
+        {
+          "layer": "natural_events",
+          "product": "eonet",
+          "reason": "Paleoenvironmental context for extinction events"
+        },
+        {
+          "layer": "climate",
+          "product": "power",
+          "reason": "Field expedition planning uses local climate baselines"
+        }
+      ],
       "provenance": [
         {
           "source": "game_authored",
@@ -2530,20 +3152,20 @@
           "license": "GAME-ORIGINAL",
           "citation": "Archive of Life: Artifact World — MVP authored content",
           "citationRequired": false,
-          "retrievedAt": "2026-07-03T02:18:17.377Z",
-          "lastUpdated": "2026-07-03T02:18:17.377Z",
+          "retrievedAt": "2026-07-03T02:38:57.555Z",
+          "lastUpdated": "2026-07-03T02:38:57.555Z",
           "isMockData": true
         },
         {
           "source": "paleobiodb",
           "sourceVersion": "mock-sample-2026-07",
           "sourceRecordId": "MOCK-trilobita_order",
-          "paleobiodbTaxonNo": 754744,
+          "paleobiodbTaxonNo": 85457,
           "license": "MOCK-SAMPLE",
           "citation": "MOCK SAMPLE — not sourced from live API",
           "citationRequired": true,
-          "retrievedAt": "2026-07-03T02:18:17.377Z",
-          "lastUpdated": "2026-07-03T02:18:17.377Z",
+          "retrievedAt": "2026-07-03T02:38:57.555Z",
+          "lastUpdated": "2026-07-03T02:38:57.555Z",
           "isMockData": true
         }
       ]

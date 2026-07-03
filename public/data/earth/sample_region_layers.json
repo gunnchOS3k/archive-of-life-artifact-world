@@ -1,0 +1,73 @@
+{
+  "snapshotId": "mock-nasa-2026-07",
+  "isMockData": true,
+  "description": "MOCK SAMPLE — regional NASA Earth Systems layer summaries for gameplay prototype",
+  "regions": {
+    "museum": {
+      "regionId": "museum",
+      "vegetation": { "ndvi": 0.55, "ndviLabel": "Moderate green", "trend": "stable", "summary": "Urban-green mosaic around the museum grounds." },
+      "fire": { "activeFires": 0, "recentBurnScar": false, "firmsSource": "MOCK-VIIRS", "summary": "No active fires near the hub." },
+      "water": { "surfaceWaterPct": 8, "wetlandIndex": 0.3, "precipitationMm": 42, "summary": "Managed ponds and nearby river corridor." },
+      "forest_structure": { "canopyHeightM": 12, "canopyCoverPct": 35, "summary": "Mixed ornamental and remnant woodland canopy." },
+      "ocean_biology": { "chlorophyllMgM3": 0, "productivityIndex": 0, "bloomDetected": false, "summary": "Inland hub — ocean layers available for expedition planning." },
+      "heat_drought": { "landSurfaceTempC": 24, "evapotranspirationStress": 0.2, "droughtIndex": 0.15, "ecostressAlert": false, "summary": "Mild conditions at the Archive campus." },
+      "natural_events": { "activeEvents": [], "summary": "No active EONET events at hub coordinates." },
+      "climate": { "avgTempC": 18, "humidityPct": 62, "solarRadiation": 4.8, "windSpeedMs": 2.1, "powerSource": "MOCK-NASA-POWER", "summary": "Temperate museum climate baseline." }
+    },
+    "savanna": {
+      "regionId": "savanna",
+      "vegetation": { "ndvi": 0.42, "ndviLabel": "Grassland-savanna", "trend": "decreasing", "hlsSceneDate": "2026-06-15", "summary": "Seasonal browning — late dry season reduces herbaceous cover." },
+      "fire": { "activeFires": 4, "fireRadiativePower": 12.5, "recentBurnScar": true, "firmsSource": "MOCK-VIIRS", "summary": "Active fire fronts on the eastern range — pride territories shifting." },
+      "water": { "surfaceWaterPct": 3, "wetlandIndex": 0.15, "precipitationMm": 18, "summary": "Waterholes contracting; megafauna concentrating at remaining pools." },
+      "forest_structure": { "canopyHeightM": 8, "canopyCoverPct": 18, "biomassEstimate": "low woodland patches", "summary": "Scattered acacia woodland — low canopy except along riparian strips." },
+      "ocean_biology": { "chlorophyllMgM3": 0, "productivityIndex": 0, "bloomDetected": false, "summary": "Terrestrial region — ocean data not applicable." },
+      "heat_drought": { "landSurfaceTempC": 38, "evapotranspirationStress": 0.72, "droughtIndex": 0.58, "ecostressAlert": true, "summary": "ECOSTRESS-style stress elevated — grazers range farther for forage." },
+      "natural_events": { "activeEvents": [{ "id": "eonet-mock-001", "title": "Savanna dry-season dust plume", "category": "Dust and Haze", "date": "2026-06-28", "eonetId": "MOCK-EONET-001", "summary": "Aeolian dust reducing visibility over grassland." }], "summary": "1 active dust event affecting observation conditions." },
+      "climate": { "avgTempC": 28, "humidityPct": 45, "solarRadiation": 6.9, "windSpeedMs": 4.2, "powerSource": "MOCK-NASA-POWER", "summary": "Hot, dry seasonal climate — crepuscular species most active." }
+    },
+    "forest": {
+      "regionId": "forest",
+      "vegetation": { "ndvi": 0.78, "ndviLabel": "Dense forest", "trend": "stable", "hlsSceneDate": "2026-06-20", "summary": "High NDVI — closed canopy temperate forest in peak leaf season." },
+      "fire": { "activeFires": 0, "recentBurnScar": false, "firmsSource": "MOCK-VIIRS", "summary": "No active fires — fuel moisture adequate." },
+      "water": { "surfaceWaterPct": 12, "wetlandIndex": 0.55, "precipitationMm": 95, "summary": "Streams and vernal pools support amphibian breeding." },
+      "forest_structure": { "canopyHeightM": 28, "canopyCoverPct": 82, "gediFootprint": "MOCK-GEDI", "summary": "GEDI-style tall canopy — multi-layer structure supports diverse guilds." },
+      "ocean_biology": { "chlorophyllMgM3": 0, "productivityIndex": 0, "bloomDetected": false, "summary": "Terrestrial region." },
+      "heat_drought": { "landSurfaceTempC": 22, "evapotranspirationStress": 0.18, "droughtIndex": 0.08, "ecostressAlert": false, "summary": "Low plant water stress under shaded canopy." },
+      "natural_events": { "activeEvents": [], "summary": "No major natural events." },
+      "climate": { "avgTempC": 14, "humidityPct": 78, "solarRadiation": 3.9, "windSpeedMs": 1.8, "powerSource": "MOCK-NASA-POWER", "summary": "Cool, humid forest microclimate." }
+    },
+    "wetland": {
+      "regionId": "wetland",
+      "vegetation": { "ndvi": 0.65, "ndviLabel": "Emergent wetland", "trend": "increasing", "summary": "Expanding emergent vegetation along marsh margins." },
+      "fire": { "activeFires": 0, "recentBurnScar": false, "firmsSource": "MOCK-VIIRS", "summary": "Fire risk low due to high soil moisture." },
+      "water": { "surfaceWaterPct": 48, "wetlandIndex": 0.88, "precipitationMm": 110, "summary": "High surface water — critical for beaver engineering and odonates." },
+      "forest_structure": { "canopyHeightM": 14, "canopyCoverPct": 40, "summary": "Riparian gallery forest with open marsh matrix." },
+      "ocean_biology": { "chlorophyllMgM3": 0, "productivityIndex": 0, "bloomDetected": false, "summary": "Terrestrial wetland." },
+      "heat_drought": { "landSurfaceTempC": 20, "evapotranspirationStress": 0.12, "droughtIndex": 0.05, "ecostressAlert": false, "summary": "Ample water availability — low drought stress." },
+      "natural_events": { "activeEvents": [{ "id": "eonet-mock-002", "title": "Spring flooding event", "category": "Floods", "date": "2026-05-10", "summary": "Seasonal high water expanding wetland footprint." }], "summary": "Recent flood event reshaped shorelines." },
+      "climate": { "avgTempC": 16, "humidityPct": 85, "solarRadiation": 4.2, "windSpeedMs": 2.5, "powerSource": "MOCK-NASA-POWER", "summary": "Humid continental wetland climate." }
+    },
+    "coastal": {
+      "regionId": "coastal",
+      "vegetation": { "ndvi": 0.35, "ndviLabel": "Coastal scrub", "trend": "stable", "summary": "Salt-tolerant coastal vegetation mosaic." },
+      "fire": { "activeFires": 0, "recentBurnScar": false, "firmsSource": "MOCK-VIIRS", "summary": "Low fire risk on rocky coast." },
+      "water": { "surfaceWaterPct": 95, "wetlandIndex": 0.2, "precipitationMm": 55, "summary": "Marine-dominated water context." },
+      "forest_structure": { "canopyHeightM": 6, "canopyCoverPct": 12, "summary": "Wind-pruned coastal scrub — low structure." },
+      "ocean_biology": { "chlorophyllMgM3": 1.8, "productivityIndex": 0.82, "bloomDetected": true, "seaSurfaceTempC": 14.2, "summary": "Ocean Color bloom detected — krill and baitfish aggregating; whale feeding opportunity." },
+      "heat_drought": { "landSurfaceTempC": 19, "evapotranspirationStress": 0.25, "droughtIndex": 0.1, "ecostressAlert": false, "summary": "Marine-moderated temperatures." },
+      "natural_events": { "activeEvents": [{ "id": "eonet-mock-003", "title": "Coastal phytoplankton bloom", "category": "Sea and Lake Ice", "date": "2026-06-25", "summary": "Satellite-detected chlorophyll anomaly offshore." }], "summary": "Active ocean bloom event linked to marine mammal foraging." },
+      "climate": { "avgTempC": 12, "humidityPct": 72, "solarRadiation": 5.1, "windSpeedMs": 6.8, "powerSource": "MOCK-NASA-POWER", "summary": "Cool coastal climate with strong onshore winds." }
+    },
+    "fossil_site": {
+      "regionId": "fossil_site",
+      "vegetation": { "ndvi": 0.22, "ndviLabel": "Arid badlands", "trend": "stable", "summary": "Sparse vegetation on exposed sedimentary strata." },
+      "fire": { "activeFires": 0, "recentBurnScar": false, "firmsSource": "MOCK-VIIRS", "summary": "Minimal fuel load." },
+      "water": { "surfaceWaterPct": 1, "wetlandIndex": 0.05, "precipitationMm": 8, "summary": "Arid excavation site — flash flood risk only." },
+      "forest_structure": { "canopyHeightM": 2, "canopyCoverPct": 3, "summary": "Essentially open terrain." },
+      "ocean_biology": { "chlorophyllMgM3": 0, "productivityIndex": 0, "bloomDetected": false, "summary": "Paleoenvironment reconstruction focus — not modern ocean." },
+      "heat_drought": { "landSurfaceTempC": 41, "evapotranspirationStress": 0.85, "droughtIndex": 0.72, "ecostressAlert": true, "summary": "High heat stress — dig teams work early morning hours." },
+      "natural_events": { "activeEvents": [], "summary": "Stable geological context." },
+      "climate": { "avgTempC": 26, "humidityPct": 22, "solarRadiation": 7.2, "windSpeedMs": 5.5, "powerSource": "MOCK-NASA-POWER", "summary": "Arid continental climate ideal for fossil exposure." }
+    }
+  }
+}

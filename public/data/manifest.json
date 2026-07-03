@@ -1,7 +1,7 @@
 {
   "snapshotId": "sample-2026-07",
   "version": "2.0.0",
-  "generatedAt": "2026-07-03T02:18:17.380Z",
+  "generatedAt": "2026-07-03T02:38:57.559Z",
   "description": "Sample biodiversity snapshot — mock provenance overlays for pipeline demonstration",
   "bundles": {
     "heroSpecies": {
@@ -37,7 +37,7 @@
     "quests": {
       "path": "bundles/quests.json",
       "kind": "game_config",
-      "recordCount": 7
+      "recordCount": 10
     },
     "traits": {
       "path": "bundles/traits.json",

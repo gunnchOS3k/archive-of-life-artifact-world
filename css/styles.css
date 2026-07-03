@@ -759,3 +759,82 @@ body {
   font-size: 0.75rem;
   margin-top: 0.25rem;
 }
+
+/* Earth Layer Console */
+.panel-earth { width: min(92vw, 720px); }
+
+.earth-panel-body { display: flex; flex-direction: column; gap: 0.75rem; }
+
+.earth-mock-banner {
+  background: rgba(212, 160, 23, 0.12);
+  border: 1px solid var(--accent-gold);
+  border-radius: 8px;
+  padding: 0.5rem 0.75rem;
+  font-size: 0.8rem;
+}
+
+.earth-region-label {
+  font-size: 0.9rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.earth-layer-tabs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem;
+}
+
+.earth-tab {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  color: var(--text-secondary);
+  padding: 0.35rem 0.65rem;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 0.78rem;
+}
+
+.earth-tab.active, .earth-tab:hover {
+  border-color: var(--accent-blue);
+  color: var(--text-primary);
+  background: rgba(91, 155, 213, 0.15);
+}
+
+.earth-layer-content {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 1rem;
+  min-height: 180px;
+}
+
+.earth-layer-header h3 { color: var(--accent-blue); margin-bottom: 0.35rem; }
+
+.earth-layer-desc, .earth-layer-source {
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  margin-bottom: 0.35rem;
+}
+
+.earth-metrics {
+  list-style: none;
+  padding: 0;
+  margin: 0.5rem 0 0;
+}
+
+.earth-metrics li {
+  padding: 0.35rem 0;
+  border-bottom: 1px solid var(--border);
+  font-size: 0.9rem;
+}
+
+.earth-species-deps {
+  margin-top: 1rem;
+  padding-top: 0.75rem;
+  border-top: 1px solid var(--border);
+  font-size: 0.85rem;
+}
+
+.earth-species-deps h4 { color: var(--accent-gold); margin-bottom: 0.5rem; }

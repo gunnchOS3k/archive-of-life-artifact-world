@@ -280,6 +280,97 @@
         }
       ],
       "reward": "MVP Win — First Archive Wing Complete!"
+    },
+    {
+      "id": "quest_nasa_pollinators",
+      "title": "Missing Pollinators",
+      "description": "Use NASA vegetation and drought layers to understand why pollinators may be absent from a field site.",
+      "region": "museum",
+      "objectives": [
+        {
+          "type": "view_earth_tab",
+          "target": "vegetation",
+          "label": "Open Vegetation layer (HLS)",
+          "nasaLayer": "hls"
+        },
+        {
+          "type": "view_earth_tab",
+          "target": "heat_drought",
+          "label": "Open Heat / Drought layer (ECOSTRESS)",
+          "nasaLayer": "ecostress"
+        },
+        {
+          "type": "analyze_earth_region",
+          "target": "savanna",
+          "label": "Analyze savanna environmental layers"
+        },
+        {
+          "type": "collect_artifact",
+          "target": "danaus_plexippus",
+          "label": "Document Monarch Butterfly"
+        }
+      ],
+      "reward": "Unlocks pollinator field analysis tools"
+    },
+    {
+      "id": "quest_nasa_fire_range",
+      "title": "Fire on the Range",
+      "description": "Study FIRMS-style fire detections to understand how wildfire reshapes savanna predator and prey ranges.",
+      "region": "savanna",
+      "objectives": [
+        {
+          "type": "visit_region",
+          "target": "savanna",
+          "label": "Enter the Savanna region"
+        },
+        {
+          "type": "view_earth_tab",
+          "target": "fire",
+          "label": "Open Fire layer (FIRMS)",
+          "nasaLayer": "firms"
+        },
+        {
+          "type": "analyze_earth_region",
+          "target": "savanna",
+          "label": "Analyze savanna fire activity"
+        },
+        {
+          "type": "collect_artifact",
+          "target": "panthera_leo",
+          "label": "Document Lion from a safe distance"
+        }
+      ],
+      "reward": "Unlocks fire ecology field guide"
+    },
+    {
+      "id": "quest_nasa_ocean_bloom",
+      "title": "Ocean Bloom",
+      "description": "Use Ocean Color productivity data to find where marine life concentrates along the coast.",
+      "region": "coastal",
+      "objectives": [
+        {
+          "type": "visit_region",
+          "target": "coastal",
+          "label": "Enter the Coastal region"
+        },
+        {
+          "type": "view_earth_tab",
+          "target": "ocean_biology",
+          "label": "Open Ocean Life layer",
+          "nasaLayer": "ocean_color"
+        },
+        {
+          "type": "analyze_earth_region",
+          "target": "coastal",
+          "label": "Analyze coastal ocean productivity"
+        },
+        {
+          "type": "collect_artifact",
+          "target": "balaenoptera_musculus",
+          "label": "Record Blue Whale"
+        }
+      ],
+      "reward": "Unlocks marine productivity tracker"
     }
   ],
   "traits": [

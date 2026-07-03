@@ -22,7 +22,7 @@
         "assessed": true,
         "sourceVersion": "mock-iucn-2026-07",
         "lastUpdated": "2026-07-02",
-        "iucnTaxonId": 63835
+        "iucnTaxonId": 5083
       },
       "distribution": {
         "continents": [
@@ -34,11 +34,11 @@
         ],
         "sourceVersion": "mock-gbif-2026-07",
         "lastUpdated": "2026-07-02",
-        "gbifTaxonKey": 975565,
+        "gbifTaxonKey": 3908463,
         "occurrenceSummaries": [
           {
             "region": "Global oceans",
-            "occurrenceCount": 4094
+            "occurrenceCount": 2257
           }
         ]
       },
@@ -86,6 +86,32 @@
         ],
         "whyItMatters": "Indicator of ocean health; nutrient cycling through vertical migration."
       },
+      "nasaLayerDependencies": [
+        {
+          "layer": "ocean_biology",
+          "product": "ocean_color",
+          "reason": "Chlorophyll blooms drive marine prey aggregations"
+        },
+        {
+          "layer": "climate",
+          "product": "power",
+          "reason": "Coastal wind and temperature affect migration timing"
+        },
+        {
+          "layer": "climate",
+          "product": "power",
+          "reason": "Field expedition planning uses local climate baselines"
+        }
+      ],
+      "requiredHabitatSignals": [
+        {
+          "signal": "ocean_productivity",
+          "layer": "ocean_biology",
+          "minValue": 0.5,
+          "required": true,
+          "description": "Migration and foraging follow ocean productivity seasons"
+        }
+      ],
       "provenance": [
         {
           "source": "game_authored",
@@ -94,8 +120,8 @@
           "license": "GAME-ORIGINAL",
           "citation": "Archive of Life: Artifact World — MVP authored content",
           "citationRequired": false,
-          "retrievedAt": "2026-07-03T02:18:17.377Z",
-          "lastUpdated": "2026-07-03T02:18:17.377Z",
+          "retrievedAt": "2026-07-03T02:38:57.555Z",
+          "lastUpdated": "2026-07-03T02:38:57.555Z",
           "isMockData": true
         },
         {
@@ -106,8 +132,8 @@
           "license": "MOCK-SAMPLE",
           "citation": "MOCK SAMPLE — not sourced from live API",
           "citationRequired": true,
-          "retrievedAt": "2026-07-03T02:18:17.377Z",
-          "lastUpdated": "2026-07-03T02:18:17.377Z",
+          "retrievedAt": "2026-07-03T02:38:57.555Z",
+          "lastUpdated": "2026-07-03T02:38:57.555Z",
           "isMockData": true
         }
       ]
@@ -129,7 +155,7 @@
         "assessed": true,
         "sourceVersion": "mock-iucn-2026-07",
         "lastUpdated": "2026-07-02",
-        "iucnTaxonId": 20732
+        "iucnTaxonId": 2245
       },
       "distribution": {
         "continents": [
@@ -142,11 +168,11 @@
         ],
         "sourceVersion": "mock-gbif-2026-07",
         "lastUpdated": "2026-07-02",
-        "gbifTaxonKey": 6338389,
+        "gbifTaxonKey": 9869147,
         "occurrenceSummaries": [
           {
             "region": "North Atlantic",
-            "occurrenceCount": 3580
+            "occurrenceCount": 4455
           }
         ]
       },
@@ -194,6 +220,32 @@
         ],
         "whyItMatters": "Sentinel species for coastal pollution and fisheries health."
       },
+      "nasaLayerDependencies": [
+        {
+          "layer": "ocean_biology",
+          "product": "ocean_color",
+          "reason": "Chlorophyll blooms drive marine prey aggregations"
+        },
+        {
+          "layer": "climate",
+          "product": "power",
+          "reason": "Coastal wind and temperature affect migration timing"
+        },
+        {
+          "layer": "climate",
+          "product": "power",
+          "reason": "Field expedition planning uses local climate baselines"
+        }
+      ],
+      "requiredHabitatSignals": [
+        {
+          "signal": "ocean_productivity",
+          "layer": "ocean_biology",
+          "minValue": 0.5,
+          "required": true,
+          "description": "Migration and foraging follow ocean productivity seasons"
+        }
+      ],
       "provenance": [
         {
           "source": "game_authored",
@@ -202,8 +254,8 @@
           "license": "GAME-ORIGINAL",
           "citation": "Archive of Life: Artifact World — MVP authored content",
           "citationRequired": false,
-          "retrievedAt": "2026-07-03T02:18:17.377Z",
-          "lastUpdated": "2026-07-03T02:18:17.377Z",
+          "retrievedAt": "2026-07-03T02:38:57.555Z",
+          "lastUpdated": "2026-07-03T02:38:57.555Z",
           "isMockData": true
         },
         {
@@ -214,8 +266,8 @@
           "license": "MOCK-SAMPLE",
           "citation": "MOCK SAMPLE — not sourced from live API",
           "citationRequired": true,
-          "retrievedAt": "2026-07-03T02:18:17.377Z",
-          "lastUpdated": "2026-07-03T02:18:17.377Z",
+          "retrievedAt": "2026-07-03T02:38:57.555Z",
+          "lastUpdated": "2026-07-03T02:38:57.555Z",
           "isMockData": true
         }
       ]

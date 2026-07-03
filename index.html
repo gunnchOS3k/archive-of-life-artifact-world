@@ -42,6 +42,7 @@
             <button class="hud-btn" id="btn-map" title="Map (M)">🗺️ Map</button>
             <button class="hud-btn" id="btn-companion" title="Lifeling (C)">✨ Lifeling</button>
             <button class="hud-btn" id="btn-quests" title="Quests (Q)">📋 Quests</button>
+            <button class="hud-btn" id="btn-earth" title="Earth Layers (T)">🛰️ Earth</button>
           </div>
         </div>
       </div>
@@ -145,6 +146,21 @@
         <button class="panel-close" data-panel="quests">✕</button>
       </div>
       <div class="panel-body"><div id="quest-list"></div></div>
+    </div>
+
+    <div id="panel-earth" class="panel hidden panel-earth">
+      <div class="panel-header">
+        <h2>Earth Layer Console</h2>
+        <button class="panel-close" data-panel="earth">✕</button>
+      </div>
+      <div class="panel-body earth-panel-body">
+        <div id="earth-mock-banner" class="earth-mock-banner"></div>
+        <label class="earth-region-label">Region:
+          <select id="earth-region-select" class="filter-select"></select>
+        </label>
+        <div id="earth-layer-tabs" class="earth-layer-tabs"></div>
+        <div id="earth-layer-content" class="earth-layer-content"></div>
+      </div>
     </div>
 
     <div id="minigame-fossil" class="minigame-overlay hidden">

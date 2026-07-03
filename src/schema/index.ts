@@ -1,3 +1,4 @@
+export * from './earth';
 export * from './provenance';
 export * from './taxonomy';
 export * from './conservation';

@@ -75,8 +75,78 @@ function mockProvenance(speciesId: string, isExtinct: boolean) {
   ];
 }
 
+function getNasaEnvironment(legacy: LegacySpecies) {
+  const deps: ArchiveSpecies['nasaLayerDependencies'] = [];
+  const signals: ArchiveSpecies['requiredHabitatSignals'] = [];
+
+  const add = (layer: string, product: string, reason: string) => {
+    deps!.push({ layer: layer as never, product: product as never, reason });
+  };
+
+  if (legacy.habitats.some((h) => ['rainforest', 'forest'].includes(h))) {
+    add('forest_structure', 'gedi', 'Canopy structure shapes arboreal and forest-floor species niches');
+    add('vegetation', 'hls', 'NDVI tracks seasonal canopy and understory productivity');
+    signals!.push({
+      signal: 'dense_canopy',
+      layer: 'forest_structure',
+      required: true,
+      description: 'Requires closed or partial canopy cover',
+    });
+  }
+  if (legacy.habitats.includes('wetland') || legacy.region === 'wetland') {
+    add('water', 'gibs', 'Surface water extent critical for wetland specialists');
+    signals!.push({
+      signal: 'surface_water',
+      layer: 'water',
+      minValue: 0.3,
+      required: true,
+      description: 'Depends on standing water or saturated soils',
+    });
+  }
+  if (legacy.region === 'savanna' || legacy.habitats.includes('savanna')) {
+    add('fire', 'firms', 'Fire regime influences grazer distribution and predator hunting');
+    add('heat_drought', 'ecostress', 'Dry-season stress affects crepuscular activity patterns');
+  }
+  if (legacy.region === 'coastal' || legacy.habitats.includes('ocean')) {
+    add('ocean_biology', 'ocean_color', 'Chlorophyll blooms drive marine prey aggregations');
+    add('climate', 'power', 'Coastal wind and temperature affect migration timing');
+    signals!.push({
+      signal: 'ocean_productivity',
+      layer: 'ocean_biology',
+      minValue: 0.5,
+      required: true,
+      description: 'Migration and foraging follow ocean productivity seasons',
+    });
+  }
+  if (legacy.group === 'Insect' && legacy.diet.toLowerCase().includes('nectar')) {
+    add('vegetation', 'hls', 'Flowering plant availability tied to vegetation health');
+    add('heat_drought', 'ecostress', 'Drought stress reduces nectar resources for pollinators');
+    signals!.push({
+      signal: 'low_fire_activity',
+      layer: 'fire',
+      required: false,
+      description: 'Pollinator fields benefit from low recent fire activity',
+    });
+  }
+  if (legacy.group === 'Amphibian' || legacy.habitats.includes('wetland')) {
+    add('water', 'gibs', 'Breeding depends on wetland water availability');
+    add('heat_drought', 'ecostress', 'Temperature and moisture gate amphibian activity');
+  }
+  if (legacy.conservationStatus === 'Extinct') {
+    add('natural_events', 'eonet', 'Paleoenvironmental context for extinction events');
+  }
+
+  add('climate', 'power', 'Field expedition planning uses local climate baselines');
+
+  return {
+    nasaLayerDependencies: deps,
+    requiredHabitatSignals: signals.length ? signals : undefined,
+  };
+}
+
 function toArchiveSpecies(legacy: LegacySpecies): ArchiveSpecies {
   const isExtinct = legacy.conservationStatus === 'Extinct';
+  const nasaEnv = getNasaEnvironment(legacy);
 
   return {
     id: legacy.id,
@@ -142,6 +212,7 @@ function toArchiveSpecies(legacy: LegacySpecies): ArchiveSpecies {
       fossilLocations: legacy.fossilLocations,
       livingRelatives: legacy.livingRelatives,
     },
+    ...nasaEnv,
     provenance: mockProvenance(legacy.id, isExtinct),
   };
 }

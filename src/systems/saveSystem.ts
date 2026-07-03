@@ -22,6 +22,9 @@ export function createDefaultSave(): SaveState {
         'quest_fossil_dig',
         'quest_coastal_watch',
         'quest_archive_wing',
+        'quest_nasa_pollinators',
+        'quest_nasa_fire_range',
+        'quest_nasa_ocean_bloom',
       ],
       completed: [],
     },
@@ -37,6 +40,10 @@ export function createDefaultSave(): SaveState {
       speciesDocumented: 0,
       regionsExplored: 1,
     },
+    earthLayers: {
+      viewedTabs: [],
+      analyzedRegions: [],
+    },
     timestamp: Date.now(),
   };
 }
@@ -46,7 +53,12 @@ export function loadSave(): SaveState | null {
     const raw = localStorage.getItem(SAVE_KEY);
     if (!raw) return null;
     const save = JSON.parse(raw) as Partial<SaveState>;
-    return { ...createDefaultSave(), ...save };
+    const defaults = createDefaultSave();
+    return {
+      ...defaults,
+      ...save,
+      earthLayers: save.earthLayers ?? defaults.earthLayers,
+    };
   } catch {
     return null;
   }
@@ -61,6 +73,7 @@ export function saveGame(state: SaveState): void {
     quests: state.quests,
     companion: state.companion,
     stats: state.stats,
+    earthLayers: state.earthLayers ?? { viewedTabs: [], analyzedRegions: [] },
     timestamp: Date.now(),
   };
   localStorage.setItem(SAVE_KEY, JSON.stringify(data));

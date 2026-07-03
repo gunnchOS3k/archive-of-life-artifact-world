@@ -23,7 +23,7 @@
         "assessed": true,
         "sourceVersion": "mock-iucn-2026-07",
         "lastUpdated": "2026-07-02",
-        "iucnTaxonId": 27123
+        "iucnTaxonId": 24745
       },
       "distribution": {
         "continents": [
@@ -36,11 +36,11 @@
         ],
         "sourceVersion": "mock-gbif-2026-07",
         "lastUpdated": "2026-07-02",
-        "gbifTaxonKey": 8963195,
+        "gbifTaxonKey": 3269061,
         "occurrenceSummaries": [
           {
             "region": "Eurasia",
-            "occurrenceCount": 2661
+            "occurrenceCount": 3692
           }
         ]
       },
@@ -55,7 +55,7 @@
         "livingRelatives": [
           "Asian Elephant"
         ],
-        "paleobiodbTaxonNo": 27159,
+        "paleobiodbTaxonNo": 567490,
         "sourceVersion": "mock-pbdb-2026-07",
         "lastUpdated": "2026-07-02"
       },
@@ -112,6 +112,18 @@
           "Asian Elephant"
         ]
       },
+      "nasaLayerDependencies": [
+        {
+          "layer": "natural_events",
+          "product": "eonet",
+          "reason": "Paleoenvironmental context for extinction events"
+        },
+        {
+          "layer": "climate",
+          "product": "power",
+          "reason": "Field expedition planning uses local climate baselines"
+        }
+      ],
       "provenance": [
         {
           "source": "game_authored",
@@ -120,20 +132,20 @@
           "license": "GAME-ORIGINAL",
           "citation": "Archive of Life: Artifact World — MVP authored content",
           "citationRequired": false,
-          "retrievedAt": "2026-07-03T02:18:17.377Z",
-          "lastUpdated": "2026-07-03T02:18:17.377Z",
+          "retrievedAt": "2026-07-03T02:38:57.555Z",
+          "lastUpdated": "2026-07-03T02:38:57.555Z",
           "isMockData": true
         },
         {
           "source": "paleobiodb",
           "sourceVersion": "mock-sample-2026-07",
           "sourceRecordId": "MOCK-mammuthus_primigenius",
-          "paleobiodbTaxonNo": 613430,
+          "paleobiodbTaxonNo": 824319,
           "license": "MOCK-SAMPLE",
           "citation": "MOCK SAMPLE — not sourced from live API",
           "citationRequired": true,
-          "retrievedAt": "2026-07-03T02:18:17.377Z",
-          "lastUpdated": "2026-07-03T02:18:17.377Z",
+          "retrievedAt": "2026-07-03T02:38:57.555Z",
+          "lastUpdated": "2026-07-03T02:38:57.555Z",
           "isMockData": true
         }
       ]
@@ -155,7 +167,7 @@
         "assessed": true,
         "sourceVersion": "mock-iucn-2026-07",
         "lastUpdated": "2026-07-02",
-        "iucnTaxonId": 52530
+        "iucnTaxonId": 98317
       },
       "distribution": {
         "continents": [
@@ -167,11 +179,11 @@
         ],
         "sourceVersion": "mock-gbif-2026-07",
         "lastUpdated": "2026-07-02",
-        "gbifTaxonKey": 9271524,
+        "gbifTaxonKey": 3669594,
         "occurrenceSummaries": [
           {
             "region": "North America",
-            "occurrenceCount": 2420
+            "occurrenceCount": 2650
           }
         ]
       },
@@ -187,7 +199,7 @@
           "Chickens",
           "All birds"
         ],
-        "paleobiodbTaxonNo": 117956,
+        "paleobiodbTaxonNo": 117444,
         "sourceVersion": "mock-pbdb-2026-07",
         "lastUpdated": "2026-07-02"
       },
@@ -245,6 +257,36 @@
           "All birds"
         ]
       },
+      "nasaLayerDependencies": [
+        {
+          "layer": "forest_structure",
+          "product": "gedi",
+          "reason": "Canopy structure shapes arboreal and forest-floor species niches"
+        },
+        {
+          "layer": "vegetation",
+          "product": "hls",
+          "reason": "NDVI tracks seasonal canopy and understory productivity"
+        },
+        {
+          "layer": "natural_events",
+          "product": "eonet",
+          "reason": "Paleoenvironmental context for extinction events"
+        },
+        {
+          "layer": "climate",
+          "product": "power",
+          "reason": "Field expedition planning uses local climate baselines"
+        }
+      ],
+      "requiredHabitatSignals": [
+        {
+          "signal": "dense_canopy",
+          "layer": "forest_structure",
+          "required": true,
+          "description": "Requires closed or partial canopy cover"
+        }
+      ],
       "provenance": [
         {
           "source": "game_authored",
@@ -253,20 +295,20 @@
           "license": "GAME-ORIGINAL",
           "citation": "Archive of Life: Artifact World — MVP authored content",
           "citationRequired": false,
-          "retrievedAt": "2026-07-03T02:18:17.377Z",
-          "lastUpdated": "2026-07-03T02:18:17.377Z",
+          "retrievedAt": "2026-07-03T02:38:57.555Z",
+          "lastUpdated": "2026-07-03T02:38:57.555Z",
           "isMockData": true
         },
         {
           "source": "paleobiodb",
           "sourceVersion": "mock-sample-2026-07",
           "sourceRecordId": "MOCK-tyrannosaurus_rex",
-          "paleobiodbTaxonNo": 565134,
+          "paleobiodbTaxonNo": 54885,
           "license": "MOCK-SAMPLE",
           "citation": "MOCK SAMPLE — not sourced from live API",
           "citationRequired": true,
-          "retrievedAt": "2026-07-03T02:18:17.377Z",
-          "lastUpdated": "2026-07-03T02:18:17.377Z",
+          "retrievedAt": "2026-07-03T02:38:57.555Z",
+          "lastUpdated": "2026-07-03T02:38:57.555Z",
           "isMockData": true
         }
       ]
@@ -288,7 +330,7 @@
         "assessed": true,
         "sourceVersion": "mock-iucn-2026-07",
         "lastUpdated": "2026-07-02",
-        "iucnTaxonId": 71725
+        "iucnTaxonId": 54617
       },
       "distribution": {
         "continents": [
@@ -299,11 +341,11 @@
         ],
         "sourceVersion": "mock-gbif-2026-07",
         "lastUpdated": "2026-07-02",
-        "gbifTaxonKey": 6322762,
+        "gbifTaxonKey": 3460941,
         "occurrenceSummaries": [
           {
             "region": "Global ancient oceans",
-            "occurrenceCount": 819
+            "occurrenceCount": 552
           }
         ]
       },
@@ -319,7 +361,7 @@
           "Horseshoe crabs",
           "Arachnids"
         ],
-        "paleobiodbTaxonNo": 344792,
+        "paleobiodbTaxonNo": 380829,
         "sourceVersion": "mock-pbdb-2026-07",
         "lastUpdated": "2026-07-02"
       },
@@ -376,6 +418,18 @@
           "Arachnids"
         ]
       },
+      "nasaLayerDependencies": [
+        {
+          "layer": "natural_events",
+          "product": "eonet",
+          "reason": "Paleoenvironmental context for extinction events"
+        },
+        {
+          "layer": "climate",
+          "product": "power",
+          "reason": "Field expedition planning uses local climate baselines"
+        }
+      ],
       "provenance": [
         {
           "source": "game_authored",
@@ -384,20 +438,20 @@
           "license": "GAME-ORIGINAL",
           "citation": "Archive of Life: Artifact World — MVP authored content",
           "citationRequired": false,
-          "retrievedAt": "2026-07-03T02:18:17.377Z",
-          "lastUpdated": "2026-07-03T02:18:17.377Z",
+          "retrievedAt": "2026-07-03T02:38:57.555Z",
+          "lastUpdated": "2026-07-03T02:38:57.555Z",
           "isMockData": true
         },
         {
           "source": "paleobiodb",
           "sourceVersion": "mock-sample-2026-07",
           "sourceRecordId": "MOCK-trilobita_order",
-          "paleobiodbTaxonNo": 754744,
+          "paleobiodbTaxonNo": 85457,
           "license": "MOCK-SAMPLE",
           "citation": "MOCK SAMPLE — not sourced from live API",
           "citationRequired": true,
-          "retrievedAt": "2026-07-03T02:18:17.377Z",
-          "lastUpdated": "2026-07-03T02:18:17.377Z",
+          "retrievedAt": "2026-07-03T02:38:57.555Z",
+          "lastUpdated": "2026-07-03T02:38:57.555Z",
           "isMockData": true
         }
       ]

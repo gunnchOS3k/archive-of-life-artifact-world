@@ -204,6 +204,25 @@ export class ArchiveUI {
         <p class="provenance-warning">⚠️ Taxonomy and conservation status may change as scientific knowledge advances. Always verify critical decisions with primary sources.</p>
         ${provenanceHtml}
       </div>
+      ${this.renderNasaEnvironment(species)}
+    `;
+  }
+
+  private renderNasaEnvironment(species: ArchiveSpecies): string {
+    if (!species.nasaLayerDependencies?.length && !species.requiredHabitatSignals?.length) return '';
+    const deps = (species.nasaLayerDependencies ?? [])
+      .map((d) => `<li><strong>${d.layer}</strong> (${d.product}): ${d.reason}</li>`)
+      .join('');
+    const signals = (species.requiredHabitatSignals ?? [])
+      .map((s) => `<li>${s.signal}${s.required ? ' *' : ''} — ${s.description}</li>`)
+      .join('');
+    return `
+      <div class="provenance-section">
+        <h4>NASA Earth Environment Links</h4>
+        <p class="provenance-warning">Environmental context from NASA Earth Systems layers — complements biodiversity records.</p>
+        ${deps ? `<ul class="earth-metrics">${deps}</ul>` : ''}
+        ${signals ? `<p><strong>Habitat signals:</strong></p><ul class="earth-metrics">${signals}</ul>` : ''}
+      </div>
     `;
   }
 }

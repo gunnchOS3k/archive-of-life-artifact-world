@@ -4,7 +4,8 @@ import type { PlayableSpecies } from '@/services/DataCatalogService';
 export type Interactable =
   | { type: 'portal'; id: string; label: string; target: string; x: number; y: number; radius: number; color: string }
   | { type: 'species'; speciesId: string; species: PlayableSpecies; x: number; y: number; radius: number }
-  | { type: 'fossil'; speciesId: string; species: PlayableSpecies; x: number; y: number; radius: number };
+  | { type: 'fossil'; speciesId: string; species: PlayableSpecies; x: number; y: number; radius: number }
+  | { type: 'earth_console'; id: string; label: string; x: number; y: number; radius: number };
 
 interface Decoration {
   type: string;
@@ -53,6 +54,14 @@ export class World {
         this.interactables.push({ type: 'portal', ...p, radius: 35 });
       }
       this.decorations.push({ type: 'building', x: 400, y: 280, label: 'Archive Museum' });
+      this.interactables.push({
+        type: 'earth_console',
+        id: 'earth_console',
+        label: 'Earth Layer Console',
+        x: 520,
+        y: 280,
+        radius: 32,
+      });
     } else {
       const speciesIds = this.regionData.speciesIds ?? [];
       const positions = this.scatterPositions(speciesIds.length, w, h);
@@ -213,6 +222,19 @@ export class World {
       ctx.font = '22px sans-serif';
       ctx.textAlign = 'center';
       ctx.fillText('🦴', item.x, item.y + 8);
+    } else if (item.type === 'earth_console') {
+      ctx.fillStyle = '#1E3A5F';
+      ctx.globalAlpha = 0.85;
+      ctx.beginPath();
+      ctx.arc(item.x, item.y, item.radius, 0, Math.PI * 2);
+      ctx.fill();
+      ctx.globalAlpha = 1;
+      ctx.font = '22px sans-serif';
+      ctx.textAlign = 'center';
+      ctx.fillText('🛰️', item.x, item.y + 8);
+      ctx.fillStyle = '#E8E4D9';
+      ctx.font = '10px sans-serif';
+      ctx.fillText('Earth Console', item.x, item.y + item.radius + 12);
     }
   }
 }

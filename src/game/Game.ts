@@ -11,11 +11,13 @@ import { NotebookUI } from '@/ui/notebookUI';
 import { MapUI } from '@/ui/mapUI';
 import { CompanionUI } from '@/ui/companionUI';
 import { QuestUI } from '@/ui/questUI';
+import { EarthLayerUI } from '@/ui/earthLayerUI';
 import {
   DataCatalogService,
   toPlayableSpecies,
   type PlayableSpecies,
 } from '@/services/DataCatalogService';
+import { EarthLayerService } from '@/services/EarthLayerService';
 import type { SaveState } from '@/schema';
 
 type Minigame = FossilExcavation | WildlifeObservation;
@@ -43,8 +45,14 @@ export class Game {
   private mapUI: MapUI;
   private companionUI: CompanionUI;
   private questUI: QuestUI;
+  private earthLayerUI: EarthLayerUI;
 
-  constructor(canvas: HTMLCanvasElement, catalog: DataCatalogService, state: SaveState) {
+  constructor(
+    canvas: HTMLCanvasElement,
+    catalog: DataCatalogService,
+    earthService: EarthLayerService,
+    state: SaveState
+  ) {
     this.canvas = canvas;
     this.ctx = canvas.getContext('2d')!;
     this.catalog = catalog;
@@ -59,6 +67,15 @@ export class Game {
     this.mapUI = new MapUI(document.getElementById('panel-map')!);
     this.companionUI = new CompanionUI(document.getElementById('panel-companion')!);
     this.questUI = new QuestUI(document.getElementById('panel-quests')!);
+    this.earthLayerUI = new EarthLayerUI(
+      document.getElementById('panel-earth')!,
+      earthService,
+      catalog
+    );
+
+    this.earthLayerUI.onTabViewed = () => {
+      this.onEarthLayerProgress();
+    };
 
     this.companionUI.setEmoteCallback((emote) => this.lifeling.triggerReaction(emote));
     this.companionUI.onChange = () => this.save();
@@ -88,6 +105,7 @@ export class Game {
       if (e.key === 'm' || e.key === 'M') this.togglePanel('map');
       if (e.key === 'c' || e.key === 'C') this.togglePanel('companion');
       if (e.key === 'q' || e.key === 'Q') this.togglePanel('quests');
+      if (e.key === 't' || e.key === 'T') this.togglePanel('earth');
       if (e.key === 'Escape') this.closeAllPanels();
     });
     window.addEventListener('keyup', (e) => {
@@ -103,6 +121,7 @@ export class Game {
     document.getElementById('btn-map')!.addEventListener('click', () => this.togglePanel('map'));
     document.getElementById('btn-companion')!.addEventListener('click', () => this.togglePanel('companion'));
     document.getElementById('btn-quests')!.addEventListener('click', () => this.togglePanel('quests'));
+    document.getElementById('btn-earth')!.addEventListener('click', () => this.togglePanel('earth'));
 
     document.getElementById('fossil-cancel')!.addEventListener('click', () => this.endMinigame());
     document.getElementById('observe-cancel')!.addEventListener('click', () => this.endMinigame());
@@ -124,6 +143,9 @@ export class Game {
     this.closeAllPanels();
     if (!isOpen) {
       panel.classList.remove('hidden');
+      if (name === 'earth') {
+        this.earthLayerUI.open(this.state.player.currentRegion);
+      }
       this.refreshUI();
       this.paused = true;
     } else {
@@ -144,6 +166,17 @@ export class Game {
     this.mapUI.setData(config.regions, this.state);
     this.companionUI.setData(this.state, config.traits);
     this.questUI.setData(this.state, config.quests, index);
+    this.earthLayerUI.setData(this.state, this.state.player.currentRegion);
+  }
+
+  private onEarthLayerProgress() {
+    const index = this.catalog.getSearchIndex().entries;
+    const questUpdates = checkQuestProgress(this.state, this.catalog.getConfig().quests, index);
+    for (const update of questUpdates) {
+      if (update.completed) this.showToast(`Quest complete: ${update.quest.title}!`);
+    }
+    this.save();
+    this.questUI.setData(this.state, this.catalog.getConfig().quests, index);
   }
 
   private async loadRegion(regionId: string) {
@@ -192,6 +225,11 @@ export class Game {
 
     if (item.type === 'portal') {
       await this.travelToRegion(item.target);
+      return;
+    }
+
+    if (item.type === 'earth_console') {
+      this.togglePanel('earth');
       return;
     }
 
@@ -307,6 +345,7 @@ export class Game {
       prompt.classList.remove('hidden');
       const item = this.nearestInteractable;
       if (item.type === 'portal') promptText.textContent = `Press E — Travel to ${item.label}`;
+      else if (item.type === 'earth_console') promptText.textContent = `Press E — Open ${item.label}`;
       else if (item.type === 'fossil') promptText.textContent = `Press E — Excavate ${item.species.commonName} fossil`;
       else promptText.textContent = `Press E — Observe ${item.species.commonName}`;
     } else {
@@ -323,6 +362,6 @@ export class Game {
     this.ctx.fillStyle = 'rgba(255,255,255,0.4)';
     this.ctx.font = '11px sans-serif';
     this.ctx.textAlign = 'left';
-    this.ctx.fillText('WASD/Arrows: Move | E: Interact | A/N/M/C/Q: Menus', 10, h - 10);
+    this.ctx.fillText('WASD/Arrows: Move | E: Interact | A/N/M/C/Q/T: Menus', 10, h - 10);
   }
 }
