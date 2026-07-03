@@ -1,0 +1,415 @@
+{
+  "regions": [
+    {
+      "id": "museum",
+      "name": "Archive of Life Museum",
+      "type": "hub",
+      "description": "Your central hub — the living museum where artifacts become knowledge.",
+      "color": "#4A6741",
+      "biome": "museum",
+      "speciesIds": [],
+      "connections": [
+        "savanna",
+        "forest",
+        "wetland",
+        "coastal",
+        "fossil_site"
+      ],
+      "bundlePath": "bundles/region-museum.json"
+    },
+    {
+      "id": "savanna",
+      "name": "African Savanna",
+      "type": "explore",
+      "description": "Golden grasslands where lions, elephants, and pollinators share the sun.",
+      "color": "#C4A35A",
+      "biome": "savanna",
+      "speciesIds": [
+        "panthera_leo",
+        "loxodonta_africana",
+        "equus_caballus_ferus",
+        "danaus_plexippus",
+        "apis_mellifera",
+        "latrodectus_mactans",
+        "pachnoda_marginata"
+      ],
+      "connections": [
+        "museum"
+      ],
+      "bundlePath": "bundles/region-savanna.json"
+    },
+    {
+      "id": "forest",
+      "name": "Temperate Forest",
+      "type": "explore",
+      "description": "Dense woodland canopy home to deer, wolves, bears, and forest insects.",
+      "color": "#2D5A27",
+      "biome": "forest",
+      "speciesIds": [
+        "canis_lupus",
+        "odocoileus_virginianus",
+        "ursus_americanus",
+        "formica_rufa",
+        "dynastes_hercules",
+        "acanthoscurria_geniculata"
+      ],
+      "connections": [
+        "museum"
+      ],
+      "bundlePath": "bundles/region-forest.json"
+    },
+    {
+      "id": "wetland",
+      "name": "Midwest Wetlands",
+      "type": "explore",
+      "description": "Marshes and rivers where beavers engineer ecosystems and dragonflies hunt.",
+      "color": "#3D6B5E",
+      "biome": "wetland",
+      "speciesIds": [
+        "castor_canadensis",
+        "lontra_canadensis",
+        "anax_junius",
+        "libellula_quadrimaculata"
+      ],
+      "connections": [
+        "museum"
+      ],
+      "bundlePath": "bundles/region-wetland.json"
+    },
+    {
+      "id": "coastal",
+      "name": "Pacific Coast",
+      "type": "explore",
+      "description": "Rocky shores and open ocean where seals haul out and whales migrate.",
+      "color": "#2B6CB0",
+      "biome": "coastal",
+      "speciesIds": [
+        "balaenoptera_musculus",
+        "phoca_vitulina"
+      ],
+      "connections": [
+        "museum"
+      ],
+      "bundlePath": "bundles/region-coastal.json"
+    },
+    {
+      "id": "fossil_site",
+      "name": "Fossil Dig Site",
+      "type": "explore",
+      "description": "An active excavation revealing life from the Cambrian to the Ice Age.",
+      "color": "#8B7355",
+      "biome": "fossil_bed",
+      "speciesIds": [
+        "mammuthus_primigenius",
+        "tyrannosaurus_rex",
+        "trilobita_order"
+      ],
+      "connections": [
+        "museum"
+      ],
+      "bundlePath": "bundles/region-fossil_site.json"
+    }
+  ],
+  "quests": [
+    {
+      "id": "quest_savanna_intro",
+      "title": "Savanna First Steps",
+      "description": "Explore the African savanna and document your first living species.",
+      "region": "savanna",
+      "objectives": [
+        {
+          "type": "visit_region",
+          "target": "savanna",
+          "label": "Enter the Savanna region"
+        },
+        {
+          "type": "collect_artifact",
+          "target": "panthera_leo",
+          "label": "Obtain a Lion artifact"
+        }
+      ],
+      "reward": "Unlocks Savanna Archive Wing"
+    },
+    {
+      "id": "quest_forest_tracks",
+      "title": "Forest Track Reader",
+      "description": "Follow deer tracks through the temperate forest and learn tracking skills.",
+      "region": "forest",
+      "objectives": [
+        {
+          "type": "visit_region",
+          "target": "forest",
+          "label": "Enter the Forest region"
+        },
+        {
+          "type": "collect_artifact",
+          "target": "odocoileus_virginianus",
+          "label": "Collect White-tailed Deer artifact"
+        },
+        {
+          "type": "collect_artifact",
+          "target": "canis_lupus",
+          "label": "Collect Gray Wolf artifact"
+        }
+      ],
+      "reward": "Unlocks tracking bonus"
+    },
+    {
+      "id": "quest_wetland_life",
+      "title": "Wetland Watchers",
+      "description": "Study the wetland ecosystem and its engineer species.",
+      "region": "wetland",
+      "objectives": [
+        {
+          "type": "visit_region",
+          "target": "wetland",
+          "label": "Enter the Wetland region"
+        },
+        {
+          "type": "collect_artifact",
+          "target": "castor_canadensis",
+          "label": "Document North American Beaver"
+        },
+        {
+          "type": "collect_artifact",
+          "target": "anax_junius",
+          "label": "Observe Common Green Darner"
+        }
+      ],
+      "reward": "Unlocks wetland field guide"
+    },
+    {
+      "id": "quest_insect_world",
+      "title": "Micro-World Explorer",
+      "description": "Enter the insect micro-world and document pollinators and decomposers.",
+      "region": "grassland",
+      "objectives": [
+        {
+          "type": "collect_artifact",
+          "target": "danaus_plexippus",
+          "label": "Document Monarch Butterfly"
+        },
+        {
+          "type": "collect_artifact",
+          "target": "apis_mellifera",
+          "label": "Study Western Honeybee"
+        },
+        {
+          "type": "collect_artifact",
+          "target": "dynastes_hercules",
+          "label": "Find Hercules Beetle molt"
+        }
+      ],
+      "reward": "Unlocks macro camera mode"
+    },
+    {
+      "id": "quest_fossil_dig",
+      "title": "Ancient Evidence",
+      "description": "Excavate fossils and reconstruct evidence from Earth's deep past.",
+      "region": "fossil_site",
+      "objectives": [
+        {
+          "type": "visit_region",
+          "target": "fossil_site",
+          "label": "Reach the Fossil Dig Site"
+        },
+        {
+          "type": "collect_artifact",
+          "target": "trilobita_order",
+          "label": "Excavate Trilobite fossil"
+        },
+        {
+          "type": "collect_artifact",
+          "target": "mammuthus_primigenius",
+          "label": "Excavate Woolly Mammoth fossil"
+        },
+        {
+          "type": "collect_artifact",
+          "target": "tyrannosaurus_rex",
+          "label": "Excavate T. rex fossil"
+        }
+      ],
+      "reward": "Unlocks Time Layer: Recent Past"
+    },
+    {
+      "id": "quest_coastal_watch",
+      "title": "Coastal Sentinel",
+      "description": "Observe marine mammals along the coastal region.",
+      "region": "coastal",
+      "objectives": [
+        {
+          "type": "visit_region",
+          "target": "coastal",
+          "label": "Enter the Coastal region"
+        },
+        {
+          "type": "collect_artifact",
+          "target": "phoca_vitulina",
+          "label": "Photograph Harbor Seal"
+        },
+        {
+          "type": "collect_artifact",
+          "target": "balaenoptera_musculus",
+          "label": "Record Blue Whale"
+        }
+      ],
+      "reward": "Unlocks marine field tools"
+    },
+    {
+      "id": "quest_archive_wing",
+      "title": "First Archive Wing",
+      "description": "Complete the first regional Archive by collecting artifacts from all MVP species groups.",
+      "region": "museum",
+      "objectives": [
+        {
+          "type": "collect_count",
+          "target": "10",
+          "label": "Collect 10 mammal artifacts"
+        },
+        {
+          "type": "collect_count",
+          "target": "10",
+          "label": "Collect 10 insect artifacts",
+          "group": "insect"
+        },
+        {
+          "type": "collect_count",
+          "target": "3",
+          "label": "Collect 3 fossil artifacts",
+          "group": "extinct"
+        }
+      ],
+      "reward": "MVP Win — First Archive Wing Complete!"
+    }
+  ],
+  "traits": [
+    {
+      "id": "lion_mane_small",
+      "name": "Lion Mane",
+      "category": "head",
+      "description": "A fluffy golden mane inspired by Panthera leo social pride behavior.",
+      "unlockedBy": "panthera_leo",
+      "color": "#D4A017"
+    },
+    {
+      "id": "deer_antlers_small",
+      "name": "Deer Antlers",
+      "category": "head",
+      "description": "Small graceful antlers inspired by white-tailed deer alert behavior.",
+      "unlockedBy": "odocoileus_virginianus",
+      "color": "#8B6914"
+    },
+    {
+      "id": "butterfly_shimmer",
+      "name": "Butterfly Shimmer",
+      "category": "aura",
+      "description": "Colorful scale shimmer inspired by monarch butterfly migration.",
+      "unlockedBy": "danaus_plexippus",
+      "color": "#FF6600"
+    },
+    {
+      "id": "beetle_shell_back",
+      "name": "Beetle Shell",
+      "category": "back",
+      "description": "Glossy armored back plates inspired by Hercules beetle strength.",
+      "unlockedBy": "dynastes_hercules",
+      "color": "#2E8B2E"
+    },
+    {
+      "id": "owl_eye_markings",
+      "name": "Owl Eye Markings",
+      "category": "pattern",
+      "description": "Large expressive eye markings for keen observation.",
+      "unlockedBy": "canis_lupus",
+      "color": "#F5E6C8"
+    },
+    {
+      "id": "frog_hop",
+      "name": "Frog Hop",
+      "category": "movement",
+      "description": "Bouncy hop animation inspired by amphibian locomotion.",
+      "unlockedBy": "anax_junius",
+      "color": "#4CAF50"
+    },
+    {
+      "id": "wolf_tail",
+      "name": "Wolf Tail",
+      "category": "tail",
+      "description": "Bushy expressive tail inspired by gray wolf pack communication.",
+      "unlockedBy": "canis_lupus",
+      "color": "#6B6B6B"
+    },
+    {
+      "id": "trilobite_plates",
+      "name": "Trilobite Plates",
+      "category": "back",
+      "description": "Ancient segmented fossil shell pattern from Cambrian seas.",
+      "unlockedBy": "trilobita_order",
+      "color": "#5C4033"
+    },
+    {
+      "id": "penguin_belly",
+      "name": "Penguin Belly Pattern",
+      "category": "pattern",
+      "description": "Contrasting belly markings inspired by marine diving birds.",
+      "unlockedBy": "phoca_vitulina",
+      "color": "#FFFFFF"
+    },
+    {
+      "id": "tiger_stripes",
+      "name": "Tiger Stripes",
+      "category": "pattern",
+      "description": "Bold stripe pattern inspired by big cat camouflage.",
+      "unlockedBy": "panthera_leo",
+      "color": "#FF8C00"
+    },
+    {
+      "id": "mammoth_fur",
+      "name": "Mammoth Fur",
+      "category": "pattern",
+      "description": "Shaggy ice-age fur inspired by woolly mammoth adaptation.",
+      "unlockedBy": "mammuthus_primigenius",
+      "color": "#8B7355"
+    },
+    {
+      "id": "rex_crest",
+      "name": "Rex Crest",
+      "category": "head",
+      "description": "Bold crest marking inspired by Tyrannosaurus rex dominance.",
+      "unlockedBy": "tyrannosaurus_rex",
+      "color": "#8B0000"
+    },
+    {
+      "id": "bee_pollen_trail",
+      "name": "Pollen Trail",
+      "category": "aura",
+      "description": "Golden pollen sparkle trail inspired by honeybee pollination.",
+      "unlockedBy": "apis_mellifera",
+      "color": "#FFD700"
+    },
+    {
+      "id": "celebrate_emote",
+      "name": "Celebrate",
+      "category": "emote",
+      "description": "Joyful bounce emote when artifacts are discovered.",
+      "unlockedBy": "any_artifact",
+      "color": "#FFD700"
+    },
+    {
+      "id": "sniff_emote",
+      "name": "Sniff",
+      "category": "emote",
+      "description": "Curious sniffing emote near species clues.",
+      "unlockedBy": "odocoileus_virginianus",
+      "color": "#A0A0A0"
+    },
+    {
+      "id": "dig_emote",
+      "name": "Dig",
+      "category": "emote",
+      "description": "Excited digging emote at fossil sites.",
+      "unlockedBy": "mammuthus_primigenius",
+      "color": "#8B6914"
+    }
+  ]
+}

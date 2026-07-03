@@ -1,0 +1,104 @@
+{
+  "records": [
+    {
+      "speciesId": "panthera_leo",
+      "gbifTaxonKey": 8478218,
+      "summaries": [
+        {
+          "region": "Africa",
+          "occurrenceCount": 3362
+        }
+      ]
+    },
+    {
+      "speciesId": "loxodonta_africana",
+      "gbifTaxonKey": 7259858,
+      "summaries": [
+        {
+          "region": "Africa",
+          "occurrenceCount": 700
+        }
+      ]
+    },
+    {
+      "speciesId": "canis_lupus",
+      "gbifTaxonKey": 9361997,
+      "summaries": [
+        {
+          "region": "North America",
+          "occurrenceCount": 2353
+        }
+      ]
+    },
+    {
+      "speciesId": "odocoileus_virginianus",
+      "gbifTaxonKey": 2473531,
+      "summaries": [
+        {
+          "region": "North America",
+          "occurrenceCount": 5084
+        }
+      ]
+    },
+    {
+      "speciesId": "balaenoptera_musculus",
+      "gbifTaxonKey": 975565,
+      "summaries": [
+        {
+          "region": "Global oceans",
+          "occurrenceCount": 4094
+        }
+      ]
+    },
+    {
+      "speciesId": "ursus_americanus",
+      "gbifTaxonKey": 6320091,
+      "summaries": [
+        {
+          "region": "North America",
+          "occurrenceCount": 200
+        }
+      ]
+    },
+    {
+      "speciesId": "castor_canadensis",
+      "gbifTaxonKey": 7185382,
+      "summaries": [
+        {
+          "region": "North America",
+          "occurrenceCount": 4002
+        }
+      ]
+    },
+    {
+      "speciesId": "lontra_canadensis",
+      "gbifTaxonKey": 4186662,
+      "summaries": [
+        {
+          "region": "North America",
+          "occurrenceCount": 1648
+        }
+      ]
+    },
+    {
+      "speciesId": "phoca_vitulina",
+      "gbifTaxonKey": 6338389,
+      "summaries": [
+        {
+          "region": "North Atlantic",
+          "occurrenceCount": 3580
+        }
+      ]
+    },
+    {
+      "speciesId": "equus_caballus_ferus",
+      "gbifTaxonKey": 869525,
+      "summaries": [
+        {
+          "region": "Asia",
+          "occurrenceCount": 4886
+        }
+      ]
+    }
+  ]
+}

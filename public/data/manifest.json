@@ -1,0 +1,88 @@
+{
+  "snapshotId": "sample-2026-07",
+  "version": "2.0.0",
+  "generatedAt": "2026-07-03T02:18:17.380Z",
+  "description": "Sample biodiversity snapshot — mock provenance overlays for pipeline demonstration",
+  "bundles": {
+    "heroSpecies": {
+      "path": "bundles/hero-species.json",
+      "kind": "hero_species",
+      "recordCount": 23
+    },
+    "conservation": {
+      "path": "bundles/conservation-overlay.json",
+      "kind": "conservation",
+      "recordCount": 10
+    },
+    "occurrence": {
+      "path": "bundles/gbif-occurrences.json",
+      "kind": "occurrence",
+      "recordCount": 10
+    },
+    "fossil": {
+      "path": "bundles/fossil-pbdb.json",
+      "kind": "fossil",
+      "recordCount": 3
+    },
+    "searchIndex": {
+      "path": "bundles/search-index.json",
+      "kind": "search_index",
+      "recordCount": 23
+    },
+    "regions": {
+      "path": "bundles/regions.json",
+      "kind": "game_config",
+      "recordCount": 6
+    },
+    "quests": {
+      "path": "bundles/quests.json",
+      "kind": "game_config",
+      "recordCount": 7
+    },
+    "traits": {
+      "path": "bundles/traits.json",
+      "kind": "game_config",
+      "recordCount": 16
+    },
+    "regionSpecies": {
+      "museum": {
+        "path": "bundles/region-museum.json",
+        "kind": "region_species",
+        "recordCount": 0
+      },
+      "savanna": {
+        "path": "bundles/region-savanna.json",
+        "kind": "region_species",
+        "recordCount": 7
+      },
+      "forest": {
+        "path": "bundles/region-forest.json",
+        "kind": "region_species",
+        "recordCount": 6
+      },
+      "wetland": {
+        "path": "bundles/region-wetland.json",
+        "kind": "region_species",
+        "recordCount": 4
+      },
+      "coastal": {
+        "path": "bundles/region-coastal.json",
+        "kind": "region_species",
+        "recordCount": 2
+      },
+      "fossil_site": {
+        "path": "bundles/region-fossil_site.json",
+        "kind": "region_species",
+        "recordCount": 3
+      }
+    }
+  },
+  "coverage": {
+    "representedSpecies": 23,
+    "iucnAssessed": 23,
+    "threatened": 5,
+    "extinctFossil": 3,
+    "playableQuestSpecies": 23,
+    "heroSpecies": 23
+  }
+}

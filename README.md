@@ -1,91 +1,72 @@
 # Archive of Life: Artifact World
 
-An educational open-world exploration prototype where you play as an **Explorer-Archivist** building the greatest interactive Archive of Life ever created.
+Educational open-world exploration game — discover life, collect ethical artifacts, build the Archive of Life with your Lifeling companion.
 
-Discover animals, insects, and ancient fossils across realistic Earth biomes. Collect ethical scientific **artifacts** — never by harming wildlife. Your adaptive companion, the **Lifeling**, grows as you learn.
+**v2.0** — TypeScript + Vite architecture with scalable biodiversity data bundles, IndexedDB caching, schema validation, and pipeline scaffolding.
 
 ## Quick Start
 
-Serve the folder with any static HTTP server (required for ES modules and JSON loading):
-
 ```bash
-cd archive-of-life-artifact-world
-python3 -m http.server 8080
+npm install
+npm run generate:bundles   # Build public/data bundles from legacy MVP JSON
+npm run dev                # http://localhost:8080
 ```
 
-Open [http://localhost:8080](http://localhost:8080) in your browser.
+## Scripts
 
-## Controls
-
-| Key | Action |
-|-----|--------|
-| WASD / Arrow keys | Move |
-| E | Interact (portals, species, fossils) |
-| A | Archive of Life |
-| N | Field Notebook |
-| M | World Map |
-| C | Lifeling Companion |
-| Q | Quests |
-| Escape | Close panels |
-
-## Features
-
-- **Explorable regions**: Museum hub, Savanna, Forest, Wetland, Coastal, Fossil Dig Site
-- **23 species** (10 mammals, 10 insects/arachnids, 3 extinct) — all JSON-driven
-- **Artifact collection** with ethical, evidence-based types
-- **Archive UI** with educational species cards and conservation status
-- **Field notebook** logging discoveries
-- **Quest system** with regional objectives
-- **Fossil excavation** mini-game (brush away sediment)
-- **Wildlife observation** mini-game (patience-based)
-- **Lifeling companion** with trait unlocks, customization, and emotes
-- **Save/load** via localStorage
-
-## Adding Species
-
-Edit JSON files in `data/species/`:
-
-```json
-{
-  "id": "unique_id",
-  "commonName": "Common Name",
-  "scientificName": "Scientific name",
-  "group": "Mammal",
-  "artifactTypes": ["photo_record"],
-  "conservationStatus": "Least Concern",
-  "region": "savanna"
-}
-```
-
-Add the species ID to a region in `data/regions.json`, and optionally map trait unlocks in `data/traits.json`.
+| Command | Description |
+|---------|-------------|
+| `npm run dev` | Vite dev server |
+| `npm run build` | Production build |
+| `npm run typecheck` | TypeScript check |
+| `npm run generate:bundles` | Transform `data/` → `public/data/bundles/` |
+| `npm run audit:data` | Coverage and integrity audit |
 
 ## Architecture
 
 ```
-data/           JSON game content (species, traits, quests, regions)
-js/
-  systems/      Data loading, save, artifacts, quests
-  ui/           Archive, notebook, map, companion, quest panels
-  minigames/    Fossil excavation, wildlife observation
-  game.js       Main game loop
-  player.js     Explorer-Archivist controller
-  companion.js  Lifeling adaptive companion
-  world.js      Region rendering and interactables
+src/
+  schema/          TypeScript types (ArchiveSpecies, provenance, etc.)
+  services/        DataCatalogService, IndexedDBCache
+  game/            Player, World, Lifeling, Game loop
+  systems/         Artifacts, quests, save
+  ui/              Archive (paginated), notebook, map, companion, quests
+  minigames/       Fossil excavation, wildlife observation
+public/data/
+  manifest.json    Bundle registry + coverage stats
+  bundles/         Generated species, index, region data
+data-pipeline/     Python ingestion scaffolding
+docs/              Data architecture, DB plan, provenance policy
+data/              Legacy MVP source JSON (used by generate:bundles)
 ```
+
+## Data Loading
+
+The game loads from `public/data/manifest.json` — **not** the full catalogue at once:
+
+1. Manifest + search index + game config on startup
+2. Region bundle when entering a biome
+3. Species detail lazy-loaded on Archive card click
+4. IndexedDB caches bundles; invalidated on snapshot change
+
+## Controls
+
+WASD/Arrows move · E interact · A/N/M/C/Q menus · Escape close panels
 
 ## Design Pillars
 
 - **Wonder** — Every creature deserves attention
-- **Accuracy** — Scientifically grounded content
-- **Respect** — Animals are not trophies
+- **Accuracy** — Scientifically grounded with provenance
+- **Respect** — Ethical artifacts, no capture
 - **Exploration** — The world is the classroom
-- **Collection** — Artifacts, not capture
 - **Conservation** — Learning creates responsibility
 
-## MVP Win Condition
+## Documentation
 
-Complete the **First Archive Wing** quest by documenting 10 mammals, 10 insects, and 3 fossil species, then reconstructing extinct ecosystem knowledge through the fossil dig site.
+- [Data Architecture](docs/DATA_ARCHITECTURE.md)
+- [Database Integration Plan](docs/DATABASE_INTEGRATION_PLAN.md)
+- [Source Provenance Policy](docs/SOURCE_PROVENANCE_POLICY.md)
 
 ---
 
-*Prototype built for educational exploration. Not affiliated with any existing creature-collection franchise.*
+*Original educational prototype — not affiliated with any creature-collection franchise.*

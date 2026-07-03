@@ -1,0 +1,54 @@
+{
+  "records": [
+    {
+      "speciesId": "mammuthus_primigenius",
+      "timeRange": "Pleistocene–Holocene (extinct ~4,000 years ago)",
+      "fossilLocations": [
+        "Siberia",
+        "Alaska",
+        "Yukon"
+      ],
+      "paleoenvironment": "Mammoth steppe — cold grassland",
+      "livingRelatives": [
+        "Asian Elephant"
+      ],
+      "paleobiodbTaxonNo": 27159,
+      "sourceVersion": "mock-pbdb-2026-07",
+      "lastUpdated": "2026-07-02"
+    },
+    {
+      "speciesId": "tyrannosaurus_rex",
+      "timeRange": "Late Cretaceous (~68–66 Ma)",
+      "fossilLocations": [
+        "Montana",
+        "South Dakota",
+        "Alberta"
+      ],
+      "paleoenvironment": "Subtropical floodplain with rivers",
+      "livingRelatives": [
+        "Chickens",
+        "All birds"
+      ],
+      "paleobiodbTaxonNo": 117956,
+      "sourceVersion": "mock-pbdb-2026-07",
+      "lastUpdated": "2026-07-02"
+    },
+    {
+      "speciesId": "trilobita_order",
+      "timeRange": "Cambrian–Permian (~521–252 Ma)",
+      "fossilLocations": [
+        "Morocco",
+        "Utah",
+        "Czech Republic"
+      ],
+      "paleoenvironment": "Shallow tropical seas",
+      "livingRelatives": [
+        "Horseshoe crabs",
+        "Arachnids"
+      ],
+      "paleobiodbTaxonNo": 344792,
+      "sourceVersion": "mock-pbdb-2026-07",
+      "lastUpdated": "2026-07-02"
+    }
+  ]
+}

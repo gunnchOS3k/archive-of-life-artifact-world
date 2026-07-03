@@ -640,3 +640,122 @@ body {
   gap: 0.5rem;
   justify-content: center;
 }
+
+/* Archive v2 — pagination, filters, coverage, provenance */
+.archive-panel-body { display: flex; flex-direction: column; gap: 0.75rem; }
+
+.archive-coverage { margin-bottom: 0.25rem; }
+
+.coverage-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.5rem;
+}
+
+.coverage-item {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 0.5rem;
+  text-align: center;
+}
+
+.coverage-value {
+  display: block;
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--accent-gold);
+}
+
+.coverage-label {
+  font-size: 0.7rem;
+  color: var(--text-secondary);
+}
+
+.archive-filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+.archive-search, .filter-select {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  color: var(--text-primary);
+  padding: 0.4rem 0.6rem;
+  border-radius: 6px;
+  font-size: 0.85rem;
+}
+
+.archive-search { flex: 1; min-width: 140px; }
+
+.filter-check {
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.archive-pagination {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  padding: 0.5rem 0;
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+}
+
+.species-tier {
+  font-size: 0.65rem;
+  color: var(--text-secondary);
+  text-transform: uppercase;
+  margin-top: 0.15rem;
+}
+
+.provenance-section {
+  margin-top: 1rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--border);
+}
+
+.provenance-section h4 {
+  color: var(--accent-gold);
+  margin-bottom: 0.5rem;
+}
+
+.provenance-warning {
+  background: rgba(212, 160, 23, 0.1);
+  border-left: 3px solid var(--accent-gold);
+  padding: 0.5rem 0.75rem;
+  font-size: 0.8rem;
+  margin-bottom: 0.75rem;
+}
+
+.provenance-item {
+  background: var(--bg-dark);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 0.5rem 0.75rem;
+  margin-bottom: 0.5rem;
+  font-size: 0.8rem;
+}
+
+.provenance-item.mock { border-color: var(--accent-gold); }
+
+.mock-badge {
+  background: var(--accent-gold);
+  color: var(--bg-dark);
+  font-size: 0.65rem;
+  padding: 0.1rem 0.4rem;
+  border-radius: 4px;
+  margin-left: 0.5rem;
+}
+
+.provenance-ids, .provenance-dates, .citation {
+  color: var(--text-secondary);
+  font-size: 0.75rem;
+  margin-top: 0.25rem;
+}

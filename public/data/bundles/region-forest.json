@@ -1,0 +1,657 @@
+{
+  "regionId": "forest",
+  "speciesIds": [
+    "canis_lupus",
+    "odocoileus_virginianus",
+    "ursus_americanus",
+    "formica_rufa",
+    "dynastes_hercules",
+    "acanthoscurria_geniculata"
+  ],
+  "species": [
+    {
+      "id": "canis_lupus",
+      "commonName": "Gray Wolf",
+      "scientificName": "Canis lupus",
+      "group": "Mammal",
+      "tier": "hero",
+      "taxonomy": {
+        "family": "Canidae",
+        "rank": "species",
+        "acceptedName": "Canis lupus",
+        "catalogueOfLifeId": "MOCK-COL-canis_lupus"
+      },
+      "conservation": {
+        "iucnCategory": "Least Concern",
+        "assessed": true,
+        "sourceVersion": "mock-iucn-2026-07",
+        "lastUpdated": "2026-07-02",
+        "iucnTaxonId": 53135
+      },
+      "distribution": {
+        "continents": [
+          "North America",
+          "Europe",
+          "Asia"
+        ],
+        "habitats": [
+          "forest",
+          "grassland",
+          "tundra"
+        ],
+        "sourceVersion": "mock-gbif-2026-07",
+        "lastUpdated": "2026-07-02",
+        "gbifTaxonKey": 9361997,
+        "occurrenceSummaries": [
+          {
+            "region": "North America",
+            "occurrenceCount": 2353
+          }
+        ]
+      },
+      "artifactTemplates": [
+        {
+          "id": "canis_lupus_track_cast",
+          "artifactType": "track_cast",
+          "label": "track cast",
+          "ethical": true,
+          "description": "Ethical track cast collection"
+        },
+        {
+          "id": "canis_lupus_audio_howl_recording",
+          "artifactType": "audio_howl_recording",
+          "label": "audio howl recording",
+          "ethical": true,
+          "description": "Ethical audio howl recording collection"
+        },
+        {
+          "id": "canis_lupus_scat_sample",
+          "artifactType": "scat_sample",
+          "label": "scat sample",
+          "ethical": true,
+          "description": "Ethical scat sample collection"
+        }
+      ],
+      "gameplay": {
+        "region": "forest",
+        "questType": "tracking",
+        "dangerLevel": 4,
+        "ethicalInteraction": "observe_from_distance",
+        "timeRange": "Present",
+        "diet": "Carnivore",
+        "activity": "Crepuscular",
+        "size": "1.0–1.6 m body length",
+        "behavior": "Pack hunter with complex social hierarchy",
+        "learningTopics": [
+          "pack behavior",
+          "trophic cascades",
+          "reintroduction"
+        ],
+        "funFacts": [
+          "Howls can be heard up to 10 km away",
+          "Yellowstone wolf reintroduction changed river courses"
+        ],
+        "whyItMatters": "Top predators restore balance through trophic cascades."
+      },
+      "provenance": [
+        {
+          "source": "game_authored",
+          "sourceVersion": "mvp-1.0",
+          "sourceRecordId": "canis_lupus",
+          "license": "GAME-ORIGINAL",
+          "citation": "Archive of Life: Artifact World — MVP authored content",
+          "citationRequired": false,
+          "retrievedAt": "2026-07-03T02:18:17.377Z",
+          "lastUpdated": "2026-07-03T02:18:17.377Z",
+          "isMockData": true
+        },
+        {
+          "source": "catalogue_of_life",
+          "sourceVersion": "mock-sample-2026-07",
+          "sourceRecordId": "MOCK-canis_lupus",
+          "catalogueOfLifeId": "MOCK-COL-canis_lupus",
+          "license": "MOCK-SAMPLE",
+          "citation": "MOCK SAMPLE — not sourced from live API",
+          "citationRequired": true,
+          "retrievedAt": "2026-07-03T02:18:17.377Z",
+          "lastUpdated": "2026-07-03T02:18:17.377Z",
+          "isMockData": true
+        }
+      ]
+    },
+    {
+      "id": "odocoileus_virginianus",
+      "commonName": "White-tailed Deer",
+      "scientificName": "Odocoileus virginianus",
+      "group": "Mammal",
+      "tier": "hero",
+      "taxonomy": {
+        "family": "Cervidae",
+        "rank": "species",
+        "acceptedName": "Odocoileus virginianus",
+        "catalogueOfLifeId": "MOCK-COL-odocoileus_virginianus"
+      },
+      "conservation": {
+        "iucnCategory": "Least Concern",
+        "assessed": true,
+        "sourceVersion": "mock-iucn-2026-07",
+        "lastUpdated": "2026-07-02",
+        "iucnTaxonId": 76109
+      },
+      "distribution": {
+        "continents": [
+          "North America"
+        ],
+        "habitats": [
+          "forest",
+          "grassland",
+          "wetland"
+        ],
+        "sourceVersion": "mock-gbif-2026-07",
+        "lastUpdated": "2026-07-02",
+        "gbifTaxonKey": 2473531,
+        "occurrenceSummaries": [
+          {
+            "region": "North America",
+            "occurrenceCount": 5084
+          }
+        ]
+      },
+      "artifactTemplates": [
+        {
+          "id": "odocoileus_virginianus_shed_antler",
+          "artifactType": "shed_antler",
+          "label": "shed antler",
+          "ethical": true,
+          "description": "Ethical shed antler collection"
+        },
+        {
+          "id": "odocoileus_virginianus_track_cast",
+          "artifactType": "track_cast",
+          "label": "track cast",
+          "ethical": true,
+          "description": "Ethical track cast collection"
+        },
+        {
+          "id": "odocoileus_virginianus_behavioral_field_note",
+          "artifactType": "behavioral_field_note",
+          "label": "behavioral field note",
+          "ethical": true,
+          "description": "Ethical behavioral field note collection"
+        }
+      ],
+      "gameplay": {
+        "region": "forest",
+        "questType": "tracking",
+        "dangerLevel": 1,
+        "ethicalInteraction": "observe_quietly",
+        "timeRange": "Present",
+        "diet": "Herbivore",
+        "activity": "Crepuscular",
+        "size": "0.9–1.1 m shoulder height",
+        "behavior": "Alert grazer; seasonal antler growth in males",
+        "learningTopics": [
+          "herbivory",
+          "predator-prey",
+          "adaptation"
+        ],
+        "funFacts": [
+          "Antlers regrow every year",
+          "Tail flash signals alarm to herd"
+        ],
+        "whyItMatters": "Important prey species linking forest and grassland food webs."
+      },
+      "provenance": [
+        {
+          "source": "game_authored",
+          "sourceVersion": "mvp-1.0",
+          "sourceRecordId": "odocoileus_virginianus",
+          "license": "GAME-ORIGINAL",
+          "citation": "Archive of Life: Artifact World — MVP authored content",
+          "citationRequired": false,
+          "retrievedAt": "2026-07-03T02:18:17.377Z",
+          "lastUpdated": "2026-07-03T02:18:17.377Z",
+          "isMockData": true
+        },
+        {
+          "source": "catalogue_of_life",
+          "sourceVersion": "mock-sample-2026-07",
+          "sourceRecordId": "MOCK-odocoileus_virginianus",
+          "catalogueOfLifeId": "MOCK-COL-odocoileus_virginianus",
+          "license": "MOCK-SAMPLE",
+          "citation": "MOCK SAMPLE — not sourced from live API",
+          "citationRequired": true,
+          "retrievedAt": "2026-07-03T02:18:17.377Z",
+          "lastUpdated": "2026-07-03T02:18:17.377Z",
+          "isMockData": true
+        }
+      ]
+    },
+    {
+      "id": "ursus_americanus",
+      "commonName": "American Black Bear",
+      "scientificName": "Ursus americanus",
+      "group": "Mammal",
+      "tier": "hero",
+      "taxonomy": {
+        "family": "Ursidae",
+        "rank": "species",
+        "acceptedName": "Ursus americanus",
+        "catalogueOfLifeId": "MOCK-COL-ursus_americanus"
+      },
+      "conservation": {
+        "iucnCategory": "Least Concern",
+        "assessed": true,
+        "sourceVersion": "mock-iucn-2026-07",
+        "lastUpdated": "2026-07-02",
+        "iucnTaxonId": 58863
+      },
+      "distribution": {
+        "continents": [
+          "North America"
+        ],
+        "habitats": [
+          "forest",
+          "mountain"
+        ],
+        "sourceVersion": "mock-gbif-2026-07",
+        "lastUpdated": "2026-07-02",
+        "gbifTaxonKey": 6320091,
+        "occurrenceSummaries": [
+          {
+            "region": "North America",
+            "occurrenceCount": 200
+          }
+        ]
+      },
+      "artifactTemplates": [
+        {
+          "id": "ursus_americanus_track_cast",
+          "artifactType": "track_cast",
+          "label": "track cast",
+          "ethical": true,
+          "description": "Ethical track cast collection"
+        },
+        {
+          "id": "ursus_americanus_scat_sample",
+          "artifactType": "scat_sample",
+          "label": "scat sample",
+          "ethical": true,
+          "description": "Ethical scat sample collection"
+        },
+        {
+          "id": "ursus_americanus_behavioral_field_note",
+          "artifactType": "behavioral_field_note",
+          "label": "behavioral field note",
+          "ethical": true,
+          "description": "Ethical behavioral field note collection"
+        }
+      ],
+      "gameplay": {
+        "region": "forest",
+        "questType": "tracking",
+        "dangerLevel": 3,
+        "ethicalInteraction": "avoid_and_observe",
+        "timeRange": "Present",
+        "diet": "Omnivore",
+        "activity": "Diurnal",
+        "size": "1.2–1.8 m body length",
+        "behavior": "Solitary forager; hibernates in winter",
+        "learningTopics": [
+          "omnivory",
+          "hibernation",
+          "human-wildlife coexistence"
+        ],
+        "funFacts": [
+          "Can run 50 km/h despite size",
+          "Excellent sense of smell — 7x better than dogs"
+        ],
+        "whyItMatters": "Umbrella species for forest conservation planning."
+      },
+      "provenance": [
+        {
+          "source": "game_authored",
+          "sourceVersion": "mvp-1.0",
+          "sourceRecordId": "ursus_americanus",
+          "license": "GAME-ORIGINAL",
+          "citation": "Archive of Life: Artifact World — MVP authored content",
+          "citationRequired": false,
+          "retrievedAt": "2026-07-03T02:18:17.377Z",
+          "lastUpdated": "2026-07-03T02:18:17.377Z",
+          "isMockData": true
+        },
+        {
+          "source": "catalogue_of_life",
+          "sourceVersion": "mock-sample-2026-07",
+          "sourceRecordId": "MOCK-ursus_americanus",
+          "catalogueOfLifeId": "MOCK-COL-ursus_americanus",
+          "license": "MOCK-SAMPLE",
+          "citation": "MOCK SAMPLE — not sourced from live API",
+          "citationRequired": true,
+          "retrievedAt": "2026-07-03T02:18:17.377Z",
+          "lastUpdated": "2026-07-03T02:18:17.377Z",
+          "isMockData": true
+        }
+      ]
+    },
+    {
+      "id": "formica_rufa",
+      "commonName": "Red Wood Ant",
+      "scientificName": "Formica rufa",
+      "group": "Insect",
+      "tier": "hero",
+      "taxonomy": {
+        "family": "Formicidae",
+        "rank": "species",
+        "acceptedName": "Formica rufa",
+        "catalogueOfLifeId": "MOCK-COL-formica_rufa"
+      },
+      "conservation": {
+        "iucnCategory": "Least Concern",
+        "assessed": true,
+        "sourceVersion": "mock-iucn-2026-07",
+        "lastUpdated": "2026-07-02",
+        "iucnTaxonId": 25135
+      },
+      "distribution": {
+        "continents": [
+          "Europe"
+        ],
+        "habitats": [
+          "forest"
+        ],
+        "sourceVersion": "mock-gbif-2026-07",
+        "lastUpdated": "2026-07-02",
+        "gbifTaxonKey": 4870083,
+        "occurrenceSummaries": [
+          {
+            "region": "Europe",
+            "occurrenceCount": 4918
+          }
+        ]
+      },
+      "artifactTemplates": [
+        {
+          "id": "formica_rufa_burrow_cast",
+          "artifactType": "burrow_cast",
+          "label": "burrow cast",
+          "ethical": true,
+          "description": "Ethical burrow cast collection"
+        },
+        {
+          "id": "formica_rufa_behavioral_field_note",
+          "artifactType": "behavioral_field_note",
+          "label": "behavioral field note",
+          "ethical": true,
+          "description": "Ethical behavioral field note collection"
+        },
+        {
+          "id": "formica_rufa_colony_map",
+          "artifactType": "colony_map",
+          "label": "colony map",
+          "ethical": true,
+          "description": "Ethical colony map collection"
+        }
+      ],
+      "gameplay": {
+        "region": "forest",
+        "questType": "micro_world",
+        "dangerLevel": 0,
+        "ethicalInteraction": "observe_without_disturbing",
+        "timeRange": "Present",
+        "diet": "Omnivore",
+        "activity": "Diurnal",
+        "size": "4.5–9 mm workers",
+        "behavior": "Large mound-building colonies; chemical communication",
+        "learningTopics": [
+          "colony behavior",
+          "soil ecology",
+          "decomposition"
+        ],
+        "funFacts": [
+          "Mounds can be 2 m tall",
+          "Farm aphids for honeydew"
+        ],
+        "whyItMatters": "Soil aerators and decomposers critical to forest health."
+      },
+      "provenance": [
+        {
+          "source": "game_authored",
+          "sourceVersion": "mvp-1.0",
+          "sourceRecordId": "formica_rufa",
+          "license": "GAME-ORIGINAL",
+          "citation": "Archive of Life: Artifact World — MVP authored content",
+          "citationRequired": false,
+          "retrievedAt": "2026-07-03T02:18:17.377Z",
+          "lastUpdated": "2026-07-03T02:18:17.377Z",
+          "isMockData": true
+        },
+        {
+          "source": "catalogue_of_life",
+          "sourceVersion": "mock-sample-2026-07",
+          "sourceRecordId": "MOCK-formica_rufa",
+          "catalogueOfLifeId": "MOCK-COL-formica_rufa",
+          "license": "MOCK-SAMPLE",
+          "citation": "MOCK SAMPLE — not sourced from live API",
+          "citationRequired": true,
+          "retrievedAt": "2026-07-03T02:18:17.377Z",
+          "lastUpdated": "2026-07-03T02:18:17.377Z",
+          "isMockData": true
+        }
+      ]
+    },
+    {
+      "id": "dynastes_hercules",
+      "commonName": "Hercules Beetle",
+      "scientificName": "Dynastes hercules",
+      "group": "Insect",
+      "tier": "hero",
+      "taxonomy": {
+        "family": "Scarabaeidae",
+        "rank": "species",
+        "acceptedName": "Dynastes hercules",
+        "catalogueOfLifeId": "MOCK-COL-dynastes_hercules"
+      },
+      "conservation": {
+        "iucnCategory": "Least Concern",
+        "assessed": true,
+        "sourceVersion": "mock-iucn-2026-07",
+        "lastUpdated": "2026-07-02",
+        "iucnTaxonId": 54854
+      },
+      "distribution": {
+        "continents": [
+          "Central America",
+          "South America"
+        ],
+        "habitats": [
+          "rainforest"
+        ],
+        "sourceVersion": "mock-gbif-2026-07",
+        "lastUpdated": "2026-07-02",
+        "gbifTaxonKey": 7054582,
+        "occurrenceSummaries": [
+          {
+            "region": "Central America",
+            "occurrenceCount": 981
+          }
+        ]
+      },
+      "artifactTemplates": [
+        {
+          "id": "dynastes_hercules_molted_exoskeleton",
+          "artifactType": "molted_exoskeleton",
+          "label": "molted exoskeleton",
+          "ethical": true,
+          "description": "Ethical molted exoskeleton collection"
+        },
+        {
+          "id": "dynastes_hercules_photo_record",
+          "artifactType": "photo_record",
+          "label": "photo record",
+          "ethical": true,
+          "description": "Ethical photo record collection"
+        },
+        {
+          "id": "dynastes_hercules_behavioral_field_note",
+          "artifactType": "behavioral_field_note",
+          "label": "behavioral field note",
+          "ethical": true,
+          "description": "Ethical behavioral field note collection"
+        }
+      ],
+      "gameplay": {
+        "region": "forest",
+        "questType": "micro_world",
+        "dangerLevel": 0,
+        "ethicalInteraction": "observe_without_harming",
+        "timeRange": "Present",
+        "diet": "Herbivore (larva); Nectar/fruit (adult)",
+        "activity": "Nocturnal",
+        "size": "Up to 17 cm including horn",
+        "behavior": "Males compete with horns; larvae in decaying wood",
+        "learningTopics": [
+          "sexual selection",
+          "decomposition",
+          "exoskeleton"
+        ],
+        "funFacts": [
+          "Can lift 850 times its body weight",
+          "Horn is for competition not defense"
+        ],
+        "whyItMatters": "Decomposer larvae recycle rainforest nutrients."
+      },
+      "provenance": [
+        {
+          "source": "game_authored",
+          "sourceVersion": "mvp-1.0",
+          "sourceRecordId": "dynastes_hercules",
+          "license": "GAME-ORIGINAL",
+          "citation": "Archive of Life: Artifact World — MVP authored content",
+          "citationRequired": false,
+          "retrievedAt": "2026-07-03T02:18:17.377Z",
+          "lastUpdated": "2026-07-03T02:18:17.377Z",
+          "isMockData": true
+        },
+        {
+          "source": "catalogue_of_life",
+          "sourceVersion": "mock-sample-2026-07",
+          "sourceRecordId": "MOCK-dynastes_hercules",
+          "catalogueOfLifeId": "MOCK-COL-dynastes_hercules",
+          "license": "MOCK-SAMPLE",
+          "citation": "MOCK SAMPLE — not sourced from live API",
+          "citationRequired": true,
+          "retrievedAt": "2026-07-03T02:18:17.377Z",
+          "lastUpdated": "2026-07-03T02:18:17.377Z",
+          "isMockData": true
+        }
+      ]
+    },
+    {
+      "id": "acanthoscurria_geniculata",
+      "commonName": "Brazilian Whiteknee Tarantula",
+      "scientificName": "Acanthoscurria geniculata",
+      "group": "Arachnid",
+      "tier": "hero",
+      "taxonomy": {
+        "family": "Theraphosidae",
+        "rank": "species",
+        "acceptedName": "Acanthoscurria geniculata",
+        "catalogueOfLifeId": "MOCK-COL-acanthoscurria_geniculata"
+      },
+      "conservation": {
+        "iucnCategory": "Least Concern",
+        "assessed": true,
+        "sourceVersion": "mock-iucn-2026-07",
+        "lastUpdated": "2026-07-02",
+        "iucnTaxonId": 58335
+      },
+      "distribution": {
+        "continents": [
+          "South America"
+        ],
+        "habitats": [
+          "rainforest floor"
+        ],
+        "sourceVersion": "mock-gbif-2026-07",
+        "lastUpdated": "2026-07-02",
+        "gbifTaxonKey": 32334,
+        "occurrenceSummaries": [
+          {
+            "region": "South America",
+            "occurrenceCount": 4574
+          }
+        ]
+      },
+      "artifactTemplates": [
+        {
+          "id": "acanthoscurria_geniculata_molted_exoskeleton",
+          "artifactType": "molted_exoskeleton",
+          "label": "molted exoskeleton",
+          "ethical": true,
+          "description": "Ethical molted exoskeleton collection"
+        },
+        {
+          "id": "acanthoscurria_geniculata_burrow_cast",
+          "artifactType": "burrow_cast",
+          "label": "burrow cast",
+          "ethical": true,
+          "description": "Ethical burrow cast collection"
+        },
+        {
+          "id": "acanthoscurria_geniculata_photo_record",
+          "artifactType": "photo_record",
+          "label": "photo record",
+          "ethical": true,
+          "description": "Ethical photo record collection"
+        }
+      ],
+      "gameplay": {
+        "region": "forest",
+        "questType": "micro_world",
+        "dangerLevel": 1,
+        "ethicalInteraction": "observe_without_disturbing",
+        "timeRange": "Present",
+        "diet": "Carnivore",
+        "activity": "Nocturnal",
+        "size": "Leg span up to 20 cm",
+        "behavior": "Burrowing ambush predator; molting growth",
+        "learningTopics": [
+          "molting",
+          "exoskeleton",
+          "rainforest floor ecology"
+        ],
+        "funFacts": [
+          "Can live 20+ years",
+          "Urticating hairs used for defense"
+        ],
+        "whyItMatters": "Controls insect populations on rainforest floor."
+      },
+      "provenance": [
+        {
+          "source": "game_authored",
+          "sourceVersion": "mvp-1.0",
+          "sourceRecordId": "acanthoscurria_geniculata",
+          "license": "GAME-ORIGINAL",
+          "citation": "Archive of Life: Artifact World — MVP authored content",
+          "citationRequired": false,
+          "retrievedAt": "2026-07-03T02:18:17.377Z",
+          "lastUpdated": "2026-07-03T02:18:17.377Z",
+          "isMockData": true
+        },
+        {
+          "source": "catalogue_of_life",
+          "sourceVersion": "mock-sample-2026-07",
+          "sourceRecordId": "MOCK-acanthoscurria_geniculata",
+          "catalogueOfLifeId": "MOCK-COL-acanthoscurria_geniculata",
+          "license": "MOCK-SAMPLE",
+          "citation": "MOCK SAMPLE — not sourced from live API",
+          "citationRequired": true,
+          "retrievedAt": "2026-07-03T02:18:17.377Z",
+          "lastUpdated": "2026-07-03T02:18:17.377Z",
+          "isMockData": true
+        }
+      ]
+    }
+  ]
+}

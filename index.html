@@ -4,11 +4,9 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Archive of Life: Artifact World</title>
-  <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
   <div id="app">
-    <!-- Title Screen -->
     <div id="title-screen" class="screen active">
       <div class="title-content">
         <h1>Archive of Life</h1>
@@ -20,11 +18,8 @@
       </div>
     </div>
 
-    <!-- Game Screen -->
     <div id="game-screen" class="screen">
       <canvas id="game-canvas"></canvas>
-
-      <!-- HUD -->
       <div id="hud">
         <div id="hud-top">
           <div id="region-name">Archive Museum</div>
@@ -50,43 +45,70 @@
           </div>
         </div>
       </div>
-
-      <!-- Notification Toast -->
       <div id="toast" class="hidden"></div>
     </div>
 
-    <!-- Archive Panel -->
     <div id="panel-archive" class="panel hidden">
       <div class="panel-header">
         <h2>Archive of Life</h2>
         <button class="panel-close" data-panel="archive">✕</button>
       </div>
-      <div class="panel-tabs">
-        <button class="tab active" data-tab="all">All</button>
-        <button class="tab" data-tab="Mammal">Mammals</button>
-        <button class="tab" data-tab="Insect">Insects</button>
-        <button class="tab" data-tab="Arachnid">Arachnids</button>
-        <button class="tab" data-tab="extinct">Extinct</button>
-      </div>
-      <div class="panel-body">
+      <div class="panel-body archive-panel-body">
+        <div id="archive-coverage" class="archive-coverage"></div>
         <div id="archive-stats" class="archive-stats"></div>
+        <div class="archive-filters">
+          <input type="search" id="archive-search" placeholder="Search species..." class="archive-search">
+          <select id="filter-group" class="filter-select">
+            <option value="all">All groups</option>
+            <option value="Mammal">Mammals</option>
+            <option value="Insect">Insects</option>
+            <option value="Arachnid">Arachnids</option>
+            <option value="Reptile">Reptiles</option>
+          </select>
+          <select id="filter-region" class="filter-select">
+            <option value="all">All regions</option>
+            <option value="savanna">Savanna</option>
+            <option value="forest">Forest</option>
+            <option value="wetland">Wetland</option>
+            <option value="coastal">Coastal</option>
+            <option value="fossil_site">Fossil Site</option>
+          </select>
+          <select id="filter-status" class="filter-select">
+            <option value="all">All statuses</option>
+            <option value="Least Concern">Least Concern</option>
+            <option value="Vulnerable">Vulnerable</option>
+            <option value="Endangered">Endangered</option>
+            <option value="Extinct">Extinct</option>
+            <option value="Data Deficient">Data Deficient</option>
+          </select>
+          <select id="filter-tier" class="filter-select">
+            <option value="all">All tiers</option>
+            <option value="hero">Hero</option>
+            <option value="regional">Regional</option>
+            <option value="database">Database</option>
+          </select>
+          <select id="filter-collected" class="filter-select">
+            <option value="all">All collection</option>
+            <option value="collected">Collected</option>
+            <option value="uncollected">Uncollected</option>
+          </select>
+          <label class="filter-check"><input type="checkbox" id="filter-threatened"> Threatened only</label>
+          <label class="filter-check"><input type="checkbox" id="filter-extinct"> Extinct/fossil only</label>
+        </div>
         <div id="archive-grid" class="archive-grid"></div>
+        <div id="archive-pagination" class="archive-pagination"></div>
         <div id="species-detail" class="species-detail hidden"></div>
       </div>
     </div>
 
-    <!-- Field Notebook Panel -->
     <div id="panel-notebook" class="panel hidden">
       <div class="panel-header">
         <h2>Field Notebook</h2>
         <button class="panel-close" data-panel="notebook">✕</button>
       </div>
-      <div class="panel-body">
-        <div id="notebook-entries"></div>
-      </div>
+      <div class="panel-body"><div id="notebook-entries"></div></div>
     </div>
 
-    <!-- Map Panel -->
     <div id="panel-map" class="panel hidden">
       <div class="panel-header">
         <h2>World Map</h2>
@@ -98,7 +120,6 @@
       </div>
     </div>
 
-    <!-- Lifeling Companion Panel -->
     <div id="panel-companion" class="panel hidden">
       <div class="panel-header">
         <h2>Lifeling Companion</h2>
@@ -112,33 +133,20 @@
             <label>Body Color: <input type="color" id="companion-color" value="#7EC8A3"></label>
           </div>
         </div>
-        <div class="trait-section">
-          <h3>Equipped Traits</h3>
-          <div id="equipped-traits"></div>
-        </div>
-        <div class="trait-section">
-          <h3>Unlocked Traits</h3>
-          <div id="trait-inventory"></div>
-        </div>
-        <div class="trait-section">
-          <h3>Emotes</h3>
-          <div id="emote-buttons"></div>
-        </div>
+        <div class="trait-section"><h3>Equipped Traits</h3><div id="equipped-traits"></div></div>
+        <div class="trait-section"><h3>Unlocked Traits</h3><div id="trait-inventory"></div></div>
+        <div class="trait-section"><h3>Emotes</h3><div id="emote-buttons"></div></div>
       </div>
     </div>
 
-    <!-- Quest Panel -->
     <div id="panel-quests" class="panel hidden">
       <div class="panel-header">
         <h2>Active Quests</h2>
         <button class="panel-close" data-panel="quests">✕</button>
       </div>
-      <div class="panel-body">
-        <div id="quest-list"></div>
-      </div>
+      <div class="panel-body"><div id="quest-list"></div></div>
     </div>
 
-    <!-- Fossil Excavation Mini-game -->
     <div id="minigame-fossil" class="minigame-overlay hidden">
       <div class="minigame-container">
         <h2>Fossil Excavation</h2>
@@ -152,7 +160,6 @@
       </div>
     </div>
 
-    <!-- Wildlife Observation Mini-game -->
     <div id="minigame-observe" class="minigame-overlay hidden">
       <div class="minigame-container">
         <h2>Wildlife Observation</h2>
@@ -170,7 +177,6 @@
       </div>
     </div>
   </div>
-
-  <script type="module" src="js/main.js"></script>
+  <script type="module" src="/src/main.ts"></script>
 </body>
 </html>

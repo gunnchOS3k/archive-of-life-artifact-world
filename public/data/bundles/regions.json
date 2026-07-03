@@ -1,0 +1,111 @@
+[
+  {
+    "id": "museum",
+    "name": "Archive of Life Museum",
+    "type": "hub",
+    "description": "Your central hub — the living museum where artifacts become knowledge.",
+    "color": "#4A6741",
+    "biome": "museum",
+    "speciesIds": [],
+    "connections": [
+      "savanna",
+      "forest",
+      "wetland",
+      "coastal",
+      "fossil_site"
+    ],
+    "bundlePath": "bundles/region-museum.json"
+  },
+  {
+    "id": "savanna",
+    "name": "African Savanna",
+    "type": "explore",
+    "description": "Golden grasslands where lions, elephants, and pollinators share the sun.",
+    "color": "#C4A35A",
+    "biome": "savanna",
+    "speciesIds": [
+      "panthera_leo",
+      "loxodonta_africana",
+      "equus_caballus_ferus",
+      "danaus_plexippus",
+      "apis_mellifera",
+      "latrodectus_mactans",
+      "pachnoda_marginata"
+    ],
+    "connections": [
+      "museum"
+    ],
+    "bundlePath": "bundles/region-savanna.json"
+  },
+  {
+    "id": "forest",
+    "name": "Temperate Forest",
+    "type": "explore",
+    "description": "Dense woodland canopy home to deer, wolves, bears, and forest insects.",
+    "color": "#2D5A27",
+    "biome": "forest",
+    "speciesIds": [
+      "canis_lupus",
+      "odocoileus_virginianus",
+      "ursus_americanus",
+      "formica_rufa",
+      "dynastes_hercules",
+      "acanthoscurria_geniculata"
+    ],
+    "connections": [
+      "museum"
+    ],
+    "bundlePath": "bundles/region-forest.json"
+  },
+  {
+    "id": "wetland",
+    "name": "Midwest Wetlands",
+    "type": "explore",
+    "description": "Marshes and rivers where beavers engineer ecosystems and dragonflies hunt.",
+    "color": "#3D6B5E",
+    "biome": "wetland",
+    "speciesIds": [
+      "castor_canadensis",
+      "lontra_canadensis",
+      "anax_junius",
+      "libellula_quadrimaculata"
+    ],
+    "connections": [
+      "museum"
+    ],
+    "bundlePath": "bundles/region-wetland.json"
+  },
+  {
+    "id": "coastal",
+    "name": "Pacific Coast",
+    "type": "explore",
+    "description": "Rocky shores and open ocean where seals haul out and whales migrate.",
+    "color": "#2B6CB0",
+    "biome": "coastal",
+    "speciesIds": [
+      "balaenoptera_musculus",
+      "phoca_vitulina"
+    ],
+    "connections": [
+      "museum"
+    ],
+    "bundlePath": "bundles/region-coastal.json"
+  },
+  {
+    "id": "fossil_site",
+    "name": "Fossil Dig Site",
+    "type": "explore",
+    "description": "An active excavation revealing life from the Cambrian to the Ice Age.",
+    "color": "#8B7355",
+    "biome": "fossil_bed",
+    "speciesIds": [
+      "mammuthus_primigenius",
+      "tyrannosaurus_rex",
+      "trilobita_order"
+    ],
+    "connections": [
+      "museum"
+    ],
+    "bundlePath": "bundles/region-fossil_site.json"
+  }
+]

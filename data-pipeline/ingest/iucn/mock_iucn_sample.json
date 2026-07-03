@@ -1,0 +1,14 @@
+[
+  {
+    "taxon_id": 12345,
+    "scientific_name": "Panthera leo",
+    "category": "VU",
+    "assessment_year": 2016
+  },
+  {
+    "taxon_id": 67890,
+    "scientific_name": "Danaus plexippus",
+    "category": "EN",
+    "assessment_year": 2023
+  }
+]

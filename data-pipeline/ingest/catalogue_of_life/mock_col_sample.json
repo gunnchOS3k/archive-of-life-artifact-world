@@ -1,0 +1,16 @@
+[
+  {
+    "col_id": "MOCK-COL-panthera_leo",
+    "scientific_name": "Panthera leo",
+    "rank": "species",
+    "family": "Felidae",
+    "status": "accepted"
+  },
+  {
+    "col_id": "MOCK-COL-danaus_plexippus",
+    "scientific_name": "Danaus plexippus",
+    "rank": "species",
+    "family": "Nymphalidae",
+    "status": "accepted"
+  }
+]

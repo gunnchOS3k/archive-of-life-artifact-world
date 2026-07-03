@@ -1,0 +1,768 @@
+{
+  "regionId": "savanna",
+  "speciesIds": [
+    "panthera_leo",
+    "loxodonta_africana",
+    "equus_caballus_ferus",
+    "danaus_plexippus",
+    "apis_mellifera",
+    "latrodectus_mactans",
+    "pachnoda_marginata"
+  ],
+  "species": [
+    {
+      "id": "panthera_leo",
+      "commonName": "Lion",
+      "scientificName": "Panthera leo",
+      "group": "Mammal",
+      "tier": "hero",
+      "taxonomy": {
+        "family": "Felidae",
+        "rank": "species",
+        "acceptedName": "Panthera leo",
+        "catalogueOfLifeId": "MOCK-COL-panthera_leo"
+      },
+      "conservation": {
+        "iucnCategory": "Vulnerable",
+        "assessed": true,
+        "sourceVersion": "mock-iucn-2026-07",
+        "lastUpdated": "2026-07-02",
+        "iucnTaxonId": 43484
+      },
+      "distribution": {
+        "continents": [
+          "Africa"
+        ],
+        "habitats": [
+          "savanna",
+          "grassland"
+        ],
+        "sourceVersion": "mock-gbif-2026-07",
+        "lastUpdated": "2026-07-02",
+        "gbifTaxonKey": 8478218,
+        "occurrenceSummaries": [
+          {
+            "region": "Africa",
+            "occurrenceCount": 3362
+          }
+        ]
+      },
+      "artifactTemplates": [
+        {
+          "id": "panthera_leo_track_cast",
+          "artifactType": "track_cast",
+          "label": "track cast",
+          "ethical": true,
+          "description": "Ethical track cast collection"
+        },
+        {
+          "id": "panthera_leo_audio_roar_recording",
+          "artifactType": "audio_roar_recording",
+          "label": "audio roar recording",
+          "ethical": true,
+          "description": "Ethical audio roar recording collection"
+        },
+        {
+          "id": "panthera_leo_behavioral_field_note",
+          "artifactType": "behavioral_field_note",
+          "label": "behavioral field note",
+          "ethical": true,
+          "description": "Ethical behavioral field note collection"
+        }
+      ],
+      "gameplay": {
+        "region": "savanna",
+        "questType": "tracking_observation",
+        "dangerLevel": 5,
+        "ethicalInteraction": "observe_from_distance",
+        "timeRange": "Present",
+        "diet": "Carnivore",
+        "activity": "Crepuscular",
+        "size": "1.2–1.8 m body length",
+        "behavior": "Social pride hunter; cooperative group living",
+        "learningTopics": [
+          "social behavior",
+          "apex predators",
+          "food webs",
+          "conservation"
+        ],
+        "funFacts": [
+          "Only cats with visible sexual dimorphism in mane",
+          "Prides are mostly related females"
+        ],
+        "whyItMatters": "Apex predators regulate herbivore populations and indicate healthy savanna ecosystems."
+      },
+      "provenance": [
+        {
+          "source": "game_authored",
+          "sourceVersion": "mvp-1.0",
+          "sourceRecordId": "panthera_leo",
+          "license": "GAME-ORIGINAL",
+          "citation": "Archive of Life: Artifact World — MVP authored content",
+          "citationRequired": false,
+          "retrievedAt": "2026-07-03T02:18:17.374Z",
+          "lastUpdated": "2026-07-03T02:18:17.374Z",
+          "isMockData": true
+        },
+        {
+          "source": "catalogue_of_life",
+          "sourceVersion": "mock-sample-2026-07",
+          "sourceRecordId": "MOCK-panthera_leo",
+          "catalogueOfLifeId": "MOCK-COL-panthera_leo",
+          "license": "MOCK-SAMPLE",
+          "citation": "MOCK SAMPLE — not sourced from live API",
+          "citationRequired": true,
+          "retrievedAt": "2026-07-03T02:18:17.374Z",
+          "lastUpdated": "2026-07-03T02:18:17.374Z",
+          "isMockData": true
+        }
+      ]
+    },
+    {
+      "id": "loxodonta_africana",
+      "commonName": "African Elephant",
+      "scientificName": "Loxodonta africana",
+      "group": "Mammal",
+      "tier": "hero",
+      "taxonomy": {
+        "family": "Elephantidae",
+        "rank": "species",
+        "acceptedName": "Loxodonta africana",
+        "catalogueOfLifeId": "MOCK-COL-loxodonta_africana"
+      },
+      "conservation": {
+        "iucnCategory": "Endangered",
+        "assessed": true,
+        "sourceVersion": "mock-iucn-2026-07",
+        "lastUpdated": "2026-07-02",
+        "iucnTaxonId": 1932
+      },
+      "distribution": {
+        "continents": [
+          "Africa"
+        ],
+        "habitats": [
+          "savanna",
+          "forest"
+        ],
+        "sourceVersion": "mock-gbif-2026-07",
+        "lastUpdated": "2026-07-02",
+        "gbifTaxonKey": 7259858,
+        "occurrenceSummaries": [
+          {
+            "region": "Africa",
+            "occurrenceCount": 700
+          }
+        ]
+      },
+      "artifactTemplates": [
+        {
+          "id": "loxodonta_africana_track_cast",
+          "artifactType": "track_cast",
+          "label": "track cast",
+          "ethical": true,
+          "description": "Ethical track cast collection"
+        },
+        {
+          "id": "loxodonta_africana_dung_sample",
+          "artifactType": "dung_sample",
+          "label": "dung sample",
+          "ethical": true,
+          "description": "Ethical dung sample collection"
+        },
+        {
+          "id": "loxodonta_africana_behavioral_field_note",
+          "artifactType": "behavioral_field_note",
+          "label": "behavioral field note",
+          "ethical": true,
+          "description": "Ethical behavioral field note collection"
+        }
+      ],
+      "gameplay": {
+        "region": "savanna",
+        "questType": "observation",
+        "dangerLevel": 4,
+        "ethicalInteraction": "observe_from_distance",
+        "timeRange": "Present",
+        "diet": "Herbivore",
+        "activity": "Diurnal",
+        "size": "Up to 4 m at shoulder",
+        "behavior": "Matriarchal herds; long-distance migration",
+        "learningTopics": [
+          "keystone species",
+          "migration",
+          "conservation"
+        ],
+        "funFacts": [
+          "Can recognize themselves in mirrors",
+          "Create water holes used by many species"
+        ],
+        "whyItMatters": "Keystone species that shape landscapes and support biodiversity."
+      },
+      "provenance": [
+        {
+          "source": "game_authored",
+          "sourceVersion": "mvp-1.0",
+          "sourceRecordId": "loxodonta_africana",
+          "license": "GAME-ORIGINAL",
+          "citation": "Archive of Life: Artifact World — MVP authored content",
+          "citationRequired": false,
+          "retrievedAt": "2026-07-03T02:18:17.377Z",
+          "lastUpdated": "2026-07-03T02:18:17.377Z",
+          "isMockData": true
+        },
+        {
+          "source": "catalogue_of_life",
+          "sourceVersion": "mock-sample-2026-07",
+          "sourceRecordId": "MOCK-loxodonta_africana",
+          "catalogueOfLifeId": "MOCK-COL-loxodonta_africana",
+          "license": "MOCK-SAMPLE",
+          "citation": "MOCK SAMPLE — not sourced from live API",
+          "citationRequired": true,
+          "retrievedAt": "2026-07-03T02:18:17.377Z",
+          "lastUpdated": "2026-07-03T02:18:17.377Z",
+          "isMockData": true
+        }
+      ]
+    },
+    {
+      "id": "equus_caballus_ferus",
+      "commonName": "Przewalski's Horse",
+      "scientificName": "Equus ferus przewalskii",
+      "group": "Mammal",
+      "tier": "hero",
+      "taxonomy": {
+        "family": "Equidae",
+        "rank": "subspecies",
+        "acceptedName": "Equus ferus przewalskii",
+        "catalogueOfLifeId": "MOCK-COL-equus_caballus_ferus"
+      },
+      "conservation": {
+        "iucnCategory": "Endangered",
+        "assessed": true,
+        "sourceVersion": "mock-iucn-2026-07",
+        "lastUpdated": "2026-07-02",
+        "iucnTaxonId": 23826
+      },
+      "distribution": {
+        "continents": [
+          "Asia"
+        ],
+        "habitats": [
+          "grassland",
+          "steppe"
+        ],
+        "sourceVersion": "mock-gbif-2026-07",
+        "lastUpdated": "2026-07-02",
+        "gbifTaxonKey": 869525,
+        "occurrenceSummaries": [
+          {
+            "region": "Asia",
+            "occurrenceCount": 4886
+          }
+        ]
+      },
+      "artifactTemplates": [
+        {
+          "id": "equus_caballus_ferus_track_cast",
+          "artifactType": "track_cast",
+          "label": "track cast",
+          "ethical": true,
+          "description": "Ethical track cast collection"
+        },
+        {
+          "id": "equus_caballus_ferus_photo_record",
+          "artifactType": "photo_record",
+          "label": "photo record",
+          "ethical": true,
+          "description": "Ethical photo record collection"
+        },
+        {
+          "id": "equus_caballus_ferus_conservation_report",
+          "artifactType": "conservation_report",
+          "label": "conservation report",
+          "ethical": true,
+          "description": "Ethical conservation report collection"
+        }
+      ],
+      "gameplay": {
+        "region": "savanna",
+        "questType": "conservation",
+        "dangerLevel": 1,
+        "ethicalInteraction": "observe_from_distance",
+        "timeRange": "Present",
+        "diet": "Herbivore",
+        "activity": "Diurnal",
+        "size": "1.2–1.4 m shoulder height",
+        "behavior": "Social herd grazer; only truly wild horse",
+        "learningTopics": [
+          "conservation success",
+          "reintroduction",
+          "grassland ecology"
+        ],
+        "funFacts": [
+          "Went extinct in wild in 1960s",
+          "Successfully reintroduced to Mongolia"
+        ],
+        "whyItMatters": "Symbol of successful species recovery through captive breeding."
+      },
+      "provenance": [
+        {
+          "source": "game_authored",
+          "sourceVersion": "mvp-1.0",
+          "sourceRecordId": "equus_caballus_ferus",
+          "license": "GAME-ORIGINAL",
+          "citation": "Archive of Life: Artifact World — MVP authored content",
+          "citationRequired": false,
+          "retrievedAt": "2026-07-03T02:18:17.377Z",
+          "lastUpdated": "2026-07-03T02:18:17.377Z",
+          "isMockData": true
+        },
+        {
+          "source": "catalogue_of_life",
+          "sourceVersion": "mock-sample-2026-07",
+          "sourceRecordId": "MOCK-equus_caballus_ferus",
+          "catalogueOfLifeId": "MOCK-COL-equus_caballus_ferus",
+          "license": "MOCK-SAMPLE",
+          "citation": "MOCK SAMPLE — not sourced from live API",
+          "citationRequired": true,
+          "retrievedAt": "2026-07-03T02:18:17.377Z",
+          "lastUpdated": "2026-07-03T02:18:17.377Z",
+          "isMockData": true
+        }
+      ]
+    },
+    {
+      "id": "danaus_plexippus",
+      "commonName": "Monarch Butterfly",
+      "scientificName": "Danaus plexippus",
+      "group": "Insect",
+      "tier": "hero",
+      "taxonomy": {
+        "family": "Nymphalidae",
+        "rank": "species",
+        "acceptedName": "Danaus plexippus",
+        "catalogueOfLifeId": "MOCK-COL-danaus_plexippus"
+      },
+      "conservation": {
+        "iucnCategory": "Endangered",
+        "assessed": true,
+        "sourceVersion": "mock-iucn-2026-07",
+        "lastUpdated": "2026-07-02",
+        "iucnTaxonId": 67699
+      },
+      "distribution": {
+        "continents": [
+          "North America"
+        ],
+        "habitats": [
+          "grassland",
+          "wetland",
+          "forest edge"
+        ],
+        "sourceVersion": "mock-gbif-2026-07",
+        "lastUpdated": "2026-07-02",
+        "gbifTaxonKey": 9236329,
+        "occurrenceSummaries": [
+          {
+            "region": "North America",
+            "occurrenceCount": 2576
+          }
+        ]
+      },
+      "artifactTemplates": [
+        {
+          "id": "danaus_plexippus_photo_record",
+          "artifactType": "photo_record",
+          "label": "photo record",
+          "ethical": true,
+          "description": "Ethical photo record collection"
+        },
+        {
+          "id": "danaus_plexippus_wing_pattern_scan",
+          "artifactType": "wing_pattern_scan",
+          "label": "wing pattern scan",
+          "ethical": true,
+          "description": "Ethical wing pattern scan collection"
+        },
+        {
+          "id": "danaus_plexippus_migration_tag_data",
+          "artifactType": "migration_tag_data",
+          "label": "migration tag data",
+          "ethical": true,
+          "description": "Ethical migration tag data collection"
+        }
+      ],
+      "gameplay": {
+        "region": "grassland",
+        "questType": "behavior",
+        "dangerLevel": 0,
+        "ethicalInteraction": "observe_without_touching",
+        "timeRange": "Present",
+        "diet": "Herbivore (larva); Nectar (adult)",
+        "activity": "Diurnal",
+        "size": "Wingspan 8.9–10.2 cm",
+        "behavior": "Multi-generational migration up to 4,800 km",
+        "learningTopics": [
+          "migration",
+          "metamorphosis",
+          "pollination",
+          "conservation"
+        ],
+        "funFacts": [
+          "Fourth generation migrates to Mexico",
+          "Milkweed toxins make them poisonous to predators"
+        ],
+        "whyItMatters": "Iconic pollinator whose decline signals habitat loss."
+      },
+      "provenance": [
+        {
+          "source": "game_authored",
+          "sourceVersion": "mvp-1.0",
+          "sourceRecordId": "danaus_plexippus",
+          "license": "GAME-ORIGINAL",
+          "citation": "Archive of Life: Artifact World — MVP authored content",
+          "citationRequired": false,
+          "retrievedAt": "2026-07-03T02:18:17.377Z",
+          "lastUpdated": "2026-07-03T02:18:17.377Z",
+          "isMockData": true
+        },
+        {
+          "source": "catalogue_of_life",
+          "sourceVersion": "mock-sample-2026-07",
+          "sourceRecordId": "MOCK-danaus_plexippus",
+          "catalogueOfLifeId": "MOCK-COL-danaus_plexippus",
+          "license": "MOCK-SAMPLE",
+          "citation": "MOCK SAMPLE — not sourced from live API",
+          "citationRequired": true,
+          "retrievedAt": "2026-07-03T02:18:17.377Z",
+          "lastUpdated": "2026-07-03T02:18:17.377Z",
+          "isMockData": true
+        }
+      ]
+    },
+    {
+      "id": "apis_mellifera",
+      "commonName": "Western Honeybee",
+      "scientificName": "Apis mellifera",
+      "group": "Insect",
+      "tier": "hero",
+      "taxonomy": {
+        "family": "Apidae",
+        "rank": "species",
+        "acceptedName": "Apis mellifera",
+        "catalogueOfLifeId": "MOCK-COL-apis_mellifera"
+      },
+      "conservation": {
+        "iucnCategory": "Data Deficient",
+        "assessed": true,
+        "sourceVersion": "mock-iucn-2026-07",
+        "lastUpdated": "2026-07-02",
+        "iucnTaxonId": 35868
+      },
+      "distribution": {
+        "continents": [
+          "Global"
+        ],
+        "habitats": [
+          "grassland",
+          "forest",
+          "urban"
+        ],
+        "sourceVersion": "mock-gbif-2026-07",
+        "lastUpdated": "2026-07-02",
+        "gbifTaxonKey": 8845630,
+        "occurrenceSummaries": [
+          {
+            "region": "Global",
+            "occurrenceCount": 1721
+          }
+        ]
+      },
+      "artifactTemplates": [
+        {
+          "id": "apis_mellifera_hive_observation",
+          "artifactType": "hive_observation",
+          "label": "hive observation",
+          "ethical": true,
+          "description": "Ethical hive observation collection"
+        },
+        {
+          "id": "apis_mellifera_pollination_event_record",
+          "artifactType": "pollination_event_record",
+          "label": "pollination event record",
+          "ethical": true,
+          "description": "Ethical pollination event record collection"
+        },
+        {
+          "id": "apis_mellifera_behavioral_field_note",
+          "artifactType": "behavioral_field_note",
+          "label": "behavioral field note",
+          "ethical": true,
+          "description": "Ethical behavioral field note collection"
+        }
+      ],
+      "gameplay": {
+        "region": "grassland",
+        "questType": "behavior",
+        "dangerLevel": 1,
+        "ethicalInteraction": "observe_from_distance",
+        "timeRange": "Present",
+        "diet": "Herbivore (nectar/pollen)",
+        "activity": "Diurnal",
+        "size": "1.2–1.5 cm body length",
+        "behavior": "Eusocial colony; waggle dance communication",
+        "learningTopics": [
+          "pollination",
+          "colony behavior",
+          "food webs"
+        ],
+        "funFacts": [
+          "Waggle dance encodes distance and direction to flowers",
+          "Pollinate 1/3 of food crops"
+        ],
+        "whyItMatters": "Essential pollinator supporting global agriculture and wild plants."
+      },
+      "provenance": [
+        {
+          "source": "game_authored",
+          "sourceVersion": "mvp-1.0",
+          "sourceRecordId": "apis_mellifera",
+          "license": "GAME-ORIGINAL",
+          "citation": "Archive of Life: Artifact World — MVP authored content",
+          "citationRequired": false,
+          "retrievedAt": "2026-07-03T02:18:17.377Z",
+          "lastUpdated": "2026-07-03T02:18:17.377Z",
+          "isMockData": true
+        },
+        {
+          "source": "catalogue_of_life",
+          "sourceVersion": "mock-sample-2026-07",
+          "sourceRecordId": "MOCK-apis_mellifera",
+          "catalogueOfLifeId": "MOCK-COL-apis_mellifera",
+          "license": "MOCK-SAMPLE",
+          "citation": "MOCK SAMPLE — not sourced from live API",
+          "citationRequired": true,
+          "retrievedAt": "2026-07-03T02:18:17.377Z",
+          "lastUpdated": "2026-07-03T02:18:17.377Z",
+          "isMockData": true
+        }
+      ]
+    },
+    {
+      "id": "latrodectus_mactans",
+      "commonName": "Southern Black Widow",
+      "scientificName": "Latrodectus mactans",
+      "group": "Arachnid",
+      "tier": "hero",
+      "taxonomy": {
+        "family": "Theridiidae",
+        "rank": "species",
+        "acceptedName": "Latrodectus mactans",
+        "catalogueOfLifeId": "MOCK-COL-latrodectus_mactans"
+      },
+      "conservation": {
+        "iucnCategory": "Least Concern",
+        "assessed": true,
+        "sourceVersion": "mock-iucn-2026-07",
+        "lastUpdated": "2026-07-02",
+        "iucnTaxonId": 94541
+      },
+      "distribution": {
+        "continents": [
+          "North America"
+        ],
+        "habitats": [
+          "grassland",
+          "forest edge",
+          "urban"
+        ],
+        "sourceVersion": "mock-gbif-2026-07",
+        "lastUpdated": "2026-07-02",
+        "gbifTaxonKey": 1257134,
+        "occurrenceSummaries": [
+          {
+            "region": "North America",
+            "occurrenceCount": 3872
+          }
+        ]
+      },
+      "artifactTemplates": [
+        {
+          "id": "latrodectus_mactans_web_silk_sample",
+          "artifactType": "web_silk_sample",
+          "label": "web silk sample",
+          "ethical": true,
+          "description": "Ethical web silk sample collection"
+        },
+        {
+          "id": "latrodectus_mactans_photo_record",
+          "artifactType": "photo_record",
+          "label": "photo record",
+          "ethical": true,
+          "description": "Ethical photo record collection"
+        },
+        {
+          "id": "latrodectus_mactans_behavioral_field_note",
+          "artifactType": "behavioral_field_note",
+          "label": "behavioral field note",
+          "ethical": true,
+          "description": "Ethical behavioral field note collection"
+        }
+      ],
+      "gameplay": {
+        "region": "grassland",
+        "questType": "observation",
+        "dangerLevel": 2,
+        "ethicalInteraction": "observe_from_distance",
+        "timeRange": "Present",
+        "diet": "Carnivore",
+        "activity": "Nocturnal",
+        "size": "Body 8–13 mm",
+        "behavior": "Web-building ambush predator",
+        "learningTopics": [
+          "web physics",
+          "venom",
+          "pest control"
+        ],
+        "funFacts": [
+          "Silk is stronger than steel by weight",
+          "Bites are rarely fatal to humans"
+        ],
+        "whyItMatters": "Natural pest control; teaches respect for misunderstood species."
+      },
+      "provenance": [
+        {
+          "source": "game_authored",
+          "sourceVersion": "mvp-1.0",
+          "sourceRecordId": "latrodectus_mactans",
+          "license": "GAME-ORIGINAL",
+          "citation": "Archive of Life: Artifact World — MVP authored content",
+          "citationRequired": false,
+          "retrievedAt": "2026-07-03T02:18:17.377Z",
+          "lastUpdated": "2026-07-03T02:18:17.377Z",
+          "isMockData": true
+        },
+        {
+          "source": "catalogue_of_life",
+          "sourceVersion": "mock-sample-2026-07",
+          "sourceRecordId": "MOCK-latrodectus_mactans",
+          "catalogueOfLifeId": "MOCK-COL-latrodectus_mactans",
+          "license": "MOCK-SAMPLE",
+          "citation": "MOCK SAMPLE — not sourced from live API",
+          "citationRequired": true,
+          "retrievedAt": "2026-07-03T02:18:17.377Z",
+          "lastUpdated": "2026-07-03T02:18:17.377Z",
+          "isMockData": true
+        }
+      ]
+    },
+    {
+      "id": "pachnoda_marginata",
+      "commonName": "Sun Beetle",
+      "scientificName": "Pachnoda marginata",
+      "group": "Insect",
+      "tier": "hero",
+      "taxonomy": {
+        "family": "Scarabaeidae",
+        "rank": "species",
+        "acceptedName": "Pachnoda marginata",
+        "catalogueOfLifeId": "MOCK-COL-pachnoda_marginata"
+      },
+      "conservation": {
+        "iucnCategory": "Least Concern",
+        "assessed": true,
+        "sourceVersion": "mock-iucn-2026-07",
+        "lastUpdated": "2026-07-02",
+        "iucnTaxonId": 28925
+      },
+      "distribution": {
+        "continents": [
+          "Africa"
+        ],
+        "habitats": [
+          "tropical forest",
+          "savanna"
+        ],
+        "sourceVersion": "mock-gbif-2026-07",
+        "lastUpdated": "2026-07-02",
+        "gbifTaxonKey": 4272153,
+        "occurrenceSummaries": [
+          {
+            "region": "Africa",
+            "occurrenceCount": 2021
+          }
+        ]
+      },
+      "artifactTemplates": [
+        {
+          "id": "pachnoda_marginata_molted_exoskeleton",
+          "artifactType": "molted_exoskeleton",
+          "label": "molted exoskeleton",
+          "ethical": true,
+          "description": "Ethical molted exoskeleton collection"
+        },
+        {
+          "id": "pachnoda_marginata_photo_record",
+          "artifactType": "photo_record",
+          "label": "photo record",
+          "ethical": true,
+          "description": "Ethical photo record collection"
+        },
+        {
+          "id": "pachnoda_marginata_behavioral_field_note",
+          "artifactType": "behavioral_field_note",
+          "label": "behavioral field note",
+          "ethical": true,
+          "description": "Ethical behavioral field note collection"
+        }
+      ],
+      "gameplay": {
+        "region": "savanna",
+        "questType": "micro_world",
+        "dangerLevel": 0,
+        "ethicalInteraction": "observe_without_harming",
+        "timeRange": "Present",
+        "diet": "Herbivore (fruit/flowers)",
+        "activity": "Diurnal",
+        "size": "2.5–3.5 cm body length",
+        "behavior": "Bright coloration; larvae in compost",
+        "learningTopics": [
+          "decomposition",
+          "coloration",
+          "life cycle"
+        ],
+        "funFacts": [
+          "Bright yellow warns predators",
+          "Larvae are important decomposers"
+        ],
+        "whyItMatters": "Recycles organic matter in tropical ecosystems."
+      },
+      "provenance": [
+        {
+          "source": "game_authored",
+          "sourceVersion": "mvp-1.0",
+          "sourceRecordId": "pachnoda_marginata",
+          "license": "GAME-ORIGINAL",
+          "citation": "Archive of Life: Artifact World — MVP authored content",
+          "citationRequired": false,
+          "retrievedAt": "2026-07-03T02:18:17.377Z",
+          "lastUpdated": "2026-07-03T02:18:17.377Z",
+          "isMockData": true
+        },
+        {
+          "source": "catalogue_of_life",
+          "sourceVersion": "mock-sample-2026-07",
+          "sourceRecordId": "MOCK-pachnoda_marginata",
+          "catalogueOfLifeId": "MOCK-COL-pachnoda_marginata",
+          "license": "MOCK-SAMPLE",
+          "citation": "MOCK SAMPLE — not sourced from live API",
+          "citationRequired": true,
+          "retrievedAt": "2026-07-03T02:18:17.377Z",
+          "lastUpdated": "2026-07-03T02:18:17.377Z",
+          "isMockData": true
+        }
+      ]
+    }
+  ]
+}

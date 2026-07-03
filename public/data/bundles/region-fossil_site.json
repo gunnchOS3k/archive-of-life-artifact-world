@@ -1,0 +1,406 @@
+{
+  "regionId": "fossil_site",
+  "speciesIds": [
+    "mammuthus_primigenius",
+    "tyrannosaurus_rex",
+    "trilobita_order"
+  ],
+  "species": [
+    {
+      "id": "mammuthus_primigenius",
+      "commonName": "Woolly Mammoth",
+      "scientificName": "Mammuthus primigenius",
+      "group": "Mammal",
+      "tier": "hero",
+      "taxonomy": {
+        "family": "Elephantidae",
+        "rank": "species",
+        "acceptedName": "Mammuthus primigenius",
+        "catalogueOfLifeId": "MOCK-COL-mammuthus_primigenius"
+      },
+      "conservation": {
+        "iucnCategory": "Extinct",
+        "assessed": true,
+        "sourceVersion": "mock-iucn-2026-07",
+        "lastUpdated": "2026-07-02",
+        "iucnTaxonId": 27123
+      },
+      "distribution": {
+        "continents": [
+          "Eurasia",
+          "North America"
+        ],
+        "habitats": [
+          "tundra",
+          "steppe"
+        ],
+        "sourceVersion": "mock-gbif-2026-07",
+        "lastUpdated": "2026-07-02",
+        "gbifTaxonKey": 8963195,
+        "occurrenceSummaries": [
+          {
+            "region": "Eurasia",
+            "occurrenceCount": 2661
+          }
+        ]
+      },
+      "fossil": {
+        "timeRange": "Pleistocene–Holocene (extinct ~4,000 years ago)",
+        "fossilLocations": [
+          "Siberia",
+          "Alaska",
+          "Yukon"
+        ],
+        "paleoenvironment": "Mammoth steppe — cold grassland",
+        "livingRelatives": [
+          "Asian Elephant"
+        ],
+        "paleobiodbTaxonNo": 27159,
+        "sourceVersion": "mock-pbdb-2026-07",
+        "lastUpdated": "2026-07-02"
+      },
+      "artifactTemplates": [
+        {
+          "id": "mammuthus_primigenius_fossil_tooth_replica",
+          "artifactType": "fossil_tooth_replica",
+          "label": "fossil tooth replica",
+          "ethical": true,
+          "description": "Ethical fossil tooth replica collection"
+        },
+        {
+          "id": "mammuthus_primigenius_fossil_bone_cast",
+          "artifactType": "fossil_bone_cast",
+          "label": "fossil bone cast",
+          "ethical": true,
+          "description": "Ethical fossil bone cast collection"
+        },
+        {
+          "id": "mammuthus_primigenius_excavation_field_note",
+          "artifactType": "excavation_field_note",
+          "label": "excavation field note",
+          "ethical": true,
+          "description": "Ethical excavation field note collection"
+        }
+      ],
+      "gameplay": {
+        "region": "fossil_site",
+        "questType": "fossil",
+        "dangerLevel": 0,
+        "ethicalInteraction": "excavate_carefully",
+        "timeRange": "Pleistocene–Holocene (extinct ~4,000 years ago)",
+        "diet": "Herbivore",
+        "activity": "Diurnal",
+        "size": "Up to 3.4 m shoulder height",
+        "behavior": "Herd grazer adapted to ice age cold",
+        "learningTopics": [
+          "ice age",
+          "adaptation",
+          "extinction",
+          "climate change"
+        ],
+        "funFacts": [
+          "Covered in long fur up to 1 meter",
+          "Closest living relative is the Asian elephant"
+        ],
+        "whyItMatters": "Teaches ice age ecology and human-driven extinction.",
+        "fossilLocations": [
+          "Siberia",
+          "Alaska",
+          "Yukon"
+        ],
+        "livingRelatives": [
+          "Asian Elephant"
+        ]
+      },
+      "provenance": [
+        {
+          "source": "game_authored",
+          "sourceVersion": "mvp-1.0",
+          "sourceRecordId": "mammuthus_primigenius",
+          "license": "GAME-ORIGINAL",
+          "citation": "Archive of Life: Artifact World — MVP authored content",
+          "citationRequired": false,
+          "retrievedAt": "2026-07-03T02:18:17.377Z",
+          "lastUpdated": "2026-07-03T02:18:17.377Z",
+          "isMockData": true
+        },
+        {
+          "source": "paleobiodb",
+          "sourceVersion": "mock-sample-2026-07",
+          "sourceRecordId": "MOCK-mammuthus_primigenius",
+          "paleobiodbTaxonNo": 613430,
+          "license": "MOCK-SAMPLE",
+          "citation": "MOCK SAMPLE — not sourced from live API",
+          "citationRequired": true,
+          "retrievedAt": "2026-07-03T02:18:17.377Z",
+          "lastUpdated": "2026-07-03T02:18:17.377Z",
+          "isMockData": true
+        }
+      ]
+    },
+    {
+      "id": "tyrannosaurus_rex",
+      "commonName": "Tyrannosaurus rex",
+      "scientificName": "Tyrannosaurus rex",
+      "group": "Reptile",
+      "tier": "hero",
+      "taxonomy": {
+        "family": "Tyrannosauridae",
+        "rank": "species",
+        "acceptedName": "Tyrannosaurus rex",
+        "catalogueOfLifeId": "MOCK-COL-tyrannosaurus_rex"
+      },
+      "conservation": {
+        "iucnCategory": "Extinct",
+        "assessed": true,
+        "sourceVersion": "mock-iucn-2026-07",
+        "lastUpdated": "2026-07-02",
+        "iucnTaxonId": 52530
+      },
+      "distribution": {
+        "continents": [
+          "North America"
+        ],
+        "habitats": [
+          "floodplain",
+          "forest"
+        ],
+        "sourceVersion": "mock-gbif-2026-07",
+        "lastUpdated": "2026-07-02",
+        "gbifTaxonKey": 9271524,
+        "occurrenceSummaries": [
+          {
+            "region": "North America",
+            "occurrenceCount": 2420
+          }
+        ]
+      },
+      "fossil": {
+        "timeRange": "Late Cretaceous (~68–66 Ma)",
+        "fossilLocations": [
+          "Montana",
+          "South Dakota",
+          "Alberta"
+        ],
+        "paleoenvironment": "Subtropical floodplain with rivers",
+        "livingRelatives": [
+          "Chickens",
+          "All birds"
+        ],
+        "paleobiodbTaxonNo": 117956,
+        "sourceVersion": "mock-pbdb-2026-07",
+        "lastUpdated": "2026-07-02"
+      },
+      "artifactTemplates": [
+        {
+          "id": "tyrannosaurus_rex_fossil_tooth_replica",
+          "artifactType": "fossil_tooth_replica",
+          "label": "fossil tooth replica",
+          "ethical": true,
+          "description": "Ethical fossil tooth replica collection"
+        },
+        {
+          "id": "tyrannosaurus_rex_footprint_slab",
+          "artifactType": "footprint_slab",
+          "label": "footprint slab",
+          "ethical": true,
+          "description": "Ethical footprint slab collection"
+        },
+        {
+          "id": "tyrannosaurus_rex_excavation_field_note",
+          "artifactType": "excavation_field_note",
+          "label": "excavation field note",
+          "ethical": true,
+          "description": "Ethical excavation field note collection"
+        }
+      ],
+      "gameplay": {
+        "region": "fossil_site",
+        "questType": "fossil",
+        "dangerLevel": 0,
+        "ethicalInteraction": "excavate_carefully",
+        "timeRange": "Late Cretaceous (~68–66 Ma)",
+        "diet": "Carnivore",
+        "activity": "Unknown (likely crepuscular)",
+        "size": "Up to 12.3 m body length",
+        "behavior": "Apex predator; possibly scavenger opportunist",
+        "learningTopics": [
+          "mesozoic",
+          "apex predators",
+          "fossil evidence",
+          "scientific uncertainty"
+        ],
+        "funFacts": [
+          "Bite force strongest of any land animal",
+          "May have had feathers as juveniles"
+        ],
+        "whyItMatters": "Gateway to understanding dinosaur paleontology and Mesozoic ecosystems.",
+        "fossilLocations": [
+          "Montana",
+          "South Dakota",
+          "Alberta"
+        ],
+        "livingRelatives": [
+          "Chickens",
+          "All birds"
+        ]
+      },
+      "provenance": [
+        {
+          "source": "game_authored",
+          "sourceVersion": "mvp-1.0",
+          "sourceRecordId": "tyrannosaurus_rex",
+          "license": "GAME-ORIGINAL",
+          "citation": "Archive of Life: Artifact World — MVP authored content",
+          "citationRequired": false,
+          "retrievedAt": "2026-07-03T02:18:17.377Z",
+          "lastUpdated": "2026-07-03T02:18:17.377Z",
+          "isMockData": true
+        },
+        {
+          "source": "paleobiodb",
+          "sourceVersion": "mock-sample-2026-07",
+          "sourceRecordId": "MOCK-tyrannosaurus_rex",
+          "paleobiodbTaxonNo": 565134,
+          "license": "MOCK-SAMPLE",
+          "citation": "MOCK SAMPLE — not sourced from live API",
+          "citationRequired": true,
+          "retrievedAt": "2026-07-03T02:18:17.377Z",
+          "lastUpdated": "2026-07-03T02:18:17.377Z",
+          "isMockData": true
+        }
+      ]
+    },
+    {
+      "id": "trilobita_order",
+      "commonName": "Trilobite",
+      "scientificName": "Trilobita (order)",
+      "group": "Arthropod",
+      "tier": "hero",
+      "taxonomy": {
+        "family": "Trilobita",
+        "rank": "order",
+        "acceptedName": "Trilobita (order)",
+        "catalogueOfLifeId": "MOCK-COL-trilobita_order"
+      },
+      "conservation": {
+        "iucnCategory": "Extinct",
+        "assessed": true,
+        "sourceVersion": "mock-iucn-2026-07",
+        "lastUpdated": "2026-07-02",
+        "iucnTaxonId": 71725
+      },
+      "distribution": {
+        "continents": [
+          "Global ancient oceans"
+        ],
+        "habitats": [
+          "ancient seafloor"
+        ],
+        "sourceVersion": "mock-gbif-2026-07",
+        "lastUpdated": "2026-07-02",
+        "gbifTaxonKey": 6322762,
+        "occurrenceSummaries": [
+          {
+            "region": "Global ancient oceans",
+            "occurrenceCount": 819
+          }
+        ]
+      },
+      "fossil": {
+        "timeRange": "Cambrian–Permian (~521–252 Ma)",
+        "fossilLocations": [
+          "Morocco",
+          "Utah",
+          "Czech Republic"
+        ],
+        "paleoenvironment": "Shallow tropical seas",
+        "livingRelatives": [
+          "Horseshoe crabs",
+          "Arachnids"
+        ],
+        "paleobiodbTaxonNo": 344792,
+        "sourceVersion": "mock-pbdb-2026-07",
+        "lastUpdated": "2026-07-02"
+      },
+      "artifactTemplates": [
+        {
+          "id": "trilobita_order_shell_fossil",
+          "artifactType": "shell_fossil",
+          "label": "shell fossil",
+          "ethical": true,
+          "description": "Ethical shell fossil collection"
+        },
+        {
+          "id": "trilobita_order_trace_fossil",
+          "artifactType": "trace_fossil",
+          "label": "trace fossil",
+          "ethical": true,
+          "description": "Ethical trace fossil collection"
+        },
+        {
+          "id": "trilobita_order_excavation_field_note",
+          "artifactType": "excavation_field_note",
+          "label": "excavation field note",
+          "ethical": true,
+          "description": "Ethical excavation field note collection"
+        }
+      ],
+      "gameplay": {
+        "region": "fossil_site",
+        "questType": "fossil",
+        "dangerLevel": 0,
+        "ethicalInteraction": "excavate_carefully",
+        "timeRange": "Cambrian–Permian (~521–252 Ma)",
+        "diet": "Varied (detritivore, predator, filter feeder)",
+        "activity": "Unknown",
+        "size": "1 mm to 72 cm",
+        "behavior": "Diverse marine arthropods; molted exoskeletons",
+        "learningTopics": [
+          "cambrian explosion",
+          "marine fossils",
+          "exoskeleton evolution"
+        ],
+        "funFacts": [
+          "Over 20,000 species described",
+          "Named for three-lobed body"
+        ],
+        "whyItMatters": "Icon of the Cambrian explosion and early animal diversity.",
+        "fossilLocations": [
+          "Morocco",
+          "Utah",
+          "Czech Republic"
+        ],
+        "livingRelatives": [
+          "Horseshoe crabs",
+          "Arachnids"
+        ]
+      },
+      "provenance": [
+        {
+          "source": "game_authored",
+          "sourceVersion": "mvp-1.0",
+          "sourceRecordId": "trilobita_order",
+          "license": "GAME-ORIGINAL",
+          "citation": "Archive of Life: Artifact World — MVP authored content",
+          "citationRequired": false,
+          "retrievedAt": "2026-07-03T02:18:17.377Z",
+          "lastUpdated": "2026-07-03T02:18:17.377Z",
+          "isMockData": true
+        },
+        {
+          "source": "paleobiodb",
+          "sourceVersion": "mock-sample-2026-07",
+          "sourceRecordId": "MOCK-trilobita_order",
+          "paleobiodbTaxonNo": 754744,
+          "license": "MOCK-SAMPLE",
+          "citation": "MOCK SAMPLE — not sourced from live API",
+          "citationRequired": true,
+          "retrievedAt": "2026-07-03T02:18:17.377Z",
+          "lastUpdated": "2026-07-03T02:18:17.377Z",
+          "isMockData": true
+        }
+      ]
+    }
+  ]
+}
