@@ -1,0 +1,442 @@
+{
+  "regionId": "wetland",
+  "speciesIds": [
+    "castor_canadensis",
+    "lontra_canadensis",
+    "anax_junius",
+    "libellula_quadrimaculata"
+  ],
+  "species": [
+    {
+      "id": "castor_canadensis",
+      "commonName": "North American Beaver",
+      "scientificName": "Castor canadensis",
+      "group": "Mammal",
+      "tier": "hero",
+      "taxonomy": {
+        "family": "Castoridae",
+        "rank": "species",
+        "acceptedName": "Castor canadensis",
+        "catalogueOfLifeId": "MOCK-COL-castor_canadensis"
+      },
+      "conservation": {
+        "iucnCategory": "Least Concern",
+        "assessed": true,
+        "sourceVersion": "mock-iucn-2026-07",
+        "lastUpdated": "2026-07-02",
+        "iucnTaxonId": 68986
+      },
+      "distribution": {
+        "continents": [
+          "North America"
+        ],
+        "habitats": [
+          "wetland",
+          "river"
+        ],
+        "sourceVersion": "mock-gbif-2026-07",
+        "lastUpdated": "2026-07-02",
+        "gbifTaxonKey": 7185382,
+        "occurrenceSummaries": [
+          {
+            "region": "North America",
+            "occurrenceCount": 4002
+          }
+        ]
+      },
+      "artifactTemplates": [
+        {
+          "id": "castor_canadensis_gnaw_mark_sample",
+          "artifactType": "gnaw_mark_sample",
+          "label": "gnaw mark sample",
+          "ethical": true,
+          "description": "Ethical gnaw mark sample collection"
+        },
+        {
+          "id": "castor_canadensis_lodge_observation",
+          "artifactType": "lodge_observation",
+          "label": "lodge observation",
+          "ethical": true,
+          "description": "Ethical lodge observation collection"
+        },
+        {
+          "id": "castor_canadensis_track_cast",
+          "artifactType": "track_cast",
+          "label": "track cast",
+          "ethical": true,
+          "description": "Ethical track cast collection"
+        }
+      ],
+      "gameplay": {
+        "region": "wetland",
+        "questType": "habitat_study",
+        "dangerLevel": 1,
+        "ethicalInteraction": "observe_quietly",
+        "timeRange": "Present",
+        "diet": "Herbivore",
+        "activity": "Nocturnal",
+        "size": "0.7–1.0 m body length",
+        "behavior": "Ecosystem engineer; builds dams and lodges",
+        "learningTopics": [
+          "ecosystem engineering",
+          "wetland ecology",
+          "keystone species"
+        ],
+        "funFacts": [
+          "Teeth never stop growing",
+          "Dams create wetlands supporting hundreds of species"
+        ],
+        "whyItMatters": "Creates wetlands that filter water and support biodiversity."
+      },
+      "provenance": [
+        {
+          "source": "game_authored",
+          "sourceVersion": "mvp-1.0",
+          "sourceRecordId": "castor_canadensis",
+          "license": "GAME-ORIGINAL",
+          "citation": "Archive of Life: Artifact World — MVP authored content",
+          "citationRequired": false,
+          "retrievedAt": "2026-07-03T02:18:17.377Z",
+          "lastUpdated": "2026-07-03T02:18:17.377Z",
+          "isMockData": true
+        },
+        {
+          "source": "catalogue_of_life",
+          "sourceVersion": "mock-sample-2026-07",
+          "sourceRecordId": "MOCK-castor_canadensis",
+          "catalogueOfLifeId": "MOCK-COL-castor_canadensis",
+          "license": "MOCK-SAMPLE",
+          "citation": "MOCK SAMPLE — not sourced from live API",
+          "citationRequired": true,
+          "retrievedAt": "2026-07-03T02:18:17.377Z",
+          "lastUpdated": "2026-07-03T02:18:17.377Z",
+          "isMockData": true
+        }
+      ]
+    },
+    {
+      "id": "lontra_canadensis",
+      "commonName": "North American River Otter",
+      "scientificName": "Lontra canadensis",
+      "group": "Mammal",
+      "tier": "hero",
+      "taxonomy": {
+        "family": "Mustelidae",
+        "rank": "species",
+        "acceptedName": "Lontra canadensis",
+        "catalogueOfLifeId": "MOCK-COL-lontra_canadensis"
+      },
+      "conservation": {
+        "iucnCategory": "Least Concern",
+        "assessed": true,
+        "sourceVersion": "mock-iucn-2026-07",
+        "lastUpdated": "2026-07-02",
+        "iucnTaxonId": 79216
+      },
+      "distribution": {
+        "continents": [
+          "North America"
+        ],
+        "habitats": [
+          "wetland",
+          "river",
+          "coastal"
+        ],
+        "sourceVersion": "mock-gbif-2026-07",
+        "lastUpdated": "2026-07-02",
+        "gbifTaxonKey": 4186662,
+        "occurrenceSummaries": [
+          {
+            "region": "North America",
+            "occurrenceCount": 1648
+          }
+        ]
+      },
+      "artifactTemplates": [
+        {
+          "id": "lontra_canadensis_track_cast",
+          "artifactType": "track_cast",
+          "label": "track cast",
+          "ethical": true,
+          "description": "Ethical track cast collection"
+        },
+        {
+          "id": "lontra_canadensis_photo_record",
+          "artifactType": "photo_record",
+          "label": "photo record",
+          "ethical": true,
+          "description": "Ethical photo record collection"
+        },
+        {
+          "id": "lontra_canadensis_behavioral_field_note",
+          "artifactType": "behavioral_field_note",
+          "label": "behavioral field note",
+          "ethical": true,
+          "description": "Ethical behavioral field note collection"
+        }
+      ],
+      "gameplay": {
+        "region": "wetland",
+        "questType": "observation",
+        "dangerLevel": 1,
+        "ethicalInteraction": "observe_quietly",
+        "timeRange": "Present",
+        "diet": "Carnivore",
+        "activity": "Diurnal",
+        "size": "0.6–1.0 m body length",
+        "behavior": "Playful swimmer; uses slides on riverbanks",
+        "learningTopics": [
+          "aquatic adaptation",
+          "play behavior",
+          "water quality"
+        ],
+        "funFacts": [
+          "Can hold breath up to 8 minutes",
+          "Play behavior helps young develop hunting skills"
+        ],
+        "whyItMatters": "Indicator species for clean freshwater ecosystems."
+      },
+      "provenance": [
+        {
+          "source": "game_authored",
+          "sourceVersion": "mvp-1.0",
+          "sourceRecordId": "lontra_canadensis",
+          "license": "GAME-ORIGINAL",
+          "citation": "Archive of Life: Artifact World — MVP authored content",
+          "citationRequired": false,
+          "retrievedAt": "2026-07-03T02:18:17.377Z",
+          "lastUpdated": "2026-07-03T02:18:17.377Z",
+          "isMockData": true
+        },
+        {
+          "source": "catalogue_of_life",
+          "sourceVersion": "mock-sample-2026-07",
+          "sourceRecordId": "MOCK-lontra_canadensis",
+          "catalogueOfLifeId": "MOCK-COL-lontra_canadensis",
+          "license": "MOCK-SAMPLE",
+          "citation": "MOCK SAMPLE — not sourced from live API",
+          "citationRequired": true,
+          "retrievedAt": "2026-07-03T02:18:17.377Z",
+          "lastUpdated": "2026-07-03T02:18:17.377Z",
+          "isMockData": true
+        }
+      ]
+    },
+    {
+      "id": "anax_junius",
+      "commonName": "Common Green Darner",
+      "scientificName": "Anax junius",
+      "group": "Insect",
+      "tier": "hero",
+      "taxonomy": {
+        "family": "Aeshnidae",
+        "rank": "species",
+        "acceptedName": "Anax junius",
+        "catalogueOfLifeId": "MOCK-COL-anax_junius"
+      },
+      "conservation": {
+        "iucnCategory": "Least Concern",
+        "assessed": true,
+        "sourceVersion": "mock-iucn-2026-07",
+        "lastUpdated": "2026-07-02",
+        "iucnTaxonId": 39784
+      },
+      "distribution": {
+        "continents": [
+          "North America"
+        ],
+        "habitats": [
+          "wetland",
+          "pond",
+          "river"
+        ],
+        "sourceVersion": "mock-gbif-2026-07",
+        "lastUpdated": "2026-07-02",
+        "gbifTaxonKey": 6440497,
+        "occurrenceSummaries": [
+          {
+            "region": "North America",
+            "occurrenceCount": 4230
+          }
+        ]
+      },
+      "artifactTemplates": [
+        {
+          "id": "anax_junius_photo_record",
+          "artifactType": "photo_record",
+          "label": "photo record",
+          "ethical": true,
+          "description": "Ethical photo record collection"
+        },
+        {
+          "id": "anax_junius_molted_exoskeleton",
+          "artifactType": "molted_exoskeleton",
+          "label": "molted exoskeleton",
+          "ethical": true,
+          "description": "Ethical molted exoskeleton collection"
+        },
+        {
+          "id": "anax_junius_behavioral_field_note",
+          "artifactType": "behavioral_field_note",
+          "label": "behavioral field note",
+          "ethical": true,
+          "description": "Ethical behavioral field note collection"
+        }
+      ],
+      "gameplay": {
+        "region": "wetland",
+        "questType": "behavior",
+        "dangerLevel": 0,
+        "ethicalInteraction": "observe_without_capturing",
+        "timeRange": "Present",
+        "diet": "Carnivore",
+        "activity": "Diurnal",
+        "size": "Wingspan 7.0–8.0 cm",
+        "behavior": "Aerial predator; migratory",
+        "learningTopics": [
+          "flight mechanics",
+          "aquatic larvae",
+          "predation"
+        ],
+        "funFacts": [
+          "Can fly 50 km/h",
+          "Larvae live underwater up to 2 years"
+        ],
+        "whyItMatters": "Controls mosquito populations; indicator of wetland health."
+      },
+      "provenance": [
+        {
+          "source": "game_authored",
+          "sourceVersion": "mvp-1.0",
+          "sourceRecordId": "anax_junius",
+          "license": "GAME-ORIGINAL",
+          "citation": "Archive of Life: Artifact World — MVP authored content",
+          "citationRequired": false,
+          "retrievedAt": "2026-07-03T02:18:17.377Z",
+          "lastUpdated": "2026-07-03T02:18:17.377Z",
+          "isMockData": true
+        },
+        {
+          "source": "catalogue_of_life",
+          "sourceVersion": "mock-sample-2026-07",
+          "sourceRecordId": "MOCK-anax_junius",
+          "catalogueOfLifeId": "MOCK-COL-anax_junius",
+          "license": "MOCK-SAMPLE",
+          "citation": "MOCK SAMPLE — not sourced from live API",
+          "citationRequired": true,
+          "retrievedAt": "2026-07-03T02:18:17.377Z",
+          "lastUpdated": "2026-07-03T02:18:17.377Z",
+          "isMockData": true
+        }
+      ]
+    },
+    {
+      "id": "libellula_quadrimaculata",
+      "commonName": "Four-spotted Skimmer",
+      "scientificName": "Libellula quadrimaculata",
+      "group": "Insect",
+      "tier": "hero",
+      "taxonomy": {
+        "family": "Libellulidae",
+        "rank": "species",
+        "acceptedName": "Libellula quadrimaculata",
+        "catalogueOfLifeId": "MOCK-COL-libellula_quadrimaculata"
+      },
+      "conservation": {
+        "iucnCategory": "Least Concern",
+        "assessed": true,
+        "sourceVersion": "mock-iucn-2026-07",
+        "lastUpdated": "2026-07-02",
+        "iucnTaxonId": 69961
+      },
+      "distribution": {
+        "continents": [
+          "Europe",
+          "North America"
+        ],
+        "habitats": [
+          "wetland",
+          "pond"
+        ],
+        "sourceVersion": "mock-gbif-2026-07",
+        "lastUpdated": "2026-07-02",
+        "gbifTaxonKey": 9753991,
+        "occurrenceSummaries": [
+          {
+            "region": "Europe",
+            "occurrenceCount": 4707
+          }
+        ]
+      },
+      "artifactTemplates": [
+        {
+          "id": "libellula_quadrimaculata_photo_record",
+          "artifactType": "photo_record",
+          "label": "photo record",
+          "ethical": true,
+          "description": "Ethical photo record collection"
+        },
+        {
+          "id": "libellula_quadrimaculata_molted_exoskeleton",
+          "artifactType": "molted_exoskeleton",
+          "label": "molted exoskeleton",
+          "ethical": true,
+          "description": "Ethical molted exoskeleton collection"
+        },
+        {
+          "id": "libellula_quadrimaculata_behavioral_field_note",
+          "artifactType": "behavioral_field_note",
+          "label": "behavioral field note",
+          "ethical": true,
+          "description": "Ethical behavioral field note collection"
+        }
+      ],
+      "gameplay": {
+        "region": "wetland",
+        "questType": "behavior",
+        "dangerLevel": 0,
+        "ethicalInteraction": "observe_without_capturing",
+        "timeRange": "Present",
+        "diet": "Carnivore",
+        "activity": "Diurnal",
+        "size": "Wingspan 7.0–8.5 cm",
+        "behavior": "Territorial perch-hunter over water",
+        "learningTopics": [
+          "flight",
+          "metamorphosis",
+          "wetland ecology"
+        ],
+        "funFacts": [
+          "Four wings move independently",
+          "Nearly 360° vision"
+        ],
+        "whyItMatters": "Top aerial predator in pond ecosystems."
+      },
+      "provenance": [
+        {
+          "source": "game_authored",
+          "sourceVersion": "mvp-1.0",
+          "sourceRecordId": "libellula_quadrimaculata",
+          "license": "GAME-ORIGINAL",
+          "citation": "Archive of Life: Artifact World — MVP authored content",
+          "citationRequired": false,
+          "retrievedAt": "2026-07-03T02:18:17.377Z",
+          "lastUpdated": "2026-07-03T02:18:17.377Z",
+          "isMockData": true
+        },
+        {
+          "source": "catalogue_of_life",
+          "sourceVersion": "mock-sample-2026-07",
+          "sourceRecordId": "MOCK-libellula_quadrimaculata",
+          "catalogueOfLifeId": "MOCK-COL-libellula_quadrimaculata",
+          "license": "MOCK-SAMPLE",
+          "citation": "MOCK SAMPLE — not sourced from live API",
+          "citationRequired": true,
+          "retrievedAt": "2026-07-03T02:18:17.377Z",
+          "lastUpdated": "2026-07-03T02:18:17.377Z",
+          "isMockData": true
+        }
+      ]
+    }
+  ]
+}

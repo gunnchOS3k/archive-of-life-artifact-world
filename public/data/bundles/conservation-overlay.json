@@ -1,0 +1,84 @@
+{
+  "records": [
+    {
+      "speciesId": "panthera_leo",
+      "iucnCategory": "Vulnerable",
+      "assessed": true,
+      "sourceVersion": "mock-iucn-2026-07",
+      "lastUpdated": "2026-07-02",
+      "iucnTaxonId": 43484
+    },
+    {
+      "speciesId": "loxodonta_africana",
+      "iucnCategory": "Endangered",
+      "assessed": true,
+      "sourceVersion": "mock-iucn-2026-07",
+      "lastUpdated": "2026-07-02",
+      "iucnTaxonId": 1932
+    },
+    {
+      "speciesId": "canis_lupus",
+      "iucnCategory": "Least Concern",
+      "assessed": true,
+      "sourceVersion": "mock-iucn-2026-07",
+      "lastUpdated": "2026-07-02",
+      "iucnTaxonId": 53135
+    },
+    {
+      "speciesId": "odocoileus_virginianus",
+      "iucnCategory": "Least Concern",
+      "assessed": true,
+      "sourceVersion": "mock-iucn-2026-07",
+      "lastUpdated": "2026-07-02",
+      "iucnTaxonId": 76109
+    },
+    {
+      "speciesId": "balaenoptera_musculus",
+      "iucnCategory": "Endangered",
+      "assessed": true,
+      "sourceVersion": "mock-iucn-2026-07",
+      "lastUpdated": "2026-07-02",
+      "iucnTaxonId": 63835
+    },
+    {
+      "speciesId": "ursus_americanus",
+      "iucnCategory": "Least Concern",
+      "assessed": true,
+      "sourceVersion": "mock-iucn-2026-07",
+      "lastUpdated": "2026-07-02",
+      "iucnTaxonId": 58863
+    },
+    {
+      "speciesId": "castor_canadensis",
+      "iucnCategory": "Least Concern",
+      "assessed": true,
+      "sourceVersion": "mock-iucn-2026-07",
+      "lastUpdated": "2026-07-02",
+      "iucnTaxonId": 68986
+    },
+    {
+      "speciesId": "lontra_canadensis",
+      "iucnCategory": "Least Concern",
+      "assessed": true,
+      "sourceVersion": "mock-iucn-2026-07",
+      "lastUpdated": "2026-07-02",
+      "iucnTaxonId": 79216
+    },
+    {
+      "speciesId": "phoca_vitulina",
+      "iucnCategory": "Least Concern",
+      "assessed": true,
+      "sourceVersion": "mock-iucn-2026-07",
+      "lastUpdated": "2026-07-02",
+      "iucnTaxonId": 20732
+    },
+    {
+      "speciesId": "equus_caballus_ferus",
+      "iucnCategory": "Endangered",
+      "assessed": true,
+      "sourceVersion": "mock-iucn-2026-07",
+      "lastUpdated": "2026-07-02",
+      "iucnTaxonId": 23826
+    }
+  ]
+}
