@@ -58,6 +58,14 @@ export function getQuestProgress(
         done = count >= target;
         break;
       }
+      case 'view_earth_tab':
+        done = state.earthLayers?.viewedTabs?.includes(obj.target) ?? false;
+        break;
+      case 'analyze_earth_region': {
+        const prefix = `${obj.target}:`;
+        done = state.earthLayers?.analyzedRegions?.some((r) => r.startsWith(prefix)) ?? false;
+        break;
+      }
     }
 
     return { ...obj, done };

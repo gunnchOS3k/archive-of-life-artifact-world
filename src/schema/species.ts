@@ -4,6 +4,7 @@ import type { DistributionProfile } from './distribution';
 import type { FossilProfile } from './fossil';
 import type { ArtifactTemplate } from './artifact';
 import type { DataSourceProvenance } from './provenance';
+import type { HabitatSignal, NasaLayerDependency } from './earth';
 
 export type GameplayTier = 'hero' | 'regional' | 'family' | 'database';
 
@@ -36,6 +37,10 @@ export interface ArchiveSpecies {
   fossil?: FossilProfile;
   artifactTemplates: ArtifactTemplate[];
   gameplay?: GameplayProfile;
+  /** Environmental signals this species needs — linked to NASA Earth layers */
+  requiredHabitatSignals?: HabitatSignal[];
+  /** NASA data products that inform understanding of this species */
+  nasaLayerDependencies?: NasaLayerDependency[];
   provenance: DataSourceProvenance[];
 }
 

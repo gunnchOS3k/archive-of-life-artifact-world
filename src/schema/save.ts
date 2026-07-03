@@ -41,6 +41,11 @@ export interface GameStats {
   regionsExplored: number;
 }
 
+export interface EarthLayerProgress {
+  viewedTabs: string[];
+  analyzedRegions: string[];
+}
+
 export interface SaveState {
   version: number;
   player: PlayerState;
@@ -49,5 +54,6 @@ export interface SaveState {
   quests: QuestState;
   companion: CompanionState;
   stats: GameStats;
+  earthLayers: EarthLayerProgress;
   timestamp: number;
 }

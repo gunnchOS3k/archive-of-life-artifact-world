@@ -6,7 +6,7 @@
       "assessed": true,
       "sourceVersion": "mock-iucn-2026-07",
       "lastUpdated": "2026-07-02",
-      "iucnTaxonId": 43484
+      "iucnTaxonId": 67130
     },
     {
       "speciesId": "loxodonta_africana",
@@ -14,7 +14,7 @@
       "assessed": true,
       "sourceVersion": "mock-iucn-2026-07",
       "lastUpdated": "2026-07-02",
-      "iucnTaxonId": 1932
+      "iucnTaxonId": 31075
     },
     {
       "speciesId": "canis_lupus",
@@ -22,7 +22,7 @@
       "assessed": true,
       "sourceVersion": "mock-iucn-2026-07",
       "lastUpdated": "2026-07-02",
-      "iucnTaxonId": 53135
+      "iucnTaxonId": 20859
     },
     {
       "speciesId": "odocoileus_virginianus",
@@ -30,7 +30,7 @@
       "assessed": true,
       "sourceVersion": "mock-iucn-2026-07",
       "lastUpdated": "2026-07-02",
-      "iucnTaxonId": 76109
+      "iucnTaxonId": 35705
     },
     {
       "speciesId": "balaenoptera_musculus",
@@ -38,7 +38,7 @@
       "assessed": true,
       "sourceVersion": "mock-iucn-2026-07",
       "lastUpdated": "2026-07-02",
-      "iucnTaxonId": 63835
+      "iucnTaxonId": 5083
     },
     {
       "speciesId": "ursus_americanus",
@@ -46,7 +46,7 @@
       "assessed": true,
       "sourceVersion": "mock-iucn-2026-07",
       "lastUpdated": "2026-07-02",
-      "iucnTaxonId": 58863
+      "iucnTaxonId": 5954
     },
     {
       "speciesId": "castor_canadensis",
@@ -54,7 +54,7 @@
       "assessed": true,
       "sourceVersion": "mock-iucn-2026-07",
       "lastUpdated": "2026-07-02",
-      "iucnTaxonId": 68986
+      "iucnTaxonId": 98733
     },
     {
       "speciesId": "lontra_canadensis",
@@ -62,7 +62,7 @@
       "assessed": true,
       "sourceVersion": "mock-iucn-2026-07",
       "lastUpdated": "2026-07-02",
-      "iucnTaxonId": 79216
+      "iucnTaxonId": 35600
     },
     {
       "speciesId": "phoca_vitulina",
@@ -70,7 +70,7 @@
       "assessed": true,
       "sourceVersion": "mock-iucn-2026-07",
       "lastUpdated": "2026-07-02",
-      "iucnTaxonId": 20732
+      "iucnTaxonId": 2245
     },
     {
       "speciesId": "equus_caballus_ferus",
@@ -78,7 +78,7 @@
       "assessed": true,
       "sourceVersion": "mock-iucn-2026-07",
       "lastUpdated": "2026-07-02",
-      "iucnTaxonId": 23826
+      "iucnTaxonId": 12055
     }
   ]
 }

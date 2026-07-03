@@ -22,6 +22,8 @@ npm run dev                # http://localhost:8080
 | `npm run generate:bundles` | Transform `data/` → `public/data/bundles/` |
 | `npm run audit:data` | Coverage and integrity audit |
 
+Press **T** in-game to open the **Earth Layer Console** (museum hub) — NASA environmental context layers.
+
 ## Architecture
 
 ```
@@ -64,6 +66,7 @@ WASD/Arrows move · E interact · A/N/M/C/Q menus · Escape close panels
 ## Documentation
 
 - [Data Architecture](docs/DATA_ARCHITECTURE.md)
+- [NASA Earth Systems Integration](docs/NASA_EARTH_SYSTEMS_INTEGRATION.md)
 - [Database Integration Plan](docs/DATABASE_INTEGRATION_PLAN.md)
 - [Source Provenance Policy](docs/SOURCE_PROVENANCE_POLICY.md)
 
