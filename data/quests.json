@@ -1,0 +1,86 @@
+[
+  {
+    "id": "quest_savanna_intro",
+    "title": "Savanna First Steps",
+    "description": "Explore the African savanna and document your first living species.",
+    "region": "savanna",
+    "objectives": [
+      { "type": "visit_region", "target": "savanna", "label": "Enter the Savanna region" },
+      { "type": "collect_artifact", "target": "panthera_leo", "label": "Obtain a Lion artifact" }
+    ],
+    "reward": "Unlocks Savanna Archive Wing"
+  },
+  {
+    "id": "quest_forest_tracks",
+    "title": "Forest Track Reader",
+    "description": "Follow deer tracks through the temperate forest and learn tracking skills.",
+    "region": "forest",
+    "objectives": [
+      { "type": "visit_region", "target": "forest", "label": "Enter the Forest region" },
+      { "type": "collect_artifact", "target": "odocoileus_virginianus", "label": "Collect White-tailed Deer artifact" },
+      { "type": "collect_artifact", "target": "canis_lupus", "label": "Collect Gray Wolf artifact" }
+    ],
+    "reward": "Unlocks tracking bonus"
+  },
+  {
+    "id": "quest_wetland_life",
+    "title": "Wetland Watchers",
+    "description": "Study the wetland ecosystem and its engineer species.",
+    "region": "wetland",
+    "objectives": [
+      { "type": "visit_region", "target": "wetland", "label": "Enter the Wetland region" },
+      { "type": "collect_artifact", "target": "castor_canadensis", "label": "Document North American Beaver" },
+      { "type": "collect_artifact", "target": "anax_junius", "label": "Observe Common Green Darner" }
+    ],
+    "reward": "Unlocks wetland field guide"
+  },
+  {
+    "id": "quest_insect_world",
+    "title": "Micro-World Explorer",
+    "description": "Enter the insect micro-world and document pollinators and decomposers.",
+    "region": "grassland",
+    "objectives": [
+      { "type": "collect_artifact", "target": "danaus_plexippus", "label": "Document Monarch Butterfly" },
+      { "type": "collect_artifact", "target": "apis_mellifera", "label": "Study Western Honeybee" },
+      { "type": "collect_artifact", "target": "dynastes_hercules", "label": "Find Hercules Beetle molt" }
+    ],
+    "reward": "Unlocks macro camera mode"
+  },
+  {
+    "id": "quest_fossil_dig",
+    "title": "Ancient Evidence",
+    "description": "Excavate fossils and reconstruct evidence from Earth's deep past.",
+    "region": "fossil_site",
+    "objectives": [
+      { "type": "visit_region", "target": "fossil_site", "label": "Reach the Fossil Dig Site" },
+      { "type": "collect_artifact", "target": "trilobita_order", "label": "Excavate Trilobite fossil" },
+      { "type": "collect_artifact", "target": "mammuthus_primigenius", "label": "Excavate Woolly Mammoth fossil" },
+      { "type": "collect_artifact", "target": "tyrannosaurus_rex", "label": "Excavate T. rex fossil" }
+    ],
+    "reward": "Unlocks Time Layer: Recent Past"
+  },
+  {
+    "id": "quest_coastal_watch",
+    "title": "Coastal Sentinel",
+    "description": "Observe marine mammals along the coastal region.",
+    "region": "coastal",
+    "objectives": [
+      { "type": "visit_region", "target": "coastal", "label": "Enter the Coastal region" },
+      { "type": "collect_artifact", "target": "phoca_vitulina", "label": "Photograph Harbor Seal" },
+      { "type": "collect_artifact", "target": "balaenoptera_musculus", "label": "Record Blue Whale" }
+    ],
+    "reward": "Unlocks marine field tools"
+  },
+  {
+    "id": "quest_archive_wing",
+    "title": "First Archive Wing",
+    "description": "Complete the first regional Archive by collecting artifacts from all MVP species groups.",
+    "region": "museum",
+    "objectives": [
+      { "type": "collect_count", "target": "10", "label": "Collect 10 mammal artifacts" },
+      { "type": "collect_count", "target": "10", "label": "Collect 10 insect artifacts", "group": "insect" },
+      { "type": "collect_count", "target": "3", "label": "Collect 3 fossil artifacts", "group": "extinct" }
+    ],
+    "reward": "MVP Win — First Archive Wing Complete!"
+  }
+]

@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Archive of Life: Artifact World</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <div id="app">
+    <!-- Title Screen -->
+    <div id="title-screen" class="screen active">
+      <div class="title-content">
+        <h1>Archive of Life</h1>
+        <h2>Artifact World</h2>
+        <p class="subtitle">Explore Earth. Discover life. Build the greatest Archive ever created.</p>
+        <button id="btn-new-game" class="btn-primary">New Expedition</button>
+        <button id="btn-continue" class="btn-secondary">Continue Expedition</button>
+        <p class="credits">An educational exploration prototype — ethical artifact collection, no capture mechanics.</p>
+      </div>
+    </div>
+
+    <!-- Game Screen -->
+    <div id="game-screen" class="screen">
+      <canvas id="game-canvas"></canvas>
+
+      <!-- HUD -->
+      <div id="hud">
+        <div id="hud-top">
+          <div id="region-name">Archive Museum</div>
+          <div id="hud-tools">
+            <span class="tool-badge" title="Camera">📷</span>
+            <span class="tool-badge" title="Audio Recorder">🎙️</span>
+            <span class="tool-badge" title="Field Notebook">📓</span>
+            <span class="tool-badge" title="Binoculars">🔭</span>
+            <span class="tool-badge" title="Fossil Brush">🪥</span>
+            <span class="tool-badge" title="Scanner">📡</span>
+          </div>
+        </div>
+        <div id="hud-bottom">
+          <div id="interaction-prompt" class="hidden">
+            <span id="prompt-text">Press E to interact</span>
+          </div>
+          <div id="hud-buttons">
+            <button class="hud-btn" id="btn-archive" title="Archive (A)">📚 Archive</button>
+            <button class="hud-btn" id="btn-notebook" title="Notebook (N)">📓 Notebook</button>
+            <button class="hud-btn" id="btn-map" title="Map (M)">🗺️ Map</button>
+            <button class="hud-btn" id="btn-companion" title="Lifeling (C)">✨ Lifeling</button>
+            <button class="hud-btn" id="btn-quests" title="Quests (Q)">📋 Quests</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Notification Toast -->
+      <div id="toast" class="hidden"></div>
+    </div>
+
+    <!-- Archive Panel -->
+    <div id="panel-archive" class="panel hidden">
+      <div class="panel-header">
+        <h2>Archive of Life</h2>
+        <button class="panel-close" data-panel="archive">✕</button>
+      </div>
+      <div class="panel-tabs">
+        <button class="tab active" data-tab="all">All</button>
+        <button class="tab" data-tab="Mammal">Mammals</button>
+        <button class="tab" data-tab="Insect">Insects</button>
+        <button class="tab" data-tab="Arachnid">Arachnids</button>
+        <button class="tab" data-tab="extinct">Extinct</button>
+      </div>
+      <div class="panel-body">
+        <div id="archive-stats" class="archive-stats"></div>
+        <div id="archive-grid" class="archive-grid"></div>
+        <div id="species-detail" class="species-detail hidden"></div>
+      </div>
+    </div>
+
+    <!-- Field Notebook Panel -->
+    <div id="panel-notebook" class="panel hidden">
+      <div class="panel-header">
+        <h2>Field Notebook</h2>
+        <button class="panel-close" data-panel="notebook">✕</button>
+      </div>
+      <div class="panel-body">
+        <div id="notebook-entries"></div>
+      </div>
+    </div>
+
+    <!-- Map Panel -->
+    <div id="panel-map" class="panel hidden">
+      <div class="panel-header">
+        <h2>World Map</h2>
+        <button class="panel-close" data-panel="map">✕</button>
+      </div>
+      <div class="panel-body">
+        <div id="map-container"></div>
+        <p class="map-hint">Click a region to travel (when at museum hub or connected region).</p>
+      </div>
+    </div>
+
+    <!-- Lifeling Companion Panel -->
+    <div id="panel-companion" class="panel hidden">
+      <div class="panel-header">
+        <h2>Lifeling Companion</h2>
+        <button class="panel-close" data-panel="companion">✕</button>
+      </div>
+      <div class="panel-body companion-body">
+        <div class="companion-preview-area">
+          <canvas id="companion-canvas" width="200" height="200"></canvas>
+          <div class="companion-info">
+            <label>Name: <input type="text" id="companion-name" maxlength="20" value="Relic"></label>
+            <label>Body Color: <input type="color" id="companion-color" value="#7EC8A3"></label>
+          </div>
+        </div>
+        <div class="trait-section">
+          <h3>Equipped Traits</h3>
+          <div id="equipped-traits"></div>
+        </div>
+        <div class="trait-section">
+          <h3>Unlocked Traits</h3>
+          <div id="trait-inventory"></div>
+        </div>
+        <div class="trait-section">
+          <h3>Emotes</h3>
+          <div id="emote-buttons"></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Quest Panel -->
+    <div id="panel-quests" class="panel hidden">
+      <div class="panel-header">
+        <h2>Active Quests</h2>
+        <button class="panel-close" data-panel="quests">✕</button>
+      </div>
+      <div class="panel-body">
+        <div id="quest-list"></div>
+      </div>
+    </div>
+
+    <!-- Fossil Excavation Mini-game -->
+    <div id="minigame-fossil" class="minigame-overlay hidden">
+      <div class="minigame-container">
+        <h2>Fossil Excavation</h2>
+        <p>Brush away sediment carefully to reveal the fossil. Don't damage it!</p>
+        <canvas id="fossil-canvas" width="400" height="300"></canvas>
+        <div class="minigame-progress">
+          <div id="fossil-progress-bar"><div id="fossil-progress-fill"></div></div>
+          <span id="fossil-progress-text">0%</span>
+        </div>
+        <button id="fossil-cancel" class="btn-secondary">Cancel</button>
+      </div>
+    </div>
+
+    <!-- Wildlife Observation Mini-game -->
+    <div id="minigame-observe" class="minigame-overlay hidden">
+      <div class="minigame-container">
+        <h2>Wildlife Observation</h2>
+        <p id="observe-species-name">Species</p>
+        <p>Stay still and observe. Fill the patience meter without startling the animal.</p>
+        <canvas id="observe-canvas" width="400" height="300"></canvas>
+        <div class="minigame-progress">
+          <div id="observe-patience-bar"><div id="observe-patience-fill"></div></div>
+          <span id="observe-patience-text">Patience: 0%</span>
+        </div>
+        <div class="observe-controls">
+          <button id="observe-hold" class="btn-primary">Hold Still (Space)</button>
+          <button id="observe-cancel" class="btn-secondary">Leave</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script type="module" src="js/main.js"></script>
+</body>
+</html>
