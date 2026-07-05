@@ -50,6 +50,10 @@ class SourceImportSpec:
     snapshot_subdir: str
     blocked_message: str
     next_action: str
+    import_command: str
+    validation_command: str
+    output_path: str
+    required_env_var: str | None = None
 
 
 SOURCE_SPECS: dict[str, SourceImportSpec] = {
@@ -58,48 +62,72 @@ SOURCE_SPECS: dict[str, SourceImportSpec] = {
         name="Catalogue of Life",
         env_keys=["COL_SNAPSHOT_PATH"],
         snapshot_subdir="col",
+        required_env_var="COL_SNAPSHOT_PATH",
         blocked_message="Catalogue of Life snapshot not found. Download approved snapshot and set COL_SNAPSHOT_PATH in data-pipeline/.env.",
         next_action="Download approved COL archive, set COL_SNAPSHOT_PATH in data-pipeline/.env, run npm run source:import:col",
+        import_command="npm run source:import:col",
+        validation_command="npm run source:audit",
+        output_path="data-pipeline/exports/col/col_taxa_normalized.json",
     ),
     "gbif": SourceImportSpec(
         id="gbif",
         name="GBIF",
         env_keys=["GBIF_DOWNLOAD_PATH", "GBIF_DOWNLOAD_DOI"],
         snapshot_subdir="gbif",
+        required_env_var="GBIF_DOWNLOAD_PATH",
         blocked_message="GBIF download not found. Set GBIF_DOWNLOAD_PATH or GBIF_DOWNLOAD_DOI in data-pipeline/.env.",
         next_action="Download GBIF occurrence export, set GBIF_DOWNLOAD_PATH, run npm run source:import:gbif",
+        import_command="npm run source:import:gbif",
+        validation_command="npm run source:audit",
+        output_path="data-pipeline/exports/gbif/gbif_occurrences_normalized.json",
     ),
     "iucn": SourceImportSpec(
         id="iucn",
         name="IUCN Red List",
         env_keys=["IUCN_API_TOKEN"],
         snapshot_subdir="iucn",
+        required_env_var="IUCN_API_TOKEN",
         blocked_message="IUCN API token missing. Set IUCN_API_TOKEN in data-pipeline/.env.",
         next_action="Obtain IUCN API token, set IUCN_API_TOKEN, run npm run source:import:iucn",
+        import_command="npm run source:import:iucn",
+        validation_command="npm run source:audit",
+        output_path="data-pipeline/exports/iucn/iucn_species_page0.json",
     ),
     "pbdb": SourceImportSpec(
         id="pbdb",
         name="Paleobiology Database",
         env_keys=["PBDB_SNAPSHOT_PATH"],
         snapshot_subdir="pbdb",
+        required_env_var="PBDB_SNAPSHOT_PATH",
         blocked_message="PBDB snapshot not found. Set PBDB_SNAPSHOT_PATH in data-pipeline/.env.",
         next_action="Download PBDB CSV/JSON export, set PBDB_SNAPSHOT_PATH, run npm run source:import:pbdb",
+        import_command="npm run source:import:pbdb",
+        validation_command="npm run source:audit",
+        output_path="data-pipeline/exports/pbdb/pbdb_fossils_normalized.json",
     ),
     "nasa": SourceImportSpec(
         id="nasa",
         name="NASA Earth metadata",
         env_keys=[],
         snapshot_subdir="nasa",
-        blocked_message="NASA metadata import uses public APIs; run source:import:nasa to fetch and cache.",
+        required_env_var=None,
+        blocked_message="NASA metadata not cached. Run npm run source:import:nasa to fetch public CMR/EONET/POWER metadata.",
         next_action="Run npm run source:import:nasa to fetch CMR/EONET/POWER metadata into data-pipeline/exports/nasa/",
+        import_command="npm run source:import:nasa",
+        validation_command="npm run source:audit",
+        output_path="data-pipeline/exports/nasa/nasa_metadata_manifest.json",
     ),
     "neotoma": SourceImportSpec(
         id="neotoma",
         name="Neotoma",
         env_keys=["NEOTOMA_SNAPSHOT_PATH", "NEOTOMA_API_ENABLED"],
         snapshot_subdir="neotoma",
+        required_env_var="NEOTOMA_SNAPSHOT_PATH",
         blocked_message="Neotoma snapshot not found. Set NEOTOMA_SNAPSHOT_PATH or enable NEOTOMA_API_ENABLED.",
-        next_action="Download Neotoma export or enable API, run npm run source:import:neotoma",
+        next_action="Download Neotoma export or set NEOTOMA_API_ENABLED=true, run npm run source:import:neotoma",
+        import_command="npm run source:import:neotoma",
+        validation_command="npm run source:audit",
+        output_path="data-pipeline/exports/neotoma/neotoma_normalized.json",
     ),
 }
 
@@ -109,9 +137,11 @@ class SourceImportRecord:
     source: str
     name: str
     required: bool = True
+    command_available: bool = True
     configured: bool = False
     imported: bool = False
     record_count: int = 0
+    verified_record_count: int = 0
     checksum: str | None = None
     source_version: str | None = None
     citation: str | None = None
@@ -120,6 +150,50 @@ class SourceImportRecord:
     blocked_reason: str | None = None
     next_action: str | None = None
     data_mode: str | None = None
+    import_command: str | None = None
+    validation_command: str | None = None
+    output_path: str | None = None
+    required_env_var: str | None = None
+
+
+def _nasa_cache_on_disk() -> dict[str, Any] | None:
+    """Read NASA metadata manifest from exports or public game cache."""
+    candidates = [
+        EXPORTS_DIR / "nasa" / "nasa_metadata_manifest.json",
+        PUBLIC_DATA / "earth" / "nasa_metadata_cache.json",
+    ]
+    for path in candidates:
+        if path.exists():
+            return json.loads(path.read_text())
+    return None
+
+
+def _record_to_dict(spec: SourceImportSpec, rec: SourceImportRecord) -> dict[str, Any]:
+    verified = rec.verified_record_count
+    if verified == 0 and rec.imported and rec.data_mode == "source_verified":
+        verified = rec.record_count
+    return {
+        "source": rec.source,
+        "name": rec.name,
+        "required": rec.required,
+        "command_available": rec.command_available,
+        "configured": rec.configured,
+        "imported": rec.imported,
+        "record_count": rec.record_count,
+        "verified_record_count": verified,
+        "checksum": rec.checksum,
+        "source_version": rec.source_version,
+        "citation": rec.citation,
+        "last_import_time": rec.last_import_time,
+        "status": rec.status,
+        "blocked_reason": rec.blocked_reason,
+        "next_action": rec.next_action,
+        "data_mode": rec.data_mode,
+        "import_command": rec.import_command or spec.import_command,
+        "validation_command": rec.validation_command or spec.validation_command,
+        "output_path": rec.output_path or spec.output_path,
+        "required_env_var": rec.required_env_var if rec.required_env_var is not None else spec.required_env_var,
+    }
 
 
 def _export_dir(spec: SourceImportSpec) -> Path:
@@ -140,12 +214,19 @@ def _is_configured(spec: SourceImportSpec, env: dict[str, str]) -> bool:
 
 def _read_import_status(spec: SourceImportSpec) -> SourceImportRecord:
     env = _load_env()
+    configured = _is_configured(spec, env)
     rec = SourceImportRecord(
         source=spec.id,
         name=spec.name,
-        configured=_is_configured(spec, env),
-        blocked_reason=spec.blocked_message if not _is_configured(spec, env) else None,
+        command_available=True,
+        configured=configured,
+        import_command=spec.import_command,
+        validation_command=spec.validation_command,
+        output_path=spec.output_path,
+        required_env_var=spec.required_env_var,
+        blocked_reason=None if configured else spec.blocked_message,
         next_action=spec.next_action,
+        status="command_available" if spec.id == "nasa" and not configured else ("blocked" if not configured else "ready"),
     )
     status_path = _status_file(spec)
     if status_path.exists():
@@ -159,8 +240,30 @@ def _read_import_status(spec: SourceImportSpec) -> SourceImportRecord:
         rec.status = data.get("status", rec.status)
         rec.data_mode = data.get("dataMode")
         rec.blocked_reason = data.get("blockedReason", rec.blocked_reason)
-    elif not rec.configured:
+        if rec.imported and rec.data_mode == "source_verified":
+            rec.verified_record_count = rec.record_count
+    elif spec.id == "nasa":
+        cache = _nasa_cache_on_disk()
+        if cache:
+            layers = cache.get("layers", [])
+            has_real = any(layer.get("mode") == "REAL NASA METADATA" for layer in layers)
+            rec.imported = has_real or cache.get("imported", False)
+            rec.record_count = cache.get("recordCount", len(layers))
+            rec.last_import_time = cache.get("generatedAt")
+            rec.data_mode = "source_verified" if has_real else cache.get("dataMode")
+            rec.status = "imported" if rec.imported else "blocked"
+            rec.blocked_reason = None if rec.imported else spec.blocked_message
+            if rec.imported:
+                rec.verified_record_count = rec.record_count if has_real else 0
+    if not rec.imported and not rec.blocked_reason and not configured:
         rec.status = "blocked"
+        rec.blocked_reason = spec.blocked_message
+    elif not rec.imported and spec.id == "nasa" and configured:
+        rec.status = "command_available"
+        rec.blocked_reason = spec.blocked_message
+    elif rec.imported:
+        rec.status = "imported"
+        rec.blocked_reason = None
     return rec
 
 
@@ -168,7 +271,7 @@ def list_sources() -> dict[str, Any]:
     records = [_read_import_status(spec) for spec in SOURCE_SPECS.values()]
     return {
         "generatedAt": _now(),
-        "sources": [asdict(r) for r in records],
+        "sources": [_record_to_dict(SOURCE_SPECS[r.source], r) for r in records],
     }
 
 
@@ -406,14 +509,15 @@ def import_nasa() -> SourceImportRecord:
     result = ingest_nasa_metadata()
     status = {
         "imported": result.get("imported", False),
-        "status": result.get("status", "sample_fallback"),
+        "status": "imported" if result.get("imported") else result.get("status", "sample_fallback"),
         "recordCount": result.get("recordCount", 0),
         "checksum": result.get("checksum"),
         "sourceVersion": result.get("sourceVersion", "public-api"),
         "citation": "NASA Earthdata / EONET / POWER public APIs",
         "lastImportTime": _now(),
-        "dataMode": result.get("dataMode", "sample_fallback"),
+        "dataMode": "source_verified" if result.get("imported") else result.get("dataMode", "sample_fallback"),
         "layers": result.get("layers", []),
+        "blockedReason": None if result.get("imported") else "No real NASA metadata fetched",
     }
     _write_import_status(spec, status)
     return _read_import_status(spec)
@@ -457,11 +561,14 @@ def audit_sources() -> dict[str, Any]:
     records = [_read_import_status(spec) for spec in SOURCE_SPECS.values()]
     imported = [r for r in records if r.imported]
     blocked = [r for r in records if not r.imported]
+    source_dicts = [_record_to_dict(SOURCE_SPECS[r.source], r) for r in records]
     return {
         "generatedAt": _now(),
         "importedCount": len(imported),
         "blockedCount": len(blocked),
-        "sources": [asdict(r) for r in records],
+        "commandAvailableCount": sum(1 for s in source_dicts if s.get("command_available")),
+        "verifiedRecordCount": sum(s.get("verified_record_count", 0) for s in source_dicts),
+        "sources": source_dicts,
         "passed": True,
     }
 
@@ -473,10 +580,11 @@ def write_status_reports() -> None:
         "generatedAt": _now(),
         "sources": audit["sources"],
         "summary": {
+            "commandAvailable": sum(1 for s in audit["sources"] if s.get("command_available")),
             "configured": sum(1 for s in audit["sources"] if s["configured"]),
             "imported": audit["importedCount"],
             "blocked": audit["blockedCount"],
-            "verifiedRecordCount": sum(s["record_count"] for s in audit["sources"] if s.get("data_mode") == "source_verified"),
+            "verifiedRecordCount": audit.get("verifiedRecordCount", 0),
         },
     }
     (STATUS_DIR / "source_import_status.json").write_text(json.dumps(audit, indent=2))

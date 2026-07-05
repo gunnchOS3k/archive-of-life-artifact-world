@@ -38,7 +38,8 @@
     "source:import:pbdb": "tsx scripts/source-cli.ts import pbdb",
     "source:import:nasa": "tsx scripts/source-cli.ts import nasa",
     "source:import:neotoma": "tsx scripts/source-cli.ts import neotoma",
-    "source:import:all": "tsx scripts/source-cli.ts import all"
+    "source:import:all": "tsx scripts/source-cli.ts import all",
+    "status": "tsx scripts/status.ts"
   },
   "devDependencies": {
     "@types/node": "^22.0.0",

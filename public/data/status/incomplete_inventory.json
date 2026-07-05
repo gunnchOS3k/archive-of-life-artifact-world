@@ -1,7 +1,7 @@
 {
-  "generatedAt": "2026-07-05T03:27:49.494Z",
-  "totalScannedFiles": 150,
-  "itemCount": 56,
+  "generatedAt": "2026-07-05T03:41:46.666Z",
+  "totalScannedFiles": 151,
+  "itemCount": 55,
   "releasePathItemCount": 2,
   "blockingItemCount": 0,
   "items": [
@@ -241,14 +241,14 @@
     },
     {
       "id": "inv_19",
-      "filePath": "docs/IMPLEMENTATION_STATUS.md",
-      "lineNumber": 15,
-      "markerType": "scaffold",
-      "matchedText": "| Scaffold only | 0 | None in player-facing paths |",
+      "filePath": "docs/RELEASE_READINESS_CHECKLIST.md",
+      "lineNumber": 27,
+      "markerType": "TODO",
+      "matchedText": "- [ ] Release-path code contains unresolved TODO/FIXME/scaffold markers",
       "affectedSystem": "unknown",
       "severity": "info",
-      "currentStatus": "blocked_external",
-      "requiredAction": "Documented as blocked external ingestion — not player-facing.",
+      "currentStatus": "intentional_sample",
+      "requiredAction": "Documentation or registry entry — no code change required.",
       "blocksRelease": false,
       "releasePath": false
     },
@@ -256,7 +256,7 @@
       "id": "inv_20",
       "filePath": "docs/RELEASE_READINESS_CHECKLIST.md",
       "lineNumber": 27,
-      "markerType": "TODO",
+      "markerType": "FIXME",
       "matchedText": "- [ ] Release-path code contains unresolved TODO/FIXME/scaffold markers",
       "affectedSystem": "unknown",
       "severity": "info",
@@ -269,19 +269,6 @@
       "id": "inv_21",
       "filePath": "docs/RELEASE_READINESS_CHECKLIST.md",
       "lineNumber": 27,
-      "markerType": "FIXME",
-      "matchedText": "- [ ] Release-path code contains unresolved TODO/FIXME/scaffold markers",
-      "affectedSystem": "unknown",
-      "severity": "info",
-      "currentStatus": "intentional_sample",
-      "requiredAction": "Documentation or registry entry — no code change required.",
-      "blocksRelease": false,
-      "releasePath": false
-    },
-    {
-      "id": "inv_22",
-      "filePath": "docs/RELEASE_READINESS_CHECKLIST.md",
-      "lineNumber": 27,
       "markerType": "scaffold",
       "matchedText": "- [ ] Release-path code contains unresolved TODO/FIXME/scaffold markers",
       "affectedSystem": "unknown",
@@ -292,7 +279,7 @@
       "releasePath": false
     },
     {
-      "id": "inv_23",
+      "id": "inv_22",
       "filePath": "docs/REPRESENTATION_AUDIT_POLICY.md",
       "lineNumber": 25,
       "markerType": "scaffold",
@@ -305,7 +292,7 @@
       "releasePath": false
     },
     {
-      "id": "inv_24",
+      "id": "inv_23",
       "filePath": "docs/SOURCE_PROVENANCE_POLICY.md",
       "lineNumber": 13,
       "markerType": "TBD",
@@ -318,7 +305,7 @@
       "releasePath": false
     },
     {
-      "id": "inv_25",
+      "id": "inv_24",
       "filePath": "docs/SOURCE_PROVENANCE_POLICY.md",
       "lineNumber": 25,
       "markerType": "placeholder",
@@ -331,7 +318,7 @@
       "releasePath": false
     },
     {
-      "id": "inv_26",
+      "id": "inv_25",
       "filePath": "docs/SOURCE_SNAPSHOT_POLICY.md",
       "lineNumber": 16,
       "markerType": "placeholder",
@@ -344,7 +331,7 @@
       "releasePath": false
     },
     {
-      "id": "inv_27",
+      "id": "inv_26",
       "filePath": "index.html",
       "lineNumber": 63,
       "markerType": "placeholder",
@@ -357,7 +344,7 @@
       "releasePath": true
     },
     {
-      "id": "inv_28",
+      "id": "inv_27",
       "filePath": "index.html",
       "lineNumber": 257,
       "markerType": "placeholder",
@@ -370,11 +357,11 @@
       "releasePath": true
     },
     {
-      "id": "inv_29",
+      "id": "inv_28",
       "filePath": "scripts/audit-release-readiness.ts",
-      "lineNumber": 105,
+      "lineNumber": 108,
       "markerType": "scaffold",
-      "matchedText": ": 'No player-facing scaffold-only systems',",
+      "matchedText": ": 'No player-facing scaffold-only or mock-only systems',",
       "affectedSystem": "audits",
       "severity": "info",
       "currentStatus": "blocked_external",
@@ -383,10 +370,23 @@
       "releasePath": false
     },
     {
+      "id": "inv_29",
+      "filePath": "scripts/audit-release-readiness.ts",
+      "lineNumber": 230,
+      "markerType": "TODO",
+      "matchedText": ": 'No vague TODO/FIXME/scaffold markers in release-path code',",
+      "affectedSystem": "audits",
+      "severity": "medium",
+      "currentStatus": "needs_action",
+      "requiredAction": "Remove or resolve marker in release-path code.",
+      "blocksRelease": false,
+      "releasePath": false
+    },
+    {
       "id": "inv_30",
       "filePath": "scripts/audit-release-readiness.ts",
-      "lineNumber": 213,
-      "markerType": "TODO",
+      "lineNumber": 230,
+      "markerType": "FIXME",
       "matchedText": ": 'No vague TODO/FIXME/scaffold markers in release-path code',",
       "affectedSystem": "audits",
       "severity": "medium",
@@ -398,20 +398,7 @@
     {
       "id": "inv_31",
       "filePath": "scripts/audit-release-readiness.ts",
-      "lineNumber": 213,
-      "markerType": "FIXME",
-      "matchedText": ": 'No vague TODO/FIXME/scaffold markers in release-path code',",
-      "affectedSystem": "audits",
-      "severity": "medium",
-      "currentStatus": "needs_action",
-      "requiredAction": "Remove or resolve marker in release-path code.",
-      "blocksRelease": false,
-      "releasePath": false
-    },
-    {
-      "id": "inv_32",
-      "filePath": "scripts/audit-release-readiness.ts",
-      "lineNumber": 213,
+      "lineNumber": 230,
       "markerType": "scaffold",
       "matchedText": ": 'No vague TODO/FIXME/scaffold markers in release-path code',",
       "affectedSystem": "audits",
@@ -422,7 +409,7 @@
       "releasePath": false
     },
     {
-      "id": "inv_33",
+      "id": "inv_32",
       "filePath": "scripts/implementation/scan-incomplete.ts",
       "lineNumber": 11,
       "markerType": "TODO",
@@ -435,7 +422,7 @@
       "releasePath": false
     },
     {
-      "id": "inv_34",
+      "id": "inv_33",
       "filePath": "scripts/implementation/scan-incomplete.ts",
       "lineNumber": 12,
       "markerType": "FIXME",
@@ -448,7 +435,7 @@
       "releasePath": false
     },
     {
-      "id": "inv_35",
+      "id": "inv_34",
       "filePath": "scripts/implementation/scan-incomplete.ts",
       "lineNumber": 13,
       "markerType": "WIP",
@@ -461,7 +448,7 @@
       "releasePath": false
     },
     {
-      "id": "inv_36",
+      "id": "inv_35",
       "filePath": "scripts/implementation/scan-incomplete.ts",
       "lineNumber": 14,
       "markerType": "TBD",
@@ -474,7 +461,7 @@
       "releasePath": false
     },
     {
-      "id": "inv_37",
+      "id": "inv_36",
       "filePath": "scripts/implementation/scan-incomplete.ts",
       "lineNumber": 15,
       "markerType": "coming_soon",
@@ -487,7 +474,7 @@
       "releasePath": false
     },
     {
-      "id": "inv_38",
+      "id": "inv_37",
       "filePath": "scripts/implementation/scan-incomplete.ts",
       "lineNumber": 16,
       "markerType": "not_implemented",
@@ -500,7 +487,7 @@
       "releasePath": false
     },
     {
-      "id": "inv_39",
+      "id": "inv_38",
       "filePath": "scripts/implementation/scan-incomplete.ts",
       "lineNumber": 17,
       "markerType": "placeholder",
@@ -513,7 +500,7 @@
       "releasePath": false
     },
     {
-      "id": "inv_40",
+      "id": "inv_39",
       "filePath": "scripts/implementation/scan-incomplete.ts",
       "lineNumber": 18,
       "markerType": "scaffold",
@@ -526,7 +513,7 @@
       "releasePath": false
     },
     {
-      "id": "inv_41",
+      "id": "inv_40",
       "filePath": "scripts/implementation/scan-incomplete.ts",
       "lineNumber": 19,
       "markerType": "temporary",
@@ -539,7 +526,7 @@
       "releasePath": false
     },
     {
-      "id": "inv_42",
+      "id": "inv_41",
       "filePath": "scripts/implementation/scan-incomplete.ts",
       "lineNumber": 20,
       "markerType": "hardcoded",
@@ -552,7 +539,7 @@
       "releasePath": false
     },
     {
-      "id": "inv_43",
+      "id": "inv_42",
       "filePath": "scripts/implementation/scan-incomplete.ts",
       "lineNumber": 21,
       "markerType": "for_now",
@@ -565,7 +552,7 @@
       "releasePath": false
     },
     {
-      "id": "inv_44",
+      "id": "inv_43",
       "filePath": "scripts/implementation/scan-incomplete.ts",
       "lineNumber": 22,
       "markerType": "eventually",
@@ -578,7 +565,7 @@
       "releasePath": false
     },
     {
-      "id": "inv_45",
+      "id": "inv_44",
       "filePath": "scripts/implementation/scan-incomplete.ts",
       "lineNumber": 23,
       "markerType": "demo_only",
@@ -591,7 +578,7 @@
       "releasePath": false
     },
     {
-      "id": "inv_46",
+      "id": "inv_45",
       "filePath": "scripts/implementation/scan-incomplete.ts",
       "lineNumber": 71,
       "markerType": "placeholder",
@@ -604,7 +591,7 @@
       "releasePath": false
     },
     {
-      "id": "inv_47",
+      "id": "inv_46",
       "filePath": "scripts/implementation/scan-incomplete.ts",
       "lineNumber": 72,
       "markerType": "scaffold",
@@ -617,7 +604,7 @@
       "releasePath": false
     },
     {
-      "id": "inv_48",
+      "id": "inv_47",
       "filePath": "scripts/implementation/scan-incomplete.ts",
       "lineNumber": 109,
       "markerType": "placeholder",
@@ -630,7 +617,7 @@
       "releasePath": false
     },
     {
-      "id": "inv_49",
+      "id": "inv_48",
       "filePath": "scripts/implementation/scan-incomplete.ts",
       "lineNumber": 112,
       "markerType": "placeholder",
@@ -643,7 +630,7 @@
       "releasePath": false
     },
     {
-      "id": "inv_50",
+      "id": "inv_49",
       "filePath": "scripts/implementation/scan-incomplete.ts",
       "lineNumber": 118,
       "markerType": "TODO",
@@ -656,7 +643,7 @@
       "releasePath": false
     },
     {
-      "id": "inv_51",
+      "id": "inv_50",
       "filePath": "scripts/implementation/scan-incomplete.ts",
       "lineNumber": 118,
       "markerType": "FIXME",
@@ -669,10 +656,23 @@
       "releasePath": false
     },
     {
-      "id": "inv_52",
+      "id": "inv_51",
       "filePath": "scripts/implementation/scan-incomplete.ts",
       "lineNumber": 127,
       "markerType": "placeholder",
+      "matchedText": "if (releasePath && (markerType === 'placeholder' || markerType === 'scaffold')) {",
+      "affectedSystem": "unknown",
+      "severity": "info",
+      "currentStatus": "blocked_external",
+      "requiredAction": "Documented as blocked external ingestion — not player-facing.",
+      "blocksRelease": false,
+      "releasePath": false
+    },
+    {
+      "id": "inv_52",
+      "filePath": "scripts/implementation/scan-incomplete.ts",
+      "lineNumber": 127,
+      "markerType": "scaffold",
       "matchedText": "if (releasePath && (markerType === 'placeholder' || markerType === 'scaffold')) {",
       "affectedSystem": "unknown",
       "severity": "info",
@@ -684,19 +684,6 @@
     {
       "id": "inv_53",
       "filePath": "scripts/implementation/scan-incomplete.ts",
-      "lineNumber": 127,
-      "markerType": "scaffold",
-      "matchedText": "if (releasePath && (markerType === 'placeholder' || markerType === 'scaffold')) {",
-      "affectedSystem": "unknown",
-      "severity": "info",
-      "currentStatus": "blocked_external",
-      "requiredAction": "Documented as blocked external ingestion — not player-facing.",
-      "blocksRelease": false,
-      "releasePath": false
-    },
-    {
-      "id": "inv_54",
-      "filePath": "scripts/implementation/scan-incomplete.ts",
       "lineNumber": 130,
       "markerType": "placeholder",
       "matchedText": "requiredAction: 'Replace scaffold/placeholder with implementation or hide feature.',",
@@ -708,7 +695,7 @@
       "releasePath": false
     },
     {
-      "id": "inv_55",
+      "id": "inv_54",
       "filePath": "scripts/implementation/scan-incomplete.ts",
       "lineNumber": 130,
       "markerType": "scaffold",
@@ -721,7 +708,7 @@
       "releasePath": false
     },
     {
-      "id": "inv_56",
+      "id": "inv_55",
       "filePath": "scripts/implementation/systems.ts",
       "lineNumber": 286,
       "markerType": "scaffold",

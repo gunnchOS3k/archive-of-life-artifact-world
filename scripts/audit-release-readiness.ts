@@ -5,10 +5,10 @@
 import { existsSync, mkdirSync, readFileSync, writeFileSync } from 'fs';
 import { join } from 'path';
 import { loadAuditContext } from './audits/shared';
-import { writeImplementationReports } from './implementation/write-reports';
+import { buildImplementationReports } from './implementation/write-reports';
+import { computeSystemStatuses } from './implementation/compute-evidence';
 import type { ReleaseReadinessReport } from './implementation/types';
 import type { ArchiveDexProfilesBundle } from '../src/schema/archivedex';
-import { SYSTEM_REGISTRY } from './implementation/systems';
 import { computeDataQualityCounts } from './implementation/data-quality-counts';
 import { scanIncompleteInventory, STATUS_DIR, ROOT } from './implementation/scan-incomplete';
 import { summarizeSystems } from './implementation/systems';
@@ -36,6 +36,7 @@ const REQUIRED_NPM_SCRIPTS = [
   'source:audit',
   'source:import:col',
   'source:import:nasa',
+  'status',
 ];
 
 const CI_COMMANDS = [
@@ -58,7 +59,7 @@ function readPkgScripts(): Record<string, string> {
   return JSON.parse(readFileSync(join(ROOT, 'package.json'), 'utf-8')).scripts ?? {};
 }
 
-function auditRelease(): ReleaseReadinessReport {
+function auditRelease(systems = computeSystemStatuses()): ReleaseReadinessReport {
   const checks: ReleaseReadinessReport['checks'] = [];
   const blockingReasons: string[] = [];
   const pkgScripts = readPkgScripts();
@@ -91,23 +92,39 @@ function auditRelease(): ReleaseReadinessReport {
     }
   }
 
-  const playerFacingBad = SYSTEM_REGISTRY.filter(
+  const playerFacingBad = systems.filter(
     (s) =>
       s.playerFacing &&
       !s.devOnly &&
-      (s.status === 'SCAFFOLD_ONLY' || s.status === 'PLANNED_NOT_STARTED')
+      (s.status === 'SCAFFOLD_ONLY' ||
+        s.status === 'PLANNED_NOT_STARTED' ||
+        s.status === 'MOCK_SAMPLE_ONLY')
   );
   checks.push({
     name: 'player_facing_not_scaffold',
     passed: playerFacingBad.length === 0,
     message: playerFacingBad.length
-      ? `Player-facing scaffolds: ${playerFacingBad.map((s) => s.id).join(', ')}`
-      : 'No player-facing scaffold-only systems',
+      ? `Player-facing incomplete: ${playerFacingBad.map((s) => `${s.id} (${s.status})`).join(', ')}`
+      : 'No player-facing scaffold-only or mock-only systems',
     blocking: true,
   });
   if (playerFacingBad.length) {
-    blockingReasons.push(`Player-facing scaffolds: ${playerFacingBad.map((s) => s.name).join(', ')}`);
+    blockingReasons.push(
+      `Player-facing incomplete: ${playerFacingBad.map((s) => s.name).join(', ')}`
+    );
   }
+
+  const partialPlayerFacing = systems.filter(
+    (s) => s.playerFacing && !s.devOnly && s.status === 'PARTIAL_IMPLEMENTATION'
+  );
+  checks.push({
+    name: 'player_facing_partial_documented',
+    passed: true,
+    message: partialPlayerFacing.length
+      ? `Partial player-facing (documented): ${partialPlayerFacing.map((s) => s.id).join(', ')}`
+      : 'No partial player-facing systems',
+    blocking: false,
+  });
 
   const ctx = loadAuditContext();
   const heroById = new Map(ctx.hero.species.map((s) => [s.id, s]));
@@ -232,6 +249,7 @@ function auditRelease(): ReleaseReadinessReport {
   });
 
   const ready = blockingReasons.length === 0 && checks.filter((c) => c.blocking && !c.passed).length === 0;
+  const implSummary = summarizeSystems(systems);
 
   return {
     generatedAt: new Date().toISOString(),
@@ -239,7 +257,8 @@ function auditRelease(): ReleaseReadinessReport {
     blockingReasons,
     checks,
     dataQuality,
-    implementationSummary: summarizeSystems(SYSTEM_REGISTRY),
+    implementationSummary: implSummary,
+    systemsSnapshot: systems.map((s) => ({ id: s.id, status: s.status, name: s.name })),
     incompleteSummary: {
       releasePathBlocking: releaseBlockingItems.length,
       releasePathTotal: inventory.filter((i) => i.releasePath).length,
@@ -247,9 +266,8 @@ function auditRelease(): ReleaseReadinessReport {
   };
 }
 
-writeImplementationReports();
-
-const report = auditRelease();
+const { implementation } = buildImplementationReports();
+const report = auditRelease(implementation.systems);
 mkdirSync(STATUS_DIR, { recursive: true });
 writeFileSync(join(STATUS_DIR, 'release_readiness_report.json'), JSON.stringify(report, null, 2));
 
@@ -265,6 +283,11 @@ console.log(`  mockSampleCount: ${report.dataQuality.mockSampleCount}`);
 console.log(`  totalSourceVerified: ${report.dataQuality.totalSourceVerified}`);
 console.log(`  releaseEligibleCount: ${report.dataQuality.releaseEligibleCount}`);
 console.log(`  blockedExternalDataCount: ${report.dataQuality.blockedExternalDataCount}`);
+console.log(`\nImplementation summary (matches implementation_status.json):`);
+console.log(`  FULLY_IMPLEMENTED: ${report.implementationSummary.fullyImplemented}`);
+console.log(`  PARTIAL_IMPLEMENTATION: ${report.implementationSummary.partialImplementation}`);
+console.log(`  MOCK_SAMPLE_ONLY: ${report.implementationSummary.mockSampleOnly}`);
+console.log(`  BLOCKED_BY_EXTERNAL_DATA: ${report.implementationSummary.blockedExternalData}`);
 console.log(`\nRelease ready: ${report.ready ? 'YES' : 'NO'}`);
 console.log(`Wrote public/data/status/release_readiness_report.json\n`);
 

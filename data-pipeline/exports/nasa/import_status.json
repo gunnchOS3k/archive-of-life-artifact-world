@@ -1,0 +1,31 @@
+{
+  "imported": true,
+  "status": "imported",
+  "recordCount": 21,
+  "checksum": "a35a04ef5ed56f6d5e0250d18acb28eea83b032085d51687eef748ba76f0265a",
+  "sourceVersion": "public-api",
+  "citation": "NASA Earthdata / EONET / POWER public APIs",
+  "lastImportTime": "2026-07-05T03:41:38Z",
+  "dataMode": "source_verified",
+  "layers": [
+    {
+      "id": "natural_events",
+      "mode": "REAL NASA METADATA",
+      "recordCount": 20,
+      "sourceUrl": "https://eonet.gsfc.nasa.gov/"
+    },
+    {
+      "id": "vegetation",
+      "mode": "REAL NASA METADATA",
+      "recordCount": 0,
+      "sourceUrl": "https://cmr.earthdata.nasa.gov/"
+    },
+    {
+      "id": "climate",
+      "mode": "REAL NASA METADATA",
+      "recordCount": 1,
+      "sourceUrl": "https://power.larc.nasa.gov/"
+    }
+  ],
+  "blockedReason": null
+}

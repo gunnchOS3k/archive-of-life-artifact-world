@@ -38,11 +38,16 @@ function sourceImported(sourceId: string): boolean {
 }
 
 function hasNasaRealMetadata(): boolean {
-  const manifest = readJsonSafe<{ dataMode?: string; layers?: Array<{ mode: string }> }>(
-    'data-pipeline/exports/nasa/nasa_metadata_manifest.json'
-  );
-  if (!manifest) return false;
-  return manifest.layers?.some((l) => l.mode === 'REAL NASA METADATA') ?? false;
+  for (const rel of [
+    'data-pipeline/exports/nasa/nasa_metadata_manifest.json',
+    'public/data/earth/nasa_metadata_cache.json',
+  ]) {
+    const manifest = readJsonSafe<{ dataMode?: string; layers?: Array<{ mode: string }>; imported?: boolean }>(rel);
+    if (!manifest) continue;
+    if (manifest.layers?.some((l) => l.mode === 'REAL NASA METADATA')) return true;
+    if (manifest.imported === true && manifest.dataMode !== 'sample_fallback') return true;
+  }
+  return false;
 }
 
 function provenanceModelComplete(): boolean {
@@ -188,7 +193,7 @@ export function computeSystemStatuses(): SystemRecord[] {
     const notes = computed.notes ?? base.notes;
     const scopedNote =
       computed.status === 'FULLY_IMPLEMENTED' &&
-      ['archivedex', 'time_atlas', 'global_coverage_matrix', 'coverage_dashboard', 'python_pipeline', 'sql_pipeline'].includes(base.id) &&
+      ['archivedex', 'time_atlas', 'global_coverage_matrix', 'coverage_dashboard', 'python_pipeline', 'sql_pipeline', 'earth_layer_console'].includes(base.id) &&
       !notes.includes('snapshot scope')
         ? `${notes} ${SNAPSHOT_SCOPE_NOTE}`
         : notes;
