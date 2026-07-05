@@ -6,7 +6,8 @@ import { visitRegion, checkQuestProgress } from '@/systems/questSystem';
 import { saveGame } from '@/systems/saveSystem';
 import { FossilExcavation } from '@/minigames/fossilExcavation';
 import { WildlifeObservation } from '@/minigames/wildlifeObservation';
-import { ArchiveUI } from '@/ui/archiveUI';
+import { ArchiveDexUI } from '@/ui/archiveDexUI';
+import { ArchiveDexService } from '@/services/ArchiveDexService';
 import { NotebookUI } from '@/ui/notebookUI';
 import { MapUI } from '@/ui/mapUI';
 import { CompanionUI } from '@/ui/companionUI';
@@ -42,7 +43,7 @@ export class Game {
   private toastTimer: ReturnType<typeof setTimeout> | null = null;
   private speciesById = new Map<string, PlayableSpecies>();
 
-  private archiveUI: ArchiveUI;
+  private archiveDexUI: ArchiveDexUI;
   private notebookUI: NotebookUI;
   private mapUI: MapUI;
   private companionUI: CompanionUI;
@@ -50,23 +51,27 @@ export class Game {
   private earthLayerUI: EarthLayerUI;
   private timeAtlasUI: TimeAtlasUI;
 
+  private dexService: ArchiveDexService;
+
   constructor(
     canvas: HTMLCanvasElement,
     catalog: DataCatalogService,
     earthService: EarthLayerService,
     timeService: TimeAtlasService,
+    dexService: ArchiveDexService,
     state: SaveState
   ) {
     this.canvas = canvas;
     this.ctx = canvas.getContext('2d')!;
     this.catalog = catalog;
+    this.dexService = dexService;
     this.state = state;
 
     const config = catalog.getConfig();
     this.player = new Player(state.player.x, state.player.y);
     this.world = new World(config.regions, this.speciesById);
 
-    this.archiveUI = new ArchiveUI(document.getElementById('panel-archive')!, catalog);
+    this.archiveDexUI = new ArchiveDexUI(document.getElementById('panel-archive')!, dexService, catalog);
     this.notebookUI = new NotebookUI(document.getElementById('panel-notebook')!);
     this.mapUI = new MapUI(document.getElementById('panel-map')!);
     this.companionUI = new CompanionUI(document.getElementById('panel-companion')!);
@@ -175,7 +180,7 @@ export class Game {
   refreshUI() {
     const config = this.catalog.getConfig();
     const index = this.catalog.getSearchIndex().entries;
-    this.archiveUI.setData(this.state);
+    this.archiveDexUI.setData(this.state);
     this.notebookUI.setData(this.state);
     this.mapUI.setData(config.regions, this.state);
     this.companionUI.setData(this.state, config.traits);
@@ -279,13 +284,18 @@ export class Game {
     this.activeMinigame = new WildlifeObservation(canvas, species, () => this.onMinigameComplete(species), () => this.endMinigame());
   }
 
-  private onMinigameComplete(species: PlayableSpecies) {
+  private async onMinigameComplete(species: PlayableSpecies) {
     const traits = this.catalog.getConfig().traits;
     const result = collectArtifact(this.state, species, traits);
     if (result.success) {
       this.lifeling.triggerReaction('celebrate');
       this.state.companion.bond = Math.min(100, this.state.companion.bond + 5);
-      this.showToast(`Artifact collected: ${formatArtifactType(result.artifact.artifactType)} from ${species.commonName}!`);
+      const entry = await this.dexService.getEntryById(species.id, this.state);
+      if (entry) {
+        await this.archiveDexUI.showUnlockModal(entry, result.artifact);
+      } else {
+        this.showToast(`Artifact collected: ${formatArtifactType(result.artifact.artifactType)} from ${species.commonName}!`);
+      }
 
       const index = this.catalog.getSearchIndex().entries;
       const questUpdates = checkQuestProgress(this.state, this.catalog.getConfig().quests, index);

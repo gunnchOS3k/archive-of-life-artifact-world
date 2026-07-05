@@ -37,7 +37,7 @@
             <span id="prompt-text">Press E to interact</span>
           </div>
           <div id="hud-buttons">
-            <button class="hud-btn" id="btn-archive" title="Archive (A)">📚 Archive</button>
+            <button class="hud-btn" id="btn-archive" title="ArchiveDex (A)">📖 ArchiveDex</button>
             <button class="hud-btn" id="btn-notebook" title="Notebook (N)">📓 Notebook</button>
             <button class="hud-btn" id="btn-map" title="Map (M)">🗺️ Map</button>
             <button class="hud-btn" id="btn-companion" title="Lifeling (C)">✨ Lifeling</button>
@@ -52,11 +52,12 @@
 
     <div id="panel-archive" class="panel hidden">
       <div class="panel-header">
-        <h2>Archive of Life</h2>
+        <h2>ArchiveDex</h2>
         <button class="panel-close" data-panel="archive">✕</button>
       </div>
       <div class="panel-body archive-panel-body">
         <div id="archive-coverage" class="archive-coverage"></div>
+        <div id="archivedex-completion" class="archivedex-completion"></div>
         <div id="archive-stats" class="archive-stats"></div>
         <div class="archive-filters">
           <input type="search" id="archive-search" placeholder="Search species..." class="archive-search">
@@ -144,10 +145,27 @@
           <label class="filter-check"><input type="checkbox" id="filter-threatened"> Threatened only</label>
           <label class="filter-check"><input type="checkbox" id="filter-extinct"> Extinct/fossil only</label>
           <label class="filter-check"><input type="checkbox" id="filter-extant"> Extant only</label>
+          <label class="filter-check"><input type="checkbox" id="filter-hero-only"> Hero species only</label>
+          <label class="filter-check"><input type="checkbox" id="filter-questable-only"> Questable only</label>
         </div>
         <div id="archive-grid" class="archive-grid"></div>
         <div id="archive-pagination" class="archive-pagination"></div>
-        <div id="species-detail" class="species-detail hidden"></div>
+        <div id="archivedex-entry" class="archivedex-entry hidden">
+          <button type="button" id="archivedex-entry-back" class="btn-secondary archivedex-back">← Back to ArchiveDex</button>
+          <div id="archivedex-entry-header" class="archivedex-entry-header"></div>
+          <div id="archivedex-tabs" class="archivedex-tabs" role="tablist"></div>
+          <div id="archivedex-tab-content" class="archivedex-tab-content" role="tabpanel"></div>
+        </div>
+      </div>
+    </div>
+
+    <div id="archivedex-unlock-modal" class="archivedex-unlock-modal hidden" role="dialog" aria-labelledby="archivedex-unlock-title">
+      <div class="archivedex-unlock-card">
+        <div id="archivedex-unlock-body"></div>
+        <div class="archivedex-unlock-actions">
+          <button type="button" id="archivedex-unlock-open" class="btn-primary">Open Entry</button>
+          <button type="button" id="archivedex-unlock-close" class="btn-secondary">Continue</button>
+        </div>
       </div>
     </div>
 

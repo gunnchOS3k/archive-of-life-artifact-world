@@ -1,0 +1,289 @@
+{
+  "snapshotId": "archivedex-sample-2026-07",
+  "version": "1.0.0",
+  "profiles": [
+    {
+      "id": "panthera_leo",
+      "archiveNumber": "MAM-000001",
+      "pronunciation": "pan-THER-uh LEE-oh",
+      "nameMeaning": "Panther-like lion",
+      "overview": {
+        "shortDescription": "A social apex predator of African savannas and grasslands. Lions live in prides, hunt cooperatively, and help regulate herbivore populations.",
+        "whyItMatters": "Apex predators shape food webs and ecosystem balance; their presence can indicate healthy savanna systems."
+      },
+      "identity": {
+        "identificationTips": ["Look for tawny coat, tufted tail tip, and adult male mane", "Prides often rest in shade during midday"],
+        "fieldMarks": ["Mane in adult males", "Retractable claws", "Powerful shoulders"],
+        "similarSpecies": ["Leopard", "Cheetah", "Tiger (outside Africa)"],
+        "misidentifications": ["Large feral dogs at distance", "Hyenas when silhouette only"],
+        "identificationConfidence": "High for adults at close ethical range"
+      },
+      "taxonomy": {
+        "kingdom": "Animalia",
+        "phylum": "Chordata",
+        "className": "Mammalia",
+        "order": "Carnivora",
+        "genus": "Panthera",
+        "relatedTaxa": ["Panthera pardus", "Panthera tigris"]
+      },
+      "time": {
+        "timeRangeLabel": "Pleistocene–Holocene",
+        "massExtinctionEvents": [],
+        "evolutionaryEvents": ["Panthera lineage diversification"]
+      },
+      "habitatRange": {
+        "inGameClue": "Explore the Savanna region at dawn or dusk",
+        "requiredTools": ["Binoculars", "Track cast kit", "Audio recorder"],
+        "bestExpeditionConditions": "Low wind, ethical viewing distance"
+      },
+      "bodyTraits": {
+        "bodyPlan": "Large carnivorous mammal",
+        "covering": "Fur",
+        "keyFeatures": ["Mane in adult males", "Powerful jaws", "Retractable claws"],
+        "sexualDimorphism": "Adult males often have a prominent mane",
+        "adaptations": ["Cooperative hunting", "Night vision", "Powerful bite"]
+      },
+      "behavior": {
+        "socialStructure": "Pride — related females, coalition males",
+        "communication": ["Roars", "Scent marking", "Body posture"],
+        "movement": "Walks, stalks, short pursuit hunting",
+        "fieldSafety": "Observe from distance; never approach"
+      },
+      "dietFoodWeb": {
+        "dietCategory": "carnivore",
+        "mainFoods": ["Large ungulates"],
+        "trophicLevel": "apex predator",
+        "prey": ["Zebra", "Wildebeest", "Buffalo"],
+        "competitors": ["Spotted hyena", "Leopard"],
+        "ecosystemRole": "Regulates herbivore populations",
+        "foodWebDiagram": "Grass → Zebra → Lion\n       ↘ Scavengers → Decomposers"
+      },
+      "lifeCycle": {
+        "reproduction": "Sexual reproduction",
+        "offspring": "Cubs",
+        "parenting": "Communal care within pride",
+        "growthStages": ["Cub", "Juvenile", "Adult"]
+      },
+      "ecology": {
+        "keystoneStatus": "Important apex predator",
+        "ecosystemImpact": "Helps maintain balance in large herbivore communities",
+        "ecosystemServices": ["Population regulation", "Scavenger subsidy via kills"]
+      },
+      "conservation": {
+        "majorThreats": ["Habitat loss", "Human-wildlife conflict", "Prey decline", "Snaring"],
+        "conservationActions": ["Protected areas", "Community conservation", "Conflict reduction"],
+        "whyConservationMatters": "Losing apex predators can trigger herbivore overpopulation and ecosystem imbalance"
+      },
+      "earthSystems": {
+        "climateSensitivity": "Affected by prey availability, water, fire regimes, and drought stress"
+      },
+      "humanConnections": {
+        "ethicalViewingRules": ["Keep distance", "Do not feed", "Follow ranger guidance"],
+        "humanWildlifeConflict": "Can conflict with livestock owners near protected areas"
+      },
+      "lifeling": { "masteryBadge": "Savanna Apex Study" },
+      "uncertainty": {
+        "unknownToScience": ["Exact Pleistocene range boundaries", "Full pride dynamics across all populations"]
+      }
+    },
+    {
+      "id": "loxodonta_africana",
+      "archiveNumber": "MAM-000002",
+      "pronunciation": "LOX-oh-DON-tuh af-ri-KAH-nuh",
+      "overview": {
+        "shortDescription": "Earth's largest land mammal — a keystone herbivore that engineers savanna and forest landscapes.",
+        "whyItMatters": "Elephants create water access, disperse seeds, and maintain open habitats used by many species."
+      },
+      "identity": {
+        "fieldMarks": ["Large ears", "Trunk", "Curved tusks", "Columnar legs"],
+        "identificationConfidence": "High"
+      },
+      "taxonomy": { "order": "Proboscidea", "genus": "Loxodonta" },
+      "dietFoodWeb": {
+        "dietCategory": "herbivore",
+        "trophicLevel": "megaherbivore / ecosystem engineer",
+        "mainFoods": ["Grasses", "Bark", "Fruits", "Leaves"],
+        "foodWebDiagram": "Plants → Elephant → Nutrient cycling + habitat modification"
+      },
+      "ecology": {
+        "keystoneStatus": "Keystone ecosystem engineer",
+        "ecosystemImpact": "Creates trails, water holes, and tree gaps that benefit biodiversity"
+      },
+      "conservation": {
+        "majorThreats": ["Poaching", "Habitat fragmentation", "Human-elephant conflict"],
+        "conservationActions": ["Anti-poaching patrols", "Wildlife corridors", "Community benefit programs"]
+      },
+      "lifeling": { "masteryBadge": "Keystone Guardian" }
+    },
+    {
+      "id": "danaus_plexippus",
+      "archiveNumber": "INS-000001",
+      "pronunciation": "duh-NAY-us PLEK-sip-us",
+      "overview": {
+        "shortDescription": "A long-distance migrating butterfly whose orange wings warn predators of toxicity acquired from milkweed host plants.",
+        "whyItMatters": "Pollinator and indicator of plant community health; famous for multi-generational migration."
+      },
+      "identity": {
+        "fieldMarks": ["Orange wings with black veins and white spots", "Slow gliding flight"],
+        "similarSpecies": ["Viceroy butterfly"]
+      },
+      "taxonomy": { "order": "Lepidoptera", "family": "Nymphalidae", "genus": "Danaus" },
+      "lifeCycle": {
+        "metamorphosis": "Complete metamorphosis: egg → larva → pupa → adult",
+        "growthStages": ["Egg", "Caterpillar", "Chrysalis", "Adult"]
+      },
+      "dietFoodWeb": {
+        "dietCategory": "herbivore (larva); nectar feeder (adult)",
+        "ecosystemRole": "Pollinator",
+        "mainFoods": ["Milkweed (larvae)", "Nectar (adults)"]
+      },
+      "conservation": {
+        "majorThreats": ["Habitat loss", "Pesticides", "Climate effects on migration"],
+        "whyConservationMatters": "Declining milkweed and migration routes threaten North American populations"
+      },
+      "earthSystems": {
+        "climateSensitivity": "Migration timing linked to temperature and nectar resource seasons"
+      },
+      "lifeling": { "masteryBadge": "Pollinator Pathfinder" }
+    },
+    {
+      "id": "balaenoptera_musculus",
+      "archiveNumber": "MAM-000005",
+      "pronunciation": "bal-ee-en-OP-ter-uh MUS-kew-lus",
+      "overview": {
+        "shortDescription": "The largest animal known to have ever lived — a filter-feeding baleen whale of the open ocean.",
+        "whyItMatters": "Whales move nutrients through ocean food webs and store carbon; their recovery shows conservation can work."
+      },
+      "identity": {
+        "fieldMarks": ["Mottled blue-gray body", "Tiny dorsal fin", "Broad flat head", "Blow up to 9 m"]
+      },
+      "taxonomy": { "order": "Artiodactyla", "family": "Balaenopteridae", "genus": "Balaenoptera" },
+      "habitatRange": {
+        "depthRange": "Surface to deep feeding dives",
+        "migration": "Seasonal migration between feeding and breeding areas",
+        "requiredTools": ["Binoculars", "Camera", "Audio recorder", "Ocean observation log"]
+      },
+      "dietFoodWeb": {
+        "dietCategory": "filter feeder",
+        "mainFoods": ["Krill", "Small fish"],
+        "trophicLevel": "high-level consumer",
+        "foodWebDiagram": "Phytoplankton → Krill → Blue Whale"
+      },
+      "conservation": {
+        "iucnCategory": "Endangered",
+        "majorThreats": ["Ship strikes", "Entanglement", "Ocean noise", "Climate effects on krill"],
+        "conservationActions": ["Shipping lane adjustments", "Marine protected areas"]
+      },
+      "earthSystems": {
+        "climateSensitivity": "Depends on ocean productivity, temperature, and krill bloom timing"
+      },
+      "lifeling": { "masteryBadge": "Ocean Giant Scholar" }
+    },
+    {
+      "id": "trilobita_order",
+      "archiveNumber": "PAL-000001",
+      "overview": {
+        "shortDescription": "An extinct class of marine arthropods that dominated Paleozoic seas for nearly 300 million years.",
+        "whyItMatters": "Trilobites are index fossils — they help scientists date rock layers and understand early animal evolution."
+      },
+      "identity": {
+        "fossilIdentification": ["Segmented body", "Three lobes lengthwise", "Calcite exoskeleton"],
+        "debatedClassification": "Exact relationships among trilobite orders remain under study"
+      },
+      "time": {
+        "timeRangeLabel": "Cambrian–Permian",
+        "massExtinctionEvents": ["End-Permian extinction ended last trilobite groups"]
+      },
+      "conservation": {
+        "extinctionCauses": ["End-Permian mass extinction", "Long-term environmental change"],
+        "whyConservationMatters": "Ancient extinction teaches us how vulnerable even dominant groups can be"
+      },
+      "behavior": {
+        "behaviorEvidence": ["Trackways", "Molting fossils", "Compound eye structure"],
+        "speculationWarning": "Most behavior inferred from fossils and modern arthropod analogs"
+      },
+      "uncertainty": {
+        "fossilUncertainty": "Soft anatomy rarely preserved; many species known from exoskeletons only"
+      }
+    },
+    {
+      "id": "sample_anomalocaris",
+      "archiveNumber": "PAL-000010",
+      "overview": {
+        "shortDescription": "A top Cambrian predator with grasping appendages and a circular mouth — icon of the Cambrian explosion.",
+        "whyItMatters": "Shows early complex predator-prey dynamics in marine ecosystems."
+      },
+      "identity": {
+        "fossilIdentification": ["Front appendages", "Circular mouthplate", "Segmented body"],
+        "debatedClassification": "Once reconstructed from parts thought to be separate species"
+      },
+      "time": { "timeRangeLabel": "Cambrian", "ancientEnvironment": "Warm shallow tropical seas" },
+      "dietFoodWeb": {
+        "dietCategory": "carnivore",
+        "trophicLevel": "apex Cambrian predator",
+        "prey": ["Trilobites", "Small arthropods"]
+      },
+      "uncertainty": {
+        "fossilUncertainty": "Reconstruction history includes famous misassembly of fossil parts",
+        "unknownToScience": ["Exact feeding mechanics", "Full soft-body appearance"]
+      }
+    },
+    {
+      "id": "sample_dickinsonia",
+      "archiveNumber": "PAL-000020",
+      "overview": {
+        "shortDescription": "An Ediacaran organism with a quilted oval body — among the first large complex multicellular life forms.",
+        "whyItMatters": "Helps scientists study life before the Cambrian explosion and the origins of animals."
+      },
+      "identity": {
+        "debatedClassification": "Affinity uncertain — may be animal, lichen-like, or other; active scientific debate",
+        "fossilIdentification": ["Oval quilted pattern", "Soft-body impression fossils"]
+      },
+      "time": { "timeRangeLabel": "Ediacaran", "ancientEnvironment": "Marine seafloor after Snowball Earth" },
+      "behavior": { "speculationWarning": "Almost all biology inferred; no modern exact analog" },
+      "uncertainty": {
+        "taxonomicUncertainty": "Major debate over kingdom-level placement",
+        "unknownToScience": ["Feeding method", "Reproduction", "Relationship to modern animals"]
+      }
+    },
+    {
+      "id": "sample_cyanobacteria",
+      "archiveNumber": "MIC-000001",
+      "overview": {
+        "shortDescription": "Photosynthetic bacteria that produce oxygen and build stromatolites — among Earth's oldest life forms.",
+        "whyItMatters": "Cyanobacteria helped oxygenate Earth's atmosphere during the Great Oxidation Event."
+      },
+      "taxonomy": { "kingdom": "Bacteria", "phylum": "Cyanobacteria" },
+      "time": { "timeRangeLabel": "Archean–Present", "evolutionaryEvents": ["Great Oxidation Event ~2.4 Ga"] },
+      "dietFoodWeb": { "dietCategory": "photosynthetic", "ecosystemRole": "Primary producer / oxygen producer" },
+      "lifeCycle": { "reproduction": "Binary fission and colony growth" },
+      "conservation": { "whyConservationMatters": "Modern blooms can affect water quality; ancient forms changed the planet permanently" },
+      "uncertainty": { "notes": "Represents a phylum-level group, not a single species." }
+    },
+    {
+      "id": "sample_trilobite_elrathia",
+      "archiveNumber": "PAL-000011",
+      "overview": {
+        "shortDescription": "A classic Cambrian trilobite species known from well-preserved Utah fossils.",
+        "whyItMatters": "Common in educational fossil collections; helps date Cambrian marine rocks."
+      },
+      "time": { "timeRangeLabel": "Middle Cambrian" },
+      "habitatRange": { "fossilLocations": ["Wheeler Formation, Utah"], "paleoenvironment": "Shallow marine mud bottoms" }
+    },
+    {
+      "id": "sample_brachiosaurus",
+      "archiveNumber": "PAL-000030",
+      "overview": {
+        "shortDescription": "A gigantic Late Jurassic sauropod with forelimbs longer than hindlimbs — among the largest land animals ever.",
+        "whyItMatters": "Shows the extreme body-size evolution of dinosaurs and Morrison Formation ecosystems."
+      },
+      "bodyTraits": {
+        "size": "Up to ~25 m long",
+        "keyFeatures": ["Long neck", "High shoulders", "Peg-like teeth"],
+        "fossilAnatomy": ["Vertebrae", "Limb bones", "Partial skull material"]
+      },
+      "dietFoodWeb": { "dietCategory": "herbivore", "mainFoods": ["Conifers", "Cycads", "Ferns"], "trophicLevel": "megaherbivore" },
+      "behavior": { "behaviorEvidence": ["Trackways suggest herd movement possible"], "speculationWarning": "Social behavior debated" }
+    }
+  ]
+}
