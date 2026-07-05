@@ -10,6 +10,7 @@
     "typecheck": "tsc --noEmit",
     "audit:data": "tsx scripts/audit-data.ts",
     "audit:coverage": "tsx scripts/audit-coverage.ts",
+    "audit:archivedex": "tsx scripts/audit-archivedex.ts",
     "generate:bundles": "tsx scripts/generate-bundles.ts",
     "generate:time-atlas": "tsx scripts/generate-time-atlas.ts"
   },

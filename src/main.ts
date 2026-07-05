@@ -1,11 +1,13 @@
 import '../css/styles.css';
 import { dataCatalog } from '@/services/DataCatalogService';
 import { earthLayerService } from '@/services/EarthLayerService';
+import { ArchiveDexService } from '@/services/ArchiveDexService';
 import { timeAtlasService } from '@/time/TimeAtlasService';
 import { createDefaultSave, loadSave, hasSave } from '@/systems/saveSystem';
 import { Game } from '@/game/Game';
 
 let game: Game | null = null;
+const archiveDexService = new ArchiveDexService(dataCatalog, timeAtlasService);
 
 async function init() {
   const continueBtn = document.getElementById('btn-continue')!;
@@ -33,7 +35,7 @@ async function startGame(continuing: boolean) {
   document.getElementById('game-screen')!.classList.add('active');
 
   const canvas = document.getElementById('game-canvas') as HTMLCanvasElement;
-  game = new Game(canvas, dataCatalog, earthLayerService, timeAtlasService, state);
+  game = new Game(canvas, dataCatalog, earthLayerService, timeAtlasService, archiveDexService, state);
   game.start();
 
   if (!continuing) {
