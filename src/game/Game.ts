@@ -14,6 +14,7 @@ import { CompanionUI } from '@/ui/companionUI';
 import { QuestUI } from '@/ui/questUI';
 import { EarthLayerUI } from '@/ui/earthLayerUI';
 import { TimeAtlasUI } from '@/ui/timeAtlasUI';
+import { CoverageDashboardUI } from '@/ui/coverageDashboardUI';
 import {
   DataCatalogService,
   toPlayableSpecies,
@@ -50,6 +51,8 @@ export class Game {
   private questUI: QuestUI;
   private earthLayerUI: EarthLayerUI;
   private timeAtlasUI: TimeAtlasUI;
+  private coverageDashboardUI: CoverageDashboardUI;
+  private devMode: boolean;
 
   private dexService: ArchiveDexService;
 
@@ -86,6 +89,11 @@ export class Game {
       timeService,
       catalog
     );
+    this.coverageDashboardUI = new CoverageDashboardUI(
+      document.getElementById('panel-coverage')!,
+      catalog
+    );
+    this.devMode = new URLSearchParams(window.location.search).has('dev');
 
     this.earthLayerUI.onTabViewed = () => {
       this.onEarthLayerProgress();
@@ -121,6 +129,7 @@ export class Game {
       if (e.key === 'q' || e.key === 'Q') this.togglePanel('quests');
       if (e.key === 't' || e.key === 'T') this.togglePanel('earth');
       if (e.key === 'y' || e.key === 'Y') this.togglePanel('time');
+      if (this.devMode && (e.key === 'g' || e.key === 'G')) this.togglePanel('coverage');
       if (e.key === 'Escape') this.closeAllPanels();
     });
     window.addEventListener('keyup', (e) => {
@@ -164,6 +173,9 @@ export class Game {
       }
       if (name === 'time') {
         this.timeAtlasUI.open();
+      }
+      if (name === 'coverage') {
+        void this.coverageDashboardUI.open();
       }
       this.refreshUI();
       this.paused = true;
@@ -249,7 +261,11 @@ export class Game {
     }
 
     if (item.type === 'earth_console') {
-      this.togglePanel('earth');
+      if (item.id === 'coverage_dashboard') {
+        this.togglePanel('coverage');
+      } else {
+        this.togglePanel('earth');
+      }
       return;
     }
 

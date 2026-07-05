@@ -1,0 +1,9 @@
+{
+  "snapshotId": "sample-2026-07",
+  "generatedAt": "2026-07-05T00:00:00.000Z",
+  "byGroup": {},
+  "byBiome": {},
+  "byTier": {},
+  "bySource": {},
+  "warnings": ["Run npm run report:coverage to regenerate bias metrics from current bundles."]
+}

@@ -1,0 +1,9 @@
+{
+  "snapshotId": "sample-2026-07",
+  "ecoregions": [
+    {"id": "at0202", "name": "Central Zambezian Miombo Woodlands", "realm": "terrestrial", "biomeId": "terrestrial_savanna", "source": "wwf_resolve_terrestrial", "coverageStatus": "partial"},
+    {"id": "na0403", "name": "Eastern Deciduous Forests", "realm": "terrestrial", "biomeId": "terrestrial_forest", "source": "wwf_resolve_terrestrial", "coverageStatus": "partial"},
+    {"id": "na0703", "name": "Upper Mississippi River Basin", "realm": "freshwater", "biomeId": "freshwater_wetland", "source": "freshwater_ecoregions_world", "coverageStatus": "partial"},
+    {"id": "me0101", "name": "Gulf of Alaska", "realm": "marine", "biomeId": "marine_coastal", "source": "marine_ecoregions_world", "coverageStatus": "not_yet_ingested"}
+  ]
+}

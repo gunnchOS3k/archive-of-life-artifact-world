@@ -1,0 +1,58 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  build-and-audit:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: npm
+
+      - uses: astral-sh/setup-uv@v5
+        with:
+          enable-cache: true
+          cache-dependency-glob: data-pipeline/uv.lock
+
+      - name: Install Node dependencies
+        run: npm ci
+
+      - name: Generate Time Atlas bundles
+        run: npm run generate:time-atlas
+
+      - name: Generate data bundles
+        run: npm run generate:bundles
+
+      - name: Typecheck
+        run: npm run typecheck
+
+      - name: Audit data integrity
+        run: npm run audit:data
+
+      - name: Audit global coverage
+        run: npm run audit:coverage
+
+      - name: Audit ArchiveDex
+        run: npm run audit:archivedex
+
+      - name: Build frontend
+        run: npm run build
+
+      - name: Sync Python pipeline
+        run: cd data-pipeline && uv sync --all-extras
+
+      - name: Ruff lint
+        run: cd data-pipeline && uv run ruff check .
+
+      - name: Pytest
+        run: cd data-pipeline && uv run pytest
+
+      - name: SQLFluff lint
+        run: cd data-pipeline && uv run sqlfluff lint sql/

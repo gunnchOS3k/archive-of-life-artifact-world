@@ -1,0 +1,11 @@
+[sqlfluff]
+dialect = duckdb
+templater = raw
+max_line_length = 120
+exclude_rules = AL01,AL05,ST01,ST06,CP04,LT01,LT02
+
+[sqlfluff:indentation]
+tab_space_size = 2
+
+[sqlfluff:rules]
+capitalisation_policy = lower

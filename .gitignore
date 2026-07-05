@@ -3,3 +3,26 @@
 .env
 node_modules/
 dist/
+
+# Python pipeline
+data-pipeline/.venv/
+data-pipeline/__pycache__/
+data-pipeline/**/__pycache__/
+data-pipeline/.pytest_cache/
+data-pipeline/.ruff_cache/
+*.pyc
+
+# Large raw source downloads (track manifests/checksums instead)
+data-pipeline/snapshots/**/*
+!data-pipeline/snapshots/README.md
+!data-pipeline/snapshots/.gitkeep
+
+# Large exports unless explicitly scoped samples
+data-pipeline/exports/**/*
+!data-pipeline/exports/README.md
+!data-pipeline/exports/.gitkeep
+!data-pipeline/exports/sample_scope/**
+
+# Local DuckDB / parquet working files
+data-pipeline/**/*.duckdb
+data-pipeline/**/*.parquet

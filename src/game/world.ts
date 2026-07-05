@@ -71,6 +71,16 @@ export class World {
         y: 280,
         radius: 32,
       });
+      if (typeof window !== 'undefined' && new URLSearchParams(window.location.search).has('dev')) {
+        this.interactables.push({
+          type: 'earth_console',
+          id: 'coverage_dashboard',
+          label: 'Coverage Dashboard',
+          x: 400,
+          y: 360,
+          radius: 28,
+        });
+      }
     } else {
       const speciesIds = this.regionData.speciesIds ?? [];
       const positions = this.scatterPositions(speciesIds.length, w, h);

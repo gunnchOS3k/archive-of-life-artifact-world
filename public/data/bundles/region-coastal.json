@@ -13,6 +13,9 @@
       "tier": "hero",
       "representationTier": 6,
       "lifeStatus": "extant",
+      "timeUnitIds": [
+        "holocene"
+      ],
       "taxonomy": {
         "family": "Balaenopteridae",
         "rank": "species",
@@ -24,7 +27,7 @@
         "assessed": true,
         "sourceVersion": "mock-iucn-2026-07",
         "lastUpdated": "2026-07-02",
-        "iucnTaxonId": 49933
+        "iucnTaxonId": 33956
       },
       "distribution": {
         "continents": [
@@ -36,11 +39,11 @@
         ],
         "sourceVersion": "mock-gbif-2026-07",
         "lastUpdated": "2026-07-02",
-        "gbifTaxonKey": 3477531,
+        "gbifTaxonKey": 6261987,
         "occurrenceSummaries": [
           {
             "region": "Global oceans",
-            "occurrenceCount": 3262
+            "occurrenceCount": 1533
           }
         ]
       },
@@ -122,8 +125,8 @@
           "license": "GAME-ORIGINAL",
           "citation": "Archive of Life: Artifact World — MVP authored content",
           "citationRequired": false,
-          "retrievedAt": "2026-07-05T02:28:46.443Z",
-          "lastUpdated": "2026-07-05T02:28:46.443Z",
+          "retrievedAt": "2026-07-05T03:03:21.008Z",
+          "lastUpdated": "2026-07-05T03:03:21.008Z",
           "isMockData": true
         },
         {
@@ -134,8 +137,8 @@
           "license": "MOCK-SAMPLE",
           "citation": "MOCK SAMPLE — not sourced from live API",
           "citationRequired": true,
-          "retrievedAt": "2026-07-05T02:28:46.443Z",
-          "lastUpdated": "2026-07-05T02:28:46.443Z",
+          "retrievedAt": "2026-07-05T03:03:21.008Z",
+          "lastUpdated": "2026-07-05T03:03:21.008Z",
           "isMockData": true
         }
       ]
@@ -148,6 +151,9 @@
       "tier": "hero",
       "representationTier": 6,
       "lifeStatus": "extant",
+      "timeUnitIds": [
+        "holocene"
+      ],
       "taxonomy": {
         "family": "Phocidae",
         "rank": "species",
@@ -159,7 +165,7 @@
         "assessed": true,
         "sourceVersion": "mock-iucn-2026-07",
         "lastUpdated": "2026-07-02",
-        "iucnTaxonId": 32805
+        "iucnTaxonId": 24421
       },
       "distribution": {
         "continents": [
@@ -172,11 +178,11 @@
         ],
         "sourceVersion": "mock-gbif-2026-07",
         "lastUpdated": "2026-07-02",
-        "gbifTaxonKey": 3261856,
+        "gbifTaxonKey": 2099140,
         "occurrenceSummaries": [
           {
             "region": "North Atlantic",
-            "occurrenceCount": 3522
+            "occurrenceCount": 4692
           }
         ]
       },
@@ -258,8 +264,8 @@
           "license": "GAME-ORIGINAL",
           "citation": "Archive of Life: Artifact World — MVP authored content",
           "citationRequired": false,
-          "retrievedAt": "2026-07-05T02:28:46.443Z",
-          "lastUpdated": "2026-07-05T02:28:46.443Z",
+          "retrievedAt": "2026-07-05T03:03:21.008Z",
+          "lastUpdated": "2026-07-05T03:03:21.008Z",
           "isMockData": true
         },
         {
@@ -270,8 +276,8 @@
           "license": "MOCK-SAMPLE",
           "citation": "MOCK SAMPLE — not sourced from live API",
           "citationRequired": true,
-          "retrievedAt": "2026-07-05T02:28:46.443Z",
-          "lastUpdated": "2026-07-05T02:28:46.443Z",
+          "retrievedAt": "2026-07-05T03:03:21.008Z",
+          "lastUpdated": "2026-07-05T03:03:21.008Z",
           "isMockData": true
         }
       ]

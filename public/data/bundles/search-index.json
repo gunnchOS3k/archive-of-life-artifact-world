@@ -82,6 +82,9 @@
       "tier": "hero",
       "representationTier": 6,
       "lifeStatus": "extant",
+      "timeUnitIds": [
+        "holocene"
+      ],
       "sources": [
         "game_authored",
         "catalogue_of_life"
@@ -101,6 +104,9 @@
       "tier": "hero",
       "representationTier": 6,
       "lifeStatus": "extant",
+      "timeUnitIds": [
+        "holocene"
+      ],
       "sources": [
         "game_authored",
         "catalogue_of_life"
@@ -120,6 +126,9 @@
       "tier": "hero",
       "representationTier": 6,
       "lifeStatus": "extant",
+      "timeUnitIds": [
+        "holocene"
+      ],
       "sources": [
         "game_authored",
         "catalogue_of_life"
@@ -139,6 +148,9 @@
       "tier": "hero",
       "representationTier": 6,
       "lifeStatus": "extant",
+      "timeUnitIds": [
+        "holocene"
+      ],
       "sources": [
         "game_authored",
         "catalogue_of_life"
@@ -158,6 +170,9 @@
       "tier": "hero",
       "representationTier": 6,
       "lifeStatus": "extant",
+      "timeUnitIds": [
+        "holocene"
+      ],
       "sources": [
         "game_authored",
         "catalogue_of_life"
@@ -177,6 +192,9 @@
       "tier": "hero",
       "representationTier": 6,
       "lifeStatus": "extant",
+      "timeUnitIds": [
+        "holocene"
+      ],
       "sources": [
         "game_authored",
         "catalogue_of_life"
@@ -196,6 +214,9 @@
       "tier": "hero",
       "representationTier": 6,
       "lifeStatus": "extant",
+      "timeUnitIds": [
+        "holocene"
+      ],
       "sources": [
         "game_authored",
         "catalogue_of_life"
@@ -262,6 +283,9 @@
       "tier": "hero",
       "representationTier": 6,
       "lifeStatus": "extant",
+      "timeUnitIds": [
+        "holocene"
+      ],
       "sources": [
         "game_authored",
         "catalogue_of_life"
@@ -281,6 +305,9 @@
       "tier": "hero",
       "representationTier": 6,
       "lifeStatus": "extant",
+      "timeUnitIds": [
+        "holocene"
+      ],
       "sources": [
         "game_authored",
         "catalogue_of_life"
@@ -300,6 +327,9 @@
       "tier": "hero",
       "representationTier": 6,
       "lifeStatus": "extant",
+      "timeUnitIds": [
+        "holocene"
+      ],
       "sources": [
         "game_authored",
         "catalogue_of_life"
@@ -319,6 +349,9 @@
       "tier": "hero",
       "representationTier": 6,
       "lifeStatus": "extant",
+      "timeUnitIds": [
+        "holocene"
+      ],
       "sources": [
         "game_authored",
         "catalogue_of_life"
@@ -338,6 +371,9 @@
       "tier": "hero",
       "representationTier": 6,
       "lifeStatus": "extant",
+      "timeUnitIds": [
+        "holocene"
+      ],
       "sources": [
         "game_authored",
         "catalogue_of_life"
@@ -357,6 +393,9 @@
       "tier": "hero",
       "representationTier": 6,
       "lifeStatus": "extant",
+      "timeUnitIds": [
+        "holocene"
+      ],
       "sources": [
         "game_authored",
         "catalogue_of_life"
@@ -376,6 +415,9 @@
       "tier": "hero",
       "representationTier": 6,
       "lifeStatus": "extant",
+      "timeUnitIds": [
+        "holocene"
+      ],
       "sources": [
         "game_authored",
         "catalogue_of_life"
@@ -395,6 +437,9 @@
       "tier": "hero",
       "representationTier": 6,
       "lifeStatus": "extant",
+      "timeUnitIds": [
+        "holocene"
+      ],
       "sources": [
         "game_authored",
         "catalogue_of_life"

@@ -1,0 +1,24 @@
+{
+  "snapshotId": "sample-2026-07",
+  "places": [
+    {"id": "africa", "type": "continent", "name": "Africa", "coverageStatus": "partial"},
+    {"id": "north_america", "type": "continent", "name": "North America", "coverageStatus": "partial"},
+    {"id": "south_america", "type": "continent", "name": "South America", "coverageStatus": "not_yet_ingested"},
+    {"id": "europe", "type": "continent", "name": "Europe", "coverageStatus": "not_yet_ingested"},
+    {"id": "asia", "type": "continent", "name": "Asia", "coverageStatus": "not_yet_ingested"},
+    {"id": "australia", "type": "continent", "name": "Australia", "coverageStatus": "not_yet_ingested"},
+    {"id": "antarctica", "type": "continent", "name": "Antarctica", "coverageStatus": "source_unavailable"},
+    {"id": "pacific_ocean", "type": "ocean_basin", "name": "Pacific Ocean", "coverageStatus": "partial"},
+    {"id": "atlantic_ocean", "type": "ocean_basin", "name": "Atlantic Ocean", "coverageStatus": "not_yet_ingested"},
+    {"id": "indian_ocean", "type": "ocean_basin", "name": "Indian Ocean", "coverageStatus": "not_yet_ingested"},
+    {"id": "arctic_ocean", "type": "ocean_basin", "name": "Arctic Ocean", "coverageStatus": "missing"},
+    {"id": "southern_ocean", "type": "ocean_basin", "name": "Southern Ocean", "coverageStatus": "missing"},
+    {"id": "savanna", "type": "expedition_zone", "name": "African Savanna", "biomeId": "terrestrial_savanna", "coverageStatus": "represented"},
+    {"id": "forest", "type": "expedition_zone", "name": "Temperate Forest", "biomeId": "terrestrial_forest", "coverageStatus": "represented"},
+    {"id": "wetland", "type": "expedition_zone", "name": "Midwest Wetlands", "biomeId": "freshwater_wetland", "coverageStatus": "represented"},
+    {"id": "coastal", "type": "expedition_zone", "name": "Pacific Coast", "biomeId": "marine_coastal", "coverageStatus": "partial"},
+    {"id": "fossil_site", "type": "expedition_zone", "name": "Fossil Excavation Site", "biomeId": "fossil_lagerstaette", "coverageStatus": "represented"},
+    {"id": "museum", "type": "hub", "name": "Archive Museum", "coverageStatus": "represented"},
+    {"id": "paleo_ediacaran_region", "type": "paleo_region", "name": "Ediacaran Seas", "coverageStatus": "partial"}
+  ]
+}
