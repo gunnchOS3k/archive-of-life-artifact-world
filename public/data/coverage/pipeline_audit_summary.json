@@ -1,0 +1,29 @@
+{
+  "generated_at": "2026-07-05T03:16:57.992681Z",
+  "passed": 4,
+  "failed": 0,
+  "checks": [
+    {
+      "name": "manifest_present",
+      "passed": true,
+      "message": "snapshotId=sample-2026-07"
+    },
+    {
+      "name": "representation_tier_present",
+      "passed": true,
+      "message": "0 entries missing tier"
+    },
+    {
+      "name": "hero_provenance",
+      "passed": true,
+      "message": "0 hero species missing provenance"
+    },
+    {
+      "name": "sql_pipeline",
+      "passed": true,
+      "message": "0 SQL file errors"
+    }
+  ],
+  "mock_sample_count": 46,
+  "gap_count": 0
+}

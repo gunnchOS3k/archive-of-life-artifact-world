@@ -33,7 +33,7 @@
         "assessed": true,
         "sourceVersion": "mock-iucn-2026-07",
         "lastUpdated": "2026-07-02",
-        "iucnTaxonId": 76863
+        "iucnTaxonId": 99777
       },
       "distribution": {
         "continents": [
@@ -45,11 +45,11 @@
         ],
         "sourceVersion": "mock-gbif-2026-07",
         "lastUpdated": "2026-07-02",
-        "gbifTaxonKey": 2359344,
+        "gbifTaxonKey": 8142092,
         "occurrenceSummaries": [
           {
             "region": "Africa",
-            "occurrenceCount": 4475
+            "occurrenceCount": 4918
           }
         ]
       },
@@ -123,8 +123,8 @@
           "license": "GAME-ORIGINAL",
           "citation": "Archive of Life: Artifact World — MVP authored content",
           "citationRequired": false,
-          "retrievedAt": "2026-07-05T03:03:21.006Z",
-          "lastUpdated": "2026-07-05T03:03:21.006Z",
+          "retrievedAt": "2026-07-05T03:16:32.536Z",
+          "lastUpdated": "2026-07-05T03:16:32.536Z",
           "isMockData": true
         },
         {
@@ -135,8 +135,8 @@
           "license": "MOCK-SAMPLE",
           "citation": "MOCK SAMPLE — not sourced from live API",
           "citationRequired": true,
-          "retrievedAt": "2026-07-05T03:03:21.006Z",
-          "lastUpdated": "2026-07-05T03:03:21.006Z",
+          "retrievedAt": "2026-07-05T03:16:32.536Z",
+          "lastUpdated": "2026-07-05T03:16:32.536Z",
           "isMockData": true
         }
       ]
@@ -165,7 +165,7 @@
         "assessed": true,
         "sourceVersion": "mock-iucn-2026-07",
         "lastUpdated": "2026-07-02",
-        "iucnTaxonId": 64314
+        "iucnTaxonId": 47566
       },
       "distribution": {
         "continents": [
@@ -177,11 +177,11 @@
         ],
         "sourceVersion": "mock-gbif-2026-07",
         "lastUpdated": "2026-07-02",
-        "gbifTaxonKey": 3004952,
+        "gbifTaxonKey": 7924776,
         "occurrenceSummaries": [
           {
             "region": "Africa",
-            "occurrenceCount": 1691
+            "occurrenceCount": 2342
           }
         ]
       },
@@ -272,8 +272,8 @@
           "license": "GAME-ORIGINAL",
           "citation": "Archive of Life: Artifact World — MVP authored content",
           "citationRequired": false,
-          "retrievedAt": "2026-07-05T03:03:21.008Z",
-          "lastUpdated": "2026-07-05T03:03:21.008Z",
+          "retrievedAt": "2026-07-05T03:16:32.537Z",
+          "lastUpdated": "2026-07-05T03:16:32.537Z",
           "isMockData": true
         },
         {
@@ -284,8 +284,8 @@
           "license": "MOCK-SAMPLE",
           "citation": "MOCK SAMPLE — not sourced from live API",
           "citationRequired": true,
-          "retrievedAt": "2026-07-05T03:03:21.008Z",
-          "lastUpdated": "2026-07-05T03:03:21.008Z",
+          "retrievedAt": "2026-07-05T03:16:32.537Z",
+          "lastUpdated": "2026-07-05T03:16:32.537Z",
           "isMockData": true
         }
       ]
@@ -312,7 +312,7 @@
         "assessed": true,
         "sourceVersion": "mock-iucn-2026-07",
         "lastUpdated": "2026-07-02",
-        "iucnTaxonId": 98010
+        "iucnTaxonId": 2773
       },
       "distribution": {
         "continents": [
@@ -324,11 +324,11 @@
         ],
         "sourceVersion": "mock-gbif-2026-07",
         "lastUpdated": "2026-07-02",
-        "gbifTaxonKey": 3422937,
+        "gbifTaxonKey": 7534638,
         "occurrenceSummaries": [
           {
             "region": "Asia",
-            "occurrenceCount": 2084
+            "occurrenceCount": 3550
           }
         ]
       },
@@ -401,8 +401,8 @@
           "license": "GAME-ORIGINAL",
           "citation": "Archive of Life: Artifact World — MVP authored content",
           "citationRequired": false,
-          "retrievedAt": "2026-07-05T03:03:21.008Z",
-          "lastUpdated": "2026-07-05T03:03:21.008Z",
+          "retrievedAt": "2026-07-05T03:16:32.537Z",
+          "lastUpdated": "2026-07-05T03:16:32.537Z",
           "isMockData": true
         },
         {
@@ -413,8 +413,8 @@
           "license": "MOCK-SAMPLE",
           "citation": "MOCK SAMPLE — not sourced from live API",
           "citationRequired": true,
-          "retrievedAt": "2026-07-05T03:03:21.008Z",
-          "lastUpdated": "2026-07-05T03:03:21.008Z",
+          "retrievedAt": "2026-07-05T03:16:32.537Z",
+          "lastUpdated": "2026-07-05T03:16:32.537Z",
           "isMockData": true
         }
       ]
@@ -442,7 +442,7 @@
         "assessed": true,
         "sourceVersion": "mock-iucn-2026-07",
         "lastUpdated": "2026-07-02",
-        "iucnTaxonId": 41495
+        "iucnTaxonId": 47785
       },
       "distribution": {
         "continents": [
@@ -455,11 +455,11 @@
         ],
         "sourceVersion": "mock-gbif-2026-07",
         "lastUpdated": "2026-07-02",
-        "gbifTaxonKey": 1851526,
+        "gbifTaxonKey": 2667360,
         "occurrenceSummaries": [
           {
             "region": "North America",
-            "occurrenceCount": 1480
+            "occurrenceCount": 2488
           }
         ]
       },
@@ -563,8 +563,8 @@
           "license": "GAME-ORIGINAL",
           "citation": "Archive of Life: Artifact World — MVP authored content",
           "citationRequired": false,
-          "retrievedAt": "2026-07-05T03:03:21.008Z",
-          "lastUpdated": "2026-07-05T03:03:21.008Z",
+          "retrievedAt": "2026-07-05T03:16:32.537Z",
+          "lastUpdated": "2026-07-05T03:16:32.537Z",
           "isMockData": true
         },
         {
@@ -575,8 +575,8 @@
           "license": "MOCK-SAMPLE",
           "citation": "MOCK SAMPLE — not sourced from live API",
           "citationRequired": true,
-          "retrievedAt": "2026-07-05T03:03:21.008Z",
-          "lastUpdated": "2026-07-05T03:03:21.008Z",
+          "retrievedAt": "2026-07-05T03:16:32.537Z",
+          "lastUpdated": "2026-07-05T03:16:32.537Z",
           "isMockData": true
         }
       ]
@@ -605,7 +605,7 @@
         "assessed": true,
         "sourceVersion": "mock-iucn-2026-07",
         "lastUpdated": "2026-07-02",
-        "iucnTaxonId": 86204
+        "iucnTaxonId": 42865
       },
       "distribution": {
         "continents": [
@@ -618,11 +618,11 @@
         ],
         "sourceVersion": "mock-gbif-2026-07",
         "lastUpdated": "2026-07-02",
-        "gbifTaxonKey": 6485699,
+        "gbifTaxonKey": 5132963,
         "occurrenceSummaries": [
           {
             "region": "Global",
-            "occurrenceCount": 1854
+            "occurrenceCount": 3746
           }
         ]
       },
@@ -719,8 +719,8 @@
           "license": "GAME-ORIGINAL",
           "citation": "Archive of Life: Artifact World — MVP authored content",
           "citationRequired": false,
-          "retrievedAt": "2026-07-05T03:03:21.008Z",
-          "lastUpdated": "2026-07-05T03:03:21.008Z",
+          "retrievedAt": "2026-07-05T03:16:32.537Z",
+          "lastUpdated": "2026-07-05T03:16:32.537Z",
           "isMockData": true
         },
         {
@@ -731,8 +731,8 @@
           "license": "MOCK-SAMPLE",
           "citation": "MOCK SAMPLE — not sourced from live API",
           "citationRequired": true,
-          "retrievedAt": "2026-07-05T03:03:21.008Z",
-          "lastUpdated": "2026-07-05T03:03:21.008Z",
+          "retrievedAt": "2026-07-05T03:16:32.537Z",
+          "lastUpdated": "2026-07-05T03:16:32.537Z",
           "isMockData": true
         }
       ]
@@ -759,7 +759,7 @@
         "assessed": true,
         "sourceVersion": "mock-iucn-2026-07",
         "lastUpdated": "2026-07-02",
-        "iucnTaxonId": 92744
+        "iucnTaxonId": 75640
       },
       "distribution": {
         "continents": [
@@ -772,11 +772,11 @@
         ],
         "sourceVersion": "mock-gbif-2026-07",
         "lastUpdated": "2026-07-02",
-        "gbifTaxonKey": 4321883,
+        "gbifTaxonKey": 64542,
         "occurrenceSummaries": [
           {
             "region": "North America",
-            "occurrenceCount": 4669
+            "occurrenceCount": 2057
           }
         ]
       },
@@ -839,8 +839,8 @@
           "license": "GAME-ORIGINAL",
           "citation": "Archive of Life: Artifact World — MVP authored content",
           "citationRequired": false,
-          "retrievedAt": "2026-07-05T03:03:21.008Z",
-          "lastUpdated": "2026-07-05T03:03:21.008Z",
+          "retrievedAt": "2026-07-05T03:16:32.537Z",
+          "lastUpdated": "2026-07-05T03:16:32.537Z",
           "isMockData": true
         },
         {
@@ -851,8 +851,8 @@
           "license": "MOCK-SAMPLE",
           "citation": "MOCK SAMPLE — not sourced from live API",
           "citationRequired": true,
-          "retrievedAt": "2026-07-05T03:03:21.008Z",
-          "lastUpdated": "2026-07-05T03:03:21.008Z",
+          "retrievedAt": "2026-07-05T03:16:32.537Z",
+          "lastUpdated": "2026-07-05T03:16:32.537Z",
           "isMockData": true
         }
       ]
@@ -879,7 +879,7 @@
         "assessed": true,
         "sourceVersion": "mock-iucn-2026-07",
         "lastUpdated": "2026-07-02",
-        "iucnTaxonId": 57836
+        "iucnTaxonId": 22045
       },
       "distribution": {
         "continents": [
@@ -891,11 +891,11 @@
         ],
         "sourceVersion": "mock-gbif-2026-07",
         "lastUpdated": "2026-07-02",
-        "gbifTaxonKey": 830405,
+        "gbifTaxonKey": 7024580,
         "occurrenceSummaries": [
           {
             "region": "Africa",
-            "occurrenceCount": 5047
+            "occurrenceCount": 2753
           }
         ]
       },
@@ -968,8 +968,8 @@
           "license": "GAME-ORIGINAL",
           "citation": "Archive of Life: Artifact World — MVP authored content",
           "citationRequired": false,
-          "retrievedAt": "2026-07-05T03:03:21.008Z",
-          "lastUpdated": "2026-07-05T03:03:21.008Z",
+          "retrievedAt": "2026-07-05T03:16:32.537Z",
+          "lastUpdated": "2026-07-05T03:16:32.537Z",
           "isMockData": true
         },
         {
@@ -980,8 +980,8 @@
           "license": "MOCK-SAMPLE",
           "citation": "MOCK SAMPLE — not sourced from live API",
           "citationRequired": true,
-          "retrievedAt": "2026-07-05T03:03:21.008Z",
-          "lastUpdated": "2026-07-05T03:03:21.008Z",
+          "retrievedAt": "2026-07-05T03:16:32.537Z",
+          "lastUpdated": "2026-07-05T03:16:32.537Z",
           "isMockData": true
         }
       ]

@@ -1,15 +1,44 @@
 # Archive of Life: Artifact World
 
-Educational open-world exploration game — discover life, collect ethical artifacts, build the Archive of Life with your Lifeling companion.
+Educational open-world exploration game — discover life, collect ethical artifacts, and build the Archive of Life with your Lifeling companion.
 
-**v2.0** — TypeScript + Vite architecture with scalable biodiversity data bundles, IndexedDB caching, schema validation, and pipeline scaffolding.
+**v2.0 — Sample release scope.** TypeScript + Vite game with auditable biodiversity data architecture. All current scientific data is **mock/sample labeled** until approved source snapshots are ingested.
 
-## Quick Start
+## Release status
+
+| Area | Status |
+|------|--------|
+| **Game** | Fully playable — museum hub, 5 expedition regions, minigames, quests, Lifeling |
+| **ArchiveDex** | Partial — 17-tab entries for sample taxa (39 indexed) |
+| **Time Atlas** | Partial — ICS sample units with mock banner |
+| **Earth Layer Console** | Mock/sample NASA layers with visible banner |
+| **Data pipeline** | Partial — Python/uv + SQL validation on sample bundles |
+| **Global coverage** | Partial — audits prove sample-scope representation, not global completeness |
+
+Full real-world species coverage requires **approved source snapshot ingestion** (Catalogue of Life, GBIF, IUCN, PBDB, etc.). Mock/sample data is labeled and **not counted** as source-verified coverage.
+
+## Quick start
 
 ```bash
 npm install
-npm run generate:bundles   # Build public/data bundles from legacy MVP JSON
-npm run dev                # http://localhost:8080
+npm run generate:time-atlas
+npm run generate:bundles
+npm run dev                # http://localhost:5173
+```
+
+Dev/admin dashboards: append `?dev=1` — keys **G** (Coverage), **I** (Implementation Status).
+
+## Verify everything
+
+```bash
+npm run typecheck
+npm run audit:data
+npm run audit:coverage
+npm run audit:archivedex
+npm run audit:implementation
+npm run audit:release
+npm run build
+npm run pipeline:all
 ```
 
 ## Scripts
@@ -19,57 +48,39 @@ npm run dev                # http://localhost:8080
 | `npm run dev` | Vite dev server |
 | `npm run build` | Production build |
 | `npm run typecheck` | TypeScript check |
-| `npm run generate:bundles` | Transform `data/` → `public/data/bundles/` |
-| `npm run audit:data` | Coverage and integrity audit |
-
-Press **T** in-game to open the **Earth Layer Console** (museum hub) — NASA environmental context layers.
+| `npm run generate:bundles` | Build `public/data/bundles/` |
+| `npm run generate:time-atlas` | Build Time Atlas bundles |
+| `npm run audit:data` | Data integrity + mock/verified counts |
+| `npm run audit:coverage` | Global coverage matrix (45 checks) |
+| `npm run audit:archivedex` | ArchiveDex integrity |
+| `npm run audit:implementation` | Implementation status JSON |
+| `npm run audit:release` | Release readiness gates |
+| `npm run pipeline:all` | Python lint, test, SQL, audit |
 
 ## Architecture
 
 ```
-src/
-  schema/          TypeScript types (ArchiveSpecies, provenance, etc.)
-  services/        DataCatalogService, IndexedDBCache
-  game/            Player, World, Lifeling, Game loop
-  systems/         Artifacts, quests, save
-  ui/              Archive (paginated), notebook, map, companion, quests
-  minigames/       Fossil excavation, wildlife observation
-public/data/
-  manifest.json    Bundle registry + coverage stats
-  bundles/         Generated species, index, region data
-data-pipeline/     Python ingestion scaffolding
-docs/              Data architecture, DB plan, provenance policy
-data/              Legacy MVP source JSON (used by generate:bundles)
+src/               Game, UI, services, coverage, schemas
+public/data/       Manifest, bundles, time, earth, coverage, status
+data-pipeline/     Python/uv ingestion validation (sample scope)
+scripts/           Generators and audits
+docs/              Architecture, provenance, release policies
 ```
-
-## Data Loading
-
-The game loads from `public/data/manifest.json` — **not** the full catalogue at once:
-
-1. Manifest + search index + game config on startup
-2. Region bundle when entering a biome
-3. Species detail lazy-loaded on Archive card click
-4. IndexedDB caches bundles; invalidated on snapshot change
 
 ## Controls
 
-WASD/Arrows move · E interact · A/N/M/C/Q menus · Escape close panels
-
-## Design Pillars
-
-- **Wonder** — Every creature deserves attention
-- **Accuracy** — Scientifically grounded with provenance
-- **Respect** — Ethical artifacts, no capture
-- **Exploration** — The world is the classroom
-- **Conservation** — Learning creates responsibility
+WASD/Arrows move · E interact · A/N/M/C/Q/T/Y menus · Escape close panels
 
 ## Documentation
 
-- [Data Architecture](docs/DATA_ARCHITECTURE.md)
-- [NASA Earth Systems Integration](docs/NASA_EARTH_SYSTEMS_INTEGRATION.md)
-- [Database Integration Plan](docs/DATABASE_INTEGRATION_PLAN.md)
-- [Source Provenance Policy](docs/SOURCE_PROVENANCE_POLICY.md)
+- [Implementation status](docs/IMPLEMENTATION_STATUS.md)
+- [Release readiness checklist](docs/RELEASE_READINESS_CHECKLIST.md)
+- [Mock/sample data policy](docs/MOCK_SAMPLE_DATA_POLICY.md)
+- [Global coverage matrix](docs/GLOBAL_COVERAGE_MATRIX.md)
+- [Data architecture](docs/DATA_ARCHITECTURE.md)
+- [ArchiveDex](docs/ARCHIVEDEX_SPECIES_ENTRY_SYSTEM.md)
+- [Time Atlas](docs/TIME_ATLAS_ARCHITECTURE.md)
 
 ---
 
-*Original educational prototype — not affiliated with any creature-collection franchise.*
+*Educational prototype — not affiliated with any creature-collection franchise.*

@@ -37,14 +37,14 @@ def run_sql_pipeline() -> dict:
         con.execute("""
             CREATE OR REPLACE TABLE taxa AS
             SELECT
-              entry.id AS taxon_id,
-              entry.commonName AS common_name,
-              entry.scientificName AS scientific_name,
-              entry.representationTier AS representation_tier,
-              entry.lifeStatus AS life_status,
-              entry.group AS taxon_group,
-              entry.isExtinct AS is_extinct,
-              entry.isThreatened AS is_threatened
+              entry.id::VARCHAR AS taxon_id,
+              entry.commonName::VARCHAR AS common_name,
+              entry.scientificName::VARCHAR AS scientific_name,
+              entry.representationTier::INTEGER AS representation_tier,
+              entry.lifeStatus::VARCHAR AS life_status,
+              entry.group::VARCHAR AS taxon_group,
+              COALESCE(entry.isExtinct::BOOLEAN, false) AS is_extinct,
+              COALESCE(entry.isThreatened::BOOLEAN, false) AS is_threatened
             FROM search_index
         """)
 
@@ -67,9 +67,11 @@ def run_sql_pipeline() -> dict:
         except Exception as exc:  # noqa: BLE001
             results.append({"file": sql_file.name, "status": "error", "error": str(exc)})
 
-    gap_rows = []
+    gap_rows: list[dict] = []
     try:
-        gap_rows = con.execute("SELECT * FROM gap_report").fetchdf().to_dict(orient="records")
+        cursor = con.execute("SELECT * FROM gap_report")
+        columns = [desc[0] for desc in cursor.description]
+        gap_rows = [dict(zip(columns, row, strict=True)) for row in cursor.fetchall()]
     except duckdb.CatalogException:
         pass
 

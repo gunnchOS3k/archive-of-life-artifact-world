@@ -931,3 +931,9 @@ body {
 .coverage-stat-label { font-size: 0.7rem; color: var(--text-secondary); }
 .coverage-section h3 { font-size: 0.95rem; margin-bottom: 0.35rem; }
 .coverage-section ul { margin: 0; padding-left: 1.2rem; font-size: 0.85rem; }
+.implementation-ready { padding: 0.5rem 0.75rem; border-radius: 8px; margin-bottom: 0.75rem; font-size: 0.9rem; }
+.implementation-ready.ready-yes { background: rgba(72, 140, 90, 0.2); border: 1px solid #4a8c5a; }
+.implementation-ready.ready-no { background: rgba(180, 80, 60, 0.2); border: 1px solid #b4503c; }
+.dev-only-banner { border-left: 3px solid var(--accent-gold); padding-left: 0.5rem; }
+.implementation-system-list { font-size: 0.8rem; max-height: 220px; overflow-y: auto; }
+.implementation-system-list li { margin-bottom: 0.35rem; }

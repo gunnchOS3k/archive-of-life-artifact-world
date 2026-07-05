@@ -80,6 +80,14 @@ export class World {
           y: 360,
           radius: 28,
         });
+        this.interactables.push({
+          type: 'earth_console',
+          id: 'implementation_status',
+          label: 'Implementation Status',
+          x: 480,
+          y: 360,
+          radius: 28,
+        });
       }
     } else {
       const speciesIds = this.regionData.speciesIds ?? [];

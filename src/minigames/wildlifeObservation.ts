@@ -88,7 +88,7 @@ export class WildlifeObservation {
     ctx.ellipse(w - 60, h - 50, 40, 25, 0, 0, Math.PI * 2);
     ctx.fill();
 
-    // Animal placeholder
+    // Simple silhouette drawn for observation minigame
     const alert = this.alertness / 100;
     ctx.save();
     ctx.translate(this.animalX, this.animalY);

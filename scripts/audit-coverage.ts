@@ -3,6 +3,7 @@
  * Run: npm run audit:coverage
  */
 import { loadAuditContext, printResults } from './audits/shared';
+import { getDataQualityCounts, formatDataQualityLine } from './audits/data-quality';
 import { auditSpecies } from './audits/species';
 import { auditTime } from './audits/time';
 import { auditBiomes } from './audits/biomes';
@@ -97,6 +98,7 @@ function legacyChecks(ctx: ReturnType<typeof loadAuditContext>): AuditResult[] {
 }
 
 const ctx = loadAuditContext();
+const quality = getDataQualityCounts(ctx);
 const results = [
   ...auditSpecies(ctx),
   ...auditTime(ctx),
@@ -108,6 +110,7 @@ const results = [
 ];
 
 const failed = printResults(results, 'Archive of Life Global Coverage Audit');
+console.log(`Data quality: ${formatDataQualityLine(quality)}\n`);
 const blocking = results.filter((r) => r.blocking && !r.passed);
 if (blocking.length) {
   console.error(`\n${blocking.length} BLOCKING release gate(s) failed:\n`);

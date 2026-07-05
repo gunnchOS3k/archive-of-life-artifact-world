@@ -42,6 +42,9 @@ jobs:
       - name: Audit ArchiveDex
         run: npm run audit:archivedex
 
+      - name: Audit release readiness
+        run: npm run audit:release
+
       - name: Build frontend
         run: npm run build
 

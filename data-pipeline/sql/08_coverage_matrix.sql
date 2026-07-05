@@ -17,11 +17,9 @@ SELECT
   t.representation_tier >= 5 AS gameplay_coverage,
   'sample' AS data_quality,
   '' AS uncertainty_notes,
-  LIST(
-    CASE
-      WHEN t.representation_tier < 1 THEN 'missing_tier'
-      WHEN t.scientific_name IS NULL THEN 'missing_name'
-      ELSE NULL
-    END
-  ) AS gap_flags
+  CASE
+    WHEN t.scientific_name IS NULL OR t.scientific_name = '' THEN ['missing_name']
+    WHEN t.representation_tier < 1 THEN ['missing_tier']
+    ELSE []
+  END AS gap_flags
 FROM taxa t;

@@ -1,15 +1,9 @@
 /**
- * Coverage audit — verifies data integrity for scalable biodiversity representation.
+ * Data integrity audit — verifies bundles, provenance, and mock/verified separation.
  * Run: npm run audit:data
  */
-import { readFileSync, existsSync } from 'fs';
-import { join, dirname } from 'path';
-import { fileURLToPath } from 'url';
-import type { DataManifest, ArchiveSpecies, LifelingTrait, SpeciesSearchIndex } from '../src/schema';
-
-const __dirname = dirname(fileURLToPath(import.meta.url));
-const ROOT = join(__dirname, '..');
-const DATA = join(ROOT, 'public', 'data');
+import { loadAuditContext } from './audits/shared';
+import { getDataQualityCounts, formatDataQualityLine } from './audits/data-quality';
 
 interface AuditResult {
   name: string;
@@ -17,29 +11,21 @@ interface AuditResult {
   message: string;
 }
 
-function readJson<T>(path: string): T {
-  if (!existsSync(path)) throw new Error(`Missing: ${path}`);
-  return JSON.parse(readFileSync(path, 'utf-8'));
-}
-
 function audit(): AuditResult[] {
   const results: AuditResult[] = [];
-  const manifest = readJson<DataManifest>(join(DATA, 'manifest.json'));
-  const hero = readJson<{ species: ArchiveSpecies[] }>(join(DATA, manifest.bundles.heroSpecies.path));
-  const index = readJson<SpeciesSearchIndex>(join(DATA, manifest.bundles.searchIndex.path));
-  const traits = readJson<LifelingTrait[]>(join(DATA, manifest.bundles.traits.path));
+  const ctx = loadAuditContext();
+  const { manifest, hero, index, traits } = ctx;
 
   const speciesIds = new Set(hero.species.map((s) => s.id));
   const indexIds = new Set(index.entries.map((e) => e.id));
+  const counts = getDataQualityCounts(ctx);
 
-  // All hero species in search index
   results.push({
     name: 'hero_in_search_index',
     passed: hero.species.every((s) => indexIds.has(s.id)),
     message: 'All hero species appear in search index',
   });
 
-  // All species have provenance
   const missingProvenance = hero.species.filter((s) => !s.provenance?.length);
   results.push({
     name: 'species_have_provenance',
@@ -49,7 +35,6 @@ function audit(): AuditResult[] {
       : 'All species have source provenance',
   });
 
-  // Hero species have artifact templates
   const missingArtifacts = hero.species.filter((s) => !s.artifactTemplates?.length);
   results.push({
     name: 'hero_have_artifact_templates',
@@ -59,7 +44,6 @@ function audit(): AuditResult[] {
       : 'All hero species have artifact templates',
   });
 
-  // Lifeling unlocks point to valid species
   const invalidUnlocks = traits.filter(
     (t) => t.unlockedBy !== 'any_artifact' && !speciesIds.has(t.unlockedBy)
   );
@@ -71,14 +55,12 @@ function audit(): AuditResult[] {
       : 'All Lifeling trait unlocks reference valid species',
   });
 
-  // Index count matches manifest coverage
   results.push({
     name: 'index_count_matches_manifest',
     passed: index.totalCount === manifest.coverage.representedSpecies,
     message: `Index ${index.totalCount} vs manifest ${manifest.coverage.representedSpecies}`,
   });
 
-  // Threatened filterable
   const threatenedInIndex = index.entries.filter((e) => e.isThreatened).length;
   results.push({
     name: 'threatened_counted',
@@ -86,7 +68,6 @@ function audit(): AuditResult[] {
     message: `Threatened: index ${threatenedInIndex}, manifest ${manifest.coverage.threatened}`,
   });
 
-  // Extinct/fossil filterable
   const extinctInIndex = index.entries.filter((e) => e.isExtinct).length;
   results.push({
     name: 'extinct_counted',
@@ -94,7 +75,6 @@ function audit(): AuditResult[] {
     message: `Extinct: index ${extinctInIndex}, manifest ${manifest.coverage.extinctFossil}`,
   });
 
-  // IUCN assessed representation (sample snapshot — all assessed in hero set)
   const iucnAssessed = hero.species.filter((s) => s.conservation?.assessed).length;
   results.push({
     name: 'iucn_assessed_represented',
@@ -102,12 +82,16 @@ function audit(): AuditResult[] {
     message: `${iucnAssessed} IUCN-assessed conservation records in hero bundle`,
   });
 
-  // Catalogue of Life IDs on taxonomy (mock sample)
-  const withCol = hero.species.filter((s) => s.taxonomy.catalogueOfLifeId || s.provenance.some((p) => p.catalogueOfLifeId));
   results.push({
-    name: 'col_ids_present',
-    passed: withCol.length > 0,
-    message: `${withCol.length} species have Catalogue of Life identifiers (mock or real)`,
+    name: 'data_quality_counts',
+    passed: counts.mockSampleCount > 0 && counts.releaseEligibleCount === 0,
+    message: formatDataQualityLine(counts),
+  });
+
+  results.push({
+    name: 'mock_not_counted_as_verified',
+    passed: counts.totalSourceVerified === counts.releaseEligibleCount,
+    message: 'Mock/sample records excluded from source-verified totals',
   });
 
   return results;
