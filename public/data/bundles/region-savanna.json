@@ -33,7 +33,7 @@
         "assessed": true,
         "sourceVersion": "mock-iucn-2026-07",
         "lastUpdated": "2026-07-02",
-        "iucnTaxonId": 99777
+        "iucnTaxonId": 97119
       },
       "distribution": {
         "continents": [
@@ -45,11 +45,11 @@
         ],
         "sourceVersion": "mock-gbif-2026-07",
         "lastUpdated": "2026-07-02",
-        "gbifTaxonKey": 8142092,
+        "gbifTaxonKey": 8114792,
         "occurrenceSummaries": [
           {
             "region": "Africa",
-            "occurrenceCount": 4918
+            "occurrenceCount": 1734
           }
         ]
       },
@@ -118,14 +118,15 @@
       "provenance": [
         {
           "source": "game_authored",
-          "sourceVersion": "mvp-1.0",
+          "sourceVersion": "mvp-current",
           "sourceRecordId": "panthera_leo",
           "license": "GAME-ORIGINAL",
-          "citation": "Archive of Life: Artifact World — MVP authored content",
+          "citation": "Archive of Life: Artifact World authored prototype content",
           "citationRequired": false,
-          "retrievedAt": "2026-07-05T03:16:32.536Z",
-          "lastUpdated": "2026-07-05T03:16:32.536Z",
-          "isMockData": true
+          "retrievedAt": "2026-07-05T03:27:29.538Z",
+          "lastUpdated": "2026-07-05T03:27:29.538Z",
+          "isMockData": false,
+          "verificationStatus": "game_authored_verified"
         },
         {
           "source": "catalogue_of_life",
@@ -133,11 +134,12 @@
           "sourceRecordId": "MOCK-panthera_leo",
           "catalogueOfLifeId": "MOCK-COL-panthera_leo",
           "license": "MOCK-SAMPLE",
-          "citation": "MOCK SAMPLE — not sourced from live API",
+          "citation": "MOCK SAMPLE — not sourced from live API; requires approved source snapshot import",
           "citationRequired": true,
-          "retrievedAt": "2026-07-05T03:16:32.536Z",
-          "lastUpdated": "2026-07-05T03:16:32.536Z",
-          "isMockData": true
+          "retrievedAt": "2026-07-05T03:27:29.538Z",
+          "lastUpdated": "2026-07-05T03:27:29.538Z",
+          "isMockData": true,
+          "verificationStatus": "mock_sample"
         }
       ]
     },
@@ -165,7 +167,7 @@
         "assessed": true,
         "sourceVersion": "mock-iucn-2026-07",
         "lastUpdated": "2026-07-02",
-        "iucnTaxonId": 47566
+        "iucnTaxonId": 79571
       },
       "distribution": {
         "continents": [
@@ -177,11 +179,11 @@
         ],
         "sourceVersion": "mock-gbif-2026-07",
         "lastUpdated": "2026-07-02",
-        "gbifTaxonKey": 7924776,
+        "gbifTaxonKey": 4922002,
         "occurrenceSummaries": [
           {
             "region": "Africa",
-            "occurrenceCount": 2342
+            "occurrenceCount": 4886
           }
         ]
       },
@@ -267,14 +269,15 @@
       "provenance": [
         {
           "source": "game_authored",
-          "sourceVersion": "mvp-1.0",
+          "sourceVersion": "mvp-current",
           "sourceRecordId": "loxodonta_africana",
           "license": "GAME-ORIGINAL",
-          "citation": "Archive of Life: Artifact World — MVP authored content",
+          "citation": "Archive of Life: Artifact World authored prototype content",
           "citationRequired": false,
-          "retrievedAt": "2026-07-05T03:16:32.537Z",
-          "lastUpdated": "2026-07-05T03:16:32.537Z",
-          "isMockData": true
+          "retrievedAt": "2026-07-05T03:27:29.538Z",
+          "lastUpdated": "2026-07-05T03:27:29.538Z",
+          "isMockData": false,
+          "verificationStatus": "game_authored_verified"
         },
         {
           "source": "catalogue_of_life",
@@ -282,11 +285,12 @@
           "sourceRecordId": "MOCK-loxodonta_africana",
           "catalogueOfLifeId": "MOCK-COL-loxodonta_africana",
           "license": "MOCK-SAMPLE",
-          "citation": "MOCK SAMPLE — not sourced from live API",
+          "citation": "MOCK SAMPLE — not sourced from live API; requires approved source snapshot import",
           "citationRequired": true,
-          "retrievedAt": "2026-07-05T03:16:32.537Z",
-          "lastUpdated": "2026-07-05T03:16:32.537Z",
-          "isMockData": true
+          "retrievedAt": "2026-07-05T03:27:29.538Z",
+          "lastUpdated": "2026-07-05T03:27:29.538Z",
+          "isMockData": true,
+          "verificationStatus": "mock_sample"
         }
       ]
     },
@@ -312,7 +316,7 @@
         "assessed": true,
         "sourceVersion": "mock-iucn-2026-07",
         "lastUpdated": "2026-07-02",
-        "iucnTaxonId": 2773
+        "iucnTaxonId": 65063
       },
       "distribution": {
         "continents": [
@@ -324,11 +328,11 @@
         ],
         "sourceVersion": "mock-gbif-2026-07",
         "lastUpdated": "2026-07-02",
-        "gbifTaxonKey": 7534638,
+        "gbifTaxonKey": 9792217,
         "occurrenceSummaries": [
           {
             "region": "Asia",
-            "occurrenceCount": 3550
+            "occurrenceCount": 4356
           }
         ]
       },
@@ -396,14 +400,15 @@
       "provenance": [
         {
           "source": "game_authored",
-          "sourceVersion": "mvp-1.0",
+          "sourceVersion": "mvp-current",
           "sourceRecordId": "equus_caballus_ferus",
           "license": "GAME-ORIGINAL",
-          "citation": "Archive of Life: Artifact World — MVP authored content",
+          "citation": "Archive of Life: Artifact World authored prototype content",
           "citationRequired": false,
-          "retrievedAt": "2026-07-05T03:16:32.537Z",
-          "lastUpdated": "2026-07-05T03:16:32.537Z",
-          "isMockData": true
+          "retrievedAt": "2026-07-05T03:27:29.539Z",
+          "lastUpdated": "2026-07-05T03:27:29.539Z",
+          "isMockData": false,
+          "verificationStatus": "game_authored_verified"
         },
         {
           "source": "catalogue_of_life",
@@ -411,11 +416,12 @@
           "sourceRecordId": "MOCK-equus_caballus_ferus",
           "catalogueOfLifeId": "MOCK-COL-equus_caballus_ferus",
           "license": "MOCK-SAMPLE",
-          "citation": "MOCK SAMPLE — not sourced from live API",
+          "citation": "MOCK SAMPLE — not sourced from live API; requires approved source snapshot import",
           "citationRequired": true,
-          "retrievedAt": "2026-07-05T03:16:32.537Z",
-          "lastUpdated": "2026-07-05T03:16:32.537Z",
-          "isMockData": true
+          "retrievedAt": "2026-07-05T03:27:29.539Z",
+          "lastUpdated": "2026-07-05T03:27:29.539Z",
+          "isMockData": true,
+          "verificationStatus": "mock_sample"
         }
       ]
     },
@@ -442,7 +448,7 @@
         "assessed": true,
         "sourceVersion": "mock-iucn-2026-07",
         "lastUpdated": "2026-07-02",
-        "iucnTaxonId": 47785
+        "iucnTaxonId": 48926
       },
       "distribution": {
         "continents": [
@@ -455,11 +461,11 @@
         ],
         "sourceVersion": "mock-gbif-2026-07",
         "lastUpdated": "2026-07-02",
-        "gbifTaxonKey": 2667360,
+        "gbifTaxonKey": 5972042,
         "occurrenceSummaries": [
           {
             "region": "North America",
-            "occurrenceCount": 2488
+            "occurrenceCount": 2332
           }
         ]
       },
@@ -558,14 +564,15 @@
       "provenance": [
         {
           "source": "game_authored",
-          "sourceVersion": "mvp-1.0",
+          "sourceVersion": "mvp-current",
           "sourceRecordId": "danaus_plexippus",
           "license": "GAME-ORIGINAL",
-          "citation": "Archive of Life: Artifact World — MVP authored content",
+          "citation": "Archive of Life: Artifact World authored prototype content",
           "citationRequired": false,
-          "retrievedAt": "2026-07-05T03:16:32.537Z",
-          "lastUpdated": "2026-07-05T03:16:32.537Z",
-          "isMockData": true
+          "retrievedAt": "2026-07-05T03:27:29.539Z",
+          "lastUpdated": "2026-07-05T03:27:29.539Z",
+          "isMockData": false,
+          "verificationStatus": "game_authored_verified"
         },
         {
           "source": "catalogue_of_life",
@@ -573,11 +580,12 @@
           "sourceRecordId": "MOCK-danaus_plexippus",
           "catalogueOfLifeId": "MOCK-COL-danaus_plexippus",
           "license": "MOCK-SAMPLE",
-          "citation": "MOCK SAMPLE — not sourced from live API",
+          "citation": "MOCK SAMPLE — not sourced from live API; requires approved source snapshot import",
           "citationRequired": true,
-          "retrievedAt": "2026-07-05T03:16:32.537Z",
-          "lastUpdated": "2026-07-05T03:16:32.537Z",
-          "isMockData": true
+          "retrievedAt": "2026-07-05T03:27:29.539Z",
+          "lastUpdated": "2026-07-05T03:27:29.539Z",
+          "isMockData": true,
+          "verificationStatus": "mock_sample"
         }
       ]
     },
@@ -605,7 +613,7 @@
         "assessed": true,
         "sourceVersion": "mock-iucn-2026-07",
         "lastUpdated": "2026-07-02",
-        "iucnTaxonId": 42865
+        "iucnTaxonId": 41146
       },
       "distribution": {
         "continents": [
@@ -618,11 +626,11 @@
         ],
         "sourceVersion": "mock-gbif-2026-07",
         "lastUpdated": "2026-07-02",
-        "gbifTaxonKey": 5132963,
+        "gbifTaxonKey": 4325664,
         "occurrenceSummaries": [
           {
             "region": "Global",
-            "occurrenceCount": 3746
+            "occurrenceCount": 3071
           }
         ]
       },
@@ -714,14 +722,15 @@
       "provenance": [
         {
           "source": "game_authored",
-          "sourceVersion": "mvp-1.0",
+          "sourceVersion": "mvp-current",
           "sourceRecordId": "apis_mellifera",
           "license": "GAME-ORIGINAL",
-          "citation": "Archive of Life: Artifact World — MVP authored content",
+          "citation": "Archive of Life: Artifact World authored prototype content",
           "citationRequired": false,
-          "retrievedAt": "2026-07-05T03:16:32.537Z",
-          "lastUpdated": "2026-07-05T03:16:32.537Z",
-          "isMockData": true
+          "retrievedAt": "2026-07-05T03:27:29.539Z",
+          "lastUpdated": "2026-07-05T03:27:29.539Z",
+          "isMockData": false,
+          "verificationStatus": "game_authored_verified"
         },
         {
           "source": "catalogue_of_life",
@@ -729,11 +738,12 @@
           "sourceRecordId": "MOCK-apis_mellifera",
           "catalogueOfLifeId": "MOCK-COL-apis_mellifera",
           "license": "MOCK-SAMPLE",
-          "citation": "MOCK SAMPLE — not sourced from live API",
+          "citation": "MOCK SAMPLE — not sourced from live API; requires approved source snapshot import",
           "citationRequired": true,
-          "retrievedAt": "2026-07-05T03:16:32.537Z",
-          "lastUpdated": "2026-07-05T03:16:32.537Z",
-          "isMockData": true
+          "retrievedAt": "2026-07-05T03:27:29.539Z",
+          "lastUpdated": "2026-07-05T03:27:29.539Z",
+          "isMockData": true,
+          "verificationStatus": "mock_sample"
         }
       ]
     },
@@ -759,7 +769,7 @@
         "assessed": true,
         "sourceVersion": "mock-iucn-2026-07",
         "lastUpdated": "2026-07-02",
-        "iucnTaxonId": 75640
+        "iucnTaxonId": 36110
       },
       "distribution": {
         "continents": [
@@ -772,11 +782,11 @@
         ],
         "sourceVersion": "mock-gbif-2026-07",
         "lastUpdated": "2026-07-02",
-        "gbifTaxonKey": 64542,
+        "gbifTaxonKey": 759577,
         "occurrenceSummaries": [
           {
             "region": "North America",
-            "occurrenceCount": 2057
+            "occurrenceCount": 3037
           }
         ]
       },
@@ -834,14 +844,15 @@
       "provenance": [
         {
           "source": "game_authored",
-          "sourceVersion": "mvp-1.0",
+          "sourceVersion": "mvp-current",
           "sourceRecordId": "latrodectus_mactans",
           "license": "GAME-ORIGINAL",
-          "citation": "Archive of Life: Artifact World — MVP authored content",
+          "citation": "Archive of Life: Artifact World authored prototype content",
           "citationRequired": false,
-          "retrievedAt": "2026-07-05T03:16:32.537Z",
-          "lastUpdated": "2026-07-05T03:16:32.537Z",
-          "isMockData": true
+          "retrievedAt": "2026-07-05T03:27:29.539Z",
+          "lastUpdated": "2026-07-05T03:27:29.539Z",
+          "isMockData": false,
+          "verificationStatus": "game_authored_verified"
         },
         {
           "source": "catalogue_of_life",
@@ -849,11 +860,12 @@
           "sourceRecordId": "MOCK-latrodectus_mactans",
           "catalogueOfLifeId": "MOCK-COL-latrodectus_mactans",
           "license": "MOCK-SAMPLE",
-          "citation": "MOCK SAMPLE — not sourced from live API",
+          "citation": "MOCK SAMPLE — not sourced from live API; requires approved source snapshot import",
           "citationRequired": true,
-          "retrievedAt": "2026-07-05T03:16:32.537Z",
-          "lastUpdated": "2026-07-05T03:16:32.537Z",
-          "isMockData": true
+          "retrievedAt": "2026-07-05T03:27:29.539Z",
+          "lastUpdated": "2026-07-05T03:27:29.539Z",
+          "isMockData": true,
+          "verificationStatus": "mock_sample"
         }
       ]
     },
@@ -879,7 +891,7 @@
         "assessed": true,
         "sourceVersion": "mock-iucn-2026-07",
         "lastUpdated": "2026-07-02",
-        "iucnTaxonId": 22045
+        "iucnTaxonId": 92682
       },
       "distribution": {
         "continents": [
@@ -891,11 +903,11 @@
         ],
         "sourceVersion": "mock-gbif-2026-07",
         "lastUpdated": "2026-07-02",
-        "gbifTaxonKey": 7024580,
+        "gbifTaxonKey": 1375208,
         "occurrenceSummaries": [
           {
             "region": "Africa",
-            "occurrenceCount": 2753
+            "occurrenceCount": 823
           }
         ]
       },
@@ -963,14 +975,15 @@
       "provenance": [
         {
           "source": "game_authored",
-          "sourceVersion": "mvp-1.0",
+          "sourceVersion": "mvp-current",
           "sourceRecordId": "pachnoda_marginata",
           "license": "GAME-ORIGINAL",
-          "citation": "Archive of Life: Artifact World — MVP authored content",
+          "citation": "Archive of Life: Artifact World authored prototype content",
           "citationRequired": false,
-          "retrievedAt": "2026-07-05T03:16:32.537Z",
-          "lastUpdated": "2026-07-05T03:16:32.537Z",
-          "isMockData": true
+          "retrievedAt": "2026-07-05T03:27:29.539Z",
+          "lastUpdated": "2026-07-05T03:27:29.539Z",
+          "isMockData": false,
+          "verificationStatus": "game_authored_verified"
         },
         {
           "source": "catalogue_of_life",
@@ -978,11 +991,12 @@
           "sourceRecordId": "MOCK-pachnoda_marginata",
           "catalogueOfLifeId": "MOCK-COL-pachnoda_marginata",
           "license": "MOCK-SAMPLE",
-          "citation": "MOCK SAMPLE — not sourced from live API",
+          "citation": "MOCK SAMPLE — not sourced from live API; requires approved source snapshot import",
           "citationRequired": true,
-          "retrievedAt": "2026-07-05T03:16:32.537Z",
-          "lastUpdated": "2026-07-05T03:16:32.537Z",
-          "isMockData": true
+          "retrievedAt": "2026-07-05T03:27:29.539Z",
+          "lastUpdated": "2026-07-05T03:27:29.539Z",
+          "isMockData": true,
+          "verificationStatus": "mock_sample"
         }
       ]
     }

@@ -28,7 +28,17 @@
     "pipeline:sql": "cd data-pipeline && uv run archive-pipeline sql",
     "pipeline:build-snapshot": "cd data-pipeline && uv run archive-pipeline build-snapshot",
     "pipeline:audit": "cd data-pipeline && uv run archive-pipeline audit",
-    "pipeline:all": "npm run pipeline:install && npm run pipeline:lint && npm run pipeline:test && npm run pipeline:sql && npm run pipeline:audit"
+    "pipeline:all": "npm run pipeline:install && npm run pipeline:lint && npm run pipeline:test && npm run pipeline:sql && npm run pipeline:audit",
+    "source:list": "tsx scripts/source-cli.ts list",
+    "source:validate": "tsx scripts/source-cli.ts validate",
+    "source:audit": "tsx scripts/source-cli.ts audit",
+    "source:import:col": "tsx scripts/source-cli.ts import col",
+    "source:import:gbif": "tsx scripts/source-cli.ts import gbif",
+    "source:import:iucn": "tsx scripts/source-cli.ts import iucn",
+    "source:import:pbdb": "tsx scripts/source-cli.ts import pbdb",
+    "source:import:nasa": "tsx scripts/source-cli.ts import nasa",
+    "source:import:neotoma": "tsx scripts/source-cli.ts import neotoma",
+    "source:import:all": "tsx scripts/source-cli.ts import all"
   },
   "devDependencies": {
     "@types/node": "^22.0.0",

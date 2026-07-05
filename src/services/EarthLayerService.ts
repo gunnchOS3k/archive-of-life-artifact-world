@@ -10,12 +10,22 @@ const NASA_MANIFEST = '/data/earth/nasa_manifest.json';
 export class EarthLayerService {
   private manifest: NasaManifest | null = null;
   private regionBundle: RegionEarthLayersBundle | null = null;
+  private metadataCache: {
+    dataMode?: string;
+    layers?: Array<{ id: string; mode: string; sourceUrl?: string; recordCount?: number }>;
+    generatedAt?: string;
+  } | null = null;
 
   async initialize(): Promise<NasaManifest> {
     this.manifest = await this.fetchJson<NasaManifest>(NASA_MANIFEST);
     this.regionBundle = await this.fetchJson<RegionEarthLayersBundle>(
       `/data/earth/${this.manifest.regionLayersPath}`
     );
+    try {
+      this.metadataCache = await this.fetchJson('/data/earth/nasa_metadata_cache.json');
+    } catch {
+      this.metadataCache = null;
+    }
     return this.manifest;
   }
 
@@ -40,6 +50,21 @@ export class EarthLayerService {
 
   getLayerDefinition(layer: EarthLayerCategory) {
     return this.getManifest().layers.find((l) => l.id === layer);
+  }
+
+  getLayerDataMode(layer: EarthLayerCategory): string {
+    const cached = this.metadataCache?.layers?.find((l) => l.id === layer);
+    if (cached?.mode) return cached.mode;
+    const def = this.getLayerDefinition(layer);
+    return def?.isMockData ? 'SAMPLE FALLBACK' : 'REAL NASA METADATA';
+  }
+
+  getGlobalDataMode(): string {
+    return this.metadataCache?.dataMode ?? (this.getManifest().isMockData ? 'sample_fallback' : 'real_metadata');
+  }
+
+  getMetadataCache() {
+    return this.metadataCache;
   }
 
   private async fetchJson<T>(path: string): Promise<T> {

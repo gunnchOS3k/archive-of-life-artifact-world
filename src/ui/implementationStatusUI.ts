@@ -27,16 +27,19 @@ export class ImplementationStatusUI {
     let impl: ImplementationStatusReport | null = null;
     let inventory: IncompleteInventoryReport | null = null;
     let release: ReleaseReadinessReport | null = null;
+    let sourceReadiness: { sources?: Array<{ name: string; source: string; imported: boolean; configured: boolean; blocked_reason?: string; next_action?: string; record_count?: number }> } | null = null;
 
     try {
-      const [a, b, c] = await Promise.all([
+      const [a, b, c, d] = await Promise.all([
         fetch('/data/status/implementation_status.json'),
         fetch('/data/status/incomplete_inventory.json'),
         fetch('/data/status/release_readiness_report.json'),
+        fetch('/data/status/source_readiness_report.json'),
       ]);
       if (a.ok) impl = await a.json();
       if (b.ok) inventory = await b.json();
       if (c.ok) release = await c.json();
+      if (d.ok) sourceReadiness = await d.json();
     } catch {
       /* offline */
     }
@@ -91,6 +94,16 @@ export class ImplementationStatusUI {
           <h3>Incomplete inventory</h3>
           <p>${inventory?.itemCount ?? 0} markers scanned (${inventory?.releasePathItemCount ?? 0} in release paths). Non-blocking pipeline/docs markers are classified separately.</p>
         </section>
+        ${
+          sourceReadiness?.sources?.length
+            ? `<section class="coverage-section"><h3>Source import readiness</h3><ul>${sourceReadiness.sources
+                .map(
+                  (s) =>
+                    `<li><strong>${s.name}</strong>: ${s.imported ? '✓ imported' : s.configured ? 'configured' : 'BLOCKED'} (${s.record_count ?? 0} records)${!s.imported && s.next_action ? `<br><em>${s.next_action}</em>` : ''}</li>`
+                )
+                .join('')}</ul></section>`
+            : '<section class="coverage-section"><h3>Source import readiness</h3><p>Run <code>npm run source:audit</code> to refresh.</p></section>'
+        }
       </div>
     `;
   }

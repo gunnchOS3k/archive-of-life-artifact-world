@@ -1,0 +1,131 @@
+{
+  "generatedAt": "2026-07-05T03:27:50.425Z",
+  "snapshotScopeNote": "FULLY_IMPLEMENTED for current verified snapshot scope. Global completion requires source snapshot ingestion.",
+  "systems": [
+    {
+      "id": "archivedex",
+      "name": "ArchiveDex",
+      "currentStatus": "FULLY_IMPLEMENTED",
+      "targetStatus": "FULLY_IMPLEMENTED",
+      "canCompleteLocally": true,
+      "validationCommand": "npm run audit:archivedex",
+      "releaseEligibleRule": "Mock/sample and blocked external data never count as source-verified coverage.",
+      "notes": "ArchiveDex is fully implemented as a species-entry system for the current snapshot. Full Catalogue of Life coverage depends on real COL ingestion. FULLY_IMPLEMENTED for current verified snapshot scope. Global completion requires source snapshot ingestion."
+    },
+    {
+      "id": "time_atlas",
+      "name": "Time Atlas",
+      "currentStatus": "FULLY_IMPLEMENTED",
+      "targetStatus": "FULLY_IMPLEMENTED",
+      "canCompleteLocally": true,
+      "validationCommand": "npm run audit:time:atlas",
+      "releaseEligibleRule": "Mock/sample and blocked external data never count as source-verified coverage.",
+      "notes": "Time Atlas is fully implemented as a browsing and gate system for the current verified time snapshot. Live ICS refresh/import is handled through source ingestion workflow. FULLY_IMPLEMENTED for current verified snapshot scope. Global completion requires source snapshot ingestion."
+    },
+    {
+      "id": "earth_layer_console",
+      "name": "NASA Earth Layer Console",
+      "currentStatus": "PARTIAL_IMPLEMENTATION",
+      "targetStatus": "FULLY_IMPLEMENTED",
+      "canCompleteLocally": true,
+      "validationCommand": "npm run audit:earth:layer_console",
+      "releaseEligibleRule": "Mock/sample and blocked external data never count as source-verified coverage.",
+      "notes": "NASA adapters implemented with mode badges; run npm run source:import:nasa for real metadata cache."
+    },
+    {
+      "id": "global_coverage_matrix",
+      "name": "Global Coverage Matrix",
+      "currentStatus": "FULLY_IMPLEMENTED",
+      "targetStatus": "FULLY_IMPLEMENTED",
+      "canCompleteLocally": true,
+      "validationCommand": "npm run audit:global:coverage_matrix",
+      "releaseEligibleRule": "Mock/sample and blocked external data never count as source-verified coverage.",
+      "notes": "Global Coverage Matrix is fully implemented as a coverage engine. Global completeness depends on real source snapshot ingestion. FULLY_IMPLEMENTED for current verified snapshot scope. Global completion requires source snapshot ingestion."
+    },
+    {
+      "id": "coverage_dashboard",
+      "name": "Coverage Dashboard",
+      "currentStatus": "FULLY_IMPLEMENTED",
+      "targetStatus": "FULLY_IMPLEMENTED",
+      "canCompleteLocally": true,
+      "validationCommand": "npm run audit:coverage:dashboard",
+      "releaseEligibleRule": "Mock/sample and blocked external data never count as source-verified coverage.",
+      "notes": "Coverage Dashboard is fully implemented as a dev/admin dashboard for current snapshot coverage. FULLY_IMPLEMENTED for current verified snapshot scope. Global completion requires source snapshot ingestion."
+    },
+    {
+      "id": "python_pipeline",
+      "name": "Python data pipeline",
+      "currentStatus": "FULLY_IMPLEMENTED",
+      "targetStatus": "FULLY_IMPLEMENTED",
+      "canCompleteLocally": true,
+      "validationCommand": "npm run pipeline:all",
+      "releaseEligibleRule": "Mock/sample and blocked external data never count as source-verified coverage.",
+      "notes": "Python pipeline is fully implemented as the local data pipeline runner. Source-specific ingestion adapters require configured snapshots or credentials. FULLY_IMPLEMENTED for current verified snapshot scope. Global completion requires source snapshot ingestion."
+    },
+    {
+      "id": "sql_pipeline",
+      "name": "SQL pipeline",
+      "currentStatus": "FULLY_IMPLEMENTED",
+      "targetStatus": "FULLY_IMPLEMENTED",
+      "canCompleteLocally": true,
+      "validationCommand": "npm run pipeline:all",
+      "releaseEligibleRule": "Mock/sample and blocked external data never count as source-verified coverage.",
+      "notes": "SQL pipeline is fully implemented for current snapshot validation and gap reporting. FULLY_IMPLEMENTED for current verified snapshot scope. Global completion requires source snapshot ingestion."
+    },
+    {
+      "id": "source_snapshot_workflow",
+      "name": "Source snapshot workflow",
+      "currentStatus": "FULLY_IMPLEMENTED",
+      "targetStatus": "FULLY_IMPLEMENTED",
+      "canCompleteLocally": true,
+      "validationCommand": "npm run audit:source:snapshot_workflow",
+      "releaseEligibleRule": "Mock/sample and blocked external data never count as source-verified coverage.",
+      "notes": "Source snapshot import workflow is executable via npm run source:* commands.",
+      "blockedReason": "Full COL/GBIF/IUCN/PBDB downloads not imported; sample snapshots only."
+    },
+    {
+      "id": "catalogue_of_life_ingestion",
+      "name": "Catalogue of Life full ingestion",
+      "currentStatus": "BLOCKED_BY_EXTERNAL_DATA",
+      "targetStatus": "BLOCKED_BY_EXTERNAL_DATA until real snapshot imported",
+      "canCompleteLocally": false,
+      "validationCommand": "npm run source:import:all",
+      "releaseEligibleRule": "Mock/sample and blocked external data never count as source-verified coverage.",
+      "notes": "Import command available: npm run source:import:col",
+      "blockedReason": "Catalogue of Life snapshot not found. Download approved snapshot and set COL_SNAPSHOT_PATH in data-pipeline/.env."
+    },
+    {
+      "id": "source_provenance",
+      "name": "Source provenance",
+      "currentStatus": "FULLY_IMPLEMENTED",
+      "targetStatus": "FULLY_IMPLEMENTED",
+      "canCompleteLocally": true,
+      "validationCommand": "npm run audit:source:provenance",
+      "releaseEligibleRule": "Mock/sample and blocked external data never count as source-verified coverage.",
+      "notes": "Provenance model distinguishes game_authored_verified, source_verified, mock_sample, derived_inferred, and blocked_external."
+    },
+    {
+      "id": "nasa_earthdata_ingestion",
+      "name": "NASA Earthdata live ingestion",
+      "currentStatus": "BLOCKED_BY_EXTERNAL_DATA",
+      "targetStatus": "BLOCKED_BY_EXTERNAL_DATA until real snapshot imported",
+      "canCompleteLocally": true,
+      "validationCommand": "npm run source:import:nasa",
+      "releaseEligibleRule": "Mock/sample and blocked external data never count as source-verified coverage.",
+      "notes": "Public API adapters implemented; import populates data-pipeline/exports/nasa/.",
+      "blockedReason": "No real NASA metadata cache yet. Run npm run source:import:nasa."
+    },
+    {
+      "id": "neotoma_ingestion",
+      "name": "Neotoma paleoecology ingestion",
+      "currentStatus": "BLOCKED_BY_EXTERNAL_DATA",
+      "targetStatus": "BLOCKED_BY_EXTERNAL_DATA until real snapshot imported",
+      "canCompleteLocally": false,
+      "validationCommand": "npm run source:import:neotoma",
+      "releaseEligibleRule": "Mock/sample and blocked external data never count as source-verified coverage.",
+      "notes": "Import command available: npm run source:import:neotoma",
+      "blockedReason": "Neotoma snapshot not configured. Set NEOTOMA_SNAPSHOT_PATH or NEOTOMA_API_ENABLED."
+    }
+  ],
+  "legacyNonFullCount": 12
+}

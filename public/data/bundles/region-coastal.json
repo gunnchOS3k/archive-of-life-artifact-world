@@ -27,7 +27,7 @@
         "assessed": true,
         "sourceVersion": "mock-iucn-2026-07",
         "lastUpdated": "2026-07-02",
-        "iucnTaxonId": 77355
+        "iucnTaxonId": 27409
       },
       "distribution": {
         "continents": [
@@ -39,11 +39,11 @@
         ],
         "sourceVersion": "mock-gbif-2026-07",
         "lastUpdated": "2026-07-02",
-        "gbifTaxonKey": 419427,
+        "gbifTaxonKey": 7146193,
         "occurrenceSummaries": [
           {
             "region": "Global oceans",
-            "occurrenceCount": 125
+            "occurrenceCount": 2679
           }
         ]
       },
@@ -120,14 +120,15 @@
       "provenance": [
         {
           "source": "game_authored",
-          "sourceVersion": "mvp-1.0",
+          "sourceVersion": "mvp-current",
           "sourceRecordId": "balaenoptera_musculus",
           "license": "GAME-ORIGINAL",
-          "citation": "Archive of Life: Artifact World — MVP authored content",
+          "citation": "Archive of Life: Artifact World authored prototype content",
           "citationRequired": false,
-          "retrievedAt": "2026-07-05T03:16:32.537Z",
-          "lastUpdated": "2026-07-05T03:16:32.537Z",
-          "isMockData": true
+          "retrievedAt": "2026-07-05T03:27:29.539Z",
+          "lastUpdated": "2026-07-05T03:27:29.539Z",
+          "isMockData": false,
+          "verificationStatus": "game_authored_verified"
         },
         {
           "source": "catalogue_of_life",
@@ -135,11 +136,12 @@
           "sourceRecordId": "MOCK-balaenoptera_musculus",
           "catalogueOfLifeId": "MOCK-COL-balaenoptera_musculus",
           "license": "MOCK-SAMPLE",
-          "citation": "MOCK SAMPLE — not sourced from live API",
+          "citation": "MOCK SAMPLE — not sourced from live API; requires approved source snapshot import",
           "citationRequired": true,
-          "retrievedAt": "2026-07-05T03:16:32.537Z",
-          "lastUpdated": "2026-07-05T03:16:32.537Z",
-          "isMockData": true
+          "retrievedAt": "2026-07-05T03:27:29.539Z",
+          "lastUpdated": "2026-07-05T03:27:29.539Z",
+          "isMockData": true,
+          "verificationStatus": "mock_sample"
         }
       ]
     },
@@ -165,7 +167,7 @@
         "assessed": true,
         "sourceVersion": "mock-iucn-2026-07",
         "lastUpdated": "2026-07-02",
-        "iucnTaxonId": 83614
+        "iucnTaxonId": 91836
       },
       "distribution": {
         "continents": [
@@ -178,11 +180,11 @@
         ],
         "sourceVersion": "mock-gbif-2026-07",
         "lastUpdated": "2026-07-02",
-        "gbifTaxonKey": 7260742,
+        "gbifTaxonKey": 5107101,
         "occurrenceSummaries": [
           {
             "region": "North Atlantic",
-            "occurrenceCount": 2177
+            "occurrenceCount": 2480
           }
         ]
       },
@@ -259,14 +261,15 @@
       "provenance": [
         {
           "source": "game_authored",
-          "sourceVersion": "mvp-1.0",
+          "sourceVersion": "mvp-current",
           "sourceRecordId": "phoca_vitulina",
           "license": "GAME-ORIGINAL",
-          "citation": "Archive of Life: Artifact World — MVP authored content",
+          "citation": "Archive of Life: Artifact World authored prototype content",
           "citationRequired": false,
-          "retrievedAt": "2026-07-05T03:16:32.537Z",
-          "lastUpdated": "2026-07-05T03:16:32.537Z",
-          "isMockData": true
+          "retrievedAt": "2026-07-05T03:27:29.539Z",
+          "lastUpdated": "2026-07-05T03:27:29.539Z",
+          "isMockData": false,
+          "verificationStatus": "game_authored_verified"
         },
         {
           "source": "catalogue_of_life",
@@ -274,11 +277,12 @@
           "sourceRecordId": "MOCK-phoca_vitulina",
           "catalogueOfLifeId": "MOCK-COL-phoca_vitulina",
           "license": "MOCK-SAMPLE",
-          "citation": "MOCK SAMPLE — not sourced from live API",
+          "citation": "MOCK SAMPLE — not sourced from live API; requires approved source snapshot import",
           "citationRequired": true,
-          "retrievedAt": "2026-07-05T03:16:32.537Z",
-          "lastUpdated": "2026-07-05T03:16:32.537Z",
-          "isMockData": true
+          "retrievedAt": "2026-07-05T03:27:29.539Z",
+          "lastUpdated": "2026-07-05T03:27:29.539Z",
+          "isMockData": true,
+          "verificationStatus": "mock_sample"
         }
       ]
     }

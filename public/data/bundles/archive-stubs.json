@@ -21,15 +21,28 @@
       "artifactTemplates": [],
       "provenance": [
         {
+          "source": "game_authored",
+          "sourceVersion": "mvp-current",
+          "sourceRecordId": "sample_cyanobacteria",
+          "license": "GAME-ORIGINAL",
+          "citation": "Archive of Life: Artifact World authored prototype content",
+          "citationRequired": false,
+          "retrievedAt": "2026-07-05T03:27:29.539Z",
+          "lastUpdated": "2026-07-05T03:27:29.539Z",
+          "isMockData": false,
+          "verificationStatus": "game_authored_verified"
+        },
+        {
           "source": "catalogue_of_life",
           "sourceVersion": "mock-sample-2026-07",
           "sourceRecordId": "sample_cyanobacteria",
           "license": "MOCK-SAMPLE",
-          "citation": "MOCK SAMPLE — tiered archive stub for pipeline demonstration",
+          "citation": "MOCK SAMPLE — tiered archive stub; requires approved source snapshot import",
           "citationRequired": true,
-          "retrievedAt": "2026-07-05T03:16:32.537Z",
-          "lastUpdated": "2026-07-05T03:16:32.537Z",
-          "isMockData": true
+          "retrievedAt": "2026-07-05T03:27:29.539Z",
+          "lastUpdated": "2026-07-05T03:27:29.539Z",
+          "isMockData": true,
+          "verificationStatus": "mock_sample"
         }
       ]
     },
@@ -53,15 +66,28 @@
       "artifactTemplates": [],
       "provenance": [
         {
+          "source": "game_authored",
+          "sourceVersion": "mvp-current",
+          "sourceRecordId": "sample_trilobite_elrathia",
+          "license": "GAME-ORIGINAL",
+          "citation": "Archive of Life: Artifact World authored prototype content",
+          "citationRequired": false,
+          "retrievedAt": "2026-07-05T03:27:29.539Z",
+          "lastUpdated": "2026-07-05T03:27:29.539Z",
+          "isMockData": false,
+          "verificationStatus": "game_authored_verified"
+        },
+        {
           "source": "paleobiodb",
           "sourceVersion": "mock-sample-2026-07",
           "sourceRecordId": "sample_trilobite_elrathia",
           "license": "MOCK-SAMPLE",
-          "citation": "MOCK SAMPLE — tiered archive stub for pipeline demonstration",
+          "citation": "MOCK SAMPLE — tiered archive stub; requires approved source snapshot import",
           "citationRequired": true,
-          "retrievedAt": "2026-07-05T03:16:32.537Z",
-          "lastUpdated": "2026-07-05T03:16:32.537Z",
-          "isMockData": true
+          "retrievedAt": "2026-07-05T03:27:29.539Z",
+          "lastUpdated": "2026-07-05T03:27:29.539Z",
+          "isMockData": true,
+          "verificationStatus": "mock_sample"
         }
       ]
     },
@@ -84,15 +110,28 @@
       "artifactTemplates": [],
       "provenance": [
         {
+          "source": "game_authored",
+          "sourceVersion": "mvp-current",
+          "sourceRecordId": "sample_anomalocaris",
+          "license": "GAME-ORIGINAL",
+          "citation": "Archive of Life: Artifact World authored prototype content",
+          "citationRequired": false,
+          "retrievedAt": "2026-07-05T03:27:29.539Z",
+          "lastUpdated": "2026-07-05T03:27:29.539Z",
+          "isMockData": false,
+          "verificationStatus": "game_authored_verified"
+        },
+        {
           "source": "paleobiodb",
           "sourceVersion": "mock-sample-2026-07",
           "sourceRecordId": "sample_anomalocaris",
           "license": "MOCK-SAMPLE",
-          "citation": "MOCK SAMPLE — tiered archive stub for pipeline demonstration",
+          "citation": "MOCK SAMPLE — tiered archive stub; requires approved source snapshot import",
           "citationRequired": true,
-          "retrievedAt": "2026-07-05T03:16:32.537Z",
-          "lastUpdated": "2026-07-05T03:16:32.537Z",
-          "isMockData": true
+          "retrievedAt": "2026-07-05T03:27:29.539Z",
+          "lastUpdated": "2026-07-05T03:27:29.539Z",
+          "isMockData": true,
+          "verificationStatus": "mock_sample"
         }
       ]
     },
@@ -115,15 +154,28 @@
       "artifactTemplates": [],
       "provenance": [
         {
+          "source": "game_authored",
+          "sourceVersion": "mvp-current",
+          "sourceRecordId": "sample_dickinsonia",
+          "license": "GAME-ORIGINAL",
+          "citation": "Archive of Life: Artifact World authored prototype content",
+          "citationRequired": false,
+          "retrievedAt": "2026-07-05T03:27:29.539Z",
+          "lastUpdated": "2026-07-05T03:27:29.539Z",
+          "isMockData": false,
+          "verificationStatus": "game_authored_verified"
+        },
+        {
           "source": "paleobiodb",
           "sourceVersion": "mock-sample-2026-07",
           "sourceRecordId": "sample_dickinsonia",
           "license": "MOCK-SAMPLE",
-          "citation": "MOCK SAMPLE — tiered archive stub for pipeline demonstration",
+          "citation": "MOCK SAMPLE — tiered archive stub; requires approved source snapshot import",
           "citationRequired": true,
-          "retrievedAt": "2026-07-05T03:16:32.537Z",
-          "lastUpdated": "2026-07-05T03:16:32.537Z",
-          "isMockData": true
+          "retrievedAt": "2026-07-05T03:27:29.539Z",
+          "lastUpdated": "2026-07-05T03:27:29.539Z",
+          "isMockData": true,
+          "verificationStatus": "mock_sample"
         }
       ]
     },
@@ -146,15 +198,28 @@
       "artifactTemplates": [],
       "provenance": [
         {
+          "source": "game_authored",
+          "sourceVersion": "mvp-current",
+          "sourceRecordId": "sample_charnia",
+          "license": "GAME-ORIGINAL",
+          "citation": "Archive of Life: Artifact World authored prototype content",
+          "citationRequired": false,
+          "retrievedAt": "2026-07-05T03:27:29.539Z",
+          "lastUpdated": "2026-07-05T03:27:29.539Z",
+          "isMockData": false,
+          "verificationStatus": "game_authored_verified"
+        },
+        {
           "source": "paleobiodb",
           "sourceVersion": "mock-sample-2026-07",
           "sourceRecordId": "sample_charnia",
           "license": "MOCK-SAMPLE",
-          "citation": "MOCK SAMPLE — tiered archive stub for pipeline demonstration",
+          "citation": "MOCK SAMPLE — tiered archive stub; requires approved source snapshot import",
           "citationRequired": true,
-          "retrievedAt": "2026-07-05T03:16:32.537Z",
-          "lastUpdated": "2026-07-05T03:16:32.537Z",
-          "isMockData": true
+          "retrievedAt": "2026-07-05T03:27:29.539Z",
+          "lastUpdated": "2026-07-05T03:27:29.539Z",
+          "isMockData": true,
+          "verificationStatus": "mock_sample"
         }
       ]
     },
@@ -178,15 +243,28 @@
       "artifactTemplates": [],
       "provenance": [
         {
+          "source": "game_authored",
+          "sourceVersion": "mvp-current",
+          "sourceRecordId": "sample_brachiosaurus",
+          "license": "GAME-ORIGINAL",
+          "citation": "Archive of Life: Artifact World authored prototype content",
+          "citationRequired": false,
+          "retrievedAt": "2026-07-05T03:27:29.539Z",
+          "lastUpdated": "2026-07-05T03:27:29.539Z",
+          "isMockData": false,
+          "verificationStatus": "game_authored_verified"
+        },
+        {
           "source": "paleobiodb",
           "sourceVersion": "mock-sample-2026-07",
           "sourceRecordId": "sample_brachiosaurus",
           "license": "MOCK-SAMPLE",
-          "citation": "MOCK SAMPLE — tiered archive stub for pipeline demonstration",
+          "citation": "MOCK SAMPLE — tiered archive stub; requires approved source snapshot import",
           "citationRequired": true,
-          "retrievedAt": "2026-07-05T03:16:32.537Z",
-          "lastUpdated": "2026-07-05T03:16:32.537Z",
-          "isMockData": true
+          "retrievedAt": "2026-07-05T03:27:29.539Z",
+          "lastUpdated": "2026-07-05T03:27:29.539Z",
+          "isMockData": true,
+          "verificationStatus": "mock_sample"
         }
       ]
     },
@@ -209,15 +287,28 @@
       "artifactTemplates": [],
       "provenance": [
         {
+          "source": "game_authored",
+          "sourceVersion": "mvp-current",
+          "sourceRecordId": "sample_archaeopteryx",
+          "license": "GAME-ORIGINAL",
+          "citation": "Archive of Life: Artifact World authored prototype content",
+          "citationRequired": false,
+          "retrievedAt": "2026-07-05T03:27:29.539Z",
+          "lastUpdated": "2026-07-05T03:27:29.539Z",
+          "isMockData": false,
+          "verificationStatus": "game_authored_verified"
+        },
+        {
           "source": "paleobiodb",
           "sourceVersion": "mock-sample-2026-07",
           "sourceRecordId": "sample_archaeopteryx",
           "license": "MOCK-SAMPLE",
-          "citation": "MOCK SAMPLE — tiered archive stub for pipeline demonstration",
+          "citation": "MOCK SAMPLE — tiered archive stub; requires approved source snapshot import",
           "citationRequired": true,
-          "retrievedAt": "2026-07-05T03:16:32.537Z",
-          "lastUpdated": "2026-07-05T03:16:32.537Z",
-          "isMockData": true
+          "retrievedAt": "2026-07-05T03:27:29.539Z",
+          "lastUpdated": "2026-07-05T03:27:29.539Z",
+          "isMockData": true,
+          "verificationStatus": "mock_sample"
         }
       ]
     },
@@ -241,15 +332,28 @@
       "artifactTemplates": [],
       "provenance": [
         {
+          "source": "game_authored",
+          "sourceVersion": "mvp-current",
+          "sourceRecordId": "sample_coelophysis",
+          "license": "GAME-ORIGINAL",
+          "citation": "Archive of Life: Artifact World authored prototype content",
+          "citationRequired": false,
+          "retrievedAt": "2026-07-05T03:27:29.539Z",
+          "lastUpdated": "2026-07-05T03:27:29.539Z",
+          "isMockData": false,
+          "verificationStatus": "game_authored_verified"
+        },
+        {
           "source": "paleobiodb",
           "sourceVersion": "mock-sample-2026-07",
           "sourceRecordId": "sample_coelophysis",
           "license": "MOCK-SAMPLE",
-          "citation": "MOCK SAMPLE — tiered archive stub for pipeline demonstration",
+          "citation": "MOCK SAMPLE — tiered archive stub; requires approved source snapshot import",
           "citationRequired": true,
-          "retrievedAt": "2026-07-05T03:16:32.537Z",
-          "lastUpdated": "2026-07-05T03:16:32.537Z",
-          "isMockData": true
+          "retrievedAt": "2026-07-05T03:27:29.539Z",
+          "lastUpdated": "2026-07-05T03:27:29.539Z",
+          "isMockData": true,
+          "verificationStatus": "mock_sample"
         }
       ]
     },
@@ -273,15 +377,28 @@
       "artifactTemplates": [],
       "provenance": [
         {
+          "source": "game_authored",
+          "sourceVersion": "mvp-current",
+          "sourceRecordId": "sample_ammonite_cretaceous",
+          "license": "GAME-ORIGINAL",
+          "citation": "Archive of Life: Artifact World authored prototype content",
+          "citationRequired": false,
+          "retrievedAt": "2026-07-05T03:27:29.539Z",
+          "lastUpdated": "2026-07-05T03:27:29.539Z",
+          "isMockData": false,
+          "verificationStatus": "game_authored_verified"
+        },
+        {
           "source": "paleobiodb",
           "sourceVersion": "mock-sample-2026-07",
           "sourceRecordId": "sample_ammonite_cretaceous",
           "license": "MOCK-SAMPLE",
-          "citation": "MOCK SAMPLE — tiered archive stub for pipeline demonstration",
+          "citation": "MOCK SAMPLE — tiered archive stub; requires approved source snapshot import",
           "citationRequired": true,
-          "retrievedAt": "2026-07-05T03:16:32.537Z",
-          "lastUpdated": "2026-07-05T03:16:32.537Z",
-          "isMockData": true
+          "retrievedAt": "2026-07-05T03:27:29.539Z",
+          "lastUpdated": "2026-07-05T03:27:29.539Z",
+          "isMockData": true,
+          "verificationStatus": "mock_sample"
         }
       ]
     },
@@ -309,15 +426,28 @@
       "artifactTemplates": [],
       "provenance": [
         {
+          "source": "game_authored",
+          "sourceVersion": "mvp-current",
+          "sourceRecordId": "sample_ammonite_devonian",
+          "license": "GAME-ORIGINAL",
+          "citation": "Archive of Life: Artifact World authored prototype content",
+          "citationRequired": false,
+          "retrievedAt": "2026-07-05T03:27:29.539Z",
+          "lastUpdated": "2026-07-05T03:27:29.539Z",
+          "isMockData": false,
+          "verificationStatus": "game_authored_verified"
+        },
+        {
           "source": "paleobiodb",
           "sourceVersion": "mock-sample-2026-07",
           "sourceRecordId": "sample_ammonite_devonian",
           "license": "MOCK-SAMPLE",
-          "citation": "MOCK SAMPLE — tiered archive stub for pipeline demonstration",
+          "citation": "MOCK SAMPLE — tiered archive stub; requires approved source snapshot import",
           "citationRequired": true,
-          "retrievedAt": "2026-07-05T03:16:32.537Z",
-          "lastUpdated": "2026-07-05T03:16:32.537Z",
-          "isMockData": true
+          "retrievedAt": "2026-07-05T03:27:29.539Z",
+          "lastUpdated": "2026-07-05T03:27:29.539Z",
+          "isMockData": true,
+          "verificationStatus": "mock_sample"
         }
       ]
     },
@@ -345,15 +475,28 @@
       "artifactTemplates": [],
       "provenance": [
         {
+          "source": "game_authored",
+          "sourceVersion": "mvp-current",
+          "sourceRecordId": "sample_trilobite_group",
+          "license": "GAME-ORIGINAL",
+          "citation": "Archive of Life: Artifact World authored prototype content",
+          "citationRequired": false,
+          "retrievedAt": "2026-07-05T03:27:29.539Z",
+          "lastUpdated": "2026-07-05T03:27:29.539Z",
+          "isMockData": false,
+          "verificationStatus": "game_authored_verified"
+        },
+        {
           "source": "paleobiodb",
           "sourceVersion": "mock-sample-2026-07",
           "sourceRecordId": "sample_trilobite_group",
           "license": "MOCK-SAMPLE",
-          "citation": "MOCK SAMPLE — tiered archive stub for pipeline demonstration",
+          "citation": "MOCK SAMPLE — tiered archive stub; requires approved source snapshot import",
           "citationRequired": true,
-          "retrievedAt": "2026-07-05T03:16:32.537Z",
-          "lastUpdated": "2026-07-05T03:16:32.537Z",
-          "isMockData": true
+          "retrievedAt": "2026-07-05T03:27:29.539Z",
+          "lastUpdated": "2026-07-05T03:27:29.539Z",
+          "isMockData": true,
+          "verificationStatus": "mock_sample"
         }
       ]
     },
@@ -377,15 +520,28 @@
       "artifactTemplates": [],
       "provenance": [
         {
+          "source": "game_authored",
+          "sourceVersion": "mvp-current",
+          "sourceRecordId": "sample_meganeura",
+          "license": "GAME-ORIGINAL",
+          "citation": "Archive of Life: Artifact World authored prototype content",
+          "citationRequired": false,
+          "retrievedAt": "2026-07-05T03:27:29.539Z",
+          "lastUpdated": "2026-07-05T03:27:29.539Z",
+          "isMockData": false,
+          "verificationStatus": "game_authored_verified"
+        },
+        {
           "source": "paleobiodb",
           "sourceVersion": "mock-sample-2026-07",
           "sourceRecordId": "sample_meganeura",
           "license": "MOCK-SAMPLE",
-          "citation": "MOCK SAMPLE — tiered archive stub for pipeline demonstration",
+          "citation": "MOCK SAMPLE — tiered archive stub; requires approved source snapshot import",
           "citationRequired": true,
-          "retrievedAt": "2026-07-05T03:16:32.537Z",
-          "lastUpdated": "2026-07-05T03:16:32.537Z",
-          "isMockData": true
+          "retrievedAt": "2026-07-05T03:27:29.539Z",
+          "lastUpdated": "2026-07-05T03:27:29.539Z",
+          "isMockData": true,
+          "verificationStatus": "mock_sample"
         }
       ]
     },
@@ -410,15 +566,28 @@
       "artifactTemplates": [],
       "provenance": [
         {
+          "source": "game_authored",
+          "sourceVersion": "mvp-current",
+          "sourceRecordId": "sample_stromatolite",
+          "license": "GAME-ORIGINAL",
+          "citation": "Archive of Life: Artifact World authored prototype content",
+          "citationRequired": false,
+          "retrievedAt": "2026-07-05T03:27:29.539Z",
+          "lastUpdated": "2026-07-05T03:27:29.539Z",
+          "isMockData": false,
+          "verificationStatus": "game_authored_verified"
+        },
+        {
           "source": "paleobiodb",
           "sourceVersion": "mock-sample-2026-07",
           "sourceRecordId": "sample_stromatolite",
           "license": "MOCK-SAMPLE",
-          "citation": "MOCK SAMPLE — tiered archive stub for pipeline demonstration",
+          "citation": "MOCK SAMPLE — tiered archive stub; requires approved source snapshot import",
           "citationRequired": true,
-          "retrievedAt": "2026-07-05T03:16:32.537Z",
-          "lastUpdated": "2026-07-05T03:16:32.537Z",
-          "isMockData": true
+          "retrievedAt": "2026-07-05T03:27:29.539Z",
+          "lastUpdated": "2026-07-05T03:27:29.539Z",
+          "isMockData": true,
+          "verificationStatus": "mock_sample"
         }
       ]
     },
@@ -442,15 +611,28 @@
       "artifactTemplates": [],
       "provenance": [
         {
+          "source": "game_authored",
+          "sourceVersion": "mvp-current",
+          "sourceRecordId": "sample_archean_microbe",
+          "license": "GAME-ORIGINAL",
+          "citation": "Archive of Life: Artifact World authored prototype content",
+          "citationRequired": false,
+          "retrievedAt": "2026-07-05T03:27:29.539Z",
+          "lastUpdated": "2026-07-05T03:27:29.539Z",
+          "isMockData": false,
+          "verificationStatus": "game_authored_verified"
+        },
+        {
           "source": "paleobiodb",
           "sourceVersion": "mock-sample-2026-07",
           "sourceRecordId": "sample_archean_microbe",
           "license": "MOCK-SAMPLE",
-          "citation": "MOCK SAMPLE — tiered archive stub for pipeline demonstration",
+          "citation": "MOCK SAMPLE — tiered archive stub; requires approved source snapshot import",
           "citationRequired": true,
-          "retrievedAt": "2026-07-05T03:16:32.537Z",
-          "lastUpdated": "2026-07-05T03:16:32.537Z",
-          "isMockData": true
+          "retrievedAt": "2026-07-05T03:27:29.539Z",
+          "lastUpdated": "2026-07-05T03:27:29.539Z",
+          "isMockData": true,
+          "verificationStatus": "mock_sample"
         }
       ]
     },
@@ -473,26 +655,40 @@
       "artifactTemplates": [],
       "provenance": [
         {
+          "source": "game_authored",
+          "sourceVersion": "mvp-current",
+          "sourceRecordId": "sample_saber_toothed_cat",
+          "license": "GAME-ORIGINAL",
+          "citation": "Archive of Life: Artifact World authored prototype content",
+          "citationRequired": false,
+          "retrievedAt": "2026-07-05T03:27:29.539Z",
+          "lastUpdated": "2026-07-05T03:27:29.539Z",
+          "isMockData": false,
+          "verificationStatus": "game_authored_verified"
+        },
+        {
           "source": "paleobiodb",
           "sourceVersion": "mock-sample-2026-07",
           "sourceRecordId": "sample_saber_toothed_cat",
           "license": "MOCK-SAMPLE",
-          "citation": "MOCK SAMPLE — tiered archive stub for pipeline demonstration",
+          "citation": "MOCK SAMPLE — tiered archive stub; requires approved source snapshot import",
           "citationRequired": true,
-          "retrievedAt": "2026-07-05T03:16:32.537Z",
-          "lastUpdated": "2026-07-05T03:16:32.537Z",
-          "isMockData": true
+          "retrievedAt": "2026-07-05T03:27:29.539Z",
+          "lastUpdated": "2026-07-05T03:27:29.539Z",
+          "isMockData": true,
+          "verificationStatus": "mock_sample"
         },
         {
           "source": "neotoma",
           "sourceVersion": "mock-sample-2026-07",
           "sourceRecordId": "sample_saber_toothed_cat",
           "license": "MOCK-SAMPLE",
-          "citation": "MOCK SAMPLE — tiered archive stub for pipeline demonstration",
+          "citation": "MOCK SAMPLE — tiered archive stub; requires approved source snapshot import",
           "citationRequired": true,
-          "retrievedAt": "2026-07-05T03:16:32.537Z",
-          "lastUpdated": "2026-07-05T03:16:32.537Z",
-          "isMockData": true
+          "retrievedAt": "2026-07-05T03:27:29.539Z",
+          "lastUpdated": "2026-07-05T03:27:29.539Z",
+          "isMockData": true,
+          "verificationStatus": "mock_sample"
         }
       ]
     },
@@ -516,14 +712,27 @@
       "provenance": [
         {
           "source": "game_authored",
+          "sourceVersion": "mvp-current",
+          "sourceRecordId": "sample_prebiotic_chemistry",
+          "license": "GAME-ORIGINAL",
+          "citation": "Archive of Life: Artifact World authored prototype content",
+          "citationRequired": false,
+          "retrievedAt": "2026-07-05T03:27:29.539Z",
+          "lastUpdated": "2026-07-05T03:27:29.539Z",
+          "isMockData": false,
+          "verificationStatus": "game_authored_verified"
+        },
+        {
+          "source": "game_authored",
           "sourceVersion": "mock-sample-2026-07",
           "sourceRecordId": "sample_prebiotic_chemistry",
           "license": "MOCK-SAMPLE",
-          "citation": "MOCK SAMPLE — tiered archive stub for pipeline demonstration",
+          "citation": "MOCK SAMPLE — tiered archive stub; requires approved source snapshot import",
           "citationRequired": true,
-          "retrievedAt": "2026-07-05T03:16:32.537Z",
-          "lastUpdated": "2026-07-05T03:16:32.537Z",
-          "isMockData": true
+          "retrievedAt": "2026-07-05T03:27:29.539Z",
+          "lastUpdated": "2026-07-05T03:27:29.539Z",
+          "isMockData": true,
+          "verificationStatus": "mock_sample"
         }
       ]
     }

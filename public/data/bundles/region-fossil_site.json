@@ -29,7 +29,7 @@
         "assessed": true,
         "sourceVersion": "mock-iucn-2026-07",
         "lastUpdated": "2026-07-02",
-        "iucnTaxonId": 58061
+        "iucnTaxonId": 76059
       },
       "distribution": {
         "continents": [
@@ -42,11 +42,11 @@
         ],
         "sourceVersion": "mock-gbif-2026-07",
         "lastUpdated": "2026-07-02",
-        "gbifTaxonKey": 2659594,
+        "gbifTaxonKey": 1926216,
         "occurrenceSummaries": [
           {
             "region": "Eurasia",
-            "occurrenceCount": 222
+            "occurrenceCount": 5058
           }
         ]
       },
@@ -61,7 +61,7 @@
         "livingRelatives": [
           "Asian Elephant"
         ],
-        "paleobiodbTaxonNo": 517759,
+        "paleobiodbTaxonNo": 612372,
         "sourceVersion": "mock-pbdb-2026-07",
         "lastUpdated": "2026-07-02"
       },
@@ -133,26 +133,28 @@
       "provenance": [
         {
           "source": "game_authored",
-          "sourceVersion": "mvp-1.0",
+          "sourceVersion": "mvp-current",
           "sourceRecordId": "mammuthus_primigenius",
           "license": "GAME-ORIGINAL",
-          "citation": "Archive of Life: Artifact World — MVP authored content",
+          "citation": "Archive of Life: Artifact World authored prototype content",
           "citationRequired": false,
-          "retrievedAt": "2026-07-05T03:16:32.537Z",
-          "lastUpdated": "2026-07-05T03:16:32.537Z",
-          "isMockData": true
+          "retrievedAt": "2026-07-05T03:27:29.539Z",
+          "lastUpdated": "2026-07-05T03:27:29.539Z",
+          "isMockData": false,
+          "verificationStatus": "game_authored_verified"
         },
         {
           "source": "paleobiodb",
           "sourceVersion": "mock-sample-2026-07",
           "sourceRecordId": "MOCK-mammuthus_primigenius",
-          "paleobiodbTaxonNo": 689136,
+          "paleobiodbTaxonNo": 257354,
           "license": "MOCK-SAMPLE",
-          "citation": "MOCK SAMPLE — not sourced from live API",
+          "citation": "MOCK SAMPLE — not sourced from live API; requires approved source snapshot import",
           "citationRequired": true,
-          "retrievedAt": "2026-07-05T03:16:32.537Z",
-          "lastUpdated": "2026-07-05T03:16:32.537Z",
-          "isMockData": true
+          "retrievedAt": "2026-07-05T03:27:29.539Z",
+          "lastUpdated": "2026-07-05T03:27:29.539Z",
+          "isMockData": true,
+          "verificationStatus": "mock_sample"
         }
       ]
     },
@@ -179,7 +181,7 @@
         "assessed": true,
         "sourceVersion": "mock-iucn-2026-07",
         "lastUpdated": "2026-07-02",
-        "iucnTaxonId": 33255
+        "iucnTaxonId": 98710
       },
       "distribution": {
         "continents": [
@@ -191,11 +193,11 @@
         ],
         "sourceVersion": "mock-gbif-2026-07",
         "lastUpdated": "2026-07-02",
-        "gbifTaxonKey": 2615673,
+        "gbifTaxonKey": 3768675,
         "occurrenceSummaries": [
           {
             "region": "North America",
-            "occurrenceCount": 4798
+            "occurrenceCount": 2322
           }
         ]
       },
@@ -211,7 +213,7 @@
           "Chickens",
           "All birds"
         ],
-        "paleobiodbTaxonNo": 640937,
+        "paleobiodbTaxonNo": 534128,
         "sourceVersion": "mock-pbdb-2026-07",
         "lastUpdated": "2026-07-02"
       },
@@ -302,26 +304,28 @@
       "provenance": [
         {
           "source": "game_authored",
-          "sourceVersion": "mvp-1.0",
+          "sourceVersion": "mvp-current",
           "sourceRecordId": "tyrannosaurus_rex",
           "license": "GAME-ORIGINAL",
-          "citation": "Archive of Life: Artifact World — MVP authored content",
+          "citation": "Archive of Life: Artifact World authored prototype content",
           "citationRequired": false,
-          "retrievedAt": "2026-07-05T03:16:32.537Z",
-          "lastUpdated": "2026-07-05T03:16:32.537Z",
-          "isMockData": true
+          "retrievedAt": "2026-07-05T03:27:29.539Z",
+          "lastUpdated": "2026-07-05T03:27:29.539Z",
+          "isMockData": false,
+          "verificationStatus": "game_authored_verified"
         },
         {
           "source": "paleobiodb",
           "sourceVersion": "mock-sample-2026-07",
           "sourceRecordId": "MOCK-tyrannosaurus_rex",
-          "paleobiodbTaxonNo": 775235,
+          "paleobiodbTaxonNo": 305798,
           "license": "MOCK-SAMPLE",
-          "citation": "MOCK SAMPLE — not sourced from live API",
+          "citation": "MOCK SAMPLE — not sourced from live API; requires approved source snapshot import",
           "citationRequired": true,
-          "retrievedAt": "2026-07-05T03:16:32.537Z",
-          "lastUpdated": "2026-07-05T03:16:32.537Z",
-          "isMockData": true
+          "retrievedAt": "2026-07-05T03:27:29.539Z",
+          "lastUpdated": "2026-07-05T03:27:29.539Z",
+          "isMockData": true,
+          "verificationStatus": "mock_sample"
         }
       ]
     },
@@ -352,7 +356,7 @@
         "assessed": true,
         "sourceVersion": "mock-iucn-2026-07",
         "lastUpdated": "2026-07-02",
-        "iucnTaxonId": 93283
+        "iucnTaxonId": 60887
       },
       "distribution": {
         "continents": [
@@ -363,11 +367,11 @@
         ],
         "sourceVersion": "mock-gbif-2026-07",
         "lastUpdated": "2026-07-02",
-        "gbifTaxonKey": 6628058,
+        "gbifTaxonKey": 294847,
         "occurrenceSummaries": [
           {
             "region": "Global ancient oceans",
-            "occurrenceCount": 4107
+            "occurrenceCount": 3452
           }
         ]
       },
@@ -383,7 +387,7 @@
           "Horseshoe crabs",
           "Arachnids"
         ],
-        "paleobiodbTaxonNo": 398581,
+        "paleobiodbTaxonNo": 62096,
         "sourceVersion": "mock-pbdb-2026-07",
         "lastUpdated": "2026-07-02"
       },
@@ -455,26 +459,28 @@
       "provenance": [
         {
           "source": "game_authored",
-          "sourceVersion": "mvp-1.0",
+          "sourceVersion": "mvp-current",
           "sourceRecordId": "trilobita_order",
           "license": "GAME-ORIGINAL",
-          "citation": "Archive of Life: Artifact World — MVP authored content",
+          "citation": "Archive of Life: Artifact World authored prototype content",
           "citationRequired": false,
-          "retrievedAt": "2026-07-05T03:16:32.537Z",
-          "lastUpdated": "2026-07-05T03:16:32.537Z",
-          "isMockData": true
+          "retrievedAt": "2026-07-05T03:27:29.539Z",
+          "lastUpdated": "2026-07-05T03:27:29.539Z",
+          "isMockData": false,
+          "verificationStatus": "game_authored_verified"
         },
         {
           "source": "paleobiodb",
           "sourceVersion": "mock-sample-2026-07",
           "sourceRecordId": "MOCK-trilobita_order",
-          "paleobiodbTaxonNo": 579735,
+          "paleobiodbTaxonNo": 447527,
           "license": "MOCK-SAMPLE",
-          "citation": "MOCK SAMPLE — not sourced from live API",
+          "citation": "MOCK SAMPLE — not sourced from live API; requires approved source snapshot import",
           "citationRequired": true,
-          "retrievedAt": "2026-07-05T03:16:32.537Z",
-          "lastUpdated": "2026-07-05T03:16:32.537Z",
-          "isMockData": true
+          "retrievedAt": "2026-07-05T03:27:29.539Z",
+          "lastUpdated": "2026-07-05T03:27:29.539Z",
+          "isMockData": true,
+          "verificationStatus": "mock_sample"
         }
       ]
     }
