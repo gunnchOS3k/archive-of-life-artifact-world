@@ -1,0 +1,9 @@
+{
+  "snapshotId": "sample-scope-2026-07",
+  "description": "MOCK SAMPLE — COL extant taxa required in Archive for this snapshot scope",
+  "taxonIds": [
+    "panthera_leo", "loxodonta_africana", "canis_lupus", "odocoileus_virginianus",
+    "danaus_plexippus", "apis_mellifera", "formica_rufa", "anax_junius",
+    "sample_cyanobacteria"
+  ]
+}

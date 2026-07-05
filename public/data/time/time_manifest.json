@@ -1,0 +1,31 @@
+{
+  "snapshotId": "ics-sample-2026-07",
+  "version": "1.0.0",
+  "generatedAt": "2026-07-05T02:28:45.732Z",
+  "description": "Sample ICS time scale snapshot — mock provenance until live ICS ingestion connected",
+  "isMockData": true,
+  "bundles": {
+    "geologicTimeUnits": {
+      "path": "time/geologic_time_units.json",
+      "recordCount": 42
+    },
+    "playableTimeGates": {
+      "path": "time/playable_time_gates.json",
+      "recordCount": 17
+    },
+    "taxonTimeRanges": {
+      "path": "time/taxon_time_ranges.json",
+      "recordCount": 24
+    }
+  },
+  "coverage": {
+    "totalTimeUnits": 42,
+    "playableGates": 1,
+    "taxaWithTimeRanges": 24,
+    "eons": 4,
+    "eras": 9,
+    "periods": 13,
+    "epochs": 14,
+    "ages": 2
+  }
+}

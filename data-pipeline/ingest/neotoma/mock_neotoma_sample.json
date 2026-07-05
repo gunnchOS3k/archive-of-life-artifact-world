@@ -1,0 +1,19 @@
+{
+  "source": "neotoma",
+  "source_version": "mock-sample-2026-07",
+  "description": "MOCK SAMPLE — late Quaternary paleoecology records",
+  "records": [
+    {
+      "taxon_id": "mammoth",
+      "site_name": "La Brea Tar Pits",
+      "age_range_ka": [40, 11],
+      "time_unit_ids": ["pleistocene"]
+    },
+    {
+      "taxon_id": "saber_toothed_cat",
+      "site_name": "Rancho La Brea",
+      "age_range_ka": [35, 10],
+      "time_unit_ids": ["pleistocene"]
+    }
+  ]
+}

@@ -1,18 +1,23 @@
 {
   "snapshotId": "sample-2026-07",
-  "version": "2.0.0",
-  "generatedAt": "2026-07-03T02:38:57.559Z",
-  "description": "Sample biodiversity snapshot — mock provenance overlays for pipeline demonstration",
+  "version": "3.0.0",
+  "generatedAt": "2026-07-05T02:28:46.450Z",
+  "description": "Sample biodiversity + Time Atlas snapshot — tiered representation with mock provenance",
   "bundles": {
     "heroSpecies": {
       "path": "bundles/hero-species.json",
       "kind": "hero_species",
       "recordCount": 23
     },
+    "archiveStubs": {
+      "path": "bundles/archive-stubs.json",
+      "kind": "archive_stubs",
+      "recordCount": 16
+    },
     "conservation": {
       "path": "bundles/conservation-overlay.json",
       "kind": "conservation",
-      "recordCount": 10
+      "recordCount": 23
     },
     "occurrence": {
       "path": "bundles/gbif-occurrences.json",
@@ -27,7 +32,7 @@
     "searchIndex": {
       "path": "bundles/search-index.json",
       "kind": "search_index",
-      "recordCount": 23
+      "recordCount": 39
     },
     "regions": {
       "path": "bundles/regions.json",
@@ -75,14 +80,38 @@
         "kind": "region_species",
         "recordCount": 3
       }
+    },
+    "timeAtlas": {
+      "manifest": {
+        "path": "time/time_manifest.json",
+        "kind": "time_atlas"
+      },
+      "geologicTimeUnits": {
+        "path": "time/geologic_time_units.json",
+        "kind": "time_atlas",
+        "recordCount": 42
+      },
+      "playableTimeGates": {
+        "path": "time/playable_time_gates.json",
+        "kind": "time_atlas",
+        "recordCount": 17
+      },
+      "taxonTimeRanges": {
+        "path": "time/taxon_time_ranges.json",
+        "kind": "time_atlas",
+        "recordCount": 24
+      }
     }
   },
   "coverage": {
-    "representedSpecies": 23,
+    "representedSpecies": 39,
     "iucnAssessed": 23,
     "threatened": 5,
-    "extinctFossil": 3,
+    "extinctFossil": 15,
     "playableQuestSpecies": 23,
-    "heroSpecies": 23
+    "heroSpecies": 23,
+    "timeUnits": 42,
+    "playableTimeGates": 1,
+    "taxaWithTimeRanges": 24
   }
 }

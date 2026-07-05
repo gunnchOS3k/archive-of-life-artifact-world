@@ -9,7 +9,9 @@
     "preview": "vite preview",
     "typecheck": "tsc --noEmit",
     "audit:data": "tsx scripts/audit-data.ts",
-    "generate:bundles": "tsx scripts/generate-bundles.ts"
+    "audit:coverage": "tsx scripts/audit-coverage.ts",
+    "generate:bundles": "tsx scripts/generate-bundles.ts",
+    "generate:time-atlas": "tsx scripts/generate-time-atlas.ts"
   },
   "devDependencies": {
     "@types/node": "^22.0.0",

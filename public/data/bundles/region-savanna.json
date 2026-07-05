@@ -16,6 +16,12 @@
       "scientificName": "Panthera leo",
       "group": "Mammal",
       "tier": "hero",
+      "representationTier": 6,
+      "lifeStatus": "extant",
+      "timeUnitIds": [
+        "pleistocene",
+        "holocene"
+      ],
       "taxonomy": {
         "family": "Felidae",
         "rank": "species",
@@ -27,7 +33,7 @@
         "assessed": true,
         "sourceVersion": "mock-iucn-2026-07",
         "lastUpdated": "2026-07-02",
-        "iucnTaxonId": 67130
+        "iucnTaxonId": 32914
       },
       "distribution": {
         "continents": [
@@ -39,11 +45,11 @@
         ],
         "sourceVersion": "mock-gbif-2026-07",
         "lastUpdated": "2026-07-02",
-        "gbifTaxonKey": 4281479,
+        "gbifTaxonKey": 6227720,
         "occurrenceSummaries": [
           {
             "region": "Africa",
-            "occurrenceCount": 3511
+            "occurrenceCount": 3781
           }
         ]
       },
@@ -117,8 +123,8 @@
           "license": "GAME-ORIGINAL",
           "citation": "Archive of Life: Artifact World — MVP authored content",
           "citationRequired": false,
-          "retrievedAt": "2026-07-03T02:38:57.554Z",
-          "lastUpdated": "2026-07-03T02:38:57.554Z",
+          "retrievedAt": "2026-07-05T02:28:46.442Z",
+          "lastUpdated": "2026-07-05T02:28:46.442Z",
           "isMockData": true
         },
         {
@@ -129,8 +135,8 @@
           "license": "MOCK-SAMPLE",
           "citation": "MOCK SAMPLE — not sourced from live API",
           "citationRequired": true,
-          "retrievedAt": "2026-07-03T02:38:57.554Z",
-          "lastUpdated": "2026-07-03T02:38:57.554Z",
+          "retrievedAt": "2026-07-05T02:28:46.442Z",
+          "lastUpdated": "2026-07-05T02:28:46.442Z",
           "isMockData": true
         }
       ]
@@ -141,6 +147,13 @@
       "scientificName": "Loxodonta africana",
       "group": "Mammal",
       "tier": "hero",
+      "representationTier": 6,
+      "lifeStatus": "extant",
+      "timeUnitIds": [
+        "pliocene",
+        "pleistocene",
+        "holocene"
+      ],
       "taxonomy": {
         "family": "Elephantidae",
         "rank": "species",
@@ -152,7 +165,7 @@
         "assessed": true,
         "sourceVersion": "mock-iucn-2026-07",
         "lastUpdated": "2026-07-02",
-        "iucnTaxonId": 31075
+        "iucnTaxonId": 41174
       },
       "distribution": {
         "continents": [
@@ -164,11 +177,11 @@
         ],
         "sourceVersion": "mock-gbif-2026-07",
         "lastUpdated": "2026-07-02",
-        "gbifTaxonKey": 4988476,
+        "gbifTaxonKey": 4546120,
         "occurrenceSummaries": [
           {
             "region": "Africa",
-            "occurrenceCount": 333
+            "occurrenceCount": 3579
           }
         ]
       },
@@ -259,8 +272,8 @@
           "license": "GAME-ORIGINAL",
           "citation": "Archive of Life: Artifact World — MVP authored content",
           "citationRequired": false,
-          "retrievedAt": "2026-07-03T02:38:57.555Z",
-          "lastUpdated": "2026-07-03T02:38:57.555Z",
+          "retrievedAt": "2026-07-05T02:28:46.443Z",
+          "lastUpdated": "2026-07-05T02:28:46.443Z",
           "isMockData": true
         },
         {
@@ -271,8 +284,8 @@
           "license": "MOCK-SAMPLE",
           "citation": "MOCK SAMPLE — not sourced from live API",
           "citationRequired": true,
-          "retrievedAt": "2026-07-03T02:38:57.555Z",
-          "lastUpdated": "2026-07-03T02:38:57.555Z",
+          "retrievedAt": "2026-07-05T02:28:46.443Z",
+          "lastUpdated": "2026-07-05T02:28:46.443Z",
           "isMockData": true
         }
       ]
@@ -283,6 +296,8 @@
       "scientificName": "Equus ferus przewalskii",
       "group": "Mammal",
       "tier": "hero",
+      "representationTier": 6,
+      "lifeStatus": "extant",
       "taxonomy": {
         "family": "Equidae",
         "rank": "subspecies",
@@ -294,7 +309,7 @@
         "assessed": true,
         "sourceVersion": "mock-iucn-2026-07",
         "lastUpdated": "2026-07-02",
-        "iucnTaxonId": 12055
+        "iucnTaxonId": 46225
       },
       "distribution": {
         "continents": [
@@ -306,11 +321,11 @@
         ],
         "sourceVersion": "mock-gbif-2026-07",
         "lastUpdated": "2026-07-02",
-        "gbifTaxonKey": 5902609,
+        "gbifTaxonKey": 4606041,
         "occurrenceSummaries": [
           {
             "region": "Asia",
-            "occurrenceCount": 2902
+            "occurrenceCount": 1418
           }
         ]
       },
@@ -383,8 +398,8 @@
           "license": "GAME-ORIGINAL",
           "citation": "Archive of Life: Artifact World — MVP authored content",
           "citationRequired": false,
-          "retrievedAt": "2026-07-03T02:38:57.555Z",
-          "lastUpdated": "2026-07-03T02:38:57.555Z",
+          "retrievedAt": "2026-07-05T02:28:46.443Z",
+          "lastUpdated": "2026-07-05T02:28:46.443Z",
           "isMockData": true
         },
         {
@@ -395,8 +410,8 @@
           "license": "MOCK-SAMPLE",
           "citation": "MOCK SAMPLE — not sourced from live API",
           "citationRequired": true,
-          "retrievedAt": "2026-07-03T02:38:57.555Z",
-          "lastUpdated": "2026-07-03T02:38:57.555Z",
+          "retrievedAt": "2026-07-05T02:28:46.443Z",
+          "lastUpdated": "2026-07-05T02:28:46.443Z",
           "isMockData": true
         }
       ]
@@ -407,6 +422,12 @@
       "scientificName": "Danaus plexippus",
       "group": "Insect",
       "tier": "hero",
+      "representationTier": 6,
+      "lifeStatus": "extant",
+      "timeUnitIds": [
+        "pleistocene",
+        "holocene"
+      ],
       "taxonomy": {
         "family": "Nymphalidae",
         "rank": "species",
@@ -418,7 +439,7 @@
         "assessed": true,
         "sourceVersion": "mock-iucn-2026-07",
         "lastUpdated": "2026-07-02",
-        "iucnTaxonId": 76320
+        "iucnTaxonId": 89418
       },
       "distribution": {
         "continents": [
@@ -431,11 +452,11 @@
         ],
         "sourceVersion": "mock-gbif-2026-07",
         "lastUpdated": "2026-07-02",
-        "gbifTaxonKey": 951157,
+        "gbifTaxonKey": 3366479,
         "occurrenceSummaries": [
           {
             "region": "North America",
-            "occurrenceCount": 600
+            "occurrenceCount": 4480
           }
         ]
       },
@@ -539,8 +560,8 @@
           "license": "GAME-ORIGINAL",
           "citation": "Archive of Life: Artifact World — MVP authored content",
           "citationRequired": false,
-          "retrievedAt": "2026-07-03T02:38:57.555Z",
-          "lastUpdated": "2026-07-03T02:38:57.555Z",
+          "retrievedAt": "2026-07-05T02:28:46.443Z",
+          "lastUpdated": "2026-07-05T02:28:46.443Z",
           "isMockData": true
         },
         {
@@ -551,8 +572,8 @@
           "license": "MOCK-SAMPLE",
           "citation": "MOCK SAMPLE — not sourced from live API",
           "citationRequired": true,
-          "retrievedAt": "2026-07-03T02:38:57.555Z",
-          "lastUpdated": "2026-07-03T02:38:57.555Z",
+          "retrievedAt": "2026-07-05T02:28:46.443Z",
+          "lastUpdated": "2026-07-05T02:28:46.443Z",
           "isMockData": true
         }
       ]
@@ -563,6 +584,13 @@
       "scientificName": "Apis mellifera",
       "group": "Insect",
       "tier": "hero",
+      "representationTier": 6,
+      "lifeStatus": "extant",
+      "timeUnitIds": [
+        "neogene",
+        "pleistocene",
+        "holocene"
+      ],
       "taxonomy": {
         "family": "Apidae",
         "rank": "species",
@@ -574,7 +602,7 @@
         "assessed": true,
         "sourceVersion": "mock-iucn-2026-07",
         "lastUpdated": "2026-07-02",
-        "iucnTaxonId": 9930
+        "iucnTaxonId": 58916
       },
       "distribution": {
         "continents": [
@@ -587,11 +615,11 @@
         ],
         "sourceVersion": "mock-gbif-2026-07",
         "lastUpdated": "2026-07-02",
-        "gbifTaxonKey": 2868473,
+        "gbifTaxonKey": 2773821,
         "occurrenceSummaries": [
           {
             "region": "Global",
-            "occurrenceCount": 1303
+            "occurrenceCount": 2221
           }
         ]
       },
@@ -688,8 +716,8 @@
           "license": "GAME-ORIGINAL",
           "citation": "Archive of Life: Artifact World — MVP authored content",
           "citationRequired": false,
-          "retrievedAt": "2026-07-03T02:38:57.555Z",
-          "lastUpdated": "2026-07-03T02:38:57.555Z",
+          "retrievedAt": "2026-07-05T02:28:46.443Z",
+          "lastUpdated": "2026-07-05T02:28:46.443Z",
           "isMockData": true
         },
         {
@@ -700,8 +728,8 @@
           "license": "MOCK-SAMPLE",
           "citation": "MOCK SAMPLE — not sourced from live API",
           "citationRequired": true,
-          "retrievedAt": "2026-07-03T02:38:57.555Z",
-          "lastUpdated": "2026-07-03T02:38:57.555Z",
+          "retrievedAt": "2026-07-05T02:28:46.443Z",
+          "lastUpdated": "2026-07-05T02:28:46.443Z",
           "isMockData": true
         }
       ]
@@ -712,6 +740,8 @@
       "scientificName": "Latrodectus mactans",
       "group": "Arachnid",
       "tier": "hero",
+      "representationTier": 6,
+      "lifeStatus": "extant",
       "taxonomy": {
         "family": "Theridiidae",
         "rank": "species",
@@ -723,7 +753,7 @@
         "assessed": true,
         "sourceVersion": "mock-iucn-2026-07",
         "lastUpdated": "2026-07-02",
-        "iucnTaxonId": 7001
+        "iucnTaxonId": 33741
       },
       "distribution": {
         "continents": [
@@ -736,11 +766,11 @@
         ],
         "sourceVersion": "mock-gbif-2026-07",
         "lastUpdated": "2026-07-02",
-        "gbifTaxonKey": 9740401,
+        "gbifTaxonKey": 1860293,
         "occurrenceSummaries": [
           {
             "region": "North America",
-            "occurrenceCount": 4981
+            "occurrenceCount": 575
           }
         ]
       },
@@ -803,8 +833,8 @@
           "license": "GAME-ORIGINAL",
           "citation": "Archive of Life: Artifact World — MVP authored content",
           "citationRequired": false,
-          "retrievedAt": "2026-07-03T02:38:57.555Z",
-          "lastUpdated": "2026-07-03T02:38:57.555Z",
+          "retrievedAt": "2026-07-05T02:28:46.443Z",
+          "lastUpdated": "2026-07-05T02:28:46.443Z",
           "isMockData": true
         },
         {
@@ -815,8 +845,8 @@
           "license": "MOCK-SAMPLE",
           "citation": "MOCK SAMPLE — not sourced from live API",
           "citationRequired": true,
-          "retrievedAt": "2026-07-03T02:38:57.555Z",
-          "lastUpdated": "2026-07-03T02:38:57.555Z",
+          "retrievedAt": "2026-07-05T02:28:46.443Z",
+          "lastUpdated": "2026-07-05T02:28:46.443Z",
           "isMockData": true
         }
       ]
@@ -827,6 +857,8 @@
       "scientificName": "Pachnoda marginata",
       "group": "Insect",
       "tier": "hero",
+      "representationTier": 6,
+      "lifeStatus": "extant",
       "taxonomy": {
         "family": "Scarabaeidae",
         "rank": "species",
@@ -838,7 +870,7 @@
         "assessed": true,
         "sourceVersion": "mock-iucn-2026-07",
         "lastUpdated": "2026-07-02",
-        "iucnTaxonId": 28498
+        "iucnTaxonId": 91804
       },
       "distribution": {
         "continents": [
@@ -850,11 +882,11 @@
         ],
         "sourceVersion": "mock-gbif-2026-07",
         "lastUpdated": "2026-07-02",
-        "gbifTaxonKey": 2296713,
+        "gbifTaxonKey": 2186879,
         "occurrenceSummaries": [
           {
             "region": "Africa",
-            "occurrenceCount": 247
+            "occurrenceCount": 3500
           }
         ]
       },
@@ -927,8 +959,8 @@
           "license": "GAME-ORIGINAL",
           "citation": "Archive of Life: Artifact World — MVP authored content",
           "citationRequired": false,
-          "retrievedAt": "2026-07-03T02:38:57.555Z",
-          "lastUpdated": "2026-07-03T02:38:57.555Z",
+          "retrievedAt": "2026-07-05T02:28:46.443Z",
+          "lastUpdated": "2026-07-05T02:28:46.443Z",
           "isMockData": true
         },
         {
@@ -939,8 +971,8 @@
           "license": "MOCK-SAMPLE",
           "citation": "MOCK SAMPLE — not sourced from live API",
           "citationRequired": true,
-          "retrievedAt": "2026-07-03T02:38:57.555Z",
-          "lastUpdated": "2026-07-03T02:38:57.555Z",
+          "retrievedAt": "2026-07-05T02:28:46.443Z",
+          "lastUpdated": "2026-07-05T02:28:46.443Z",
           "isMockData": true
         }
       ]

@@ -46,6 +46,12 @@ export interface EarthLayerProgress {
   analyzedRegions: string[];
 }
 
+export interface TimeAtlasProgress {
+  viewedTimeUnits: string[];
+  viewedGates: string[];
+  analyzedPeriods: string[];
+}
+
 export interface SaveState {
   version: number;
   player: PlayerState;
@@ -55,5 +61,6 @@ export interface SaveState {
   companion: CompanionState;
   stats: GameStats;
   earthLayers: EarthLayerProgress;
+  timeAtlas: TimeAtlasProgress;
   timestamp: number;
 }

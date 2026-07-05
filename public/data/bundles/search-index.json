@@ -1,7 +1,7 @@
 {
   "snapshotId": "sample-2026-07",
   "version": "1.0.0",
-  "totalCount": 23,
+  "totalCount": 39,
   "entries": [
     {
       "id": "panthera_leo",
@@ -10,6 +10,16 @@
       "group": "Mammal",
       "family": "Felidae",
       "tier": "hero",
+      "representationTier": 6,
+      "lifeStatus": "extant",
+      "timeUnitIds": [
+        "pleistocene",
+        "holocene"
+      ],
+      "sources": [
+        "game_authored",
+        "catalogue_of_life"
+      ],
       "region": "savanna",
       "iucnCategory": "Vulnerable",
       "isExtinct": false,
@@ -23,6 +33,17 @@
       "group": "Mammal",
       "family": "Elephantidae",
       "tier": "hero",
+      "representationTier": 6,
+      "lifeStatus": "extant",
+      "timeUnitIds": [
+        "pliocene",
+        "pleistocene",
+        "holocene"
+      ],
+      "sources": [
+        "game_authored",
+        "catalogue_of_life"
+      ],
       "region": "savanna",
       "iucnCategory": "Endangered",
       "isExtinct": false,
@@ -36,6 +57,16 @@
       "group": "Mammal",
       "family": "Canidae",
       "tier": "hero",
+      "representationTier": 6,
+      "lifeStatus": "extant",
+      "timeUnitIds": [
+        "pleistocene",
+        "holocene"
+      ],
+      "sources": [
+        "game_authored",
+        "catalogue_of_life"
+      ],
       "region": "forest",
       "iucnCategory": "Least Concern",
       "isExtinct": false,
@@ -49,6 +80,12 @@
       "group": "Mammal",
       "family": "Cervidae",
       "tier": "hero",
+      "representationTier": 6,
+      "lifeStatus": "extant",
+      "sources": [
+        "game_authored",
+        "catalogue_of_life"
+      ],
       "region": "forest",
       "iucnCategory": "Least Concern",
       "isExtinct": false,
@@ -62,6 +99,12 @@
       "group": "Mammal",
       "family": "Balaenopteridae",
       "tier": "hero",
+      "representationTier": 6,
+      "lifeStatus": "extant",
+      "sources": [
+        "game_authored",
+        "catalogue_of_life"
+      ],
       "region": "coastal",
       "iucnCategory": "Endangered",
       "isExtinct": false,
@@ -75,6 +118,12 @@
       "group": "Mammal",
       "family": "Ursidae",
       "tier": "hero",
+      "representationTier": 6,
+      "lifeStatus": "extant",
+      "sources": [
+        "game_authored",
+        "catalogue_of_life"
+      ],
       "region": "forest",
       "iucnCategory": "Least Concern",
       "isExtinct": false,
@@ -88,6 +137,12 @@
       "group": "Mammal",
       "family": "Castoridae",
       "tier": "hero",
+      "representationTier": 6,
+      "lifeStatus": "extant",
+      "sources": [
+        "game_authored",
+        "catalogue_of_life"
+      ],
       "region": "wetland",
       "iucnCategory": "Least Concern",
       "isExtinct": false,
@@ -101,6 +156,12 @@
       "group": "Mammal",
       "family": "Mustelidae",
       "tier": "hero",
+      "representationTier": 6,
+      "lifeStatus": "extant",
+      "sources": [
+        "game_authored",
+        "catalogue_of_life"
+      ],
       "region": "wetland",
       "iucnCategory": "Least Concern",
       "isExtinct": false,
@@ -114,6 +175,12 @@
       "group": "Mammal",
       "family": "Phocidae",
       "tier": "hero",
+      "representationTier": 6,
+      "lifeStatus": "extant",
+      "sources": [
+        "game_authored",
+        "catalogue_of_life"
+      ],
       "region": "coastal",
       "iucnCategory": "Least Concern",
       "isExtinct": false,
@@ -127,6 +194,12 @@
       "group": "Mammal",
       "family": "Equidae",
       "tier": "hero",
+      "representationTier": 6,
+      "lifeStatus": "extant",
+      "sources": [
+        "game_authored",
+        "catalogue_of_life"
+      ],
       "region": "savanna",
       "iucnCategory": "Endangered",
       "isExtinct": false,
@@ -140,6 +213,16 @@
       "group": "Insect",
       "family": "Nymphalidae",
       "tier": "hero",
+      "representationTier": 6,
+      "lifeStatus": "extant",
+      "timeUnitIds": [
+        "pleistocene",
+        "holocene"
+      ],
+      "sources": [
+        "game_authored",
+        "catalogue_of_life"
+      ],
       "region": "grassland",
       "iucnCategory": "Endangered",
       "isExtinct": false,
@@ -153,6 +236,17 @@
       "group": "Insect",
       "family": "Apidae",
       "tier": "hero",
+      "representationTier": 6,
+      "lifeStatus": "extant",
+      "timeUnitIds": [
+        "neogene",
+        "pleistocene",
+        "holocene"
+      ],
+      "sources": [
+        "game_authored",
+        "catalogue_of_life"
+      ],
       "region": "grassland",
       "iucnCategory": "Data Deficient",
       "isExtinct": false,
@@ -166,6 +260,12 @@
       "group": "Insect",
       "family": "Formicidae",
       "tier": "hero",
+      "representationTier": 6,
+      "lifeStatus": "extant",
+      "sources": [
+        "game_authored",
+        "catalogue_of_life"
+      ],
       "region": "forest",
       "iucnCategory": "Least Concern",
       "isExtinct": false,
@@ -179,6 +279,12 @@
       "group": "Insect",
       "family": "Aeshnidae",
       "tier": "hero",
+      "representationTier": 6,
+      "lifeStatus": "extant",
+      "sources": [
+        "game_authored",
+        "catalogue_of_life"
+      ],
       "region": "wetland",
       "iucnCategory": "Least Concern",
       "isExtinct": false,
@@ -192,6 +298,12 @@
       "group": "Arachnid",
       "family": "Theridiidae",
       "tier": "hero",
+      "representationTier": 6,
+      "lifeStatus": "extant",
+      "sources": [
+        "game_authored",
+        "catalogue_of_life"
+      ],
       "region": "grassland",
       "iucnCategory": "Least Concern",
       "isExtinct": false,
@@ -205,6 +317,12 @@
       "group": "Insect",
       "family": "Scarabaeidae",
       "tier": "hero",
+      "representationTier": 6,
+      "lifeStatus": "extant",
+      "sources": [
+        "game_authored",
+        "catalogue_of_life"
+      ],
       "region": "forest",
       "iucnCategory": "Least Concern",
       "isExtinct": false,
@@ -218,6 +336,12 @@
       "group": "Insect",
       "family": "Libellulidae",
       "tier": "hero",
+      "representationTier": 6,
+      "lifeStatus": "extant",
+      "sources": [
+        "game_authored",
+        "catalogue_of_life"
+      ],
       "region": "wetland",
       "iucnCategory": "Least Concern",
       "isExtinct": false,
@@ -231,6 +355,12 @@
       "group": "Insect",
       "family": "Apidae",
       "tier": "hero",
+      "representationTier": 6,
+      "lifeStatus": "extant",
+      "sources": [
+        "game_authored",
+        "catalogue_of_life"
+      ],
       "region": "grassland",
       "iucnCategory": "Least Concern",
       "isExtinct": false,
@@ -244,6 +374,12 @@
       "group": "Arachnid",
       "family": "Theraphosidae",
       "tier": "hero",
+      "representationTier": 6,
+      "lifeStatus": "extant",
+      "sources": [
+        "game_authored",
+        "catalogue_of_life"
+      ],
       "region": "forest",
       "iucnCategory": "Least Concern",
       "isExtinct": false,
@@ -257,6 +393,12 @@
       "group": "Insect",
       "family": "Scarabaeidae",
       "tier": "hero",
+      "representationTier": 6,
+      "lifeStatus": "extant",
+      "sources": [
+        "game_authored",
+        "catalogue_of_life"
+      ],
       "region": "savanna",
       "iucnCategory": "Least Concern",
       "isExtinct": false,
@@ -270,6 +412,16 @@
       "group": "Mammal",
       "family": "Elephantidae",
       "tier": "hero",
+      "representationTier": 6,
+      "lifeStatus": "extinct",
+      "timeUnitIds": [
+        "pleistocene",
+        "holocene"
+      ],
+      "sources": [
+        "game_authored",
+        "paleobiodb"
+      ],
       "region": "fossil_site",
       "iucnCategory": "Extinct",
       "isExtinct": true,
@@ -283,6 +435,16 @@
       "group": "Reptile",
       "family": "Tyrannosauridae",
       "tier": "hero",
+      "representationTier": 6,
+      "lifeStatus": "extinct",
+      "timeUnitIds": [
+        "late_cretaceous",
+        "cretaceous"
+      ],
+      "sources": [
+        "game_authored",
+        "paleobiodb"
+      ],
       "region": "fossil_site",
       "iucnCategory": "Extinct",
       "isExtinct": true,
@@ -296,11 +458,350 @@
       "group": "Arthropod",
       "family": "Trilobita",
       "tier": "hero",
+      "representationTier": 6,
+      "lifeStatus": "representative_group",
+      "timeUnitIds": [
+        "cambrian",
+        "ordovician",
+        "silurian",
+        "devonian",
+        "carboniferous",
+        "permian"
+      ],
+      "sources": [
+        "game_authored",
+        "paleobiodb"
+      ],
       "region": "fossil_site",
       "iucnCategory": "Extinct",
       "isExtinct": true,
       "isThreatened": false,
       "isPlayable": true
+    },
+    {
+      "id": "sample_cyanobacteria",
+      "commonName": "Cyanobacteria",
+      "scientificName": "Cyanobacteria",
+      "group": "Microbe",
+      "family": "Cyanobacteria",
+      "tier": "database",
+      "representationTier": 1,
+      "lifeStatus": "microbial_or_pre_animal",
+      "timeUnitIds": [
+        "archean",
+        "proterozoic",
+        "phanerozoic"
+      ],
+      "sources": [
+        "catalogue_of_life"
+      ],
+      "isExtinct": false,
+      "isThreatened": false,
+      "isPlayable": false
+    },
+    {
+      "id": "sample_trilobite_elrathia",
+      "commonName": "Elrathia Kingii",
+      "scientificName": "Elrathia kingii",
+      "group": "Arthropod",
+      "family": "Elrathiidae",
+      "tier": "database",
+      "representationTier": 3,
+      "lifeStatus": "extinct",
+      "timeUnitIds": [
+        "cambrian",
+        "furongian"
+      ],
+      "sources": [
+        "paleobiodb"
+      ],
+      "isExtinct": true,
+      "isThreatened": false,
+      "isPlayable": false
+    },
+    {
+      "id": "sample_anomalocaris",
+      "commonName": "Anomalocaris",
+      "scientificName": "Anomalocaris canadensis",
+      "group": "Arthropod",
+      "family": "Anomalocarididae",
+      "tier": "database",
+      "representationTier": 3,
+      "lifeStatus": "extinct",
+      "timeUnitIds": [
+        "cambrian"
+      ],
+      "sources": [
+        "paleobiodb"
+      ],
+      "isExtinct": true,
+      "isThreatened": false,
+      "isPlayable": false
+    },
+    {
+      "id": "sample_dickinsonia",
+      "commonName": "Dickinsonia",
+      "scientificName": "Dickinsonia costata",
+      "group": "Ediacaran",
+      "family": "Dickinsoniidae",
+      "tier": "database",
+      "representationTier": 2,
+      "lifeStatus": "uncertain",
+      "timeUnitIds": [
+        "ediacaran"
+      ],
+      "sources": [
+        "paleobiodb"
+      ],
+      "isExtinct": true,
+      "isThreatened": false,
+      "isPlayable": false
+    },
+    {
+      "id": "sample_charnia",
+      "commonName": "Charnia",
+      "scientificName": "Charnia masoni",
+      "group": "Ediacaran",
+      "family": "Charniidae",
+      "tier": "database",
+      "representationTier": 2,
+      "lifeStatus": "uncertain",
+      "timeUnitIds": [
+        "ediacaran"
+      ],
+      "sources": [
+        "paleobiodb"
+      ],
+      "isExtinct": true,
+      "isThreatened": false,
+      "isPlayable": false
+    },
+    {
+      "id": "sample_brachiosaurus",
+      "commonName": "Brachiosaurus",
+      "scientificName": "Brachiosaurus altithorax",
+      "group": "Reptile",
+      "family": "Brachiosauridae",
+      "tier": "database",
+      "representationTier": 3,
+      "lifeStatus": "extinct",
+      "timeUnitIds": [
+        "late_jurassic",
+        "jurassic"
+      ],
+      "sources": [
+        "paleobiodb"
+      ],
+      "isExtinct": true,
+      "isThreatened": false,
+      "isPlayable": false
+    },
+    {
+      "id": "sample_archaeopteryx",
+      "commonName": "Archaeopteryx",
+      "scientificName": "Archaeopteryx lithographica",
+      "group": "Reptile",
+      "family": "Archaeopterygidae",
+      "tier": "database",
+      "representationTier": 3,
+      "lifeStatus": "extinct",
+      "timeUnitIds": [
+        "late_jurassic"
+      ],
+      "sources": [
+        "paleobiodb"
+      ],
+      "isExtinct": true,
+      "isThreatened": false,
+      "isPlayable": false
+    },
+    {
+      "id": "sample_coelophysis",
+      "commonName": "Coelophysis",
+      "scientificName": "Coelophysis bauri",
+      "group": "Reptile",
+      "family": "Coelophysidae",
+      "tier": "database",
+      "representationTier": 3,
+      "lifeStatus": "extinct",
+      "timeUnitIds": [
+        "late_triassic",
+        "triassic"
+      ],
+      "sources": [
+        "paleobiodb"
+      ],
+      "isExtinct": true,
+      "isThreatened": false,
+      "isPlayable": false
+    },
+    {
+      "id": "sample_ammonite_cretaceous",
+      "commonName": "Baculites",
+      "scientificName": "Baculites compressus",
+      "group": "Mollusk",
+      "family": "Baculitidae",
+      "tier": "database",
+      "representationTier": 3,
+      "lifeStatus": "extinct",
+      "timeUnitIds": [
+        "late_cretaceous",
+        "cretaceous"
+      ],
+      "sources": [
+        "paleobiodb"
+      ],
+      "isExtinct": true,
+      "isThreatened": false,
+      "isPlayable": false
+    },
+    {
+      "id": "sample_ammonite_devonian",
+      "commonName": "Ammonoids",
+      "scientificName": "Ammonoidea",
+      "group": "Mollusk",
+      "family": "Ammonoidea",
+      "tier": "database",
+      "representationTier": 1,
+      "lifeStatus": "representative_group",
+      "timeUnitIds": [
+        "devonian",
+        "carboniferous",
+        "permian",
+        "triassic",
+        "jurassic",
+        "cretaceous"
+      ],
+      "sources": [
+        "paleobiodb"
+      ],
+      "isExtinct": true,
+      "isThreatened": false,
+      "isPlayable": false
+    },
+    {
+      "id": "sample_trilobite_group",
+      "commonName": "Trilobites",
+      "scientificName": "Trilobita",
+      "group": "Arthropod",
+      "family": "Trilobita",
+      "tier": "database",
+      "representationTier": 1,
+      "lifeStatus": "representative_group",
+      "timeUnitIds": [
+        "cambrian",
+        "ordovician",
+        "silurian",
+        "devonian",
+        "carboniferous",
+        "permian"
+      ],
+      "sources": [
+        "paleobiodb"
+      ],
+      "isExtinct": true,
+      "isThreatened": false,
+      "isPlayable": false
+    },
+    {
+      "id": "sample_meganeura",
+      "commonName": "Meganeura",
+      "scientificName": "Meganeura monyi",
+      "group": "Insect",
+      "family": "Meganeuridae",
+      "tier": "database",
+      "representationTier": 3,
+      "lifeStatus": "extinct",
+      "timeUnitIds": [
+        "pennsylvanian",
+        "carboniferous"
+      ],
+      "sources": [
+        "paleobiodb"
+      ],
+      "isExtinct": true,
+      "isThreatened": false,
+      "isPlayable": false
+    },
+    {
+      "id": "sample_stromatolite",
+      "commonName": "Stromatolite",
+      "scientificName": "Stromatolite",
+      "group": "Microbe",
+      "family": "Microbial mat",
+      "tier": "database",
+      "representationTier": 2,
+      "lifeStatus": "microbial_or_pre_animal",
+      "timeUnitIds": [
+        "archean",
+        "proterozoic",
+        "phanerozoic"
+      ],
+      "sources": [
+        "paleobiodb"
+      ],
+      "isExtinct": false,
+      "isThreatened": false,
+      "isPlayable": false
+    },
+    {
+      "id": "sample_archean_microbe",
+      "commonName": "Archean microbial mat",
+      "scientificName": "Microbial mat community",
+      "group": "Microbe",
+      "family": "Prokaryota",
+      "tier": "database",
+      "representationTier": 0,
+      "lifeStatus": "microbial_or_pre_animal",
+      "timeUnitIds": [
+        "archean",
+        "proterozoic"
+      ],
+      "sources": [
+        "paleobiodb"
+      ],
+      "isExtinct": false,
+      "isThreatened": false,
+      "isPlayable": false
+    },
+    {
+      "id": "sample_saber_toothed_cat",
+      "commonName": "Saber-toothed Cat",
+      "scientificName": "Smilodon fatalis",
+      "group": "Mammal",
+      "family": "Felidae",
+      "tier": "database",
+      "representationTier": 3,
+      "lifeStatus": "extinct",
+      "timeUnitIds": [
+        "pleistocene"
+      ],
+      "sources": [
+        "paleobiodb",
+        "neotoma"
+      ],
+      "isExtinct": true,
+      "isThreatened": false,
+      "isPlayable": false
+    },
+    {
+      "id": "sample_prebiotic_chemistry",
+      "commonName": "Prebiotic systems",
+      "scientificName": "Prebiotic molecular systems",
+      "group": "Pre-life",
+      "family": "—",
+      "tier": "database",
+      "representationTier": 0,
+      "lifeStatus": "uncertain",
+      "timeUnitIds": [
+        "hadean"
+      ],
+      "sources": [
+        "game_authored"
+      ],
+      "isExtinct": false,
+      "isThreatened": false,
+      "isPlayable": false
     }
   ]
 }

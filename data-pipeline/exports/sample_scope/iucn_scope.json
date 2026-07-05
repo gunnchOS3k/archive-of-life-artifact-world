@@ -1,0 +1,12 @@
+{
+  "snapshotId": "sample-scope-2026-07",
+  "description": "MOCK SAMPLE — IUCN-assessed taxa required in conservation overlay",
+  "taxonIds": [
+    "panthera_leo", "loxodonta_africana", "canis_lupus", "odocoileus_virginianus",
+    "balaenoptera_musculus", "ursus_americanus", "castor_canadensis",
+    "danaus_plexippus", "apis_mellifera", "formica_rufa", "anax_junius",
+    "latrodectus_mactans", "dynastes_hercules", "libellula_quadrimaculata",
+    "bombus_terrestris", "acanthoscurria_geniculata", "pachnoda_marginata",
+    "mammuthus_primigenius", "tyrannosaurus_rex", "trilobita_order"
+  ]
+}

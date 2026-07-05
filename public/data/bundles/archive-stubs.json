@@ -1,0 +1,531 @@
+{
+  "species": [
+    {
+      "id": "sample_cyanobacteria",
+      "commonName": "Cyanobacteria",
+      "scientificName": "Cyanobacteria",
+      "group": "Microbe",
+      "tier": "database",
+      "representationTier": 1,
+      "lifeStatus": "microbial_or_pre_animal",
+      "timeUnitIds": [
+        "archean",
+        "proterozoic",
+        "phanerozoic"
+      ],
+      "taxonomy": {
+        "family": "Cyanobacteria",
+        "rank": "species",
+        "acceptedName": "Cyanobacteria"
+      },
+      "artifactTemplates": [],
+      "provenance": [
+        {
+          "source": "catalogue_of_life",
+          "sourceVersion": "mock-sample-2026-07",
+          "sourceRecordId": "sample_cyanobacteria",
+          "license": "MOCK-SAMPLE",
+          "citation": "MOCK SAMPLE — tiered archive stub for pipeline demonstration",
+          "citationRequired": true,
+          "retrievedAt": "2026-07-05T02:28:46.443Z",
+          "lastUpdated": "2026-07-05T02:28:46.443Z",
+          "isMockData": true
+        }
+      ]
+    },
+    {
+      "id": "sample_trilobite_elrathia",
+      "commonName": "Elrathia Kingii",
+      "scientificName": "Elrathia kingii",
+      "group": "Arthropod",
+      "tier": "database",
+      "representationTier": 3,
+      "lifeStatus": "extinct",
+      "timeUnitIds": [
+        "cambrian",
+        "furongian"
+      ],
+      "taxonomy": {
+        "family": "Elrathiidae",
+        "rank": "species",
+        "acceptedName": "Elrathia kingii"
+      },
+      "artifactTemplates": [],
+      "provenance": [
+        {
+          "source": "paleobiodb",
+          "sourceVersion": "mock-sample-2026-07",
+          "sourceRecordId": "sample_trilobite_elrathia",
+          "license": "MOCK-SAMPLE",
+          "citation": "MOCK SAMPLE — tiered archive stub for pipeline demonstration",
+          "citationRequired": true,
+          "retrievedAt": "2026-07-05T02:28:46.443Z",
+          "lastUpdated": "2026-07-05T02:28:46.443Z",
+          "isMockData": true
+        }
+      ]
+    },
+    {
+      "id": "sample_anomalocaris",
+      "commonName": "Anomalocaris",
+      "scientificName": "Anomalocaris canadensis",
+      "group": "Arthropod",
+      "tier": "database",
+      "representationTier": 3,
+      "lifeStatus": "extinct",
+      "timeUnitIds": [
+        "cambrian"
+      ],
+      "taxonomy": {
+        "family": "Anomalocarididae",
+        "rank": "species",
+        "acceptedName": "Anomalocaris canadensis"
+      },
+      "artifactTemplates": [],
+      "provenance": [
+        {
+          "source": "paleobiodb",
+          "sourceVersion": "mock-sample-2026-07",
+          "sourceRecordId": "sample_anomalocaris",
+          "license": "MOCK-SAMPLE",
+          "citation": "MOCK SAMPLE — tiered archive stub for pipeline demonstration",
+          "citationRequired": true,
+          "retrievedAt": "2026-07-05T02:28:46.443Z",
+          "lastUpdated": "2026-07-05T02:28:46.443Z",
+          "isMockData": true
+        }
+      ]
+    },
+    {
+      "id": "sample_dickinsonia",
+      "commonName": "Dickinsonia",
+      "scientificName": "Dickinsonia costata",
+      "group": "Ediacaran",
+      "tier": "database",
+      "representationTier": 2,
+      "lifeStatus": "uncertain",
+      "timeUnitIds": [
+        "ediacaran"
+      ],
+      "taxonomy": {
+        "family": "Dickinsoniidae",
+        "rank": "species",
+        "acceptedName": "Dickinsonia costata"
+      },
+      "artifactTemplates": [],
+      "provenance": [
+        {
+          "source": "paleobiodb",
+          "sourceVersion": "mock-sample-2026-07",
+          "sourceRecordId": "sample_dickinsonia",
+          "license": "MOCK-SAMPLE",
+          "citation": "MOCK SAMPLE — tiered archive stub for pipeline demonstration",
+          "citationRequired": true,
+          "retrievedAt": "2026-07-05T02:28:46.443Z",
+          "lastUpdated": "2026-07-05T02:28:46.443Z",
+          "isMockData": true
+        }
+      ]
+    },
+    {
+      "id": "sample_charnia",
+      "commonName": "Charnia",
+      "scientificName": "Charnia masoni",
+      "group": "Ediacaran",
+      "tier": "database",
+      "representationTier": 2,
+      "lifeStatus": "uncertain",
+      "timeUnitIds": [
+        "ediacaran"
+      ],
+      "taxonomy": {
+        "family": "Charniidae",
+        "rank": "species",
+        "acceptedName": "Charnia masoni"
+      },
+      "artifactTemplates": [],
+      "provenance": [
+        {
+          "source": "paleobiodb",
+          "sourceVersion": "mock-sample-2026-07",
+          "sourceRecordId": "sample_charnia",
+          "license": "MOCK-SAMPLE",
+          "citation": "MOCK SAMPLE — tiered archive stub for pipeline demonstration",
+          "citationRequired": true,
+          "retrievedAt": "2026-07-05T02:28:46.443Z",
+          "lastUpdated": "2026-07-05T02:28:46.443Z",
+          "isMockData": true
+        }
+      ]
+    },
+    {
+      "id": "sample_brachiosaurus",
+      "commonName": "Brachiosaurus",
+      "scientificName": "Brachiosaurus altithorax",
+      "group": "Reptile",
+      "tier": "database",
+      "representationTier": 3,
+      "lifeStatus": "extinct",
+      "timeUnitIds": [
+        "late_jurassic",
+        "jurassic"
+      ],
+      "taxonomy": {
+        "family": "Brachiosauridae",
+        "rank": "species",
+        "acceptedName": "Brachiosaurus altithorax"
+      },
+      "artifactTemplates": [],
+      "provenance": [
+        {
+          "source": "paleobiodb",
+          "sourceVersion": "mock-sample-2026-07",
+          "sourceRecordId": "sample_brachiosaurus",
+          "license": "MOCK-SAMPLE",
+          "citation": "MOCK SAMPLE — tiered archive stub for pipeline demonstration",
+          "citationRequired": true,
+          "retrievedAt": "2026-07-05T02:28:46.443Z",
+          "lastUpdated": "2026-07-05T02:28:46.443Z",
+          "isMockData": true
+        }
+      ]
+    },
+    {
+      "id": "sample_archaeopteryx",
+      "commonName": "Archaeopteryx",
+      "scientificName": "Archaeopteryx lithographica",
+      "group": "Reptile",
+      "tier": "database",
+      "representationTier": 3,
+      "lifeStatus": "extinct",
+      "timeUnitIds": [
+        "late_jurassic"
+      ],
+      "taxonomy": {
+        "family": "Archaeopterygidae",
+        "rank": "species",
+        "acceptedName": "Archaeopteryx lithographica"
+      },
+      "artifactTemplates": [],
+      "provenance": [
+        {
+          "source": "paleobiodb",
+          "sourceVersion": "mock-sample-2026-07",
+          "sourceRecordId": "sample_archaeopteryx",
+          "license": "MOCK-SAMPLE",
+          "citation": "MOCK SAMPLE — tiered archive stub for pipeline demonstration",
+          "citationRequired": true,
+          "retrievedAt": "2026-07-05T02:28:46.443Z",
+          "lastUpdated": "2026-07-05T02:28:46.443Z",
+          "isMockData": true
+        }
+      ]
+    },
+    {
+      "id": "sample_coelophysis",
+      "commonName": "Coelophysis",
+      "scientificName": "Coelophysis bauri",
+      "group": "Reptile",
+      "tier": "database",
+      "representationTier": 3,
+      "lifeStatus": "extinct",
+      "timeUnitIds": [
+        "late_triassic",
+        "triassic"
+      ],
+      "taxonomy": {
+        "family": "Coelophysidae",
+        "rank": "species",
+        "acceptedName": "Coelophysis bauri"
+      },
+      "artifactTemplates": [],
+      "provenance": [
+        {
+          "source": "paleobiodb",
+          "sourceVersion": "mock-sample-2026-07",
+          "sourceRecordId": "sample_coelophysis",
+          "license": "MOCK-SAMPLE",
+          "citation": "MOCK SAMPLE — tiered archive stub for pipeline demonstration",
+          "citationRequired": true,
+          "retrievedAt": "2026-07-05T02:28:46.443Z",
+          "lastUpdated": "2026-07-05T02:28:46.443Z",
+          "isMockData": true
+        }
+      ]
+    },
+    {
+      "id": "sample_ammonite_cretaceous",
+      "commonName": "Baculites",
+      "scientificName": "Baculites compressus",
+      "group": "Mollusk",
+      "tier": "database",
+      "representationTier": 3,
+      "lifeStatus": "extinct",
+      "timeUnitIds": [
+        "late_cretaceous",
+        "cretaceous"
+      ],
+      "taxonomy": {
+        "family": "Baculitidae",
+        "rank": "species",
+        "acceptedName": "Baculites compressus"
+      },
+      "artifactTemplates": [],
+      "provenance": [
+        {
+          "source": "paleobiodb",
+          "sourceVersion": "mock-sample-2026-07",
+          "sourceRecordId": "sample_ammonite_cretaceous",
+          "license": "MOCK-SAMPLE",
+          "citation": "MOCK SAMPLE — tiered archive stub for pipeline demonstration",
+          "citationRequired": true,
+          "retrievedAt": "2026-07-05T02:28:46.443Z",
+          "lastUpdated": "2026-07-05T02:28:46.443Z",
+          "isMockData": true
+        }
+      ]
+    },
+    {
+      "id": "sample_ammonite_devonian",
+      "commonName": "Ammonoids",
+      "scientificName": "Ammonoidea",
+      "group": "Mollusk",
+      "tier": "database",
+      "representationTier": 1,
+      "lifeStatus": "representative_group",
+      "timeUnitIds": [
+        "devonian",
+        "carboniferous",
+        "permian",
+        "triassic",
+        "jurassic",
+        "cretaceous"
+      ],
+      "taxonomy": {
+        "family": "Ammonoidea",
+        "rank": "species",
+        "acceptedName": "Ammonoidea"
+      },
+      "artifactTemplates": [],
+      "provenance": [
+        {
+          "source": "paleobiodb",
+          "sourceVersion": "mock-sample-2026-07",
+          "sourceRecordId": "sample_ammonite_devonian",
+          "license": "MOCK-SAMPLE",
+          "citation": "MOCK SAMPLE — tiered archive stub for pipeline demonstration",
+          "citationRequired": true,
+          "retrievedAt": "2026-07-05T02:28:46.443Z",
+          "lastUpdated": "2026-07-05T02:28:46.443Z",
+          "isMockData": true
+        }
+      ]
+    },
+    {
+      "id": "sample_trilobite_group",
+      "commonName": "Trilobites",
+      "scientificName": "Trilobita",
+      "group": "Arthropod",
+      "tier": "database",
+      "representationTier": 1,
+      "lifeStatus": "representative_group",
+      "timeUnitIds": [
+        "cambrian",
+        "ordovician",
+        "silurian",
+        "devonian",
+        "carboniferous",
+        "permian"
+      ],
+      "taxonomy": {
+        "family": "Trilobita",
+        "rank": "species",
+        "acceptedName": "Trilobita"
+      },
+      "artifactTemplates": [],
+      "provenance": [
+        {
+          "source": "paleobiodb",
+          "sourceVersion": "mock-sample-2026-07",
+          "sourceRecordId": "sample_trilobite_group",
+          "license": "MOCK-SAMPLE",
+          "citation": "MOCK SAMPLE — tiered archive stub for pipeline demonstration",
+          "citationRequired": true,
+          "retrievedAt": "2026-07-05T02:28:46.443Z",
+          "lastUpdated": "2026-07-05T02:28:46.443Z",
+          "isMockData": true
+        }
+      ]
+    },
+    {
+      "id": "sample_meganeura",
+      "commonName": "Meganeura",
+      "scientificName": "Meganeura monyi",
+      "group": "Insect",
+      "tier": "database",
+      "representationTier": 3,
+      "lifeStatus": "extinct",
+      "timeUnitIds": [
+        "pennsylvanian",
+        "carboniferous"
+      ],
+      "taxonomy": {
+        "family": "Meganeuridae",
+        "rank": "species",
+        "acceptedName": "Meganeura monyi"
+      },
+      "artifactTemplates": [],
+      "provenance": [
+        {
+          "source": "paleobiodb",
+          "sourceVersion": "mock-sample-2026-07",
+          "sourceRecordId": "sample_meganeura",
+          "license": "MOCK-SAMPLE",
+          "citation": "MOCK SAMPLE — tiered archive stub for pipeline demonstration",
+          "citationRequired": true,
+          "retrievedAt": "2026-07-05T02:28:46.443Z",
+          "lastUpdated": "2026-07-05T02:28:46.443Z",
+          "isMockData": true
+        }
+      ]
+    },
+    {
+      "id": "sample_stromatolite",
+      "commonName": "Stromatolite",
+      "scientificName": "Stromatolite",
+      "group": "Microbe",
+      "tier": "database",
+      "representationTier": 2,
+      "lifeStatus": "microbial_or_pre_animal",
+      "timeUnitIds": [
+        "archean",
+        "proterozoic",
+        "phanerozoic"
+      ],
+      "taxonomy": {
+        "family": "Microbial mat",
+        "rank": "species",
+        "acceptedName": "Stromatolite"
+      },
+      "artifactTemplates": [],
+      "provenance": [
+        {
+          "source": "paleobiodb",
+          "sourceVersion": "mock-sample-2026-07",
+          "sourceRecordId": "sample_stromatolite",
+          "license": "MOCK-SAMPLE",
+          "citation": "MOCK SAMPLE — tiered archive stub for pipeline demonstration",
+          "citationRequired": true,
+          "retrievedAt": "2026-07-05T02:28:46.443Z",
+          "lastUpdated": "2026-07-05T02:28:46.443Z",
+          "isMockData": true
+        }
+      ]
+    },
+    {
+      "id": "sample_archean_microbe",
+      "commonName": "Archean microbial mat",
+      "scientificName": "Microbial mat community",
+      "group": "Microbe",
+      "tier": "database",
+      "representationTier": 0,
+      "lifeStatus": "microbial_or_pre_animal",
+      "timeUnitIds": [
+        "archean",
+        "proterozoic"
+      ],
+      "taxonomy": {
+        "family": "Prokaryota",
+        "rank": "species",
+        "acceptedName": "Microbial mat community"
+      },
+      "artifactTemplates": [],
+      "provenance": [
+        {
+          "source": "paleobiodb",
+          "sourceVersion": "mock-sample-2026-07",
+          "sourceRecordId": "sample_archean_microbe",
+          "license": "MOCK-SAMPLE",
+          "citation": "MOCK SAMPLE — tiered archive stub for pipeline demonstration",
+          "citationRequired": true,
+          "retrievedAt": "2026-07-05T02:28:46.443Z",
+          "lastUpdated": "2026-07-05T02:28:46.443Z",
+          "isMockData": true
+        }
+      ]
+    },
+    {
+      "id": "sample_saber_toothed_cat",
+      "commonName": "Saber-toothed Cat",
+      "scientificName": "Smilodon fatalis",
+      "group": "Mammal",
+      "tier": "database",
+      "representationTier": 3,
+      "lifeStatus": "extinct",
+      "timeUnitIds": [
+        "pleistocene"
+      ],
+      "taxonomy": {
+        "family": "Felidae",
+        "rank": "species",
+        "acceptedName": "Smilodon fatalis"
+      },
+      "artifactTemplates": [],
+      "provenance": [
+        {
+          "source": "paleobiodb",
+          "sourceVersion": "mock-sample-2026-07",
+          "sourceRecordId": "sample_saber_toothed_cat",
+          "license": "MOCK-SAMPLE",
+          "citation": "MOCK SAMPLE — tiered archive stub for pipeline demonstration",
+          "citationRequired": true,
+          "retrievedAt": "2026-07-05T02:28:46.443Z",
+          "lastUpdated": "2026-07-05T02:28:46.443Z",
+          "isMockData": true
+        },
+        {
+          "source": "neotoma",
+          "sourceVersion": "mock-sample-2026-07",
+          "sourceRecordId": "sample_saber_toothed_cat",
+          "license": "MOCK-SAMPLE",
+          "citation": "MOCK SAMPLE — tiered archive stub for pipeline demonstration",
+          "citationRequired": true,
+          "retrievedAt": "2026-07-05T02:28:46.443Z",
+          "lastUpdated": "2026-07-05T02:28:46.443Z",
+          "isMockData": true
+        }
+      ]
+    },
+    {
+      "id": "sample_prebiotic_chemistry",
+      "commonName": "Prebiotic systems",
+      "scientificName": "Prebiotic molecular systems",
+      "group": "Pre-life",
+      "tier": "database",
+      "representationTier": 0,
+      "lifeStatus": "uncertain",
+      "timeUnitIds": [
+        "hadean"
+      ],
+      "taxonomy": {
+        "family": "—",
+        "rank": "species",
+        "acceptedName": "Prebiotic molecular systems"
+      },
+      "artifactTemplates": [],
+      "provenance": [
+        {
+          "source": "game_authored",
+          "sourceVersion": "mock-sample-2026-07",
+          "sourceRecordId": "sample_prebiotic_chemistry",
+          "license": "MOCK-SAMPLE",
+          "citation": "MOCK SAMPLE — tiered archive stub for pipeline demonstration",
+          "citationRequired": true,
+          "retrievedAt": "2026-07-05T02:28:46.443Z",
+          "lastUpdated": "2026-07-05T02:28:46.443Z",
+          "isMockData": true
+        }
+      ]
+    }
+  ]
+}

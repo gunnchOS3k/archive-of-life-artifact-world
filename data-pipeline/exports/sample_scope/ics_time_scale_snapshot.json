@@ -1,0 +1,11 @@
+{
+  "snapshotId": "ics-sample-2026-07",
+  "description": "MOCK SAMPLE — ICS time unit IDs required in Time Atlas for this snapshot",
+  "unitIds": [
+    "hadean", "archean", "proterozoic", "phanerozoic",
+    "ediacaran", "cambrian", "ordovician", "silurian", "devonian",
+    "carboniferous", "permian", "triassic", "jurassic", "cretaceous",
+    "paleogene", "neogene", "quaternary",
+    "holocene", "pleistocene", "late_cretaceous", "late_jurassic"
+  ]
+}

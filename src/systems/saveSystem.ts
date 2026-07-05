@@ -44,6 +44,11 @@ export function createDefaultSave(): SaveState {
       viewedTabs: [],
       analyzedRegions: [],
     },
+    timeAtlas: {
+      viewedTimeUnits: [],
+      viewedGates: [],
+      analyzedPeriods: [],
+    },
     timestamp: Date.now(),
   };
 }
@@ -58,6 +63,7 @@ export function loadSave(): SaveState | null {
       ...defaults,
       ...save,
       earthLayers: save.earthLayers ?? defaults.earthLayers,
+      timeAtlas: save.timeAtlas ?? defaults.timeAtlas,
     };
   } catch {
     return null;
@@ -74,6 +80,7 @@ export function saveGame(state: SaveState): void {
     companion: state.companion,
     stats: state.stats,
     earthLayers: state.earthLayers ?? { viewedTabs: [], analyzedRegions: [] },
+    timeAtlas: state.timeAtlas ?? { viewedTimeUnits: [], viewedGates: [], analyzedPeriods: [] },
     timestamp: Date.now(),
   };
   localStorage.setItem(SAVE_KEY, JSON.stringify(data));
