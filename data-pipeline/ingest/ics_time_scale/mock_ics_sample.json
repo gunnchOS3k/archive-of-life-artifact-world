@@ -1,0 +1,33 @@
+{
+  "source": "ics_chronostratigraphic",
+  "source_version": "ICS-Chart-v2024/12",
+  "description": "MOCK SAMPLE — subset of official ICS divisions for pipeline demonstration",
+  "units": [
+    {
+      "id": "holocene",
+      "name": "Holocene",
+      "rank": "epoch",
+      "parent_id": "quaternary",
+      "start_ma": 0.0117,
+      "end_ma": 0,
+      "display_order": 100,
+      "description": "Current interglacial epoch.",
+      "major_events": ["Agriculture", "Anthropocene debate"],
+      "dominant_life": ["Modern ecosystems", "Homo sapiens"],
+      "climate_summary": "Interglacial warming"
+    },
+    {
+      "id": "cretaceous",
+      "name": "Cretaceous",
+      "rank": "period",
+      "parent_id": "mesozoic",
+      "start_ma": 145,
+      "end_ma": 66,
+      "display_order": 80,
+      "description": "Age of flowering plants and apex dinosaurs.",
+      "major_events": ["K-Pg extinction"],
+      "dominant_life": ["Dinosaurs", "Ammonites"],
+      "climate_summary": "Warm greenhouse"
+    }
+  ]
+}

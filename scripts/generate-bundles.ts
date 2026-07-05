@@ -5,7 +5,8 @@
 import { readFileSync, writeFileSync, mkdirSync, existsSync } from 'fs';
 import { join, dirname } from 'path';
 import { fileURLToPath } from 'url';
-import type { ArchiveSpecies, SpeciesIndexEntry, DataManifest } from '../src/schema';
+import type { ArchiveSpecies, SpeciesIndexEntry, DataManifest, SourceName } from '../src/schema';
+import type { TaxonTimeRangesBundle, TaxonLifeStatus } from '../src/time/schema';
 import { isThreatened, isExtinctCategory } from '../src/schema/conservation';
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
@@ -144,9 +145,29 @@ function getNasaEnvironment(legacy: LegacySpecies) {
   };
 }
 
-function toArchiveSpecies(legacy: LegacySpecies): ArchiveSpecies {
+function loadTaxonTimeMap(): Map<string, { timeUnitIds: string[]; lifeStatus: TaxonLifeStatus }> {
+  const path = join(ROOT, 'public', 'data', 'time', 'taxon_time_ranges.json');
+  if (!existsSync(path)) return new Map();
+  const bundle = readJson<TaxonTimeRangesBundle>(path);
+  const map = new Map<string, { timeUnitIds: string[]; lifeStatus: TaxonLifeStatus }>();
+  for (const r of bundle.ranges) {
+    map.set(r.taxonId, { timeUnitIds: r.timeUnitIds, lifeStatus: r.lifeStatus });
+  }
+  return map;
+}
+
+function tierFromLegacy(): 6 {
+  return 6;
+}
+
+function sourcesFromProvenance(sp: ArchiveSpecies): SourceName[] {
+  return [...new Set(sp.provenance.map((p) => p.source))];
+}
+
+function toArchiveSpecies(legacy: LegacySpecies, timeMap: Map<string, { timeUnitIds: string[]; lifeStatus: TaxonLifeStatus }>): ArchiveSpecies {
   const isExtinct = legacy.conservationStatus === 'Extinct';
   const nasaEnv = getNasaEnvironment(legacy);
+  const timeInfo = timeMap.get(legacy.id);
 
   return {
     id: legacy.id,
@@ -154,6 +175,9 @@ function toArchiveSpecies(legacy: LegacySpecies): ArchiveSpecies {
     scientificName: legacy.scientificName,
     group: legacy.group,
     tier: 'hero',
+    representationTier: tierFromLegacy(),
+    lifeStatus: timeInfo?.lifeStatus ?? (isExtinct ? 'extinct' : 'extant'),
+    timeUnitIds: timeInfo?.timeUnitIds,
     taxonomy: {
       family: legacy.family,
       rank: legacy.rank as ArchiveSpecies['taxonomy']['rank'],
@@ -226,17 +250,105 @@ function toIndexEntry(sp: ArchiveSpecies): SpeciesIndexEntry {
     group: sp.group,
     family: sp.taxonomy.family,
     tier: sp.tier,
+    representationTier: sp.representationTier,
+    lifeStatus: sp.lifeStatus,
+    timeUnitIds: sp.timeUnitIds,
+    sources: sourcesFromProvenance(sp),
     region: sp.gameplay?.region,
     iucnCategory: cat,
-    isExtinct: isExtinctCategory(cat as never),
+    isExtinct: isExtinctCategory(cat as never) || sp.lifeStatus === 'extinct' || sp.lifeStatus === 'fossil_only',
     isThreatened: isThreatened(cat as never),
-    isPlayable: sp.tier === 'hero' || sp.tier === 'regional',
+    isPlayable: sp.representationTier >= 5,
+  };
+}
+
+interface StubDef {
+  id: string;
+  commonName: string;
+  scientificName: string;
+  group: string;
+  family: string;
+  representationTier: 0 | 1 | 2 | 3;
+  lifeStatus: TaxonLifeStatus;
+  timeUnitIds: string[];
+  sources: SourceName[];
+  isExtinct?: boolean;
+}
+
+const ARCHIVE_STUBS: StubDef[] = [
+  { id: 'sample_cyanobacteria', commonName: 'Cyanobacteria', scientificName: 'Cyanobacteria', group: 'Microbe', family: 'Cyanobacteria', representationTier: 1, lifeStatus: 'microbial_or_pre_animal', timeUnitIds: ['archean', 'proterozoic', 'phanerozoic'], sources: ['catalogue_of_life'] },
+  { id: 'sample_trilobite_elrathia', commonName: 'Elrathia Kingii', scientificName: 'Elrathia kingii', group: 'Arthropod', family: 'Elrathiidae', representationTier: 3, lifeStatus: 'extinct', timeUnitIds: ['cambrian', 'furongian'], sources: ['paleobiodb'], isExtinct: true },
+  { id: 'sample_anomalocaris', commonName: 'Anomalocaris', scientificName: 'Anomalocaris canadensis', group: 'Arthropod', family: 'Anomalocarididae', representationTier: 3, lifeStatus: 'extinct', timeUnitIds: ['cambrian'], sources: ['paleobiodb'], isExtinct: true },
+  { id: 'sample_dickinsonia', commonName: 'Dickinsonia', scientificName: 'Dickinsonia costata', group: 'Ediacaran', family: 'Dickinsoniidae', representationTier: 2, lifeStatus: 'uncertain', timeUnitIds: ['ediacaran'], sources: ['paleobiodb'], isExtinct: true },
+  { id: 'sample_charnia', commonName: 'Charnia', scientificName: 'Charnia masoni', group: 'Ediacaran', family: 'Charniidae', representationTier: 2, lifeStatus: 'uncertain', timeUnitIds: ['ediacaran'], sources: ['paleobiodb'], isExtinct: true },
+  { id: 'sample_brachiosaurus', commonName: 'Brachiosaurus', scientificName: 'Brachiosaurus altithorax', group: 'Reptile', family: 'Brachiosauridae', representationTier: 3, lifeStatus: 'extinct', timeUnitIds: ['late_jurassic', 'jurassic'], sources: ['paleobiodb'], isExtinct: true },
+  { id: 'sample_archaeopteryx', commonName: 'Archaeopteryx', scientificName: 'Archaeopteryx lithographica', group: 'Reptile', family: 'Archaeopterygidae', representationTier: 3, lifeStatus: 'extinct', timeUnitIds: ['late_jurassic'], sources: ['paleobiodb'], isExtinct: true },
+  { id: 'sample_coelophysis', commonName: 'Coelophysis', scientificName: 'Coelophysis bauri', group: 'Reptile', family: 'Coelophysidae', representationTier: 3, lifeStatus: 'extinct', timeUnitIds: ['late_triassic', 'triassic'], sources: ['paleobiodb'], isExtinct: true },
+  { id: 'sample_ammonite_cretaceous', commonName: 'Baculites', scientificName: 'Baculites compressus', group: 'Mollusk', family: 'Baculitidae', representationTier: 3, lifeStatus: 'extinct', timeUnitIds: ['late_cretaceous', 'cretaceous'], sources: ['paleobiodb'], isExtinct: true },
+  { id: 'sample_ammonite_devonian', commonName: 'Ammonoids', scientificName: 'Ammonoidea', group: 'Mollusk', family: 'Ammonoidea', representationTier: 1, lifeStatus: 'representative_group', timeUnitIds: ['devonian', 'carboniferous', 'permian', 'triassic', 'jurassic', 'cretaceous'], sources: ['paleobiodb'], isExtinct: true },
+  { id: 'sample_trilobite_group', commonName: 'Trilobites', scientificName: 'Trilobita', group: 'Arthropod', family: 'Trilobita', representationTier: 1, lifeStatus: 'representative_group', timeUnitIds: ['cambrian', 'ordovician', 'silurian', 'devonian', 'carboniferous', 'permian'], sources: ['paleobiodb'], isExtinct: true },
+  { id: 'sample_meganeura', commonName: 'Meganeura', scientificName: 'Meganeura monyi', group: 'Insect', family: 'Meganeuridae', representationTier: 3, lifeStatus: 'extinct', timeUnitIds: ['pennsylvanian', 'carboniferous'], sources: ['paleobiodb'], isExtinct: true },
+  { id: 'sample_stromatolite', commonName: 'Stromatolite', scientificName: 'Stromatolite', group: 'Microbe', family: 'Microbial mat', representationTier: 2, lifeStatus: 'microbial_or_pre_animal', timeUnitIds: ['archean', 'proterozoic', 'phanerozoic'], sources: ['paleobiodb'] },
+  { id: 'sample_archean_microbe', commonName: 'Archean microbial mat', scientificName: 'Microbial mat community', group: 'Microbe', family: 'Prokaryota', representationTier: 0, lifeStatus: 'microbial_or_pre_animal', timeUnitIds: ['archean', 'proterozoic'], sources: ['paleobiodb'] },
+  { id: 'sample_saber_toothed_cat', commonName: 'Saber-toothed Cat', scientificName: 'Smilodon fatalis', group: 'Mammal', family: 'Felidae', representationTier: 3, lifeStatus: 'extinct', timeUnitIds: ['pleistocene'], sources: ['paleobiodb', 'neotoma'], isExtinct: true },
+  { id: 'sample_prebiotic_chemistry', commonName: 'Prebiotic systems', scientificName: 'Prebiotic molecular systems', group: 'Pre-life', family: '—', representationTier: 0, lifeStatus: 'uncertain', timeUnitIds: ['hadean'], sources: ['game_authored'] },
+];
+
+function stubToArchiveSpecies(stub: StubDef): ArchiveSpecies {
+  const now = new Date().toISOString();
+  return {
+    id: stub.id,
+    commonName: stub.commonName,
+    scientificName: stub.scientificName,
+    group: stub.group,
+    tier: 'database',
+    representationTier: stub.representationTier,
+    lifeStatus: stub.lifeStatus,
+    timeUnitIds: stub.timeUnitIds,
+    taxonomy: {
+      family: stub.family,
+      rank: 'species',
+      acceptedName: stub.scientificName,
+    },
+    artifactTemplates: stub.representationTier >= 4
+      ? [{ id: `${stub.id}_record`, artifactType: 'archive_record', label: 'Archive record', ethical: true, description: 'Archive reference record' }]
+      : [],
+    provenance: stub.sources.map((source) => ({
+      source,
+      sourceVersion: 'mock-sample-2026-07',
+      sourceRecordId: stub.id,
+      license: 'MOCK-SAMPLE' as const,
+      citation: 'MOCK SAMPLE — tiered archive stub for pipeline demonstration',
+      citationRequired: true,
+      retrievedAt: now,
+      lastUpdated: now,
+      isMockData: true,
+    })),
+  };
+}
+
+function stubToIndexEntry(stub: StubDef): SpeciesIndexEntry {
+  return {
+    id: stub.id,
+    commonName: stub.commonName,
+    scientificName: stub.scientificName,
+    group: stub.group,
+    family: stub.family,
+    tier: 'database',
+    representationTier: stub.representationTier,
+    lifeStatus: stub.lifeStatus,
+    timeUnitIds: stub.timeUnitIds,
+    sources: stub.sources,
+    isExtinct: stub.isExtinct ?? false,
+    isThreatened: false,
+    isPlayable: false,
   };
 }
 
 function main() {
   if (!existsSync(OUT)) mkdirSync(OUT, { recursive: true });
 
+  const timeMap = loadTaxonTimeMap();
   const mammals = readJson<LegacySpecies[]>(join(LEGACY, 'species', 'mammals.json'));
   const insects = readJson<LegacySpecies[]>(join(LEGACY, 'species', 'insects.json'));
   const extinct = readJson<LegacySpecies[]>(join(LEGACY, 'species', 'extinct.json'));
@@ -245,8 +357,15 @@ function main() {
   const traits = readJson<unknown[]>(join(LEGACY, 'traits.json'));
 
   const allLegacy = [...mammals, ...insects, ...extinct];
-  const allSpecies = allLegacy.map(toArchiveSpecies);
-  const indexEntries = allSpecies.map(toIndexEntry);
+  const allSpecies = allLegacy.map((l) => toArchiveSpecies(l, timeMap));
+  const stubSpecies = ARCHIVE_STUBS.map(stubToArchiveSpecies);
+  const heroIds = new Set(allSpecies.map((s) => s.id));
+  const uniqueStubs = stubSpecies.filter((s) => !heroIds.has(s.id));
+
+  const indexEntries = [
+    ...allSpecies.map(toIndexEntry),
+    ...ARCHIVE_STUBS.filter((s) => !heroIds.has(s.id)).map(stubToIndexEntry),
+  ];
 
   const threatened = indexEntries.filter((e) => e.isThreatened).length;
   const extinctCount = indexEntries.filter((e) => e.isExtinct).length;
@@ -254,6 +373,7 @@ function main() {
   const playable = indexEntries.filter((e) => e.isPlayable).length;
 
   writeFileSync(join(OUT, 'hero-species.json'), JSON.stringify({ species: allSpecies }, null, 2));
+  writeFileSync(join(OUT, 'archive-stubs.json'), JSON.stringify({ species: uniqueStubs }, null, 2));
 
   writeFileSync(
     join(OUT, 'search-index.json'),
@@ -271,7 +391,6 @@ function main() {
 
   const conservationOverlay = allSpecies
     .filter((s) => s.conservation?.assessed)
-    .slice(0, 10)
     .map((s) => ({ speciesId: s.id, ...s.conservation }));
   writeFileSync(join(OUT, 'conservation-overlay.json'), JSON.stringify({ records: conservationOverlay }, null, 2));
 
@@ -333,13 +452,17 @@ function main() {
     };
   }
 
+  const timeManifestPath = join(ROOT, 'public', 'data', 'time', 'time_manifest.json');
+  const timeManifest = existsSync(timeManifestPath) ? readJson<{ coverage: { totalTimeUnits: number; playableGates: number; taxaWithTimeRanges: number } }>(timeManifestPath) : null;
+
   const manifest: DataManifest = {
     snapshotId: 'sample-2026-07',
-    version: '2.0.0',
+    version: '3.0.0',
     generatedAt: new Date().toISOString(),
-    description: 'Sample biodiversity snapshot — mock provenance overlays for pipeline demonstration',
+    description: 'Sample biodiversity + Time Atlas snapshot — tiered representation with mock provenance',
     bundles: {
       heroSpecies: { path: 'bundles/hero-species.json', kind: 'hero_species', recordCount: allSpecies.length },
+      archiveStubs: { path: 'bundles/archive-stubs.json', kind: 'archive_stubs', recordCount: uniqueStubs.length },
       conservation: { path: 'bundles/conservation-overlay.json', kind: 'conservation', recordCount: conservationOverlay.length },
       occurrence: { path: 'bundles/gbif-occurrences.json', kind: 'occurrence', recordCount: occurrenceSummaries.length },
       fossil: { path: 'bundles/fossil-pbdb.json', kind: 'fossil', recordCount: fossilRecords.length },
@@ -348,6 +471,14 @@ function main() {
       quests: { path: 'bundles/quests.json', kind: 'game_config', recordCount: quests.length },
       traits: { path: 'bundles/traits.json', kind: 'game_config', recordCount: traits.length },
       regionSpecies: regionSpeciesRefs,
+      timeAtlas: timeManifest
+        ? {
+            manifest: { path: 'time/time_manifest.json', kind: 'time_atlas' },
+            geologicTimeUnits: { path: 'time/geologic_time_units.json', kind: 'time_atlas', recordCount: timeManifest.coverage.totalTimeUnits },
+            playableTimeGates: { path: 'time/playable_time_gates.json', kind: 'time_atlas', recordCount: 17 },
+            taxonTimeRanges: { path: 'time/taxon_time_ranges.json', kind: 'time_atlas', recordCount: timeManifest.coverage.taxaWithTimeRanges },
+          }
+        : undefined,
     },
     coverage: {
       representedSpecies: indexEntries.length,
@@ -356,6 +487,9 @@ function main() {
       extinctFossil: extinctCount,
       playableQuestSpecies: playable,
       heroSpecies: allSpecies.filter((s) => s.tier === 'hero').length,
+      timeUnits: timeManifest?.coverage.totalTimeUnits,
+      playableTimeGates: timeManifest?.coverage.playableGates,
+      taxaWithTimeRanges: timeManifest?.coverage.taxaWithTimeRanges,
     },
   };
 

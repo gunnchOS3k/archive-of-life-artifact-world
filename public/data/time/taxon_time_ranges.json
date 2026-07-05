@@ -1,0 +1,695 @@
+{
+  "snapshotId": "ics-sample-2026-07",
+  "version": "1.0.0",
+  "isMockData": true,
+  "ranges": [
+    {
+      "taxonId": "panthera_leo",
+      "acceptedName": "Panthera leo",
+      "rank": "species",
+      "firstAppearanceMa": 1,
+      "lastAppearanceMa": 0,
+      "timeUnitIds": [
+        "pleistocene",
+        "holocene"
+      ],
+      "lifeStatus": "extant",
+      "source": "paleobiodb",
+      "sourceVersion": "mock-2026-07",
+      "confidence": "high",
+      "provenance": [
+        {
+          "source": "paleobiodb",
+          "sourceVersion": "mock-sample-2026-07",
+          "sourceRecordId": "panthera_leo",
+          "license": "MOCK-SAMPLE",
+          "citation": "MOCK SAMPLE — illustrative time range for pipeline demonstration",
+          "citationRequired": true,
+          "retrievedAt": "2026-07-04T00:00:00.000Z",
+          "lastUpdated": "2026-07-04T00:00:00.000Z",
+          "isMockData": true
+        }
+      ]
+    },
+    {
+      "taxonId": "loxodonta_africana",
+      "acceptedName": "Loxodonta africana",
+      "rank": "species",
+      "firstAppearanceMa": 5,
+      "lastAppearanceMa": 0,
+      "timeUnitIds": [
+        "pliocene",
+        "pleistocene",
+        "holocene"
+      ],
+      "lifeStatus": "extant",
+      "source": "paleobiodb",
+      "sourceVersion": "mock-2026-07",
+      "confidence": "high",
+      "provenance": [
+        {
+          "source": "paleobiodb",
+          "sourceVersion": "mock-sample-2026-07",
+          "sourceRecordId": "loxodonta_africana",
+          "license": "MOCK-SAMPLE",
+          "citation": "MOCK SAMPLE — illustrative time range for pipeline demonstration",
+          "citationRequired": true,
+          "retrievedAt": "2026-07-04T00:00:00.000Z",
+          "lastUpdated": "2026-07-04T00:00:00.000Z",
+          "isMockData": true
+        }
+      ]
+    },
+    {
+      "taxonId": "canis_lupus",
+      "acceptedName": "Canis lupus",
+      "rank": "species",
+      "firstAppearanceMa": 0.3,
+      "lastAppearanceMa": 0,
+      "timeUnitIds": [
+        "pleistocene",
+        "holocene"
+      ],
+      "lifeStatus": "extant",
+      "source": "paleobiodb",
+      "sourceVersion": "mock-2026-07",
+      "confidence": "high",
+      "provenance": [
+        {
+          "source": "paleobiodb",
+          "sourceVersion": "mock-sample-2026-07",
+          "sourceRecordId": "canis_lupus",
+          "license": "MOCK-SAMPLE",
+          "citation": "MOCK SAMPLE — illustrative time range for pipeline demonstration",
+          "citationRequired": true,
+          "retrievedAt": "2026-07-04T00:00:00.000Z",
+          "lastUpdated": "2026-07-04T00:00:00.000Z",
+          "isMockData": true
+        }
+      ]
+    },
+    {
+      "taxonId": "danaus_plexippus",
+      "acceptedName": "Danaus plexippus",
+      "rank": "species",
+      "firstAppearanceMa": 2,
+      "lastAppearanceMa": 0,
+      "timeUnitIds": [
+        "pleistocene",
+        "holocene"
+      ],
+      "lifeStatus": "extant",
+      "source": "catalogue_of_life",
+      "sourceVersion": "mock-2026-07",
+      "confidence": "medium",
+      "provenance": [
+        {
+          "source": "catalogue_of_life",
+          "sourceVersion": "mock-sample-2026-07",
+          "sourceRecordId": "danaus_plexippus",
+          "license": "MOCK-SAMPLE",
+          "citation": "MOCK SAMPLE — illustrative time range for pipeline demonstration",
+          "citationRequired": true,
+          "retrievedAt": "2026-07-04T00:00:00.000Z",
+          "lastUpdated": "2026-07-04T00:00:00.000Z",
+          "isMockData": true
+        }
+      ]
+    },
+    {
+      "taxonId": "apis_mellifera",
+      "acceptedName": "Apis mellifera",
+      "rank": "species",
+      "firstAppearanceMa": 30,
+      "lastAppearanceMa": 0,
+      "timeUnitIds": [
+        "neogene",
+        "pleistocene",
+        "holocene"
+      ],
+      "lifeStatus": "extant",
+      "source": "catalogue_of_life",
+      "sourceVersion": "mock-2026-07",
+      "confidence": "medium",
+      "notes": "Fossil record sparse; range approximate.",
+      "provenance": [
+        {
+          "source": "catalogue_of_life",
+          "sourceVersion": "mock-sample-2026-07",
+          "sourceRecordId": "apis_mellifera",
+          "license": "MOCK-SAMPLE",
+          "citation": "MOCK SAMPLE — illustrative time range for pipeline demonstration",
+          "citationRequired": true,
+          "retrievedAt": "2026-07-04T00:00:00.000Z",
+          "lastUpdated": "2026-07-04T00:00:00.000Z",
+          "isMockData": true
+        }
+      ]
+    },
+    {
+      "taxonId": "mammuthus_primigenius",
+      "acceptedName": "Mammuthus primigenius",
+      "rank": "species",
+      "firstAppearanceMa": 0.5,
+      "lastAppearanceMa": 0.004,
+      "timeUnitIds": [
+        "pleistocene",
+        "holocene"
+      ],
+      "lifeStatus": "extinct",
+      "source": "paleobiodb",
+      "sourceVersion": "mock-2026-07",
+      "confidence": "high",
+      "provenance": [
+        {
+          "source": "paleobiodb",
+          "sourceVersion": "mock-sample-2026-07",
+          "sourceRecordId": "mammuthus_primigenius",
+          "license": "MOCK-SAMPLE",
+          "citation": "MOCK SAMPLE — illustrative time range for pipeline demonstration",
+          "citationRequired": true,
+          "retrievedAt": "2026-07-04T00:00:00.000Z",
+          "lastUpdated": "2026-07-04T00:00:00.000Z",
+          "isMockData": true
+        }
+      ]
+    },
+    {
+      "taxonId": "sample_saber_toothed_cat",
+      "acceptedName": "Smilodon fatalis",
+      "rank": "species",
+      "firstAppearanceMa": 2.5,
+      "lastAppearanceMa": 0.01,
+      "timeUnitIds": [
+        "pleistocene"
+      ],
+      "lifeStatus": "extinct",
+      "source": "paleobiodb",
+      "sourceVersion": "mock-2026-07",
+      "confidence": "high",
+      "provenance": [
+        {
+          "source": "paleobiodb",
+          "sourceVersion": "mock-sample-2026-07",
+          "sourceRecordId": "sample_saber_toothed_cat",
+          "license": "MOCK-SAMPLE",
+          "citation": "MOCK SAMPLE — illustrative time range for pipeline demonstration",
+          "citationRequired": true,
+          "retrievedAt": "2026-07-04T00:00:00.000Z",
+          "lastUpdated": "2026-07-04T00:00:00.000Z",
+          "isMockData": true
+        }
+      ]
+    },
+    {
+      "taxonId": "tyrannosaurus_rex",
+      "acceptedName": "Tyrannosaurus rex",
+      "rank": "species",
+      "firstAppearanceMa": 68,
+      "lastAppearanceMa": 66,
+      "timeUnitIds": [
+        "late_cretaceous",
+        "cretaceous"
+      ],
+      "lifeStatus": "extinct",
+      "source": "paleobiodb",
+      "sourceVersion": "mock-2026-07",
+      "confidence": "high",
+      "provenance": [
+        {
+          "source": "paleobiodb",
+          "sourceVersion": "mock-sample-2026-07",
+          "sourceRecordId": "tyrannosaurus_rex",
+          "license": "MOCK-SAMPLE",
+          "citation": "MOCK SAMPLE — illustrative time range for pipeline demonstration",
+          "citationRequired": true,
+          "retrievedAt": "2026-07-04T00:00:00.000Z",
+          "lastUpdated": "2026-07-04T00:00:00.000Z",
+          "isMockData": true
+        }
+      ]
+    },
+    {
+      "taxonId": "sample_brachiosaurus",
+      "acceptedName": "Brachiosaurus altithorax",
+      "rank": "species",
+      "firstAppearanceMa": 154,
+      "lastAppearanceMa": 150,
+      "timeUnitIds": [
+        "late_jurassic",
+        "jurassic"
+      ],
+      "lifeStatus": "extinct",
+      "source": "paleobiodb",
+      "sourceVersion": "mock-2026-07",
+      "confidence": "high",
+      "provenance": [
+        {
+          "source": "paleobiodb",
+          "sourceVersion": "mock-sample-2026-07",
+          "sourceRecordId": "sample_brachiosaurus",
+          "license": "MOCK-SAMPLE",
+          "citation": "MOCK SAMPLE — illustrative time range for pipeline demonstration",
+          "citationRequired": true,
+          "retrievedAt": "2026-07-04T00:00:00.000Z",
+          "lastUpdated": "2026-07-04T00:00:00.000Z",
+          "isMockData": true
+        }
+      ]
+    },
+    {
+      "taxonId": "sample_archaeopteryx",
+      "acceptedName": "Archaeopteryx lithographica",
+      "rank": "species",
+      "firstAppearanceMa": 150,
+      "lastAppearanceMa": 148,
+      "timeUnitIds": [
+        "late_jurassic"
+      ],
+      "lifeStatus": "extinct",
+      "source": "paleobiodb",
+      "sourceVersion": "mock-2026-07",
+      "confidence": "high",
+      "provenance": [
+        {
+          "source": "paleobiodb",
+          "sourceVersion": "mock-sample-2026-07",
+          "sourceRecordId": "sample_archaeopteryx",
+          "license": "MOCK-SAMPLE",
+          "citation": "MOCK SAMPLE — illustrative time range for pipeline demonstration",
+          "citationRequired": true,
+          "retrievedAt": "2026-07-04T00:00:00.000Z",
+          "lastUpdated": "2026-07-04T00:00:00.000Z",
+          "isMockData": true
+        }
+      ]
+    },
+    {
+      "taxonId": "sample_coelophysis",
+      "acceptedName": "Coelophysis bauri",
+      "rank": "species",
+      "firstAppearanceMa": 228,
+      "lastAppearanceMa": 208,
+      "timeUnitIds": [
+        "late_triassic",
+        "triassic"
+      ],
+      "lifeStatus": "extinct",
+      "source": "paleobiodb",
+      "sourceVersion": "mock-2026-07",
+      "confidence": "high",
+      "provenance": [
+        {
+          "source": "paleobiodb",
+          "sourceVersion": "mock-sample-2026-07",
+          "sourceRecordId": "sample_coelophysis",
+          "license": "MOCK-SAMPLE",
+          "citation": "MOCK SAMPLE — illustrative time range for pipeline demonstration",
+          "citationRequired": true,
+          "retrievedAt": "2026-07-04T00:00:00.000Z",
+          "lastUpdated": "2026-07-04T00:00:00.000Z",
+          "isMockData": true
+        }
+      ]
+    },
+    {
+      "taxonId": "trilobita_order",
+      "acceptedName": "Trilobita",
+      "rank": "class",
+      "firstAppearanceMa": 521,
+      "lastAppearanceMa": 251,
+      "timeUnitIds": [
+        "cambrian",
+        "ordovician",
+        "silurian",
+        "devonian",
+        "carboniferous",
+        "permian"
+      ],
+      "lifeStatus": "representative_group",
+      "source": "paleobiodb",
+      "sourceVersion": "mock-2026-07",
+      "confidence": "high",
+      "notes": "Class-level range for hero fossil taxon.",
+      "provenance": [
+        {
+          "source": "paleobiodb",
+          "sourceVersion": "mock-sample-2026-07",
+          "sourceRecordId": "trilobita_order",
+          "license": "MOCK-SAMPLE",
+          "citation": "MOCK SAMPLE — illustrative time range for pipeline demonstration",
+          "citationRequired": true,
+          "retrievedAt": "2026-07-04T00:00:00.000Z",
+          "lastUpdated": "2026-07-04T00:00:00.000Z",
+          "isMockData": true
+        }
+      ]
+    },
+    {
+      "taxonId": "sample_trilobite_elrathia",
+      "acceptedName": "Elrathia kingii",
+      "rank": "species",
+      "firstAppearanceMa": 501,
+      "lastAppearanceMa": 497,
+      "timeUnitIds": [
+        "cambrian",
+        "furongian"
+      ],
+      "lifeStatus": "extinct",
+      "source": "paleobiodb",
+      "sourceVersion": "mock-2026-07",
+      "confidence": "high",
+      "provenance": [
+        {
+          "source": "paleobiodb",
+          "sourceVersion": "mock-sample-2026-07",
+          "sourceRecordId": "sample_trilobite_elrathia",
+          "license": "MOCK-SAMPLE",
+          "citation": "MOCK SAMPLE — illustrative time range for pipeline demonstration",
+          "citationRequired": true,
+          "retrievedAt": "2026-07-04T00:00:00.000Z",
+          "lastUpdated": "2026-07-04T00:00:00.000Z",
+          "isMockData": true
+        }
+      ]
+    },
+    {
+      "taxonId": "sample_trilobite_group",
+      "acceptedName": "Trilobita",
+      "rank": "class",
+      "firstAppearanceMa": 521,
+      "lastAppearanceMa": 251,
+      "timeUnitIds": [
+        "cambrian",
+        "ordovician",
+        "silurian",
+        "devonian",
+        "carboniferous",
+        "permian"
+      ],
+      "lifeStatus": "representative_group",
+      "source": "paleobiodb",
+      "sourceVersion": "mock-2026-07",
+      "confidence": "high",
+      "notes": "Class-level range for Archive representation.",
+      "provenance": [
+        {
+          "source": "paleobiodb",
+          "sourceVersion": "mock-sample-2026-07",
+          "sourceRecordId": "sample_trilobite_group",
+          "license": "MOCK-SAMPLE",
+          "citation": "MOCK SAMPLE — illustrative time range for pipeline demonstration",
+          "citationRequired": true,
+          "retrievedAt": "2026-07-04T00:00:00.000Z",
+          "lastUpdated": "2026-07-04T00:00:00.000Z",
+          "isMockData": true
+        }
+      ]
+    },
+    {
+      "taxonId": "sample_ammonite_devonian",
+      "acceptedName": "Ammonoidea",
+      "rank": "class",
+      "firstAppearanceMa": 409,
+      "lastAppearanceMa": 66,
+      "timeUnitIds": [
+        "devonian",
+        "carboniferous",
+        "permian",
+        "triassic",
+        "jurassic",
+        "cretaceous"
+      ],
+      "lifeStatus": "representative_group",
+      "source": "paleobiodb",
+      "sourceVersion": "mock-2026-07",
+      "confidence": "high",
+      "provenance": [
+        {
+          "source": "paleobiodb",
+          "sourceVersion": "mock-sample-2026-07",
+          "sourceRecordId": "sample_ammonite_devonian",
+          "license": "MOCK-SAMPLE",
+          "citation": "MOCK SAMPLE — illustrative time range for pipeline demonstration",
+          "citationRequired": true,
+          "retrievedAt": "2026-07-04T00:00:00.000Z",
+          "lastUpdated": "2026-07-04T00:00:00.000Z",
+          "isMockData": true
+        }
+      ]
+    },
+    {
+      "taxonId": "sample_ammonite_cretaceous",
+      "acceptedName": "Baculites compressus",
+      "rank": "species",
+      "firstAppearanceMa": 100,
+      "lastAppearanceMa": 66,
+      "timeUnitIds": [
+        "late_cretaceous",
+        "cretaceous"
+      ],
+      "lifeStatus": "extinct",
+      "source": "paleobiodb",
+      "sourceVersion": "mock-2026-07",
+      "confidence": "high",
+      "provenance": [
+        {
+          "source": "paleobiodb",
+          "sourceVersion": "mock-sample-2026-07",
+          "sourceRecordId": "sample_ammonite_cretaceous",
+          "license": "MOCK-SAMPLE",
+          "citation": "MOCK SAMPLE — illustrative time range for pipeline demonstration",
+          "citationRequired": true,
+          "retrievedAt": "2026-07-04T00:00:00.000Z",
+          "lastUpdated": "2026-07-04T00:00:00.000Z",
+          "isMockData": true
+        }
+      ]
+    },
+    {
+      "taxonId": "sample_anomalocaris",
+      "acceptedName": "Anomalocaris canadensis",
+      "rank": "species",
+      "firstAppearanceMa": 508,
+      "lastAppearanceMa": 497,
+      "timeUnitIds": [
+        "cambrian"
+      ],
+      "lifeStatus": "extinct",
+      "source": "paleobiodb",
+      "sourceVersion": "mock-2026-07",
+      "confidence": "medium",
+      "provenance": [
+        {
+          "source": "paleobiodb",
+          "sourceVersion": "mock-sample-2026-07",
+          "sourceRecordId": "sample_anomalocaris",
+          "license": "MOCK-SAMPLE",
+          "citation": "MOCK SAMPLE — illustrative time range for pipeline demonstration",
+          "citationRequired": true,
+          "retrievedAt": "2026-07-04T00:00:00.000Z",
+          "lastUpdated": "2026-07-04T00:00:00.000Z",
+          "isMockData": true
+        }
+      ]
+    },
+    {
+      "taxonId": "sample_meganeura",
+      "acceptedName": "Meganeura monyi",
+      "rank": "species",
+      "firstAppearanceMa": 305,
+      "lastAppearanceMa": 299,
+      "timeUnitIds": [
+        "pennsylvanian",
+        "carboniferous"
+      ],
+      "lifeStatus": "extinct",
+      "source": "paleobiodb",
+      "sourceVersion": "mock-2026-07",
+      "confidence": "high",
+      "provenance": [
+        {
+          "source": "paleobiodb",
+          "sourceVersion": "mock-sample-2026-07",
+          "sourceRecordId": "sample_meganeura",
+          "license": "MOCK-SAMPLE",
+          "citation": "MOCK SAMPLE — illustrative time range for pipeline demonstration",
+          "citationRequired": true,
+          "retrievedAt": "2026-07-04T00:00:00.000Z",
+          "lastUpdated": "2026-07-04T00:00:00.000Z",
+          "isMockData": true
+        }
+      ]
+    },
+    {
+      "taxonId": "sample_dickinsonia",
+      "acceptedName": "Dickinsonia costata",
+      "rank": "species",
+      "firstAppearanceMa": 558,
+      "lastAppearanceMa": 551,
+      "timeUnitIds": [
+        "ediacaran"
+      ],
+      "lifeStatus": "uncertain",
+      "source": "paleobiodb",
+      "sourceVersion": "mock-2026-07",
+      "confidence": "low",
+      "notes": "Affinity uncertain — may be animal, lichen, or other.",
+      "provenance": [
+        {
+          "source": "paleobiodb",
+          "sourceVersion": "mock-sample-2026-07",
+          "sourceRecordId": "sample_dickinsonia",
+          "license": "MOCK-SAMPLE",
+          "citation": "MOCK SAMPLE — illustrative time range for pipeline demonstration",
+          "citationRequired": true,
+          "retrievedAt": "2026-07-04T00:00:00.000Z",
+          "lastUpdated": "2026-07-04T00:00:00.000Z",
+          "isMockData": true
+        }
+      ]
+    },
+    {
+      "taxonId": "sample_charnia",
+      "acceptedName": "Charnia masoni",
+      "rank": "species",
+      "firstAppearanceMa": 580,
+      "lastAppearanceMa": 550,
+      "timeUnitIds": [
+        "ediacaran"
+      ],
+      "lifeStatus": "uncertain",
+      "source": "paleobiodb",
+      "sourceVersion": "mock-2026-07",
+      "confidence": "low",
+      "provenance": [
+        {
+          "source": "paleobiodb",
+          "sourceVersion": "mock-sample-2026-07",
+          "sourceRecordId": "sample_charnia",
+          "license": "MOCK-SAMPLE",
+          "citation": "MOCK SAMPLE — illustrative time range for pipeline demonstration",
+          "citationRequired": true,
+          "retrievedAt": "2026-07-04T00:00:00.000Z",
+          "lastUpdated": "2026-07-04T00:00:00.000Z",
+          "isMockData": true
+        }
+      ]
+    },
+    {
+      "taxonId": "sample_stromatolite",
+      "acceptedName": "Stromatolite",
+      "rank": "genus",
+      "firstAppearanceMa": 3500,
+      "lastAppearanceMa": 0,
+      "timeUnitIds": [
+        "archean",
+        "proterozoic",
+        "phanerozoic"
+      ],
+      "lifeStatus": "microbial_or_pre_animal",
+      "source": "paleobiodb",
+      "sourceVersion": "mock-2026-07",
+      "confidence": "medium",
+      "notes": "Structure built by microbial communities, not a single species.",
+      "provenance": [
+        {
+          "source": "paleobiodb",
+          "sourceVersion": "mock-sample-2026-07",
+          "sourceRecordId": "sample_stromatolite",
+          "license": "MOCK-SAMPLE",
+          "citation": "MOCK SAMPLE — illustrative time range for pipeline demonstration",
+          "citationRequired": true,
+          "retrievedAt": "2026-07-04T00:00:00.000Z",
+          "lastUpdated": "2026-07-04T00:00:00.000Z",
+          "isMockData": true
+        }
+      ]
+    },
+    {
+      "taxonId": "sample_archean_microbe",
+      "acceptedName": "Microbial mat community",
+      "rank": "genus",
+      "firstAppearanceMa": 3800,
+      "lastAppearanceMa": 2500,
+      "timeUnitIds": [
+        "archean",
+        "proterozoic"
+      ],
+      "lifeStatus": "microbial_or_pre_animal",
+      "source": "paleobiodb",
+      "sourceVersion": "mock-2026-07",
+      "confidence": "uncertain",
+      "provenance": [
+        {
+          "source": "paleobiodb",
+          "sourceVersion": "mock-sample-2026-07",
+          "sourceRecordId": "sample_archean_microbe",
+          "license": "MOCK-SAMPLE",
+          "citation": "MOCK SAMPLE — illustrative time range for pipeline demonstration",
+          "citationRequired": true,
+          "retrievedAt": "2026-07-04T00:00:00.000Z",
+          "lastUpdated": "2026-07-04T00:00:00.000Z",
+          "isMockData": true
+        }
+      ]
+    },
+    {
+      "taxonId": "sample_cyanobacteria",
+      "acceptedName": "Cyanobacteria",
+      "rank": "phylum",
+      "firstAppearanceMa": 3500,
+      "lastAppearanceMa": 0,
+      "timeUnitIds": [
+        "archean",
+        "proterozoic",
+        "phanerozoic"
+      ],
+      "lifeStatus": "microbial_or_pre_animal",
+      "source": "catalogue_of_life",
+      "sourceVersion": "mock-2026-07",
+      "confidence": "medium",
+      "provenance": [
+        {
+          "source": "catalogue_of_life",
+          "sourceVersion": "mock-sample-2026-07",
+          "sourceRecordId": "sample_cyanobacteria",
+          "license": "MOCK-SAMPLE",
+          "citation": "MOCK SAMPLE — illustrative time range for pipeline demonstration",
+          "citationRequired": true,
+          "retrievedAt": "2026-07-04T00:00:00.000Z",
+          "lastUpdated": "2026-07-04T00:00:00.000Z",
+          "isMockData": true
+        }
+      ]
+    },
+    {
+      "taxonId": "sample_prebiotic_chemistry",
+      "acceptedName": "Prebiotic molecular systems",
+      "rank": "genus",
+      "firstAppearanceMa": 4600,
+      "lastAppearanceMa": 4000,
+      "timeUnitIds": [
+        "hadean"
+      ],
+      "lifeStatus": "uncertain",
+      "source": "game_authored",
+      "sourceVersion": "mock-2026-07",
+      "confidence": "uncertain",
+      "notes": "Representative concept, not a biological taxon.",
+      "provenance": [
+        {
+          "source": "game_authored",
+          "sourceVersion": "mock-sample-2026-07",
+          "sourceRecordId": "sample_prebiotic_chemistry",
+          "license": "MOCK-SAMPLE",
+          "citation": "MOCK SAMPLE — illustrative time range for pipeline demonstration",
+          "citationRequired": true,
+          "retrievedAt": "2026-07-04T00:00:00.000Z",
+          "lastUpdated": "2026-07-04T00:00:00.000Z",
+          "isMockData": true
+        }
+      ]
+    }
+  ]
+}

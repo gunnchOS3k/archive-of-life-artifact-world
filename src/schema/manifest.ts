@@ -5,7 +5,9 @@ export type BundleKind =
   | 'occurrence'
   | 'fossil'
   | 'search_index'
-  | 'game_config';
+  | 'game_config'
+  | 'archive_stubs'
+  | 'time_atlas';
 
 export interface BundleRef {
   path: string;
@@ -21,6 +23,7 @@ export interface DataManifest {
   description: string;
   bundles: {
     heroSpecies: BundleRef;
+    archiveStubs?: BundleRef;
     conservation: BundleRef;
     occurrence: BundleRef;
     fossil: BundleRef;
@@ -29,6 +32,12 @@ export interface DataManifest {
     quests: BundleRef;
     traits: BundleRef;
     regionSpecies: Record<string, BundleRef>;
+    timeAtlas?: {
+      manifest: { path: string; kind: BundleKind };
+      geologicTimeUnits: BundleRef;
+      playableTimeGates: BundleRef;
+      taxonTimeRanges: BundleRef;
+    };
   };
   coverage: {
     representedSpecies: number;
@@ -37,5 +46,8 @@ export interface DataManifest {
     extinctFossil: number;
     playableQuestSpecies: number;
     heroSpecies: number;
+    timeUnits?: number;
+    playableTimeGates?: number;
+    taxaWithTimeRanges?: number;
   };
 }

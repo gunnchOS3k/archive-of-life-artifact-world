@@ -12,12 +12,14 @@ import { MapUI } from '@/ui/mapUI';
 import { CompanionUI } from '@/ui/companionUI';
 import { QuestUI } from '@/ui/questUI';
 import { EarthLayerUI } from '@/ui/earthLayerUI';
+import { TimeAtlasUI } from '@/ui/timeAtlasUI';
 import {
   DataCatalogService,
   toPlayableSpecies,
   type PlayableSpecies,
 } from '@/services/DataCatalogService';
 import { EarthLayerService } from '@/services/EarthLayerService';
+import { TimeAtlasService } from '@/time/TimeAtlasService';
 import type { SaveState } from '@/schema';
 
 type Minigame = FossilExcavation | WildlifeObservation;
@@ -46,11 +48,13 @@ export class Game {
   private companionUI: CompanionUI;
   private questUI: QuestUI;
   private earthLayerUI: EarthLayerUI;
+  private timeAtlasUI: TimeAtlasUI;
 
   constructor(
     canvas: HTMLCanvasElement,
     catalog: DataCatalogService,
     earthService: EarthLayerService,
+    timeService: TimeAtlasService,
     state: SaveState
   ) {
     this.canvas = canvas;
@@ -70,6 +74,11 @@ export class Game {
     this.earthLayerUI = new EarthLayerUI(
       document.getElementById('panel-earth')!,
       earthService,
+      catalog
+    );
+    this.timeAtlasUI = new TimeAtlasUI(
+      document.getElementById('panel-time')!,
+      timeService,
       catalog
     );
 
@@ -106,6 +115,7 @@ export class Game {
       if (e.key === 'c' || e.key === 'C') this.togglePanel('companion');
       if (e.key === 'q' || e.key === 'Q') this.togglePanel('quests');
       if (e.key === 't' || e.key === 'T') this.togglePanel('earth');
+      if (e.key === 'y' || e.key === 'Y') this.togglePanel('time');
       if (e.key === 'Escape') this.closeAllPanels();
     });
     window.addEventListener('keyup', (e) => {
@@ -122,6 +132,7 @@ export class Game {
     document.getElementById('btn-companion')!.addEventListener('click', () => this.togglePanel('companion'));
     document.getElementById('btn-quests')!.addEventListener('click', () => this.togglePanel('quests'));
     document.getElementById('btn-earth')!.addEventListener('click', () => this.togglePanel('earth'));
+    document.getElementById('btn-time')!.addEventListener('click', () => this.togglePanel('time'));
 
     document.getElementById('fossil-cancel')!.addEventListener('click', () => this.endMinigame());
     document.getElementById('observe-cancel')!.addEventListener('click', () => this.endMinigame());
@@ -146,6 +157,9 @@ export class Game {
       if (name === 'earth') {
         this.earthLayerUI.open(this.state.player.currentRegion);
       }
+      if (name === 'time') {
+        this.timeAtlasUI.open();
+      }
       this.refreshUI();
       this.paused = true;
     } else {
@@ -167,6 +181,7 @@ export class Game {
     this.companionUI.setData(this.state, config.traits);
     this.questUI.setData(this.state, config.quests, index);
     this.earthLayerUI.setData(this.state, this.state.player.currentRegion);
+    this.timeAtlasUI.setData(this.state);
   }
 
   private onEarthLayerProgress() {
@@ -230,6 +245,11 @@ export class Game {
 
     if (item.type === 'earth_console') {
       this.togglePanel('earth');
+      return;
+    }
+
+    if (item.type === 'time_atlas') {
+      this.togglePanel('time');
       return;
     }
 
@@ -346,6 +366,7 @@ export class Game {
       const item = this.nearestInteractable;
       if (item.type === 'portal') promptText.textContent = `Press E — Travel to ${item.label}`;
       else if (item.type === 'earth_console') promptText.textContent = `Press E — Open ${item.label}`;
+      else if (item.type === 'time_atlas') promptText.textContent = `Press E — Open ${item.label}`;
       else if (item.type === 'fossil') promptText.textContent = `Press E — Excavate ${item.species.commonName} fossil`;
       else promptText.textContent = `Press E — Observe ${item.species.commonName}`;
     } else {
@@ -362,6 +383,6 @@ export class Game {
     this.ctx.fillStyle = 'rgba(255,255,255,0.4)';
     this.ctx.font = '11px sans-serif';
     this.ctx.textAlign = 'left';
-    this.ctx.fillText('WASD/Arrows: Move | E: Interact | A/N/M/C/Q/T: Menus', 10, h - 10);
+    this.ctx.fillText('WASD/Arrows: Move | E: Interact | A/N/M/C/Q/T/Y: Menus', 10, h - 10);
   }
 }

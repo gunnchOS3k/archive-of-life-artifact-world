@@ -6,7 +6,7 @@
       "assessed": true,
       "sourceVersion": "mock-iucn-2026-07",
       "lastUpdated": "2026-07-02",
-      "iucnTaxonId": 67130
+      "iucnTaxonId": 32914
     },
     {
       "speciesId": "loxodonta_africana",
@@ -14,7 +14,7 @@
       "assessed": true,
       "sourceVersion": "mock-iucn-2026-07",
       "lastUpdated": "2026-07-02",
-      "iucnTaxonId": 31075
+      "iucnTaxonId": 41174
     },
     {
       "speciesId": "canis_lupus",
@@ -22,7 +22,7 @@
       "assessed": true,
       "sourceVersion": "mock-iucn-2026-07",
       "lastUpdated": "2026-07-02",
-      "iucnTaxonId": 20859
+      "iucnTaxonId": 96574
     },
     {
       "speciesId": "odocoileus_virginianus",
@@ -30,7 +30,7 @@
       "assessed": true,
       "sourceVersion": "mock-iucn-2026-07",
       "lastUpdated": "2026-07-02",
-      "iucnTaxonId": 35705
+      "iucnTaxonId": 35868
     },
     {
       "speciesId": "balaenoptera_musculus",
@@ -38,7 +38,7 @@
       "assessed": true,
       "sourceVersion": "mock-iucn-2026-07",
       "lastUpdated": "2026-07-02",
-      "iucnTaxonId": 5083
+      "iucnTaxonId": 49933
     },
     {
       "speciesId": "ursus_americanus",
@@ -46,7 +46,7 @@
       "assessed": true,
       "sourceVersion": "mock-iucn-2026-07",
       "lastUpdated": "2026-07-02",
-      "iucnTaxonId": 5954
+      "iucnTaxonId": 65516
     },
     {
       "speciesId": "castor_canadensis",
@@ -54,7 +54,7 @@
       "assessed": true,
       "sourceVersion": "mock-iucn-2026-07",
       "lastUpdated": "2026-07-02",
-      "iucnTaxonId": 98733
+      "iucnTaxonId": 65428
     },
     {
       "speciesId": "lontra_canadensis",
@@ -62,7 +62,7 @@
       "assessed": true,
       "sourceVersion": "mock-iucn-2026-07",
       "lastUpdated": "2026-07-02",
-      "iucnTaxonId": 35600
+      "iucnTaxonId": 35059
     },
     {
       "speciesId": "phoca_vitulina",
@@ -70,7 +70,7 @@
       "assessed": true,
       "sourceVersion": "mock-iucn-2026-07",
       "lastUpdated": "2026-07-02",
-      "iucnTaxonId": 2245
+      "iucnTaxonId": 32805
     },
     {
       "speciesId": "equus_caballus_ferus",
@@ -78,7 +78,111 @@
       "assessed": true,
       "sourceVersion": "mock-iucn-2026-07",
       "lastUpdated": "2026-07-02",
-      "iucnTaxonId": 12055
+      "iucnTaxonId": 46225
+    },
+    {
+      "speciesId": "danaus_plexippus",
+      "iucnCategory": "Endangered",
+      "assessed": true,
+      "sourceVersion": "mock-iucn-2026-07",
+      "lastUpdated": "2026-07-02",
+      "iucnTaxonId": 89418
+    },
+    {
+      "speciesId": "apis_mellifera",
+      "iucnCategory": "Data Deficient",
+      "assessed": true,
+      "sourceVersion": "mock-iucn-2026-07",
+      "lastUpdated": "2026-07-02",
+      "iucnTaxonId": 58916
+    },
+    {
+      "speciesId": "formica_rufa",
+      "iucnCategory": "Least Concern",
+      "assessed": true,
+      "sourceVersion": "mock-iucn-2026-07",
+      "lastUpdated": "2026-07-02",
+      "iucnTaxonId": 33558
+    },
+    {
+      "speciesId": "anax_junius",
+      "iucnCategory": "Least Concern",
+      "assessed": true,
+      "sourceVersion": "mock-iucn-2026-07",
+      "lastUpdated": "2026-07-02",
+      "iucnTaxonId": 6834
+    },
+    {
+      "speciesId": "latrodectus_mactans",
+      "iucnCategory": "Least Concern",
+      "assessed": true,
+      "sourceVersion": "mock-iucn-2026-07",
+      "lastUpdated": "2026-07-02",
+      "iucnTaxonId": 33741
+    },
+    {
+      "speciesId": "dynastes_hercules",
+      "iucnCategory": "Least Concern",
+      "assessed": true,
+      "sourceVersion": "mock-iucn-2026-07",
+      "lastUpdated": "2026-07-02",
+      "iucnTaxonId": 47099
+    },
+    {
+      "speciesId": "libellula_quadrimaculata",
+      "iucnCategory": "Least Concern",
+      "assessed": true,
+      "sourceVersion": "mock-iucn-2026-07",
+      "lastUpdated": "2026-07-02",
+      "iucnTaxonId": 37428
+    },
+    {
+      "speciesId": "bombus_terrestris",
+      "iucnCategory": "Least Concern",
+      "assessed": true,
+      "sourceVersion": "mock-iucn-2026-07",
+      "lastUpdated": "2026-07-02",
+      "iucnTaxonId": 93060
+    },
+    {
+      "speciesId": "acanthoscurria_geniculata",
+      "iucnCategory": "Least Concern",
+      "assessed": true,
+      "sourceVersion": "mock-iucn-2026-07",
+      "lastUpdated": "2026-07-02",
+      "iucnTaxonId": 63057
+    },
+    {
+      "speciesId": "pachnoda_marginata",
+      "iucnCategory": "Least Concern",
+      "assessed": true,
+      "sourceVersion": "mock-iucn-2026-07",
+      "lastUpdated": "2026-07-02",
+      "iucnTaxonId": 91804
+    },
+    {
+      "speciesId": "mammuthus_primigenius",
+      "iucnCategory": "Extinct",
+      "assessed": true,
+      "sourceVersion": "mock-iucn-2026-07",
+      "lastUpdated": "2026-07-02",
+      "iucnTaxonId": 15130
+    },
+    {
+      "speciesId": "tyrannosaurus_rex",
+      "iucnCategory": "Extinct",
+      "assessed": true,
+      "sourceVersion": "mock-iucn-2026-07",
+      "lastUpdated": "2026-07-02",
+      "iucnTaxonId": 94589
+    },
+    {
+      "speciesId": "trilobita_order",
+      "iucnCategory": "Extinct",
+      "assessed": true,
+      "sourceVersion": "mock-iucn-2026-07",
+      "lastUpdated": "2026-07-02",
+      "iucnTaxonId": 79883
     }
   ]
 }

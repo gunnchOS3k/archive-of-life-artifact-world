@@ -838,3 +838,37 @@ body {
 }
 
 .earth-species-deps h4 { color: var(--accent-gold); margin-bottom: 0.5rem; }
+
+/* Time Atlas */
+.panel-time .time-panel-body { display: flex; flex-direction: column; gap: 1rem; }
+.time-atlas-controls { display: flex; gap: 0.5rem; flex-wrap: wrap; }
+.time-atlas-layout { display: grid; grid-template-columns: 1fr 1.2fr; gap: 1rem; min-height: 220px; }
+.time-atlas-tree { display: flex; flex-direction: column; gap: 0.35rem; max-height: 280px; overflow-y: auto; }
+.time-unit-btn {
+  display: flex; align-items: center; gap: 0.5rem; padding: 0.5rem 0.75rem;
+  background: var(--bg-secondary); border: 1px solid var(--border); border-radius: 6px;
+  color: var(--text-primary); cursor: pointer; text-align: left; width: 100%;
+}
+.time-unit-btn.active { border-color: var(--accent-gold); background: rgba(212, 175, 55, 0.1); }
+.time-unit-name { flex: 1; font-weight: 600; }
+.time-unit-rank { font-size: 0.75rem; color: var(--text-secondary); text-transform: uppercase; }
+.time-unit-ma { font-size: 0.75rem; color: var(--accent-blue); }
+.time-atlas-detail { background: var(--bg-secondary); border-radius: 8px; padding: 1rem; overflow-y: auto; max-height: 280px; }
+.time-rank-badge { font-size: 0.75rem; background: var(--accent-gold); color: #1a1a1a; padding: 0.15rem 0.4rem; border-radius: 4px; }
+.time-ma-range { color: var(--accent-blue); font-size: 0.9rem; }
+.time-taxon-list { font-size: 0.85rem; padding-left: 1.2rem; }
+.time-atlas-gates { border-top: 1px solid var(--border); padding-top: 1rem; }
+.time-gates-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 0.75rem; }
+.time-gate-card { background: var(--bg-secondary); border: 1px solid var(--border); border-radius: 8px; padding: 0.75rem; }
+.time-gate-card.unlocked { border-color: var(--accent-green, #7EC8A3); }
+.time-gate-card.locked { opacity: 0.75; }
+.time-gate-name { font-weight: 600; margin-bottom: 0.25rem; }
+.time-gate-status { font-size: 0.8rem; color: var(--text-secondary); margin-bottom: 0.35rem; }
+.time-gate-desc { font-size: 0.85rem; }
+.uncertainty-note { font-size: 0.8rem; color: var(--accent-gold); font-style: italic; }
+.time-hint { color: var(--text-secondary); font-size: 0.9rem; }
+.time-mock-banner { margin-bottom: 0.5rem; }
+.archive-filters { gap: 0.35rem; }
+@media (max-width: 768px) {
+  .time-atlas-layout { grid-template-columns: 1fr; }
+}

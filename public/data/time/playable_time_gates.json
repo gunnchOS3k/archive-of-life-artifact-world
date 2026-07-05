@@ -1,0 +1,761 @@
+{
+  "snapshotId": "ics-sample-2026-07",
+  "version": "1.0.0",
+  "gates": [
+    {
+      "id": "gate_hadean",
+      "name": "Hadean Pre-Life Earth",
+      "description": "Explore early Earth before life — molten surface and prebiotic chemistry.",
+      "requiredProgress": {
+        "artifactsCollected": 20
+      },
+      "timeUnitIds": [
+        "hadean"
+      ],
+      "availableRegionTypes": [
+        "volcanic",
+        "museum"
+      ],
+      "representativeTaxa": [
+        "sample_prebiotic_chemistry"
+      ],
+      "fossilArtifactTypes": [
+        "mineral_specimen"
+      ],
+      "lifelingUnlockThemes": [
+        "ancient_earth"
+      ],
+      "educationTopics": [
+        "planetary formation",
+        "prebiotic chemistry"
+      ],
+      "uncertaintyNotes": "Pre-life reconstructions are highly uncertain.",
+      "isPlayable": false,
+      "sourceProvenance": [
+        {
+          "source": "game_authored",
+          "sourceVersion": "time-gates-v1",
+          "sourceRecordId": "gate_hadean",
+          "license": "GAME-ORIGINAL",
+          "citation": "Archive of Life: Artifact World — playable time gate design",
+          "citationRequired": false,
+          "retrievedAt": "2026-07-04T00:00:00.000Z",
+          "lastUpdated": "2026-07-04T00:00:00.000Z",
+          "isMockData": true
+        }
+      ]
+    },
+    {
+      "id": "gate_archean",
+      "name": "Archean Early Life Earth",
+      "description": "Microbial Earth — stromatolites and early oceans.",
+      "requiredProgress": {
+        "artifactsCollected": 18
+      },
+      "timeUnitIds": [
+        "archean",
+        "eoarchean",
+        "mesoarchean",
+        "neoarchean"
+      ],
+      "availableRegionTypes": [
+        "microbial_mat",
+        "shallow_sea"
+      ],
+      "representativeTaxa": [
+        "sample_stromatolite",
+        "sample_archean_microbe"
+      ],
+      "fossilArtifactTypes": [
+        "microfossil_impression"
+      ],
+      "lifelingUnlockThemes": [
+        "microbial_wisdom"
+      ],
+      "educationTopics": [
+        "stromatolites",
+        "early metabolism"
+      ],
+      "isPlayable": false,
+      "sourceProvenance": [
+        {
+          "source": "game_authored",
+          "sourceVersion": "time-gates-v1",
+          "sourceRecordId": "gate_archean",
+          "license": "GAME-ORIGINAL",
+          "citation": "Archive of Life: Artifact World — playable time gate design",
+          "citationRequired": false,
+          "retrievedAt": "2026-07-04T00:00:00.000Z",
+          "lastUpdated": "2026-07-04T00:00:00.000Z",
+          "isMockData": true
+        }
+      ]
+    },
+    {
+      "id": "gate_proterozoic",
+      "name": "Proterozoic Microbial Earth",
+      "description": "Oxygen rise and eukaryotic evolution.",
+      "requiredProgress": {
+        "artifactsCollected": 15
+      },
+      "timeUnitIds": [
+        "proterozoic",
+        "paleoproterozoic",
+        "mesoproterozoic",
+        "neoproterozoic"
+      ],
+      "availableRegionTypes": [
+        "microbial_mat",
+        "shallow_sea"
+      ],
+      "representativeTaxa": [
+        "sample_cyanobacteria",
+        "sample_eukaryote_alga"
+      ],
+      "fossilArtifactTypes": [
+        "microfossil_impression"
+      ],
+      "lifelingUnlockThemes": [
+        "oxygen_pioneer"
+      ],
+      "educationTopics": [
+        "Great Oxidation Event"
+      ],
+      "isPlayable": false,
+      "sourceProvenance": [
+        {
+          "source": "game_authored",
+          "sourceVersion": "time-gates-v1",
+          "sourceRecordId": "gate_proterozoic",
+          "license": "GAME-ORIGINAL",
+          "citation": "Archive of Life: Artifact World — playable time gate design",
+          "citationRequired": false,
+          "retrievedAt": "2026-07-04T00:00:00.000Z",
+          "lastUpdated": "2026-07-04T00:00:00.000Z",
+          "isMockData": true
+        }
+      ]
+    },
+    {
+      "id": "gate_ediacaran",
+      "name": "Ediacaran Worlds",
+      "description": "First large soft-bodied organisms before the Cambrian explosion.",
+      "requiredProgress": {
+        "artifactsCollected": 12
+      },
+      "timeUnitIds": [
+        "ediacaran"
+      ],
+      "availableRegionTypes": [
+        "seafloor",
+        "fossil_site"
+      ],
+      "representativeTaxa": [
+        "sample_dickinsonia",
+        "sample_charnia"
+      ],
+      "fossilArtifactTypes": [
+        "trace_impression",
+        "body_fossil_cast"
+      ],
+      "lifelingUnlockThemes": [
+        "soft_body_wonder"
+      ],
+      "educationTopics": [
+        "Ediacaran biota"
+      ],
+      "uncertaintyNotes": "Ediacaran affinities remain debated.",
+      "isPlayable": false,
+      "sourceProvenance": [
+        {
+          "source": "game_authored",
+          "sourceVersion": "time-gates-v1",
+          "sourceRecordId": "gate_ediacaran",
+          "license": "GAME-ORIGINAL",
+          "citation": "Archive of Life: Artifact World — playable time gate design",
+          "citationRequired": false,
+          "retrievedAt": "2026-07-04T00:00:00.000Z",
+          "lastUpdated": "2026-07-04T00:00:00.000Z",
+          "isMockData": true
+        }
+      ]
+    },
+    {
+      "id": "gate_cambrian",
+      "name": "Cambrian Explosion",
+      "description": "Explosion of animal body plans in warm shallow seas.",
+      "requiredProgress": {
+        "artifactsCollected": 10
+      },
+      "timeUnitIds": [
+        "cambrian",
+        "furongian"
+      ],
+      "availableRegionTypes": [
+        "seafloor",
+        "fossil_site"
+      ],
+      "representativeTaxa": [
+        "sample_trilobite_elrathia",
+        "sample_anomalocaris"
+      ],
+      "fossilArtifactTypes": [
+        "body_fossil_cast",
+        "trace_impression"
+      ],
+      "lifelingUnlockThemes": [
+        "exoskeleton_scout"
+      ],
+      "educationTopics": [
+        "Cambrian explosion",
+        "trilobites"
+      ],
+      "isPlayable": false,
+      "sourceProvenance": [
+        {
+          "source": "game_authored",
+          "sourceVersion": "time-gates-v1",
+          "sourceRecordId": "gate_cambrian",
+          "license": "GAME-ORIGINAL",
+          "citation": "Archive of Life: Artifact World — playable time gate design",
+          "citationRequired": false,
+          "retrievedAt": "2026-07-04T00:00:00.000Z",
+          "lastUpdated": "2026-07-04T00:00:00.000Z",
+          "isMockData": true
+        }
+      ]
+    },
+    {
+      "id": "gate_ordovician",
+      "name": "Ordovician Oceans",
+      "description": "Diverse marine ecosystems before Silurian colonization.",
+      "requiredProgress": {
+        "artifactsCollected": 10
+      },
+      "timeUnitIds": [
+        "ordovician"
+      ],
+      "availableRegionTypes": [
+        "seafloor",
+        "fossil_site"
+      ],
+      "representativeTaxa": [
+        "sample_graptolite",
+        "sample_nautiloid"
+      ],
+      "fossilArtifactTypes": [
+        "body_fossil_cast"
+      ],
+      "lifelingUnlockThemes": [
+        "plankton_drift"
+      ],
+      "educationTopics": [
+        "Ordovician radiation"
+      ],
+      "isPlayable": false,
+      "sourceProvenance": [
+        {
+          "source": "game_authored",
+          "sourceVersion": "time-gates-v1",
+          "sourceRecordId": "gate_ordovician",
+          "license": "GAME-ORIGINAL",
+          "citation": "Archive of Life: Artifact World — playable time gate design",
+          "citationRequired": false,
+          "retrievedAt": "2026-07-04T00:00:00.000Z",
+          "lastUpdated": "2026-07-04T00:00:00.000Z",
+          "isMockData": true
+        }
+      ]
+    },
+    {
+      "id": "gate_silurian",
+      "name": "Silurian Shoreline",
+      "description": "First land plants and early terrestrial arthropods.",
+      "requiredProgress": {
+        "artifactsCollected": 10
+      },
+      "timeUnitIds": [
+        "silurian"
+      ],
+      "availableRegionTypes": [
+        "coastal",
+        "fossil_site"
+      ],
+      "representativeTaxa": [
+        "sample_cooksonia",
+        "sample_millipede_early"
+      ],
+      "fossilArtifactTypes": [
+        "plant_impression"
+      ],
+      "lifelingUnlockThemes": [
+        "land_pioneer"
+      ],
+      "educationTopics": [
+        "terrestrial colonization"
+      ],
+      "isPlayable": false,
+      "sourceProvenance": [
+        {
+          "source": "game_authored",
+          "sourceVersion": "time-gates-v1",
+          "sourceRecordId": "gate_silurian",
+          "license": "GAME-ORIGINAL",
+          "citation": "Archive of Life: Artifact World — playable time gate design",
+          "citationRequired": false,
+          "retrievedAt": "2026-07-04T00:00:00.000Z",
+          "lastUpdated": "2026-07-04T00:00:00.000Z",
+          "isMockData": true
+        }
+      ]
+    },
+    {
+      "id": "gate_devonian",
+      "name": "Devonian Seas and Forests",
+      "description": "Age of fishes and early forests.",
+      "requiredProgress": {
+        "artifactsCollected": 8
+      },
+      "timeUnitIds": [
+        "devonian",
+        "devonian_late"
+      ],
+      "availableRegionTypes": [
+        "forest",
+        "coastal",
+        "fossil_site"
+      ],
+      "representativeTaxa": [
+        "sample_dunkleosteus",
+        "sample_ammonite_devonian"
+      ],
+      "fossilArtifactTypes": [
+        "body_fossil_cast",
+        "plant_impression"
+      ],
+      "lifelingUnlockThemes": [
+        "lobe_fin_learner"
+      ],
+      "educationTopics": [
+        "Devonian extinction",
+        "ammonites"
+      ],
+      "isPlayable": false,
+      "sourceProvenance": [
+        {
+          "source": "game_authored",
+          "sourceVersion": "time-gates-v1",
+          "sourceRecordId": "gate_devonian",
+          "license": "GAME-ORIGINAL",
+          "citation": "Archive of Life: Artifact World — playable time gate design",
+          "citationRequired": false,
+          "retrievedAt": "2026-07-04T00:00:00.000Z",
+          "lastUpdated": "2026-07-04T00:00:00.000Z",
+          "isMockData": true
+        }
+      ]
+    },
+    {
+      "id": "gate_carboniferous",
+      "name": "Carboniferous Swamp World",
+      "description": "Vast coal swamps with giant insects.",
+      "requiredProgress": {
+        "artifactsCollected": 8
+      },
+      "timeUnitIds": [
+        "carboniferous",
+        "pennsylvanian"
+      ],
+      "availableRegionTypes": [
+        "wetland",
+        "forest",
+        "fossil_site"
+      ],
+      "representativeTaxa": [
+        "sample_meganeura",
+        "sample_arthropleura"
+      ],
+      "fossilArtifactTypes": [
+        "plant_impression",
+        "body_fossil_cast"
+      ],
+      "lifelingUnlockThemes": [
+        "swamp_glider"
+      ],
+      "educationTopics": [
+        "coal forests",
+        "high oxygen"
+      ],
+      "isPlayable": false,
+      "sourceProvenance": [
+        {
+          "source": "game_authored",
+          "sourceVersion": "time-gates-v1",
+          "sourceRecordId": "gate_carboniferous",
+          "license": "GAME-ORIGINAL",
+          "citation": "Archive of Life: Artifact World — playable time gate design",
+          "citationRequired": false,
+          "retrievedAt": "2026-07-04T00:00:00.000Z",
+          "lastUpdated": "2026-07-04T00:00:00.000Z",
+          "isMockData": true
+        }
+      ]
+    },
+    {
+      "id": "gate_permian",
+      "name": "Permian Supercontinent",
+      "description": "Pangea at its peak — before the greatest extinction.",
+      "requiredProgress": {
+        "artifactsCollected": 8
+      },
+      "timeUnitIds": [
+        "permian",
+        "lopingian"
+      ],
+      "availableRegionTypes": [
+        "savanna",
+        "fossil_site"
+      ],
+      "representativeTaxa": [
+        "sample_gorgonops",
+        "sample_dicynodont"
+      ],
+      "fossilArtifactTypes": [
+        "body_fossil_cast"
+      ],
+      "lifelingUnlockThemes": [
+        "supercontinent_survivor"
+      ],
+      "educationTopics": [
+        "P-T extinction"
+      ],
+      "isPlayable": false,
+      "sourceProvenance": [
+        {
+          "source": "game_authored",
+          "sourceVersion": "time-gates-v1",
+          "sourceRecordId": "gate_permian",
+          "license": "GAME-ORIGINAL",
+          "citation": "Archive of Life: Artifact World — playable time gate design",
+          "citationRequired": false,
+          "retrievedAt": "2026-07-04T00:00:00.000Z",
+          "lastUpdated": "2026-07-04T00:00:00.000Z",
+          "isMockData": true
+        }
+      ]
+    },
+    {
+      "id": "gate_triassic",
+      "name": "Triassic Recovery World",
+      "description": "Life rebuilds after the Permian extinction.",
+      "requiredProgress": {
+        "artifactsCollected": 6
+      },
+      "timeUnitIds": [
+        "triassic",
+        "late_triassic"
+      ],
+      "availableRegionTypes": [
+        "savanna",
+        "fossil_site"
+      ],
+      "representativeTaxa": [
+        "sample_coelophysis",
+        "sample_lystrosaurus"
+      ],
+      "fossilArtifactTypes": [
+        "body_fossil_cast"
+      ],
+      "lifelingUnlockThemes": [
+        "recovery_spirit"
+      ],
+      "educationTopics": [
+        "Triassic recovery"
+      ],
+      "isPlayable": false,
+      "sourceProvenance": [
+        {
+          "source": "game_authored",
+          "sourceVersion": "time-gates-v1",
+          "sourceRecordId": "gate_triassic",
+          "license": "GAME-ORIGINAL",
+          "citation": "Archive of Life: Artifact World — playable time gate design",
+          "citationRequired": false,
+          "retrievedAt": "2026-07-04T00:00:00.000Z",
+          "lastUpdated": "2026-07-04T00:00:00.000Z",
+          "isMockData": true
+        }
+      ]
+    },
+    {
+      "id": "gate_jurassic",
+      "name": "Jurassic World",
+      "description": "Sauropod giants and the first birds.",
+      "requiredProgress": {
+        "artifactsCollected": 5
+      },
+      "timeUnitIds": [
+        "jurassic",
+        "late_jurassic"
+      ],
+      "availableRegionTypes": [
+        "forest",
+        "fossil_site"
+      ],
+      "representativeTaxa": [
+        "sample_brachiosaurus",
+        "sample_archaeopteryx"
+      ],
+      "fossilArtifactTypes": [
+        "body_fossil_cast",
+        "track_impression"
+      ],
+      "lifelingUnlockThemes": [
+        "sauropod_gaze"
+      ],
+      "educationTopics": [
+        "Jurassic ecosystems"
+      ],
+      "isPlayable": false,
+      "sourceProvenance": [
+        {
+          "source": "game_authored",
+          "sourceVersion": "time-gates-v1",
+          "sourceRecordId": "gate_jurassic",
+          "license": "GAME-ORIGINAL",
+          "citation": "Archive of Life: Artifact World — playable time gate design",
+          "citationRequired": false,
+          "retrievedAt": "2026-07-04T00:00:00.000Z",
+          "lastUpdated": "2026-07-04T00:00:00.000Z",
+          "isMockData": true
+        }
+      ]
+    },
+    {
+      "id": "gate_cretaceous",
+      "name": "Cretaceous World",
+      "description": "Flowering plants and apex dinosaurs.",
+      "requiredProgress": {
+        "artifactsCollected": 4
+      },
+      "timeUnitIds": [
+        "cretaceous",
+        "late_cretaceous"
+      ],
+      "availableRegionTypes": [
+        "forest",
+        "coastal",
+        "fossil_site"
+      ],
+      "representativeTaxa": [
+        "tyrannosaurus_rex",
+        "sample_ammonite_cretaceous"
+      ],
+      "fossilArtifactTypes": [
+        "body_fossil_cast",
+        "track_impression"
+      ],
+      "lifelingUnlockThemes": [
+        "apex_observer"
+      ],
+      "educationTopics": [
+        "K-Pg extinction"
+      ],
+      "isPlayable": false,
+      "sourceProvenance": [
+        {
+          "source": "game_authored",
+          "sourceVersion": "time-gates-v1",
+          "sourceRecordId": "gate_cretaceous",
+          "license": "GAME-ORIGINAL",
+          "citation": "Archive of Life: Artifact World — playable time gate design",
+          "citationRequired": false,
+          "retrievedAt": "2026-07-04T00:00:00.000Z",
+          "lastUpdated": "2026-07-04T00:00:00.000Z",
+          "isMockData": true
+        }
+      ]
+    },
+    {
+      "id": "gate_paleogene",
+      "name": "Paleogene Recovery World",
+      "description": "Mammals radiate after dinosaur extinction.",
+      "requiredProgress": {
+        "artifactsCollected": 3
+      },
+      "timeUnitIds": [
+        "paleogene",
+        "paleocene",
+        "eocene"
+      ],
+      "availableRegionTypes": [
+        "forest",
+        "wetland"
+      ],
+      "representativeTaxa": [
+        "sample_palaeotherium"
+      ],
+      "fossilArtifactTypes": [
+        "body_fossil_cast"
+      ],
+      "lifelingUnlockThemes": [
+        "mammal_dawn"
+      ],
+      "educationTopics": [
+        "post-KPg recovery"
+      ],
+      "isPlayable": false,
+      "sourceProvenance": [
+        {
+          "source": "game_authored",
+          "sourceVersion": "time-gates-v1",
+          "sourceRecordId": "gate_paleogene",
+          "license": "GAME-ORIGINAL",
+          "citation": "Archive of Life: Artifact World — playable time gate design",
+          "citationRequired": false,
+          "retrievedAt": "2026-07-04T00:00:00.000Z",
+          "lastUpdated": "2026-07-04T00:00:00.000Z",
+          "isMockData": true
+        }
+      ]
+    },
+    {
+      "id": "gate_neogene",
+      "name": "Neogene Grasslands",
+      "description": "Savannas spread as grasslands dominate.",
+      "requiredProgress": {
+        "artifactsCollected": 2
+      },
+      "timeUnitIds": [
+        "neogene",
+        "miocene",
+        "pliocene"
+      ],
+      "availableRegionTypes": [
+        "savanna",
+        "forest"
+      ],
+      "representativeTaxa": [
+        "sample_saber_toothed_cat"
+      ],
+      "fossilArtifactTypes": [
+        "body_fossil_cast"
+      ],
+      "lifelingUnlockThemes": [
+        "grassland_runner"
+      ],
+      "educationTopics": [
+        "C4 grasslands"
+      ],
+      "isPlayable": false,
+      "sourceProvenance": [
+        {
+          "source": "game_authored",
+          "sourceVersion": "time-gates-v1",
+          "sourceRecordId": "gate_neogene",
+          "license": "GAME-ORIGINAL",
+          "citation": "Archive of Life: Artifact World — playable time gate design",
+          "citationRequired": false,
+          "retrievedAt": "2026-07-04T00:00:00.000Z",
+          "lastUpdated": "2026-07-04T00:00:00.000Z",
+          "isMockData": true
+        }
+      ]
+    },
+    {
+      "id": "gate_pleistocene",
+      "name": "Pleistocene Ice Age",
+      "description": "Ice ages and megafauna of the recent past.",
+      "requiredProgress": {
+        "artifactsCollected": 1
+      },
+      "timeUnitIds": [
+        "pleistocene",
+        "chibanian"
+      ],
+      "availableRegionTypes": [
+        "savanna",
+        "fossil_site"
+      ],
+      "representativeTaxa": [
+        "mammuthus_primigenius",
+        "sample_woolly_rhino"
+      ],
+      "fossilArtifactTypes": [
+        "body_fossil_cast",
+        "track_impression"
+      ],
+      "lifelingUnlockThemes": [
+        "ice_age_resilience"
+      ],
+      "educationTopics": [
+        "glacial cycles"
+      ],
+      "isPlayable": false,
+      "sourceProvenance": [
+        {
+          "source": "game_authored",
+          "sourceVersion": "time-gates-v1",
+          "sourceRecordId": "gate_pleistocene",
+          "license": "GAME-ORIGINAL",
+          "citation": "Archive of Life: Artifact World — playable time gate design",
+          "citationRequired": false,
+          "retrievedAt": "2026-07-04T00:00:00.000Z",
+          "lastUpdated": "2026-07-04T00:00:00.000Z",
+          "isMockData": true
+        }
+      ]
+    },
+    {
+      "id": "gate_holocene",
+      "name": "Modern Earth / Holocene",
+      "description": "Current interglacial — explore living biodiversity.",
+      "requiredProgress": {
+        "artifactsCollected": 0
+      },
+      "timeUnitIds": [
+        "holocene",
+        "meghalayan",
+        "quaternary"
+      ],
+      "availableRegionTypes": [
+        "savanna",
+        "forest",
+        "wetland",
+        "coastal",
+        "museum"
+      ],
+      "representativeTaxa": [
+        "panthera_leo",
+        "danaus_plexippus",
+        "loxodonta_africana"
+      ],
+      "fossilArtifactTypes": [
+        "photograph",
+        "audio_recording",
+        "track_impression"
+      ],
+      "lifelingUnlockThemes": [
+        "modern_explorer"
+      ],
+      "educationTopics": [
+        "conservation",
+        "modern ecology"
+      ],
+      "isPlayable": true,
+      "sourceProvenance": [
+        {
+          "source": "game_authored",
+          "sourceVersion": "time-gates-v1",
+          "sourceRecordId": "gate_holocene",
+          "license": "GAME-ORIGINAL",
+          "citation": "Archive of Life: Artifact World — playable time gate design",
+          "citationRequired": false,
+          "retrievedAt": "2026-07-04T00:00:00.000Z",
+          "lastUpdated": "2026-07-04T00:00:00.000Z",
+          "isMockData": true
+        }
+      ]
+    }
+  ]
+}

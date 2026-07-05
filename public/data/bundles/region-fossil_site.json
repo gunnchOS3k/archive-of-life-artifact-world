@@ -12,6 +12,12 @@
       "scientificName": "Mammuthus primigenius",
       "group": "Mammal",
       "tier": "hero",
+      "representationTier": 6,
+      "lifeStatus": "extinct",
+      "timeUnitIds": [
+        "pleistocene",
+        "holocene"
+      ],
       "taxonomy": {
         "family": "Elephantidae",
         "rank": "species",
@@ -23,7 +29,7 @@
         "assessed": true,
         "sourceVersion": "mock-iucn-2026-07",
         "lastUpdated": "2026-07-02",
-        "iucnTaxonId": 24745
+        "iucnTaxonId": 15130
       },
       "distribution": {
         "continents": [
@@ -36,11 +42,11 @@
         ],
         "sourceVersion": "mock-gbif-2026-07",
         "lastUpdated": "2026-07-02",
-        "gbifTaxonKey": 3269061,
+        "gbifTaxonKey": 688310,
         "occurrenceSummaries": [
           {
             "region": "Eurasia",
-            "occurrenceCount": 3692
+            "occurrenceCount": 2876
           }
         ]
       },
@@ -55,7 +61,7 @@
         "livingRelatives": [
           "Asian Elephant"
         ],
-        "paleobiodbTaxonNo": 567490,
+        "paleobiodbTaxonNo": 591055,
         "sourceVersion": "mock-pbdb-2026-07",
         "lastUpdated": "2026-07-02"
       },
@@ -132,20 +138,20 @@
           "license": "GAME-ORIGINAL",
           "citation": "Archive of Life: Artifact World — MVP authored content",
           "citationRequired": false,
-          "retrievedAt": "2026-07-03T02:38:57.555Z",
-          "lastUpdated": "2026-07-03T02:38:57.555Z",
+          "retrievedAt": "2026-07-05T02:28:46.443Z",
+          "lastUpdated": "2026-07-05T02:28:46.443Z",
           "isMockData": true
         },
         {
           "source": "paleobiodb",
           "sourceVersion": "mock-sample-2026-07",
           "sourceRecordId": "MOCK-mammuthus_primigenius",
-          "paleobiodbTaxonNo": 824319,
+          "paleobiodbTaxonNo": 772863,
           "license": "MOCK-SAMPLE",
           "citation": "MOCK SAMPLE — not sourced from live API",
           "citationRequired": true,
-          "retrievedAt": "2026-07-03T02:38:57.555Z",
-          "lastUpdated": "2026-07-03T02:38:57.555Z",
+          "retrievedAt": "2026-07-05T02:28:46.443Z",
+          "lastUpdated": "2026-07-05T02:28:46.443Z",
           "isMockData": true
         }
       ]
@@ -156,6 +162,12 @@
       "scientificName": "Tyrannosaurus rex",
       "group": "Reptile",
       "tier": "hero",
+      "representationTier": 6,
+      "lifeStatus": "extinct",
+      "timeUnitIds": [
+        "late_cretaceous",
+        "cretaceous"
+      ],
       "taxonomy": {
         "family": "Tyrannosauridae",
         "rank": "species",
@@ -167,7 +179,7 @@
         "assessed": true,
         "sourceVersion": "mock-iucn-2026-07",
         "lastUpdated": "2026-07-02",
-        "iucnTaxonId": 98317
+        "iucnTaxonId": 94589
       },
       "distribution": {
         "continents": [
@@ -179,11 +191,11 @@
         ],
         "sourceVersion": "mock-gbif-2026-07",
         "lastUpdated": "2026-07-02",
-        "gbifTaxonKey": 3669594,
+        "gbifTaxonKey": 1693415,
         "occurrenceSummaries": [
           {
             "region": "North America",
-            "occurrenceCount": 2650
+            "occurrenceCount": 1732
           }
         ]
       },
@@ -199,7 +211,7 @@
           "Chickens",
           "All birds"
         ],
-        "paleobiodbTaxonNo": 117444,
+        "paleobiodbTaxonNo": 781084,
         "sourceVersion": "mock-pbdb-2026-07",
         "lastUpdated": "2026-07-02"
       },
@@ -295,20 +307,20 @@
           "license": "GAME-ORIGINAL",
           "citation": "Archive of Life: Artifact World — MVP authored content",
           "citationRequired": false,
-          "retrievedAt": "2026-07-03T02:38:57.555Z",
-          "lastUpdated": "2026-07-03T02:38:57.555Z",
+          "retrievedAt": "2026-07-05T02:28:46.443Z",
+          "lastUpdated": "2026-07-05T02:28:46.443Z",
           "isMockData": true
         },
         {
           "source": "paleobiodb",
           "sourceVersion": "mock-sample-2026-07",
           "sourceRecordId": "MOCK-tyrannosaurus_rex",
-          "paleobiodbTaxonNo": 54885,
+          "paleobiodbTaxonNo": 285814,
           "license": "MOCK-SAMPLE",
           "citation": "MOCK SAMPLE — not sourced from live API",
           "citationRequired": true,
-          "retrievedAt": "2026-07-03T02:38:57.555Z",
-          "lastUpdated": "2026-07-03T02:38:57.555Z",
+          "retrievedAt": "2026-07-05T02:28:46.443Z",
+          "lastUpdated": "2026-07-05T02:28:46.443Z",
           "isMockData": true
         }
       ]
@@ -319,6 +331,16 @@
       "scientificName": "Trilobita (order)",
       "group": "Arthropod",
       "tier": "hero",
+      "representationTier": 6,
+      "lifeStatus": "representative_group",
+      "timeUnitIds": [
+        "cambrian",
+        "ordovician",
+        "silurian",
+        "devonian",
+        "carboniferous",
+        "permian"
+      ],
       "taxonomy": {
         "family": "Trilobita",
         "rank": "order",
@@ -330,7 +352,7 @@
         "assessed": true,
         "sourceVersion": "mock-iucn-2026-07",
         "lastUpdated": "2026-07-02",
-        "iucnTaxonId": 54617
+        "iucnTaxonId": 79883
       },
       "distribution": {
         "continents": [
@@ -341,11 +363,11 @@
         ],
         "sourceVersion": "mock-gbif-2026-07",
         "lastUpdated": "2026-07-02",
-        "gbifTaxonKey": 3460941,
+        "gbifTaxonKey": 438926,
         "occurrenceSummaries": [
           {
             "region": "Global ancient oceans",
-            "occurrenceCount": 552
+            "occurrenceCount": 2302
           }
         ]
       },
@@ -361,7 +383,7 @@
           "Horseshoe crabs",
           "Arachnids"
         ],
-        "paleobiodbTaxonNo": 380829,
+        "paleobiodbTaxonNo": 180790,
         "sourceVersion": "mock-pbdb-2026-07",
         "lastUpdated": "2026-07-02"
       },
@@ -438,20 +460,20 @@
           "license": "GAME-ORIGINAL",
           "citation": "Archive of Life: Artifact World — MVP authored content",
           "citationRequired": false,
-          "retrievedAt": "2026-07-03T02:38:57.555Z",
-          "lastUpdated": "2026-07-03T02:38:57.555Z",
+          "retrievedAt": "2026-07-05T02:28:46.443Z",
+          "lastUpdated": "2026-07-05T02:28:46.443Z",
           "isMockData": true
         },
         {
           "source": "paleobiodb",
           "sourceVersion": "mock-sample-2026-07",
           "sourceRecordId": "MOCK-trilobita_order",
-          "paleobiodbTaxonNo": 85457,
+          "paleobiodbTaxonNo": 598961,
           "license": "MOCK-SAMPLE",
           "citation": "MOCK SAMPLE — not sourced from live API",
           "citationRequired": true,
-          "retrievedAt": "2026-07-03T02:38:57.555Z",
-          "lastUpdated": "2026-07-03T02:38:57.555Z",
+          "retrievedAt": "2026-07-05T02:28:46.443Z",
+          "lastUpdated": "2026-07-05T02:28:46.443Z",
           "isMockData": true
         }
       ]

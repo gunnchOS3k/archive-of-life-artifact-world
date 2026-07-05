@@ -136,6 +136,20 @@ export class DataCatalogService {
       return found;
     }
 
+    // Try archive stubs for tier 0–3 records
+    if (manifest.bundles.archiveStubs) {
+      const stubBundle = await this.loadBundle<{ species: ArchiveSpecies[] }>(
+        'archive_stubs',
+        manifest.bundles.archiveStubs.path
+      );
+      const stub = stubBundle.species.find((s) => s.id === id);
+      if (stub) {
+        this.loadedSpecies.set(id, stub);
+        await speciesCache.setSpecies(id, manifest.snapshotId, stub);
+        return stub;
+      }
+    }
+
     return null;
   }
 
@@ -147,9 +161,14 @@ export class DataCatalogService {
     conservationStatus?: string;
     threatenedOnly?: boolean;
     extinctOnly?: boolean;
+    extantOnly?: boolean;
     collectedIds?: Set<string>;
     collectedFilter?: 'collected' | 'uncollected' | 'all';
     tier?: string;
+    representationTier?: string;
+    timePeriod?: string;
+    lifeStatus?: string;
+    source?: string;
     page?: number;
     pageSize?: number;
   }): { entries: SpeciesIndexEntry[]; total: number; page: number; pageSize: number } {
@@ -179,6 +198,22 @@ export class DataCatalogService {
     }
     if (params.extinctOnly) {
       results = results.filter((e) => e.isExtinct);
+    }
+    if (params.extantOnly) {
+      results = results.filter((e) => !e.isExtinct && e.lifeStatus !== 'extinct' && e.lifeStatus !== 'fossil_only');
+    }
+    if (params.representationTier && params.representationTier !== 'all') {
+      const tier = Number(params.representationTier) as SpeciesIndexEntry['representationTier'];
+      results = results.filter((e) => e.representationTier === tier);
+    }
+    if (params.timePeriod && params.timePeriod !== 'all') {
+      results = results.filter((e) => e.timeUnitIds?.includes(params.timePeriod!));
+    }
+    if (params.lifeStatus && params.lifeStatus !== 'all') {
+      results = results.filter((e) => e.lifeStatus === params.lifeStatus);
+    }
+    if (params.source && params.source !== 'all') {
+      results = results.filter((e) => e.sources?.includes(params.source as never));
     }
     if (params.tier && params.tier !== 'all') {
       results = results.filter((e) => e.tier === params.tier);

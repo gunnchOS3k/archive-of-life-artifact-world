@@ -3,8 +3,9 @@ import type { ConservationProfile } from './conservation';
 import type { DistributionProfile } from './distribution';
 import type { FossilProfile } from './fossil';
 import type { ArtifactTemplate } from './artifact';
-import type { DataSourceProvenance } from './provenance';
+import type { DataSourceProvenance, SourceName } from './provenance';
 import type { HabitatSignal, NasaLayerDependency } from './earth';
+import type { RepresentationTier, TaxonLifeStatus } from '@/time/schema';
 
 export type GameplayTier = 'hero' | 'regional' | 'family' | 'database';
 
@@ -32,6 +33,10 @@ export interface ArchiveSpecies {
   group: string;
   taxonomy: Taxonomy;
   tier: GameplayTier;
+  /** Scalable representation depth — tier 0 minimum for all known taxa */
+  representationTier: RepresentationTier;
+  lifeStatus?: TaxonLifeStatus;
+  timeUnitIds?: string[];
   conservation?: ConservationProfile;
   distribution?: DistributionProfile;
   fossil?: FossilProfile;
@@ -52,6 +57,10 @@ export interface SpeciesIndexEntry {
   group: string;
   family: string;
   tier: GameplayTier;
+  representationTier: RepresentationTier;
+  lifeStatus?: TaxonLifeStatus;
+  timeUnitIds?: string[];
+  sources?: SourceName[];
   region?: string;
   iucnCategory?: string;
   isExtinct: boolean;

@@ -1,0 +1,9 @@
+{
+  "snapshotId": "sample-scope-2026-07",
+  "description": "MOCK SAMPLE — PBDB fossil taxa requiring time ranges",
+  "taxonIds": [
+    "tyrannosaurus_rex", "mammuthus_primigenius", "trilobita_order",
+    "sample_trilobite_elrathia", "sample_ammonite_cretaceous",
+    "sample_dickinsonia", "sample_brachiosaurus"
+  ]
+}

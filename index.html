@@ -43,6 +43,7 @@
             <button class="hud-btn" id="btn-companion" title="Lifeling (C)">✨ Lifeling</button>
             <button class="hud-btn" id="btn-quests" title="Quests (Q)">📋 Quests</button>
             <button class="hud-btn" id="btn-earth" title="Earth Layers (T)">🛰️ Earth</button>
+            <button class="hud-btn" id="btn-time" title="Time Atlas (Y)">⏳ Time</button>
           </div>
         </div>
       </div>
@@ -65,6 +66,9 @@
             <option value="Insect">Insects</option>
             <option value="Arachnid">Arachnids</option>
             <option value="Reptile">Reptiles</option>
+            <option value="Microbe">Microbes</option>
+            <option value="Ediacaran">Ediacaran</option>
+            <option value="Mollusk">Mollusks</option>
           </select>
           <select id="filter-region" class="filter-select">
             <option value="all">All regions</option>
@@ -83,10 +87,54 @@
             <option value="Data Deficient">Data Deficient</option>
           </select>
           <select id="filter-tier" class="filter-select">
-            <option value="all">All tiers</option>
+            <option value="all">All gameplay tiers</option>
             <option value="hero">Hero</option>
             <option value="regional">Regional</option>
             <option value="database">Database</option>
+          </select>
+          <select id="filter-representation-tier" class="filter-select">
+            <option value="all">All rep. tiers</option>
+            <option value="0">T0 — Archive record</option>
+            <option value="1">T1 — Searchable</option>
+            <option value="2">T2 — Region mapped</option>
+            <option value="3">T3 — Time mapped</option>
+            <option value="4">T4 — Artifact-ready</option>
+            <option value="5">T5 — Questable</option>
+            <option value="6">T6 — Hero taxon</option>
+          </select>
+          <select id="filter-time-period" class="filter-select">
+            <option value="all">All time periods</option>
+            <option value="holocene">Holocene</option>
+            <option value="pleistocene">Pleistocene</option>
+            <option value="cretaceous">Cretaceous</option>
+            <option value="jurassic">Jurassic</option>
+            <option value="triassic">Triassic</option>
+            <option value="permian">Permian</option>
+            <option value="carboniferous">Carboniferous</option>
+            <option value="devonian">Devonian</option>
+            <option value="cambrian">Cambrian</option>
+            <option value="ediacaran">Ediacaran</option>
+            <option value="archean">Archean</option>
+            <option value="hadean">Hadean</option>
+          </select>
+          <select id="filter-life-status" class="filter-select">
+            <option value="all">All life statuses</option>
+            <option value="extant">Extant</option>
+            <option value="extinct">Extinct</option>
+            <option value="fossil_only">Fossil only</option>
+            <option value="uncertain">Uncertain</option>
+            <option value="microbial_or_pre_animal">Microbial / pre-animal</option>
+            <option value="representative_group">Representative group</option>
+          </select>
+          <select id="filter-source" class="filter-select">
+            <option value="all">All sources</option>
+            <option value="catalogue_of_life">Catalogue of Life</option>
+            <option value="gbif">GBIF</option>
+            <option value="iucn">IUCN</option>
+            <option value="paleobiodb">Paleobiology Database</option>
+            <option value="neotoma">Neotoma</option>
+            <option value="nasa_earthdata">NASA Earthdata</option>
+            <option value="ics_chronostratigraphic">ICS Time Scale</option>
           </select>
           <select id="filter-collected" class="filter-select">
             <option value="all">All collection</option>
@@ -95,6 +143,7 @@
           </select>
           <label class="filter-check"><input type="checkbox" id="filter-threatened"> Threatened only</label>
           <label class="filter-check"><input type="checkbox" id="filter-extinct"> Extinct/fossil only</label>
+          <label class="filter-check"><input type="checkbox" id="filter-extant"> Extant only</label>
         </div>
         <div id="archive-grid" class="archive-grid"></div>
         <div id="archive-pagination" class="archive-pagination"></div>
@@ -160,6 +209,31 @@
         </label>
         <div id="earth-layer-tabs" class="earth-layer-tabs"></div>
         <div id="earth-layer-content" class="earth-layer-content"></div>
+      </div>
+    </div>
+
+    <div id="panel-time" class="panel hidden panel-time">
+      <div class="panel-header">
+        <h2>Time Atlas</h2>
+        <button class="panel-close" data-panel="time">✕</button>
+      </div>
+      <div class="panel-body time-panel-body">
+        <div id="time-mock-banner" class="time-mock-banner"></div>
+        <div class="time-atlas-controls">
+          <input type="search" id="time-search" placeholder="Search time units..." class="archive-search">
+          <select id="time-rank-select" class="filter-select">
+            <option value="eon">Eons</option>
+            <option value="era">Eras</option>
+            <option value="period">Periods</option>
+            <option value="epoch">Epochs</option>
+            <option value="age">Ages</option>
+          </select>
+        </div>
+        <div class="time-atlas-layout">
+          <div id="time-atlas-tree" class="time-atlas-tree"></div>
+          <div id="time-atlas-detail" class="time-atlas-detail"></div>
+        </div>
+        <div id="time-atlas-gates" class="time-atlas-gates"></div>
       </div>
     </div>
 

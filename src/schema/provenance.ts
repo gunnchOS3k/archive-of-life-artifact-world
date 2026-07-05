@@ -4,6 +4,9 @@ export type SourceName =
   | 'gbif'
   | 'iucn'
   | 'paleobiodb'
+  | 'neotoma'
+  | 'nasa_earthdata'
+  | 'ics_chronostratigraphic'
   | 'encyclopedia_of_life'
   | 'game_authored'
   | 'mock_sample';

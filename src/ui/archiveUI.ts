@@ -21,8 +21,13 @@ export class ArchiveUI {
     conservationStatus: 'all',
     threatenedOnly: false,
     extinctOnly: false,
+    extantOnly: false,
     collectedFilter: 'all' as 'all' | 'collected' | 'uncollected',
     tier: 'all',
+    representationTier: 'all',
+    timePeriod: 'all',
+    lifeStatus: 'all',
+    source: 'all',
   };
 
   constructor(container: HTMLElement, catalog: DataCatalogService) {
@@ -77,6 +82,33 @@ export class ArchiveUI {
     });
     this.container.querySelector('#filter-extinct')?.addEventListener('change', (e) => {
       this.filters.extinctOnly = (e.target as HTMLInputElement).checked;
+      if (this.filters.extinctOnly) this.filters.extantOnly = false;
+      this.page = 1;
+      this.render();
+    });
+    this.container.querySelector('#filter-extant')?.addEventListener('change', (e) => {
+      this.filters.extantOnly = (e.target as HTMLInputElement).checked;
+      if (this.filters.extantOnly) this.filters.extinctOnly = false;
+      this.page = 1;
+      this.render();
+    });
+    this.container.querySelector('#filter-representation-tier')?.addEventListener('change', (e) => {
+      this.filters.representationTier = (e.target as HTMLSelectElement).value;
+      this.page = 1;
+      this.render();
+    });
+    this.container.querySelector('#filter-time-period')?.addEventListener('change', (e) => {
+      this.filters.timePeriod = (e.target as HTMLSelectElement).value;
+      this.page = 1;
+      this.render();
+    });
+    this.container.querySelector('#filter-life-status')?.addEventListener('change', (e) => {
+      this.filters.lifeStatus = (e.target as HTMLSelectElement).value;
+      this.page = 1;
+      this.render();
+    });
+    this.container.querySelector('#filter-source')?.addEventListener('change', (e) => {
+      this.filters.source = (e.target as HTMLSelectElement).value;
       this.page = 1;
       this.render();
     });
@@ -124,15 +156,15 @@ export class ArchiveUI {
     });
 
     this.grid.innerHTML = result.entries.map((entry) => {
-      const unlocked = collectedIds.has(entry.id);
+      const unlocked = collectedIds.has(entry.id) || (entry.representationTier ?? 6) <= 3;
       const icon = getSpeciesIcon({ group: entry.group, conservationStatus: entry.iucnCategory });
       const statusClass = getConservationClass(entry.iucnCategory ?? 'Not Evaluated');
       return `
-        <div class="archive-card ${unlocked ? '' : 'locked'}" data-id="${entry.id}">
+        <div class="archive-card ${unlocked ? '' : 'locked'}" data-id="${entry.id}" data-unlocked="${unlocked}">
           <div class="species-icon">${unlocked ? icon : '❓'}</div>
           <div class="species-name">${unlocked ? entry.commonName : '???'}</div>
-          <div class="species-tier">${entry.tier}</div>
-          ${unlocked ? `<span class="species-status status-${statusClass}">${entry.iucnCategory}</span>` : ''}
+          <div class="species-tier">T${entry.representationTier ?? '?'}</div>
+          ${unlocked ? `<span class="species-status status-${statusClass}">${entry.iucnCategory ?? entry.lifeStatus ?? 'Archive'}</span>` : ''}
         </div>
       `;
     }).join('');
@@ -149,7 +181,8 @@ export class ArchiveUI {
     this.grid.querySelectorAll('.archive-card').forEach((card) => {
       card.addEventListener('click', async () => {
         const id = (card as HTMLElement).dataset.id!;
-        if (!collectedIds.has(id)) return;
+        const unlocked = (card as HTMLElement).dataset.unlocked === 'true';
+        if (!unlocked) return;
         const species = await this.catalog.getSpeciesDetail(id);
         if (species) this.showDetail(species);
       });
@@ -186,11 +219,9 @@ export class ArchiveUI {
       <div class="detail-grid">
         <div><span class="detail-label">Group:</span> ${species.group}</div>
         <div><span class="detail-label">Family:</span> ${species.taxonomy.family}</div>
-        <div><span class="detail-label">Tier:</span> ${species.tier}</div>
-        <div><span class="detail-label">Diet:</span> ${gp?.diet ?? '—'}</div>
-        <div><span class="detail-label">Activity:</span> ${gp?.activity ?? '—'}</div>
-        <div><span class="detail-label">Size:</span> ${gp?.size ?? '—'}</div>
-        <div><span class="detail-label">Time:</span> ${gp?.timeRange ?? species.fossil?.timeRange ?? '—'}</div>
+        <div><span class="detail-label">Rep. Tier:</span> ${species.representationTier} — ${species.representationTier <= 3 ? 'Archive/database record' : 'Gameplay depth'}</div>
+        <div><span class="detail-label">Life status:</span> ${species.lifeStatus ?? '—'}</div>
+        <div><span class="detail-label">Time periods:</span> ${species.timeUnitIds?.join(', ') ?? gp?.timeRange ?? species.fossil?.timeRange ?? '—'}</div>
         <div><span class="detail-label">Status:</span> ${status}</div>
         <div><span class="detail-label">Habitats:</span> ${species.distribution?.habitats.join(', ') ?? '—'}</div>
       </div>

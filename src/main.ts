@@ -1,6 +1,7 @@
 import '../css/styles.css';
 import { dataCatalog } from '@/services/DataCatalogService';
 import { earthLayerService } from '@/services/EarthLayerService';
+import { timeAtlasService } from '@/time/TimeAtlasService';
 import { createDefaultSave, loadSave, hasSave } from '@/systems/saveSystem';
 import { Game } from '@/game/Game';
 
@@ -15,7 +16,7 @@ async function init() {
 }
 
 async function startGame(continuing: boolean) {
-  await Promise.all([dataCatalog.initialize(), earthLayerService.initialize()]);
+  await Promise.all([dataCatalog.initialize(), earthLayerService.initialize(), timeAtlasService.initialize()]);
   const state = continuing ? loadSave() : createDefaultSave();
   if (!state) {
     alert('Could not load save. Starting new expedition.');
@@ -24,12 +25,15 @@ async function startGame(continuing: boolean) {
   if (!state.earthLayers) {
     state.earthLayers = { viewedTabs: [], analyzedRegions: [] };
   }
+  if (!state.timeAtlas) {
+    state.timeAtlas = { viewedTimeUnits: [], viewedGates: [], analyzedPeriods: [] };
+  }
 
   document.getElementById('title-screen')!.classList.remove('active');
   document.getElementById('game-screen')!.classList.add('active');
 
   const canvas = document.getElementById('game-canvas') as HTMLCanvasElement;
-  game = new Game(canvas, dataCatalog, earthLayerService, state);
+  game = new Game(canvas, dataCatalog, earthLayerService, timeAtlasService, state);
   game.start();
 
   if (!continuing) {

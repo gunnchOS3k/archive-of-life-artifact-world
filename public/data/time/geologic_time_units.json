@@ -1,0 +1,1319 @@
+{
+  "snapshotId": "ics-sample-2026-07",
+  "version": "1.0.0",
+  "source": "ICS-Chart-v2024/12",
+  "isMockData": true,
+  "units": [
+    {
+      "id": "hadean",
+      "name": "Hadean",
+      "rank": "eon",
+      "parentId": null,
+      "startMa": 4600,
+      "endMa": 4000,
+      "displayOrder": 0,
+      "description": "Pre-geologic record era before stable crust.",
+      "majorEvents": [
+        "Earth formation",
+        "Moon-forming impact"
+      ],
+      "dominantLife": [
+        "Pre-biotic chemistry"
+      ],
+      "climateSummary": "Extreme heat, molten surface",
+      "sourceProvenance": [
+        {
+          "source": "ics_chronostratigraphic",
+          "sourceVersion": "ICS-Chart-v2024/12",
+          "sourceRecordId": "hadean",
+          "license": "CC-BY-4.0",
+          "citation": "International Commission on Stratigraphy (2024). International Chronostratigraphic Chart v2024/12.",
+          "citationRequired": true,
+          "retrievedAt": "2026-07-04T00:00:00.000Z",
+          "lastUpdated": "2026-07-04T00:00:00.000Z",
+          "isMockData": true
+        }
+      ],
+      "uncertaintyNotes": "Boundaries approximate; sparse geologic record."
+    },
+    {
+      "id": "archean",
+      "name": "Archean",
+      "rank": "eon",
+      "parentId": null,
+      "startMa": 4000,
+      "endMa": 2500,
+      "displayOrder": 1,
+      "description": "Early Earth with first life and oceans.",
+      "majorEvents": [
+        "First life",
+        "Oxygen-free atmosphere"
+      ],
+      "dominantLife": [
+        "Microbial mats",
+        "Stromatolites"
+      ],
+      "climateSummary": "Warm oceans, reducing atmosphere",
+      "sourceProvenance": [
+        {
+          "source": "ics_chronostratigraphic",
+          "sourceVersion": "ICS-Chart-v2024/12",
+          "sourceRecordId": "archean",
+          "license": "CC-BY-4.0",
+          "citation": "International Commission on Stratigraphy (2024). International Chronostratigraphic Chart v2024/12.",
+          "citationRequired": true,
+          "retrievedAt": "2026-07-04T00:00:00.000Z",
+          "lastUpdated": "2026-07-04T00:00:00.000Z",
+          "isMockData": true
+        }
+      ]
+    },
+    {
+      "id": "proterozoic",
+      "name": "Proterozoic",
+      "rank": "eon",
+      "parentId": null,
+      "startMa": 2500,
+      "endMa": 538,
+      "displayOrder": 2,
+      "description": "Rise of oxygen and complex cells.",
+      "majorEvents": [
+        "Great Oxidation Event",
+        "Snowball Earth"
+      ],
+      "dominantLife": [
+        "Cyanobacteria",
+        "Eukaryotes",
+        "Ediacaran biota"
+      ],
+      "climateSummary": "Variable; increasing oxygen",
+      "sourceProvenance": [
+        {
+          "source": "ics_chronostratigraphic",
+          "sourceVersion": "ICS-Chart-v2024/12",
+          "sourceRecordId": "proterozoic",
+          "license": "CC-BY-4.0",
+          "citation": "International Commission on Stratigraphy (2024). International Chronostratigraphic Chart v2024/12.",
+          "citationRequired": true,
+          "retrievedAt": "2026-07-04T00:00:00.000Z",
+          "lastUpdated": "2026-07-04T00:00:00.000Z",
+          "isMockData": true
+        }
+      ]
+    },
+    {
+      "id": "phanerozoic",
+      "name": "Phanerozoic",
+      "rank": "eon",
+      "parentId": null,
+      "startMa": 538,
+      "endMa": 0,
+      "displayOrder": 3,
+      "description": "Visible life era with abundant fossils.",
+      "majorEvents": [
+        "Cambrian explosion",
+        "Mass extinctions"
+      ],
+      "dominantLife": [
+        "Animals",
+        "Plants",
+        "Modern ecosystems"
+      ],
+      "climateSummary": "Diverse climates through time",
+      "sourceProvenance": [
+        {
+          "source": "ics_chronostratigraphic",
+          "sourceVersion": "ICS-Chart-v2024/12",
+          "sourceRecordId": "phanerozoic",
+          "license": "CC-BY-4.0",
+          "citation": "International Commission on Stratigraphy (2024). International Chronostratigraphic Chart v2024/12.",
+          "citationRequired": true,
+          "retrievedAt": "2026-07-04T00:00:00.000Z",
+          "lastUpdated": "2026-07-04T00:00:00.000Z",
+          "isMockData": true
+        }
+      ]
+    },
+    {
+      "id": "eoarchean",
+      "name": "Eoarchean",
+      "rank": "era",
+      "parentId": "archean",
+      "startMa": 4000,
+      "endMa": 3600,
+      "displayOrder": 4,
+      "description": "Earliest Archean crust and oceans.",
+      "majorEvents": [
+        "First oceans"
+      ],
+      "dominantLife": [
+        "Hyperthermophiles"
+      ],
+      "climateSummary": "Hot, volcanic",
+      "sourceProvenance": [
+        {
+          "source": "ics_chronostratigraphic",
+          "sourceVersion": "ICS-Chart-v2024/12",
+          "sourceRecordId": "eoarchean",
+          "license": "CC-BY-4.0",
+          "citation": "International Commission on Stratigraphy (2024). International Chronostratigraphic Chart v2024/12.",
+          "citationRequired": true,
+          "retrievedAt": "2026-07-04T00:00:00.000Z",
+          "lastUpdated": "2026-07-04T00:00:00.000Z",
+          "isMockData": true
+        }
+      ]
+    },
+    {
+      "id": "mesoarchean",
+      "name": "Mesoarchean",
+      "rank": "era",
+      "parentId": "archean",
+      "startMa": 3600,
+      "endMa": 3200,
+      "displayOrder": 5,
+      "description": "Stable continental nuclei form.",
+      "majorEvents": [
+        "Continental crust growth"
+      ],
+      "dominantLife": [
+        "Microbial communities"
+      ],
+      "climateSummary": "Cooling crust",
+      "sourceProvenance": [
+        {
+          "source": "ics_chronostratigraphic",
+          "sourceVersion": "ICS-Chart-v2024/12",
+          "sourceRecordId": "mesoarchean",
+          "license": "CC-BY-4.0",
+          "citation": "International Commission on Stratigraphy (2024). International Chronostratigraphic Chart v2024/12.",
+          "citationRequired": true,
+          "retrievedAt": "2026-07-04T00:00:00.000Z",
+          "lastUpdated": "2026-07-04T00:00:00.000Z",
+          "isMockData": true
+        }
+      ]
+    },
+    {
+      "id": "neoarchean",
+      "name": "Neoarchean",
+      "rank": "era",
+      "parentId": "archean",
+      "startMa": 3200,
+      "endMa": 2500,
+      "displayOrder": 6,
+      "description": "Late Archean before Proterozoic.",
+      "majorEvents": [
+        "Atmospheric change"
+      ],
+      "dominantLife": [
+        "Stromatolite reefs"
+      ],
+      "climateSummary": "Warmer than today",
+      "sourceProvenance": [
+        {
+          "source": "ics_chronostratigraphic",
+          "sourceVersion": "ICS-Chart-v2024/12",
+          "sourceRecordId": "neoarchean",
+          "license": "CC-BY-4.0",
+          "citation": "International Commission on Stratigraphy (2024). International Chronostratigraphic Chart v2024/12.",
+          "citationRequired": true,
+          "retrievedAt": "2026-07-04T00:00:00.000Z",
+          "lastUpdated": "2026-07-04T00:00:00.000Z",
+          "isMockData": true
+        }
+      ]
+    },
+    {
+      "id": "paleoproterozoic",
+      "name": "Paleoproterozoic",
+      "rank": "era",
+      "parentId": "proterozoic",
+      "startMa": 2500,
+      "endMa": 1600,
+      "displayOrder": 7,
+      "description": "Great Oxidation and banded iron.",
+      "majorEvents": [
+        "GOE ~2.4 Ga"
+      ],
+      "dominantLife": [
+        "Oxygenic photosynthesis"
+      ],
+      "climateSummary": "Increasing oxygen",
+      "sourceProvenance": [
+        {
+          "source": "ics_chronostratigraphic",
+          "sourceVersion": "ICS-Chart-v2024/12",
+          "sourceRecordId": "paleoproterozoic",
+          "license": "CC-BY-4.0",
+          "citation": "International Commission on Stratigraphy (2024). International Chronostratigraphic Chart v2024/12.",
+          "citationRequired": true,
+          "retrievedAt": "2026-07-04T00:00:00.000Z",
+          "lastUpdated": "2026-07-04T00:00:00.000Z",
+          "isMockData": true
+        }
+      ]
+    },
+    {
+      "id": "mesoproterozoic",
+      "name": "Mesoproterozoic",
+      "rank": "era",
+      "parentId": "proterozoic",
+      "startMa": 1600,
+      "endMa": 1000,
+      "displayOrder": 8,
+      "description": "Stable supercontinent Rodinia forms.",
+      "majorEvents": [
+        "Rodinia assembly"
+      ],
+      "dominantLife": [
+        "Eukaryotic diversification"
+      ],
+      "climateSummary": "Mild, stable",
+      "sourceProvenance": [
+        {
+          "source": "ics_chronostratigraphic",
+          "sourceVersion": "ICS-Chart-v2024/12",
+          "sourceRecordId": "mesoproterozoic",
+          "license": "CC-BY-4.0",
+          "citation": "International Commission on Stratigraphy (2024). International Chronostratigraphic Chart v2024/12.",
+          "citationRequired": true,
+          "retrievedAt": "2026-07-04T00:00:00.000Z",
+          "lastUpdated": "2026-07-04T00:00:00.000Z",
+          "isMockData": true
+        }
+      ]
+    },
+    {
+      "id": "neoproterozoic",
+      "name": "Neoproterozoic",
+      "rank": "era",
+      "parentId": "proterozoic",
+      "startMa": 1000,
+      "endMa": 538,
+      "displayOrder": 9,
+      "description": "Snowball Earth and Ediacaran fauna.",
+      "majorEvents": [
+        "Snowball Earth",
+        "Ediacaran biota"
+      ],
+      "dominantLife": [
+        "Ediacaran organisms",
+        "Early animals"
+      ],
+      "climateSummary": "Extreme glaciations then warming",
+      "sourceProvenance": [
+        {
+          "source": "ics_chronostratigraphic",
+          "sourceVersion": "ICS-Chart-v2024/12",
+          "sourceRecordId": "neoproterozoic",
+          "license": "CC-BY-4.0",
+          "citation": "International Commission on Stratigraphy (2024). International Chronostratigraphic Chart v2024/12.",
+          "citationRequired": true,
+          "retrievedAt": "2026-07-04T00:00:00.000Z",
+          "lastUpdated": "2026-07-04T00:00:00.000Z",
+          "isMockData": true
+        }
+      ]
+    },
+    {
+      "id": "paleozoic",
+      "name": "Paleozoic",
+      "rank": "era",
+      "parentId": "phanerozoic",
+      "startMa": 538,
+      "endMa": 251.9,
+      "displayOrder": 10,
+      "description": "Ancient life era ending in Permian extinction.",
+      "majorEvents": [
+        "Cambrian explosion",
+        "Permian-Triassic extinction"
+      ],
+      "dominantLife": [
+        "Trilobites",
+        "Early vertebrates",
+        "Land plants"
+      ],
+      "climateSummary": "From warm seas to ice ages",
+      "sourceProvenance": [
+        {
+          "source": "ics_chronostratigraphic",
+          "sourceVersion": "ICS-Chart-v2024/12",
+          "sourceRecordId": "paleozoic",
+          "license": "CC-BY-4.0",
+          "citation": "International Commission on Stratigraphy (2024). International Chronostratigraphic Chart v2024/12.",
+          "citationRequired": true,
+          "retrievedAt": "2026-07-04T00:00:00.000Z",
+          "lastUpdated": "2026-07-04T00:00:00.000Z",
+          "isMockData": true
+        }
+      ]
+    },
+    {
+      "id": "mesozoic",
+      "name": "Mesozoic",
+      "rank": "era",
+      "parentId": "phanerozoic",
+      "startMa": 251.9,
+      "endMa": 66,
+      "displayOrder": 11,
+      "description": "Age of dinosaurs.",
+      "majorEvents": [
+        "Pangea breakup",
+        "K-Pg extinction"
+      ],
+      "dominantLife": [
+        "Dinosaurs",
+        "Ammonites",
+        "First mammals"
+      ],
+      "climateSummary": "Warm greenhouse climates",
+      "sourceProvenance": [
+        {
+          "source": "ics_chronostratigraphic",
+          "sourceVersion": "ICS-Chart-v2024/12",
+          "sourceRecordId": "mesozoic",
+          "license": "CC-BY-4.0",
+          "citation": "International Commission on Stratigraphy (2024). International Chronostratigraphic Chart v2024/12.",
+          "citationRequired": true,
+          "retrievedAt": "2026-07-04T00:00:00.000Z",
+          "lastUpdated": "2026-07-04T00:00:00.000Z",
+          "isMockData": true
+        }
+      ]
+    },
+    {
+      "id": "cenozoic",
+      "name": "Cenozoic",
+      "rank": "era",
+      "parentId": "phanerozoic",
+      "startMa": 66,
+      "endMa": 0,
+      "displayOrder": 12,
+      "description": "Age of mammals and modern ecosystems.",
+      "majorEvents": [
+        "Ice ages",
+        "Human evolution"
+      ],
+      "dominantLife": [
+        "Mammals",
+        "Flowering plants",
+        "Modern fauna"
+      ],
+      "climateSummary": "Cooling trend to ice ages",
+      "sourceProvenance": [
+        {
+          "source": "ics_chronostratigraphic",
+          "sourceVersion": "ICS-Chart-v2024/12",
+          "sourceRecordId": "cenozoic",
+          "license": "CC-BY-4.0",
+          "citation": "International Commission on Stratigraphy (2024). International Chronostratigraphic Chart v2024/12.",
+          "citationRequired": true,
+          "retrievedAt": "2026-07-04T00:00:00.000Z",
+          "lastUpdated": "2026-07-04T00:00:00.000Z",
+          "isMockData": true
+        }
+      ]
+    },
+    {
+      "id": "ediacaran",
+      "name": "Ediacaran",
+      "rank": "period",
+      "parentId": "neoproterozoic",
+      "startMa": 635,
+      "endMa": 538,
+      "displayOrder": 13,
+      "description": "First large complex multicellular organisms.",
+      "majorEvents": [
+        "Ediacaran biota"
+      ],
+      "dominantLife": [
+        "Dickinsonia",
+        "Rangeomorphs"
+      ],
+      "climateSummary": "Post-glacial warming",
+      "sourceProvenance": [
+        {
+          "source": "ics_chronostratigraphic",
+          "sourceVersion": "ICS-Chart-v2024/12",
+          "sourceRecordId": "ediacaran",
+          "license": "CC-BY-4.0",
+          "citation": "International Commission on Stratigraphy (2024). International Chronostratigraphic Chart v2024/12.",
+          "citationRequired": true,
+          "retrievedAt": "2026-07-04T00:00:00.000Z",
+          "lastUpdated": "2026-07-04T00:00:00.000Z",
+          "isMockData": true
+        }
+      ]
+    },
+    {
+      "id": "cambrian",
+      "name": "Cambrian",
+      "rank": "period",
+      "parentId": "paleozoic",
+      "startMa": 538,
+      "endMa": 485.4,
+      "displayOrder": 14,
+      "description": "Explosion of animal body plans.",
+      "majorEvents": [
+        "Cambrian explosion"
+      ],
+      "dominantLife": [
+        "Trilobites",
+        "Anomalocaris"
+      ],
+      "climateSummary": "Warm shallow seas",
+      "sourceProvenance": [
+        {
+          "source": "ics_chronostratigraphic",
+          "sourceVersion": "ICS-Chart-v2024/12",
+          "sourceRecordId": "cambrian",
+          "license": "CC-BY-4.0",
+          "citation": "International Commission on Stratigraphy (2024). International Chronostratigraphic Chart v2024/12.",
+          "citationRequired": true,
+          "retrievedAt": "2026-07-04T00:00:00.000Z",
+          "lastUpdated": "2026-07-04T00:00:00.000Z",
+          "isMockData": true
+        }
+      ]
+    },
+    {
+      "id": "ordovician",
+      "name": "Ordovician",
+      "rank": "period",
+      "parentId": "paleozoic",
+      "startMa": 485.4,
+      "endMa": 443.8,
+      "displayOrder": 15,
+      "description": "Diverse marine communities.",
+      "majorEvents": [
+        "Ordovician radiation"
+      ],
+      "dominantLife": [
+        "Graptolites",
+        "Nautiloids"
+      ],
+      "climateSummary": "Greenhouse then icehouse",
+      "sourceProvenance": [
+        {
+          "source": "ics_chronostratigraphic",
+          "sourceVersion": "ICS-Chart-v2024/12",
+          "sourceRecordId": "ordovician",
+          "license": "CC-BY-4.0",
+          "citation": "International Commission on Stratigraphy (2024). International Chronostratigraphic Chart v2024/12.",
+          "citationRequired": true,
+          "retrievedAt": "2026-07-04T00:00:00.000Z",
+          "lastUpdated": "2026-07-04T00:00:00.000Z",
+          "isMockData": true
+        }
+      ]
+    },
+    {
+      "id": "silurian",
+      "name": "Silurian",
+      "rank": "period",
+      "parentId": "paleozoic",
+      "startMa": 443.8,
+      "endMa": 419.2,
+      "displayOrder": 16,
+      "description": "First land plants and jawed fish.",
+      "majorEvents": [
+        "Land colonization begins"
+      ],
+      "dominantLife": [
+        "Early arthropods on land"
+      ],
+      "climateSummary": "Stable warm climate",
+      "sourceProvenance": [
+        {
+          "source": "ics_chronostratigraphic",
+          "sourceVersion": "ICS-Chart-v2024/12",
+          "sourceRecordId": "silurian",
+          "license": "CC-BY-4.0",
+          "citation": "International Commission on Stratigraphy (2024). International Chronostratigraphic Chart v2024/12.",
+          "citationRequired": true,
+          "retrievedAt": "2026-07-04T00:00:00.000Z",
+          "lastUpdated": "2026-07-04T00:00:00.000Z",
+          "isMockData": true
+        }
+      ]
+    },
+    {
+      "id": "devonian",
+      "name": "Devonian",
+      "rank": "period",
+      "parentId": "paleozoic",
+      "startMa": 419.2,
+      "endMa": 358.9,
+      "displayOrder": 17,
+      "description": "Age of fishes and early forests.",
+      "majorEvents": [
+        "Forest expansion"
+      ],
+      "dominantLife": [
+        "Lobe-finned fish",
+        "Early tetrapods"
+      ],
+      "climateSummary": "Warm, high CO2",
+      "sourceProvenance": [
+        {
+          "source": "ics_chronostratigraphic",
+          "sourceVersion": "ICS-Chart-v2024/12",
+          "sourceRecordId": "devonian",
+          "license": "CC-BY-4.0",
+          "citation": "International Commission on Stratigraphy (2024). International Chronostratigraphic Chart v2024/12.",
+          "citationRequired": true,
+          "retrievedAt": "2026-07-04T00:00:00.000Z",
+          "lastUpdated": "2026-07-04T00:00:00.000Z",
+          "isMockData": true
+        }
+      ]
+    },
+    {
+      "id": "carboniferous",
+      "name": "Carboniferous",
+      "rank": "period",
+      "parentId": "paleozoic",
+      "startMa": 358.9,
+      "endMa": 298.9,
+      "displayOrder": 18,
+      "description": "Vast coal swamp forests.",
+      "majorEvents": [
+        "Coal formation"
+      ],
+      "dominantLife": [
+        "Giant insects",
+        "Early amniotes"
+      ],
+      "climateSummary": "Humid swamp world",
+      "sourceProvenance": [
+        {
+          "source": "ics_chronostratigraphic",
+          "sourceVersion": "ICS-Chart-v2024/12",
+          "sourceRecordId": "carboniferous",
+          "license": "CC-BY-4.0",
+          "citation": "International Commission on Stratigraphy (2024). International Chronostratigraphic Chart v2024/12.",
+          "citationRequired": true,
+          "retrievedAt": "2026-07-04T00:00:00.000Z",
+          "lastUpdated": "2026-07-04T00:00:00.000Z",
+          "isMockData": true
+        }
+      ]
+    },
+    {
+      "id": "permian",
+      "name": "Permian",
+      "rank": "period",
+      "parentId": "paleozoic",
+      "startMa": 298.9,
+      "endMa": 251.9,
+      "displayOrder": 19,
+      "description": "Supercontinent Pangea dominates.",
+      "majorEvents": [
+        "P-T mass extinction"
+      ],
+      "dominantLife": [
+        "Synapsids",
+        "Gorgonopsians"
+      ],
+      "climateSummary": "Arid interior, extreme extinction",
+      "sourceProvenance": [
+        {
+          "source": "ics_chronostratigraphic",
+          "sourceVersion": "ICS-Chart-v2024/12",
+          "sourceRecordId": "permian",
+          "license": "CC-BY-4.0",
+          "citation": "International Commission on Stratigraphy (2024). International Chronostratigraphic Chart v2024/12.",
+          "citationRequired": true,
+          "retrievedAt": "2026-07-04T00:00:00.000Z",
+          "lastUpdated": "2026-07-04T00:00:00.000Z",
+          "isMockData": true
+        }
+      ]
+    },
+    {
+      "id": "triassic",
+      "name": "Triassic",
+      "rank": "period",
+      "parentId": "mesozoic",
+      "startMa": 251.9,
+      "endMa": 201.4,
+      "displayOrder": 20,
+      "description": "Recovery after greatest extinction.",
+      "majorEvents": [
+        "First dinosaurs",
+        "Mammals appear"
+      ],
+      "dominantLife": [
+        "Early dinosaurs",
+        "Ichthyosaurs"
+      ],
+      "climateSummary": "Hot, monsoonal Pangea",
+      "sourceProvenance": [
+        {
+          "source": "ics_chronostratigraphic",
+          "sourceVersion": "ICS-Chart-v2024/12",
+          "sourceRecordId": "triassic",
+          "license": "CC-BY-4.0",
+          "citation": "International Commission on Stratigraphy (2024). International Chronostratigraphic Chart v2024/12.",
+          "citationRequired": true,
+          "retrievedAt": "2026-07-04T00:00:00.000Z",
+          "lastUpdated": "2026-07-04T00:00:00.000Z",
+          "isMockData": true
+        }
+      ]
+    },
+    {
+      "id": "jurassic",
+      "name": "Jurassic",
+      "rank": "period",
+      "parentId": "mesozoic",
+      "startMa": 201.4,
+      "endMa": 145,
+      "displayOrder": 21,
+      "description": "Dinosaur dominance expands.",
+      "majorEvents": [
+        "Pangea rifting"
+      ],
+      "dominantLife": [
+        "Sauropods",
+        "Archaeopteryx"
+      ],
+      "climateSummary": "Warm, no polar ice",
+      "sourceProvenance": [
+        {
+          "source": "ics_chronostratigraphic",
+          "sourceVersion": "ICS-Chart-v2024/12",
+          "sourceRecordId": "jurassic",
+          "license": "CC-BY-4.0",
+          "citation": "International Commission on Stratigraphy (2024). International Chronostratigraphic Chart v2024/12.",
+          "citationRequired": true,
+          "retrievedAt": "2026-07-04T00:00:00.000Z",
+          "lastUpdated": "2026-07-04T00:00:00.000Z",
+          "isMockData": true
+        }
+      ]
+    },
+    {
+      "id": "cretaceous",
+      "name": "Cretaceous",
+      "rank": "period",
+      "parentId": "mesozoic",
+      "startMa": 145,
+      "endMa": 66,
+      "displayOrder": 22,
+      "description": "Flowering plants and apex dinosaurs.",
+      "majorEvents": [
+        "K-Pg extinction"
+      ],
+      "dominantLife": [
+        "T. rex",
+        "Ammonites",
+        "Angiosperms"
+      ],
+      "climateSummary": "Warmest Mesozoic; ends in impact",
+      "sourceProvenance": [
+        {
+          "source": "ics_chronostratigraphic",
+          "sourceVersion": "ICS-Chart-v2024/12",
+          "sourceRecordId": "cretaceous",
+          "license": "CC-BY-4.0",
+          "citation": "International Commission on Stratigraphy (2024). International Chronostratigraphic Chart v2024/12.",
+          "citationRequired": true,
+          "retrievedAt": "2026-07-04T00:00:00.000Z",
+          "lastUpdated": "2026-07-04T00:00:00.000Z",
+          "isMockData": true
+        }
+      ]
+    },
+    {
+      "id": "paleogene",
+      "name": "Paleogene",
+      "rank": "period",
+      "parentId": "cenozoic",
+      "startMa": 66,
+      "endMa": 23,
+      "displayOrder": 23,
+      "description": "Mammal radiation after dinosaurs.",
+      "majorEvents": [
+        "Mammal diversification"
+      ],
+      "dominantLife": [
+        "Early whales",
+        "Primates"
+      ],
+      "climateSummary": "Warm Paleocene-Eocene",
+      "sourceProvenance": [
+        {
+          "source": "ics_chronostratigraphic",
+          "sourceVersion": "ICS-Chart-v2024/12",
+          "sourceRecordId": "paleogene",
+          "license": "CC-BY-4.0",
+          "citation": "International Commission on Stratigraphy (2024). International Chronostratigraphic Chart v2024/12.",
+          "citationRequired": true,
+          "retrievedAt": "2026-07-04T00:00:00.000Z",
+          "lastUpdated": "2026-07-04T00:00:00.000Z",
+          "isMockData": true
+        }
+      ]
+    },
+    {
+      "id": "neogene",
+      "name": "Neogene",
+      "rank": "period",
+      "parentId": "cenozoic",
+      "startMa": 23,
+      "endMa": 2.58,
+      "displayOrder": 24,
+      "description": "Grasslands and hominid evolution.",
+      "majorEvents": [
+        "Grassland expansion"
+      ],
+      "dominantLife": [
+        "Apes",
+        "Saber-toothed cats"
+      ],
+      "climateSummary": "Cooling, savannas spread",
+      "sourceProvenance": [
+        {
+          "source": "ics_chronostratigraphic",
+          "sourceVersion": "ICS-Chart-v2024/12",
+          "sourceRecordId": "neogene",
+          "license": "CC-BY-4.0",
+          "citation": "International Commission on Stratigraphy (2024). International Chronostratigraphic Chart v2024/12.",
+          "citationRequired": true,
+          "retrievedAt": "2026-07-04T00:00:00.000Z",
+          "lastUpdated": "2026-07-04T00:00:00.000Z",
+          "isMockData": true
+        }
+      ]
+    },
+    {
+      "id": "quaternary",
+      "name": "Quaternary",
+      "rank": "period",
+      "parentId": "cenozoic",
+      "startMa": 2.58,
+      "endMa": 0,
+      "displayOrder": 25,
+      "description": "Ice ages and Homo sapiens.",
+      "majorEvents": [
+        "Glacial cycles",
+        "Human dispersal"
+      ],
+      "dominantLife": [
+        "Modern mammals",
+        "Humans"
+      ],
+      "climateSummary": "Repeated glaciations",
+      "sourceProvenance": [
+        {
+          "source": "ics_chronostratigraphic",
+          "sourceVersion": "ICS-Chart-v2024/12",
+          "sourceRecordId": "quaternary",
+          "license": "CC-BY-4.0",
+          "citation": "International Commission on Stratigraphy (2024). International Chronostratigraphic Chart v2024/12.",
+          "citationRequired": true,
+          "retrievedAt": "2026-07-04T00:00:00.000Z",
+          "lastUpdated": "2026-07-04T00:00:00.000Z",
+          "isMockData": true
+        }
+      ]
+    },
+    {
+      "id": "holocene",
+      "name": "Holocene",
+      "rank": "epoch",
+      "parentId": "quaternary",
+      "startMa": 0.0117,
+      "endMa": 0,
+      "displayOrder": 26,
+      "description": "Current interglacial — Modern Earth.",
+      "majorEvents": [
+        "Agriculture",
+        "Anthropocene debate"
+      ],
+      "dominantLife": [
+        "Modern ecosystems",
+        "Homo sapiens"
+      ],
+      "climateSummary": "Interglacial, variable warming",
+      "sourceProvenance": [
+        {
+          "source": "ics_chronostratigraphic",
+          "sourceVersion": "ICS-Chart-v2024/12",
+          "sourceRecordId": "holocene",
+          "license": "CC-BY-4.0",
+          "citation": "International Commission on Stratigraphy (2024). International Chronostratigraphic Chart v2024/12.",
+          "citationRequired": true,
+          "retrievedAt": "2026-07-04T00:00:00.000Z",
+          "lastUpdated": "2026-07-04T00:00:00.000Z",
+          "isMockData": true
+        }
+      ]
+    },
+    {
+      "id": "pleistocene",
+      "name": "Pleistocene",
+      "rank": "epoch",
+      "parentId": "quaternary",
+      "startMa": 2.58,
+      "endMa": 0.0117,
+      "displayOrder": 27,
+      "description": "Ice Age epoch with megafauna.",
+      "majorEvents": [
+        "Glacial maxima",
+        "Megafaunal extinctions"
+      ],
+      "dominantLife": [
+        "Woolly mammoth",
+        "Cave lions"
+      ],
+      "climateSummary": "Repeated ice ages",
+      "sourceProvenance": [
+        {
+          "source": "ics_chronostratigraphic",
+          "sourceVersion": "ICS-Chart-v2024/12",
+          "sourceRecordId": "pleistocene",
+          "license": "CC-BY-4.0",
+          "citation": "International Commission on Stratigraphy (2024). International Chronostratigraphic Chart v2024/12.",
+          "citationRequired": true,
+          "retrievedAt": "2026-07-04T00:00:00.000Z",
+          "lastUpdated": "2026-07-04T00:00:00.000Z",
+          "isMockData": true
+        }
+      ]
+    },
+    {
+      "id": "pliocene",
+      "name": "Pliocene",
+      "rank": "epoch",
+      "parentId": "neogene",
+      "startMa": 5.33,
+      "endMa": 2.58,
+      "displayOrder": 28,
+      "description": "Cooling and savanna spread.",
+      "majorEvents": [
+        "Isthmus of Panama"
+      ],
+      "dominantLife": [
+        "Early hominins",
+        "Mammoths"
+      ],
+      "climateSummary": "Cooler, drier trends",
+      "sourceProvenance": [
+        {
+          "source": "ics_chronostratigraphic",
+          "sourceVersion": "ICS-Chart-v2024/12",
+          "sourceRecordId": "pliocene",
+          "license": "CC-BY-4.0",
+          "citation": "International Commission on Stratigraphy (2024). International Chronostratigraphic Chart v2024/12.",
+          "citationRequired": true,
+          "retrievedAt": "2026-07-04T00:00:00.000Z",
+          "lastUpdated": "2026-07-04T00:00:00.000Z",
+          "isMockData": true
+        }
+      ]
+    },
+    {
+      "id": "miocene",
+      "name": "Miocene",
+      "rank": "epoch",
+      "parentId": "neogene",
+      "startMa": 23.03,
+      "endMa": 5.33,
+      "displayOrder": 29,
+      "description": "Grassland expansion era.",
+      "majorEvents": [
+        "C4 grasslands spread"
+      ],
+      "dominantLife": [
+        "Apes diversify",
+        "Megalodon"
+      ],
+      "climateSummary": "Warm mid-Miocene optimum",
+      "sourceProvenance": [
+        {
+          "source": "ics_chronostratigraphic",
+          "sourceVersion": "ICS-Chart-v2024/12",
+          "sourceRecordId": "miocene",
+          "license": "CC-BY-4.0",
+          "citation": "International Commission on Stratigraphy (2024). International Chronostratigraphic Chart v2024/12.",
+          "citationRequired": true,
+          "retrievedAt": "2026-07-04T00:00:00.000Z",
+          "lastUpdated": "2026-07-04T00:00:00.000Z",
+          "isMockData": true
+        }
+      ]
+    },
+    {
+      "id": "eocene",
+      "name": "Eocene",
+      "rank": "epoch",
+      "parentId": "paleogene",
+      "startMa": 56,
+      "endMa": 33.9,
+      "displayOrder": 30,
+      "description": "Warm early Cenozoic forests.",
+      "majorEvents": [
+        "PETM warming event"
+      ],
+      "dominantLife": [
+        "Early whales",
+        "Primates"
+      ],
+      "climateSummary": "Greenhouse hothouse",
+      "sourceProvenance": [
+        {
+          "source": "ics_chronostratigraphic",
+          "sourceVersion": "ICS-Chart-v2024/12",
+          "sourceRecordId": "eocene",
+          "license": "CC-BY-4.0",
+          "citation": "International Commission on Stratigraphy (2024). International Chronostratigraphic Chart v2024/12.",
+          "citationRequired": true,
+          "retrievedAt": "2026-07-04T00:00:00.000Z",
+          "lastUpdated": "2026-07-04T00:00:00.000Z",
+          "isMockData": true
+        }
+      ]
+    },
+    {
+      "id": "paleocene",
+      "name": "Paleocene",
+      "rank": "epoch",
+      "parentId": "paleogene",
+      "startMa": 66,
+      "endMa": 56,
+      "displayOrder": 31,
+      "description": "Post-extinction recovery.",
+      "majorEvents": [
+        "Mammal recovery after K-Pg"
+      ],
+      "dominantLife": [
+        "Early mammals"
+      ],
+      "climateSummary": "Warm recovery world",
+      "sourceProvenance": [
+        {
+          "source": "ics_chronostratigraphic",
+          "sourceVersion": "ICS-Chart-v2024/12",
+          "sourceRecordId": "paleocene",
+          "license": "CC-BY-4.0",
+          "citation": "International Commission on Stratigraphy (2024). International Chronostratigraphic Chart v2024/12.",
+          "citationRequired": true,
+          "retrievedAt": "2026-07-04T00:00:00.000Z",
+          "lastUpdated": "2026-07-04T00:00:00.000Z",
+          "isMockData": true
+        }
+      ]
+    },
+    {
+      "id": "late_cretaceous",
+      "name": "Late Cretaceous",
+      "rank": "epoch",
+      "parentId": "cretaceous",
+      "startMa": 100.5,
+      "endMa": 66,
+      "displayOrder": 32,
+      "description": "Last age of non-avian dinosaurs.",
+      "majorEvents": [
+        "Deccan traps",
+        "Chicxulub impact"
+      ],
+      "dominantLife": [
+        "Tyrannosaurs",
+        "Ammonites"
+      ],
+      "climateSummary": "Warm before extinction",
+      "sourceProvenance": [
+        {
+          "source": "ics_chronostratigraphic",
+          "sourceVersion": "ICS-Chart-v2024/12",
+          "sourceRecordId": "late_cretaceous",
+          "license": "CC-BY-4.0",
+          "citation": "International Commission on Stratigraphy (2024). International Chronostratigraphic Chart v2024/12.",
+          "citationRequired": true,
+          "retrievedAt": "2026-07-04T00:00:00.000Z",
+          "lastUpdated": "2026-07-04T00:00:00.000Z",
+          "isMockData": true
+        }
+      ]
+    },
+    {
+      "id": "late_jurassic",
+      "name": "Late Jurassic",
+      "rank": "epoch",
+      "parentId": "jurassic",
+      "startMa": 163.5,
+      "endMa": 145,
+      "displayOrder": 33,
+      "description": "Sauropod giants peak.",
+      "majorEvents": [
+        "Morrison Formation"
+      ],
+      "dominantLife": [
+        "Brachiosaurus",
+        "Stegosaurus"
+      ],
+      "climateSummary": "Warm, seasonal monsoons",
+      "sourceProvenance": [
+        {
+          "source": "ics_chronostratigraphic",
+          "sourceVersion": "ICS-Chart-v2024/12",
+          "sourceRecordId": "late_jurassic",
+          "license": "CC-BY-4.0",
+          "citation": "International Commission on Stratigraphy (2024). International Chronostratigraphic Chart v2024/12.",
+          "citationRequired": true,
+          "retrievedAt": "2026-07-04T00:00:00.000Z",
+          "lastUpdated": "2026-07-04T00:00:00.000Z",
+          "isMockData": true
+        }
+      ]
+    },
+    {
+      "id": "late_triassic",
+      "name": "Late Triassic",
+      "rank": "epoch",
+      "parentId": "triassic",
+      "startMa": 237,
+      "endMa": 201.4,
+      "displayOrder": 34,
+      "description": "First dinosaurs diversify.",
+      "majorEvents": [
+        "End-Triassic extinction"
+      ],
+      "dominantLife": [
+        "Coelophysis",
+        "Early mammals"
+      ],
+      "climateSummary": "Hot, seasonal",
+      "sourceProvenance": [
+        {
+          "source": "ics_chronostratigraphic",
+          "sourceVersion": "ICS-Chart-v2024/12",
+          "sourceRecordId": "late_triassic",
+          "license": "CC-BY-4.0",
+          "citation": "International Commission on Stratigraphy (2024). International Chronostratigraphic Chart v2024/12.",
+          "citationRequired": true,
+          "retrievedAt": "2026-07-04T00:00:00.000Z",
+          "lastUpdated": "2026-07-04T00:00:00.000Z",
+          "isMockData": true
+        }
+      ]
+    },
+    {
+      "id": "lopingian",
+      "name": "Lopingian",
+      "rank": "epoch",
+      "parentId": "permian",
+      "startMa": 259.1,
+      "endMa": 251.9,
+      "displayOrder": 35,
+      "description": "Late Permian before P-T extinction.",
+      "majorEvents": [
+        "P-T mass extinction"
+      ],
+      "dominantLife": [
+        "Dicynodonts",
+        "Gorgonopsians"
+      ],
+      "climateSummary": "Increasing aridity",
+      "sourceProvenance": [
+        {
+          "source": "ics_chronostratigraphic",
+          "sourceVersion": "ICS-Chart-v2024/12",
+          "sourceRecordId": "lopingian",
+          "license": "CC-BY-4.0",
+          "citation": "International Commission on Stratigraphy (2024). International Chronostratigraphic Chart v2024/12.",
+          "citationRequired": true,
+          "retrievedAt": "2026-07-04T00:00:00.000Z",
+          "lastUpdated": "2026-07-04T00:00:00.000Z",
+          "isMockData": true
+        }
+      ]
+    },
+    {
+      "id": "pennsylvanian",
+      "name": "Pennsylvanian",
+      "rank": "epoch",
+      "parentId": "carboniferous",
+      "startMa": 323.2,
+      "endMa": 298.9,
+      "displayOrder": 36,
+      "description": "Coal swamp peak.",
+      "majorEvents": [
+        "Vast coal forests"
+      ],
+      "dominantLife": [
+        "Meganeura",
+        "Dimetrodon relatives"
+      ],
+      "climateSummary": "Humid equatorial swamps",
+      "sourceProvenance": [
+        {
+          "source": "ics_chronostratigraphic",
+          "sourceVersion": "ICS-Chart-v2024/12",
+          "sourceRecordId": "pennsylvanian",
+          "license": "CC-BY-4.0",
+          "citation": "International Commission on Stratigraphy (2024). International Chronostratigraphic Chart v2024/12.",
+          "citationRequired": true,
+          "retrievedAt": "2026-07-04T00:00:00.000Z",
+          "lastUpdated": "2026-07-04T00:00:00.000Z",
+          "isMockData": true
+        }
+      ]
+    },
+    {
+      "id": "devonian_late",
+      "name": "Late Devonian",
+      "rank": "epoch",
+      "parentId": "devonian",
+      "startMa": 382.7,
+      "endMa": 358.9,
+      "displayOrder": 37,
+      "description": "Fish diversity peak; first forests.",
+      "majorEvents": [
+        "Hangenberg extinction"
+      ],
+      "dominantLife": [
+        "Tiktaalik relatives",
+        "Ammonoids"
+      ],
+      "climateSummary": "Warm seas and forests",
+      "sourceProvenance": [
+        {
+          "source": "ics_chronostratigraphic",
+          "sourceVersion": "ICS-Chart-v2024/12",
+          "sourceRecordId": "devonian_late",
+          "license": "CC-BY-4.0",
+          "citation": "International Commission on Stratigraphy (2024). International Chronostratigraphic Chart v2024/12.",
+          "citationRequired": true,
+          "retrievedAt": "2026-07-04T00:00:00.000Z",
+          "lastUpdated": "2026-07-04T00:00:00.000Z",
+          "isMockData": true
+        }
+      ]
+    },
+    {
+      "id": "furongian",
+      "name": "Furongian",
+      "rank": "epoch",
+      "parentId": "cambrian",
+      "startMa": 497,
+      "endMa": 485.4,
+      "displayOrder": 38,
+      "description": "Late Cambrian trilobite diversity.",
+      "majorEvents": [
+        "Redlichiid extinction"
+      ],
+      "dominantLife": [
+        "Trilobites",
+        "Early chordates"
+      ],
+      "climateSummary": "Stable warm seas",
+      "sourceProvenance": [
+        {
+          "source": "ics_chronostratigraphic",
+          "sourceVersion": "ICS-Chart-v2024/12",
+          "sourceRecordId": "furongian",
+          "license": "CC-BY-4.0",
+          "citation": "International Commission on Stratigraphy (2024). International Chronostratigraphic Chart v2024/12.",
+          "citationRequired": true,
+          "retrievedAt": "2026-07-04T00:00:00.000Z",
+          "lastUpdated": "2026-07-04T00:00:00.000Z",
+          "isMockData": true
+        }
+      ]
+    },
+    {
+      "id": "tonian",
+      "name": "Tonian",
+      "rank": "epoch",
+      "parentId": "neoproterozoic",
+      "startMa": 1000,
+      "endMa": 720,
+      "displayOrder": 39,
+      "description": "Pre-Ediacaran eukaryotic diversification.",
+      "majorEvents": [
+        "Supercontinent Rodinia"
+      ],
+      "dominantLife": [
+        "Multicellular algae"
+      ],
+      "climateSummary": "Stable mild climate",
+      "sourceProvenance": [
+        {
+          "source": "ics_chronostratigraphic",
+          "sourceVersion": "ICS-Chart-v2024/12",
+          "sourceRecordId": "tonian",
+          "license": "CC-BY-4.0",
+          "citation": "International Commission on Stratigraphy (2024). International Chronostratigraphic Chart v2024/12.",
+          "citationRequired": true,
+          "retrievedAt": "2026-07-04T00:00:00.000Z",
+          "lastUpdated": "2026-07-04T00:00:00.000Z",
+          "isMockData": true
+        }
+      ]
+    },
+    {
+      "id": "meghalayan",
+      "name": "Meghalayan",
+      "rank": "age",
+      "parentId": "holocene",
+      "startMa": 0.0042,
+      "endMa": 0,
+      "displayOrder": 40,
+      "description": "Current Holocene age.",
+      "majorEvents": [
+        "Recorded history"
+      ],
+      "dominantLife": [
+        "Modern civilizations"
+      ],
+      "climateSummary": "Recent interglacial",
+      "sourceProvenance": [
+        {
+          "source": "ics_chronostratigraphic",
+          "sourceVersion": "ICS-Chart-v2024/12",
+          "sourceRecordId": "meghalayan",
+          "license": "CC-BY-4.0",
+          "citation": "International Commission on Stratigraphy (2024). International Chronostratigraphic Chart v2024/12.",
+          "citationRequired": true,
+          "retrievedAt": "2026-07-04T00:00:00.000Z",
+          "lastUpdated": "2026-07-04T00:00:00.000Z",
+          "isMockData": true
+        }
+      ]
+    },
+    {
+      "id": "chibanian",
+      "name": "Chibanian",
+      "rank": "age",
+      "parentId": "pleistocene",
+      "startMa": 0.774,
+      "endMa": 0.0117,
+      "displayOrder": 41,
+      "description": "Middle Pleistocene age.",
+      "majorEvents": [
+        "Brunhes-Matuyama reversal"
+      ],
+      "dominantLife": [
+        "Middle Pleistocene megafauna"
+      ],
+      "climateSummary": "Glacial-interglacial cycles",
+      "sourceProvenance": [
+        {
+          "source": "ics_chronostratigraphic",
+          "sourceVersion": "ICS-Chart-v2024/12",
+          "sourceRecordId": "chibanian",
+          "license": "CC-BY-4.0",
+          "citation": "International Commission on Stratigraphy (2024). International Chronostratigraphic Chart v2024/12.",
+          "citationRequired": true,
+          "retrievedAt": "2026-07-04T00:00:00.000Z",
+          "lastUpdated": "2026-07-04T00:00:00.000Z",
+          "isMockData": true
+        }
+      ]
+    }
+  ]
+}
