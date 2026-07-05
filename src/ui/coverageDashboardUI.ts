@@ -75,7 +75,7 @@ export class CoverageDashboardUI {
 
     this.body.innerHTML = `
       <div class="coverage-dashboard">
-        <p class="coverage-note">Global Coverage Matrix — sample snapshot <code>${manifest.snapshotId}</code>. Mock data flagged separately.</p>
+        <p class="coverage-note">Global Coverage Matrix — sample snapshot <code>${manifest.snapshotId}</code>. <strong>Mock/sample metrics labeled — not scientific coverage.</strong></p>
         <div class="coverage-grid">
           ${this.statCard('Represented taxa', stats.representedTaxa)}
           ${this.statCard('Searchable (T1+)', stats.searchableTaxa)}
@@ -85,8 +85,8 @@ export class CoverageDashboardUI {
           ${this.statCard('Artifact-ready (T4+)', stats.artifactReadyTaxa)}
           ${this.statCard('Questable (T5+)', stats.questableTaxa)}
           ${this.statCard('Hero (T6)', stats.heroTaxa)}
-          ${this.statCard('Provenance complete', stats.provenanceComplete)}
-          ${this.statCard('Mock/sample count', stats.mockSampleCount)}
+          ${this.statCard('Source-verified taxa', stats.representedTaxa - stats.mockSampleCount)}
+          ${this.statCard('Mock/sample (labeled)', stats.mockSampleCount)}
         </div>
         <section class="coverage-section">
           <h3>Gap summary</h3>

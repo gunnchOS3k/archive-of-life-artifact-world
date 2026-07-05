@@ -11,6 +11,8 @@
     "audit:data": "tsx scripts/audit-data.ts",
     "audit:coverage": "tsx scripts/audit-coverage.ts",
     "audit:archivedex": "tsx scripts/audit-archivedex.ts",
+    "audit:implementation": "tsx scripts/audit-implementation-status.ts",
+    "audit:release": "tsx scripts/audit-release-readiness.ts",
     "audit:species": "tsx scripts/audit-species.ts",
     "audit:time": "tsx scripts/audit-time.ts",
     "audit:biomes": "tsx scripts/audit-biomes.ts",

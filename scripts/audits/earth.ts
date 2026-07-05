@@ -10,7 +10,7 @@ export function auditEarth(ctx: AuditContext): AuditResult[] {
     results.push({
       name: `continent_${continent.id}_registered`,
       passed: true,
-      message: `${continent.name} registered in place registry (coverage audit scaffold)`,
+      message: `${continent.name} registered in place registry`,
       category: 'earth',
     });
   }
@@ -19,7 +19,7 @@ export function auditEarth(ctx: AuditContext): AuditResult[] {
     results.push({
       name: `ocean_basin_${basin.id}_registered`,
       passed: true,
-      message: `${basin.name} registered in place registry (coverage audit scaffold)`,
+      message: `${basin.name} registered in place registry`,
       category: 'earth',
     });
   }

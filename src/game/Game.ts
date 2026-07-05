@@ -15,6 +15,7 @@ import { QuestUI } from '@/ui/questUI';
 import { EarthLayerUI } from '@/ui/earthLayerUI';
 import { TimeAtlasUI } from '@/ui/timeAtlasUI';
 import { CoverageDashboardUI } from '@/ui/coverageDashboardUI';
+import { ImplementationStatusUI } from '@/ui/implementationStatusUI';
 import {
   DataCatalogService,
   toPlayableSpecies,
@@ -52,6 +53,7 @@ export class Game {
   private earthLayerUI: EarthLayerUI;
   private timeAtlasUI: TimeAtlasUI;
   private coverageDashboardUI: CoverageDashboardUI;
+  private implementationStatusUI: ImplementationStatusUI;
   private devMode: boolean;
 
   private dexService: ArchiveDexService;
@@ -93,6 +95,9 @@ export class Game {
       document.getElementById('panel-coverage')!,
       catalog
     );
+    this.implementationStatusUI = new ImplementationStatusUI(
+      document.getElementById('panel-implementation')!
+    );
     this.devMode = new URLSearchParams(window.location.search).has('dev');
 
     this.earthLayerUI.onTabViewed = () => {
@@ -130,6 +135,7 @@ export class Game {
       if (e.key === 't' || e.key === 'T') this.togglePanel('earth');
       if (e.key === 'y' || e.key === 'Y') this.togglePanel('time');
       if (this.devMode && (e.key === 'g' || e.key === 'G')) this.togglePanel('coverage');
+      if (this.devMode && (e.key === 'i' || e.key === 'I')) this.togglePanel('implementation');
       if (e.key === 'Escape') this.closeAllPanels();
     });
     window.addEventListener('keyup', (e) => {
@@ -176,6 +182,9 @@ export class Game {
       }
       if (name === 'coverage') {
         void this.coverageDashboardUI.open();
+      }
+      if (name === 'implementation') {
+        void this.implementationStatusUI.open();
       }
       this.refreshUI();
       this.paused = true;
@@ -263,6 +272,8 @@ export class Game {
     if (item.type === 'earth_console') {
       if (item.id === 'coverage_dashboard') {
         this.togglePanel('coverage');
+      } else if (item.id === 'implementation_status') {
+        this.togglePanel('implementation');
       } else {
         this.togglePanel('earth');
       }

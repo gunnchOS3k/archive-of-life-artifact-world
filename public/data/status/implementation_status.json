@@ -1,0 +1,312 @@
+{
+  "snapshotId": "sample-2026-07",
+  "generatedAt": "2026-07-05T03:16:56.022Z",
+  "gameVersion": "2.0.0",
+  "summary": {
+    "fullyImplemented": 17,
+    "partialImplementation": 6,
+    "scaffoldOnly": 0,
+    "mockSampleOnly": 2,
+    "blockedExternalData": 4,
+    "plannedNotStarted": 0,
+    "deprecated": 0,
+    "playerFacingCount": 12,
+    "devOnlyCount": 2
+  },
+  "systems": [
+    {
+      "id": "playable_game_loop",
+      "name": "Playable game loop",
+      "status": "FULLY_IMPLEMENTED",
+      "playerFacing": true,
+      "devOnly": false,
+      "releaseBlocking": false,
+      "mockDataCountsAsRealCoverage": false,
+      "notes": "Movement, interaction, minigames, save/load, and region travel work in sample scope."
+    },
+    {
+      "id": "museum_hub",
+      "name": "Museum hub",
+      "status": "FULLY_IMPLEMENTED",
+      "playerFacing": true,
+      "devOnly": false,
+      "releaseBlocking": false,
+      "mockDataCountsAsRealCoverage": false,
+      "notes": "Central hub with portals to all expedition regions."
+    },
+    {
+      "id": "regions",
+      "name": "Expedition regions",
+      "status": "FULLY_IMPLEMENTED",
+      "playerFacing": true,
+      "devOnly": false,
+      "releaseBlocking": false,
+      "mockDataCountsAsRealCoverage": false,
+      "notes": "Six playable regions with species placement — sample taxa only, not global coverage."
+    },
+    {
+      "id": "species_encounters",
+      "name": "Species encounters",
+      "status": "FULLY_IMPLEMENTED",
+      "playerFacing": true,
+      "devOnly": false,
+      "releaseBlocking": false,
+      "mockDataCountsAsRealCoverage": false,
+      "notes": "Wildlife observation and fossil excavation minigames for region species."
+    },
+    {
+      "id": "artifact_collection",
+      "name": "Artifact collection",
+      "status": "FULLY_IMPLEMENTED",
+      "playerFacing": true,
+      "devOnly": false,
+      "releaseBlocking": false,
+      "mockDataCountsAsRealCoverage": false,
+      "notes": "Ethical artifact templates tied to hero species with notebook logging."
+    },
+    {
+      "id": "lifeling_companion",
+      "name": "Lifeling companion",
+      "status": "FULLY_IMPLEMENTED",
+      "playerFacing": true,
+      "devOnly": false,
+      "releaseBlocking": false,
+      "mockDataCountsAsRealCoverage": false,
+      "notes": "Companion rendering, traits, emotes, and unlock progression."
+    },
+    {
+      "id": "archivedex",
+      "name": "ArchiveDex",
+      "status": "PARTIAL_IMPLEMENTATION",
+      "playerFacing": true,
+      "devOnly": false,
+      "releaseBlocking": false,
+      "mockDataCountsAsRealCoverage": false,
+      "notes": "17-tab species entries for sample snapshot; not full Catalogue of Life coverage."
+    },
+    {
+      "id": "time_atlas",
+      "name": "Time Atlas",
+      "status": "PARTIAL_IMPLEMENTATION",
+      "playerFacing": true,
+      "devOnly": false,
+      "releaseBlocking": false,
+      "mockDataCountsAsRealCoverage": false,
+      "notes": "ICS sample units and gates with mock-sample banners; live ICS ingestion blocked."
+    },
+    {
+      "id": "earth_layer_console",
+      "name": "NASA Earth Layer Console",
+      "status": "MOCK_SAMPLE_ONLY",
+      "playerFacing": true,
+      "devOnly": false,
+      "releaseBlocking": false,
+      "mockDataCountsAsRealCoverage": false,
+      "notes": "Illustrative NASA layers with visible MOCK SAMPLE banner; real Earthdata ingestion blocked."
+    },
+    {
+      "id": "global_coverage_matrix",
+      "name": "Global Coverage Matrix",
+      "status": "PARTIAL_IMPLEMENTATION",
+      "playerFacing": false,
+      "devOnly": false,
+      "releaseBlocking": false,
+      "mockDataCountsAsRealCoverage": false,
+      "notes": "Matrix services and audits for sample scope; not global catalogue completeness."
+    },
+    {
+      "id": "coverage_dashboard",
+      "name": "Coverage Dashboard",
+      "status": "PARTIAL_IMPLEMENTATION",
+      "playerFacing": false,
+      "devOnly": true,
+      "releaseBlocking": false,
+      "mockDataCountsAsRealCoverage": false,
+      "notes": "Dev/admin panel (?dev=1, key G) — labels mock counts separately."
+    },
+    {
+      "id": "implementation_dashboard",
+      "name": "Implementation Status Dashboard",
+      "status": "FULLY_IMPLEMENTED",
+      "playerFacing": false,
+      "devOnly": true,
+      "releaseBlocking": false,
+      "mockDataCountsAsRealCoverage": false,
+      "notes": "Dev/admin panel (?dev=1, key I) showing release readiness and incomplete inventory."
+    },
+    {
+      "id": "quests",
+      "name": "Quests",
+      "status": "FULLY_IMPLEMENTED",
+      "playerFacing": true,
+      "devOnly": false,
+      "releaseBlocking": false,
+      "mockDataCountsAsRealCoverage": false,
+      "notes": "Quest tracking and progress for sample expedition goals."
+    },
+    {
+      "id": "map",
+      "name": "Map",
+      "status": "FULLY_IMPLEMENTED",
+      "playerFacing": true,
+      "devOnly": false,
+      "releaseBlocking": false,
+      "mockDataCountsAsRealCoverage": false,
+      "notes": "Region travel map for museum-connected biomes."
+    },
+    {
+      "id": "notebook",
+      "name": "Field notebook",
+      "status": "FULLY_IMPLEMENTED",
+      "playerFacing": true,
+      "devOnly": false,
+      "releaseBlocking": false,
+      "mockDataCountsAsRealCoverage": false,
+      "notes": "Artifact log and expedition notes."
+    },
+    {
+      "id": "python_pipeline",
+      "name": "Python data pipeline",
+      "status": "PARTIAL_IMPLEMENTATION",
+      "playerFacing": false,
+      "devOnly": false,
+      "releaseBlocking": false,
+      "mockDataCountsAsRealCoverage": false,
+      "notes": "uv package, CLI, DuckDB SQL runner, and tests — sample scope validation only."
+    },
+    {
+      "id": "sql_pipeline",
+      "name": "SQL pipeline",
+      "status": "PARTIAL_IMPLEMENTATION",
+      "playerFacing": false,
+      "devOnly": false,
+      "releaseBlocking": false,
+      "mockDataCountsAsRealCoverage": false,
+      "notes": "Numbered SQL views for bundle validation; not production warehouse."
+    },
+    {
+      "id": "source_snapshot_workflow",
+      "name": "Source snapshot workflow",
+      "status": "BLOCKED_BY_EXTERNAL_DATA",
+      "playerFacing": false,
+      "devOnly": false,
+      "releaseBlocking": false,
+      "mockDataCountsAsRealCoverage": false,
+      "blockedReason": "Full COL/GBIF/IUCN/PBDB downloads not imported; sample snapshots only.",
+      "notes": "Manifest/checksum workflow documented; large downloads stay external."
+    },
+    {
+      "id": "catalogue_of_life_ingestion",
+      "name": "Catalogue of Life full ingestion",
+      "status": "BLOCKED_BY_EXTERNAL_DATA",
+      "playerFacing": false,
+      "devOnly": false,
+      "releaseBlocking": false,
+      "mockDataCountsAsRealCoverage": false,
+      "blockedReason": "Full Catalogue of Life source snapshot not yet imported.",
+      "notes": "Sample scope JSON only — never loaded as global catalogue."
+    },
+    {
+      "id": "bundle_generation",
+      "name": "Bundle generation",
+      "status": "FULLY_IMPLEMENTED",
+      "playerFacing": false,
+      "devOnly": false,
+      "releaseBlocking": false,
+      "mockDataCountsAsRealCoverage": false,
+      "notes": "generate:bundles and generate:time-atlas produce committed sample bundles."
+    },
+    {
+      "id": "source_provenance",
+      "name": "Source provenance",
+      "status": "MOCK_SAMPLE_ONLY",
+      "playerFacing": false,
+      "devOnly": false,
+      "releaseBlocking": false,
+      "mockDataCountsAsRealCoverage": false,
+      "notes": "All current provenance flagged isMockData; audits separate mock from verified."
+    },
+    {
+      "id": "ci",
+      "name": "CI workflow",
+      "status": "FULLY_IMPLEMENTED",
+      "playerFacing": false,
+      "devOnly": false,
+      "releaseBlocking": false,
+      "mockDataCountsAsRealCoverage": false,
+      "notes": "GitHub Actions runs typecheck, audits, build, and Python pipeline."
+    },
+    {
+      "id": "audits",
+      "name": "Data and coverage audits",
+      "status": "FULLY_IMPLEMENTED",
+      "playerFacing": false,
+      "devOnly": false,
+      "releaseBlocking": false,
+      "mockDataCountsAsRealCoverage": false,
+      "notes": "TypeScript and Python audits with mock/verified count separation."
+    },
+    {
+      "id": "docs",
+      "name": "Documentation",
+      "status": "FULLY_IMPLEMENTED",
+      "playerFacing": false,
+      "devOnly": false,
+      "releaseBlocking": false,
+      "mockDataCountsAsRealCoverage": false,
+      "notes": "Architecture, coverage, provenance, and release policies documented."
+    },
+    {
+      "id": "issue_templates",
+      "name": "Issue templates",
+      "status": "FULLY_IMPLEMENTED",
+      "playerFacing": false,
+      "devOnly": false,
+      "releaseBlocking": false,
+      "mockDataCountsAsRealCoverage": false,
+      "notes": "GitHub issue templates for data, coverage, and bugs."
+    },
+    {
+      "id": "pr_template",
+      "name": "PR template",
+      "status": "FULLY_IMPLEMENTED",
+      "playerFacing": false,
+      "devOnly": false,
+      "releaseBlocking": false,
+      "mockDataCountsAsRealCoverage": false,
+      "notes": "Pull request checklist for data and audit changes."
+    },
+    {
+      "id": "release_snapshot_policy",
+      "name": "Release snapshot policy",
+      "status": "FULLY_IMPLEMENTED",
+      "playerFacing": false,
+      "devOnly": false,
+      "releaseBlocking": false,
+      "mockDataCountsAsRealCoverage": false,
+      "notes": "Release gates and snapshot manifest policy defined."
+    },
+    {
+      "id": "nasa_earthdata_ingestion",
+      "name": "NASA Earthdata live ingestion",
+      "status": "BLOCKED_BY_EXTERNAL_DATA",
+      "playerFacing": false,
+      "devOnly": false,
+      "releaseBlocking": false,
+      "mockDataCountsAsRealCoverage": false,
+      "blockedReason": "Live NASA Earthdata API ingestion requires credentials and production pipeline.",
+      "notes": "Ingest scripts are scaffold with mock returns — not production fetchers."
+    },
+    {
+      "id": "neotoma_ingestion",
+      "name": "Neotoma paleoecology ingestion",
+      "status": "BLOCKED_BY_EXTERNAL_DATA",
+      "playerFacing": false,
+      "devOnly": false,
+      "releaseBlocking": false,
+      "mockDataCountsAsRealCoverage": false,
+      "blockedReason": "Neotoma API integration not connected for production.",
+      "notes": "Transform script exists; live fetch is blocked."
+    }
+  ]
+}

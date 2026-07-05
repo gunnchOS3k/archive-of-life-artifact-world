@@ -12,7 +12,7 @@
       "livingRelatives": [
         "Asian Elephant"
       ],
-      "paleobiodbTaxonNo": 783100,
+      "paleobiodbTaxonNo": 517759,
       "sourceVersion": "mock-pbdb-2026-07",
       "lastUpdated": "2026-07-02"
     },
@@ -29,7 +29,7 @@
         "Chickens",
         "All birds"
       ],
-      "paleobiodbTaxonNo": 729935,
+      "paleobiodbTaxonNo": 640937,
       "sourceVersion": "mock-pbdb-2026-07",
       "lastUpdated": "2026-07-02"
     },
@@ -46,7 +46,7 @@
         "Horseshoe crabs",
         "Arachnids"
       ],
-      "paleobiodbTaxonNo": 6121,
+      "paleobiodbTaxonNo": 398581,
       "sourceVersion": "mock-pbdb-2026-07",
       "lastUpdated": "2026-07-02"
     }

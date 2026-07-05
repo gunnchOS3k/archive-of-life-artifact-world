@@ -1,0 +1,269 @@
+{
+  "generatedAt": "2026-07-05T03:16:35.572Z",
+  "ready": true,
+  "blockingReasons": [],
+  "checks": [
+    {
+      "name": "npm_script_dev",
+      "passed": true,
+      "message": "npm run dev defined",
+      "blocking": true
+    },
+    {
+      "name": "npm_script_build",
+      "passed": true,
+      "message": "npm run build defined",
+      "blocking": true
+    },
+    {
+      "name": "npm_script_typecheck",
+      "passed": true,
+      "message": "npm run typecheck defined",
+      "blocking": true
+    },
+    {
+      "name": "npm_script_generate:bundles",
+      "passed": true,
+      "message": "npm run generate:bundles defined",
+      "blocking": true
+    },
+    {
+      "name": "npm_script_generate:time-atlas",
+      "passed": true,
+      "message": "npm run generate:time-atlas defined",
+      "blocking": true
+    },
+    {
+      "name": "npm_script_audit:data",
+      "passed": true,
+      "message": "npm run audit:data defined",
+      "blocking": true
+    },
+    {
+      "name": "npm_script_audit:coverage",
+      "passed": true,
+      "message": "npm run audit:coverage defined",
+      "blocking": true
+    },
+    {
+      "name": "npm_script_audit:archivedex",
+      "passed": true,
+      "message": "npm run audit:archivedex defined",
+      "blocking": true
+    },
+    {
+      "name": "npm_script_audit:release",
+      "passed": true,
+      "message": "npm run audit:release defined",
+      "blocking": true
+    },
+    {
+      "name": "npm_script_audit:implementation",
+      "passed": true,
+      "message": "npm run audit:implementation defined",
+      "blocking": true
+    },
+    {
+      "name": "npm_script_pipeline:install",
+      "passed": true,
+      "message": "npm run pipeline:install defined",
+      "blocking": true
+    },
+    {
+      "name": "npm_script_pipeline:test",
+      "passed": true,
+      "message": "npm run pipeline:test defined",
+      "blocking": true
+    },
+    {
+      "name": "npm_script_pipeline:lint",
+      "passed": true,
+      "message": "npm run pipeline:lint defined",
+      "blocking": true
+    },
+    {
+      "name": "npm_script_pipeline:sql",
+      "passed": true,
+      "message": "npm run pipeline:sql defined",
+      "blocking": true
+    },
+    {
+      "name": "npm_script_pipeline:build-snapshot",
+      "passed": true,
+      "message": "npm run pipeline:build-snapshot defined",
+      "blocking": true
+    },
+    {
+      "name": "npm_script_pipeline:audit",
+      "passed": true,
+      "message": "npm run pipeline:audit defined",
+      "blocking": true
+    },
+    {
+      "name": "npm_script_pipeline:all",
+      "passed": true,
+      "message": "npm run pipeline:all defined",
+      "blocking": true
+    },
+    {
+      "name": "ci_includes_ci",
+      "passed": true,
+      "message": "CI runs: npm ci",
+      "blocking": false
+    },
+    {
+      "name": "ci_includes_generate:time-atlas",
+      "passed": true,
+      "message": "CI runs: npm run generate:time-atlas",
+      "blocking": false
+    },
+    {
+      "name": "ci_includes_generate:bundles",
+      "passed": true,
+      "message": "CI runs: npm run generate:bundles",
+      "blocking": false
+    },
+    {
+      "name": "ci_includes_typecheck",
+      "passed": true,
+      "message": "CI runs: npm run typecheck",
+      "blocking": false
+    },
+    {
+      "name": "ci_includes_audit:data",
+      "passed": true,
+      "message": "CI runs: npm run audit:data",
+      "blocking": false
+    },
+    {
+      "name": "ci_includes_audit:coverage",
+      "passed": true,
+      "message": "CI runs: npm run audit:coverage",
+      "blocking": false
+    },
+    {
+      "name": "ci_includes_audit:archivedex",
+      "passed": true,
+      "message": "CI runs: npm run audit:archivedex",
+      "blocking": false
+    },
+    {
+      "name": "ci_includes_audit:release",
+      "passed": true,
+      "message": "CI runs: npm run audit:release",
+      "blocking": true
+    },
+    {
+      "name": "ci_includes_build",
+      "passed": true,
+      "message": "CI runs: npm run build",
+      "blocking": false
+    },
+    {
+      "name": "ci_includes_--all-extras",
+      "passed": true,
+      "message": "CI runs: cd data-pipeline && uv sync --all-extras",
+      "blocking": false
+    },
+    {
+      "name": "ci_includes_.",
+      "passed": true,
+      "message": "CI runs: cd data-pipeline && uv run ruff check .",
+      "blocking": false
+    },
+    {
+      "name": "ci_includes_pytest",
+      "passed": true,
+      "message": "CI runs: cd data-pipeline && uv run pytest",
+      "blocking": false
+    },
+    {
+      "name": "ci_includes_sql/",
+      "passed": true,
+      "message": "CI runs: cd data-pipeline && uv run sqlfluff lint sql/",
+      "blocking": false
+    },
+    {
+      "name": "player_facing_not_scaffold",
+      "passed": true,
+      "message": "No player-facing scaffold-only systems",
+      "blocking": true
+    },
+    {
+      "name": "mock_separate_from_verified",
+      "passed": true,
+      "message": "total=39 mock=39 verified=0 releaseEligible=0",
+      "blocking": true
+    },
+    {
+      "name": "mock_not_counted_as_real",
+      "passed": true,
+      "message": "Mock/sample data not counted as source-complete coverage",
+      "blocking": true
+    },
+    {
+      "name": "hero_provenance_present",
+      "passed": true,
+      "message": "All hero provenance present",
+      "blocking": true
+    },
+    {
+      "name": "tier4_artifact_templates",
+      "passed": true,
+      "message": "Tier 4+ artifact templates present",
+      "blocking": true
+    },
+    {
+      "name": "tier6_educational_sections",
+      "passed": true,
+      "message": "Tier 6 hero taxa have educational sections",
+      "blocking": true
+    },
+    {
+      "name": "approved_snapshots_metadata",
+      "passed": true,
+      "message": "No improperly approved source snapshots",
+      "blocking": true
+    },
+    {
+      "name": "mock_snapshots_not_approved",
+      "passed": true,
+      "message": "Mock snapshots not approved for production use",
+      "blocking": true
+    },
+    {
+      "name": "no_release_path_incomplete_markers",
+      "passed": true,
+      "message": "No vague TODO/FIXME/scaffold markers in release-path code",
+      "blocking": true
+    },
+    {
+      "name": "ui_no_coming_soon",
+      "passed": true,
+      "message": "Player UI panels do not contain coming-soon placeholders",
+      "blocking": true
+    }
+  ],
+  "dataQuality": {
+    "totalIncludingMock": 39,
+    "totalSourceVerified": 0,
+    "mockSampleCount": 39,
+    "blockedExternalDataCount": 11,
+    "releaseEligibleCount": 0
+  },
+  "implementationSummary": {
+    "fullyImplemented": 17,
+    "partialImplementation": 6,
+    "scaffoldOnly": 0,
+    "mockSampleOnly": 2,
+    "blockedExternalData": 4,
+    "plannedNotStarted": 0,
+    "deprecated": 0,
+    "playerFacingCount": 12,
+    "devOnlyCount": 2
+  },
+  "incompleteSummary": {
+    "releasePathBlocking": 0,
+    "releasePathTotal": 2
+  }
+}
