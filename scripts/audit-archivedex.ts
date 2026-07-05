@@ -112,6 +112,15 @@ function audit(): AuditResult[] {
     message: `${profiles.profiles.length} ArchiveDex profile overlays validated`,
   });
 
+  const hasVerificationClasses = allSpecies.some((s) =>
+    s.provenance?.some((p) => 'verificationStatus' in p || p.source === 'game_authored')
+  );
+  results.push({
+    name: 'provenance_verification_classes',
+    passed: hasVerificationClasses,
+    message: 'Provenance records include verification status or game-authored separation',
+  });
+
   return results;
 }
 

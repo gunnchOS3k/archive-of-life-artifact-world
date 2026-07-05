@@ -3,20 +3,35 @@ import type { SourceSnapshotRecord } from '../../src/coverage/CoverageTypes';
 import type { DataQualityCounts } from './types';
 
 export function isMockEntry(entry: SpeciesIndexEntry, hero?: ArchiveSpecies): boolean {
-  return (
-    entry.sources?.includes('mock_sample') ||
-    hero?.provenance?.some((p) => p.isMockData) === true ||
-    entry.id.startsWith('sample_')
+  if (entry.id.startsWith('sample_')) return true;
+  const prov = hero?.provenance ?? [];
+  const scientific = prov.filter((p) => p.source !== 'game_authored');
+  if (scientific.length === 0) return false;
+  return scientific.every(
+    (p) =>
+      p.isMockData === true ||
+      p.verificationStatus === 'mock_sample' ||
+      p.verificationStatus === 'blocked_external'
   );
+}
+
+export function isGameAuthoredVerified(hero?: ArchiveSpecies): boolean {
+  return hero?.provenance?.some(
+    (p) =>
+      p.source === 'game_authored' &&
+      (p.verificationStatus === 'game_authored_verified' || p.isMockData === false)
+  ) ?? false;
 }
 
 export function isSourceVerified(entry: SpeciesIndexEntry, hero?: ArchiveSpecies): boolean {
   if (isMockEntry(entry, hero)) return false;
+  const hasVerifiedProv = hero?.provenance?.some(
+    (p) => p.verificationStatus === 'source_verified' || (p.isMockData === false && p.source !== 'game_authored')
+  );
   const hasRealSource = entry.sources?.some(
     (s) => s !== 'mock_sample' && s !== 'game_authored'
   );
-  const provVerified = hero?.provenance?.some((p) => !p.isMockData);
-  return !!(hasRealSource || provVerified);
+  return !!(hasVerifiedProv || (hasRealSource && !isMockEntry(entry, hero)));
 }
 
 export function computeDataQualityCounts(

@@ -51,14 +51,15 @@ function mockProvenance(speciesId: string, isExtinct: boolean) {
   return [
     {
       source: 'game_authored' as const,
-      sourceVersion: 'mvp-1.0',
+      sourceVersion: 'mvp-current',
       sourceRecordId: speciesId,
       license: 'GAME-ORIGINAL' as const,
-      citation: 'Archive of Life: Artifact World — MVP authored content',
+      citation: 'Archive of Life: Artifact World authored prototype content',
       citationRequired: false,
       retrievedAt: now,
       lastUpdated: now,
-      isMockData: true,
+      isMockData: false,
+      verificationStatus: 'game_authored_verified' as const,
     },
     {
       source: (isExtinct ? 'paleobiodb' : 'catalogue_of_life') as 'paleobiodb' | 'catalogue_of_life',
@@ -67,11 +68,12 @@ function mockProvenance(speciesId: string, isExtinct: boolean) {
       catalogueOfLifeId: isExtinct ? undefined : `MOCK-COL-${speciesId}`,
       paleobiodbTaxonNo: isExtinct ? Math.floor(Math.random() * 900000) : undefined,
       license: 'MOCK-SAMPLE' as const,
-      citation: 'MOCK SAMPLE — not sourced from live API',
+      citation: 'MOCK SAMPLE — not sourced from live API; requires approved source snapshot import',
       citationRequired: true,
       retrievedAt: now,
       lastUpdated: now,
       isMockData: true,
+      verificationStatus: 'mock_sample' as const,
     },
   ];
 }
@@ -329,17 +331,32 @@ function stubToArchiveSpecies(stub: StubDef): ArchiveSpecies {
     artifactTemplates: stub.representationTier >= 4
       ? [{ id: `${stub.id}_record`, artifactType: 'archive_record', label: 'Archive record', ethical: true, description: 'Archive reference record' }]
       : [],
-    provenance: stub.sources.map((source) => ({
-      source,
-      sourceVersion: 'mock-sample-2026-07',
-      sourceRecordId: stub.id,
-      license: 'MOCK-SAMPLE' as const,
-      citation: 'MOCK SAMPLE — tiered archive stub for pipeline demonstration',
-      citationRequired: true,
-      retrievedAt: now,
-      lastUpdated: now,
-      isMockData: true,
-    })),
+    provenance: [
+      {
+        source: 'game_authored' as const,
+        sourceVersion: 'mvp-current',
+        sourceRecordId: stub.id,
+        license: 'GAME-ORIGINAL' as const,
+        citation: 'Archive of Life: Artifact World authored prototype content',
+        citationRequired: false,
+        retrievedAt: now,
+        lastUpdated: now,
+        isMockData: false,
+        verificationStatus: 'game_authored_verified' as const,
+      },
+      ...stub.sources.map((source) => ({
+        source,
+        sourceVersion: 'mock-sample-2026-07',
+        sourceRecordId: stub.id,
+        license: 'MOCK-SAMPLE' as const,
+        citation: 'MOCK SAMPLE — tiered archive stub; requires approved source snapshot import',
+        citationRequired: true,
+        retrievedAt: now,
+        lastUpdated: now,
+        isMockData: true,
+        verificationStatus: 'mock_sample' as const,
+      })),
+    ],
   };
 }
 

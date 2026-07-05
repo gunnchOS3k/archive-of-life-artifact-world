@@ -1,6 +1,7 @@
 import { mkdirSync, readFileSync, writeFileSync } from 'fs';
 import { join } from 'path';
-import { SYSTEM_REGISTRY, summarizeSystems } from './systems';
+import { summarizeSystems } from './systems';
+import { computeSystemStatuses, buildRealDataCompletionPlan } from './compute-evidence';
 import { scanIncompleteInventory, scanFileCount, STATUS_DIR, ROOT } from './scan-incomplete';
 import type { ImplementationStatusReport, IncompleteInventoryReport } from './types';
 
@@ -13,13 +14,14 @@ export function buildImplementationReports(): {
   const pkg = JSON.parse(readFileSync(join(ROOT, 'package.json'), 'utf-8'));
   const items = scanIncompleteInventory();
   const blocking = items.filter((i) => i.blocksRelease && i.currentStatus === 'needs_action');
+  const systems = computeSystemStatuses();
 
   const implementation: ImplementationStatusReport = {
     snapshotId: manifest.snapshotId,
     generatedAt: new Date().toISOString(),
     gameVersion: pkg.version,
-    summary: summarizeSystems(SYSTEM_REGISTRY),
-    systems: SYSTEM_REGISTRY,
+    summary: summarizeSystems(systems),
+    systems,
   };
 
   const inventory: IncompleteInventoryReport = {
@@ -48,6 +50,10 @@ export function writeImplementationReports(): {
   writeFileSync(
     join(STATUS_DIR, 'incomplete_inventory.json'),
     JSON.stringify(reports.inventory, null, 2)
+  );
+  writeFileSync(
+    join(STATUS_DIR, 'real_data_completion_plan.json'),
+    JSON.stringify(buildRealDataCompletionPlan(), null, 2)
   );
   return reports;
 }

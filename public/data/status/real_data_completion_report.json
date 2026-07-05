@@ -1,0 +1,16 @@
+{
+  "generatedAt": "2026-07-05T03:28:22.299Z",
+  "localSystemsFullyImplemented": 25,
+  "partialSystems": 1,
+  "blockedSources": 6,
+  "importedSources": 0,
+  "planSystemCount": 12,
+  "nextActions": [
+    "col: Download approved COL archive, set COL_SNAPSHOT_PATH in data-pipeline/.env, run npm run source:import:col",
+    "gbif: Download GBIF occurrence export, set GBIF_DOWNLOAD_PATH, run npm run source:import:gbif",
+    "iucn: Obtain IUCN API token, set IUCN_API_TOKEN, run npm run source:import:iucn",
+    "pbdb: Download PBDB CSV/JSON export, set PBDB_SNAPSHOT_PATH, run npm run source:import:pbdb",
+    "nasa: Run npm run source:import:nasa to fetch CMR/EONET/POWER metadata into data-pipeline/exports/nasa/",
+    "neotoma: Download Neotoma export or enable API, run npm run source:import:neotoma"
+  ]
+}

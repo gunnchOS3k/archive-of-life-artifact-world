@@ -31,6 +31,11 @@ const REQUIRED_NPM_SCRIPTS = [
   'pipeline:build-snapshot',
   'pipeline:audit',
   'pipeline:all',
+  'source:list',
+  'source:validate',
+  'source:audit',
+  'source:import:col',
+  'source:import:nasa',
 ];
 
 const CI_COMMANDS = [

@@ -109,8 +109,10 @@ export class TimeAtlasUI {
     const unit = this.timeService.getUnit(this.selectedUnitId);
     if (!unit) return;
 
+    const manifest = this.timeService.getManifest();
     const taxa = this.timeService.getTaxaOverlappingUnit(unit.id);
     const ancestors = this.timeService.getAncestors(unit.id);
+    const dataQuality = manifest.isMockData ? 'mock_sample' : 'source_verified';
     const provHtml = unit.sourceProvenance
       .map(
         (p) => `
@@ -134,6 +136,10 @@ export class TimeAtlasUI {
       ${unit.majorEvents.length ? `<p><strong>Major events:</strong> ${unit.majorEvents.join('; ')}</p>` : ''}
       ${unit.dominantLife.length ? `<p><strong>Dominant life:</strong> ${unit.dominantLife.join(', ')}</p>` : ''}
       ${unit.uncertaintyNotes ? `<p class="uncertainty-note">⚠️ ${unit.uncertaintyNotes}</p>` : ''}
+      <div class="time-data-quality">
+        <h4>Data quality</h4>
+        <p>Represented taxa: <strong>${taxa.length}</strong> · Artifact availability: see ArchiveDex T4+ entries · Status: <code>${dataQuality.replace(/_/g, ' ')}</code>${manifest.isMockData ? ' <span class="mock-badge">MOCK TIME SAMPLE</span>' : ''}</p>
+      </div>
       <h4>Represented taxa (${taxa.length})</h4>
       <ul class="time-taxon-list">
         ${taxa
@@ -165,13 +171,19 @@ export class TimeAtlasUI {
           .map((g) => {
             const unlocked = this.timeService.isGateUnlocked(g, progress);
             this.recordGateView(g.id);
+            const preLife = ['hadean_gate', 'archean_gate', 'proterozoic_gate'].includes(g.id);
+            const preLifeNote = preLife
+              ? '<p class="uncertainty-note">Pre-animal or microbial-world gate — macroscopic animal encounters are not represented in this era.</p>'
+              : '';
             return `
               <div class="time-gate-card ${unlocked ? 'unlocked' : 'locked'}">
                 <div class="time-gate-name">${g.name}</div>
                 <div class="time-gate-status">${unlocked ? '✓ Available' : `🔒 Requires ${g.requiredProgress.artifactsCollected} artifacts`}</div>
                 <p class="time-gate-desc">${g.description}</p>
                 ${g.uncertaintyNotes ? `<p class="uncertainty-note">⚠️ ${g.uncertaintyNotes}</p>` : ''}
-                ${unlocked && g.isPlayable ? '<button class="btn-secondary time-expedition-btn" disabled title="Time expeditions coming in future update">Preview Expedition</button>' : ''}
+                ${preLifeNote}
+                ${g.sourceProvenance?.length ? `<p class="time-gate-prov"><em>Sources: ${g.sourceProvenance.map((p) => p.source).join(', ')}</em></p>` : ''}
+                ${unlocked && g.isPlayable ? '<button class="btn-secondary time-expedition-btn" disabled title="Time expeditions are a future feature — gate browsing is fully supported">Preview Expedition (future)</button>' : ''}
               </div>
             `;
           })

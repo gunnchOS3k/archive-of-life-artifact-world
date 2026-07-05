@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-05T03:16:35.572Z",
+  "generatedAt": "2026-07-05T03:27:50.445Z",
   "ready": true,
   "blockingReasons": [],
   "checks": [
@@ -103,6 +103,36 @@
       "name": "npm_script_pipeline:all",
       "passed": true,
       "message": "npm run pipeline:all defined",
+      "blocking": true
+    },
+    {
+      "name": "npm_script_source:list",
+      "passed": true,
+      "message": "npm run source:list defined",
+      "blocking": true
+    },
+    {
+      "name": "npm_script_source:validate",
+      "passed": true,
+      "message": "npm run source:validate defined",
+      "blocking": true
+    },
+    {
+      "name": "npm_script_source:audit",
+      "passed": true,
+      "message": "npm run source:audit defined",
+      "blocking": true
+    },
+    {
+      "name": "npm_script_source:import:col",
+      "passed": true,
+      "message": "npm run source:import:col defined",
+      "blocking": true
+    },
+    {
+      "name": "npm_script_source:import:nasa",
+      "passed": true,
+      "message": "npm run source:import:nasa defined",
       "blocking": true
     },
     {

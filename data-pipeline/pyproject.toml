@@ -38,6 +38,10 @@ extend-exclude = ["ingest", "transform"]
 [tool.ruff.lint]
 select = ["E", "F", "I", "UP"]
 
+[tool.ruff.lint.per-file-ignores]
+"src/archive_life_pipeline/source_import.py" = ["E501"]
+"src/archive_life_pipeline/nasa_ingest.py" = ["E501"]
+
 [tool.pytest.ini_options]
 testpaths = ["tests"]
 pythonpath = ["src"]

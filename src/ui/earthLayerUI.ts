@@ -35,9 +35,18 @@ export class EarthLayerUI {
 
   private buildTabs() {
     const manifest = this.earthService.getManifest();
-    this.mockBanner.innerHTML = manifest.isMockData
-      ? '<span class="mock-badge">MOCK NASA SAMPLE DATA</span> Layers shown are illustrative until real Earthdata ingestion is connected.'
-      : '';
+    const globalMode = this.earthService.getGlobalDataMode();
+    const modeLabel =
+      globalMode === 'real_metadata'
+        ? 'REAL NASA METADATA'
+        : globalMode === 'cached_nasa_snapshot'
+          ? 'CACHED NASA SNAPSHOT'
+          : 'SAMPLE FALLBACK';
+    this.mockBanner.innerHTML = `<span class="mock-badge earth-mode-badge">${modeLabel}</span> ${
+      modeLabel === 'SAMPLE FALLBACK'
+        ? 'Regional metrics are illustrative until NASA import caches real metadata. Run npm run source:import:nasa (dev).'
+        : 'Layer metadata from NASA public APIs or cached snapshot. Regional metrics may still use sample overlays.'
+    }`;
 
     this.tabs.innerHTML = manifest.layers
       .map(
@@ -119,11 +128,14 @@ export class EarthLayerUI {
     }
 
     void this.renderSpeciesDeps().then((speciesDeps) => {
+      const mode = this.earthService.getLayerDataMode(this.activeTab);
+      const cache = this.earthService.getMetadataCache();
+      const layerMeta = cache?.layers?.find((l) => l.id === this.activeTab);
       this.content.innerHTML = `
       <div class="earth-layer-header">
-        <h3>${def?.name ?? this.activeTab}</h3>
+        <h3>${def?.name ?? this.activeTab} <span class="earth-mode-badge">${mode}</span></h3>
         <p class="earth-layer-desc">${def?.description ?? ''}</p>
-        <p class="earth-layer-source">Source: ${def?.nasaProduct?.toUpperCase()} — ${def?.citation ?? 'NASA'}</p>
+        <p class="earth-layer-source">Source: ${def?.nasaProduct?.toUpperCase()} — ${def?.citation ?? 'NASA'}${layerMeta?.sourceUrl ? ` · <a href="${layerMeta.sourceUrl}" target="_blank" rel="noopener">API</a>` : ''}${cache?.generatedAt ? ` · Retrieved: ${cache.generatedAt}` : ''}</p>
       </div>
       <div class="earth-layer-data">${this.renderLayerData(layers)}</div>
       ${speciesDeps ? `<div class="earth-species-deps"><h4>Species Environment Links</h4>${speciesDeps}</div>` : ''}

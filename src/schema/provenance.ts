@@ -19,6 +19,15 @@ export type LicenseLabel =
   | 'GAME-ORIGINAL'
   | 'MOCK-SAMPLE';
 
+/** How a record's data was verified for release reporting. */
+export type VerificationStatus =
+  | 'game_authored_verified'
+  | 'source_verified'
+  | 'mock_sample'
+  | 'blocked_external'
+  | 'derived_inferred'
+  | 'needs_source_verification';
+
 export interface DataSourceProvenance {
   source: SourceName;
   sourceVersion: string;
@@ -32,5 +41,7 @@ export interface DataSourceProvenance {
   citationRequired: boolean;
   retrievedAt: string;
   lastUpdated: string;
+  /** @deprecated Prefer verificationStatus — kept for bundle compatibility */
   isMockData?: boolean;
+  verificationStatus?: VerificationStatus;
 }
