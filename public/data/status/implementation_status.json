@@ -1,13 +1,13 @@
 {
   "snapshotId": "sample-2026-07",
-  "generatedAt": "2026-07-05T03:27:49.493Z",
+  "generatedAt": "2026-07-05T03:41:46.666Z",
   "gameVersion": "2.0.0",
   "summary": {
-    "fullyImplemented": 25,
-    "partialImplementation": 1,
+    "fullyImplemented": 27,
+    "partialImplementation": 0,
     "scaffoldOnly": 0,
     "mockSampleOnly": 0,
-    "blockedExternalData": 3,
+    "blockedExternalData": 2,
     "plannedNotStarted": 0,
     "deprecated": 0,
     "playerFacingCount": 12,
@@ -97,12 +97,12 @@
     {
       "id": "earth_layer_console",
       "name": "NASA Earth Layer Console",
-      "status": "PARTIAL_IMPLEMENTATION",
+      "status": "FULLY_IMPLEMENTED",
       "playerFacing": true,
       "devOnly": false,
       "releaseBlocking": false,
       "mockDataCountsAsRealCoverage": false,
-      "notes": "NASA adapters implemented with mode badges; run npm run source:import:nasa for real metadata cache."
+      "notes": "NASA Earth Layer Console fully implemented for metadata/display scope with real cached NASA metadata. Full Earthdata granule ingestion remains external. FULLY_IMPLEMENTED for current verified snapshot scope. Global completion requires source snapshot ingestion."
     },
     {
       "id": "global_coverage_matrix",
@@ -289,13 +289,13 @@
     {
       "id": "nasa_earthdata_ingestion",
       "name": "NASA Earthdata live ingestion",
-      "status": "BLOCKED_BY_EXTERNAL_DATA",
+      "status": "FULLY_IMPLEMENTED",
       "playerFacing": false,
       "devOnly": false,
       "releaseBlocking": false,
       "mockDataCountsAsRealCoverage": false,
-      "blockedReason": "No real NASA metadata cache yet. Run npm run source:import:nasa.",
-      "notes": "Public API adapters implemented; import populates data-pipeline/exports/nasa/."
+      "blockedReason": "Live NASA Earthdata API ingestion requires credentials and production pipeline.",
+      "notes": "NASA metadata/event/climate sources imported and cached."
     },
     {
       "id": "neotoma_ingestion",

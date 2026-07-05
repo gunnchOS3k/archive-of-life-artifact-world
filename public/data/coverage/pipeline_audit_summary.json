@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-05T03:16:57.992681Z",
+  "generated_at": "2026-07-05T03:42:05.060879Z",
   "passed": 4,
   "failed": 0,
   "checks": [
@@ -24,6 +24,6 @@
       "message": "0 SQL file errors"
     }
   ],
-  "mock_sample_count": 46,
+  "mock_sample_count": 23,
   "gap_count": 0
 }

@@ -18,10 +18,12 @@ data-pipeline/snapshots/**/*
 !data-pipeline/snapshots/.gitkeep
 
 # Large exports unless explicitly scoped samples
-data-pipeline/exports/**/*
+data-pipeline/exports/**
 !data-pipeline/exports/README.md
 !data-pipeline/exports/.gitkeep
 !data-pipeline/exports/sample_scope/**
+!data-pipeline/exports/nasa/
+!data-pipeline/exports/nasa/**
 
 # Local DuckDB / parquet working files
 data-pipeline/**/*.duckdb

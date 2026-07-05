@@ -75,6 +75,7 @@ export interface ReleaseReadinessReport {
   checks: Array<{ name: string; passed: boolean; message: string; blocking?: boolean }>;
   dataQuality: DataQualityCounts;
   implementationSummary: ImplementationStatusReport['summary'];
+  systemsSnapshot?: Array<{ id: string; name: string; status: string }>;
   incompleteSummary: {
     releasePathBlocking: number;
     releasePathTotal: number;

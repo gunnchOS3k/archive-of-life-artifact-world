@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-05T03:27:50.445Z",
+  "generatedAt": "2026-07-05T03:41:49.012Z",
   "ready": true,
   "blockingReasons": [],
   "checks": [
@@ -136,6 +136,12 @@
       "blocking": true
     },
     {
+      "name": "npm_script_status",
+      "passed": true,
+      "message": "npm run status defined",
+      "blocking": true
+    },
+    {
       "name": "ci_includes_ci",
       "passed": true,
       "message": "CI runs: npm ci",
@@ -216,8 +222,14 @@
     {
       "name": "player_facing_not_scaffold",
       "passed": true,
-      "message": "No player-facing scaffold-only systems",
+      "message": "No player-facing scaffold-only or mock-only systems",
       "blocking": true
+    },
+    {
+      "name": "player_facing_partial_documented",
+      "passed": true,
+      "message": "No partial player-facing systems",
+      "blocking": false
     },
     {
       "name": "mock_separate_from_verified",
@@ -282,16 +294,163 @@
     "releaseEligibleCount": 0
   },
   "implementationSummary": {
-    "fullyImplemented": 17,
-    "partialImplementation": 6,
+    "fullyImplemented": 27,
+    "partialImplementation": 0,
     "scaffoldOnly": 0,
-    "mockSampleOnly": 2,
-    "blockedExternalData": 4,
+    "mockSampleOnly": 0,
+    "blockedExternalData": 2,
     "plannedNotStarted": 0,
     "deprecated": 0,
     "playerFacingCount": 12,
     "devOnlyCount": 2
   },
+  "systemsSnapshot": [
+    {
+      "id": "playable_game_loop",
+      "status": "FULLY_IMPLEMENTED",
+      "name": "Playable game loop"
+    },
+    {
+      "id": "museum_hub",
+      "status": "FULLY_IMPLEMENTED",
+      "name": "Museum hub"
+    },
+    {
+      "id": "regions",
+      "status": "FULLY_IMPLEMENTED",
+      "name": "Expedition regions"
+    },
+    {
+      "id": "species_encounters",
+      "status": "FULLY_IMPLEMENTED",
+      "name": "Species encounters"
+    },
+    {
+      "id": "artifact_collection",
+      "status": "FULLY_IMPLEMENTED",
+      "name": "Artifact collection"
+    },
+    {
+      "id": "lifeling_companion",
+      "status": "FULLY_IMPLEMENTED",
+      "name": "Lifeling companion"
+    },
+    {
+      "id": "archivedex",
+      "status": "FULLY_IMPLEMENTED",
+      "name": "ArchiveDex"
+    },
+    {
+      "id": "time_atlas",
+      "status": "FULLY_IMPLEMENTED",
+      "name": "Time Atlas"
+    },
+    {
+      "id": "earth_layer_console",
+      "status": "FULLY_IMPLEMENTED",
+      "name": "NASA Earth Layer Console"
+    },
+    {
+      "id": "global_coverage_matrix",
+      "status": "FULLY_IMPLEMENTED",
+      "name": "Global Coverage Matrix"
+    },
+    {
+      "id": "coverage_dashboard",
+      "status": "FULLY_IMPLEMENTED",
+      "name": "Coverage Dashboard"
+    },
+    {
+      "id": "implementation_dashboard",
+      "status": "FULLY_IMPLEMENTED",
+      "name": "Implementation Status Dashboard"
+    },
+    {
+      "id": "quests",
+      "status": "FULLY_IMPLEMENTED",
+      "name": "Quests"
+    },
+    {
+      "id": "map",
+      "status": "FULLY_IMPLEMENTED",
+      "name": "Map"
+    },
+    {
+      "id": "notebook",
+      "status": "FULLY_IMPLEMENTED",
+      "name": "Field notebook"
+    },
+    {
+      "id": "python_pipeline",
+      "status": "FULLY_IMPLEMENTED",
+      "name": "Python data pipeline"
+    },
+    {
+      "id": "sql_pipeline",
+      "status": "FULLY_IMPLEMENTED",
+      "name": "SQL pipeline"
+    },
+    {
+      "id": "source_snapshot_workflow",
+      "status": "FULLY_IMPLEMENTED",
+      "name": "Source snapshot workflow"
+    },
+    {
+      "id": "catalogue_of_life_ingestion",
+      "status": "BLOCKED_BY_EXTERNAL_DATA",
+      "name": "Catalogue of Life full ingestion"
+    },
+    {
+      "id": "bundle_generation",
+      "status": "FULLY_IMPLEMENTED",
+      "name": "Bundle generation"
+    },
+    {
+      "id": "source_provenance",
+      "status": "FULLY_IMPLEMENTED",
+      "name": "Source provenance"
+    },
+    {
+      "id": "ci",
+      "status": "FULLY_IMPLEMENTED",
+      "name": "CI workflow"
+    },
+    {
+      "id": "audits",
+      "status": "FULLY_IMPLEMENTED",
+      "name": "Data and coverage audits"
+    },
+    {
+      "id": "docs",
+      "status": "FULLY_IMPLEMENTED",
+      "name": "Documentation"
+    },
+    {
+      "id": "issue_templates",
+      "status": "FULLY_IMPLEMENTED",
+      "name": "Issue templates"
+    },
+    {
+      "id": "pr_template",
+      "status": "FULLY_IMPLEMENTED",
+      "name": "PR template"
+    },
+    {
+      "id": "release_snapshot_policy",
+      "status": "FULLY_IMPLEMENTED",
+      "name": "Release snapshot policy"
+    },
+    {
+      "id": "nasa_earthdata_ingestion",
+      "status": "FULLY_IMPLEMENTED",
+      "name": "NASA Earthdata live ingestion"
+    },
+    {
+      "id": "neotoma_ingestion",
+      "status": "BLOCKED_BY_EXTERNAL_DATA",
+      "name": "Neotoma paleoecology ingestion"
+    }
+  ],
   "incompleteSummary": {
     "releasePathBlocking": 0,
     "releasePathTotal": 2
