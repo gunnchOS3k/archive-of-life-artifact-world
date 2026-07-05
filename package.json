@@ -11,8 +11,22 @@
     "audit:data": "tsx scripts/audit-data.ts",
     "audit:coverage": "tsx scripts/audit-coverage.ts",
     "audit:archivedex": "tsx scripts/audit-archivedex.ts",
+    "audit:species": "tsx scripts/audit-species.ts",
+    "audit:time": "tsx scripts/audit-time.ts",
+    "audit:biomes": "tsx scripts/audit-biomes.ts",
+    "audit:earth": "tsx scripts/audit-earth.ts",
+    "audit:provenance": "tsx scripts/audit-provenance.ts",
+    "audit:bias": "tsx scripts/audit-bias.ts",
+    "report:coverage": "tsx scripts/report-coverage.ts",
     "generate:bundles": "tsx scripts/generate-bundles.ts",
-    "generate:time-atlas": "tsx scripts/generate-time-atlas.ts"
+    "generate:time-atlas": "tsx scripts/generate-time-atlas.ts",
+    "pipeline:install": "cd data-pipeline && uv sync --all-extras",
+    "pipeline:test": "cd data-pipeline && uv run pytest",
+    "pipeline:lint": "cd data-pipeline && uv run ruff check .",
+    "pipeline:sql": "cd data-pipeline && uv run archive-pipeline sql",
+    "pipeline:build-snapshot": "cd data-pipeline && uv run archive-pipeline build-snapshot",
+    "pipeline:audit": "cd data-pipeline && uv run archive-pipeline audit",
+    "pipeline:all": "npm run pipeline:install && npm run pipeline:lint && npm run pipeline:test && npm run pipeline:sql && npm run pipeline:audit"
   },
   "devDependencies": {
     "@types/node": "^22.0.0",

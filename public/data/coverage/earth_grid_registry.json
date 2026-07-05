@@ -1,0 +1,10 @@
+{
+  "snapshotId": "sample-2026-07",
+  "description": "H3/S2-style grid placeholders for audit coverage — not all cells are playable.",
+  "gridSystem": "placeholder_h3_res3",
+  "cells": [
+    {"id": "h3:8928308280fffff", "lat": 0, "lon": 0, "coverageStatus": "not_yet_ingested"},
+    {"id": "h3:8928308281fffff", "lat": 15, "lon": 30, "coverageStatus": "partial", "linkedPlaceId": "africa"},
+    {"id": "h3:8928308282fffff", "lat": 40, "lon": -100, "coverageStatus": "partial", "linkedPlaceId": "north_america"}
+  ]
+}

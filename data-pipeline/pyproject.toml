@@ -1,0 +1,43 @@
+[project]
+name = "archive-life-pipeline"
+version = "0.1.0"
+description = "Biodiversity data ingestion, validation, and snapshot pipeline for Archive of Life"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+  "pydantic>=2.7",
+  "python-dotenv>=1.0",
+  "requests>=2.31",
+  "httpx>=0.27",
+  "duckdb>=1.0",
+  "polars>=1.0",
+]
+
+[project.optional-dependencies]
+dev = [
+  "pytest>=8.0",
+  "ruff>=0.4",
+  "sqlfluff>=3.0",
+]
+
+[project.scripts]
+archive-pipeline = "archive_life_pipeline.cli:main"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/archive_life_pipeline"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py311"
+extend-exclude = ["ingest", "transform"]
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src"]

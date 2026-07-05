@@ -911,3 +911,23 @@ body {
 }
 .unlock-animation { font-size: 1.2rem; margin-bottom: 0.5rem; color: var(--accent-gold); }
 .archivedex-unlock-actions { display: flex; gap: 0.75rem; justify-content: center; margin-top: 1rem; }
+
+/* Coverage Dashboard */
+.panel-coverage .coverage-dashboard { display: flex; flex-direction: column; gap: 1rem; }
+.coverage-note { font-size: 0.85rem; color: var(--text-secondary); }
+.coverage-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+  gap: 0.5rem;
+}
+.coverage-stat {
+  background: var(--bg-secondary);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 0.5rem;
+  text-align: center;
+}
+.coverage-stat-value { display: block; font-size: 1.25rem; font-weight: 600; color: var(--accent-gold); }
+.coverage-stat-label { font-size: 0.7rem; color: var(--text-secondary); }
+.coverage-section h3 { font-size: 0.95rem; margin-bottom: 0.35rem; }
+.coverage-section ul { margin: 0; padding-left: 1.2rem; font-size: 0.85rem; }

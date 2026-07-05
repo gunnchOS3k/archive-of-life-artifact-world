@@ -164,10 +164,24 @@ function sourcesFromProvenance(sp: ArchiveSpecies): SourceName[] {
   return [...new Set(sp.provenance.map((p) => p.source))];
 }
 
+/** Extant taxa must map to present/Holocene at minimum for coverage audits. */
+function ensureHoloceneForExtant(
+  timeUnitIds: string[] | undefined,
+  lifeStatus?: TaxonLifeStatus,
+  isExtinct?: boolean
+): string[] | undefined {
+  if (isExtinct || lifeStatus === 'extinct' || lifeStatus === 'fossil_only') return timeUnitIds;
+  if (lifeStatus !== 'extant') return timeUnitIds;
+  const ids = timeUnitIds?.length ? [...timeUnitIds] : ['holocene'];
+  const hasPresent = ids.some((id) => id.includes('holocene') || id.includes('quaternary'));
+  return hasPresent ? ids : [...ids, 'holocene'];
+}
+
 function toArchiveSpecies(legacy: LegacySpecies, timeMap: Map<string, { timeUnitIds: string[]; lifeStatus: TaxonLifeStatus }>): ArchiveSpecies {
   const isExtinct = legacy.conservationStatus === 'Extinct';
   const nasaEnv = getNasaEnvironment(legacy);
   const timeInfo = timeMap.get(legacy.id);
+  const lifeStatus = timeInfo?.lifeStatus ?? (isExtinct ? 'extinct' : 'extant');
 
   return {
     id: legacy.id,
@@ -176,8 +190,8 @@ function toArchiveSpecies(legacy: LegacySpecies, timeMap: Map<string, { timeUnit
     group: legacy.group,
     tier: 'hero',
     representationTier: tierFromLegacy(),
-    lifeStatus: timeInfo?.lifeStatus ?? (isExtinct ? 'extinct' : 'extant'),
-    timeUnitIds: timeInfo?.timeUnitIds,
+    lifeStatus,
+    timeUnitIds: ensureHoloceneForExtant(timeInfo?.timeUnitIds, lifeStatus, isExtinct),
     taxonomy: {
       family: legacy.family,
       rank: legacy.rank as ArchiveSpecies['taxonomy']['rank'],
@@ -243,6 +257,8 @@ function toArchiveSpecies(legacy: LegacySpecies, timeMap: Map<string, { timeUnit
 
 function toIndexEntry(sp: ArchiveSpecies): SpeciesIndexEntry {
   const cat = sp.conservation?.iucnCategory ?? 'Not Evaluated';
+  const isExtinct =
+    isExtinctCategory(cat as never) || sp.lifeStatus === 'extinct' || sp.lifeStatus === 'fossil_only';
   return {
     id: sp.id,
     commonName: sp.commonName,
@@ -252,11 +268,11 @@ function toIndexEntry(sp: ArchiveSpecies): SpeciesIndexEntry {
     tier: sp.tier,
     representationTier: sp.representationTier,
     lifeStatus: sp.lifeStatus,
-    timeUnitIds: sp.timeUnitIds,
+    timeUnitIds: ensureHoloceneForExtant(sp.timeUnitIds, sp.lifeStatus, isExtinct),
     sources: sourcesFromProvenance(sp),
     region: sp.gameplay?.region,
     iucnCategory: cat,
-    isExtinct: isExtinctCategory(cat as never) || sp.lifeStatus === 'extinct' || sp.lifeStatus === 'fossil_only',
+    isExtinct,
     isThreatened: isThreatened(cat as never),
     isPlayable: sp.representationTier >= 5,
   };

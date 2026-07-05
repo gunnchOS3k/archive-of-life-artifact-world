@@ -15,6 +15,9 @@
       "tier": "hero",
       "representationTier": 6,
       "lifeStatus": "extant",
+      "timeUnitIds": [
+        "holocene"
+      ],
       "taxonomy": {
         "family": "Castoridae",
         "rank": "species",
@@ -26,7 +29,7 @@
         "assessed": true,
         "sourceVersion": "mock-iucn-2026-07",
         "lastUpdated": "2026-07-02",
-        "iucnTaxonId": 65428
+        "iucnTaxonId": 346
       },
       "distribution": {
         "continents": [
@@ -38,11 +41,11 @@
         ],
         "sourceVersion": "mock-gbif-2026-07",
         "lastUpdated": "2026-07-02",
-        "gbifTaxonKey": 331839,
+        "gbifTaxonKey": 5648332,
         "occurrenceSummaries": [
           {
             "region": "North America",
-            "occurrenceCount": 769
+            "occurrenceCount": 2634
           }
         ]
       },
@@ -129,8 +132,8 @@
           "license": "GAME-ORIGINAL",
           "citation": "Archive of Life: Artifact World — MVP authored content",
           "citationRequired": false,
-          "retrievedAt": "2026-07-05T02:28:46.443Z",
-          "lastUpdated": "2026-07-05T02:28:46.443Z",
+          "retrievedAt": "2026-07-05T03:03:21.008Z",
+          "lastUpdated": "2026-07-05T03:03:21.008Z",
           "isMockData": true
         },
         {
@@ -141,8 +144,8 @@
           "license": "MOCK-SAMPLE",
           "citation": "MOCK SAMPLE — not sourced from live API",
           "citationRequired": true,
-          "retrievedAt": "2026-07-05T02:28:46.443Z",
-          "lastUpdated": "2026-07-05T02:28:46.443Z",
+          "retrievedAt": "2026-07-05T03:03:21.008Z",
+          "lastUpdated": "2026-07-05T03:03:21.008Z",
           "isMockData": true
         }
       ]
@@ -155,6 +158,9 @@
       "tier": "hero",
       "representationTier": 6,
       "lifeStatus": "extant",
+      "timeUnitIds": [
+        "holocene"
+      ],
       "taxonomy": {
         "family": "Mustelidae",
         "rank": "species",
@@ -166,7 +172,7 @@
         "assessed": true,
         "sourceVersion": "mock-iucn-2026-07",
         "lastUpdated": "2026-07-02",
-        "iucnTaxonId": 35059
+        "iucnTaxonId": 40029
       },
       "distribution": {
         "continents": [
@@ -179,11 +185,11 @@
         ],
         "sourceVersion": "mock-gbif-2026-07",
         "lastUpdated": "2026-07-02",
-        "gbifTaxonKey": 1772972,
+        "gbifTaxonKey": 1325357,
         "occurrenceSummaries": [
           {
             "region": "North America",
-            "occurrenceCount": 4003
+            "occurrenceCount": 4241
           }
         ]
       },
@@ -270,8 +276,8 @@
           "license": "GAME-ORIGINAL",
           "citation": "Archive of Life: Artifact World — MVP authored content",
           "citationRequired": false,
-          "retrievedAt": "2026-07-05T02:28:46.443Z",
-          "lastUpdated": "2026-07-05T02:28:46.443Z",
+          "retrievedAt": "2026-07-05T03:03:21.008Z",
+          "lastUpdated": "2026-07-05T03:03:21.008Z",
           "isMockData": true
         },
         {
@@ -282,8 +288,8 @@
           "license": "MOCK-SAMPLE",
           "citation": "MOCK SAMPLE — not sourced from live API",
           "citationRequired": true,
-          "retrievedAt": "2026-07-05T02:28:46.443Z",
-          "lastUpdated": "2026-07-05T02:28:46.443Z",
+          "retrievedAt": "2026-07-05T03:03:21.008Z",
+          "lastUpdated": "2026-07-05T03:03:21.008Z",
           "isMockData": true
         }
       ]
@@ -296,6 +302,9 @@
       "tier": "hero",
       "representationTier": 6,
       "lifeStatus": "extant",
+      "timeUnitIds": [
+        "holocene"
+      ],
       "taxonomy": {
         "family": "Aeshnidae",
         "rank": "species",
@@ -307,7 +316,7 @@
         "assessed": true,
         "sourceVersion": "mock-iucn-2026-07",
         "lastUpdated": "2026-07-02",
-        "iucnTaxonId": 6834
+        "iucnTaxonId": 60136
       },
       "distribution": {
         "continents": [
@@ -320,11 +329,11 @@
         ],
         "sourceVersion": "mock-gbif-2026-07",
         "lastUpdated": "2026-07-02",
-        "gbifTaxonKey": 3895914,
+        "gbifTaxonKey": 3211926,
         "occurrenceSummaries": [
           {
             "region": "North America",
-            "occurrenceCount": 4783
+            "occurrenceCount": 858
           }
         ]
       },
@@ -411,8 +420,8 @@
           "license": "GAME-ORIGINAL",
           "citation": "Archive of Life: Artifact World — MVP authored content",
           "citationRequired": false,
-          "retrievedAt": "2026-07-05T02:28:46.443Z",
-          "lastUpdated": "2026-07-05T02:28:46.443Z",
+          "retrievedAt": "2026-07-05T03:03:21.008Z",
+          "lastUpdated": "2026-07-05T03:03:21.008Z",
           "isMockData": true
         },
         {
@@ -423,8 +432,8 @@
           "license": "MOCK-SAMPLE",
           "citation": "MOCK SAMPLE — not sourced from live API",
           "citationRequired": true,
-          "retrievedAt": "2026-07-05T02:28:46.443Z",
-          "lastUpdated": "2026-07-05T02:28:46.443Z",
+          "retrievedAt": "2026-07-05T03:03:21.008Z",
+          "lastUpdated": "2026-07-05T03:03:21.008Z",
           "isMockData": true
         }
       ]
@@ -437,6 +446,9 @@
       "tier": "hero",
       "representationTier": 6,
       "lifeStatus": "extant",
+      "timeUnitIds": [
+        "holocene"
+      ],
       "taxonomy": {
         "family": "Libellulidae",
         "rank": "species",
@@ -448,7 +460,7 @@
         "assessed": true,
         "sourceVersion": "mock-iucn-2026-07",
         "lastUpdated": "2026-07-02",
-        "iucnTaxonId": 37428
+        "iucnTaxonId": 75679
       },
       "distribution": {
         "continents": [
@@ -461,11 +473,11 @@
         ],
         "sourceVersion": "mock-gbif-2026-07",
         "lastUpdated": "2026-07-02",
-        "gbifTaxonKey": 2048133,
+        "gbifTaxonKey": 86263,
         "occurrenceSummaries": [
           {
             "region": "Europe",
-            "occurrenceCount": 691
+            "occurrenceCount": 142
           }
         ]
       },
@@ -552,8 +564,8 @@
           "license": "GAME-ORIGINAL",
           "citation": "Archive of Life: Artifact World — MVP authored content",
           "citationRequired": false,
-          "retrievedAt": "2026-07-05T02:28:46.443Z",
-          "lastUpdated": "2026-07-05T02:28:46.443Z",
+          "retrievedAt": "2026-07-05T03:03:21.008Z",
+          "lastUpdated": "2026-07-05T03:03:21.008Z",
           "isMockData": true
         },
         {
@@ -564,8 +576,8 @@
           "license": "MOCK-SAMPLE",
           "citation": "MOCK SAMPLE — not sourced from live API",
           "citationRequired": true,
-          "retrievedAt": "2026-07-05T02:28:46.443Z",
-          "lastUpdated": "2026-07-05T02:28:46.443Z",
+          "retrievedAt": "2026-07-05T03:03:21.008Z",
+          "lastUpdated": "2026-07-05T03:03:21.008Z",
           "isMockData": true
         }
       ]

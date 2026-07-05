@@ -32,7 +32,7 @@
         "assessed": true,
         "sourceVersion": "mock-iucn-2026-07",
         "lastUpdated": "2026-07-02",
-        "iucnTaxonId": 96574
+        "iucnTaxonId": 67667
       },
       "distribution": {
         "continents": [
@@ -47,11 +47,11 @@
         ],
         "sourceVersion": "mock-gbif-2026-07",
         "lastUpdated": "2026-07-02",
-        "gbifTaxonKey": 609473,
+        "gbifTaxonKey": 1707781,
         "occurrenceSummaries": [
           {
             "region": "North America",
-            "occurrenceCount": 4542
+            "occurrenceCount": 2622
           }
         ]
       },
@@ -132,8 +132,8 @@
           "license": "GAME-ORIGINAL",
           "citation": "Archive of Life: Artifact World — MVP authored content",
           "citationRequired": false,
-          "retrievedAt": "2026-07-05T02:28:46.443Z",
-          "lastUpdated": "2026-07-05T02:28:46.443Z",
+          "retrievedAt": "2026-07-05T03:03:21.008Z",
+          "lastUpdated": "2026-07-05T03:03:21.008Z",
           "isMockData": true
         },
         {
@@ -144,8 +144,8 @@
           "license": "MOCK-SAMPLE",
           "citation": "MOCK SAMPLE — not sourced from live API",
           "citationRequired": true,
-          "retrievedAt": "2026-07-05T02:28:46.443Z",
-          "lastUpdated": "2026-07-05T02:28:46.443Z",
+          "retrievedAt": "2026-07-05T03:03:21.008Z",
+          "lastUpdated": "2026-07-05T03:03:21.008Z",
           "isMockData": true
         }
       ]
@@ -158,6 +158,9 @@
       "tier": "hero",
       "representationTier": 6,
       "lifeStatus": "extant",
+      "timeUnitIds": [
+        "holocene"
+      ],
       "taxonomy": {
         "family": "Cervidae",
         "rank": "species",
@@ -169,7 +172,7 @@
         "assessed": true,
         "sourceVersion": "mock-iucn-2026-07",
         "lastUpdated": "2026-07-02",
-        "iucnTaxonId": 35868
+        "iucnTaxonId": 68680
       },
       "distribution": {
         "continents": [
@@ -182,11 +185,11 @@
         ],
         "sourceVersion": "mock-gbif-2026-07",
         "lastUpdated": "2026-07-02",
-        "gbifTaxonKey": 3303313,
+        "gbifTaxonKey": 5457964,
         "occurrenceSummaries": [
           {
             "region": "North America",
-            "occurrenceCount": 393
+            "occurrenceCount": 506
           }
         ]
       },
@@ -289,8 +292,8 @@
           "license": "GAME-ORIGINAL",
           "citation": "Archive of Life: Artifact World — MVP authored content",
           "citationRequired": false,
-          "retrievedAt": "2026-07-05T02:28:46.443Z",
-          "lastUpdated": "2026-07-05T02:28:46.443Z",
+          "retrievedAt": "2026-07-05T03:03:21.008Z",
+          "lastUpdated": "2026-07-05T03:03:21.008Z",
           "isMockData": true
         },
         {
@@ -301,8 +304,8 @@
           "license": "MOCK-SAMPLE",
           "citation": "MOCK SAMPLE — not sourced from live API",
           "citationRequired": true,
-          "retrievedAt": "2026-07-05T02:28:46.443Z",
-          "lastUpdated": "2026-07-05T02:28:46.443Z",
+          "retrievedAt": "2026-07-05T03:03:21.008Z",
+          "lastUpdated": "2026-07-05T03:03:21.008Z",
           "isMockData": true
         }
       ]
@@ -315,6 +318,9 @@
       "tier": "hero",
       "representationTier": 6,
       "lifeStatus": "extant",
+      "timeUnitIds": [
+        "holocene"
+      ],
       "taxonomy": {
         "family": "Ursidae",
         "rank": "species",
@@ -326,7 +332,7 @@
         "assessed": true,
         "sourceVersion": "mock-iucn-2026-07",
         "lastUpdated": "2026-07-02",
-        "iucnTaxonId": 65516
+        "iucnTaxonId": 12745
       },
       "distribution": {
         "continents": [
@@ -338,11 +344,11 @@
         ],
         "sourceVersion": "mock-gbif-2026-07",
         "lastUpdated": "2026-07-02",
-        "gbifTaxonKey": 343678,
+        "gbifTaxonKey": 6868777,
         "occurrenceSummaries": [
           {
             "region": "North America",
-            "occurrenceCount": 3000
+            "occurrenceCount": 3945
           }
         ]
       },
@@ -423,8 +429,8 @@
           "license": "GAME-ORIGINAL",
           "citation": "Archive of Life: Artifact World — MVP authored content",
           "citationRequired": false,
-          "retrievedAt": "2026-07-05T02:28:46.443Z",
-          "lastUpdated": "2026-07-05T02:28:46.443Z",
+          "retrievedAt": "2026-07-05T03:03:21.008Z",
+          "lastUpdated": "2026-07-05T03:03:21.008Z",
           "isMockData": true
         },
         {
@@ -435,8 +441,8 @@
           "license": "MOCK-SAMPLE",
           "citation": "MOCK SAMPLE — not sourced from live API",
           "citationRequired": true,
-          "retrievedAt": "2026-07-05T02:28:46.443Z",
-          "lastUpdated": "2026-07-05T02:28:46.443Z",
+          "retrievedAt": "2026-07-05T03:03:21.008Z",
+          "lastUpdated": "2026-07-05T03:03:21.008Z",
           "isMockData": true
         }
       ]
@@ -449,6 +455,9 @@
       "tier": "hero",
       "representationTier": 6,
       "lifeStatus": "extant",
+      "timeUnitIds": [
+        "holocene"
+      ],
       "taxonomy": {
         "family": "Formicidae",
         "rank": "species",
@@ -460,7 +469,7 @@
         "assessed": true,
         "sourceVersion": "mock-iucn-2026-07",
         "lastUpdated": "2026-07-02",
-        "iucnTaxonId": 33558
+        "iucnTaxonId": 8658
       },
       "distribution": {
         "continents": [
@@ -471,11 +480,11 @@
         ],
         "sourceVersion": "mock-gbif-2026-07",
         "lastUpdated": "2026-07-02",
-        "gbifTaxonKey": 5678575,
+        "gbifTaxonKey": 5822837,
         "occurrenceSummaries": [
           {
             "region": "Europe",
-            "occurrenceCount": 3801
+            "occurrenceCount": 4956
           }
         ]
       },
@@ -556,8 +565,8 @@
           "license": "GAME-ORIGINAL",
           "citation": "Archive of Life: Artifact World — MVP authored content",
           "citationRequired": false,
-          "retrievedAt": "2026-07-05T02:28:46.443Z",
-          "lastUpdated": "2026-07-05T02:28:46.443Z",
+          "retrievedAt": "2026-07-05T03:03:21.008Z",
+          "lastUpdated": "2026-07-05T03:03:21.008Z",
           "isMockData": true
         },
         {
@@ -568,8 +577,8 @@
           "license": "MOCK-SAMPLE",
           "citation": "MOCK SAMPLE — not sourced from live API",
           "citationRequired": true,
-          "retrievedAt": "2026-07-05T02:28:46.443Z",
-          "lastUpdated": "2026-07-05T02:28:46.443Z",
+          "retrievedAt": "2026-07-05T03:03:21.008Z",
+          "lastUpdated": "2026-07-05T03:03:21.008Z",
           "isMockData": true
         }
       ]
@@ -582,6 +591,9 @@
       "tier": "hero",
       "representationTier": 6,
       "lifeStatus": "extant",
+      "timeUnitIds": [
+        "holocene"
+      ],
       "taxonomy": {
         "family": "Scarabaeidae",
         "rank": "species",
@@ -593,7 +605,7 @@
         "assessed": true,
         "sourceVersion": "mock-iucn-2026-07",
         "lastUpdated": "2026-07-02",
-        "iucnTaxonId": 47099
+        "iucnTaxonId": 51508
       },
       "distribution": {
         "continents": [
@@ -605,11 +617,11 @@
         ],
         "sourceVersion": "mock-gbif-2026-07",
         "lastUpdated": "2026-07-02",
-        "gbifTaxonKey": 4287688,
+        "gbifTaxonKey": 9400975,
         "occurrenceSummaries": [
           {
             "region": "Central America",
-            "occurrenceCount": 2318
+            "occurrenceCount": 3114
           }
         ]
       },
@@ -706,8 +718,8 @@
           "license": "GAME-ORIGINAL",
           "citation": "Archive of Life: Artifact World — MVP authored content",
           "citationRequired": false,
-          "retrievedAt": "2026-07-05T02:28:46.443Z",
-          "lastUpdated": "2026-07-05T02:28:46.443Z",
+          "retrievedAt": "2026-07-05T03:03:21.008Z",
+          "lastUpdated": "2026-07-05T03:03:21.008Z",
           "isMockData": true
         },
         {
@@ -718,8 +730,8 @@
           "license": "MOCK-SAMPLE",
           "citation": "MOCK SAMPLE — not sourced from live API",
           "citationRequired": true,
-          "retrievedAt": "2026-07-05T02:28:46.443Z",
-          "lastUpdated": "2026-07-05T02:28:46.443Z",
+          "retrievedAt": "2026-07-05T03:03:21.008Z",
+          "lastUpdated": "2026-07-05T03:03:21.008Z",
           "isMockData": true
         }
       ]
@@ -732,6 +744,9 @@
       "tier": "hero",
       "representationTier": 6,
       "lifeStatus": "extant",
+      "timeUnitIds": [
+        "holocene"
+      ],
       "taxonomy": {
         "family": "Theraphosidae",
         "rank": "species",
@@ -743,7 +758,7 @@
         "assessed": true,
         "sourceVersion": "mock-iucn-2026-07",
         "lastUpdated": "2026-07-02",
-        "iucnTaxonId": 63057
+        "iucnTaxonId": 23187
       },
       "distribution": {
         "continents": [
@@ -754,11 +769,11 @@
         ],
         "sourceVersion": "mock-gbif-2026-07",
         "lastUpdated": "2026-07-02",
-        "gbifTaxonKey": 5013481,
+        "gbifTaxonKey": 2413397,
         "occurrenceSummaries": [
           {
             "region": "South America",
-            "occurrenceCount": 5005
+            "occurrenceCount": 1961
           }
         ]
       },
@@ -821,8 +836,8 @@
           "license": "GAME-ORIGINAL",
           "citation": "Archive of Life: Artifact World — MVP authored content",
           "citationRequired": false,
-          "retrievedAt": "2026-07-05T02:28:46.443Z",
-          "lastUpdated": "2026-07-05T02:28:46.443Z",
+          "retrievedAt": "2026-07-05T03:03:21.008Z",
+          "lastUpdated": "2026-07-05T03:03:21.008Z",
           "isMockData": true
         },
         {
@@ -833,8 +848,8 @@
           "license": "MOCK-SAMPLE",
           "citation": "MOCK SAMPLE — not sourced from live API",
           "citationRequired": true,
-          "retrievedAt": "2026-07-05T02:28:46.443Z",
-          "lastUpdated": "2026-07-05T02:28:46.443Z",
+          "retrievedAt": "2026-07-05T03:03:21.008Z",
+          "lastUpdated": "2026-07-05T03:03:21.008Z",
           "isMockData": true
         }
       ]
