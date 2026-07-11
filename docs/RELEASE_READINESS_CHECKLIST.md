@@ -8,11 +8,19 @@ npm run generate:bundles
 npm run typecheck
 npm run audit:data
 npm run audit:coverage
+npm run audit:maps
 npm run audit:archivedex
 npm run audit:implementation
 npm run audit:release
 npm run build
 npm run pipeline:all
+```
+
+`audit:release` checks code/sample-release integrity. A scientific production release additionally requires:
+
+```bash
+npm run audit:maps:production
+npm run audit:production
 ```
 
 ## Gates (`npm run audit:release`)
@@ -43,11 +51,14 @@ You **may not** claim:
 - Complete global species coverage
 - Production Catalogue of Life / GBIF / IUCN integration
 - Live NASA Earthdata layers without ingestion
+- Full-Earth temporal maps while any gate is `blocked_external` or `partial`
 - Source-verified scientific completeness
 
 ## Artifacts to archive per release
 
 - `public/data/status/release_readiness_report.json`
+- `public/data/status/temporal_map_readiness_report.json`
+- `public/data/status/production_readiness_report.json`
 - `public/data/manifest.json` snapshot ID
 - Git commit SHA
 - CI run URL

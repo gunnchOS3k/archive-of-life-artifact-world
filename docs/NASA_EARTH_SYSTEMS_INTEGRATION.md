@@ -41,7 +41,7 @@ public/data/earth/
   sample_region_layers.json   — per-region mock environmental summaries
 ```
 
-All current NASA layer data is marked `isMockData: true` until real ingestion is connected.
+`nasa_metadata_cache.json` may contain real CMR/EONET/POWER discovery metadata. `sample_region_layers.json` contains the displayed regional measurements and is independently marked `isMockData: true`. Metadata availability must never be used to label those measurements as real.
 
 ## In-Game: Earth Layer Console
 
@@ -57,7 +57,7 @@ Tabs:
 - Natural Events
 - Climate
 
-Each tab shows regional metrics, NASA product citation, and species environment links when applicable.
+Each tab shows regional metrics, the intended NASA product citation, metadata-cache status, measurement status, and species environment links when applicable. The current regional values are visibly labeled **SAMPLE REGIONAL VALUES**.
 
 ## Species Environment Dependencies
 
@@ -104,10 +104,10 @@ Optional credentials in `data-pipeline/.env.example` — not required for mock d
 
 ## Production Integration Path
 
-1. Ingest NASA snapshots via Earthdata Login / public APIs
-2. Transform to `RegionEarthLayers` schema per game region
+1. Ingest NASA metadata via public APIs and measurement granules via the applicable Earthdata services
+2. Transform measurements to `RegionEarthLayers` per game region, preserving per-layer acquisition time, granule IDs, checksums, and licenses
 3. Update `nasa_manifest.json` snapshot version
-4. Connect GIBS WMS tiles in Earth Layer Console (future)
+4. Package approved offline release assets for Android; remote GIBS/WMS can be an optional connected mode
 5. Validate species `requiredHabitatSignals` against live layer values
 
 ## Ethics & Gameplay Identity

@@ -19,7 +19,10 @@ Executable workflows for importing external biodiversity and Earth data into Arc
 | `npm run source:import:gbif` | Import GBIF download |
 | `npm run source:import:iucn` | Fetch IUCN Red List (token required) |
 | `npm run source:import:pbdb` | Import PBDB fossil snapshot |
-| `npm run source:import:nasa` | Fetch/cache NASA CMR, EONET, POWER metadata |
+| `npm run source:import:nasa` | Fetch/cache NASA CMR, EONET, POWER metadata only |
+| `npm run audit:maps` | Validate the global grid and one map requirement per Time Gate |
+| `npm run audit:maps:production` | Require all Time Gate maps and approved source snapshots |
+| `npm run audit:production` | Strict scientific production gate across all sources |
 | `npm run source:import:neotoma` | Import Neotoma snapshot or API sample |
 | `npm run source:import:all` | Attempt all imports (blocked sources fail gracefully) |
 
@@ -63,7 +66,20 @@ Do not use live occurrence search for millions of records — use official downl
 2. Cached exports: `data-pipeline/exports/nasa/`
 3. Game cache: `public/data/earth/nasa_metadata_cache.json`
 
-Earth Layer Console shows **REAL NASA METADATA**, **CACHED NASA SNAPSHOT**, or **SAMPLE FALLBACK** per layer.
+Earth Layer Console reports metadata availability separately from displayed regional values. The current regional bundle remains **SAMPLE REGIONAL VALUES** even when metadata says **REAL NASA METADATA**.
+
+NASA metadata import does not download HLS, GEDI, ECOSTRESS, FIRMS, Ocean Color, or other measurement granules and cannot make regional metrics production-ready by itself.
+
+## Temporal Earth maps
+
+1. Review an authoritative dataset's license and redistribution terms.
+2. Register the exact snapshot, citation, retrieval date, and checksum in `source_snapshots.json`; approve it only after human review.
+3. Normalize a global release asset to GeoJSON or PMTiles under `public/data/maps/assets/`.
+4. Run offline spatial coverage analysis against all 648 cells and record the exact covered IDs.
+5. Update the matching gate record in `temporal_map_catalog.json`, including asset size/SHA-256 and uncertainty.
+6. Run `npm run audit:maps` and `npm run audit:maps:production`.
+
+See `docs/TEMPORAL_EARTH_MAPS.md` for the enforced contract.
 
 ## Neotoma
 
@@ -77,6 +93,7 @@ npm run source:audit
 npm run generate:bundles
 npm run audit:data
 npm run audit:coverage
+npm run audit:maps
 npm run audit:implementation
 ```
 

@@ -16,6 +16,14 @@ What is required to move from sample/mock scope to source-verified scientific co
 
 NASA public metadata (CMR, EONET, POWER) requires **no credentials** for metadata fetch. Earthdata Login is required for granule **download**, not implemented in this pass.
 
+NASA metadata and regional measurements are separate scopes. A successful metadata fetch never upgrades `sample_region_layers.json` to source-verified measurements.
+
+## Full-Earth maps
+
+Each of the 17 supported Time Atlas gates requires a licensed, redistributable global map asset. Pre-Holocene maps require an approved paleogeographic reconstruction; Holocene/current maps require approved modern geography. Each import must include a local release asset, SHA-256, all 648 covered grid cell IDs, citation, license review, and uncertainty notes.
+
+No reconstruction provider has been silently selected. Review redistribution terms before adding a source snapshot and setting `approvedForUse: true`.
+
 ## Licenses and citations
 
 Each import writes:
@@ -46,6 +54,7 @@ Source snapshots in `public/data/coverage/source_snapshots.json` must have `appr
 - PBDB-global fossil record
 - NASA granule-level regional rasters
 - Neotoma late Quaternary completeness
+- Full-Earth paleogeography for any Time Atlas gate still marked `blocked_external` or `partial`
 
 ## Credentials security
 

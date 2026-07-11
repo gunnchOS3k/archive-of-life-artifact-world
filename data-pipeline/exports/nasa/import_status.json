@@ -2,11 +2,14 @@
   "imported": true,
   "status": "imported",
   "recordCount": 21,
-  "checksum": "a35a04ef5ed56f6d5e0250d18acb28eea83b032085d51687eef748ba76f0265a",
+  "verifiedRecordCount": 21,
+  "checksum": "f6d1c4d83b3888b1cd9fd7cd1b4fed11dbd317b857d461666f6a01ea3b3265b6",
   "sourceVersion": "public-api",
   "citation": "NASA Earthdata / EONET / POWER public APIs",
   "lastImportTime": "2026-07-05T03:41:38Z",
   "dataMode": "source_verified",
+  "scope": "metadata_only",
+  "measurementDataMode": "not_ingested",
   "layers": [
     {
       "id": "natural_events",

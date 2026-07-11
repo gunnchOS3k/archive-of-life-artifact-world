@@ -2,7 +2,9 @@
 
 Educational open-world exploration game — discover life, collect ethical artifacts, and build the Archive of Life with your Lifeling companion.
 
-# Real Data Completion Pass — local systems are fully implemented for the **current verified snapshot scope**. Global scientific completeness still requires source snapshot imports.
+## Data readiness
+
+The game loop is playable, but the current scientific bundles are a labeled sample release. The strict production gate intentionally fails until external source snapshots, regional NASA measurements, and all full-Earth temporal maps are imported and verified.
 
 ## Release status
 
@@ -11,7 +13,8 @@ Educational open-world exploration game — discover life, collect ethical artif
 | **Game** | Fully playable — museum hub, 5 expedition regions, minigames, quests, Lifeling |
 | **ArchiveDex** | Fully implemented (17 tabs, provenance classes) — sample taxa only |
 | **Time Atlas** | Fully implemented (ICS sample, gates, uncertainty) — live ICS via import workflow |
-| **Earth Layer Console** | Metadata adapters + mode badges — run `source:import:nasa` for real cache |
+| **Full-Earth temporal maps** | 648-cell global coverage index + 17 gate requirements; 0/17 source-verified assets |
+| **Earth Layer Console** | Real metadata cache is separated from sample regional measurements |
 | **Coverage Dashboard** | Fully implemented (dev/admin) — mock vs verified labeled |
 | **Data pipeline** | Fully implemented — Python CLI, SQL validation, source import commands |
 | **External sources** | Blocked until snapshots configured — see [Source ingestion runbook](docs/SOURCE_INGESTION_RUNBOOK.md) |
@@ -24,6 +27,7 @@ Game-authored content uses `game_authored_verified` provenance. Scientific field
 npm install
 npm run generate:time-atlas
 npm run generate:bundles
+npm run generate:maps
 npm run dev                # http://localhost:5173
 ```
 
@@ -36,12 +40,20 @@ npm run typecheck
 npm run audit:data
 npm run audit:coverage
 npm run audit:archivedex
+npm run audit:maps
 npm run audit:implementation
 npm run audit:release
 npm run source:validate
 npm run source:audit
 npm run build
 npm run pipeline:all
+```
+
+Strict scientific release checks (currently expected to report external-data blockers):
+
+```bash
+npm run audit:maps:production
+npm run audit:production
 ```
 
 ## Complete external data imports
@@ -67,9 +79,12 @@ Blocked sources fail with actionable messages and next commands.
 | `npm run typecheck` | TypeScript check |
 | `npm run generate:bundles` | Build `public/data/bundles/` |
 | `npm run generate:time-atlas` | Build Time Atlas bundles |
+| `npm run generate:maps` | Build full-Earth grid and synchronize 17 map requirements |
 | `npm run audit:data` | Data integrity + mock/verified counts |
 | `npm run audit:coverage` | Global coverage matrix (45 checks) |
 | `npm run audit:archivedex` | ArchiveDex integrity |
+| `npm run audit:maps` | Full-Earth grid, per-gate map, asset, checksum, and provenance integrity |
+| `npm run audit:production` | Strict non-mock scientific production readiness |
 | `npm run audit:implementation` | Implementation status JSON |
 | `npm run audit:release` | Release readiness gates |
 | `npm run source:list` | List external source import status |
@@ -105,7 +120,8 @@ WASD/Arrows move · E interact · A/N/M/C/Q/T/Y menus · Escape close panels
 - [Data architecture](docs/DATA_ARCHITECTURE.md)
 - [ArchiveDex](docs/ARCHIVEDEX_SPECIES_ENTRY_SYSTEM.md)
 - [Time Atlas](docs/TIME_ATLAS_ARCHITECTURE.md)
+- [Full-Earth temporal maps](docs/TEMPORAL_EARTH_MAPS.md)
 
 ---
 
-*Educational prototype — not affiliated with any creature-collection franchise.*
+*Independent educational exploration game — not affiliated with any creature-collection franchise.*

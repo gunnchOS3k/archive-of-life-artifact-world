@@ -142,7 +142,22 @@ def ingest_nasa_metadata() -> dict:
     else:
         data_mode = "sample_fallback"
 
-    manifest = {"generatedAt": _now(), "dataMode": data_mode, "layers": layers, "recordCount": record_count}
+    manifest = {
+        "generatedAt": _now(),
+        "dataMode": data_mode,
+        "verificationMode": (
+            "source_verified"
+            if data_mode == "real_metadata"
+            else "mixed"
+            if data_mode == "cached_nasa_snapshot"
+            else "sample_fallback"
+        ),
+        "scope": "metadata_only",
+        "measurementDataMode": "not_ingested",
+        "layers": layers,
+        "recordCount": record_count,
+        "verifiedRecordCount": record_count,
+    }
     manifest_cs = _write_json(NASA_EXPORT / "nasa_metadata_manifest.json", manifest)
     NASA_PUBLIC.parent.mkdir(parents=True, exist_ok=True)
     NASA_PUBLIC.write_text(json.dumps(manifest, indent=2))
@@ -153,6 +168,9 @@ def ingest_nasa_metadata() -> dict:
         "recordCount": record_count,
         "checksum": manifest_cs,
         "sourceVersion": "public-api",
-        "dataMode": "source_verified" if has_real else "sample_fallback",
+        "dataMode": manifest["verificationMode"],
+        "verifiedRecordCount": record_count,
+        "scope": "metadata_only",
+        "measurementDataMode": "not_ingested",
         "layers": layers,
     }

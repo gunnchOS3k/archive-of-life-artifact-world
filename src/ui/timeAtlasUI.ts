@@ -3,6 +3,8 @@ import type { GeologicTimeRank } from '@/time/schema';
 import { REPRESENTATION_TIER_LABELS } from '@/time/schema';
 import { TimeAtlasService } from '@/time/TimeAtlasService';
 import type { DataCatalogService } from '@/services/DataCatalogService';
+import { TemporalMapService } from '@/services/TemporalMapService';
+import type { TemporalEarthMapRecord } from '@/schema/temporalMap';
 
 const RANK_LABELS: Record<GeologicTimeRank, string> = {
   eon: 'Eons',
@@ -20,12 +22,19 @@ export class TimeAtlasUI {
   private rankSelect: HTMLSelectElement;
   private searchInput: HTMLInputElement;
   private timeService: TimeAtlasService;
+  private temporalMapService: TemporalMapService;
   private state: SaveState | null = null;
   private selectedUnitId: string | null = null;
   private activeRank: GeologicTimeRank = 'eon';
 
-  constructor(panel: HTMLElement, timeService: TimeAtlasService, _catalog: DataCatalogService) {
+  constructor(
+    panel: HTMLElement,
+    timeService: TimeAtlasService,
+    temporalMapService: TemporalMapService,
+    _catalog: DataCatalogService
+  ) {
     this.timeService = timeService;
+    this.temporalMapService = temporalMapService;
     this.tree = panel.querySelector('#time-atlas-tree')!;
     this.detail = panel.querySelector('#time-atlas-detail')!;
     this.gates = panel.querySelector('#time-atlas-gates')!;
@@ -124,6 +133,9 @@ export class TimeAtlasUI {
       `
       )
       .join('');
+    const mapHtml = this.renderTemporalMapStatus(
+      this.temporalMapService.getMapsForTimeUnit(unit.id)
+    );
 
     this.detail.innerHTML = `
       <h3>${unit.name} <span class="time-rank-badge">${unit.rank}</span></h3>
@@ -136,6 +148,7 @@ export class TimeAtlasUI {
       ${unit.majorEvents.length ? `<p><strong>Major events:</strong> ${unit.majorEvents.join('; ')}</p>` : ''}
       ${unit.dominantLife.length ? `<p><strong>Dominant life:</strong> ${unit.dominantLife.join(', ')}</p>` : ''}
       ${unit.uncertaintyNotes ? `<p class="uncertainty-note">⚠️ ${unit.uncertaintyNotes}</p>` : ''}
+      ${mapHtml}
       <div class="time-data-quality">
         <h4>Data quality</h4>
         <p>Represented taxa: <strong>${taxa.length}</strong> · Artifact availability: see ArchiveDex T4+ entries · Status: <code>${dataQuality.replace(/_/g, ' ')}</code>${manifest.isMockData ? ' <span class="mock-badge">MOCK TIME SAMPLE</span>' : ''}</p>
@@ -170,6 +183,10 @@ export class TimeAtlasUI {
         ${gates
           .map((g) => {
             const unlocked = this.timeService.isGateUnlocked(g, progress);
+            const temporalMap = this.temporalMapService.getMapForGate(g.id);
+            const mapStatus = temporalMap
+              ? this.temporalMapStatusLabel(temporalMap)
+              : '<span class="mock-badge">MAP REQUIREMENT MISSING</span>';
             this.recordGateView(g.id);
             const preLife = ['hadean_gate', 'archean_gate', 'proterozoic_gate'].includes(g.id);
             const preLifeNote = preLife
@@ -180,6 +197,7 @@ export class TimeAtlasUI {
                 <div class="time-gate-name">${g.name}</div>
                 <div class="time-gate-status">${unlocked ? '✓ Available' : `🔒 Requires ${g.requiredProgress.artifactsCollected} artifacts`}</div>
                 <p class="time-gate-desc">${g.description}</p>
+                <p><strong>Full-Earth map:</strong> ${mapStatus}</p>
                 ${g.uncertaintyNotes ? `<p class="uncertainty-note">⚠️ ${g.uncertaintyNotes}</p>` : ''}
                 ${preLifeNote}
                 ${g.sourceProvenance?.length ? `<p class="time-gate-prov"><em>Sources: ${g.sourceProvenance.map((p) => p.source).join(', ')}</em></p>` : ''}
@@ -187,6 +205,46 @@ export class TimeAtlasUI {
               </div>
             `;
           })
+          .join('')}
+      </div>
+    `;
+  }
+
+  private temporalMapStatusLabel(map: TemporalEarthMapRecord): string {
+    if (map.status === 'source_verified') {
+      return `<span class="earth-mode-badge">SOURCE VERIFIED</span> ${map.coveredGridCellCount}/${map.expectedGridCellCount} cells`;
+    }
+    if (map.status === 'partial') {
+      return `<span class="mock-badge">PARTIAL</span> ${map.coveredGridCellCount}/${map.expectedGridCellCount} cells`;
+    }
+    return `<span class="mock-badge">BLOCKED — NO SCIENTIFIC ASSET</span> 0/${map.expectedGridCellCount} cells`;
+  }
+
+  private renderTemporalMapStatus(maps: TemporalEarthMapRecord[]): string {
+    if (maps.length === 0) {
+      return `
+        <div class="time-data-quality">
+          <h4>Full-Earth reconstruction</h4>
+          <p>No Time Gate directly targets this unit. The catalog is keyed to the 17 supported expedition gates.</p>
+        </div>
+      `;
+    }
+
+    return `
+      <div class="time-data-quality">
+        <h4>Full-Earth reconstruction</h4>
+        ${maps
+          .map(
+            (map) => `
+              <p>${this.temporalMapStatusLabel(map)}</p>
+              <p>${map.blockedReason ?? map.uncertaintyNotes}</p>
+              ${
+                map.status === 'source_verified' && map.asset
+                  ? `<p>Packaged asset: <code>${map.asset.path}</code> · SHA-256 verified</p>`
+                  : '<p><em>No speculative coastlines are rendered while source data is missing.</em></p>'
+              }
+            `
+          )
           .join('')}
       </div>
     `;

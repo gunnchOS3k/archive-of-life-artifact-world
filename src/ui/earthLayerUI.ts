@@ -35,18 +35,20 @@ export class EarthLayerUI {
 
   private buildTabs() {
     const manifest = this.earthService.getManifest();
-    const globalMode = this.earthService.getGlobalDataMode();
-    const modeLabel =
-      globalMode === 'real_metadata'
+    const metadataMode = this.earthService.getGlobalDataMode();
+    const metadataLabel =
+      metadataMode === 'real_metadata'
         ? 'REAL NASA METADATA'
-        : globalMode === 'cached_nasa_snapshot'
+        : metadataMode === 'cached_nasa_snapshot' || metadataMode === 'mixed'
           ? 'CACHED NASA SNAPSHOT'
-          : 'SAMPLE FALLBACK';
-    this.mockBanner.innerHTML = `<span class="mock-badge earth-mode-badge">${modeLabel}</span> ${
-      modeLabel === 'SAMPLE FALLBACK'
-        ? 'Regional metrics are illustrative until NASA import caches real metadata. Run npm run source:import:nasa (dev).'
-        : 'Layer metadata from NASA public APIs or cached snapshot. Regional metrics may still use sample overlays.'
-    }`;
+          : 'METADATA FALLBACK';
+    const regionalLabel =
+      this.earthService.getRegionalDataMode() === 'source_verified'
+        ? 'SOURCE-VERIFIED REGIONAL VALUES'
+        : 'SAMPLE REGIONAL VALUES';
+    this.mockBanner.innerHTML = `<span class="mock-badge earth-mode-badge">${regionalLabel}</span>
+      Displayed measurements are ${regionalLabel === 'SAMPLE REGIONAL VALUES' ? 'illustrative and excluded from scientific coverage' : 'from approved source snapshots'}.
+      <span class="earth-mode-badge">${metadataLabel}</span> describes discovery metadata only.`;
 
     this.tabs.innerHTML = manifest.layers
       .map(
@@ -129,13 +131,15 @@ export class EarthLayerUI {
 
     void this.renderSpeciesDeps().then((speciesDeps) => {
       const mode = this.earthService.getLayerDataMode(this.activeTab);
+      const metadataMode = this.earthService.getLayerMetadataMode(this.activeTab);
       const cache = this.earthService.getMetadataCache();
       const layerMeta = cache?.layers?.find((l) => l.id === this.activeTab);
       this.content.innerHTML = `
       <div class="earth-layer-header">
         <h3>${def?.name ?? this.activeTab} <span class="earth-mode-badge">${mode}</span></h3>
         <p class="earth-layer-desc">${def?.description ?? ''}</p>
-        <p class="earth-layer-source">Source: ${def?.nasaProduct?.toUpperCase()} — ${def?.citation ?? 'NASA'}${layerMeta?.sourceUrl ? ` · <a href="${layerMeta.sourceUrl}" target="_blank" rel="noopener">API</a>` : ''}${cache?.generatedAt ? ` · Retrieved: ${cache.generatedAt}` : ''}</p>
+        <p class="earth-layer-source">Intended scientific product: ${def?.nasaProduct?.toUpperCase()} — ${def?.citation ?? 'NASA'}</p>
+        <p class="earth-layer-source">Metadata: ${metadataMode}${layerMeta?.sourceUrl ? ` · <a href="${layerMeta.sourceUrl}" target="_blank" rel="noopener">API</a>` : ''}${cache?.generatedAt ? ` · Retrieved: ${cache.generatedAt}` : ''}. Metadata availability does not verify the regional values below.</p>
       </div>
       <div class="earth-layer-data">${this.renderLayerData(layers)}</div>
       ${speciesDeps ? `<div class="earth-species-deps"><h4>Species Environment Links</h4>${speciesDeps}</div>` : ''}

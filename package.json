@@ -1,7 +1,7 @@
 {
   "name": "archive-of-life-artifact-world",
   "version": "2.0.0",
-  "description": "Educational biodiversity exploration game — scalable data architecture prototype",
+  "description": "Educational biodiversity exploration game with source-audited scientific data pipelines",
   "type": "module",
   "scripts": {
     "dev": "vite",
@@ -17,11 +17,17 @@
     "audit:time": "tsx scripts/audit-time.ts",
     "audit:biomes": "tsx scripts/audit-biomes.ts",
     "audit:earth": "tsx scripts/audit-earth.ts",
+    "audit:maps": "tsx scripts/audit-temporal-maps.ts",
+    "audit:maps:production": "tsx scripts/audit-temporal-maps.ts --require-verified",
+    "audit:production": "tsx scripts/audit-production-readiness.ts",
     "audit:provenance": "tsx scripts/audit-provenance.ts",
     "audit:bias": "tsx scripts/audit-bias.ts",
     "report:coverage": "tsx scripts/report-coverage.ts",
     "generate:bundles": "tsx scripts/generate-bundles.ts",
     "generate:time-atlas": "tsx scripts/generate-time-atlas.ts",
+    "generate:earth-grid": "tsx scripts/generate-earth-grid.ts",
+    "generate:temporal-maps": "tsx scripts/generate-temporal-map-catalog.ts",
+    "generate:maps": "npm run generate:earth-grid && npm run generate:temporal-maps",
     "pipeline:install": "cd data-pipeline && uv sync --all-extras",
     "pipeline:test": "cd data-pipeline && uv run pytest",
     "pipeline:lint": "cd data-pipeline && uv run ruff check .",
@@ -39,7 +45,8 @@
     "source:import:nasa": "tsx scripts/source-cli.ts import nasa",
     "source:import:neotoma": "tsx scripts/source-cli.ts import neotoma",
     "source:import:all": "tsx scripts/source-cli.ts import all",
-    "status": "tsx scripts/status.ts"
+    "status": "tsx scripts/status.ts",
+    "verify": "npm run typecheck && npm run audit:maps && npm run build"
   },
   "devDependencies": {
     "@types/node": "^22.0.0",

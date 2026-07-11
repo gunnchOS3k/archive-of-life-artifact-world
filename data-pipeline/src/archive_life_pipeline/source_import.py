@@ -107,7 +107,7 @@ SOURCE_SPECS: dict[str, SourceImportSpec] = {
     ),
     "nasa": SourceImportSpec(
         id="nasa",
-        name="NASA Earth metadata",
+        name="NASA public metadata cache",
         env_keys=[],
         snapshot_subdir="nasa",
         required_env_var=None,
@@ -233,6 +233,7 @@ def _read_import_status(spec: SourceImportSpec) -> SourceImportRecord:
         data = json.loads(status_path.read_text())
         rec.imported = data.get("imported", False)
         rec.record_count = data.get("recordCount", 0)
+        rec.verified_record_count = data.get("verifiedRecordCount", 0)
         rec.checksum = data.get("checksum")
         rec.source_version = data.get("sourceVersion")
         rec.citation = data.get("citation")
@@ -240,7 +241,7 @@ def _read_import_status(spec: SourceImportSpec) -> SourceImportRecord:
         rec.status = data.get("status", rec.status)
         rec.data_mode = data.get("dataMode")
         rec.blocked_reason = data.get("blockedReason", rec.blocked_reason)
-        if rec.imported and rec.data_mode == "source_verified":
+        if rec.verified_record_count == 0 and rec.imported and rec.data_mode == "source_verified":
             rec.verified_record_count = rec.record_count
     elif spec.id == "nasa":
         cache = _nasa_cache_on_disk()
@@ -250,11 +251,15 @@ def _read_import_status(spec: SourceImportSpec) -> SourceImportRecord:
             rec.imported = has_real or cache.get("imported", False)
             rec.record_count = cache.get("recordCount", len(layers))
             rec.last_import_time = cache.get("generatedAt")
-            rec.data_mode = "source_verified" if has_real else cache.get("dataMode")
+            rec.data_mode = cache.get(
+                "verificationMode", "source_verified" if has_real else cache.get("dataMode")
+            )
             rec.status = "imported" if rec.imported else "blocked"
             rec.blocked_reason = None if rec.imported else spec.blocked_message
             if rec.imported:
-                rec.verified_record_count = rec.record_count if has_real else 0
+                rec.verified_record_count = cache.get(
+                    "verifiedRecordCount", rec.record_count if has_real else 0
+                )
     if not rec.imported and not rec.blocked_reason and not configured:
         rec.status = "blocked"
         rec.blocked_reason = spec.blocked_message
@@ -511,11 +516,14 @@ def import_nasa() -> SourceImportRecord:
         "imported": result.get("imported", False),
         "status": "imported" if result.get("imported") else result.get("status", "sample_fallback"),
         "recordCount": result.get("recordCount", 0),
+        "verifiedRecordCount": result.get("verifiedRecordCount", 0),
         "checksum": result.get("checksum"),
         "sourceVersion": result.get("sourceVersion", "public-api"),
         "citation": "NASA Earthdata / EONET / POWER public APIs",
         "lastImportTime": _now(),
-        "dataMode": "source_verified" if result.get("imported") else result.get("dataMode", "sample_fallback"),
+        "dataMode": result.get("dataMode", "sample_fallback"),
+        "scope": result.get("scope", "metadata_only"),
+        "measurementDataMode": result.get("measurementDataMode", "not_ingested"),
         "layers": result.get("layers", []),
         "blockedReason": None if result.get("imported") else "No real NASA metadata fetched",
     }

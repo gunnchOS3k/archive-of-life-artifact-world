@@ -22,6 +22,7 @@ import {
   type PlayableSpecies,
 } from '@/services/DataCatalogService';
 import { EarthLayerService } from '@/services/EarthLayerService';
+import { TemporalMapService } from '@/services/TemporalMapService';
 import { TimeAtlasService } from '@/time/TimeAtlasService';
 import type { SaveState } from '@/schema';
 
@@ -63,6 +64,7 @@ export class Game {
     catalog: DataCatalogService,
     earthService: EarthLayerService,
     timeService: TimeAtlasService,
+    temporalMapService: TemporalMapService,
     dexService: ArchiveDexService,
     state: SaveState
   ) {
@@ -89,6 +91,7 @@ export class Game {
     this.timeAtlasUI = new TimeAtlasUI(
       document.getElementById('panel-time')!,
       timeService,
+      temporalMapService,
       catalog
     );
     this.coverageDashboardUI = new CoverageDashboardUI(
