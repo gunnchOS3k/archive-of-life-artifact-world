@@ -1,0 +1,12 @@
+{
+  "regionId": "indiana_ancient_swamp",
+  "speciesIds": ["anax_junius", "trilobita_order"],
+  "species": [],
+  "expedition": {
+    "period": "Carboniferous Period",
+    "location": "Indiana — Ancient Swamp Era",
+    "journalObjective": "Observe 3 ancient plant forms",
+    "evidenceNote": "Fossil plant markers are evidence. Dragonfly silhouettes are reconstruction aids.",
+    "reconstructionLayers": ["vegetation", "arthropod_silhouettes"]
+  }
+}

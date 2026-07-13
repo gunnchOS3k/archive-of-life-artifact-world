@@ -79,6 +79,11 @@
         "path": "bundles/region-fossil_site.json",
         "kind": "region_species",
         "recordCount": 3
+      },
+      "indiana_ancient_swamp": {
+        "path": "bundles/region-indiana_ancient_swamp.json",
+        "kind": "region_species",
+        "recordCount": 2
       }
     },
     "timeAtlas": {

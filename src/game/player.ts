@@ -40,18 +40,22 @@ export class Player {
     ctx.save();
     ctx.translate(this.x, this.y);
     ctx.rotate(this.facing);
-    ctx.fillStyle = '#4A7C59';
+    // Explorer scout silhouette (concept-art aligned)
+    ctx.fillStyle = '#C4A574';
+    ctx.fillRect(-9, -6, 18, 14);
+    ctx.fillStyle = '#F2D4A5';
     ctx.beginPath();
-    ctx.arc(0, 0, this.radius, 0, Math.PI * 2);
+    ctx.arc(0, -14, 9, 0, Math.PI * 2);
     ctx.fill();
-    ctx.fillStyle = '#8B6914';
-    ctx.fillRect(-10, -18, 20, 6);
-    ctx.fillRect(-6, -24, 12, 8);
+    ctx.fillStyle = '#4A7C45';
+    ctx.fillRect(-12, -4, 8, 16);
+    ctx.fillRect(4, -4, 6, 14);
     ctx.fillStyle = '#6B4423';
-    ctx.fillRect(-8, -4, 6, 12);
-    ctx.fillStyle = '#E8E4D9';
+    ctx.fillRect(-7, 8, 5, 10);
+    ctx.fillRect(2, 8, 5, 10);
+    ctx.fillStyle = '#3D5A2E';
     ctx.beginPath();
-    ctx.arc(8, 0, 3, 0, Math.PI * 2);
+    ctx.arc(-14, 0, 6, 0, Math.PI * 2);
     ctx.fill();
     ctx.restore();
   }

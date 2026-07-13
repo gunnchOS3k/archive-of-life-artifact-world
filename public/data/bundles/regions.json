@@ -12,7 +12,8 @@
       "forest",
       "wetland",
       "coastal",
-      "fossil_site"
+      "fossil_site",
+      "indiana_ancient_swamp"
     ],
     "bundlePath": "bundles/region-museum.json"
   },
@@ -107,5 +108,21 @@
       "museum"
     ],
     "bundlePath": "bundles/region-fossil_site.json"
+  },
+  {
+    "id": "indiana_ancient_swamp",
+    "name": "Indiana — Ancient Swamp Era",
+    "type": "expedition",
+    "description": "Carboniferous swamp paths with giant ferns, dragonflies, and fossil plant evidence. Reconstruction layers are labeled.",
+    "color": "#3D6B3A",
+    "biome": "ancient_swamp",
+    "speciesIds": [
+      "anax_junius",
+      "trilobita_order"
+    ],
+    "connections": [
+      "museum"
+    ],
+    "bundlePath": "bundles/region-indiana_ancient_swamp.json"
   }
 ]

@@ -50,6 +50,7 @@ export class World {
         { id: 'portal_wetland', label: 'Wetland', target: 'wetland', x: 150, y: 450, color: '#3D6B5E' },
         { id: 'portal_coastal', label: 'Coast', target: 'coastal', x: 650, y: 450, color: '#2B6CB0' },
         { id: 'portal_fossil', label: 'Fossil Site', target: 'fossil_site', x: 400, y: 500, color: '#8B7355' },
+        { id: 'portal_ancient_swamp', label: 'Ancient Swamp', target: 'indiana_ancient_swamp', x: 400, y: 140, color: '#4A7C45' },
       ];
       for (const p of portals) {
         this.interactables.push({ type: 'portal', ...p, radius: 35 });
@@ -89,6 +90,8 @@ export class World {
           radius: 28,
         });
       }
+    } else if (regionId === 'indiana_ancient_swamp') {
+      this._buildAncientSwampExpedition(w, h);
     } else {
       const speciesIds = this.regionData.speciesIds ?? [];
       const positions = this.scatterPositions(speciesIds.length, w, h);
@@ -110,6 +113,67 @@ export class World {
         color: '#4A6741',
       });
     }
+  }
+
+  private _buildAncientSwampExpedition(w: number, h: number) {
+    // Traversable dirt path with swamp water boundaries (concept-art aligned layout)
+    for (let i = 0; i < 18; i++) {
+      const t = i / 17;
+      this.decorations.push({
+        type: 'path',
+        x: 120 + t * (w - 240),
+        y: 320 + Math.sin(t * Math.PI * 2) * 40,
+        size: 28,
+      });
+    }
+    for (let i = 0; i < 10; i++) {
+      this.decorations.push({
+        type: 'water',
+        x: 40 + (i % 5) * 150,
+        y: i < 5 ? 80 + (i % 3) * 30 : h - 90,
+        size: 60 + (i % 3) * 20,
+      });
+    }
+    for (let i = 0; i < 14; i++) {
+      this.decorations.push({
+        type: 'fern',
+        x: 80 + Math.random() * (w - 160),
+        y: 120 + Math.random() * (h - 220),
+        size: 22 + Math.random() * 18,
+      });
+    }
+    for (const pos of [{ x: 280, y: 300 }, { x: 420, y: 340 }, { x: 560, y: 310 }]) {
+      this.decorations.push({ type: 'fossil_plant', ...pos, size: 16, label: 'Ancient plant (evidence)' });
+    }
+    this.decorations.push({ type: 'sign', x: 80, y: 48, label: 'Indiana — Ancient Swamp Era · Carboniferous Period' });
+    const speciesIds = this.regionData?.speciesIds ?? [];
+    const positions = [{ x: 360, y: 250 }, { x: 520, y: 380 }];
+    speciesIds.forEach((speciesId, i) => {
+      const sp = this.speciesById.get(speciesId);
+      if (!sp) return;
+      const pos = positions[i] ?? { x: 300 + i * 80, y: 300 };
+      const isFossil = sp.conservationStatus === 'Extinct';
+      const base = { speciesId, species: sp, x: pos.x, y: pos.y, radius: 28 };
+      this.interactables.push(isFossil ? { type: 'fossil', ...base } : { type: 'species', ...base });
+    });
+    this.interactables.push({
+      type: 'portal',
+      id: 'portal_museum',
+      label: 'Return to Museum',
+      target: 'museum',
+      x: 60,
+      y: 540,
+      radius: 30,
+      color: '#4A6741',
+    });
+    this.interactables.push({
+      type: 'earth_console',
+      id: 'field_journal',
+      label: 'Field Journal: Observe 3 ancient plant forms',
+      x: 700,
+      y: 80,
+      radius: 30,
+    });
   }
 
   private scatterPositions(count: number, w: number, h: number) {
@@ -165,6 +229,7 @@ export class World {
     const colors: Record<string, string> = {
       museum: '#3D4F3D', savanna: '#C4A35A', forest: '#1E3D1E', wetland: '#2A4F45',
       coastal: '#1A3A5C', fossil_bed: '#6B5B45', grassland: '#8BA84A',
+      ancient_swamp: '#2A4A2E',
     };
     return colors[this.regionData?.biome ?? ''] || '#2d4a2d';
   }
@@ -213,6 +278,41 @@ export class World {
       ctx.font = '12px sans-serif';
       ctx.textAlign = 'center';
       ctx.fillText(d.label ?? '', d.x, d.y + 55);
+    } else if (d.type === 'path' && d.size) {
+      ctx.fillStyle = '#8B7355';
+      ctx.beginPath();
+      ctx.ellipse(d.x, d.y, d.size, d.size * 0.45, 0, 0, Math.PI * 2);
+      ctx.fill();
+    } else if (d.type === 'water' && d.size) {
+      ctx.fillStyle = 'rgba(45, 95, 110, 0.55)';
+      ctx.beginPath();
+      ctx.ellipse(d.x, d.y, d.size, d.size * 0.55, 0, 0, Math.PI * 2);
+      ctx.fill();
+    } else if (d.type === 'fern' && d.size) {
+      ctx.strokeStyle = '#2D6B2D';
+      ctx.lineWidth = 2;
+      for (let a = -0.8; a <= 0.8; a += 0.4) {
+        ctx.beginPath();
+        ctx.moveTo(d.x, d.y);
+        ctx.quadraticCurveTo(d.x + Math.sin(a) * d.size, d.y - d.size * 0.8, d.x + Math.sin(a) * d.size * 1.2, d.y - d.size);
+        ctx.stroke();
+      }
+    } else if (d.type === 'fossil_plant' && d.size) {
+      ctx.fillStyle = '#A08060';
+      ctx.beginPath();
+      ctx.ellipse(d.x, d.y, d.size, d.size * 0.5, 0.3, 0, Math.PI * 2);
+      ctx.fill();
+      ctx.fillStyle = '#E8E4D9';
+      ctx.font = '9px sans-serif';
+      ctx.textAlign = 'center';
+      ctx.fillText('?', d.x, d.y + 3);
+    } else if (d.type === 'sign') {
+      ctx.fillStyle = 'rgba(30, 40, 28, 0.85)';
+      ctx.fillRect(d.x, d.y, 340, 28);
+      ctx.fillStyle = '#E8E4D9';
+      ctx.font = '11px sans-serif';
+      ctx.textAlign = 'left';
+      ctx.fillText(d.label ?? '', d.x + 8, d.y + 18);
     }
   }
 
