@@ -169,6 +169,110 @@ export class Game {
     document.getElementById('observe-hold')!.addEventListener('mouseup', () => {
       if (this.activeMinigame instanceof WildlifeObservation) this.activeMinigame.holding = false;
     });
+    document.getElementById('observe-hold')!.addEventListener('touchstart', (e) => {
+      e.preventDefault();
+      if (this.activeMinigame instanceof WildlifeObservation) this.activeMinigame.holding = true;
+    }, { passive: false });
+    document.getElementById('observe-hold')!.addEventListener('touchend', () => {
+      if (this.activeMinigame instanceof WildlifeObservation) this.activeMinigame.holding = false;
+    });
+
+    this.setupMobileTouch();
+  }
+
+  /** Canvas drag stick + tap-to-interact for Pixel / touch devices. */
+  private touchPointerId: number | null = null;
+  private touchOrigin: { x: number; y: number } | null = null;
+  private touchMoved = false;
+
+  private clearTouchKeys() {
+    for (const k of ['w', 'a', 's', 'd', 'ArrowUp', 'ArrowDown', 'ArrowLeft', 'ArrowRight'] as const) {
+      this.keys[k] = false;
+    }
+  }
+
+  private applyTouchVector(dx: number, dy: number) {
+    this.clearTouchKeys();
+    const dead = 12;
+    if (Math.hypot(dx, dy) < dead) return;
+    if (Math.abs(dx) >= Math.abs(dy)) {
+      if (dx < 0) this.keys['a'] = true;
+      else this.keys['d'] = true;
+    } else {
+      if (dy < 0) this.keys['w'] = true;
+      else this.keys['s'] = true;
+    }
+    // diagonal assist
+    if (Math.abs(dx) > dead && Math.abs(dy) > dead) {
+      if (dx < 0) this.keys['a'] = true;
+      else this.keys['d'] = true;
+      if (dy < 0) this.keys['w'] = true;
+      else this.keys['s'] = true;
+    }
+  }
+
+  private canvasToWorld(clientX: number, clientY: number) {
+    const rect = this.canvas.getBoundingClientRect();
+    const sx = this.canvas.width / Math.max(1, rect.width);
+    const sy = this.canvas.height / Math.max(1, rect.height);
+    const screenX = (clientX - rect.left) * sx;
+    const screenY = (clientY - rect.top) * sy;
+    const w = this.canvas.width;
+    const h = this.canvas.height;
+    const maxCamX = Math.max(0, this.bounds.width - w);
+    const maxCamY = Math.max(0, this.bounds.height - h);
+    const camX = Math.min(maxCamX, Math.max(0, this.player.x - w / 2));
+    const camY = Math.min(maxCamY, Math.max(0, this.player.y - h / 2));
+    return { x: screenX + camX, y: screenY + camY };
+  }
+
+  private setupMobileTouch() {
+    const onDown = (e: PointerEvent) => {
+      if (this.paused || this.activeMinigame || this.isPanelOpen()) return;
+      if (e.pointerType === 'mouse' && e.button !== 0) return;
+      this.touchPointerId = e.pointerId;
+      this.touchOrigin = { x: e.clientX, y: e.clientY };
+      this.touchMoved = false;
+      try {
+        this.canvas.setPointerCapture(e.pointerId);
+      } catch {
+        /* ignore */
+      }
+    };
+    const onMove = (e: PointerEvent) => {
+      if (this.touchPointerId !== e.pointerId || !this.touchOrigin) return;
+      const dx = e.clientX - this.touchOrigin.x;
+      const dy = e.clientY - this.touchOrigin.y;
+      if (Math.hypot(dx, dy) > 10) this.touchMoved = true;
+      this.applyTouchVector(dx, dy);
+    };
+    const onUp = (e: PointerEvent) => {
+      if (this.touchPointerId !== e.pointerId) return;
+      const wasTap = !this.touchMoved && this.touchOrigin;
+      this.touchPointerId = null;
+      this.touchOrigin = null;
+      this.clearTouchKeys();
+      if (wasTap && !this.paused && !this.activeMinigame && !this.isPanelOpen()) {
+        const world = this.canvasToWorld(e.clientX, e.clientY);
+        const near = this.world.getNearestInteractable(world.x, world.y);
+        if (near && Math.hypot(near.x - this.player.x, near.y - this.player.y) < 80) {
+          void this.interact();
+        } else if (near && Math.hypot(near.x - world.x, near.y - world.y) < 48) {
+          // Tap portal / target: walk beside then interact next frame.
+          this.player.x = near.x;
+          this.player.y = near.y;
+          this.state.player.x = near.x;
+          this.state.player.y = near.y;
+          this.nearestInteractable = near;
+          void this.interact();
+        }
+      }
+    };
+    this.canvas.style.touchAction = 'none';
+    this.canvas.addEventListener('pointerdown', onDown);
+    this.canvas.addEventListener('pointermove', onMove);
+    this.canvas.addEventListener('pointerup', onUp);
+    this.canvas.addEventListener('pointercancel', onUp);
   }
 
   private isPanelOpen() {
@@ -497,6 +601,11 @@ export class Game {
     this.ctx.fillStyle = 'rgba(255,255,255,0.4)';
     this.ctx.font = '11px sans-serif';
     this.ctx.textAlign = 'left';
-    this.ctx.fillText('WASD/Arrows: Move | E: Interact | 1–7: Menus', 10, h - 10);
+    const coarse = typeof window !== 'undefined' && window.matchMedia?.('(pointer: coarse)').matches;
+    if (!coarse) {
+      this.ctx.fillText('WASD/Arrows: Move | E: Interact | 1–7: Menus', 10, h - 10);
+    } else {
+      this.ctx.fillText('Drag to move · Tap portals & nearby targets to interact', 10, h - 10);
+    }
   }
 }

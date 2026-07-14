@@ -16,6 +16,28 @@ async function init() {
 
   document.getElementById('btn-new-game')!.addEventListener('click', () => void startGame(false));
   document.getElementById('btn-continue')!.addEventListener('click', () => void startGame(true));
+
+  // Internal RC acceptance hook (adb / AcceptNavReceiver).
+  (window as unknown as {
+    __aolStartExpedition?: (continuing?: boolean) => Promise<void>;
+    __aolAccept?: (cmd: string, arg?: string) => Promise<unknown>;
+  }).__aolStartExpedition = (continuing = false) => startGame(!!continuing);
+  (window as unknown as { __aolAccept?: (cmd: string, arg?: string) => Promise<unknown> }).__aolAccept =
+    async (cmd, arg) => {
+      const g = (window as unknown as { __aolGame: Game | null }).__aolGame;
+      if (cmd === 'start') return startGame(arg === 'continue');
+      if (!g) return { ok: false, error: 'no_game' };
+      if (cmd === 'travel' && arg) {
+        await g.acceptTravel(arg);
+        return g.acceptSnapshot();
+      }
+      if (cmd === 'interact') {
+        await g.acceptInteract();
+        return g.acceptSnapshot();
+      }
+      if (cmd === 'snapshot') return g.acceptSnapshot();
+      return { ok: false, error: 'unknown_cmd' };
+    };
 }
 
 async function startGame(continuing: boolean) {
