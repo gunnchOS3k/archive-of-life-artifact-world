@@ -572,11 +572,13 @@ export class Game {
     if (this.nearestInteractable) {
       prompt.classList.remove('hidden');
       const item = this.nearestInteractable;
-      if (item.type === 'portal') promptText.textContent = `Press E — Travel to ${item.label}`;
-      else if (item.type === 'earth_console') promptText.textContent = `Press E — Open ${item.label}`;
-      else if (item.type === 'time_atlas') promptText.textContent = `Press E — Open ${item.label}`;
-      else if (item.type === 'fossil') promptText.textContent = `Press E — Excavate ${item.species.commonName} fossil`;
-      else promptText.textContent = `Press E — Observe ${item.species.commonName}`;
+      const coarse = typeof window !== 'undefined' && window.matchMedia?.('(pointer: coarse)').matches;
+      const act = coarse ? 'Tap' : 'Press E';
+      if (item.type === 'portal') promptText.textContent = `${act} — Travel to ${item.label}`;
+      else if (item.type === 'earth_console') promptText.textContent = `${act} — Open ${item.label}`;
+      else if (item.type === 'time_atlas') promptText.textContent = `${act} — Open ${item.label}`;
+      else if (item.type === 'fossil') promptText.textContent = `${act} — Excavate ${item.species.commonName} fossil`;
+      else promptText.textContent = `${act} — Observe ${item.species.commonName}`;
     } else {
       prompt.classList.add('hidden');
     }

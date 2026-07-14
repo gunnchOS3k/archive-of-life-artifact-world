@@ -27,3 +27,14 @@
 
 - NOAA / USGS / Smithsonian / IUCN: fixture or blocked — do not count as live.
 - Circular museum portals remain destination selectors; regions include walkable exploration.
+
+
+## Verifier follow-up (2026-07-14)
+
+| Gate | Status | Notes |
+|------|--------|-------|
+| Signed RC `com.gunnchos.archiveoflife` 1.1.0 | PASS | SHA-256 `0eddea0687fdb68343a065c3e54f2f44de0977e9df66537d4ff8e764e20df55f` |
+| Pixel cold launch + AcceptNav hub/Savanna/Swamp | PARTIAL | AcceptNav required; coordinate taps on title unreliable |
+| Notebook / Lifeling / Sources on Pixel | FAIL / mislabeled | Frames 54–61 are observation modal — need clean recapture |
+| Touch-first copy (no WASD/Space/E) | OPEN | Still present on some Pixel frames |
+| Live adb re-verify | NOT TESTED | USB absent |

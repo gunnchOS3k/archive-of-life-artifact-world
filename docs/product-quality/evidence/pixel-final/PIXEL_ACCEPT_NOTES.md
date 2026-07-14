@@ -5,3 +5,7 @@
 - Expedition start / region travel driven via internal RC `AcceptNavReceiver` → `window.__aolAccept` (same `startGame` / `acceptTravel` / `acceptInteract` paths as UI).
 - Evidence: `50-after-accept-start.png` Museum hub; `51-savanna.png` African Savanna with Observe prompt; `53`/`58` Ancient Swamp; notebook/lifeling/resume captures `59`–`61`.
 - Mobile HUD hint shows drag/tap (not WASD-only).
+
+
+## Verifier correction
+Frames previously labeled notebook/lifeling/resume (`54–61`) primarily show the Wildlife Observation modal. Treat those as observation evidence only until recaptured.
