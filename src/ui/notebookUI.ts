@@ -1,14 +1,21 @@
 import type { SaveState } from '@/schema';
-import { renderSourcesEvidencePanel } from '@/ui/evidence/SourcesEvidencePanel';
+import {
+  renderSourcesEvidencePanel,
+  type SourcesEvidencePanelHandle,
+} from '@/ui/evidence/SourcesEvidencePanel';
 
 export class NotebookUI {
   private entries: HTMLElement;
+  private openHandle: SourcesEvidencePanelHandle | null = null;
 
   constructor(container: HTMLElement) {
     this.entries = container.querySelector('#notebook-entries')!;
   }
 
   setData(state: SaveState) {
+    this.openHandle?.abort();
+    this.openHandle = null;
+
     if (state.notebook.length === 0) {
       this.entries.innerHTML =
         '<p style="color:var(--text-secondary)">Your field notebook is empty. Explore regions and collect artifacts to fill it.</p>';
@@ -36,11 +43,13 @@ export class NotebookUI {
         if (!mount) return;
         const opening = mount.classList.contains('hidden');
         this.entries.querySelectorAll('.notebook-evidence-mount').forEach((m) => m.classList.add('hidden'));
+        this.openHandle?.abort();
+        this.openHandle = null;
         if (!opening) return;
         mount.classList.remove('hidden');
         const entry = state.notebook[Number(idx)];
         const sciMatch = entry?.text.match(/\(([^)]+)\)/);
-        void renderSourcesEvidencePanel(mount, speciesId, sciMatch?.[1]);
+        this.openHandle = renderSourcesEvidencePanel(mount, speciesId, sciMatch?.[1]);
       });
     });
   }

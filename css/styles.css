@@ -1002,9 +1002,37 @@ body {
   text-align: left;
   font-size: 0.85rem;
 }
+.evidence-status {
+  border-radius: 8px;
+  padding: 0.55rem 0.7rem;
+  margin-bottom: 0.55rem;
+  text-align: left;
+  font-size: 0.82rem;
+  line-height: 1.35;
+  word-break: break-word;
+}
+.evidence-status-ok { background: rgba(72, 140, 90, 0.18); border: 1px solid #4a8c5a; }
+.evidence-status-warn { background: rgba(180, 120, 40, 0.15); border: 1px solid #b87828; }
+.evidence-status-error { background: rgba(180, 80, 60, 0.18); border: 1px solid #b4503c; }
+.evidence-failures {
+  background: rgba(180, 80, 60, 0.12);
+  border: 1px solid #b4503c;
+  border-radius: 8px;
+  padding: 0.55rem 0.7rem;
+  margin-bottom: 0.55rem;
+  text-align: left;
+  font-size: 0.8rem;
+  word-break: break-word;
+}
+.evidence-failures ul { margin: 0.35rem 0 0.5rem; padding-left: 1.1rem; }
+.evidence-retry-btn { margin-top: 0.35rem; width: 100%; max-width: 100%; }
+.evidence-card dl {
+  grid-template-columns: minmax(5.5rem, 38%) 1fr;
+  overflow-wrap: anywhere;
+}
 .evidence-learner-note { font-size: 0.8rem; color: var(--text-secondary); margin-top: 0.75rem; }
 .notebook-evidence-btn { margin-top: 0.4rem; font-size: 0.8rem; }
-.notebook-evidence-mount { margin-top: 0.5rem; }
+.notebook-evidence-mount { margin-top: 0.5rem; max-width: 100%; overflow-x: hidden; }
 .notebook-evidence-mount.hidden { display: none; }
 
 

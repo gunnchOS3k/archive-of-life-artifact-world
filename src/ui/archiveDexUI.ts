@@ -149,7 +149,7 @@ export class ArchiveDexUI {
     this.unlockModal.classList.remove('hidden');
     const mount = body.querySelector('#unlock-evidence-mount') as HTMLElement | null;
     if (mount) {
-      await renderSourcesEvidencePanel(mount, entry.id, entry.scientificName);
+      await renderSourcesEvidencePanel(mount, entry.id, entry.scientificName).done;
     }
   }
 
@@ -217,7 +217,7 @@ export class ArchiveDexUI {
     if (this.activeTab === 'sources') {
       const mount = this.entryContent.querySelector('#federated-evidence-mount') as HTMLElement | null;
       if (mount) {
-        await renderSourcesEvidencePanel(mount, entry.id, entry.scientificName);
+        await renderSourcesEvidencePanel(mount, entry.id, entry.scientificName).done;
       }
     }
   }

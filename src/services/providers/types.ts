@@ -81,3 +81,22 @@ export interface ProviderConflict<T = unknown> {
   selectedProviderId?: string;
   selectionReason?: string;
 }
+
+/** Aggregated Sources & Evidence lookup outcome (never hangs indefinitely). */
+export type EvidencePanelStatus =
+  | 'live'
+  | 'partial'
+  | 'cached'
+  | 'fixture'
+  | 'empty'
+  | 'offline'
+  | 'timed_out'
+  | 'error';
+
+export interface SpeciesEvidenceResult {
+  records: FederatedRecord[];
+  failures: Array<{ providerId: string; reason: string; timedOut: boolean }>;
+  offline: boolean;
+  status: EvidencePanelStatus;
+  conflicts: ProviderConflict[];
+}

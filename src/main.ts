@@ -53,6 +53,15 @@ async function init() {
         }
         return { ok: false, error: 'no_panel_btn' };
       }
+      if (cmd === 'evidence') {
+        const idx = arg && /^\d+$/.test(arg) ? Number(arg) : 0;
+        const btn = document.querySelectorAll(
+          '.notebook-evidence-btn',
+        )[idx] as HTMLButtonElement | undefined;
+        if (!btn) return { ok: false, error: 'no_evidence_btn' };
+        btn.click();
+        return g.acceptSnapshot();
+      }
       if (cmd === 'equip' && arg) {
         return g.acceptEquipTrait(arg);
       }

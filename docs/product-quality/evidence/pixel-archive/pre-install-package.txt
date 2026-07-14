@@ -1,0 +1,5 @@
+    versionCode=2 minSdk=22 targetSdk=34
+    versionName=1.1.0
+    lastUpdateTime=2026-07-13 23:09:35
+    signatures=PackageSignatures{80ef662 version:2, signatures:[cf8b1f85], past signatures:[]}
+      firstInstallTime=2026-07-13 22:07:22

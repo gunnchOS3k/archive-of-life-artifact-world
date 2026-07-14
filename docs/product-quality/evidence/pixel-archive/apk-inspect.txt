@@ -1,0 +1,182 @@
+path=/Users/gunnchos/Documents/Codex/2026-07-09/github-plugin-github-openai-curated-remote/work/repos/archive-of-life-artifact-world/build/android/archive-of-life-release.apk
+mtime=2026-07-14T00:22:41-0500
+size=14445538
+e817090669f17779cbe3d0868fe92818ffcb9729c551f6fb69ab0977a3aa64aa  /Users/gunnchos/Documents/Codex/2026-07-09/github-plugin-github-openai-curated-remote/work/repos/archive-of-life-artifact-world/build/android/archive-of-life-release.apk
+package: name='com.gunnchos.archiveoflife' versionCode='2' versionName='1.1.0' platformBuildVersionName='14' platformBuildVersionCode='34' compileSdkVersion='34' compileSdkVersionCodename='14'
+sdkVersion:'22'
+targetSdkVersion:'34'
+uses-permission: name='android.permission.INTERNET'
+uses-permission: name='com.gunnchos.archiveoflife.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION'
+Verifies
+Number of signers: 1
+Signer #1 certificate DN: CN=Archive Internal RC, OU=GunnchOS, O=GunnchOS, L=Local, ST=NA, C=US
+Signer #1 certificate SHA-256 digest: d5bf4573218a8f0aba0690429776e290c608fa02563a838eb4530971f4ca9790
+Signer #1 public key SHA-256 digest: 404c833b0680cf33aa8a7322b5a68f083077237a68fdbc5e65a4839f6203a26b
+--- debuggable ---
+(no debuggable attr → default false)
+--- icons ---
+--- config 2 ---
+no config 2.xml
+--- no godot ---
+--- private urls ---
+--- icons ---
+     1326  01-01-1981 01:01   assets/public/data/fixtures/blocked-providers.json
+      281  01-01-1981 01:01   res/-B.png
+      536  01-01-1981 01:01   res/-F.xml
+      318  01-01-1981 01:01   res/-N.png
+   638215  01-01-1981 01:01   res/-j.png
+   264995  01-01-1981 01:01   res/-u.png
+      448  01-01-1981 01:01   res/0K.xml
+     1064  01-01-1981 01:01   res/0M.xml
+     1171  01-01-1981 01:01   res/0Z.png
+      267  01-01-1981 01:01   res/0c.9.png
+     5696  01-01-1981 01:01   res/0w.xml
+      209  01-01-1981 01:01   res/0x.9.png
+     2305  01-01-1981 01:01   res/1I.9.png
+     1731  01-01-1981 01:01   res/1J.9.png
+      171  01-01-1981 01:01   res/1e.9.png
+      336  01-01-1981 01:01   res/27.xml
+      225  01-01-1981 01:01   res/2K.9.png
+      262  01-01-1981 01:01   res/2P.png
+      145  01-01-1981 01:01   res/2d.png
+     1916  01-01-1981 01:01   res/2f.xml
+     2072  01-01-1981 01:01   res/2j.xml
+      541  01-01-1981 01:01   res/33.9.png
+     1056  01-01-1981 01:01   res/3A.xml
+      258  01-01-1981 01:01   res/3u.9.png
+      214  01-01-1981 01:01   res/42.9.png
+      780  01-01-1981 01:01   res/46.xml
+      595  01-01-1981 01:01   res/49.png
+      452  01-01-1981 01:01   res/4B.xml
+      692  01-01-1981 01:01   res/4_.xml
+      201  01-01-1981 01:01   res/4k.png
+      756  01-01-1981 01:01   res/4u.xml
+      876  01-01-1981 01:01   res/4z.xml
+      272  01-01-1981 01:01   res/5D.9.png
+      628  01-01-1981 01:01   res/5P.png
+      852  01-01-1981 01:01   res/5T.xml
+      396  01-01-1981 01:01   res/5U.png
+      138  01-01-1981 01:01   res/5c.png
+      201  01-01-1981 01:01   res/5v.png
+     1128  01-01-1981 01:01   res/5z.xml
+      210  01-01-1981 01:01   res/62.9.png
+--- native libs / godot ---
+so_count=0
+--- application-label / icon ---
+application-label:'Archive of Life'
+application-label-af:'Archive of Life'
+application-label-am:'Archive of Life'
+application-label-ar:'Archive of Life'
+application-label-as:'Archive of Life'
+application-label-az:'Archive of Life'
+application-label-be:'Archive of Life'
+application-label-bg:'Archive of Life'
+application-label-bn:'Archive of Life'
+application-label-bs:'Archive of Life'
+application-label-ca:'Archive of Life'
+application-label-cs:'Archive of Life'
+application-label-da:'Archive of Life'
+application-label-de:'Archive of Life'
+application-label-el:'Archive of Life'
+application-label-en-AU:'Archive of Life'
+application-label-en-CA:'Archive of Life'
+application-label-en-GB:'Archive of Life'
+application-label-en-IN:'Archive of Life'
+application-label-en-XC:'Archive of Life'
+application-label-es:'Archive of Life'
+application-label-es-US:'Archive of Life'
+application-label-et:'Archive of Life'
+application-label-eu:'Archive of Life'
+application-label-fa:'Archive of Life'
+application-label-fi:'Archive of Life'
+application-label-fr:'Archive of Life'
+application-label-fr-CA:'Archive of Life'
+application-label-gl:'Archive of Life'
+application-label-gu:'Archive of Life'
+application-label-hi:'Archive of Life'
+application-label-hr:'Archive of Life'
+application-label-hu:'Archive of Life'
+application-label-hy:'Archive of Life'
+application-label-in:'Archive of Life'
+application-label-is:'Archive of Life'
+application-label-it:'Archive of Life'
+application-label-iw:'Archive of Life'
+application-label-ja:'Archive of Life'
+application-label-ka:'Archive of Life'
+application-label-kk:'Archive of Life'
+application-label-km:'Archive of Life'
+application-label-kn:'Archive of Life'
+application-label-ko:'Archive of Life'
+application-label-ky:'Archive of Life'
+application-label-lo:'Archive of Life'
+application-label-lt:'Archive of Life'
+application-label-lv:'Archive of Life'
+application-label-mk:'Archive of Life'
+application-label-ml:'Archive of Life'
+application-label-mn:'Archive of Life'
+application-label-mr:'Archive of Life'
+application-label-ms:'Archive of Life'
+application-label-my:'Archive of Life'
+application-label-nb:'Archive of Life'
+application-label-ne:'Archive of Life'
+application-label-nl:'Archive of Life'
+application-label-or:'Archive of Life'
+application-label-pa:'Archive of Life'
+application-label-pl:'Archive of Life'
+application-label-pt:'Archive of Life'
+application-label-pt-BR:'Archive of Life'
+application-label-pt-PT:'Archive of Life'
+application-label-ro:'Archive of Life'
+application-label-ru:'Archive of Life'
+application-label-si:'Archive of Life'
+application-label-sk:'Archive of Life'
+application-label-sl:'Archive of Life'
+application-label-sq:'Archive of Life'
+application-label-sr:'Archive of Life'
+application-label-sr-Latn:'Archive of Life'
+application-label-sv:'Archive of Life'
+application-label-sw:'Archive of Life'
+application-label-ta:'Archive of Life'
+application-label-te:'Archive of Life'
+application-label-th:'Archive of Life'
+application-label-tl:'Archive of Life'
+application-label-tr:'Archive of Life'
+application-label-uk:'Archive of Life'
+application-label-ur:'Archive of Life'
+application-label-uz:'Archive of Life'
+application-label-vi:'Archive of Life'
+application-label-zh-CN:'Archive of Life'
+application-label-zh-HK:'Archive of Life'
+application-label-zh-TW:'Archive of Life'
+application-label-zu:'Archive of Life'
+application-icon-120:'res/BW.xml'
+application-icon-160:'res/BW.xml'
+application-icon-240:'res/BW.xml'
+application-icon-320:'res/BW.xml'
+application-icon-480:'res/BW.xml'
+application-icon-640:'res/BW.xml'
+application-icon-65534:'res/BW.xml'
+launchable-activity: name='com.gunnchos.archiveoflife.MainActivity'  label='Archive of Life' icon=''
+--- private URLs (assets) ---
+/var/folders/dp/z5frf3m511jcdpdf8v878v8h0000gn/T/tmp.sUktWC4MXr/assets/public/index.html
+/var/folders/dp/z5frf3m511jcdpdf8v878v8h0000gn/T/tmp.sUktWC4MXr/assets/public/cordova.js
+/var/folders/dp/z5frf3m511jcdpdf8v878v8h0000gn/T/tmp.sUktWC4MXr/assets/public/cordova_plugins.js
+/var/folders/dp/z5frf3m511jcdpdf8v878v8h0000gn/T/tmp.sUktWC4MXr/assets/public/data/maps/temporal_map_catalog.json
+/var/folders/dp/z5frf3m511jcdpdf8v878v8h0000gn/T/tmp.sUktWC4MXr/assets/public/data/status/real_data_completion_plan.json
+/var/folders/dp/z5frf3m511jcdpdf8v878v8h0000gn/T/tmp.sUktWC4MXr/assets/public/data/status/release_readiness_report.json
+/var/folders/dp/z5frf3m511jcdpdf8v878v8h0000gn/T/tmp.sUktWC4MXr/assets/public/data/status/source_readiness_report.json
+/var/folders/dp/z5frf3m511jcdpdf8v878v8h0000gn/T/tmp.sUktWC4MXr/assets/public/data/status/source_import_status.json
+/var/folders/dp/z5frf3m511jcdpdf8v878v8h0000gn/T/tmp.sUktWC4MXr/assets/public/data/status/production_readiness_report.json
+/var/folders/dp/z5frf3m511jcdpdf8v878v8h0000gn/T/tmp.sUktWC4MXr/assets/public/data/status/temporal_map_readiness_report.json
+/var/folders/dp/z5frf3m511jcdpdf8v878v8h0000gn/T/tmp.sUktWC4MXr/assets/public/data/status/implementation_status.json
+/var/folders/dp/z5frf3m511jcdpdf8v878v8h0000gn/T/tmp.sUktWC4MXr/assets/public/data/status/incomplete_inventory.json
+/var/folders/dp/z5frf3m511jcdpdf8v878v8h0000gn/T/tmp.sUktWC4MXr/assets/public/data/status/real_data_completion_report.json
+/var/folders/dp/z5frf3m511jcdpdf8v878v8h0000gn/T/tmp.sUktWC4MXr/assets/public/data/time/time_manifest.json
+/var/folders/dp/z5frf3m511jcdpdf8v878v8h0000gn/T/tmp.sUktWC4MXr/assets/public/data/time/playable_time_gates.json
+/var/folders/dp/z5frf3m511jcdpdf8v878v8h0000gn/T/tmp.sUktWC4MXr/assets/public/data/time/taxon_time_ranges.json
+/var/folders/dp/z5frf3m511jcdpdf8v878v8h0000gn/T/tmp.sUktWC4MXr/assets/public/data/time/geologic_time_units.json
+/var/folders/dp/z5frf3m511jcdpdf8v878v8h0000gn/T/tmp.sUktWC4MXr/assets/public/data/earth/nasa_metadata_cache.json
+/var/folders/dp/z5frf3m511jcdpdf8v878v8h0000gn/T/tmp.sUktWC4MXr/assets/public/data/earth/nasa_manifest.json
+/var/folders/dp/z5frf3m511jcdpdf8v878v8h0000gn/T/tmp.sUktWC4MXr/assets/public/data/earth/sample_region_layers.json
+(end private URL scan)
+SHA_PREFIX_OK

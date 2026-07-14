@@ -1,9 +1,45 @@
-import type { FederatedRecord, ProviderConflict } from './types';
+import type { FederatedRecord, ProviderConflict, SpeciesEvidenceResult } from './types';
 import { federationHealthSummary, getProvider, PROVIDER_REGISTRY } from './registry';
+import {
+  PROVIDER_TIMEOUT_MS,
+  isTimeoutError,
+  withBoundedTimeout,
+} from './boundedPromise';
+
+export type ProviderTaskFailure = {
+  providerId: string;
+  reason: string;
+  timedOut: boolean;
+};
+
+function classifyEvidenceStatus(result: {
+  records: FederatedRecord[];
+  failures: ProviderTaskFailure[];
+  offline: boolean;
+}): SpeciesEvidenceResult['status'] {
+  const { records, failures, offline } = result;
+  if (offline && records.length === 0) return 'offline';
+  if (records.length === 0) {
+    if (failures.length && failures.every((f) => f.timedOut)) return 'timed_out';
+    if (failures.length) return 'error';
+    return 'empty';
+  }
+  const statuses = new Set(records.map((r) => r.cacheStatus));
+  const hasLive = statuses.has('live');
+  const hasCached = statuses.has('cached');
+  const hasFixture = statuses.has('fixture');
+  if (failures.length) return 'partial';
+  if (hasLive) return 'live';
+  if (hasCached && !hasFixture) return 'cached';
+  if (hasFixture) return 'fixture';
+  return 'live';
+}
 
 export class FederationService {
   /** Last name conflicts detected during getSpeciesEvidence (both values retained). */
   lastNameConflicts: ProviderConflict[] = [];
+  /** Last provider failures from the most recent evidence lookup. */
+  lastProviderFailures: ProviderTaskFailure[] = [];
 
   async healthCheckAll() {
     return federationHealthSummary();
@@ -98,7 +134,8 @@ export class FederationService {
               };
             }),
           ],
-          selectionReason: 'Unresolved — scientificName and acceptedName disagree across providers; both kept',
+          selectionReason:
+            'Unresolved — scientificName and acceptedName disagree across providers; both kept',
         });
       }
     }
@@ -106,63 +143,134 @@ export class FederationService {
     return conflicts;
   }
 
-  async getSpeciesEvidence(speciesId: string, scientificName?: string) {
+  /**
+   * Gather federated evidence with hard per-provider bounds.
+   * One hanging or failing provider must not block others or leave the UI loading forever.
+   */
+  async getSpeciesEvidenceResult(
+    speciesId: string,
+    scientificName?: string,
+    options: { timeoutMs?: number; signal?: AbortSignal } = {},
+  ): Promise<SpeciesEvidenceResult> {
+    const timeoutMs = options.timeoutMs ?? PROVIDER_TIMEOUT_MS;
     const name = scientificName ?? speciesId.replace(/_/g, ' ');
-    const tasks: Array<Promise<FederatedRecord[]>> = [];
+    const offline = typeof navigator !== 'undefined' && navigator.onLine === false;
+
+    type Task = { providerId: string; run: () => Promise<FederatedRecord[]> };
+    const tasks: Task[] = [];
 
     const col = getProvider('col');
     if (col?.searchTaxa) {
-      tasks.push(col.searchTaxa({ scientificName: name }).then((r) => r.slice(0, 2)));
+      tasks.push({
+        providerId: 'col',
+        run: () => col.searchTaxa!({ scientificName: name }).then((r) => r.slice(0, 2)),
+      });
     }
     const gbif = getProvider('gbif');
     if (gbif?.getOccurrences) {
-      tasks.push(
-        gbif.getOccurrences({ taxonId: speciesId, scientificName: name, limit: 3 }),
-      );
+      tasks.push({
+        providerId: 'gbif',
+        run: () =>
+          gbif.getOccurrences!({ taxonId: speciesId, scientificName: name, limit: 3 }),
+      });
     }
     const pbdb = getProvider('pbdb');
     if (pbdb?.getFossilOccurrences) {
-      tasks.push(
-        pbdb.getFossilOccurrences({ taxonId: speciesId, scientificName: name, limit: 3 }),
-      );
+      tasks.push({
+        providerId: 'pbdb',
+        run: () =>
+          pbdb.getFossilOccurrences!({ taxonId: speciesId, scientificName: name, limit: 3 }),
+      });
     }
     const worms = getProvider('worms');
     if (worms?.searchTaxa) {
-      tasks.push(worms.searchTaxa({ scientificName: name }).then((r) => r.slice(0, 2)));
+      tasks.push({
+        providerId: 'worms',
+        run: () => worms.searchTaxa!({ scientificName: name }).then((r) => r.slice(0, 2)),
+      });
     }
     const inat = getProvider('inaturalist');
     if (inat?.getOccurrences) {
-      tasks.push(
-        inat.getOccurrences({ taxonId: speciesId, scientificName: name, limit: 2 }),
-      );
+      tasks.push({
+        providerId: 'inaturalist',
+        run: () =>
+          inat.getOccurrences!({ taxonId: speciesId, scientificName: name, limit: 2 }),
+      });
     }
     const obis = getProvider('obis');
     if (obis?.getMarineOccurrences) {
-      tasks.push(
-        obis.getMarineOccurrences({ taxonId: speciesId, scientificName: name, limit: 2 }),
-      );
+      tasks.push({
+        providerId: 'obis',
+        run: () =>
+          obis.getMarineOccurrences!({ taxonId: speciesId, scientificName: name, limit: 2 }),
+      });
     }
     const neotoma = getProvider('neotoma');
     if (neotoma?.getFossilOccurrences) {
-      tasks.push(
-        neotoma.getFossilOccurrences({ taxonId: speciesId, scientificName: name, limit: 1 }),
-      );
+      tasks.push({
+        providerId: 'neotoma',
+        run: () =>
+          neotoma.getFossilOccurrences!({ taxonId: speciesId, scientificName: name, limit: 1 }),
+      });
     }
     const nasa = getProvider('nasa');
     if (nasa?.getEnvironmentalLayer) {
-      tasks.push(
-        nasa
-          .getEnvironmentalLayer({ regionId: 'global', layerId: 'vegetation' })
-          .then((layer) => (layer ? [layer] : [])),
-      );
+      tasks.push({
+        providerId: 'nasa',
+        run: () =>
+          nasa
+            .getEnvironmentalLayer!({ regionId: 'global', layerId: 'vegetation' })
+            .then((layer) => (layer ? [layer] : [])),
+      });
     }
 
-    const settled = await Promise.allSettled(tasks);
+    if (options.signal?.aborted) {
+      return {
+        records: [],
+        failures: [{ providerId: '*', reason: 'aborted', timedOut: false }],
+        offline,
+        status: 'empty',
+        conflicts: [],
+      };
+    }
+
+    const settled = await Promise.allSettled(
+      tasks.map((task) =>
+        withBoundedTimeout(task.run(), timeoutMs, `provider ${task.providerId}`).then(
+          (records) => ({ providerId: task.providerId, records }),
+        ),
+      ),
+    );
+
+    if (options.signal?.aborted) {
+      return {
+        records: [],
+        failures: [{ providerId: '*', reason: 'aborted', timedOut: false }],
+        offline,
+        status: 'empty',
+        conflicts: [],
+      };
+    }
+
     const records: FederatedRecord[] = [];
-    for (const result of settled) {
-      if (result.status === 'fulfilled') records.push(...result.value);
-    }
+    const failures: ProviderTaskFailure[] = [];
 
+    settled.forEach((result, index) => {
+      const providerId = tasks[index]?.providerId ?? `provider_${index}`;
+      if (result.status === 'fulfilled') {
+        records.push(...result.value.records);
+        return;
+      }
+      const reason =
+        result.reason instanceof Error ? result.reason.message : String(result.reason);
+      failures.push({
+        providerId,
+        reason,
+        timedOut: isTimeoutError(result.reason),
+      });
+    });
+
+    this.lastProviderFailures = failures;
     this.lastNameConflicts = this.detectNameConflicts(records);
     if (this.lastNameConflicts.length) {
       console.info(
@@ -170,8 +278,24 @@ export class FederationService {
         this.lastNameConflicts,
       );
     }
+    if (failures.length) {
+      console.info('[federation] provider failures (partial results retained)', failures);
+    }
 
-    return records;
+    const status = classifyEvidenceStatus({ records, failures, offline });
+    return {
+      records,
+      failures,
+      offline,
+      status,
+      conflicts: this.lastNameConflicts,
+    };
+  }
+
+  /** Convenience: records only (legacy callers). Always settles when providers are bounded. */
+  async getSpeciesEvidence(speciesId: string, scientificName?: string) {
+    const result = await this.getSpeciesEvidenceResult(speciesId, scientificName);
+    return result.records;
   }
 
   buildConflictNotice(conflicts: ProviderConflict[]): string | null {

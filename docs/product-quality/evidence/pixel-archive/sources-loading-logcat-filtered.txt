@@ -1,0 +1,10 @@
+--------- beginning of main
+07-14 16:04:10.855 I/chromium( 5345): [0714/160410.855539:INFO:android_webview/browser/variations/variations_seed_loader.cc:67] Failed to open file for reading.: No such file or directory (2)
+07-14 16:04:10.886 W/chromium( 5345): [WARNING:net/dns/dns_config_service_android.cc:69] Failed to read DnsConfig.
+07-14 16:04:10.887 W/chromium( 5345): [WARNING:android_webview/browser/network_service/net_helpers.cc:137] HTTP Cache size is: 40451341
+07-14 16:04:10.926 D/Capacitor( 5345): Starting BridgeActivity
+07-14 16:04:10.946 W/chromium( 5443): [WARNING:content/app/android/content_main_android.cc:82] android_setCpu already initialized
+07-14 16:04:10.962 W/chromium( 5443): [WARNING:content/child/runtime_features.cc:546] Fenced frames cannot be enabled in this configuration. Use --enable-features=FencedFrames instead.
+07-14 16:04:10.962 W/chromium( 5443): [WARNING:content/child/runtime_features.cc:571] Topics cannot be enabled in this configuration. Use --enable-features=BrowsingTopics in addition.
+07-14 16:04:10.962 W/chromium( 5443): [WARNING:content/child/runtime_features.cc:592] SharedStorage cannot be enabled in this configuration. Use --enable-features=SharedStorageAPI in addition.
+07-14 16:04:10.982 W/chromium( 5345): [WARNING:android_webview/browser/gfx/display_webview.cc:33] WebView overlays are enabled!

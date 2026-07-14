@@ -5,6 +5,7 @@ import type {
   OccurrenceQuery,
   TaxonQuery,
 } from './types';
+import { PROVIDER_TIMEOUT_MS, withBoundedTimeout } from './boundedPromise';
 
 const NASA_METADATA = '/data/earth/nasa_metadata_cache.json';
 const GBIF_FIXTURE = '/data/bundles/gbif-occurrences.json';
@@ -35,24 +36,37 @@ function strOrUndefined(v: unknown): string | undefined {
   return s || undefined;
 }
 
-async function fetchJson<T>(path: string): Promise<T> {
-  const res = await fetch(path);
-  if (!res.ok) throw new Error(`Failed to load ${path}`);
-  return res.json() as Promise<T>;
+async function fetchJson<T>(path: string, timeoutMs = PROVIDER_TIMEOUT_MS): Promise<T> {
+  return withBoundedTimeout(
+    (async () => {
+      const res = await fetch(path);
+      if (!res.ok) throw new Error(`Failed to load ${path}`);
+      return res.json() as Promise<T>;
+    })(),
+    timeoutMs,
+    `asset fetch ${path}`,
+  );
 }
 
-async function fetchLiveJson<T>(url: string, timeoutMs = 8000): Promise<T> {
+async function fetchLiveJson<T>(url: string, timeoutMs = PROVIDER_TIMEOUT_MS): Promise<T> {
   const controller = new AbortController();
-  const timer = setTimeout(() => controller.abort(), timeoutMs);
-  try {
+  const fetchPromise = (async () => {
     const res = await fetch(url, {
       signal: controller.signal,
       headers: { Accept: 'application/json' },
     });
     if (!res.ok) throw new Error(`Live fetch failed ${res.status} for ${url}`);
     return (await res.json()) as T;
-  } finally {
-    clearTimeout(timer);
+  })();
+  try {
+    return await withBoundedTimeout(fetchPromise, timeoutMs, `live fetch ${url}`);
+  } catch (err) {
+    try {
+      controller.abort();
+    } catch {
+      /* ignore double-abort */
+    }
+    throw err;
   }
 }
 
