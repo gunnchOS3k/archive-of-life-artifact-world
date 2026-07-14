@@ -20,8 +20,15 @@ export interface FederatedRecord<T = unknown> {
   retrievedAt: string;
   license: string;
   attribution: string;
+  scientificName?: string;
+  acceptedName?: string;
+  taxonomicRank?: string;
+  eventDate?: string;
+  latitude?: number;
+  longitude?: number;
   geographicPrecision?: string;
   temporalPrecision?: string;
+  qualityFlag?: string;
   confidence: DataConfidence;
   interpretation: DataConfidence;
   cacheStatus: CacheStatus;
@@ -36,6 +43,7 @@ export interface TaxonQuery {
 
 export interface OccurrenceQuery {
   taxonId?: string;
+  scientificName?: string;
   regionId?: string;
   bbox?: [number, number, number, number];
   limit?: number;

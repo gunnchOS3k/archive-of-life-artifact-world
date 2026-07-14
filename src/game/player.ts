@@ -15,7 +15,12 @@ export class Player {
     this.y = y;
   }
 
-  update(dt: number, keys: Record<string, boolean>, bounds: Bounds) {
+  update(
+    dt: number,
+    keys: Record<string, boolean>,
+    bounds: Bounds,
+    solids: Array<{ x: number; y: number; radius: number }> = [],
+  ) {
     let dx = 0;
     let dy = 0;
     if (keys['ArrowUp'] || keys['w'] || keys['W']) dy -= 1;
@@ -30,8 +35,13 @@ export class Player {
       this.facing = Math.atan2(dy, dx);
     }
 
-    this.x += dx * this.speed * dt;
-    this.y += dy * this.speed * dt;
+    const blocked = (nx: number, ny: number) =>
+      solids.some((s) => Math.hypot(nx - s.x, ny - s.y) < s.radius + this.radius);
+
+    const nextX = this.x + dx * this.speed * dt;
+    const nextY = this.y + dy * this.speed * dt;
+    if (!blocked(nextX, this.y)) this.x = nextX;
+    if (!blocked(this.x, nextY)) this.y = nextY;
     this.x = Math.max(this.radius, Math.min(bounds.width - this.radius, this.x));
     this.y = Math.max(this.radius, Math.min(bounds.height - this.radius, this.y));
   }
@@ -40,7 +50,6 @@ export class Player {
     ctx.save();
     ctx.translate(this.x, this.y);
     ctx.rotate(this.facing);
-    // Explorer scout silhouette (concept-art aligned)
     ctx.fillStyle = '#C4A574';
     ctx.fillRect(-9, -6, 18, 14);
     ctx.fillStyle = '#F2D4A5';

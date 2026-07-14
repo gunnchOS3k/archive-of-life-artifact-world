@@ -7,6 +7,7 @@ import { getCollectedIds } from '@/systems/artifactSystem';
 import { getEntryRevealLevel, getVisibleTabs } from '@/services/archivedexMapper';
 import { renderArchiveDexTab } from '@/ui/archiveDexTabs';
 import { formatArtifactType } from '@/systems/artifactSystem';
+import { renderSourcesEvidencePanel } from '@/ui/evidence/SourcesEvidencePanel';
 
 export class ArchiveDexUI {
   private container: HTMLElement;
@@ -140,8 +141,16 @@ export class ArchiveDexUI {
       <p><strong>Status:</strong> ${entry.conservation?.iucnCategory ?? entry.lifeStatus}</p>
       <p class="dex-description">${entry.overview?.shortDescription ?? ''}</p>
       ${entry.lifeling?.unlocks?.length ? `<p><strong>Your Lifeling learned:</strong> ${entry.lifeling.unlocks.map((u) => u.traitName).join(', ')}</p>` : ''}
+      <section class="unlock-evidence">
+        <h4>Sources and Evidence</h4>
+        <div id="unlock-evidence-mount" class="evidence-panel"></div>
+      </section>
     `;
     this.unlockModal.classList.remove('hidden');
+    const mount = body.querySelector('#unlock-evidence-mount') as HTMLElement | null;
+    if (mount) {
+      await renderSourcesEvidencePanel(mount, entry.id, entry.scientificName);
+    }
   }
 
   hideUnlockModal() {
@@ -203,6 +212,13 @@ export class ArchiveDexUI {
       this.entryContent.querySelectorAll('.related-card').forEach((btn) => {
         btn.addEventListener('click', () => void this.openEntry((btn as HTMLElement).dataset.id!));
       });
+    }
+
+    if (this.activeTab === 'sources') {
+      const mount = this.entryContent.querySelector('#federated-evidence-mount') as HTMLElement | null;
+      if (mount) {
+        await renderSourcesEvidencePanel(mount, entry.id, entry.scientificName);
+      }
     }
   }
 

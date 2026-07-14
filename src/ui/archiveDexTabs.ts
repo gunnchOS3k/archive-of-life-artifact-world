@@ -74,6 +74,10 @@ function renderSources(entry: ArchiveDexEntry): string {
     ${provenanceBanner(entry)}
     <p class="provenance-warning">Science changes. Taxonomy, conservation status, fossil interpretation, and species ranges may be updated as new evidence appears.</p>
     ${prov || '<p><em>No provenance records — blocked by external source.</em></p>'}
+    <section class="federated-evidence-section">
+      <h4>Live / fixture federated evidence</h4>
+      <div id="federated-evidence-mount" class="evidence-panel" data-species-id="${entry.id}" data-scientific-name="${entry.scientificName}"></div>
+    </section>
     ${unc?.taxonomicUncertainty ? `<p><strong>Taxonomic uncertainty:</strong> ${unc.taxonomicUncertainty}</p>` : ''}
     ${unc?.fossilUncertainty ? `<p><strong>Fossil uncertainty:</strong> ${unc.fossilUncertainty}</p>` : ''}
     ${unc?.unknownToScience?.length ? listField('What scientists still do not know', unc.unknownToScience, 'Unknown') : field('What scientists still do not know', undefined, 'Unknown')}

@@ -1,5 +1,11 @@
 apply plugin: 'com.android.application'
 
+def archiveStoreFile = System.getenv("ARCHIVE_STORE_FILE") ?: (project.hasProperty("ARCHIVE_STORE_FILE") ? project.property("ARCHIVE_STORE_FILE") : null)
+def archiveStorePassword = System.getenv("ARCHIVE_STORE_PASSWORD") ?: (project.hasProperty("ARCHIVE_STORE_PASSWORD") ? project.property("ARCHIVE_STORE_PASSWORD") : null)
+def archiveKeyAlias = System.getenv("ARCHIVE_KEY_ALIAS") ?: (project.hasProperty("ARCHIVE_KEY_ALIAS") ? project.property("ARCHIVE_KEY_ALIAS") : null)
+def archiveKeyPassword = System.getenv("ARCHIVE_KEY_PASSWORD") ?: (project.hasProperty("ARCHIVE_KEY_PASSWORD") ? project.property("ARCHIVE_KEY_PASSWORD") : null)
+def hasInternalReleaseKey = archiveStoreFile && archiveStorePassword && archiveKeyAlias && archiveKeyPassword && file(archiveStoreFile).exists()
+
 android {
     namespace "com.gunnchos.archiveoflife"
     compileSdk rootProject.ext.compileSdkVersion
@@ -16,11 +22,27 @@ android {
             ignoreAssetsPattern '!.svn:!.git:!.ds_store:!*.scc:.*:!CVS:!thumbs.db:!picasa.ini:!*~'
         }
     }
+    signingConfigs {
+        if (hasInternalReleaseKey) {
+            release {
+                storeFile file(archiveStoreFile)
+                storePassword archiveStorePassword
+                keyAlias archiveKeyAlias
+                keyPassword archiveKeyPassword
+            }
+        }
+    }
     buildTypes {
         release {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
-            signingConfig signingConfigs.debug
+            debuggable false
+            if (hasInternalReleaseKey) {
+                signingConfig signingConfigs.release
+            } else {
+                signingConfig signingConfigs.debug
+                logger.warn("Archive release signing: ARCHIVE_* not set; using debug keystore")
+            }
         }
     }
 }

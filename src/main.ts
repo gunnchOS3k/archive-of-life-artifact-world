@@ -51,6 +51,7 @@ async function startGame(continuing: boolean) {
     state
   );
   game.start();
+  (window as unknown as { __aolGame: Game | null }).__aolGame = game;
 
   if (!continuing) {
     game.showToast(

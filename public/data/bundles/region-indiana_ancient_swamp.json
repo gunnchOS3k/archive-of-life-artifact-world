@@ -1,12 +1,320 @@
 {
   "regionId": "indiana_ancient_swamp",
-  "speciesIds": ["anax_junius", "trilobita_order"],
-  "species": [],
+  "speciesIds": [
+    "anax_junius",
+    "trilobita_order"
+  ],
+  "species": [
+    {
+      "id": "anax_junius",
+      "commonName": "Common Green Darner",
+      "scientificName": "Anax junius",
+      "group": "Insect",
+      "tier": "hero",
+      "representationTier": 6,
+      "lifeStatus": "extant",
+      "timeUnitIds": [
+        "holocene"
+      ],
+      "taxonomy": {
+        "family": "Aeshnidae",
+        "rank": "species",
+        "acceptedName": "Anax junius",
+        "catalogueOfLifeId": "MOCK-COL-anax_junius"
+      },
+      "conservation": {
+        "iucnCategory": "Least Concern",
+        "assessed": true,
+        "sourceVersion": "mock-iucn-2026-07",
+        "lastUpdated": "2026-07-02",
+        "iucnTaxonId": 10084
+      },
+      "distribution": {
+        "continents": [
+          "North America"
+        ],
+        "habitats": [
+          "wetland",
+          "pond",
+          "river"
+        ],
+        "sourceVersion": "mock-gbif-2026-07",
+        "lastUpdated": "2026-07-02",
+        "gbifTaxonKey": 4100354,
+        "occurrenceSummaries": [
+          {
+            "region": "North America",
+            "occurrenceCount": 2562
+          }
+        ]
+      },
+      "artifactTemplates": [
+        {
+          "id": "anax_junius_photo_record",
+          "artifactType": "photo_record",
+          "label": "photo record",
+          "ethical": true,
+          "description": "Ethical photo record collection"
+        },
+        {
+          "id": "anax_junius_molted_exoskeleton",
+          "artifactType": "molted_exoskeleton",
+          "label": "molted exoskeleton",
+          "ethical": true,
+          "description": "Ethical molted exoskeleton collection"
+        },
+        {
+          "id": "anax_junius_behavioral_field_note",
+          "artifactType": "behavioral_field_note",
+          "label": "behavioral field note",
+          "ethical": true,
+          "description": "Ethical behavioral field note collection"
+        }
+      ],
+      "gameplay": {
+        "region": "wetland",
+        "questType": "behavior",
+        "dangerLevel": 0,
+        "ethicalInteraction": "observe_without_capturing",
+        "timeRange": "Present",
+        "diet": "Carnivore",
+        "activity": "Diurnal",
+        "size": "Wingspan 7.0\u20138.0 cm",
+        "behavior": "Aerial predator; migratory",
+        "learningTopics": [
+          "flight mechanics",
+          "aquatic larvae",
+          "predation"
+        ],
+        "funFacts": [
+          "Can fly 50 km/h",
+          "Larvae live underwater up to 2 years"
+        ],
+        "whyItMatters": "Controls mosquito populations; indicator of wetland health."
+      },
+      "nasaLayerDependencies": [
+        {
+          "layer": "water",
+          "product": "gibs",
+          "reason": "Surface water extent critical for wetland specialists"
+        },
+        {
+          "layer": "water",
+          "product": "gibs",
+          "reason": "Breeding depends on wetland water availability"
+        },
+        {
+          "layer": "heat_drought",
+          "product": "ecostress",
+          "reason": "Temperature and moisture gate amphibian activity"
+        },
+        {
+          "layer": "climate",
+          "product": "power",
+          "reason": "Field expedition planning uses local climate baselines"
+        }
+      ],
+      "requiredHabitatSignals": [
+        {
+          "signal": "surface_water",
+          "layer": "water",
+          "minValue": 0.3,
+          "required": true,
+          "description": "Depends on standing water or saturated soils"
+        }
+      ],
+      "provenance": [
+        {
+          "source": "game_authored",
+          "sourceVersion": "mvp-current",
+          "sourceRecordId": "anax_junius",
+          "license": "GAME-ORIGINAL",
+          "citation": "Archive of Life: Artifact World authored prototype content",
+          "citationRequired": false,
+          "retrievedAt": "2026-07-05T03:27:29.539Z",
+          "lastUpdated": "2026-07-05T03:27:29.539Z",
+          "isMockData": false,
+          "verificationStatus": "game_authored_verified"
+        },
+        {
+          "source": "catalogue_of_life",
+          "sourceVersion": "mock-sample-2026-07",
+          "sourceRecordId": "MOCK-anax_junius",
+          "catalogueOfLifeId": "MOCK-COL-anax_junius",
+          "license": "MOCK-SAMPLE",
+          "citation": "MOCK SAMPLE \u2014 not sourced from live API; requires approved source snapshot import",
+          "citationRequired": true,
+          "retrievedAt": "2026-07-05T03:27:29.539Z",
+          "lastUpdated": "2026-07-05T03:27:29.539Z",
+          "isMockData": true,
+          "verificationStatus": "mock_sample"
+        }
+      ]
+    },
+    {
+      "id": "trilobita_order",
+      "commonName": "Trilobite",
+      "scientificName": "Trilobita (order)",
+      "group": "Arthropod",
+      "tier": "hero",
+      "representationTier": 6,
+      "lifeStatus": "representative_group",
+      "timeUnitIds": [
+        "cambrian",
+        "ordovician",
+        "silurian",
+        "devonian",
+        "carboniferous",
+        "permian"
+      ],
+      "taxonomy": {
+        "family": "Trilobita",
+        "rank": "order",
+        "acceptedName": "Trilobita (order)",
+        "catalogueOfLifeId": "MOCK-COL-trilobita_order"
+      },
+      "conservation": {
+        "iucnCategory": "Extinct",
+        "assessed": true,
+        "sourceVersion": "mock-iucn-2026-07",
+        "lastUpdated": "2026-07-02",
+        "iucnTaxonId": 60887
+      },
+      "distribution": {
+        "continents": [
+          "Global ancient oceans"
+        ],
+        "habitats": [
+          "ancient seafloor"
+        ],
+        "sourceVersion": "mock-gbif-2026-07",
+        "lastUpdated": "2026-07-02",
+        "gbifTaxonKey": 294847,
+        "occurrenceSummaries": [
+          {
+            "region": "Global ancient oceans",
+            "occurrenceCount": 3452
+          }
+        ]
+      },
+      "fossil": {
+        "timeRange": "Cambrian\u2013Permian (~521\u2013252 Ma)",
+        "fossilLocations": [
+          "Morocco",
+          "Utah",
+          "Czech Republic"
+        ],
+        "paleoenvironment": "Shallow tropical seas",
+        "livingRelatives": [
+          "Horseshoe crabs",
+          "Arachnids"
+        ],
+        "paleobiodbTaxonNo": 62096,
+        "sourceVersion": "mock-pbdb-2026-07",
+        "lastUpdated": "2026-07-02"
+      },
+      "artifactTemplates": [
+        {
+          "id": "trilobita_order_shell_fossil",
+          "artifactType": "shell_fossil",
+          "label": "shell fossil",
+          "ethical": true,
+          "description": "Ethical shell fossil collection"
+        },
+        {
+          "id": "trilobita_order_trace_fossil",
+          "artifactType": "trace_fossil",
+          "label": "trace fossil",
+          "ethical": true,
+          "description": "Ethical trace fossil collection"
+        },
+        {
+          "id": "trilobita_order_excavation_field_note",
+          "artifactType": "excavation_field_note",
+          "label": "excavation field note",
+          "ethical": true,
+          "description": "Ethical excavation field note collection"
+        }
+      ],
+      "gameplay": {
+        "region": "fossil_site",
+        "questType": "fossil",
+        "dangerLevel": 0,
+        "ethicalInteraction": "excavate_carefully",
+        "timeRange": "Cambrian\u2013Permian (~521\u2013252 Ma)",
+        "diet": "Varied (detritivore, predator, filter feeder)",
+        "activity": "Unknown",
+        "size": "1 mm to 72 cm",
+        "behavior": "Diverse marine arthropods; molted exoskeletons",
+        "learningTopics": [
+          "cambrian explosion",
+          "marine fossils",
+          "exoskeleton evolution"
+        ],
+        "funFacts": [
+          "Over 20,000 species described",
+          "Named for three-lobed body"
+        ],
+        "whyItMatters": "Icon of the Cambrian explosion and early animal diversity.",
+        "fossilLocations": [
+          "Morocco",
+          "Utah",
+          "Czech Republic"
+        ],
+        "livingRelatives": [
+          "Horseshoe crabs",
+          "Arachnids"
+        ]
+      },
+      "nasaLayerDependencies": [
+        {
+          "layer": "natural_events",
+          "product": "eonet",
+          "reason": "Paleoenvironmental context for extinction events"
+        },
+        {
+          "layer": "climate",
+          "product": "power",
+          "reason": "Field expedition planning uses local climate baselines"
+        }
+      ],
+      "provenance": [
+        {
+          "source": "game_authored",
+          "sourceVersion": "mvp-current",
+          "sourceRecordId": "trilobita_order",
+          "license": "GAME-ORIGINAL",
+          "citation": "Archive of Life: Artifact World authored prototype content",
+          "citationRequired": false,
+          "retrievedAt": "2026-07-05T03:27:29.539Z",
+          "lastUpdated": "2026-07-05T03:27:29.539Z",
+          "isMockData": false,
+          "verificationStatus": "game_authored_verified"
+        },
+        {
+          "source": "paleobiodb",
+          "sourceVersion": "mock-sample-2026-07",
+          "sourceRecordId": "MOCK-trilobita_order",
+          "paleobiodbTaxonNo": 447527,
+          "license": "MOCK-SAMPLE",
+          "citation": "MOCK SAMPLE \u2014 not sourced from live API; requires approved source snapshot import",
+          "citationRequired": true,
+          "retrievedAt": "2026-07-05T03:27:29.539Z",
+          "lastUpdated": "2026-07-05T03:27:29.539Z",
+          "isMockData": true,
+          "verificationStatus": "mock_sample"
+        }
+      ]
+    }
+  ],
   "expedition": {
     "period": "Carboniferous Period",
-    "location": "Indiana — Ancient Swamp Era",
+    "location": "Indiana \u2014 Ancient Swamp Era",
     "journalObjective": "Observe 3 ancient plant forms",
     "evidenceNote": "Fossil plant markers are evidence. Dragonfly silhouettes are reconstruction aids.",
-    "reconstructionLayers": ["vegetation", "arthropod_silhouettes"]
+    "reconstructionLayers": [
+      "vegetation",
+      "arthropod_silhouettes"
+    ]
   }
 }

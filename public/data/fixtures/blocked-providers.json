@@ -1,0 +1,45 @@
+{
+  "generatedAt": "2026-07-13T00:00:00Z",
+  "note": "Placeholder stubs for providers whose live endpoint scope is not finalized.",
+  "providers": [
+    {
+      "id": "noaa",
+      "organization": "NOAA",
+      "status": "endpoint_scope_not_finalized",
+      "message": "endpoint scope not finalized",
+      "domains": ["oceanography", "climate", "environmental_change"],
+      "placeholder": true,
+      "layer": {
+        "id": "sst_placeholder",
+        "mode": "FIXTURE_ONLY",
+        "interpretation": "inferred"
+      }
+    },
+    {
+      "id": "usgs",
+      "organization": "USGS",
+      "status": "unavailable",
+      "message": "endpoint scope not finalized",
+      "domains": ["geology", "hydrology", "earth_observation"],
+      "placeholder": true,
+      "layer": {
+        "id": "geology_placeholder",
+        "mode": "FIXTURE_ONLY",
+        "interpretation": "inferred"
+      }
+    },
+    {
+      "id": "smithsonian",
+      "organization": "Smithsonian Institution",
+      "status": "unavailable",
+      "message": "endpoint scope not finalized",
+      "domains": ["museum", "taxonomy", "collections"],
+      "attributionUrl": "https://www.si.edu/",
+      "placeholder": true,
+      "sample": {
+        "id": "si_placeholder",
+        "title": "Smithsonian collections adapter not configured"
+      }
+    }
+  ]
+}

@@ -121,22 +121,26 @@ export class Game {
     const parent = this.canvas.parentElement!;
     this.canvas.width = parent.clientWidth;
     this.canvas.height = parent.clientHeight;
-    this.bounds = { width: this.canvas.width, height: this.canvas.height };
+    // Movement bounds stay world-sized; canvas is the viewport.
   }
 
   private setupInput() {
     window.addEventListener('keydown', (e) => {
       this.keys[e.key] = true;
       if (this.activeMinigame) return;
-      if (this.isPanelOpen()) return;
+      if (this.isPanelOpen()) {
+        if (e.key === 'Escape') this.closeAllPanels();
+        return;
+      }
       if (e.key === 'e' || e.key === 'E') void this.interact();
-      if (e.key === 'a' || e.key === 'A') this.togglePanel('archive');
-      if (e.key === 'n' || e.key === 'N') this.togglePanel('notebook');
-      if (e.key === 'm' || e.key === 'M') this.togglePanel('map');
-      if (e.key === 'c' || e.key === 'C') this.togglePanel('companion');
-      if (e.key === 'q' || e.key === 'Q') this.togglePanel('quests');
-      if (e.key === 't' || e.key === 'T') this.togglePanel('earth');
-      if (e.key === 'y' || e.key === 'Y') this.togglePanel('time');
+      // Panel shortcuts use digit keys so WASD movement is never swallowed.
+      if (e.key === '1') this.togglePanel('archive');
+      if (e.key === '2') this.togglePanel('notebook');
+      if (e.key === '3') this.togglePanel('map');
+      if (e.key === '4') this.togglePanel('companion');
+      if (e.key === '5') this.togglePanel('quests');
+      if (e.key === '6') this.togglePanel('earth');
+      if (e.key === '7') this.togglePanel('time');
       if (this.devMode && (e.key === 'g' || e.key === 'G')) this.togglePanel('coverage');
       if (this.devMode && (e.key === 'i' || e.key === 'I')) this.togglePanel('implementation');
       if (e.key === 'Escape') this.closeAllPanels();
@@ -232,8 +236,9 @@ export class Game {
     }
     this.world.updateSpeciesMap(this.speciesById);
     this.world.loadRegion(regionId);
-    this.player.x = this.canvas.width / 2;
-    this.player.y = this.canvas.height / 2;
+    this.bounds = this.world.getWorldSize();
+    this.player.x = this.bounds.width / 2;
+    this.player.y = this.bounds.height / 2;
     this.state.player.x = this.player.x;
     this.state.player.y = this.player.y;
 
@@ -354,6 +359,65 @@ export class Game {
     this.toastTimer = setTimeout(() => toast.classList.add('hidden'), 3500);
   }
 
+  /** Acceptance / Playwright helpers — movement + travel without fragile canvas coordinates. */
+  async acceptTravel(regionId: string) {
+    await this.travelToRegion(regionId);
+  }
+
+  acceptMoveBesideTarget(kind?: 'species' | 'fossil' | 'portal') {
+    const targets = this.world.getInteractables().filter((item) => {
+      if (!kind) return item.type === 'species' || item.type === 'fossil';
+      return item.type === kind;
+    });
+    const target = targets[0];
+    if (!target) return null;
+    this.player.x = target.x;
+    this.player.y = target.y;
+    this.state.player.x = target.x;
+    this.state.player.y = target.y;
+    this.nearestInteractable = this.world.getNearestInteractable(this.player.x, this.player.y);
+    return {
+      type: target.type,
+      id: 'speciesId' in target ? target.speciesId : target.id,
+      label: 'label' in target ? target.label : ('species' in target ? target.species.commonName : 'unknown'),
+    };
+  }
+
+  async acceptInteract() {
+    await this.interact();
+  }
+
+  acceptSetMinigameHold(holding: boolean) {
+    if (this.activeMinigame instanceof WildlifeObservation) {
+      this.activeMinigame.holding = holding;
+      return true;
+    }
+    return false;
+  }
+
+  acceptCompleteFossilMinigame() {
+    if (this.activeMinigame instanceof FossilExcavation) {
+      this.activeMinigame.acceptRevealComplete();
+      return true;
+    }
+    return false;
+  }
+
+  acceptSnapshot() {
+    return {
+      region: this.state.player.currentRegion,
+      artifacts: this.state.artifacts.map((a) => a.speciesId),
+      notebook: this.state.notebook?.length ?? 0,
+      unlockedTraits: [...this.state.companion.unlockedTraits],
+      equippedTraits: [...this.state.companion.equippedTraits],
+      minigame: this.activeMinigame
+        ? this.activeMinigame instanceof FossilExcavation
+          ? 'fossil'
+          : 'observe'
+        : null,
+    };
+  }
+
   save() {
     this.state.player.x = this.player.x;
     this.state.player.y = this.player.y;
@@ -394,7 +458,7 @@ export class Game {
   }
 
   private update(dt: number) {
-    this.player.update(dt, this.keys, this.bounds);
+    this.player.update(dt, this.keys, this.bounds, this.world.getSolidObstacles());
     this.lifeling.update(dt, this.player.x, this.player.y, this.state.companion);
 
     this.nearestInteractable = this.world.getNearestInteractable(this.player.x, this.player.y);
@@ -417,12 +481,22 @@ export class Game {
   private render() {
     const w = this.canvas.width;
     const h = this.canvas.height;
-    this.world.draw(this.ctx, w, h);
+    const maxCamX = Math.max(0, this.bounds.width - w);
+    const maxCamY = Math.max(0, this.bounds.height - h);
+    const camX = Math.min(maxCamX, Math.max(0, this.player.x - w / 2));
+    const camY = Math.min(maxCamY, Math.max(0, this.player.y - h / 2));
+
+    this.ctx.clearRect(0, 0, w, h);
+    this.ctx.save();
+    this.ctx.translate(-camX, -camY);
+    this.world.draw(this.ctx, this.bounds.width, this.bounds.height);
     this.lifeling.draw(this.ctx, this.state.companion);
     this.player.draw(this.ctx);
+    this.ctx.restore();
+
     this.ctx.fillStyle = 'rgba(255,255,255,0.4)';
     this.ctx.font = '11px sans-serif';
     this.ctx.textAlign = 'left';
-    this.ctx.fillText('WASD/Arrows: Move | E: Interact | A/N/M/C/Q/T/Y: Menus', 10, h - 10);
+    this.ctx.fillText('WASD/Arrows: Move | E: Interact | 1–7: Menus', 10, h - 10);
   }
 }

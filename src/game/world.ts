@@ -38,8 +38,7 @@ export class World {
     this.decorations = [];
     if (!this.regionData) return;
 
-    const w = 800;
-    const h = 600;
+    const { width: w, height: h } = this.getWorldSize();
     const biome = this.regionData.biome;
     this.generateDecorations(biome, w, h);
 
@@ -224,6 +223,26 @@ export class World {
     }
     return nearest;
   }
+
+  getInteractables(): Interactable[] {
+    return [...this.interactables];
+  }
+
+  getSolidObstacles(): Array<{ x: number; y: number; radius: number }> {
+    return this.decorations
+      .filter((d) => d.type === 'water' || d.type === 'rock')
+      .map((d) => ({
+        x: d.x,
+        y: d.y,
+        radius: Math.max(18, (d.size ?? 20) * 0.45),
+      }));
+  }
+
+  getWorldSize(): { width: number; height: number } {
+    if (this.regionData?.id === 'indiana_ancient_swamp') return { width: 1100, height: 800 };
+    return { width: 800, height: 600 };
+  }
+
 
   private getBiomeColor(): string {
     const colors: Record<string, string> = {

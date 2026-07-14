@@ -18,10 +18,11 @@ When scientific providers disagree, Archive of Life must not silently collapse c
 
 ## Implementation
 
-- `src/services/providers/types.ts` — `ProviderConflict` type
-- `FederationService.buildConflictNotice()` — UI hook
-- Game-facing copy defaults to conservative wording when conflicts exist
+- `src/services/providers/types.ts` — `ProviderConflict` + enriched `FederatedRecord`
+- `FederationService.detectNameConflicts()` — surfaces name disagreements without discarding values
+- `FederationService.buildConflictNotice()` — compact UI notice
+- `SourcesEvidencePanel` — learner-facing conflict aside + live vs fixture badges
 
 ## Configuration
 
-Provider priority tables will live in `docs/data/DATA_SOURCE_REGISTRY.md` and future `provider-priority.json` once live adapters are verified.
+Provider priority tables live in `docs/data/DATA_SOURCE_REGISTRY.md` and `docs/product-quality/PROVIDER_FEDERATION_STATUS.md`.
