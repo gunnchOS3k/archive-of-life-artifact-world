@@ -507,6 +507,17 @@ export class Game {
     return false;
   }
 
+  acceptEquipTrait(traitId: string) {
+    const traits = this.state.companion.unlockedTraits;
+    if (!traits.includes(traitId)) traits.push(traitId);
+    if (!this.state.companion.equippedTraits.includes(traitId)) {
+      this.state.companion.equippedTraits.push(traitId);
+    }
+    this.save();
+    this.refreshUI();
+    return this.acceptSnapshot();
+  }
+
   acceptSnapshot() {
     return {
       region: this.state.player.currentRegion,

@@ -31,8 +31,33 @@ async function init() {
         await g.acceptTravel(arg);
         return g.acceptSnapshot();
       }
+      if (cmd === 'move' || cmd === 'move_beside') {
+        return { ok: true, target: g.acceptMoveBesideTarget(arg as 'species' | 'fossil' | 'portal' | undefined), snapshot: g.acceptSnapshot() };
+      }
       if (cmd === 'interact') {
         await g.acceptInteract();
+        return g.acceptSnapshot();
+      }
+      if (cmd === 'hold') {
+        const on = arg !== '0' && arg !== 'false';
+        return { ok: g.acceptSetMinigameHold(on), snapshot: g.acceptSnapshot() };
+      }
+      if (cmd === 'fossil_done') {
+        return { ok: g.acceptCompleteFossilMinigame(), snapshot: g.acceptSnapshot() };
+      }
+      if (cmd === 'panel' && arg) {
+        const btn = document.getElementById(`btn-${arg}`) as HTMLButtonElement | null;
+        if (btn) {
+          btn.click();
+          return g.acceptSnapshot();
+        }
+        return { ok: false, error: 'no_panel_btn' };
+      }
+      if (cmd === 'equip' && arg) {
+        return g.acceptEquipTrait(arg);
+      }
+      if (cmd === 'save') {
+        g.save();
         return g.acceptSnapshot();
       }
       if (cmd === 'snapshot') return g.acceptSnapshot();
