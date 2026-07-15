@@ -1,14 +1,16 @@
 ## Summary
-- Character-life branch is regression-freeze docs only (`2573bdd`); no gameplay source delta vs main.
-- Focused final regression intended; not freshly re-smoked on Pixel this session.
+- Character-life branch remains regression-focused (no gameplay feature expansion intended).
+- Independent Vitest re-run this session: **28/28 passed** (timeout fallback + Sources/Evidence no-infinite-loading regressions covered).
+- Pixel device **not attached** — full UI regression on device not re-smoked this session.
 
 ## Final regression scope
-Cold launch → expedition → observation → artifact → Notebook → Sources/Evidence → live/fixture → Lifeling → Ancient Swamp → save/reload → provider timeout → offline → no infinite spinner.
+Cold launch → expedition → observation → artifact → Notebook → Sources/Evidence → live/fixture → Lifeling → Ancient Swamp → persistence → provider timeout → offline → no infinite spinner.
 
-## Pixel tests
-**Not retested** this session (no device). Prior RC 1.1.1 evidence may apply to unchanged code but is not a new branch PASS.
+## Evidence
+- Unit/regression tests: PASS (this session)
+- Device Pixel re-smoke: **NOT RETESTED** (adb empty)
 
-## Independent-verifier result
-**NOT APPROVED FOR PR** as a completed final-regression acceptance pass — docs inheritance ≠ verified PASS. Scope as docs-only or re-smoke on Pixel.
+## Independent-verifier expectation
+Do not treat docs inheritance alone as Pixel PASS. Prefer labeling device gates **NOT RETESTED** until Pixel reconnects.
 
 Awaiting Edmund’s final approval. Do not merge automatically.
