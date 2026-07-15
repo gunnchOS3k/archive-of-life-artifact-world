@@ -1,0 +1,40 @@
+4:30 &8& &- i>
+
+++ New ArchiveDex Entry!
+
+Lion
+Panthera leo
+Artifact: Track Cast
+Time: Pleistocene—Holocene
+Status: Vulnerable
+
+A social apex predator of African
+
+savannas and grasslands. Lions live in
+
+prides, hunt cooperatively, and help
+regulate herbivore populations.
+
+Your Lifeling learned: Lion Mane, Tiger
+Stripes
+
+Sources and Evidence
+
+Live sources loaded.
+
+Conflicting evidence
+
+Providers disagree on names. Both values
+are kept — the game does not force a
+single “truth.”
+
+scientificName: col=Panthera leo (Linnaeus,
+1758) - col=tPanthera leo leo (Linnaeus,
+1758) - gbif=Panthera leo melanochaita
+(C.E.H.Smith, 1858) - gbif=Panthera leo
+melanochaita (C.E.H.Smith, 1858) -
+gbif=Panthera leo melanochaita
+(C.E.H.Smith, 1858) - inaturalist=Panthera
+leo - inaturalist=Panthera leo -
+neotoma=Panthera leo
+

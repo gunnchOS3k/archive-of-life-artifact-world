@@ -1,0 +1,559 @@
+{
+  "version": "1.0.0",
+  "snapshotId": "temporal-maps-unverified-v1",
+  "generatedAt": "2026-07-11T17:49:58.283Z",
+  "description": "One full-Earth map requirement per supported Time Atlas gate. Blocked records are intentional and never render fabricated paleogeography.",
+  "isMockData": true,
+  "gridRegistryPath": "coverage/earth_grid_registry.json",
+  "expectedTimeGateCount": 17,
+  "maps": [
+    {
+      "id": "temporal_map_gate_hadean",
+      "timeGateId": "gate_hadean",
+      "timeUnitIds": [
+        "hadean"
+      ],
+      "timeRange": {
+        "oldestMa": 4600,
+        "youngestMa": 4000
+      },
+      "status": "blocked_external",
+      "fullEarthCoverage": false,
+      "expectedGridCellCount": 648,
+      "coveredGridCellCount": 0,
+      "projection": "EPSG:4326",
+      "globalBounds": [
+        -180,
+        -90,
+        180,
+        90
+      ],
+      "asset": null,
+      "sourceSnapshotIds": [],
+      "requiredEvidence": [
+        "chronostratigraphy",
+        "paleogeographic_reconstruction"
+      ],
+      "uncertaintyNotes": "No approved, source-verified global reconstruction asset has been ingested for this time gate.",
+      "blockedReason": "Select and license an authoritative paleogeographic reconstruction, record its temporal uncertainty, then import and checksum the full-Earth asset.",
+      "coveredGridCellIds": []
+    },
+    {
+      "id": "temporal_map_gate_archean",
+      "timeGateId": "gate_archean",
+      "timeUnitIds": [
+        "archean",
+        "eoarchean",
+        "mesoarchean",
+        "neoarchean"
+      ],
+      "timeRange": {
+        "oldestMa": 4000,
+        "youngestMa": 2500
+      },
+      "status": "blocked_external",
+      "fullEarthCoverage": false,
+      "expectedGridCellCount": 648,
+      "coveredGridCellCount": 0,
+      "projection": "EPSG:4326",
+      "globalBounds": [
+        -180,
+        -90,
+        180,
+        90
+      ],
+      "asset": null,
+      "sourceSnapshotIds": [],
+      "requiredEvidence": [
+        "chronostratigraphy",
+        "paleogeographic_reconstruction"
+      ],
+      "uncertaintyNotes": "No approved, source-verified global reconstruction asset has been ingested for this time gate.",
+      "blockedReason": "Select and license an authoritative paleogeographic reconstruction, record its temporal uncertainty, then import and checksum the full-Earth asset.",
+      "coveredGridCellIds": []
+    },
+    {
+      "id": "temporal_map_gate_proterozoic",
+      "timeGateId": "gate_proterozoic",
+      "timeUnitIds": [
+        "proterozoic",
+        "paleoproterozoic",
+        "mesoproterozoic",
+        "neoproterozoic"
+      ],
+      "timeRange": {
+        "oldestMa": 2500,
+        "youngestMa": 538
+      },
+      "status": "blocked_external",
+      "fullEarthCoverage": false,
+      "expectedGridCellCount": 648,
+      "coveredGridCellCount": 0,
+      "projection": "EPSG:4326",
+      "globalBounds": [
+        -180,
+        -90,
+        180,
+        90
+      ],
+      "asset": null,
+      "sourceSnapshotIds": [],
+      "requiredEvidence": [
+        "chronostratigraphy",
+        "paleogeographic_reconstruction"
+      ],
+      "uncertaintyNotes": "No approved, source-verified global reconstruction asset has been ingested for this time gate.",
+      "blockedReason": "Select and license an authoritative paleogeographic reconstruction, record its temporal uncertainty, then import and checksum the full-Earth asset.",
+      "coveredGridCellIds": []
+    },
+    {
+      "id": "temporal_map_gate_ediacaran",
+      "timeGateId": "gate_ediacaran",
+      "timeUnitIds": [
+        "ediacaran"
+      ],
+      "timeRange": {
+        "oldestMa": 635,
+        "youngestMa": 538
+      },
+      "status": "blocked_external",
+      "fullEarthCoverage": false,
+      "expectedGridCellCount": 648,
+      "coveredGridCellCount": 0,
+      "projection": "EPSG:4326",
+      "globalBounds": [
+        -180,
+        -90,
+        180,
+        90
+      ],
+      "asset": null,
+      "sourceSnapshotIds": [],
+      "requiredEvidence": [
+        "chronostratigraphy",
+        "paleogeographic_reconstruction"
+      ],
+      "uncertaintyNotes": "No approved, source-verified global reconstruction asset has been ingested for this time gate.",
+      "blockedReason": "Select and license an authoritative paleogeographic reconstruction, record its temporal uncertainty, then import and checksum the full-Earth asset.",
+      "coveredGridCellIds": []
+    },
+    {
+      "id": "temporal_map_gate_cambrian",
+      "timeGateId": "gate_cambrian",
+      "timeUnitIds": [
+        "cambrian",
+        "furongian"
+      ],
+      "timeRange": {
+        "oldestMa": 538,
+        "youngestMa": 485.4
+      },
+      "status": "blocked_external",
+      "fullEarthCoverage": false,
+      "expectedGridCellCount": 648,
+      "coveredGridCellCount": 0,
+      "projection": "EPSG:4326",
+      "globalBounds": [
+        -180,
+        -90,
+        180,
+        90
+      ],
+      "asset": null,
+      "sourceSnapshotIds": [],
+      "requiredEvidence": [
+        "chronostratigraphy",
+        "paleogeographic_reconstruction"
+      ],
+      "uncertaintyNotes": "No approved, source-verified global reconstruction asset has been ingested for this time gate.",
+      "blockedReason": "Select and license an authoritative paleogeographic reconstruction, record its temporal uncertainty, then import and checksum the full-Earth asset.",
+      "coveredGridCellIds": []
+    },
+    {
+      "id": "temporal_map_gate_ordovician",
+      "timeGateId": "gate_ordovician",
+      "timeUnitIds": [
+        "ordovician"
+      ],
+      "timeRange": {
+        "oldestMa": 485.4,
+        "youngestMa": 443.8
+      },
+      "status": "blocked_external",
+      "fullEarthCoverage": false,
+      "expectedGridCellCount": 648,
+      "coveredGridCellCount": 0,
+      "projection": "EPSG:4326",
+      "globalBounds": [
+        -180,
+        -90,
+        180,
+        90
+      ],
+      "asset": null,
+      "sourceSnapshotIds": [],
+      "requiredEvidence": [
+        "chronostratigraphy",
+        "paleogeographic_reconstruction"
+      ],
+      "uncertaintyNotes": "No approved, source-verified global reconstruction asset has been ingested for this time gate.",
+      "blockedReason": "Select and license an authoritative paleogeographic reconstruction, record its temporal uncertainty, then import and checksum the full-Earth asset.",
+      "coveredGridCellIds": []
+    },
+    {
+      "id": "temporal_map_gate_silurian",
+      "timeGateId": "gate_silurian",
+      "timeUnitIds": [
+        "silurian"
+      ],
+      "timeRange": {
+        "oldestMa": 443.8,
+        "youngestMa": 419.2
+      },
+      "status": "blocked_external",
+      "fullEarthCoverage": false,
+      "expectedGridCellCount": 648,
+      "coveredGridCellCount": 0,
+      "projection": "EPSG:4326",
+      "globalBounds": [
+        -180,
+        -90,
+        180,
+        90
+      ],
+      "asset": null,
+      "sourceSnapshotIds": [],
+      "requiredEvidence": [
+        "chronostratigraphy",
+        "paleogeographic_reconstruction"
+      ],
+      "uncertaintyNotes": "No approved, source-verified global reconstruction asset has been ingested for this time gate.",
+      "blockedReason": "Select and license an authoritative paleogeographic reconstruction, record its temporal uncertainty, then import and checksum the full-Earth asset.",
+      "coveredGridCellIds": []
+    },
+    {
+      "id": "temporal_map_gate_devonian",
+      "timeGateId": "gate_devonian",
+      "timeUnitIds": [
+        "devonian",
+        "devonian_late"
+      ],
+      "timeRange": {
+        "oldestMa": 419.2,
+        "youngestMa": 358.9
+      },
+      "status": "blocked_external",
+      "fullEarthCoverage": false,
+      "expectedGridCellCount": 648,
+      "coveredGridCellCount": 0,
+      "projection": "EPSG:4326",
+      "globalBounds": [
+        -180,
+        -90,
+        180,
+        90
+      ],
+      "asset": null,
+      "sourceSnapshotIds": [],
+      "requiredEvidence": [
+        "chronostratigraphy",
+        "paleogeographic_reconstruction"
+      ],
+      "uncertaintyNotes": "No approved, source-verified global reconstruction asset has been ingested for this time gate.",
+      "blockedReason": "Select and license an authoritative paleogeographic reconstruction, record its temporal uncertainty, then import and checksum the full-Earth asset.",
+      "coveredGridCellIds": []
+    },
+    {
+      "id": "temporal_map_gate_carboniferous",
+      "timeGateId": "gate_carboniferous",
+      "timeUnitIds": [
+        "carboniferous",
+        "pennsylvanian"
+      ],
+      "timeRange": {
+        "oldestMa": 358.9,
+        "youngestMa": 298.9
+      },
+      "status": "blocked_external",
+      "fullEarthCoverage": false,
+      "expectedGridCellCount": 648,
+      "coveredGridCellCount": 0,
+      "projection": "EPSG:4326",
+      "globalBounds": [
+        -180,
+        -90,
+        180,
+        90
+      ],
+      "asset": null,
+      "sourceSnapshotIds": [],
+      "requiredEvidence": [
+        "chronostratigraphy",
+        "paleogeographic_reconstruction"
+      ],
+      "uncertaintyNotes": "No approved, source-verified global reconstruction asset has been ingested for this time gate.",
+      "blockedReason": "Select and license an authoritative paleogeographic reconstruction, record its temporal uncertainty, then import and checksum the full-Earth asset.",
+      "coveredGridCellIds": []
+    },
+    {
+      "id": "temporal_map_gate_permian",
+      "timeGateId": "gate_permian",
+      "timeUnitIds": [
+        "permian",
+        "lopingian"
+      ],
+      "timeRange": {
+        "oldestMa": 298.9,
+        "youngestMa": 251.9
+      },
+      "status": "blocked_external",
+      "fullEarthCoverage": false,
+      "expectedGridCellCount": 648,
+      "coveredGridCellCount": 0,
+      "projection": "EPSG:4326",
+      "globalBounds": [
+        -180,
+        -90,
+        180,
+        90
+      ],
+      "asset": null,
+      "sourceSnapshotIds": [],
+      "requiredEvidence": [
+        "chronostratigraphy",
+        "paleogeographic_reconstruction"
+      ],
+      "uncertaintyNotes": "No approved, source-verified global reconstruction asset has been ingested for this time gate.",
+      "blockedReason": "Select and license an authoritative paleogeographic reconstruction, record its temporal uncertainty, then import and checksum the full-Earth asset.",
+      "coveredGridCellIds": []
+    },
+    {
+      "id": "temporal_map_gate_triassic",
+      "timeGateId": "gate_triassic",
+      "timeUnitIds": [
+        "triassic",
+        "late_triassic"
+      ],
+      "timeRange": {
+        "oldestMa": 251.9,
+        "youngestMa": 201.4
+      },
+      "status": "blocked_external",
+      "fullEarthCoverage": false,
+      "expectedGridCellCount": 648,
+      "coveredGridCellCount": 0,
+      "projection": "EPSG:4326",
+      "globalBounds": [
+        -180,
+        -90,
+        180,
+        90
+      ],
+      "asset": null,
+      "sourceSnapshotIds": [],
+      "requiredEvidence": [
+        "chronostratigraphy",
+        "paleogeographic_reconstruction"
+      ],
+      "uncertaintyNotes": "No approved, source-verified global reconstruction asset has been ingested for this time gate.",
+      "blockedReason": "Select and license an authoritative paleogeographic reconstruction, record its temporal uncertainty, then import and checksum the full-Earth asset.",
+      "coveredGridCellIds": []
+    },
+    {
+      "id": "temporal_map_gate_jurassic",
+      "timeGateId": "gate_jurassic",
+      "timeUnitIds": [
+        "jurassic",
+        "late_jurassic"
+      ],
+      "timeRange": {
+        "oldestMa": 201.4,
+        "youngestMa": 145
+      },
+      "status": "blocked_external",
+      "fullEarthCoverage": false,
+      "expectedGridCellCount": 648,
+      "coveredGridCellCount": 0,
+      "projection": "EPSG:4326",
+      "globalBounds": [
+        -180,
+        -90,
+        180,
+        90
+      ],
+      "asset": null,
+      "sourceSnapshotIds": [],
+      "requiredEvidence": [
+        "chronostratigraphy",
+        "paleogeographic_reconstruction"
+      ],
+      "uncertaintyNotes": "No approved, source-verified global reconstruction asset has been ingested for this time gate.",
+      "blockedReason": "Select and license an authoritative paleogeographic reconstruction, record its temporal uncertainty, then import and checksum the full-Earth asset.",
+      "coveredGridCellIds": []
+    },
+    {
+      "id": "temporal_map_gate_cretaceous",
+      "timeGateId": "gate_cretaceous",
+      "timeUnitIds": [
+        "cretaceous",
+        "late_cretaceous"
+      ],
+      "timeRange": {
+        "oldestMa": 145,
+        "youngestMa": 66
+      },
+      "status": "blocked_external",
+      "fullEarthCoverage": false,
+      "expectedGridCellCount": 648,
+      "coveredGridCellCount": 0,
+      "projection": "EPSG:4326",
+      "globalBounds": [
+        -180,
+        -90,
+        180,
+        90
+      ],
+      "asset": null,
+      "sourceSnapshotIds": [],
+      "requiredEvidence": [
+        "chronostratigraphy",
+        "paleogeographic_reconstruction"
+      ],
+      "uncertaintyNotes": "No approved, source-verified global reconstruction asset has been ingested for this time gate.",
+      "blockedReason": "Select and license an authoritative paleogeographic reconstruction, record its temporal uncertainty, then import and checksum the full-Earth asset.",
+      "coveredGridCellIds": []
+    },
+    {
+      "id": "temporal_map_gate_paleogene",
+      "timeGateId": "gate_paleogene",
+      "timeUnitIds": [
+        "paleogene",
+        "paleocene",
+        "eocene"
+      ],
+      "timeRange": {
+        "oldestMa": 66,
+        "youngestMa": 23
+      },
+      "status": "blocked_external",
+      "fullEarthCoverage": false,
+      "expectedGridCellCount": 648,
+      "coveredGridCellCount": 0,
+      "projection": "EPSG:4326",
+      "globalBounds": [
+        -180,
+        -90,
+        180,
+        90
+      ],
+      "asset": null,
+      "sourceSnapshotIds": [],
+      "requiredEvidence": [
+        "chronostratigraphy",
+        "paleogeographic_reconstruction"
+      ],
+      "uncertaintyNotes": "No approved, source-verified global reconstruction asset has been ingested for this time gate.",
+      "blockedReason": "Select and license an authoritative paleogeographic reconstruction, record its temporal uncertainty, then import and checksum the full-Earth asset.",
+      "coveredGridCellIds": []
+    },
+    {
+      "id": "temporal_map_gate_neogene",
+      "timeGateId": "gate_neogene",
+      "timeUnitIds": [
+        "neogene",
+        "miocene",
+        "pliocene"
+      ],
+      "timeRange": {
+        "oldestMa": 23.03,
+        "youngestMa": 2.58
+      },
+      "status": "blocked_external",
+      "fullEarthCoverage": false,
+      "expectedGridCellCount": 648,
+      "coveredGridCellCount": 0,
+      "projection": "EPSG:4326",
+      "globalBounds": [
+        -180,
+        -90,
+        180,
+        90
+      ],
+      "asset": null,
+      "sourceSnapshotIds": [],
+      "requiredEvidence": [
+        "chronostratigraphy",
+        "paleogeographic_reconstruction"
+      ],
+      "uncertaintyNotes": "No approved, source-verified global reconstruction asset has been ingested for this time gate.",
+      "blockedReason": "Select and license an authoritative paleogeographic reconstruction, record its temporal uncertainty, then import and checksum the full-Earth asset.",
+      "coveredGridCellIds": []
+    },
+    {
+      "id": "temporal_map_gate_pleistocene",
+      "timeGateId": "gate_pleistocene",
+      "timeUnitIds": [
+        "pleistocene",
+        "chibanian"
+      ],
+      "timeRange": {
+        "oldestMa": 2.58,
+        "youngestMa": 0.0117
+      },
+      "status": "blocked_external",
+      "fullEarthCoverage": false,
+      "expectedGridCellCount": 648,
+      "coveredGridCellCount": 0,
+      "projection": "EPSG:4326",
+      "globalBounds": [
+        -180,
+        -90,
+        180,
+        90
+      ],
+      "asset": null,
+      "sourceSnapshotIds": [],
+      "requiredEvidence": [
+        "chronostratigraphy",
+        "paleogeographic_reconstruction"
+      ],
+      "uncertaintyNotes": "No approved, source-verified global reconstruction asset has been ingested for this time gate.",
+      "blockedReason": "Select and license an authoritative paleogeographic reconstruction, record its temporal uncertainty, then import and checksum the full-Earth asset.",
+      "coveredGridCellIds": []
+    },
+    {
+      "id": "temporal_map_gate_holocene",
+      "timeGateId": "gate_holocene",
+      "timeUnitIds": [
+        "holocene",
+        "meghalayan",
+        "quaternary"
+      ],
+      "timeRange": {
+        "oldestMa": 2.58,
+        "youngestMa": 0
+      },
+      "status": "blocked_external",
+      "fullEarthCoverage": false,
+      "expectedGridCellCount": 648,
+      "coveredGridCellCount": 0,
+      "projection": "EPSG:4326",
+      "globalBounds": [
+        -180,
+        -90,
+        180,
+        90
+      ],
+      "asset": null,
+      "sourceSnapshotIds": [],
+      "requiredEvidence": [
+        "chronostratigraphy",
+        "modern_geography",
+        "earth_observation"
+      ],
+      "uncertaintyNotes": "No approved, source-verified global reconstruction asset has been ingested for this time gate.",
+      "blockedReason": "Import an approved full-Earth modern geography asset and linked Earth-observation snapshot.",
+      "coveredGridCellIds": []
+    }
+  ]
+}

@@ -12,6 +12,9 @@ export class EarthLayerService {
   private regionBundle: RegionEarthLayersBundle | null = null;
   private metadataCache: {
     dataMode?: string;
+    scope?: string;
+    measurementDataMode?: string;
+    verifiedRecordCount?: number;
     layers?: Array<{ id: string; mode: string; sourceUrl?: string; recordCount?: number }>;
     generatedAt?: string;
   } | null = null;
@@ -53,13 +56,24 @@ export class EarthLayerService {
   }
 
   getLayerDataMode(layer: EarthLayerCategory): string {
-    const cached = this.metadataCache?.layers?.find((l) => l.id === layer);
+    void layer;
+    return this.regionBundle?.isMockData
+      ? 'SAMPLE REGIONAL VALUES'
+      : 'SOURCE-VERIFIED REGIONAL VALUES';
+  }
+
+  getLayerMetadataMode(layer: EarthLayerCategory): string {
+    const cached = this.metadataCache?.layers?.find((item) => item.id === layer);
     if (cached?.mode) return cached.mode;
-    const def = this.getLayerDefinition(layer);
-    return def?.isMockData ? 'SAMPLE FALLBACK' : 'REAL NASA METADATA';
+    return 'METADATA NOT CACHED';
+  }
+
+  getRegionalDataMode(): 'sample_fallback' | 'source_verified' {
+    return this.regionBundle?.isMockData ? 'sample_fallback' : 'source_verified';
   }
 
   getGlobalDataMode(): string {
+    // This describes the metadata cache only, never the displayed regional measurements.
     return this.metadataCache?.dataMode ?? (this.getManifest().isMockData ? 'sample_fallback' : 'real_metadata');
   }
 

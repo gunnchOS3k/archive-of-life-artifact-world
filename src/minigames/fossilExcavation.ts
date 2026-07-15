@@ -125,6 +125,16 @@ export class FossilExcavation {
     return { progress: this.progress, damage: this.damage };
   }
 
+  /** Acceptance helper: clear non-fossil sediment without damaging the fossil. */
+  acceptRevealComplete() {
+    for (const s of this.sediment) {
+      if (!s.isFossil) s.removed = true;
+    }
+    this.progress = 100;
+    this.damage = 0;
+    this.onComplete();
+  }
+
   destroy() {
     this.canvas.removeEventListener('mousedown', this._onMouseDown);
     this.canvas.removeEventListener('mousemove', this._onMouseMove);

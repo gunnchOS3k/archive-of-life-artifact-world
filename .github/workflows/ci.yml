@@ -39,6 +39,9 @@ jobs:
       - name: Audit global coverage
         run: npm run audit:coverage
 
+      - name: Audit full-Earth temporal map inventory
+        run: npm run audit:maps
+
       - name: Audit ArchiveDex
         run: npm run audit:archivedex
 

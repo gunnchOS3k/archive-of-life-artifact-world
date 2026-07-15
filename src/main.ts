@@ -2,6 +2,7 @@ import '../css/styles.css';
 import { dataCatalog } from '@/services/DataCatalogService';
 import { earthLayerService } from '@/services/EarthLayerService';
 import { ArchiveDexService } from '@/services/ArchiveDexService';
+import { temporalMapService } from '@/services/TemporalMapService';
 import { timeAtlasService } from '@/time/TimeAtlasService';
 import { createDefaultSave, loadSave, hasSave } from '@/systems/saveSystem';
 import { Game } from '@/game/Game';
@@ -15,10 +16,71 @@ async function init() {
 
   document.getElementById('btn-new-game')!.addEventListener('click', () => void startGame(false));
   document.getElementById('btn-continue')!.addEventListener('click', () => void startGame(true));
+
+  // Internal RC acceptance hook (adb / AcceptNavReceiver).
+  (window as unknown as {
+    __aolStartExpedition?: (continuing?: boolean) => Promise<void>;
+    __aolAccept?: (cmd: string, arg?: string) => Promise<unknown>;
+  }).__aolStartExpedition = (continuing = false) => startGame(!!continuing);
+  (window as unknown as { __aolAccept?: (cmd: string, arg?: string) => Promise<unknown> }).__aolAccept =
+    async (cmd, arg) => {
+      const g = (window as unknown as { __aolGame: Game | null }).__aolGame;
+      if (cmd === 'start') return startGame(arg === 'continue');
+      if (!g) return { ok: false, error: 'no_game' };
+      if (cmd === 'travel' && arg) {
+        await g.acceptTravel(arg);
+        return g.acceptSnapshot();
+      }
+      if (cmd === 'move' || cmd === 'move_beside') {
+        return { ok: true, target: g.acceptMoveBesideTarget(arg as 'species' | 'fossil' | 'portal' | undefined), snapshot: g.acceptSnapshot() };
+      }
+      if (cmd === 'interact') {
+        await g.acceptInteract();
+        return g.acceptSnapshot();
+      }
+      if (cmd === 'hold') {
+        const on = arg !== '0' && arg !== 'false';
+        return { ok: g.acceptSetMinigameHold(on), snapshot: g.acceptSnapshot() };
+      }
+      if (cmd === 'fossil_done') {
+        return { ok: g.acceptCompleteFossilMinigame(), snapshot: g.acceptSnapshot() };
+      }
+      if (cmd === 'panel' && arg) {
+        const btn = document.getElementById(`btn-${arg}`) as HTMLButtonElement | null;
+        if (btn) {
+          btn.click();
+          return g.acceptSnapshot();
+        }
+        return { ok: false, error: 'no_panel_btn' };
+      }
+      if (cmd === 'evidence') {
+        const idx = arg && /^\d+$/.test(arg) ? Number(arg) : 0;
+        const btn = document.querySelectorAll(
+          '.notebook-evidence-btn',
+        )[idx] as HTMLButtonElement | undefined;
+        if (!btn) return { ok: false, error: 'no_evidence_btn' };
+        btn.click();
+        return g.acceptSnapshot();
+      }
+      if (cmd === 'equip' && arg) {
+        return g.acceptEquipTrait(arg);
+      }
+      if (cmd === 'save') {
+        g.save();
+        return g.acceptSnapshot();
+      }
+      if (cmd === 'snapshot') return g.acceptSnapshot();
+      return { ok: false, error: 'unknown_cmd' };
+    };
 }
 
 async function startGame(continuing: boolean) {
-  await Promise.all([dataCatalog.initialize(), earthLayerService.initialize(), timeAtlasService.initialize()]);
+  await Promise.all([
+    dataCatalog.initialize(),
+    earthLayerService.initialize(),
+    timeAtlasService.initialize(),
+    temporalMapService.initialize(),
+  ]);
   const state = continuing ? loadSave() : createDefaultSave();
   if (!state) {
     alert('Could not load save. Starting new expedition.');
@@ -35,8 +97,17 @@ async function startGame(continuing: boolean) {
   document.getElementById('game-screen')!.classList.add('active');
 
   const canvas = document.getElementById('game-canvas') as HTMLCanvasElement;
-  game = new Game(canvas, dataCatalog, earthLayerService, timeAtlasService, archiveDexService, state);
+  game = new Game(
+    canvas,
+    dataCatalog,
+    earthLayerService,
+    timeAtlasService,
+    temporalMapService,
+    archiveDexService,
+    state
+  );
   game.start();
+  (window as unknown as { __aolGame: Game | null }).__aolGame = game;
 
   if (!continuing) {
     game.showToast(

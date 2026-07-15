@@ -1,10 +1,9092 @@
 {
-  "snapshotId": "sample-2026-07",
-  "description": "H3/S2-style grid placeholders for audit coverage — not all cells are playable.",
-  "gridSystem": "placeholder_h3_res3",
+  "version": "1.0.0",
+  "snapshotId": "equal-angle-10deg-v1",
+  "generatedAt": "2026-07-11T17:43:17.781Z",
+  "description": "Deterministic full-Earth audit index. Cells are spatial requirements only and do not claim scientific-data coverage.",
+  "gridSystem": "equal_angle",
+  "cellSizeDegrees": {
+    "longitude": 10,
+    "latitude": 10
+  },
+  "globalBounds": [
+    -180,
+    -90,
+    180,
+    90
+  ],
+  "expectedCellCount": 648,
   "cells": [
-    {"id": "h3:8928308280fffff", "lat": 0, "lon": 0, "coverageStatus": "not_yet_ingested"},
-    {"id": "h3:8928308281fffff", "lat": 15, "lon": 30, "coverageStatus": "partial", "linkedPlaceId": "africa"},
-    {"id": "h3:8928308282fffff", "lat": 40, "lon": -100, "coverageStatus": "partial", "linkedPlaceId": "north_america"}
+    {
+      "id": "eq10:00:00",
+      "bbox": [
+        -180,
+        -90,
+        -170,
+        -80
+      ],
+      "center": [
+        -175,
+        -85
+      ],
+      "coverageStatus": "not_yet_ingested"
+    },
+    {
+      "id": "eq10:00:01",
+      "bbox": [
+        -170,
+        -90,
+        -160,
+        -80
+      ],
+      "center": [
+        -165,
+        -85
+      ],
+      "coverageStatus": "not_yet_ingested"
+    },
+    {
+      "id": "eq10:00:02",
+      "bbox": [
+        -160,
+        -90,
+        -150,
+        -80
+      ],
+      "center": [
+        -155,
+        -85
+      ],
+      "coverageStatus": "not_yet_ingested"
+    },
+    {
+      "id": "eq10:00:03",
+      "bbox": [
+        -150,
+        -90,
+        -140,
+        -80
+      ],
+      "center": [
+        -145,
+        -85
+      ],
+      "coverageStatus": "not_yet_ingested"
+    },
+    {
+      "id": "eq10:00:04",
+      "bbox": [
+        -140,
+        -90,
+        -130,
+        -80
+      ],
+      "center": [
+        -135,
+        -85
+      ],
+      "coverageStatus": "not_yet_ingested"
+    },
+    {
+      "id": "eq10:00:05",
+      "bbox": [
+        -130,
+        -90,
+        -120,
+        -80
+      ],
+      "center": [
+        -125,
+        -85
+      ],
+      "coverageStatus": "not_yet_ingested"
+    },
+    {
+      "id": "eq10:00:06",
+      "bbox": [
+        -120,
+        -90,
+        -110,
+        -80
+      ],
+      "center": [
+        -115,
+        -85
+      ],
+      "coverageStatus": "not_yet_ingested"
+    },
+    {
+      "id": "eq10:00:07",
+      "bbox": [
+        -110,
+        -90,
+        -100,
+        -80
+      ],
+      "center": [
+        -105,
+        -85
+      ],
+      "coverageStatus": "not_yet_ingested"
+    },
+    {
+      "id": "eq10:00:08",
+      "bbox": [
+        -100,
+        -90,
+        -90,
+        -80
+      ],
+      "center": [
+        -95,
+        -85
+      ],
+      "coverageStatus": "not_yet_ingested"
+    },
+    {
+      "id": "eq10:00:09",
+      "bbox": [
+        -90,
+        -90,
+        -80,
+        -80
+      ],
+      "center": [
+        -85,
+        -85
+      ],
+      "coverageStatus": "not_yet_ingested"
+    },
+    {
+      "id": "eq10:00:10",
+      "bbox": [
+        -80,
+        -90,
+        -70,
+        -80
+      ],
+      "center": [
+        -75,
+        -85
+      ],
+      "coverageStatus": "not_yet_ingested"
+    },
+    {
+      "id": "eq10:00:11",
+      "bbox": [
+        -70,
+        -90,
+        -60,
+        -80
+      ],
+      "center": [
+        -65,
+        -85
+      ],
+      "coverageStatus": "not_yet_ingested"
+    },
+    {
+      "id": "eq10:00:12",
+      "bbox": [
+        -60,
+        -90,
+        -50,
+        -80
+      ],
+      "center": [
+        -55,
+        -85
+      ],
+      "coverageStatus": "not_yet_ingested"
+    },
+    {
+      "id": "eq10:00:13",
+      "bbox": [
+        -50,
+        -90,
+        -40,
+        -80
+      ],
+      "center": [
+        -45,
+        -85
+      ],
+      "coverageStatus": "not_yet_ingested"
+    },
+    {
+      "id": "eq10:00:14",
+      "bbox": [
+        -40,
+        -90,
+        -30,
+        -80
+      ],
+      "center": [
+        -35,
+        -85
+      ],
+      "coverageStatus": "not_yet_ingested"
+    },
+    {
+      "id": "eq10:00:15",
+      "bbox": [
+        -30,
+        -90,
+        -20,
+        -80
+      ],
+      "center": [
+        -25,
+        -85
+      ],
+      "coverageStatus": "not_yet_ingested"
+    },
+    {
+      "id": "eq10:00:16",
+      "bbox": [
+        -20,
+        -90,
+        -10,
+        -80
+      ],
+      "center": [
+        -15,
+        -85
+      ],
+      "coverageStatus": "not_yet_ingested"
+    },
+    {
+      "id": "eq10:00:17",
+      "bbox": [
+        -10,
+        -90,
+        0,
+        -80
+      ],
+      "center": [
+        -5,
+        -85
+      ],
+      "coverageStatus": "not_yet_ingested"
+    },
+    {
+      "id": "eq10:00:18",
+      "bbox": [
+        0,
+        -90,
+        10,
+        -80
+      ],
+      "center": [
+        5,
+        -85
+      ],
+      "coverageStatus": "not_yet_ingested"
+    },
+    {
+      "id": "eq10:00:19",
+      "bbox": [
+        10,
+        -90,
+        20,
+        -80
+      ],
+      "center": [
+        15,
+        -85
+      ],
+      "coverageStatus": "not_yet_ingested"
+    },
+    {
+      "id": "eq10:00:20",
+      "bbox": [
+        20,
+        -90,
+        30,
+        -80
+      ],
+      "center": [
+        25,
+        -85
+      ],
+      "coverageStatus": "not_yet_ingested"
+    },
+    {
+      "id": "eq10:00:21",
+      "bbox": [
+        30,
+        -90,
+        40,
+        -80
+      ],
+      "center": [
+        35,
+        -85
+      ],
+      "coverageStatus": "not_yet_ingested"
+    },
+    {
+      "id": "eq10:00:22",
+      "bbox": [
+        40,
+        -90,
+        50,
+        -80
+      ],
+      "center": [
+        45,
+        -85
+      ],
+      "coverageStatus": "not_yet_ingested"
+    },
+    {
+      "id": "eq10:00:23",
+      "bbox": [
+        50,
+        -90,
+        60,
+        -80
+      ],
+      "center": [
+        55,
+        -85
+      ],
+      "coverageStatus": "not_yet_ingested"
+    },
+    {
+      "id": "eq10:00:24",
+      "bbox": [
+        60,
+        -90,
+        70,
+        -80
+      ],
+      "center": [
+        65,
+        -85
+      ],
+      "coverageStatus": "not_yet_ingested"
+    },
+    {
+      "id": "eq10:00:25",
+      "bbox": [
+        70,
+        -90,
+        80,
+        -80
+      ],
+      "center": [
+        75,
+        -85
+      ],
+      "coverageStatus": "not_yet_ingested"
+    },
+    {
+      "id": "eq10:00:26",
+      "bbox": [
+        80,
+        -90,
+        90,
+        -80
+      ],
+      "center": [
+        85,
+        -85
+      ],
+      "coverageStatus": "not_yet_ingested"
+    },
+    {
+      "id": "eq10:00:27",
+      "bbox": [
+        90,
+        -90,
+        100,
+        -80
+      ],
+      "center": [
+        95,
+        -85
+      ],
+      "coverageStatus": "not_yet_ingested"
+    },
+    {
+      "id": "eq10:00:28",
+      "bbox": [
+        100,
+        -90,
+        110,
+        -80
+      ],
+      "center": [
+        105,
+        -85
+      ],
+      "coverageStatus": "not_yet_ingested"
+    },
+    {
+      "id": "eq10:00:29",
+      "bbox": [
+        110,
+        -90,
+        120,
+        -80
+      ],
+      "center": [
+        115,
+        -85
+      ],
+      "coverageStatus": "not_yet_ingested"
+    },
+    {
+      "id": "eq10:00:30",
+      "bbox": [
+        120,
+        -90,
+        130,
+        -80
+      ],
+      "center": [
+        125,
+        -85
+      ],
+      "coverageStatus": "not_yet_ingested"
+    },
+    {
+      "id": "eq10:00:31",
+      "bbox": [
+        130,
+        -90,
+        140,
+        -80
+      ],
+      "center": [
+        135,
+        -85
+      ],
+      "coverageStatus": "not_yet_ingested"
+    },
+    {
+      "id": "eq10:00:32",
+      "bbox": [
+        140,
+        -90,
+        150,
+        -80
+      ],
+      "center": [
+        145,
+        -85
+      ],
+      "coverageStatus": "not_yet_ingested"
+    },
+    {
+      "id": "eq10:00:33",
+      "bbox": [
+        150,
+        -90,
+        160,
+        -80
+      ],
+      "center": [
+        155,
+        -85
+      ],
+      "coverageStatus": "not_yet_ingested"
+    },
+    {
+      "id": "eq10:00:34",
+      "bbox": [
+        160,
+        -90,
+        170,
+        -80
+      ],
+      "center": [
+        165,
+        -85
+      ],
+      "coverageStatus": "not_yet_ingested"
+    },
+    {
+      "id": "eq10:00:35",
+      "bbox": [
+        170,
+        -90,
+        180,
+        -80
+      ],
+      "center": [
+        175,
+        -85
+      ],
+      "coverageStatus": "not_yet_ingested"
+    },
+    {
+      "id": "eq10:01:00",
+      "bbox": [
+        -180,
+        -80,
+        -170,
+        -70
+      ],
+      "center": [
+        -175,
+        -75
+      ],
+      "coverageStatus": "not_yet_ingested"
+    },
+    {
+      "id": "eq10:01:01",
+      "bbox": [
+        -170,
+        -80,
+        -160,
+        -70
+      ],
+      "center": [
+        -165,
+        -75
+      ],
+      "coverageStatus": "not_yet_ingested"
+    },
+    {
+      "id": "eq10:01:02",
+      "bbox": [
+        -160,
+        -80,
+        -150,
+        -70
+      ],
+      "center": [
+        -155,
+        -75
+      ],
+      "coverageStatus": "not_yet_ingested"
+    },
+    {
+      "id": "eq10:01:03",
+      "bbox": [
+        -150,
+        -80,
+        -140,
+        -70
+      ],
+      "center": [
+        -145,
+        -75
+      ],
+      "coverageStatus": "not_yet_ingested"
+    },
+    {
+      "id": "eq10:01:04",
+      "bbox": [
+        -140,
+        -80,
+        -130,
+        -70
+      ],
+      "center": [
+        -135,
+        -75
+      ],
+      "coverageStatus": "not_yet_ingested"
+    },
+    {
+      "id": "eq10:01:05",
+      "bbox": [
+        -130,
+        -80,
+        -120,
+        -70
+      ],
+      "center": [
+        -125,
+        -75
+      ],
+      "coverageStatus": "not_yet_ingested"
+    },
+    {
+      "id": "eq10:01:06",
+      "bbox": [
+        -120,
+        -80,
+        -110,
+        -70
+      ],
+      "center": [
+        -115,
+        -75
+      ],
+      "coverageStatus": "not_yet_ingested"
+    },
+    {
+      "id": "eq10:01:07",
+      "bbox": [
+        -110,
+        -80,
+        -100,
+        -70
+      ],
+      "center": [
+        -105,
+        -75
+      ],
+      "coverageStatus": "not_yet_ingested"
+    },
+    {
+      "id": "eq10:01:08",
+      "bbox": [
+        -100,
+        -80,
+        -90,
+        -70
+      ],
+      "center": [
+        -95,
+        -75
+      ],
+      "coverageStatus": "not_yet_ingested"
+    },
+    {
+      "id": "eq10:01:09",
+      "bbox": [
+        -90,
+        -80,
+        -80,
+        -70
+      ],
+      "center": [
+        -85,
+        -75
+      ],
+      "coverageStatus": "not_yet_ingested"
+    },
+    {
+      "id": "eq10:01:10",
+      "bbox": [
+        -80,
+        -80,
+        -70,
+        -70
+      ],
+      "center": [
+        -75,
+        -75
+      ],
+      "coverageStatus": "not_yet_ingested"
+    },
+    {
+      "id": "eq10:01:11",
+      "bbox": [
+        -70,
+        -80,
+        -60,
+        -70
+      ],
+      "center": [
+        -65,
+        -75
+      ],
+      "coverageStatus": "not_yet_ingested"
+    },
+    {
+      "id": "eq10:01:12",
+      "bbox": [
+        -60,
+        -80,
+        -50,
+        -70
+      ],
+      "center": [
+        -55,
+        -75
+      ],
+      "coverageStatus": "not_yet_ingested"
+    },
+    {
+      "id": "eq10:01:13",
+      "bbox": [
+        -50,
+        -80,
+        -40,
+        -70
+      ],
+      "center": [
+        -45,
+        -75
+      ],
+      "coverageStatus": "not_yet_ingested"
+    },
+    {
+      "id": "eq10:01:14",
+      "bbox": [
+        -40,
+        -80,
+        -30,
+        -70
+      ],
+      "center": [
+        -35,
+        -75
+      ],
+      "coverageStatus": "not_yet_ingested"
+    },
+    {
+      "id": "eq10:01:15",
+      "bbox": [
+        -30,
+        -80,
+        -20,
+        -70
+      ],
+      "center": [
+        -25,
+        -75
+      ],
+      "coverageStatus": "not_yet_ingested"
+    },
+    {
+      "id": "eq10:01:16",
+      "bbox": [
+        -20,
+        -80,
+        -10,
+        -70
+      ],
+      "center": [
+        -15,
+        -75
+      ],
+      "coverageStatus": "not_yet_ingested"
+    },
+    {
+      "id": "eq10:01:17",
+      "bbox": [
+        -10,
+        -80,
+        0,
+        -70
+      ],
+      "center": [
+        -5,
+        -75
+      ],
+      "coverageStatus": "not_yet_ingested"
+    },
+    {
+      "id": "eq10:01:18",
+      "bbox": [
+        0,
+        -80,
+        10,
+        -70
+      ],
+      "center": [
+        5,
+        -75
+      ],
+      "coverageStatus": "not_yet_ingested"
+    },
+    {
+      "id": "eq10:01:19",
+      "bbox": [
+        10,
+        -80,
+        20,
+        -70
+      ],
+      "center": [
+        15,
+        -75
+      ],
+      "coverageStatus": "not_yet_ingested"
+    },
+    {
+      "id": "eq10:01:20",
+      "bbox": [
+        20,
+        -80,
+        30,
+        -70
+      ],
+      "center": [
+        25,
+        -75
+      ],
+      "coverageStatus": "not_yet_ingested"
+    },
+    {
+      "id": "eq10:01:21",
+      "bbox": [
+        30,
+        -80,
+        40,
+        -70
+      ],
+      "center": [
+        35,
+        -75
+      ],
+      "coverageStatus": "not_yet_ingested"
+    },
+    {
+      "id": "eq10:01:22",
+      "bbox": [
+        40,
+        -80,
+        50,
+        -70
+      ],
+      "center": [
+        45,
+        -75
+      ],
+      "coverageStatus": "not_yet_ingested"
+    },
+    {
+      "id": "eq10:01:23",
+      "bbox": [
+        50,
+        -80,
+        60,
+        -70
+      ],
+      "center": [
+        55,
+        -75
+      ],
+      "coverageStatus": "not_yet_ingested"
+    },
+    {
+      "id": "eq10:01:24",
+      "bbox": [
+        60,
+        -80,
+        70,
+        -70
+      ],
+      "center": [
+        65,
+        -75
+      ],
+      "coverageStatus": "not_yet_ingested"
+    },
+    {
+      "id": "eq10:01:25",
+      "bbox": [
+        70,
+        -80,
+        80,
+        -70
+      ],
+      "center": [
+        75,
+        -75
+      ],
+      "coverageStatus": "not_yet_ingested"
+    },
+    {
+      "id": "eq10:01:26",
+      "bbox": [
+        80,
+        -80,
+        90,
+        -70
+      ],
+      "center": [
+        85,
+        -75
+      ],
+      "coverageStatus": "not_yet_ingested"
+    },
+    {
+      "id": "eq10:01:27",
+      "bbox": [
+        90,
+        -80,
+        100,
+        -70
+      ],
+      "center": [
+        95,
+        -75
+      ],
+      "coverageStatus": "not_yet_ingested"
+    },
+    {
+      "id": "eq10:01:28",
+      "bbox": [
+        100,
+        -80,
+        110,
+        -70
+      ],
+      "center": [
+        105,
+        -75
+      ],
+      "coverageStatus": "not_yet_ingested"
+    },
+    {
+      "id": "eq10:01:29",
+      "bbox": [
+        110,
+        -80,
+        120,
+        -70
+      ],
+      "center": [
+        115,
+        -75
+      ],
+      "coverageStatus": "not_yet_ingested"
+    },
+    {
+      "id": "eq10:01:30",
+      "bbox": [
+        120,
+        -80,
+        130,
+        -70
+      ],
+      "center": [
+        125,
+        -75
+      ],
+      "coverageStatus": "not_yet_ingested"
+    },
+    {
+      "id": "eq10:01:31",
+      "bbox": [
+        130,
+        -80,
+        140,
+        -70
+      ],
+      "center": [
+        135,
+        -75
+      ],
+      "coverageStatus": "not_yet_ingested"
+    },
+    {
+      "id": "eq10:01:32",
+      "bbox": [
+        140,
+        -80,
+        150,
+        -70
+      ],
+      "center": [
+        145,
+        -75
+      ],
+      "coverageStatus": "not_yet_ingested"
+    },
+    {
+      "id": "eq10:01:33",
+      "bbox": [
+        150,
+        -80,
+        160,
+        -70
+      ],
+      "center": [
+        155,
+        -75
+      ],
+      "coverageStatus": "not_yet_ingested"
+    },
+    {
+      "id": "eq10:01:34",
+      "bbox": [
+        160,
+        -80,
+        170,
+        -70
+      ],
+      "center": [
+        165,
+        -75
+      ],
+      "coverageStatus": "not_yet_ingested"
+    },
+    {
+      "id": "eq10:01:35",
+      "bbox": [
+        170,
+        -80,
+        180,
+        -70
+      ],
+      "center": [
+        175,
+        -75
+      ],
+      "coverageStatus": "not_yet_ingested"
+    },
+    {
+      "id": "eq10:02:00",
+      "bbox": [
+        -180,
+        -70,
+        -170,
+        -60
+      ],
+      "center": [
+        -175,
+        -65
+      ],
+      "coverageStatus": "not_yet_ingested"
+    },
+    {
+      "id": "eq10:02:01",
+      "bbox": [
+        -170,
+        -70,
+        -160,
+        -60
+      ],
+      "center": [
+        -165,
+        -65
+      ],
+      "coverageStatus": "not_yet_ingested"
+    },
+    {
+      "id": "eq10:02:02",
+      "bbox": [
+        -160,
+        -70,
+        -150,
+        -60
+      ],
+      "center": [
+        -155,
+        -65
+      ],
+      "coverageStatus": "not_yet_ingested"
+    },
+    {
+      "id": "eq10:02:03",
+      "bbox": [
+        -150,
+        -70,
+        -140,
+        -60
+      ],
+      "center": [
+        -145,
+        -65
+      ],
+      "coverageStatus": "not_yet_ingested"
+    },
+    {
+      "id": "eq10:02:04",
+      "bbox": [
+        -140,
+        -70,
+        -130,
+        -60
+      ],
+      "center": [
+        -135,
+        -65
+      ],
+      "coverageStatus": "not_yet_ingested"
+    },
+    {
+      "id": "eq10:02:05",
+      "bbox": [
+        -130,
+        -70,
+        -120,
+        -60
+      ],
+      "center": [
+        -125,
+        -65
+      ],
+      "coverageStatus": "not_yet_ingested"
+    },
+    {
+      "id": "eq10:02:06",
+      "bbox": [
+        -120,
+        -70,
+        -110,
+        -60
+      ],
+      "center": [
+        -115,
+        -65
+      ],
+      "coverageStatus": "not_yet_ingested"
+    },
+    {
+      "id": "eq10:02:07",
+      "bbox": [
+        -110,
+        -70,
+        -100,
+        -60
+      ],
+      "center": [
+        -105,
+        -65
+      ],
+      "coverageStatus": "not_yet_ingested"
+    },
+    {
+      "id": "eq10:02:08",
+      "bbox": [
+        -100,
+        -70,
+        -90,
+        -60
+      ],
+      "center": [
+        -95,
+        -65
+      ],
+      "coverageStatus": "not_yet_ingested"
+    },
+    {
+      "id": "eq10:02:09",
+      "bbox": [
+        -90,
+        -70,
+        -80,
+        -60
+      ],
+      "center": [
+        -85,
+        -65
+      ],
+      "coverageStatus": "not_yet_ingested"
+    },
+    {
+      "id": "eq10:02:10",
+      "bbox": [
+        -80,
+        -70,
+        -70,
+        -60
+      ],
+      "center": [
+        -75,
+        -65
+      ],
+      "coverageStatus": "not_yet_ingested"
+    },
+    {
+      "id": "eq10:02:11",
+      "bbox": [
+        -70,
+        -70,
+        -60,
+        -60
+      ],
+      "center": [
+        -65,
+        -65
+      ],
+      "coverageStatus": "not_yet_ingested"
+    },
+    {
+      "id": "eq10:02:12",
+      "bbox": [
+        -60,
+        -70,
+        -50,
+        -60
+      ],
+      "center": [
+        -55,
+        -65
+      ],
+      "coverageStatus": "not_yet_ingested"
+    },
+    {
+      "id": "eq10:02:13",
+      "bbox": [
+        -50,
+        -70,
+        -40,
+        -60
+      ],
+      "center": [
+        -45,
+        -65
+      ],
+      "coverageStatus": "not_yet_ingested"
+    },
+    {
+      "id": "eq10:02:14",
+      "bbox": [
+        -40,
+        -70,
+        -30,
+        -60
+      ],
+      "center": [
+        -35,
+        -65
+      ],
+      "coverageStatus": "not_yet_ingested"
+    },
+    {
+      "id": "eq10:02:15",
+      "bbox": [
+        -30,
+        -70,
+        -20,
+        -60
+      ],
+      "center": [
+        -25,
+        -65
+      ],
+      "coverageStatus": "not_yet_ingested"
+    },
+    {
+      "id": "eq10:02:16",
+      "bbox": [
+        -20,
+        -70,
+        -10,
+        -60
+      ],
+      "center": [
+        -15,
+        -65
+      ],
+      "coverageStatus": "not_yet_ingested"
+    },
+    {
+      "id": "eq10:02:17",
+      "bbox": [
+        -10,
+        -70,
+        0,
+        -60
+      ],
+      "center": [
+        -5,
+        -65
+      ],
+      "coverageStatus": "not_yet_ingested"
+    },
+    {
+      "id": "eq10:02:18",
+      "bbox": [
+        0,
+        -70,
+        10,
+        -60
+      ],
+      "center": [
+        5,
+        -65
+      ],
+      "coverageStatus": "not_yet_ingested"
+    },
+    {
+      "id": "eq10:02:19",
+      "bbox": [
+        10,
+        -70,
+        20,
+        -60
+      ],
+      "center": [
+        15,
+        -65
+      ],
+      "coverageStatus": "not_yet_ingested"
+    },
+    {
+      "id": "eq10:02:20",
+      "bbox": [
+        20,
+        -70,
+        30,
+        -60
+      ],
+      "center": [
+        25,
+        -65
+      ],
+      "coverageStatus": "not_yet_ingested"
+    },
+    {
+      "id": "eq10:02:21",
+      "bbox": [
+        30,
+        -70,
+        40,
+        -60
+      ],
+      "center": [
+        35,
+        -65
+      ],
+      "coverageStatus": "not_yet_ingested"
+    },
+    {
+      "id": "eq10:02:22",
+      "bbox": [
+        40,
+        -70,
+        50,
+        -60
+      ],
+      "center": [
+        45,
+        -65
+      ],
+      "coverageStatus": "not_yet_ingested"
+    },
+    {
+      "id": "eq10:02:23",
+      "bbox": [
+        50,
+        -70,
+        60,
+        -60
+      ],
+      "center": [
+        55,
+        -65
+      ],
+      "coverageStatus": "not_yet_ingested"
+    },
+    {
+      "id": "eq10:02:24",
+      "bbox": [
+        60,
+        -70,
+        70,
+        -60
+      ],
+      "center": [
+        65,
+        -65
+      ],
+      "coverageStatus": "not_yet_ingested"
+    },
+    {
+      "id": "eq10:02:25",
+      "bbox": [
+        70,
+        -70,
+        80,
+        -60
+      ],
+      "center": [
+        75,
+        -65
+      ],
+      "coverageStatus": "not_yet_ingested"
+    },
+    {
+      "id": "eq10:02:26",
+      "bbox": [
+        80,
+        -70,
+        90,
+        -60
+      ],
+      "center": [
+        85,
+        -65
+      ],
+      "coverageStatus": "not_yet_ingested"
+    },
+    {
+      "id": "eq10:02:27",
+      "bbox": [
+        90,
+        -70,
+        100,
+        -60
+      ],
+      "center": [
+        95,
+        -65
+      ],
+      "coverageStatus": "not_yet_ingested"
+    },
+    {
+      "id": "eq10:02:28",
+      "bbox": [
+        100,
+        -70,
+        110,
+        -60
+      ],
+      "center": [
+        105,
+        -65
+      ],
+      "coverageStatus": "not_yet_ingested"
+    },
+    {
+      "id": "eq10:02:29",
+      "bbox": [
+        110,
+        -70,
+        120,
+        -60
+      ],
+      "center": [
+        115,
+        -65
+      ],
+      "coverageStatus": "not_yet_ingested"
+    },
+    {
+      "id": "eq10:02:30",
+      "bbox": [
+        120,
+        -70,
+        130,
+        -60
+      ],
+      "center": [
+        125,
+        -65
+      ],
+      "coverageStatus": "not_yet_ingested"
+    },
+    {
+      "id": "eq10:02:31",
+      "bbox": [
+        130,
+        -70,
+        140,
+        -60
+      ],
+      "center": [
+        135,
+        -65
+      ],
+      "coverageStatus": "not_yet_ingested"
+    },
+    {
+      "id": "eq10:02:32",
+      "bbox": [
+        140,
+        -70,
+        150,
+        -60
+      ],
+      "center": [
+        145,
+        -65
+      ],
+      "coverageStatus": "not_yet_ingested"
+    },
+    {
+      "id": "eq10:02:33",
+      "bbox": [
+        150,
+        -70,
+        160,
+        -60
+      ],
+      "center": [
+        155,
+        -65
+      ],
+      "coverageStatus": "not_yet_ingested"
+    },
+    {
+      "id": "eq10:02:34",
+      "bbox": [
+        160,
+        -70,
+        170,
+        -60
+      ],
+      "center": [
+        165,
+        -65
+      ],
+      "coverageStatus": "not_yet_ingested"
+    },
+    {
+      "id": "eq10:02:35",
+      "bbox": [
+        170,
+        -70,
+        180,
+        -60
+      ],
+      "center": [
+        175,
+        -65
+      ],
+      "coverageStatus": "not_yet_ingested"
+    },
+    {
+      "id": "eq10:03:00",
+      "bbox": [
+        -180,
+        -60,
+        -170,
+        -50
+      ],
+      "center": [
+        -175,
+        -55
+      ],
+      "coverageStatus": "not_yet_ingested"
+    },
+    {
+      "id": "eq10:03:01",
+      "bbox": [
+        -170,
+        -60,
+        -160,
+        -50
+      ],
+      "center": [
+        -165,
+        -55
+      ],
+      "coverageStatus": "not_yet_ingested"
+    },
+    {
+      "id": "eq10:03:02",
+      "bbox": [
+        -160,
+        -60,
+        -150,
+        -50
+      ],
+      "center": [
+        -155,
+        -55
+      ],
+      "coverageStatus": "not_yet_ingested"
+    },
+    {
+      "id": "eq10:03:03",
+      "bbox": [
+        -150,
+        -60,
+        -140,
+        -50
+      ],
+      "center": [
+        -145,
+        -55
+      ],
+      "coverageStatus": "not_yet_ingested"
+    },
+    {
+      "id": "eq10:03:04",
+      "bbox": [
+        -140,
+        -60,
+        -130,
+        -50
+      ],
+      "center": [
+        -135,
+        -55
+      ],
+      "coverageStatus": "not_yet_ingested"
+    },
+    {
+      "id": "eq10:03:05",
+      "bbox": [
+        -130,
+        -60,
+        -120,
+        -50
+      ],
+      "center": [
+        -125,
+        -55
+      ],
+      "coverageStatus": "not_yet_ingested"
+    },
+    {
+      "id": "eq10:03:06",
+      "bbox": [
+        -120,
+        -60,
+        -110,
+        -50
+      ],
+      "center": [
+        -115,
+        -55
+      ],
+      "coverageStatus": "not_yet_ingested"
+    },
+    {
+      "id": "eq10:03:07",
+      "bbox": [
+        -110,
+        -60,
+        -100,
+        -50
+      ],
+      "center": [
+        -105,
+        -55
+      ],
+      "coverageStatus": "not_yet_ingested"
+    },
+    {
+      "id": "eq10:03:08",
+      "bbox": [
+        -100,
+        -60,
+        -90,
+        -50
+      ],
+      "center": [
+        -95,
+        -55
+      ],
+      "coverageStatus": "not_yet_ingested"
+    },
+    {
+      "id": "eq10:03:09",
+      "bbox": [
+        -90,
+        -60,
+        -80,
+        -50
+      ],
+      "center": [
+        -85,
+        -55
+      ],
+      "coverageStatus": "not_yet_ingested"
+    },
+    {
+      "id": "eq10:03:10",
+      "bbox": [
+        -80,
+        -60,
+        -70,
+        -50
+      ],
+      "center": [
+        -75,
+        -55
+      ],
+      "coverageStatus": "not_yet_ingested"
+    },
+    {
+      "id": "eq10:03:11",
+      "bbox": [
+        -70,
+        -60,
+        -60,
+        -50
+      ],
+      "center": [
+        -65,
+        -55
+      ],
+      "coverageStatus": "not_yet_ingested"
+    },
+    {
+      "id": "eq10:03:12",
+      "bbox": [
+        -60,
+        -60,
+        -50,
+        -50
+      ],
+      "center": [
+        -55,
+        -55
+      ],
+      "coverageStatus": "not_yet_ingested"
+    },
+    {
+      "id": "eq10:03:13",
+      "bbox": [
+        -50,
+        -60,
+        -40,
+        -50
+      ],
+      "center": [
+        -45,
+        -55
+      ],
+      "coverageStatus": "not_yet_ingested"
+    },
+    {
+      "id": "eq10:03:14",
+      "bbox": [
+        -40,
+        -60,
+        -30,
+        -50
+      ],
+      "center": [
+        -35,
+        -55
+      ],
+      "coverageStatus": "not_yet_ingested"
+    },
+    {
+      "id": "eq10:03:15",
+      "bbox": [
+        -30,
+        -60,
+        -20,
+        -50
+      ],
+      "center": [
+        -25,
+        -55
+      ],
+      "coverageStatus": "not_yet_ingested"
+    },
+    {
+      "id": "eq10:03:16",
+      "bbox": [
+        -20,
+        -60,
+        -10,
+        -50
+      ],
+      "center": [
+        -15,
+        -55
+      ],
+      "coverageStatus": "not_yet_ingested"
+    },
+    {
+      "id": "eq10:03:17",
+      "bbox": [
+        -10,
+        -60,
+        0,
+        -50
+      ],
+      "center": [
+        -5,
+        -55
+      ],
+      "coverageStatus": "not_yet_ingested"
+    },
+    {
+      "id": "eq10:03:18",
+      "bbox": [
+        0,
+        -60,
+        10,
+        -50
+      ],
+      "center": [
+        5,
+        -55
+      ],
+      "coverageStatus": "not_yet_ingested"
+    },
+    {
+      "id": "eq10:03:19",
+      "bbox": [
+        10,
+        -60,
+        20,
+        -50
+      ],
+      "center": [
+        15,
+        -55
+      ],
+      "coverageStatus": "not_yet_ingested"
+    },
+    {
+      "id": "eq10:03:20",
+      "bbox": [
+        20,
+        -60,
+        30,
+        -50
+      ],
+      "center": [
+        25,
+        -55
+      ],
+      "coverageStatus": "not_yet_ingested"
+    },
+    {
+      "id": "eq10:03:21",
+      "bbox": [
+        30,
+        -60,
+        40,
+        -50
+      ],
+      "center": [
+        35,
+        -55
+      ],
+      "coverageStatus": "not_yet_ingested"
+    },
+    {
+      "id": "eq10:03:22",
+      "bbox": [
+        40,
+        -60,
+        50,
+        -50
+      ],
+      "center": [
+        45,
+        -55
+      ],
+      "coverageStatus": "not_yet_ingested"
+    },
+    {
+      "id": "eq10:03:23",
+      "bbox": [
+        50,
+        -60,
+        60,
+        -50
+      ],
+      "center": [
+        55,
+        -55
+      ],
+      "coverageStatus": "not_yet_ingested"
+    },
+    {
+      "id": "eq10:03:24",
+      "bbox": [
+        60,
+        -60,
+        70,
+        -50
+      ],
+      "center": [
+        65,
+        -55
+      ],
+      "coverageStatus": "not_yet_ingested"
+    },
+    {
+      "id": "eq10:03:25",
+      "bbox": [
+        70,
+        -60,
+        80,
+        -50
+      ],
+      "center": [
+        75,
+        -55
+      ],
+      "coverageStatus": "not_yet_ingested"
+    },
+    {
+      "id": "eq10:03:26",
+      "bbox": [
+        80,
+        -60,
+        90,
+        -50
+      ],
+      "center": [
+        85,
+        -55
+      ],
+      "coverageStatus": "not_yet_ingested"
+    },
+    {
+      "id": "eq10:03:27",
+      "bbox": [
+        90,
+        -60,
+        100,
+        -50
+      ],
+      "center": [
+        95,
+        -55
+      ],
+      "coverageStatus": "not_yet_ingested"
+    },
+    {
+      "id": "eq10:03:28",
+      "bbox": [
+        100,
+        -60,
+        110,
+        -50
+      ],
+      "center": [
+        105,
+        -55
+      ],
+      "coverageStatus": "not_yet_ingested"
+    },
+    {
+      "id": "eq10:03:29",
+      "bbox": [
+        110,
+        -60,
+        120,
+        -50
+      ],
+      "center": [
+        115,
+        -55
+      ],
+      "coverageStatus": "not_yet_ingested"
+    },
+    {
+      "id": "eq10:03:30",
+      "bbox": [
+        120,
+        -60,
+        130,
+        -50
+      ],
+      "center": [
+        125,
+        -55
+      ],
+      "coverageStatus": "not_yet_ingested"
+    },
+    {
+      "id": "eq10:03:31",
+      "bbox": [
+        130,
+        -60,
+        140,
+        -50
+      ],
+      "center": [
+        135,
+        -55
+      ],
+      "coverageStatus": "not_yet_ingested"
+    },
+    {
+      "id": "eq10:03:32",
+      "bbox": [
+        140,
+        -60,
+        150,
+        -50
+      ],
+      "center": [
+        145,
+        -55
+      ],
+      "coverageStatus": "not_yet_ingested"
+    },
+    {
+      "id": "eq10:03:33",
+      "bbox": [
+        150,
+        -60,
+        160,
+        -50
+      ],
+      "center": [
+        155,
+        -55
+      ],
+      "coverageStatus": "not_yet_ingested"
+    },
+    {
+      "id": "eq10:03:34",
+      "bbox": [
+        160,
+        -60,
+        170,
+        -50
+      ],
+      "center": [
+        165,
+        -55
+      ],
+      "coverageStatus": "not_yet_ingested"
+    },
+    {
+      "id": "eq10:03:35",
+      "bbox": [
+        170,
+        -60,
+        180,
+        -50
+      ],
+      "center": [
+        175,
+        -55
+      ],
+      "coverageStatus": "not_yet_ingested"
+    },
+    {
+      "id": "eq10:04:00",
+      "bbox": [
+        -180,
+        -50,
+        -170,
+        -40
+      ],
+      "center": [
+        -175,
+        -45
+      ],
+      "coverageStatus": "not_yet_ingested"
+    },
+    {
+      "id": "eq10:04:01",
+      "bbox": [
+        -170,
+        -50,
+        -160,
+        -40
+      ],
+      "center": [
+        -165,
+        -45
+      ],
+      "coverageStatus": "not_yet_ingested"
+    },
+    {
+      "id": "eq10:04:02",
+      "bbox": [
+        -160,
+        -50,
+        -150,
+        -40
+      ],
+      "center": [
+        -155,
+        -45
+      ],
+      "coverageStatus": "not_yet_ingested"
+    },
+    {
+      "id": "eq10:04:03",
+      "bbox": [
+        -150,
+        -50,
+        -140,
+        -40
+      ],
+      "center": [
+        -145,
+        -45
+      ],
+      "coverageStatus": "not_yet_ingested"
+    },
+    {
+      "id": "eq10:04:04",
+      "bbox": [
+        -140,
+        -50,
+        -130,
+        -40
+      ],
+      "center": [
+        -135,
+        -45
+      ],
+      "coverageStatus": "not_yet_ingested"
+    },
+    {
+      "id": "eq10:04:05",
+      "bbox": [
+        -130,
+        -50,
+        -120,
+        -40
+      ],
+      "center": [
+        -125,
+        -45
+      ],
+      "coverageStatus": "not_yet_ingested"
+    },
+    {
+      "id": "eq10:04:06",
+      "bbox": [
+        -120,
+        -50,
+        -110,
+        -40
+      ],
+      "center": [
+        -115,
+        -45
+      ],
+      "coverageStatus": "not_yet_ingested"
+    },
+    {
+      "id": "eq10:04:07",
+      "bbox": [
+        -110,
+        -50,
+        -100,
+        -40
+      ],
+      "center": [
+        -105,
+        -45
+      ],
+      "coverageStatus": "not_yet_ingested"
+    },
+    {
+      "id": "eq10:04:08",
+      "bbox": [
+        -100,
+        -50,
+        -90,
+        -40
+      ],
+      "center": [
+        -95,
+        -45
+      ],
+      "coverageStatus": "not_yet_ingested"
+    },
+    {
+      "id": "eq10:04:09",
+      "bbox": [
+        -90,
+        -50,
+        -80,
+        -40
+      ],
+      "center": [
+        -85,
+        -45
+      ],
+      "coverageStatus": "not_yet_ingested"
+    },
+    {
+      "id": "eq10:04:10",
+      "bbox": [
+        -80,
+        -50,
+        -70,
+        -40
+      ],
+      "center": [
+        -75,
+        -45
+      ],
+      "coverageStatus": "not_yet_ingested"
+    },
+    {
+      "id": "eq10:04:11",
+      "bbox": [
+        -70,
+        -50,
+        -60,
+        -40
+      ],
+      "center": [
+        -65,
+        -45
+      ],
+      "coverageStatus": "not_yet_ingested"
+    },
+    {
+      "id": "eq10:04:12",
+      "bbox": [
+        -60,
+        -50,
+        -50,
+        -40
+      ],
+      "center": [
+        -55,
+        -45
+      ],
+      "coverageStatus": "not_yet_ingested"
+    },
+    {
+      "id": "eq10:04:13",
+      "bbox": [
+        -50,
+        -50,
+        -40,
+        -40
+      ],
+      "center": [
+        -45,
+        -45
+      ],
+      "coverageStatus": "not_yet_ingested"
+    },
+    {
+      "id": "eq10:04:14",
+      "bbox": [
+        -40,
+        -50,
+        -30,
+        -40
+      ],
+      "center": [
+        -35,
+        -45
+      ],
+      "coverageStatus": "not_yet_ingested"
+    },
+    {
+      "id": "eq10:04:15",
+      "bbox": [
+        -30,
+        -50,
+        -20,
+        -40
+      ],
+      "center": [
+        -25,
+        -45
+      ],
+      "coverageStatus": "not_yet_ingested"
+    },
+    {
+      "id": "eq10:04:16",
+      "bbox": [
+        -20,
+        -50,
+        -10,
+        -40
+      ],
+      "center": [
+        -15,
+        -45
+      ],
+      "coverageStatus": "not_yet_ingested"
+    },
+    {
+      "id": "eq10:04:17",
+      "bbox": [
+        -10,
+        -50,
+        0,
+        -40
+      ],
+      "center": [
+        -5,
+        -45
+      ],
+      "coverageStatus": "not_yet_ingested"
+    },
+    {
+      "id": "eq10:04:18",
+      "bbox": [
+        0,
+        -50,
+        10,
+        -40
+      ],
+      "center": [
+        5,
+        -45
+      ],
+      "coverageStatus": "not_yet_ingested"
+    },
+    {
+      "id": "eq10:04:19",
+      "bbox": [
+        10,
+        -50,
+        20,
+        -40
+      ],
+      "center": [
+        15,
+        -45
+      ],
+      "coverageStatus": "not_yet_ingested"
+    },
+    {
+      "id": "eq10:04:20",
+      "bbox": [
+        20,
+        -50,
+        30,
+        -40
+      ],
+      "center": [
+        25,
+        -45
+      ],
+      "coverageStatus": "not_yet_ingested"
+    },
+    {
+      "id": "eq10:04:21",
+      "bbox": [
+        30,
+        -50,
+        40,
+        -40
+      ],
+      "center": [
+        35,
+        -45
+      ],
+      "coverageStatus": "not_yet_ingested"
+    },
+    {
+      "id": "eq10:04:22",
+      "bbox": [
+        40,
+        -50,
+        50,
+        -40
+      ],
+      "center": [
+        45,
+        -45
+      ],
+      "coverageStatus": "not_yet_ingested"
+    },
+    {
+      "id": "eq10:04:23",
+      "bbox": [
+        50,
+        -50,
+        60,
+        -40
+      ],
+      "center": [
+        55,
+        -45
+      ],
+      "coverageStatus": "not_yet_ingested"
+    },
+    {
+      "id": "eq10:04:24",
+      "bbox": [
+        60,
+        -50,
+        70,
+        -40
+      ],
+      "center": [
+        65,
+        -45
+      ],
+      "coverageStatus": "not_yet_ingested"
+    },
+    {
+      "id": "eq10:04:25",
+      "bbox": [
+        70,
+        -50,
+        80,
+        -40
+      ],
+      "center": [
+        75,
+        -45
+      ],
+      "coverageStatus": "not_yet_ingested"
+    },
+    {
+      "id": "eq10:04:26",
+      "bbox": [
+        80,
+        -50,
+        90,
+        -40
+      ],
+      "center": [
+        85,
+        -45
+      ],
+      "coverageStatus": "not_yet_ingested"
+    },
+    {
+      "id": "eq10:04:27",
+      "bbox": [
+        90,
+        -50,
+        100,
+        -40
+      ],
+      "center": [
+        95,
+        -45
+      ],
+      "coverageStatus": "not_yet_ingested"
+    },
+    {
+      "id": "eq10:04:28",
+      "bbox": [
+        100,
+        -50,
+        110,
+        -40
+      ],
+      "center": [
+        105,
+        -45
+      ],
+      "coverageStatus": "not_yet_ingested"
+    },
+    {
+      "id": "eq10:04:29",
+      "bbox": [
+        110,
+        -50,
+        120,
+        -40
+      ],
+      "center": [
+        115,
+        -45
+      ],
+      "coverageStatus": "not_yet_ingested"
+    },
+    {
+      "id": "eq10:04:30",
+      "bbox": [
+        120,
+        -50,
+        130,
+        -40
+      ],
+      "center": [
+        125,
+        -45
+      ],
+      "coverageStatus": "not_yet_ingested"
+    },
+    {
+      "id": "eq10:04:31",
+      "bbox": [
+        130,
+        -50,
+        140,
+        -40
+      ],
+      "center": [
+        135,
+        -45
+      ],
+      "coverageStatus": "not_yet_ingested"
+    },
+    {
+      "id": "eq10:04:32",
+      "bbox": [
+        140,
+        -50,
+        150,
+        -40
+      ],
+      "center": [
+        145,
+        -45
+      ],
+      "coverageStatus": "not_yet_ingested"
+    },
+    {
+      "id": "eq10:04:33",
+      "bbox": [
+        150,
+        -50,
+        160,
+        -40
+      ],
+      "center": [
+        155,
+        -45
+      ],
+      "coverageStatus": "not_yet_ingested"
+    },
+    {
+      "id": "eq10:04:34",
+      "bbox": [
+        160,
+        -50,
+        170,
+        -40
+      ],
+      "center": [
+        165,
+        -45
+      ],
+      "coverageStatus": "not_yet_ingested"
+    },
+    {
+      "id": "eq10:04:35",
+      "bbox": [
+        170,
+        -50,
+        180,
+        -40
+      ],
+      "center": [
+        175,
+        -45
+      ],
+      "coverageStatus": "not_yet_ingested"
+    },
+    {
+      "id": "eq10:05:00",
+      "bbox": [
+        -180,
+        -40,
+        -170,
+        -30
+      ],
+      "center": [
+        -175,
+        -35
+      ],
+      "coverageStatus": "not_yet_ingested"
+    },
+    {
+      "id": "eq10:05:01",
+      "bbox": [
+        -170,
+        -40,
+        -160,
+        -30
+      ],
+      "center": [
+        -165,
+        -35
+      ],
+      "coverageStatus": "not_yet_ingested"
+    },
+    {
+      "id": "eq10:05:02",
+      "bbox": [
+        -160,
+        -40,
+        -150,
+        -30
+      ],
+      "center": [
+        -155,
+        -35
+      ],
+      "coverageStatus": "not_yet_ingested"
+    },
+    {
+      "id": "eq10:05:03",
+      "bbox": [
+        -150,
+        -40,
+        -140,
+        -30
+      ],
+      "center": [
+        -145,
+        -35
+      ],
+      "coverageStatus": "not_yet_ingested"
+    },
+    {
+      "id": "eq10:05:04",
+      "bbox": [
+        -140,
+        -40,
+        -130,
+        -30
+      ],
+      "center": [
+        -135,
+        -35
+      ],
+      "coverageStatus": "not_yet_ingested"
+    },
+    {
+      "id": "eq10:05:05",
+      "bbox": [
+        -130,
+        -40,
+        -120,
+        -30
+      ],
+      "center": [
+        -125,
+        -35
+      ],
+      "coverageStatus": "not_yet_ingested"
+    },
+    {
+      "id": "eq10:05:06",
+      "bbox": [
+        -120,
+        -40,
+        -110,
+        -30
+      ],
+      "center": [
+        -115,
+        -35
+      ],
+      "coverageStatus": "not_yet_ingested"
+    },
+    {
+      "id": "eq10:05:07",
+      "bbox": [
+        -110,
+        -40,
+        -100,
+        -30
+      ],
+      "center": [
+        -105,
+        -35
+      ],
+      "coverageStatus": "not_yet_ingested"
+    },
+    {
+      "id": "eq10:05:08",
+      "bbox": [
+        -100,
+        -40,
+        -90,
+        -30
+      ],
+      "center": [
+        -95,
+        -35
+      ],
+      "coverageStatus": "not_yet_ingested"
+    },
+    {
+      "id": "eq10:05:09",
+      "bbox": [
+        -90,
+        -40,
+        -80,
+        -30
+      ],
+      "center": [
+        -85,
+        -35
+      ],
+      "coverageStatus": "not_yet_ingested"
+    },
+    {
+      "id": "eq10:05:10",
+      "bbox": [
+        -80,
+        -40,
+        -70,
+        -30
+      ],
+      "center": [
+        -75,
+        -35
+      ],
+      "coverageStatus": "not_yet_ingested"
+    },
+    {
+      "id": "eq10:05:11",
+      "bbox": [
+        -70,
+        -40,
+        -60,
+        -30
+      ],
+      "center": [
+        -65,
+        -35
+      ],
+      "coverageStatus": "not_yet_ingested"
+    },
+    {
+      "id": "eq10:05:12",
+      "bbox": [
+        -60,
+        -40,
+        -50,
+        -30
+      ],
+      "center": [
+        -55,
+        -35
+      ],
+      "coverageStatus": "not_yet_ingested"
+    },
+    {
+      "id": "eq10:05:13",
+      "bbox": [
+        -50,
+        -40,
+        -40,
+        -30
+      ],
+      "center": [
+        -45,
+        -35
+      ],
+      "coverageStatus": "not_yet_ingested"
+    },
+    {
+      "id": "eq10:05:14",
+      "bbox": [
+        -40,
+        -40,
+        -30,
+        -30
+      ],
+      "center": [
+        -35,
+        -35
+      ],
+      "coverageStatus": "not_yet_ingested"
+    },
+    {
+      "id": "eq10:05:15",
+      "bbox": [
+        -30,
+        -40,
+        -20,
+        -30
+      ],
+      "center": [
+        -25,
+        -35
+      ],
+      "coverageStatus": "not_yet_ingested"
+    },
+    {
+      "id": "eq10:05:16",
+      "bbox": [
+        -20,
+        -40,
+        -10,
+        -30
+      ],
+      "center": [
+        -15,
+        -35
+      ],
+      "coverageStatus": "not_yet_ingested"
+    },
+    {
+      "id": "eq10:05:17",
+      "bbox": [
+        -10,
+        -40,
+        0,
+        -30
+      ],
+      "center": [
+        -5,
+        -35
+      ],
+      "coverageStatus": "not_yet_ingested"
+    },
+    {
+      "id": "eq10:05:18",
+      "bbox": [
+        0,
+        -40,
+        10,
+        -30
+      ],
+      "center": [
+        5,
+        -35
+      ],
+      "coverageStatus": "not_yet_ingested"
+    },
+    {
+      "id": "eq10:05:19",
+      "bbox": [
+        10,
+        -40,
+        20,
+        -30
+      ],
+      "center": [
+        15,
+        -35
+      ],
+      "coverageStatus": "not_yet_ingested"
+    },
+    {
+      "id": "eq10:05:20",
+      "bbox": [
+        20,
+        -40,
+        30,
+        -30
+      ],
+      "center": [
+        25,
+        -35
+      ],
+      "coverageStatus": "not_yet_ingested"
+    },
+    {
+      "id": "eq10:05:21",
+      "bbox": [
+        30,
+        -40,
+        40,
+        -30
+      ],
+      "center": [
+        35,
+        -35
+      ],
+      "coverageStatus": "not_yet_ingested"
+    },
+    {
+      "id": "eq10:05:22",
+      "bbox": [
+        40,
+        -40,
+        50,
+        -30
+      ],
+      "center": [
+        45,
+        -35
+      ],
+      "coverageStatus": "not_yet_ingested"
+    },
+    {
+      "id": "eq10:05:23",
+      "bbox": [
+        50,
+        -40,
+        60,
+        -30
+      ],
+      "center": [
+        55,
+        -35
+      ],
+      "coverageStatus": "not_yet_ingested"
+    },
+    {
+      "id": "eq10:05:24",
+      "bbox": [
+        60,
+        -40,
+        70,
+        -30
+      ],
+      "center": [
+        65,
+        -35
+      ],
+      "coverageStatus": "not_yet_ingested"
+    },
+    {
+      "id": "eq10:05:25",
+      "bbox": [
+        70,
+        -40,
+        80,
+        -30
+      ],
+      "center": [
+        75,
+        -35
+      ],
+      "coverageStatus": "not_yet_ingested"
+    },
+    {
+      "id": "eq10:05:26",
+      "bbox": [
+        80,
+        -40,
+        90,
+        -30
+      ],
+      "center": [
+        85,
+        -35
+      ],
+      "coverageStatus": "not_yet_ingested"
+    },
+    {
+      "id": "eq10:05:27",
+      "bbox": [
+        90,
+        -40,
+        100,
+        -30
+      ],
+      "center": [
+        95,
+        -35
+      ],
+      "coverageStatus": "not_yet_ingested"
+    },
+    {
+      "id": "eq10:05:28",
+      "bbox": [
+        100,
+        -40,
+        110,
+        -30
+      ],
+      "center": [
+        105,
+        -35
+      ],
+      "coverageStatus": "not_yet_ingested"
+    },
+    {
+      "id": "eq10:05:29",
+      "bbox": [
+        110,
+        -40,
+        120,
+        -30
+      ],
+      "center": [
+        115,
+        -35
+      ],
+      "coverageStatus": "not_yet_ingested"
+    },
+    {
+      "id": "eq10:05:30",
+      "bbox": [
+        120,
+        -40,
+        130,
+        -30
+      ],
+      "center": [
+        125,
+        -35
+      ],
+      "coverageStatus": "not_yet_ingested"
+    },
+    {
+      "id": "eq10:05:31",
+      "bbox": [
+        130,
+        -40,
+        140,
+        -30
+      ],
+      "center": [
+        135,
+        -35
+      ],
+      "coverageStatus": "not_yet_ingested"
+    },
+    {
+      "id": "eq10:05:32",
+      "bbox": [
+        140,
+        -40,
+        150,
+        -30
+      ],
+      "center": [
+        145,
+        -35
+      ],
+      "coverageStatus": "not_yet_ingested"
+    },
+    {
+      "id": "eq10:05:33",
+      "bbox": [
+        150,
+        -40,
+        160,
+        -30
+      ],
+      "center": [
+        155,
+        -35
+      ],
+      "coverageStatus": "not_yet_ingested"
+    },
+    {
+      "id": "eq10:05:34",
+      "bbox": [
+        160,
+        -40,
+        170,
+        -30
+      ],
+      "center": [
+        165,
+        -35
+      ],
+      "coverageStatus": "not_yet_ingested"
+    },
+    {
+      "id": "eq10:05:35",
+      "bbox": [
+        170,
+        -40,
+        180,
+        -30
+      ],
+      "center": [
+        175,
+        -35
+      ],
+      "coverageStatus": "not_yet_ingested"
+    },
+    {
+      "id": "eq10:06:00",
+      "bbox": [
+        -180,
+        -30,
+        -170,
+        -20
+      ],
+      "center": [
+        -175,
+        -25
+      ],
+      "coverageStatus": "not_yet_ingested"
+    },
+    {
+      "id": "eq10:06:01",
+      "bbox": [
+        -170,
+        -30,
+        -160,
+        -20
+      ],
+      "center": [
+        -165,
+        -25
+      ],
+      "coverageStatus": "not_yet_ingested"
+    },
+    {
+      "id": "eq10:06:02",
+      "bbox": [
+        -160,
+        -30,
+        -150,
+        -20
+      ],
+      "center": [
+        -155,
+        -25
+      ],
+      "coverageStatus": "not_yet_ingested"
+    },
+    {
+      "id": "eq10:06:03",
+      "bbox": [
+        -150,
+        -30,
+        -140,
+        -20
+      ],
+      "center": [
+        -145,
+        -25
+      ],
+      "coverageStatus": "not_yet_ingested"
+    },
+    {
+      "id": "eq10:06:04",
+      "bbox": [
+        -140,
+        -30,
+        -130,
+        -20
+      ],
+      "center": [
+        -135,
+        -25
+      ],
+      "coverageStatus": "not_yet_ingested"
+    },
+    {
+      "id": "eq10:06:05",
+      "bbox": [
+        -130,
+        -30,
+        -120,
+        -20
+      ],
+      "center": [
+        -125,
+        -25
+      ],
+      "coverageStatus": "not_yet_ingested"
+    },
+    {
+      "id": "eq10:06:06",
+      "bbox": [
+        -120,
+        -30,
+        -110,
+        -20
+      ],
+      "center": [
+        -115,
+        -25
+      ],
+      "coverageStatus": "not_yet_ingested"
+    },
+    {
+      "id": "eq10:06:07",
+      "bbox": [
+        -110,
+        -30,
+        -100,
+        -20
+      ],
+      "center": [
+        -105,
+        -25
+      ],
+      "coverageStatus": "not_yet_ingested"
+    },
+    {
+      "id": "eq10:06:08",
+      "bbox": [
+        -100,
+        -30,
+        -90,
+        -20
+      ],
+      "center": [
+        -95,
+        -25
+      ],
+      "coverageStatus": "not_yet_ingested"
+    },
+    {
+      "id": "eq10:06:09",
+      "bbox": [
+        -90,
+        -30,
+        -80,
+        -20
+      ],
+      "center": [
+        -85,
+        -25
+      ],
+      "coverageStatus": "not_yet_ingested"
+    },
+    {
+      "id": "eq10:06:10",
+      "bbox": [
+        -80,
+        -30,
+        -70,
+        -20
+      ],
+      "center": [
+        -75,
+        -25
+      ],
+      "coverageStatus": "not_yet_ingested"
+    },
+    {
+      "id": "eq10:06:11",
+      "bbox": [
+        -70,
+        -30,
+        -60,
+        -20
+      ],
+      "center": [
+        -65,
+        -25
+      ],
+      "coverageStatus": "not_yet_ingested"
+    },
+    {
+      "id": "eq10:06:12",
+      "bbox": [
+        -60,
+        -30,
+        -50,
+        -20
+      ],
+      "center": [
+        -55,
+        -25
+      ],
+      "coverageStatus": "not_yet_ingested"
+    },
+    {
+      "id": "eq10:06:13",
+      "bbox": [
+        -50,
+        -30,
+        -40,
+        -20
+      ],
+      "center": [
+        -45,
+        -25
+      ],
+      "coverageStatus": "not_yet_ingested"
+    },
+    {
+      "id": "eq10:06:14",
+      "bbox": [
+        -40,
+        -30,
+        -30,
+        -20
+      ],
+      "center": [
+        -35,
+        -25
+      ],
+      "coverageStatus": "not_yet_ingested"
+    },
+    {
+      "id": "eq10:06:15",
+      "bbox": [
+        -30,
+        -30,
+        -20,
+        -20
+      ],
+      "center": [
+        -25,
+        -25
+      ],
+      "coverageStatus": "not_yet_ingested"
+    },
+    {
+      "id": "eq10:06:16",
+      "bbox": [
+        -20,
+        -30,
+        -10,
+        -20
+      ],
+      "center": [
+        -15,
+        -25
+      ],
+      "coverageStatus": "not_yet_ingested"
+    },
+    {
+      "id": "eq10:06:17",
+      "bbox": [
+        -10,
+        -30,
+        0,
+        -20
+      ],
+      "center": [
+        -5,
+        -25
+      ],
+      "coverageStatus": "not_yet_ingested"
+    },
+    {
+      "id": "eq10:06:18",
+      "bbox": [
+        0,
+        -30,
+        10,
+        -20
+      ],
+      "center": [
+        5,
+        -25
+      ],
+      "coverageStatus": "not_yet_ingested"
+    },
+    {
+      "id": "eq10:06:19",
+      "bbox": [
+        10,
+        -30,
+        20,
+        -20
+      ],
+      "center": [
+        15,
+        -25
+      ],
+      "coverageStatus": "not_yet_ingested"
+    },
+    {
+      "id": "eq10:06:20",
+      "bbox": [
+        20,
+        -30,
+        30,
+        -20
+      ],
+      "center": [
+        25,
+        -25
+      ],
+      "coverageStatus": "not_yet_ingested"
+    },
+    {
+      "id": "eq10:06:21",
+      "bbox": [
+        30,
+        -30,
+        40,
+        -20
+      ],
+      "center": [
+        35,
+        -25
+      ],
+      "coverageStatus": "not_yet_ingested"
+    },
+    {
+      "id": "eq10:06:22",
+      "bbox": [
+        40,
+        -30,
+        50,
+        -20
+      ],
+      "center": [
+        45,
+        -25
+      ],
+      "coverageStatus": "not_yet_ingested"
+    },
+    {
+      "id": "eq10:06:23",
+      "bbox": [
+        50,
+        -30,
+        60,
+        -20
+      ],
+      "center": [
+        55,
+        -25
+      ],
+      "coverageStatus": "not_yet_ingested"
+    },
+    {
+      "id": "eq10:06:24",
+      "bbox": [
+        60,
+        -30,
+        70,
+        -20
+      ],
+      "center": [
+        65,
+        -25
+      ],
+      "coverageStatus": "not_yet_ingested"
+    },
+    {
+      "id": "eq10:06:25",
+      "bbox": [
+        70,
+        -30,
+        80,
+        -20
+      ],
+      "center": [
+        75,
+        -25
+      ],
+      "coverageStatus": "not_yet_ingested"
+    },
+    {
+      "id": "eq10:06:26",
+      "bbox": [
+        80,
+        -30,
+        90,
+        -20
+      ],
+      "center": [
+        85,
+        -25
+      ],
+      "coverageStatus": "not_yet_ingested"
+    },
+    {
+      "id": "eq10:06:27",
+      "bbox": [
+        90,
+        -30,
+        100,
+        -20
+      ],
+      "center": [
+        95,
+        -25
+      ],
+      "coverageStatus": "not_yet_ingested"
+    },
+    {
+      "id": "eq10:06:28",
+      "bbox": [
+        100,
+        -30,
+        110,
+        -20
+      ],
+      "center": [
+        105,
+        -25
+      ],
+      "coverageStatus": "not_yet_ingested"
+    },
+    {
+      "id": "eq10:06:29",
+      "bbox": [
+        110,
+        -30,
+        120,
+        -20
+      ],
+      "center": [
+        115,
+        -25
+      ],
+      "coverageStatus": "not_yet_ingested"
+    },
+    {
+      "id": "eq10:06:30",
+      "bbox": [
+        120,
+        -30,
+        130,
+        -20
+      ],
+      "center": [
+        125,
+        -25
+      ],
+      "coverageStatus": "not_yet_ingested"
+    },
+    {
+      "id": "eq10:06:31",
+      "bbox": [
+        130,
+        -30,
+        140,
+        -20
+      ],
+      "center": [
+        135,
+        -25
+      ],
+      "coverageStatus": "not_yet_ingested"
+    },
+    {
+      "id": "eq10:06:32",
+      "bbox": [
+        140,
+        -30,
+        150,
+        -20
+      ],
+      "center": [
+        145,
+        -25
+      ],
+      "coverageStatus": "not_yet_ingested"
+    },
+    {
+      "id": "eq10:06:33",
+      "bbox": [
+        150,
+        -30,
+        160,
+        -20
+      ],
+      "center": [
+        155,
+        -25
+      ],
+      "coverageStatus": "not_yet_ingested"
+    },
+    {
+      "id": "eq10:06:34",
+      "bbox": [
+        160,
+        -30,
+        170,
+        -20
+      ],
+      "center": [
+        165,
+        -25
+      ],
+      "coverageStatus": "not_yet_ingested"
+    },
+    {
+      "id": "eq10:06:35",
+      "bbox": [
+        170,
+        -30,
+        180,
+        -20
+      ],
+      "center": [
+        175,
+        -25
+      ],
+      "coverageStatus": "not_yet_ingested"
+    },
+    {
+      "id": "eq10:07:00",
+      "bbox": [
+        -180,
+        -20,
+        -170,
+        -10
+      ],
+      "center": [
+        -175,
+        -15
+      ],
+      "coverageStatus": "not_yet_ingested"
+    },
+    {
+      "id": "eq10:07:01",
+      "bbox": [
+        -170,
+        -20,
+        -160,
+        -10
+      ],
+      "center": [
+        -165,
+        -15
+      ],
+      "coverageStatus": "not_yet_ingested"
+    },
+    {
+      "id": "eq10:07:02",
+      "bbox": [
+        -160,
+        -20,
+        -150,
+        -10
+      ],
+      "center": [
+        -155,
+        -15
+      ],
+      "coverageStatus": "not_yet_ingested"
+    },
+    {
+      "id": "eq10:07:03",
+      "bbox": [
+        -150,
+        -20,
+        -140,
+        -10
+      ],
+      "center": [
+        -145,
+        -15
+      ],
+      "coverageStatus": "not_yet_ingested"
+    },
+    {
+      "id": "eq10:07:04",
+      "bbox": [
+        -140,
+        -20,
+        -130,
+        -10
+      ],
+      "center": [
+        -135,
+        -15
+      ],
+      "coverageStatus": "not_yet_ingested"
+    },
+    {
+      "id": "eq10:07:05",
+      "bbox": [
+        -130,
+        -20,
+        -120,
+        -10
+      ],
+      "center": [
+        -125,
+        -15
+      ],
+      "coverageStatus": "not_yet_ingested"
+    },
+    {
+      "id": "eq10:07:06",
+      "bbox": [
+        -120,
+        -20,
+        -110,
+        -10
+      ],
+      "center": [
+        -115,
+        -15
+      ],
+      "coverageStatus": "not_yet_ingested"
+    },
+    {
+      "id": "eq10:07:07",
+      "bbox": [
+        -110,
+        -20,
+        -100,
+        -10
+      ],
+      "center": [
+        -105,
+        -15
+      ],
+      "coverageStatus": "not_yet_ingested"
+    },
+    {
+      "id": "eq10:07:08",
+      "bbox": [
+        -100,
+        -20,
+        -90,
+        -10
+      ],
+      "center": [
+        -95,
+        -15
+      ],
+      "coverageStatus": "not_yet_ingested"
+    },
+    {
+      "id": "eq10:07:09",
+      "bbox": [
+        -90,
+        -20,
+        -80,
+        -10
+      ],
+      "center": [
+        -85,
+        -15
+      ],
+      "coverageStatus": "not_yet_ingested"
+    },
+    {
+      "id": "eq10:07:10",
+      "bbox": [
+        -80,
+        -20,
+        -70,
+        -10
+      ],
+      "center": [
+        -75,
+        -15
+      ],
+      "coverageStatus": "not_yet_ingested"
+    },
+    {
+      "id": "eq10:07:11",
+      "bbox": [
+        -70,
+        -20,
+        -60,
+        -10
+      ],
+      "center": [
+        -65,
+        -15
+      ],
+      "coverageStatus": "not_yet_ingested"
+    },
+    {
+      "id": "eq10:07:12",
+      "bbox": [
+        -60,
+        -20,
+        -50,
+        -10
+      ],
+      "center": [
+        -55,
+        -15
+      ],
+      "coverageStatus": "not_yet_ingested"
+    },
+    {
+      "id": "eq10:07:13",
+      "bbox": [
+        -50,
+        -20,
+        -40,
+        -10
+      ],
+      "center": [
+        -45,
+        -15
+      ],
+      "coverageStatus": "not_yet_ingested"
+    },
+    {
+      "id": "eq10:07:14",
+      "bbox": [
+        -40,
+        -20,
+        -30,
+        -10
+      ],
+      "center": [
+        -35,
+        -15
+      ],
+      "coverageStatus": "not_yet_ingested"
+    },
+    {
+      "id": "eq10:07:15",
+      "bbox": [
+        -30,
+        -20,
+        -20,
+        -10
+      ],
+      "center": [
+        -25,
+        -15
+      ],
+      "coverageStatus": "not_yet_ingested"
+    },
+    {
+      "id": "eq10:07:16",
+      "bbox": [
+        -20,
+        -20,
+        -10,
+        -10
+      ],
+      "center": [
+        -15,
+        -15
+      ],
+      "coverageStatus": "not_yet_ingested"
+    },
+    {
+      "id": "eq10:07:17",
+      "bbox": [
+        -10,
+        -20,
+        0,
+        -10
+      ],
+      "center": [
+        -5,
+        -15
+      ],
+      "coverageStatus": "not_yet_ingested"
+    },
+    {
+      "id": "eq10:07:18",
+      "bbox": [
+        0,
+        -20,
+        10,
+        -10
+      ],
+      "center": [
+        5,
+        -15
+      ],
+      "coverageStatus": "not_yet_ingested"
+    },
+    {
+      "id": "eq10:07:19",
+      "bbox": [
+        10,
+        -20,
+        20,
+        -10
+      ],
+      "center": [
+        15,
+        -15
+      ],
+      "coverageStatus": "not_yet_ingested"
+    },
+    {
+      "id": "eq10:07:20",
+      "bbox": [
+        20,
+        -20,
+        30,
+        -10
+      ],
+      "center": [
+        25,
+        -15
+      ],
+      "coverageStatus": "not_yet_ingested"
+    },
+    {
+      "id": "eq10:07:21",
+      "bbox": [
+        30,
+        -20,
+        40,
+        -10
+      ],
+      "center": [
+        35,
+        -15
+      ],
+      "coverageStatus": "not_yet_ingested"
+    },
+    {
+      "id": "eq10:07:22",
+      "bbox": [
+        40,
+        -20,
+        50,
+        -10
+      ],
+      "center": [
+        45,
+        -15
+      ],
+      "coverageStatus": "not_yet_ingested"
+    },
+    {
+      "id": "eq10:07:23",
+      "bbox": [
+        50,
+        -20,
+        60,
+        -10
+      ],
+      "center": [
+        55,
+        -15
+      ],
+      "coverageStatus": "not_yet_ingested"
+    },
+    {
+      "id": "eq10:07:24",
+      "bbox": [
+        60,
+        -20,
+        70,
+        -10
+      ],
+      "center": [
+        65,
+        -15
+      ],
+      "coverageStatus": "not_yet_ingested"
+    },
+    {
+      "id": "eq10:07:25",
+      "bbox": [
+        70,
+        -20,
+        80,
+        -10
+      ],
+      "center": [
+        75,
+        -15
+      ],
+      "coverageStatus": "not_yet_ingested"
+    },
+    {
+      "id": "eq10:07:26",
+      "bbox": [
+        80,
+        -20,
+        90,
+        -10
+      ],
+      "center": [
+        85,
+        -15
+      ],
+      "coverageStatus": "not_yet_ingested"
+    },
+    {
+      "id": "eq10:07:27",
+      "bbox": [
+        90,
+        -20,
+        100,
+        -10
+      ],
+      "center": [
+        95,
+        -15
+      ],
+      "coverageStatus": "not_yet_ingested"
+    },
+    {
+      "id": "eq10:07:28",
+      "bbox": [
+        100,
+        -20,
+        110,
+        -10
+      ],
+      "center": [
+        105,
+        -15
+      ],
+      "coverageStatus": "not_yet_ingested"
+    },
+    {
+      "id": "eq10:07:29",
+      "bbox": [
+        110,
+        -20,
+        120,
+        -10
+      ],
+      "center": [
+        115,
+        -15
+      ],
+      "coverageStatus": "not_yet_ingested"
+    },
+    {
+      "id": "eq10:07:30",
+      "bbox": [
+        120,
+        -20,
+        130,
+        -10
+      ],
+      "center": [
+        125,
+        -15
+      ],
+      "coverageStatus": "not_yet_ingested"
+    },
+    {
+      "id": "eq10:07:31",
+      "bbox": [
+        130,
+        -20,
+        140,
+        -10
+      ],
+      "center": [
+        135,
+        -15
+      ],
+      "coverageStatus": "not_yet_ingested"
+    },
+    {
+      "id": "eq10:07:32",
+      "bbox": [
+        140,
+        -20,
+        150,
+        -10
+      ],
+      "center": [
+        145,
+        -15
+      ],
+      "coverageStatus": "not_yet_ingested"
+    },
+    {
+      "id": "eq10:07:33",
+      "bbox": [
+        150,
+        -20,
+        160,
+        -10
+      ],
+      "center": [
+        155,
+        -15
+      ],
+      "coverageStatus": "not_yet_ingested"
+    },
+    {
+      "id": "eq10:07:34",
+      "bbox": [
+        160,
+        -20,
+        170,
+        -10
+      ],
+      "center": [
+        165,
+        -15
+      ],
+      "coverageStatus": "not_yet_ingested"
+    },
+    {
+      "id": "eq10:07:35",
+      "bbox": [
+        170,
+        -20,
+        180,
+        -10
+      ],
+      "center": [
+        175,
+        -15
+      ],
+      "coverageStatus": "not_yet_ingested"
+    },
+    {
+      "id": "eq10:08:00",
+      "bbox": [
+        -180,
+        -10,
+        -170,
+        0
+      ],
+      "center": [
+        -175,
+        -5
+      ],
+      "coverageStatus": "not_yet_ingested"
+    },
+    {
+      "id": "eq10:08:01",
+      "bbox": [
+        -170,
+        -10,
+        -160,
+        0
+      ],
+      "center": [
+        -165,
+        -5
+      ],
+      "coverageStatus": "not_yet_ingested"
+    },
+    {
+      "id": "eq10:08:02",
+      "bbox": [
+        -160,
+        -10,
+        -150,
+        0
+      ],
+      "center": [
+        -155,
+        -5
+      ],
+      "coverageStatus": "not_yet_ingested"
+    },
+    {
+      "id": "eq10:08:03",
+      "bbox": [
+        -150,
+        -10,
+        -140,
+        0
+      ],
+      "center": [
+        -145,
+        -5
+      ],
+      "coverageStatus": "not_yet_ingested"
+    },
+    {
+      "id": "eq10:08:04",
+      "bbox": [
+        -140,
+        -10,
+        -130,
+        0
+      ],
+      "center": [
+        -135,
+        -5
+      ],
+      "coverageStatus": "not_yet_ingested"
+    },
+    {
+      "id": "eq10:08:05",
+      "bbox": [
+        -130,
+        -10,
+        -120,
+        0
+      ],
+      "center": [
+        -125,
+        -5
+      ],
+      "coverageStatus": "not_yet_ingested"
+    },
+    {
+      "id": "eq10:08:06",
+      "bbox": [
+        -120,
+        -10,
+        -110,
+        0
+      ],
+      "center": [
+        -115,
+        -5
+      ],
+      "coverageStatus": "not_yet_ingested"
+    },
+    {
+      "id": "eq10:08:07",
+      "bbox": [
+        -110,
+        -10,
+        -100,
+        0
+      ],
+      "center": [
+        -105,
+        -5
+      ],
+      "coverageStatus": "not_yet_ingested"
+    },
+    {
+      "id": "eq10:08:08",
+      "bbox": [
+        -100,
+        -10,
+        -90,
+        0
+      ],
+      "center": [
+        -95,
+        -5
+      ],
+      "coverageStatus": "not_yet_ingested"
+    },
+    {
+      "id": "eq10:08:09",
+      "bbox": [
+        -90,
+        -10,
+        -80,
+        0
+      ],
+      "center": [
+        -85,
+        -5
+      ],
+      "coverageStatus": "not_yet_ingested"
+    },
+    {
+      "id": "eq10:08:10",
+      "bbox": [
+        -80,
+        -10,
+        -70,
+        0
+      ],
+      "center": [
+        -75,
+        -5
+      ],
+      "coverageStatus": "not_yet_ingested"
+    },
+    {
+      "id": "eq10:08:11",
+      "bbox": [
+        -70,
+        -10,
+        -60,
+        0
+      ],
+      "center": [
+        -65,
+        -5
+      ],
+      "coverageStatus": "not_yet_ingested"
+    },
+    {
+      "id": "eq10:08:12",
+      "bbox": [
+        -60,
+        -10,
+        -50,
+        0
+      ],
+      "center": [
+        -55,
+        -5
+      ],
+      "coverageStatus": "not_yet_ingested"
+    },
+    {
+      "id": "eq10:08:13",
+      "bbox": [
+        -50,
+        -10,
+        -40,
+        0
+      ],
+      "center": [
+        -45,
+        -5
+      ],
+      "coverageStatus": "not_yet_ingested"
+    },
+    {
+      "id": "eq10:08:14",
+      "bbox": [
+        -40,
+        -10,
+        -30,
+        0
+      ],
+      "center": [
+        -35,
+        -5
+      ],
+      "coverageStatus": "not_yet_ingested"
+    },
+    {
+      "id": "eq10:08:15",
+      "bbox": [
+        -30,
+        -10,
+        -20,
+        0
+      ],
+      "center": [
+        -25,
+        -5
+      ],
+      "coverageStatus": "not_yet_ingested"
+    },
+    {
+      "id": "eq10:08:16",
+      "bbox": [
+        -20,
+        -10,
+        -10,
+        0
+      ],
+      "center": [
+        -15,
+        -5
+      ],
+      "coverageStatus": "not_yet_ingested"
+    },
+    {
+      "id": "eq10:08:17",
+      "bbox": [
+        -10,
+        -10,
+        0,
+        0
+      ],
+      "center": [
+        -5,
+        -5
+      ],
+      "coverageStatus": "not_yet_ingested"
+    },
+    {
+      "id": "eq10:08:18",
+      "bbox": [
+        0,
+        -10,
+        10,
+        0
+      ],
+      "center": [
+        5,
+        -5
+      ],
+      "coverageStatus": "not_yet_ingested"
+    },
+    {
+      "id": "eq10:08:19",
+      "bbox": [
+        10,
+        -10,
+        20,
+        0
+      ],
+      "center": [
+        15,
+        -5
+      ],
+      "coverageStatus": "not_yet_ingested"
+    },
+    {
+      "id": "eq10:08:20",
+      "bbox": [
+        20,
+        -10,
+        30,
+        0
+      ],
+      "center": [
+        25,
+        -5
+      ],
+      "coverageStatus": "not_yet_ingested"
+    },
+    {
+      "id": "eq10:08:21",
+      "bbox": [
+        30,
+        -10,
+        40,
+        0
+      ],
+      "center": [
+        35,
+        -5
+      ],
+      "coverageStatus": "not_yet_ingested"
+    },
+    {
+      "id": "eq10:08:22",
+      "bbox": [
+        40,
+        -10,
+        50,
+        0
+      ],
+      "center": [
+        45,
+        -5
+      ],
+      "coverageStatus": "not_yet_ingested"
+    },
+    {
+      "id": "eq10:08:23",
+      "bbox": [
+        50,
+        -10,
+        60,
+        0
+      ],
+      "center": [
+        55,
+        -5
+      ],
+      "coverageStatus": "not_yet_ingested"
+    },
+    {
+      "id": "eq10:08:24",
+      "bbox": [
+        60,
+        -10,
+        70,
+        0
+      ],
+      "center": [
+        65,
+        -5
+      ],
+      "coverageStatus": "not_yet_ingested"
+    },
+    {
+      "id": "eq10:08:25",
+      "bbox": [
+        70,
+        -10,
+        80,
+        0
+      ],
+      "center": [
+        75,
+        -5
+      ],
+      "coverageStatus": "not_yet_ingested"
+    },
+    {
+      "id": "eq10:08:26",
+      "bbox": [
+        80,
+        -10,
+        90,
+        0
+      ],
+      "center": [
+        85,
+        -5
+      ],
+      "coverageStatus": "not_yet_ingested"
+    },
+    {
+      "id": "eq10:08:27",
+      "bbox": [
+        90,
+        -10,
+        100,
+        0
+      ],
+      "center": [
+        95,
+        -5
+      ],
+      "coverageStatus": "not_yet_ingested"
+    },
+    {
+      "id": "eq10:08:28",
+      "bbox": [
+        100,
+        -10,
+        110,
+        0
+      ],
+      "center": [
+        105,
+        -5
+      ],
+      "coverageStatus": "not_yet_ingested"
+    },
+    {
+      "id": "eq10:08:29",
+      "bbox": [
+        110,
+        -10,
+        120,
+        0
+      ],
+      "center": [
+        115,
+        -5
+      ],
+      "coverageStatus": "not_yet_ingested"
+    },
+    {
+      "id": "eq10:08:30",
+      "bbox": [
+        120,
+        -10,
+        130,
+        0
+      ],
+      "center": [
+        125,
+        -5
+      ],
+      "coverageStatus": "not_yet_ingested"
+    },
+    {
+      "id": "eq10:08:31",
+      "bbox": [
+        130,
+        -10,
+        140,
+        0
+      ],
+      "center": [
+        135,
+        -5
+      ],
+      "coverageStatus": "not_yet_ingested"
+    },
+    {
+      "id": "eq10:08:32",
+      "bbox": [
+        140,
+        -10,
+        150,
+        0
+      ],
+      "center": [
+        145,
+        -5
+      ],
+      "coverageStatus": "not_yet_ingested"
+    },
+    {
+      "id": "eq10:08:33",
+      "bbox": [
+        150,
+        -10,
+        160,
+        0
+      ],
+      "center": [
+        155,
+        -5
+      ],
+      "coverageStatus": "not_yet_ingested"
+    },
+    {
+      "id": "eq10:08:34",
+      "bbox": [
+        160,
+        -10,
+        170,
+        0
+      ],
+      "center": [
+        165,
+        -5
+      ],
+      "coverageStatus": "not_yet_ingested"
+    },
+    {
+      "id": "eq10:08:35",
+      "bbox": [
+        170,
+        -10,
+        180,
+        0
+      ],
+      "center": [
+        175,
+        -5
+      ],
+      "coverageStatus": "not_yet_ingested"
+    },
+    {
+      "id": "eq10:09:00",
+      "bbox": [
+        -180,
+        0,
+        -170,
+        10
+      ],
+      "center": [
+        -175,
+        5
+      ],
+      "coverageStatus": "not_yet_ingested"
+    },
+    {
+      "id": "eq10:09:01",
+      "bbox": [
+        -170,
+        0,
+        -160,
+        10
+      ],
+      "center": [
+        -165,
+        5
+      ],
+      "coverageStatus": "not_yet_ingested"
+    },
+    {
+      "id": "eq10:09:02",
+      "bbox": [
+        -160,
+        0,
+        -150,
+        10
+      ],
+      "center": [
+        -155,
+        5
+      ],
+      "coverageStatus": "not_yet_ingested"
+    },
+    {
+      "id": "eq10:09:03",
+      "bbox": [
+        -150,
+        0,
+        -140,
+        10
+      ],
+      "center": [
+        -145,
+        5
+      ],
+      "coverageStatus": "not_yet_ingested"
+    },
+    {
+      "id": "eq10:09:04",
+      "bbox": [
+        -140,
+        0,
+        -130,
+        10
+      ],
+      "center": [
+        -135,
+        5
+      ],
+      "coverageStatus": "not_yet_ingested"
+    },
+    {
+      "id": "eq10:09:05",
+      "bbox": [
+        -130,
+        0,
+        -120,
+        10
+      ],
+      "center": [
+        -125,
+        5
+      ],
+      "coverageStatus": "not_yet_ingested"
+    },
+    {
+      "id": "eq10:09:06",
+      "bbox": [
+        -120,
+        0,
+        -110,
+        10
+      ],
+      "center": [
+        -115,
+        5
+      ],
+      "coverageStatus": "not_yet_ingested"
+    },
+    {
+      "id": "eq10:09:07",
+      "bbox": [
+        -110,
+        0,
+        -100,
+        10
+      ],
+      "center": [
+        -105,
+        5
+      ],
+      "coverageStatus": "not_yet_ingested"
+    },
+    {
+      "id": "eq10:09:08",
+      "bbox": [
+        -100,
+        0,
+        -90,
+        10
+      ],
+      "center": [
+        -95,
+        5
+      ],
+      "coverageStatus": "not_yet_ingested"
+    },
+    {
+      "id": "eq10:09:09",
+      "bbox": [
+        -90,
+        0,
+        -80,
+        10
+      ],
+      "center": [
+        -85,
+        5
+      ],
+      "coverageStatus": "not_yet_ingested"
+    },
+    {
+      "id": "eq10:09:10",
+      "bbox": [
+        -80,
+        0,
+        -70,
+        10
+      ],
+      "center": [
+        -75,
+        5
+      ],
+      "coverageStatus": "not_yet_ingested"
+    },
+    {
+      "id": "eq10:09:11",
+      "bbox": [
+        -70,
+        0,
+        -60,
+        10
+      ],
+      "center": [
+        -65,
+        5
+      ],
+      "coverageStatus": "not_yet_ingested"
+    },
+    {
+      "id": "eq10:09:12",
+      "bbox": [
+        -60,
+        0,
+        -50,
+        10
+      ],
+      "center": [
+        -55,
+        5
+      ],
+      "coverageStatus": "not_yet_ingested"
+    },
+    {
+      "id": "eq10:09:13",
+      "bbox": [
+        -50,
+        0,
+        -40,
+        10
+      ],
+      "center": [
+        -45,
+        5
+      ],
+      "coverageStatus": "not_yet_ingested"
+    },
+    {
+      "id": "eq10:09:14",
+      "bbox": [
+        -40,
+        0,
+        -30,
+        10
+      ],
+      "center": [
+        -35,
+        5
+      ],
+      "coverageStatus": "not_yet_ingested"
+    },
+    {
+      "id": "eq10:09:15",
+      "bbox": [
+        -30,
+        0,
+        -20,
+        10
+      ],
+      "center": [
+        -25,
+        5
+      ],
+      "coverageStatus": "not_yet_ingested"
+    },
+    {
+      "id": "eq10:09:16",
+      "bbox": [
+        -20,
+        0,
+        -10,
+        10
+      ],
+      "center": [
+        -15,
+        5
+      ],
+      "coverageStatus": "not_yet_ingested"
+    },
+    {
+      "id": "eq10:09:17",
+      "bbox": [
+        -10,
+        0,
+        0,
+        10
+      ],
+      "center": [
+        -5,
+        5
+      ],
+      "coverageStatus": "not_yet_ingested"
+    },
+    {
+      "id": "eq10:09:18",
+      "bbox": [
+        0,
+        0,
+        10,
+        10
+      ],
+      "center": [
+        5,
+        5
+      ],
+      "coverageStatus": "not_yet_ingested"
+    },
+    {
+      "id": "eq10:09:19",
+      "bbox": [
+        10,
+        0,
+        20,
+        10
+      ],
+      "center": [
+        15,
+        5
+      ],
+      "coverageStatus": "not_yet_ingested"
+    },
+    {
+      "id": "eq10:09:20",
+      "bbox": [
+        20,
+        0,
+        30,
+        10
+      ],
+      "center": [
+        25,
+        5
+      ],
+      "coverageStatus": "not_yet_ingested"
+    },
+    {
+      "id": "eq10:09:21",
+      "bbox": [
+        30,
+        0,
+        40,
+        10
+      ],
+      "center": [
+        35,
+        5
+      ],
+      "coverageStatus": "not_yet_ingested"
+    },
+    {
+      "id": "eq10:09:22",
+      "bbox": [
+        40,
+        0,
+        50,
+        10
+      ],
+      "center": [
+        45,
+        5
+      ],
+      "coverageStatus": "not_yet_ingested"
+    },
+    {
+      "id": "eq10:09:23",
+      "bbox": [
+        50,
+        0,
+        60,
+        10
+      ],
+      "center": [
+        55,
+        5
+      ],
+      "coverageStatus": "not_yet_ingested"
+    },
+    {
+      "id": "eq10:09:24",
+      "bbox": [
+        60,
+        0,
+        70,
+        10
+      ],
+      "center": [
+        65,
+        5
+      ],
+      "coverageStatus": "not_yet_ingested"
+    },
+    {
+      "id": "eq10:09:25",
+      "bbox": [
+        70,
+        0,
+        80,
+        10
+      ],
+      "center": [
+        75,
+        5
+      ],
+      "coverageStatus": "not_yet_ingested"
+    },
+    {
+      "id": "eq10:09:26",
+      "bbox": [
+        80,
+        0,
+        90,
+        10
+      ],
+      "center": [
+        85,
+        5
+      ],
+      "coverageStatus": "not_yet_ingested"
+    },
+    {
+      "id": "eq10:09:27",
+      "bbox": [
+        90,
+        0,
+        100,
+        10
+      ],
+      "center": [
+        95,
+        5
+      ],
+      "coverageStatus": "not_yet_ingested"
+    },
+    {
+      "id": "eq10:09:28",
+      "bbox": [
+        100,
+        0,
+        110,
+        10
+      ],
+      "center": [
+        105,
+        5
+      ],
+      "coverageStatus": "not_yet_ingested"
+    },
+    {
+      "id": "eq10:09:29",
+      "bbox": [
+        110,
+        0,
+        120,
+        10
+      ],
+      "center": [
+        115,
+        5
+      ],
+      "coverageStatus": "not_yet_ingested"
+    },
+    {
+      "id": "eq10:09:30",
+      "bbox": [
+        120,
+        0,
+        130,
+        10
+      ],
+      "center": [
+        125,
+        5
+      ],
+      "coverageStatus": "not_yet_ingested"
+    },
+    {
+      "id": "eq10:09:31",
+      "bbox": [
+        130,
+        0,
+        140,
+        10
+      ],
+      "center": [
+        135,
+        5
+      ],
+      "coverageStatus": "not_yet_ingested"
+    },
+    {
+      "id": "eq10:09:32",
+      "bbox": [
+        140,
+        0,
+        150,
+        10
+      ],
+      "center": [
+        145,
+        5
+      ],
+      "coverageStatus": "not_yet_ingested"
+    },
+    {
+      "id": "eq10:09:33",
+      "bbox": [
+        150,
+        0,
+        160,
+        10
+      ],
+      "center": [
+        155,
+        5
+      ],
+      "coverageStatus": "not_yet_ingested"
+    },
+    {
+      "id": "eq10:09:34",
+      "bbox": [
+        160,
+        0,
+        170,
+        10
+      ],
+      "center": [
+        165,
+        5
+      ],
+      "coverageStatus": "not_yet_ingested"
+    },
+    {
+      "id": "eq10:09:35",
+      "bbox": [
+        170,
+        0,
+        180,
+        10
+      ],
+      "center": [
+        175,
+        5
+      ],
+      "coverageStatus": "not_yet_ingested"
+    },
+    {
+      "id": "eq10:10:00",
+      "bbox": [
+        -180,
+        10,
+        -170,
+        20
+      ],
+      "center": [
+        -175,
+        15
+      ],
+      "coverageStatus": "not_yet_ingested"
+    },
+    {
+      "id": "eq10:10:01",
+      "bbox": [
+        -170,
+        10,
+        -160,
+        20
+      ],
+      "center": [
+        -165,
+        15
+      ],
+      "coverageStatus": "not_yet_ingested"
+    },
+    {
+      "id": "eq10:10:02",
+      "bbox": [
+        -160,
+        10,
+        -150,
+        20
+      ],
+      "center": [
+        -155,
+        15
+      ],
+      "coverageStatus": "not_yet_ingested"
+    },
+    {
+      "id": "eq10:10:03",
+      "bbox": [
+        -150,
+        10,
+        -140,
+        20
+      ],
+      "center": [
+        -145,
+        15
+      ],
+      "coverageStatus": "not_yet_ingested"
+    },
+    {
+      "id": "eq10:10:04",
+      "bbox": [
+        -140,
+        10,
+        -130,
+        20
+      ],
+      "center": [
+        -135,
+        15
+      ],
+      "coverageStatus": "not_yet_ingested"
+    },
+    {
+      "id": "eq10:10:05",
+      "bbox": [
+        -130,
+        10,
+        -120,
+        20
+      ],
+      "center": [
+        -125,
+        15
+      ],
+      "coverageStatus": "not_yet_ingested"
+    },
+    {
+      "id": "eq10:10:06",
+      "bbox": [
+        -120,
+        10,
+        -110,
+        20
+      ],
+      "center": [
+        -115,
+        15
+      ],
+      "coverageStatus": "not_yet_ingested"
+    },
+    {
+      "id": "eq10:10:07",
+      "bbox": [
+        -110,
+        10,
+        -100,
+        20
+      ],
+      "center": [
+        -105,
+        15
+      ],
+      "coverageStatus": "not_yet_ingested"
+    },
+    {
+      "id": "eq10:10:08",
+      "bbox": [
+        -100,
+        10,
+        -90,
+        20
+      ],
+      "center": [
+        -95,
+        15
+      ],
+      "coverageStatus": "not_yet_ingested"
+    },
+    {
+      "id": "eq10:10:09",
+      "bbox": [
+        -90,
+        10,
+        -80,
+        20
+      ],
+      "center": [
+        -85,
+        15
+      ],
+      "coverageStatus": "not_yet_ingested"
+    },
+    {
+      "id": "eq10:10:10",
+      "bbox": [
+        -80,
+        10,
+        -70,
+        20
+      ],
+      "center": [
+        -75,
+        15
+      ],
+      "coverageStatus": "not_yet_ingested"
+    },
+    {
+      "id": "eq10:10:11",
+      "bbox": [
+        -70,
+        10,
+        -60,
+        20
+      ],
+      "center": [
+        -65,
+        15
+      ],
+      "coverageStatus": "not_yet_ingested"
+    },
+    {
+      "id": "eq10:10:12",
+      "bbox": [
+        -60,
+        10,
+        -50,
+        20
+      ],
+      "center": [
+        -55,
+        15
+      ],
+      "coverageStatus": "not_yet_ingested"
+    },
+    {
+      "id": "eq10:10:13",
+      "bbox": [
+        -50,
+        10,
+        -40,
+        20
+      ],
+      "center": [
+        -45,
+        15
+      ],
+      "coverageStatus": "not_yet_ingested"
+    },
+    {
+      "id": "eq10:10:14",
+      "bbox": [
+        -40,
+        10,
+        -30,
+        20
+      ],
+      "center": [
+        -35,
+        15
+      ],
+      "coverageStatus": "not_yet_ingested"
+    },
+    {
+      "id": "eq10:10:15",
+      "bbox": [
+        -30,
+        10,
+        -20,
+        20
+      ],
+      "center": [
+        -25,
+        15
+      ],
+      "coverageStatus": "not_yet_ingested"
+    },
+    {
+      "id": "eq10:10:16",
+      "bbox": [
+        -20,
+        10,
+        -10,
+        20
+      ],
+      "center": [
+        -15,
+        15
+      ],
+      "coverageStatus": "not_yet_ingested"
+    },
+    {
+      "id": "eq10:10:17",
+      "bbox": [
+        -10,
+        10,
+        0,
+        20
+      ],
+      "center": [
+        -5,
+        15
+      ],
+      "coverageStatus": "not_yet_ingested"
+    },
+    {
+      "id": "eq10:10:18",
+      "bbox": [
+        0,
+        10,
+        10,
+        20
+      ],
+      "center": [
+        5,
+        15
+      ],
+      "coverageStatus": "not_yet_ingested"
+    },
+    {
+      "id": "eq10:10:19",
+      "bbox": [
+        10,
+        10,
+        20,
+        20
+      ],
+      "center": [
+        15,
+        15
+      ],
+      "coverageStatus": "not_yet_ingested"
+    },
+    {
+      "id": "eq10:10:20",
+      "bbox": [
+        20,
+        10,
+        30,
+        20
+      ],
+      "center": [
+        25,
+        15
+      ],
+      "coverageStatus": "not_yet_ingested"
+    },
+    {
+      "id": "eq10:10:21",
+      "bbox": [
+        30,
+        10,
+        40,
+        20
+      ],
+      "center": [
+        35,
+        15
+      ],
+      "coverageStatus": "not_yet_ingested"
+    },
+    {
+      "id": "eq10:10:22",
+      "bbox": [
+        40,
+        10,
+        50,
+        20
+      ],
+      "center": [
+        45,
+        15
+      ],
+      "coverageStatus": "not_yet_ingested"
+    },
+    {
+      "id": "eq10:10:23",
+      "bbox": [
+        50,
+        10,
+        60,
+        20
+      ],
+      "center": [
+        55,
+        15
+      ],
+      "coverageStatus": "not_yet_ingested"
+    },
+    {
+      "id": "eq10:10:24",
+      "bbox": [
+        60,
+        10,
+        70,
+        20
+      ],
+      "center": [
+        65,
+        15
+      ],
+      "coverageStatus": "not_yet_ingested"
+    },
+    {
+      "id": "eq10:10:25",
+      "bbox": [
+        70,
+        10,
+        80,
+        20
+      ],
+      "center": [
+        75,
+        15
+      ],
+      "coverageStatus": "not_yet_ingested"
+    },
+    {
+      "id": "eq10:10:26",
+      "bbox": [
+        80,
+        10,
+        90,
+        20
+      ],
+      "center": [
+        85,
+        15
+      ],
+      "coverageStatus": "not_yet_ingested"
+    },
+    {
+      "id": "eq10:10:27",
+      "bbox": [
+        90,
+        10,
+        100,
+        20
+      ],
+      "center": [
+        95,
+        15
+      ],
+      "coverageStatus": "not_yet_ingested"
+    },
+    {
+      "id": "eq10:10:28",
+      "bbox": [
+        100,
+        10,
+        110,
+        20
+      ],
+      "center": [
+        105,
+        15
+      ],
+      "coverageStatus": "not_yet_ingested"
+    },
+    {
+      "id": "eq10:10:29",
+      "bbox": [
+        110,
+        10,
+        120,
+        20
+      ],
+      "center": [
+        115,
+        15
+      ],
+      "coverageStatus": "not_yet_ingested"
+    },
+    {
+      "id": "eq10:10:30",
+      "bbox": [
+        120,
+        10,
+        130,
+        20
+      ],
+      "center": [
+        125,
+        15
+      ],
+      "coverageStatus": "not_yet_ingested"
+    },
+    {
+      "id": "eq10:10:31",
+      "bbox": [
+        130,
+        10,
+        140,
+        20
+      ],
+      "center": [
+        135,
+        15
+      ],
+      "coverageStatus": "not_yet_ingested"
+    },
+    {
+      "id": "eq10:10:32",
+      "bbox": [
+        140,
+        10,
+        150,
+        20
+      ],
+      "center": [
+        145,
+        15
+      ],
+      "coverageStatus": "not_yet_ingested"
+    },
+    {
+      "id": "eq10:10:33",
+      "bbox": [
+        150,
+        10,
+        160,
+        20
+      ],
+      "center": [
+        155,
+        15
+      ],
+      "coverageStatus": "not_yet_ingested"
+    },
+    {
+      "id": "eq10:10:34",
+      "bbox": [
+        160,
+        10,
+        170,
+        20
+      ],
+      "center": [
+        165,
+        15
+      ],
+      "coverageStatus": "not_yet_ingested"
+    },
+    {
+      "id": "eq10:10:35",
+      "bbox": [
+        170,
+        10,
+        180,
+        20
+      ],
+      "center": [
+        175,
+        15
+      ],
+      "coverageStatus": "not_yet_ingested"
+    },
+    {
+      "id": "eq10:11:00",
+      "bbox": [
+        -180,
+        20,
+        -170,
+        30
+      ],
+      "center": [
+        -175,
+        25
+      ],
+      "coverageStatus": "not_yet_ingested"
+    },
+    {
+      "id": "eq10:11:01",
+      "bbox": [
+        -170,
+        20,
+        -160,
+        30
+      ],
+      "center": [
+        -165,
+        25
+      ],
+      "coverageStatus": "not_yet_ingested"
+    },
+    {
+      "id": "eq10:11:02",
+      "bbox": [
+        -160,
+        20,
+        -150,
+        30
+      ],
+      "center": [
+        -155,
+        25
+      ],
+      "coverageStatus": "not_yet_ingested"
+    },
+    {
+      "id": "eq10:11:03",
+      "bbox": [
+        -150,
+        20,
+        -140,
+        30
+      ],
+      "center": [
+        -145,
+        25
+      ],
+      "coverageStatus": "not_yet_ingested"
+    },
+    {
+      "id": "eq10:11:04",
+      "bbox": [
+        -140,
+        20,
+        -130,
+        30
+      ],
+      "center": [
+        -135,
+        25
+      ],
+      "coverageStatus": "not_yet_ingested"
+    },
+    {
+      "id": "eq10:11:05",
+      "bbox": [
+        -130,
+        20,
+        -120,
+        30
+      ],
+      "center": [
+        -125,
+        25
+      ],
+      "coverageStatus": "not_yet_ingested"
+    },
+    {
+      "id": "eq10:11:06",
+      "bbox": [
+        -120,
+        20,
+        -110,
+        30
+      ],
+      "center": [
+        -115,
+        25
+      ],
+      "coverageStatus": "not_yet_ingested"
+    },
+    {
+      "id": "eq10:11:07",
+      "bbox": [
+        -110,
+        20,
+        -100,
+        30
+      ],
+      "center": [
+        -105,
+        25
+      ],
+      "coverageStatus": "not_yet_ingested"
+    },
+    {
+      "id": "eq10:11:08",
+      "bbox": [
+        -100,
+        20,
+        -90,
+        30
+      ],
+      "center": [
+        -95,
+        25
+      ],
+      "coverageStatus": "not_yet_ingested"
+    },
+    {
+      "id": "eq10:11:09",
+      "bbox": [
+        -90,
+        20,
+        -80,
+        30
+      ],
+      "center": [
+        -85,
+        25
+      ],
+      "coverageStatus": "not_yet_ingested"
+    },
+    {
+      "id": "eq10:11:10",
+      "bbox": [
+        -80,
+        20,
+        -70,
+        30
+      ],
+      "center": [
+        -75,
+        25
+      ],
+      "coverageStatus": "not_yet_ingested"
+    },
+    {
+      "id": "eq10:11:11",
+      "bbox": [
+        -70,
+        20,
+        -60,
+        30
+      ],
+      "center": [
+        -65,
+        25
+      ],
+      "coverageStatus": "not_yet_ingested"
+    },
+    {
+      "id": "eq10:11:12",
+      "bbox": [
+        -60,
+        20,
+        -50,
+        30
+      ],
+      "center": [
+        -55,
+        25
+      ],
+      "coverageStatus": "not_yet_ingested"
+    },
+    {
+      "id": "eq10:11:13",
+      "bbox": [
+        -50,
+        20,
+        -40,
+        30
+      ],
+      "center": [
+        -45,
+        25
+      ],
+      "coverageStatus": "not_yet_ingested"
+    },
+    {
+      "id": "eq10:11:14",
+      "bbox": [
+        -40,
+        20,
+        -30,
+        30
+      ],
+      "center": [
+        -35,
+        25
+      ],
+      "coverageStatus": "not_yet_ingested"
+    },
+    {
+      "id": "eq10:11:15",
+      "bbox": [
+        -30,
+        20,
+        -20,
+        30
+      ],
+      "center": [
+        -25,
+        25
+      ],
+      "coverageStatus": "not_yet_ingested"
+    },
+    {
+      "id": "eq10:11:16",
+      "bbox": [
+        -20,
+        20,
+        -10,
+        30
+      ],
+      "center": [
+        -15,
+        25
+      ],
+      "coverageStatus": "not_yet_ingested"
+    },
+    {
+      "id": "eq10:11:17",
+      "bbox": [
+        -10,
+        20,
+        0,
+        30
+      ],
+      "center": [
+        -5,
+        25
+      ],
+      "coverageStatus": "not_yet_ingested"
+    },
+    {
+      "id": "eq10:11:18",
+      "bbox": [
+        0,
+        20,
+        10,
+        30
+      ],
+      "center": [
+        5,
+        25
+      ],
+      "coverageStatus": "not_yet_ingested"
+    },
+    {
+      "id": "eq10:11:19",
+      "bbox": [
+        10,
+        20,
+        20,
+        30
+      ],
+      "center": [
+        15,
+        25
+      ],
+      "coverageStatus": "not_yet_ingested"
+    },
+    {
+      "id": "eq10:11:20",
+      "bbox": [
+        20,
+        20,
+        30,
+        30
+      ],
+      "center": [
+        25,
+        25
+      ],
+      "coverageStatus": "not_yet_ingested"
+    },
+    {
+      "id": "eq10:11:21",
+      "bbox": [
+        30,
+        20,
+        40,
+        30
+      ],
+      "center": [
+        35,
+        25
+      ],
+      "coverageStatus": "not_yet_ingested"
+    },
+    {
+      "id": "eq10:11:22",
+      "bbox": [
+        40,
+        20,
+        50,
+        30
+      ],
+      "center": [
+        45,
+        25
+      ],
+      "coverageStatus": "not_yet_ingested"
+    },
+    {
+      "id": "eq10:11:23",
+      "bbox": [
+        50,
+        20,
+        60,
+        30
+      ],
+      "center": [
+        55,
+        25
+      ],
+      "coverageStatus": "not_yet_ingested"
+    },
+    {
+      "id": "eq10:11:24",
+      "bbox": [
+        60,
+        20,
+        70,
+        30
+      ],
+      "center": [
+        65,
+        25
+      ],
+      "coverageStatus": "not_yet_ingested"
+    },
+    {
+      "id": "eq10:11:25",
+      "bbox": [
+        70,
+        20,
+        80,
+        30
+      ],
+      "center": [
+        75,
+        25
+      ],
+      "coverageStatus": "not_yet_ingested"
+    },
+    {
+      "id": "eq10:11:26",
+      "bbox": [
+        80,
+        20,
+        90,
+        30
+      ],
+      "center": [
+        85,
+        25
+      ],
+      "coverageStatus": "not_yet_ingested"
+    },
+    {
+      "id": "eq10:11:27",
+      "bbox": [
+        90,
+        20,
+        100,
+        30
+      ],
+      "center": [
+        95,
+        25
+      ],
+      "coverageStatus": "not_yet_ingested"
+    },
+    {
+      "id": "eq10:11:28",
+      "bbox": [
+        100,
+        20,
+        110,
+        30
+      ],
+      "center": [
+        105,
+        25
+      ],
+      "coverageStatus": "not_yet_ingested"
+    },
+    {
+      "id": "eq10:11:29",
+      "bbox": [
+        110,
+        20,
+        120,
+        30
+      ],
+      "center": [
+        115,
+        25
+      ],
+      "coverageStatus": "not_yet_ingested"
+    },
+    {
+      "id": "eq10:11:30",
+      "bbox": [
+        120,
+        20,
+        130,
+        30
+      ],
+      "center": [
+        125,
+        25
+      ],
+      "coverageStatus": "not_yet_ingested"
+    },
+    {
+      "id": "eq10:11:31",
+      "bbox": [
+        130,
+        20,
+        140,
+        30
+      ],
+      "center": [
+        135,
+        25
+      ],
+      "coverageStatus": "not_yet_ingested"
+    },
+    {
+      "id": "eq10:11:32",
+      "bbox": [
+        140,
+        20,
+        150,
+        30
+      ],
+      "center": [
+        145,
+        25
+      ],
+      "coverageStatus": "not_yet_ingested"
+    },
+    {
+      "id": "eq10:11:33",
+      "bbox": [
+        150,
+        20,
+        160,
+        30
+      ],
+      "center": [
+        155,
+        25
+      ],
+      "coverageStatus": "not_yet_ingested"
+    },
+    {
+      "id": "eq10:11:34",
+      "bbox": [
+        160,
+        20,
+        170,
+        30
+      ],
+      "center": [
+        165,
+        25
+      ],
+      "coverageStatus": "not_yet_ingested"
+    },
+    {
+      "id": "eq10:11:35",
+      "bbox": [
+        170,
+        20,
+        180,
+        30
+      ],
+      "center": [
+        175,
+        25
+      ],
+      "coverageStatus": "not_yet_ingested"
+    },
+    {
+      "id": "eq10:12:00",
+      "bbox": [
+        -180,
+        30,
+        -170,
+        40
+      ],
+      "center": [
+        -175,
+        35
+      ],
+      "coverageStatus": "not_yet_ingested"
+    },
+    {
+      "id": "eq10:12:01",
+      "bbox": [
+        -170,
+        30,
+        -160,
+        40
+      ],
+      "center": [
+        -165,
+        35
+      ],
+      "coverageStatus": "not_yet_ingested"
+    },
+    {
+      "id": "eq10:12:02",
+      "bbox": [
+        -160,
+        30,
+        -150,
+        40
+      ],
+      "center": [
+        -155,
+        35
+      ],
+      "coverageStatus": "not_yet_ingested"
+    },
+    {
+      "id": "eq10:12:03",
+      "bbox": [
+        -150,
+        30,
+        -140,
+        40
+      ],
+      "center": [
+        -145,
+        35
+      ],
+      "coverageStatus": "not_yet_ingested"
+    },
+    {
+      "id": "eq10:12:04",
+      "bbox": [
+        -140,
+        30,
+        -130,
+        40
+      ],
+      "center": [
+        -135,
+        35
+      ],
+      "coverageStatus": "not_yet_ingested"
+    },
+    {
+      "id": "eq10:12:05",
+      "bbox": [
+        -130,
+        30,
+        -120,
+        40
+      ],
+      "center": [
+        -125,
+        35
+      ],
+      "coverageStatus": "not_yet_ingested"
+    },
+    {
+      "id": "eq10:12:06",
+      "bbox": [
+        -120,
+        30,
+        -110,
+        40
+      ],
+      "center": [
+        -115,
+        35
+      ],
+      "coverageStatus": "not_yet_ingested"
+    },
+    {
+      "id": "eq10:12:07",
+      "bbox": [
+        -110,
+        30,
+        -100,
+        40
+      ],
+      "center": [
+        -105,
+        35
+      ],
+      "coverageStatus": "not_yet_ingested"
+    },
+    {
+      "id": "eq10:12:08",
+      "bbox": [
+        -100,
+        30,
+        -90,
+        40
+      ],
+      "center": [
+        -95,
+        35
+      ],
+      "coverageStatus": "not_yet_ingested"
+    },
+    {
+      "id": "eq10:12:09",
+      "bbox": [
+        -90,
+        30,
+        -80,
+        40
+      ],
+      "center": [
+        -85,
+        35
+      ],
+      "coverageStatus": "not_yet_ingested"
+    },
+    {
+      "id": "eq10:12:10",
+      "bbox": [
+        -80,
+        30,
+        -70,
+        40
+      ],
+      "center": [
+        -75,
+        35
+      ],
+      "coverageStatus": "not_yet_ingested"
+    },
+    {
+      "id": "eq10:12:11",
+      "bbox": [
+        -70,
+        30,
+        -60,
+        40
+      ],
+      "center": [
+        -65,
+        35
+      ],
+      "coverageStatus": "not_yet_ingested"
+    },
+    {
+      "id": "eq10:12:12",
+      "bbox": [
+        -60,
+        30,
+        -50,
+        40
+      ],
+      "center": [
+        -55,
+        35
+      ],
+      "coverageStatus": "not_yet_ingested"
+    },
+    {
+      "id": "eq10:12:13",
+      "bbox": [
+        -50,
+        30,
+        -40,
+        40
+      ],
+      "center": [
+        -45,
+        35
+      ],
+      "coverageStatus": "not_yet_ingested"
+    },
+    {
+      "id": "eq10:12:14",
+      "bbox": [
+        -40,
+        30,
+        -30,
+        40
+      ],
+      "center": [
+        -35,
+        35
+      ],
+      "coverageStatus": "not_yet_ingested"
+    },
+    {
+      "id": "eq10:12:15",
+      "bbox": [
+        -30,
+        30,
+        -20,
+        40
+      ],
+      "center": [
+        -25,
+        35
+      ],
+      "coverageStatus": "not_yet_ingested"
+    },
+    {
+      "id": "eq10:12:16",
+      "bbox": [
+        -20,
+        30,
+        -10,
+        40
+      ],
+      "center": [
+        -15,
+        35
+      ],
+      "coverageStatus": "not_yet_ingested"
+    },
+    {
+      "id": "eq10:12:17",
+      "bbox": [
+        -10,
+        30,
+        0,
+        40
+      ],
+      "center": [
+        -5,
+        35
+      ],
+      "coverageStatus": "not_yet_ingested"
+    },
+    {
+      "id": "eq10:12:18",
+      "bbox": [
+        0,
+        30,
+        10,
+        40
+      ],
+      "center": [
+        5,
+        35
+      ],
+      "coverageStatus": "not_yet_ingested"
+    },
+    {
+      "id": "eq10:12:19",
+      "bbox": [
+        10,
+        30,
+        20,
+        40
+      ],
+      "center": [
+        15,
+        35
+      ],
+      "coverageStatus": "not_yet_ingested"
+    },
+    {
+      "id": "eq10:12:20",
+      "bbox": [
+        20,
+        30,
+        30,
+        40
+      ],
+      "center": [
+        25,
+        35
+      ],
+      "coverageStatus": "not_yet_ingested"
+    },
+    {
+      "id": "eq10:12:21",
+      "bbox": [
+        30,
+        30,
+        40,
+        40
+      ],
+      "center": [
+        35,
+        35
+      ],
+      "coverageStatus": "not_yet_ingested"
+    },
+    {
+      "id": "eq10:12:22",
+      "bbox": [
+        40,
+        30,
+        50,
+        40
+      ],
+      "center": [
+        45,
+        35
+      ],
+      "coverageStatus": "not_yet_ingested"
+    },
+    {
+      "id": "eq10:12:23",
+      "bbox": [
+        50,
+        30,
+        60,
+        40
+      ],
+      "center": [
+        55,
+        35
+      ],
+      "coverageStatus": "not_yet_ingested"
+    },
+    {
+      "id": "eq10:12:24",
+      "bbox": [
+        60,
+        30,
+        70,
+        40
+      ],
+      "center": [
+        65,
+        35
+      ],
+      "coverageStatus": "not_yet_ingested"
+    },
+    {
+      "id": "eq10:12:25",
+      "bbox": [
+        70,
+        30,
+        80,
+        40
+      ],
+      "center": [
+        75,
+        35
+      ],
+      "coverageStatus": "not_yet_ingested"
+    },
+    {
+      "id": "eq10:12:26",
+      "bbox": [
+        80,
+        30,
+        90,
+        40
+      ],
+      "center": [
+        85,
+        35
+      ],
+      "coverageStatus": "not_yet_ingested"
+    },
+    {
+      "id": "eq10:12:27",
+      "bbox": [
+        90,
+        30,
+        100,
+        40
+      ],
+      "center": [
+        95,
+        35
+      ],
+      "coverageStatus": "not_yet_ingested"
+    },
+    {
+      "id": "eq10:12:28",
+      "bbox": [
+        100,
+        30,
+        110,
+        40
+      ],
+      "center": [
+        105,
+        35
+      ],
+      "coverageStatus": "not_yet_ingested"
+    },
+    {
+      "id": "eq10:12:29",
+      "bbox": [
+        110,
+        30,
+        120,
+        40
+      ],
+      "center": [
+        115,
+        35
+      ],
+      "coverageStatus": "not_yet_ingested"
+    },
+    {
+      "id": "eq10:12:30",
+      "bbox": [
+        120,
+        30,
+        130,
+        40
+      ],
+      "center": [
+        125,
+        35
+      ],
+      "coverageStatus": "not_yet_ingested"
+    },
+    {
+      "id": "eq10:12:31",
+      "bbox": [
+        130,
+        30,
+        140,
+        40
+      ],
+      "center": [
+        135,
+        35
+      ],
+      "coverageStatus": "not_yet_ingested"
+    },
+    {
+      "id": "eq10:12:32",
+      "bbox": [
+        140,
+        30,
+        150,
+        40
+      ],
+      "center": [
+        145,
+        35
+      ],
+      "coverageStatus": "not_yet_ingested"
+    },
+    {
+      "id": "eq10:12:33",
+      "bbox": [
+        150,
+        30,
+        160,
+        40
+      ],
+      "center": [
+        155,
+        35
+      ],
+      "coverageStatus": "not_yet_ingested"
+    },
+    {
+      "id": "eq10:12:34",
+      "bbox": [
+        160,
+        30,
+        170,
+        40
+      ],
+      "center": [
+        165,
+        35
+      ],
+      "coverageStatus": "not_yet_ingested"
+    },
+    {
+      "id": "eq10:12:35",
+      "bbox": [
+        170,
+        30,
+        180,
+        40
+      ],
+      "center": [
+        175,
+        35
+      ],
+      "coverageStatus": "not_yet_ingested"
+    },
+    {
+      "id": "eq10:13:00",
+      "bbox": [
+        -180,
+        40,
+        -170,
+        50
+      ],
+      "center": [
+        -175,
+        45
+      ],
+      "coverageStatus": "not_yet_ingested"
+    },
+    {
+      "id": "eq10:13:01",
+      "bbox": [
+        -170,
+        40,
+        -160,
+        50
+      ],
+      "center": [
+        -165,
+        45
+      ],
+      "coverageStatus": "not_yet_ingested"
+    },
+    {
+      "id": "eq10:13:02",
+      "bbox": [
+        -160,
+        40,
+        -150,
+        50
+      ],
+      "center": [
+        -155,
+        45
+      ],
+      "coverageStatus": "not_yet_ingested"
+    },
+    {
+      "id": "eq10:13:03",
+      "bbox": [
+        -150,
+        40,
+        -140,
+        50
+      ],
+      "center": [
+        -145,
+        45
+      ],
+      "coverageStatus": "not_yet_ingested"
+    },
+    {
+      "id": "eq10:13:04",
+      "bbox": [
+        -140,
+        40,
+        -130,
+        50
+      ],
+      "center": [
+        -135,
+        45
+      ],
+      "coverageStatus": "not_yet_ingested"
+    },
+    {
+      "id": "eq10:13:05",
+      "bbox": [
+        -130,
+        40,
+        -120,
+        50
+      ],
+      "center": [
+        -125,
+        45
+      ],
+      "coverageStatus": "not_yet_ingested"
+    },
+    {
+      "id": "eq10:13:06",
+      "bbox": [
+        -120,
+        40,
+        -110,
+        50
+      ],
+      "center": [
+        -115,
+        45
+      ],
+      "coverageStatus": "not_yet_ingested"
+    },
+    {
+      "id": "eq10:13:07",
+      "bbox": [
+        -110,
+        40,
+        -100,
+        50
+      ],
+      "center": [
+        -105,
+        45
+      ],
+      "coverageStatus": "not_yet_ingested"
+    },
+    {
+      "id": "eq10:13:08",
+      "bbox": [
+        -100,
+        40,
+        -90,
+        50
+      ],
+      "center": [
+        -95,
+        45
+      ],
+      "coverageStatus": "not_yet_ingested"
+    },
+    {
+      "id": "eq10:13:09",
+      "bbox": [
+        -90,
+        40,
+        -80,
+        50
+      ],
+      "center": [
+        -85,
+        45
+      ],
+      "coverageStatus": "not_yet_ingested"
+    },
+    {
+      "id": "eq10:13:10",
+      "bbox": [
+        -80,
+        40,
+        -70,
+        50
+      ],
+      "center": [
+        -75,
+        45
+      ],
+      "coverageStatus": "not_yet_ingested"
+    },
+    {
+      "id": "eq10:13:11",
+      "bbox": [
+        -70,
+        40,
+        -60,
+        50
+      ],
+      "center": [
+        -65,
+        45
+      ],
+      "coverageStatus": "not_yet_ingested"
+    },
+    {
+      "id": "eq10:13:12",
+      "bbox": [
+        -60,
+        40,
+        -50,
+        50
+      ],
+      "center": [
+        -55,
+        45
+      ],
+      "coverageStatus": "not_yet_ingested"
+    },
+    {
+      "id": "eq10:13:13",
+      "bbox": [
+        -50,
+        40,
+        -40,
+        50
+      ],
+      "center": [
+        -45,
+        45
+      ],
+      "coverageStatus": "not_yet_ingested"
+    },
+    {
+      "id": "eq10:13:14",
+      "bbox": [
+        -40,
+        40,
+        -30,
+        50
+      ],
+      "center": [
+        -35,
+        45
+      ],
+      "coverageStatus": "not_yet_ingested"
+    },
+    {
+      "id": "eq10:13:15",
+      "bbox": [
+        -30,
+        40,
+        -20,
+        50
+      ],
+      "center": [
+        -25,
+        45
+      ],
+      "coverageStatus": "not_yet_ingested"
+    },
+    {
+      "id": "eq10:13:16",
+      "bbox": [
+        -20,
+        40,
+        -10,
+        50
+      ],
+      "center": [
+        -15,
+        45
+      ],
+      "coverageStatus": "not_yet_ingested"
+    },
+    {
+      "id": "eq10:13:17",
+      "bbox": [
+        -10,
+        40,
+        0,
+        50
+      ],
+      "center": [
+        -5,
+        45
+      ],
+      "coverageStatus": "not_yet_ingested"
+    },
+    {
+      "id": "eq10:13:18",
+      "bbox": [
+        0,
+        40,
+        10,
+        50
+      ],
+      "center": [
+        5,
+        45
+      ],
+      "coverageStatus": "not_yet_ingested"
+    },
+    {
+      "id": "eq10:13:19",
+      "bbox": [
+        10,
+        40,
+        20,
+        50
+      ],
+      "center": [
+        15,
+        45
+      ],
+      "coverageStatus": "not_yet_ingested"
+    },
+    {
+      "id": "eq10:13:20",
+      "bbox": [
+        20,
+        40,
+        30,
+        50
+      ],
+      "center": [
+        25,
+        45
+      ],
+      "coverageStatus": "not_yet_ingested"
+    },
+    {
+      "id": "eq10:13:21",
+      "bbox": [
+        30,
+        40,
+        40,
+        50
+      ],
+      "center": [
+        35,
+        45
+      ],
+      "coverageStatus": "not_yet_ingested"
+    },
+    {
+      "id": "eq10:13:22",
+      "bbox": [
+        40,
+        40,
+        50,
+        50
+      ],
+      "center": [
+        45,
+        45
+      ],
+      "coverageStatus": "not_yet_ingested"
+    },
+    {
+      "id": "eq10:13:23",
+      "bbox": [
+        50,
+        40,
+        60,
+        50
+      ],
+      "center": [
+        55,
+        45
+      ],
+      "coverageStatus": "not_yet_ingested"
+    },
+    {
+      "id": "eq10:13:24",
+      "bbox": [
+        60,
+        40,
+        70,
+        50
+      ],
+      "center": [
+        65,
+        45
+      ],
+      "coverageStatus": "not_yet_ingested"
+    },
+    {
+      "id": "eq10:13:25",
+      "bbox": [
+        70,
+        40,
+        80,
+        50
+      ],
+      "center": [
+        75,
+        45
+      ],
+      "coverageStatus": "not_yet_ingested"
+    },
+    {
+      "id": "eq10:13:26",
+      "bbox": [
+        80,
+        40,
+        90,
+        50
+      ],
+      "center": [
+        85,
+        45
+      ],
+      "coverageStatus": "not_yet_ingested"
+    },
+    {
+      "id": "eq10:13:27",
+      "bbox": [
+        90,
+        40,
+        100,
+        50
+      ],
+      "center": [
+        95,
+        45
+      ],
+      "coverageStatus": "not_yet_ingested"
+    },
+    {
+      "id": "eq10:13:28",
+      "bbox": [
+        100,
+        40,
+        110,
+        50
+      ],
+      "center": [
+        105,
+        45
+      ],
+      "coverageStatus": "not_yet_ingested"
+    },
+    {
+      "id": "eq10:13:29",
+      "bbox": [
+        110,
+        40,
+        120,
+        50
+      ],
+      "center": [
+        115,
+        45
+      ],
+      "coverageStatus": "not_yet_ingested"
+    },
+    {
+      "id": "eq10:13:30",
+      "bbox": [
+        120,
+        40,
+        130,
+        50
+      ],
+      "center": [
+        125,
+        45
+      ],
+      "coverageStatus": "not_yet_ingested"
+    },
+    {
+      "id": "eq10:13:31",
+      "bbox": [
+        130,
+        40,
+        140,
+        50
+      ],
+      "center": [
+        135,
+        45
+      ],
+      "coverageStatus": "not_yet_ingested"
+    },
+    {
+      "id": "eq10:13:32",
+      "bbox": [
+        140,
+        40,
+        150,
+        50
+      ],
+      "center": [
+        145,
+        45
+      ],
+      "coverageStatus": "not_yet_ingested"
+    },
+    {
+      "id": "eq10:13:33",
+      "bbox": [
+        150,
+        40,
+        160,
+        50
+      ],
+      "center": [
+        155,
+        45
+      ],
+      "coverageStatus": "not_yet_ingested"
+    },
+    {
+      "id": "eq10:13:34",
+      "bbox": [
+        160,
+        40,
+        170,
+        50
+      ],
+      "center": [
+        165,
+        45
+      ],
+      "coverageStatus": "not_yet_ingested"
+    },
+    {
+      "id": "eq10:13:35",
+      "bbox": [
+        170,
+        40,
+        180,
+        50
+      ],
+      "center": [
+        175,
+        45
+      ],
+      "coverageStatus": "not_yet_ingested"
+    },
+    {
+      "id": "eq10:14:00",
+      "bbox": [
+        -180,
+        50,
+        -170,
+        60
+      ],
+      "center": [
+        -175,
+        55
+      ],
+      "coverageStatus": "not_yet_ingested"
+    },
+    {
+      "id": "eq10:14:01",
+      "bbox": [
+        -170,
+        50,
+        -160,
+        60
+      ],
+      "center": [
+        -165,
+        55
+      ],
+      "coverageStatus": "not_yet_ingested"
+    },
+    {
+      "id": "eq10:14:02",
+      "bbox": [
+        -160,
+        50,
+        -150,
+        60
+      ],
+      "center": [
+        -155,
+        55
+      ],
+      "coverageStatus": "not_yet_ingested"
+    },
+    {
+      "id": "eq10:14:03",
+      "bbox": [
+        -150,
+        50,
+        -140,
+        60
+      ],
+      "center": [
+        -145,
+        55
+      ],
+      "coverageStatus": "not_yet_ingested"
+    },
+    {
+      "id": "eq10:14:04",
+      "bbox": [
+        -140,
+        50,
+        -130,
+        60
+      ],
+      "center": [
+        -135,
+        55
+      ],
+      "coverageStatus": "not_yet_ingested"
+    },
+    {
+      "id": "eq10:14:05",
+      "bbox": [
+        -130,
+        50,
+        -120,
+        60
+      ],
+      "center": [
+        -125,
+        55
+      ],
+      "coverageStatus": "not_yet_ingested"
+    },
+    {
+      "id": "eq10:14:06",
+      "bbox": [
+        -120,
+        50,
+        -110,
+        60
+      ],
+      "center": [
+        -115,
+        55
+      ],
+      "coverageStatus": "not_yet_ingested"
+    },
+    {
+      "id": "eq10:14:07",
+      "bbox": [
+        -110,
+        50,
+        -100,
+        60
+      ],
+      "center": [
+        -105,
+        55
+      ],
+      "coverageStatus": "not_yet_ingested"
+    },
+    {
+      "id": "eq10:14:08",
+      "bbox": [
+        -100,
+        50,
+        -90,
+        60
+      ],
+      "center": [
+        -95,
+        55
+      ],
+      "coverageStatus": "not_yet_ingested"
+    },
+    {
+      "id": "eq10:14:09",
+      "bbox": [
+        -90,
+        50,
+        -80,
+        60
+      ],
+      "center": [
+        -85,
+        55
+      ],
+      "coverageStatus": "not_yet_ingested"
+    },
+    {
+      "id": "eq10:14:10",
+      "bbox": [
+        -80,
+        50,
+        -70,
+        60
+      ],
+      "center": [
+        -75,
+        55
+      ],
+      "coverageStatus": "not_yet_ingested"
+    },
+    {
+      "id": "eq10:14:11",
+      "bbox": [
+        -70,
+        50,
+        -60,
+        60
+      ],
+      "center": [
+        -65,
+        55
+      ],
+      "coverageStatus": "not_yet_ingested"
+    },
+    {
+      "id": "eq10:14:12",
+      "bbox": [
+        -60,
+        50,
+        -50,
+        60
+      ],
+      "center": [
+        -55,
+        55
+      ],
+      "coverageStatus": "not_yet_ingested"
+    },
+    {
+      "id": "eq10:14:13",
+      "bbox": [
+        -50,
+        50,
+        -40,
+        60
+      ],
+      "center": [
+        -45,
+        55
+      ],
+      "coverageStatus": "not_yet_ingested"
+    },
+    {
+      "id": "eq10:14:14",
+      "bbox": [
+        -40,
+        50,
+        -30,
+        60
+      ],
+      "center": [
+        -35,
+        55
+      ],
+      "coverageStatus": "not_yet_ingested"
+    },
+    {
+      "id": "eq10:14:15",
+      "bbox": [
+        -30,
+        50,
+        -20,
+        60
+      ],
+      "center": [
+        -25,
+        55
+      ],
+      "coverageStatus": "not_yet_ingested"
+    },
+    {
+      "id": "eq10:14:16",
+      "bbox": [
+        -20,
+        50,
+        -10,
+        60
+      ],
+      "center": [
+        -15,
+        55
+      ],
+      "coverageStatus": "not_yet_ingested"
+    },
+    {
+      "id": "eq10:14:17",
+      "bbox": [
+        -10,
+        50,
+        0,
+        60
+      ],
+      "center": [
+        -5,
+        55
+      ],
+      "coverageStatus": "not_yet_ingested"
+    },
+    {
+      "id": "eq10:14:18",
+      "bbox": [
+        0,
+        50,
+        10,
+        60
+      ],
+      "center": [
+        5,
+        55
+      ],
+      "coverageStatus": "not_yet_ingested"
+    },
+    {
+      "id": "eq10:14:19",
+      "bbox": [
+        10,
+        50,
+        20,
+        60
+      ],
+      "center": [
+        15,
+        55
+      ],
+      "coverageStatus": "not_yet_ingested"
+    },
+    {
+      "id": "eq10:14:20",
+      "bbox": [
+        20,
+        50,
+        30,
+        60
+      ],
+      "center": [
+        25,
+        55
+      ],
+      "coverageStatus": "not_yet_ingested"
+    },
+    {
+      "id": "eq10:14:21",
+      "bbox": [
+        30,
+        50,
+        40,
+        60
+      ],
+      "center": [
+        35,
+        55
+      ],
+      "coverageStatus": "not_yet_ingested"
+    },
+    {
+      "id": "eq10:14:22",
+      "bbox": [
+        40,
+        50,
+        50,
+        60
+      ],
+      "center": [
+        45,
+        55
+      ],
+      "coverageStatus": "not_yet_ingested"
+    },
+    {
+      "id": "eq10:14:23",
+      "bbox": [
+        50,
+        50,
+        60,
+        60
+      ],
+      "center": [
+        55,
+        55
+      ],
+      "coverageStatus": "not_yet_ingested"
+    },
+    {
+      "id": "eq10:14:24",
+      "bbox": [
+        60,
+        50,
+        70,
+        60
+      ],
+      "center": [
+        65,
+        55
+      ],
+      "coverageStatus": "not_yet_ingested"
+    },
+    {
+      "id": "eq10:14:25",
+      "bbox": [
+        70,
+        50,
+        80,
+        60
+      ],
+      "center": [
+        75,
+        55
+      ],
+      "coverageStatus": "not_yet_ingested"
+    },
+    {
+      "id": "eq10:14:26",
+      "bbox": [
+        80,
+        50,
+        90,
+        60
+      ],
+      "center": [
+        85,
+        55
+      ],
+      "coverageStatus": "not_yet_ingested"
+    },
+    {
+      "id": "eq10:14:27",
+      "bbox": [
+        90,
+        50,
+        100,
+        60
+      ],
+      "center": [
+        95,
+        55
+      ],
+      "coverageStatus": "not_yet_ingested"
+    },
+    {
+      "id": "eq10:14:28",
+      "bbox": [
+        100,
+        50,
+        110,
+        60
+      ],
+      "center": [
+        105,
+        55
+      ],
+      "coverageStatus": "not_yet_ingested"
+    },
+    {
+      "id": "eq10:14:29",
+      "bbox": [
+        110,
+        50,
+        120,
+        60
+      ],
+      "center": [
+        115,
+        55
+      ],
+      "coverageStatus": "not_yet_ingested"
+    },
+    {
+      "id": "eq10:14:30",
+      "bbox": [
+        120,
+        50,
+        130,
+        60
+      ],
+      "center": [
+        125,
+        55
+      ],
+      "coverageStatus": "not_yet_ingested"
+    },
+    {
+      "id": "eq10:14:31",
+      "bbox": [
+        130,
+        50,
+        140,
+        60
+      ],
+      "center": [
+        135,
+        55
+      ],
+      "coverageStatus": "not_yet_ingested"
+    },
+    {
+      "id": "eq10:14:32",
+      "bbox": [
+        140,
+        50,
+        150,
+        60
+      ],
+      "center": [
+        145,
+        55
+      ],
+      "coverageStatus": "not_yet_ingested"
+    },
+    {
+      "id": "eq10:14:33",
+      "bbox": [
+        150,
+        50,
+        160,
+        60
+      ],
+      "center": [
+        155,
+        55
+      ],
+      "coverageStatus": "not_yet_ingested"
+    },
+    {
+      "id": "eq10:14:34",
+      "bbox": [
+        160,
+        50,
+        170,
+        60
+      ],
+      "center": [
+        165,
+        55
+      ],
+      "coverageStatus": "not_yet_ingested"
+    },
+    {
+      "id": "eq10:14:35",
+      "bbox": [
+        170,
+        50,
+        180,
+        60
+      ],
+      "center": [
+        175,
+        55
+      ],
+      "coverageStatus": "not_yet_ingested"
+    },
+    {
+      "id": "eq10:15:00",
+      "bbox": [
+        -180,
+        60,
+        -170,
+        70
+      ],
+      "center": [
+        -175,
+        65
+      ],
+      "coverageStatus": "not_yet_ingested"
+    },
+    {
+      "id": "eq10:15:01",
+      "bbox": [
+        -170,
+        60,
+        -160,
+        70
+      ],
+      "center": [
+        -165,
+        65
+      ],
+      "coverageStatus": "not_yet_ingested"
+    },
+    {
+      "id": "eq10:15:02",
+      "bbox": [
+        -160,
+        60,
+        -150,
+        70
+      ],
+      "center": [
+        -155,
+        65
+      ],
+      "coverageStatus": "not_yet_ingested"
+    },
+    {
+      "id": "eq10:15:03",
+      "bbox": [
+        -150,
+        60,
+        -140,
+        70
+      ],
+      "center": [
+        -145,
+        65
+      ],
+      "coverageStatus": "not_yet_ingested"
+    },
+    {
+      "id": "eq10:15:04",
+      "bbox": [
+        -140,
+        60,
+        -130,
+        70
+      ],
+      "center": [
+        -135,
+        65
+      ],
+      "coverageStatus": "not_yet_ingested"
+    },
+    {
+      "id": "eq10:15:05",
+      "bbox": [
+        -130,
+        60,
+        -120,
+        70
+      ],
+      "center": [
+        -125,
+        65
+      ],
+      "coverageStatus": "not_yet_ingested"
+    },
+    {
+      "id": "eq10:15:06",
+      "bbox": [
+        -120,
+        60,
+        -110,
+        70
+      ],
+      "center": [
+        -115,
+        65
+      ],
+      "coverageStatus": "not_yet_ingested"
+    },
+    {
+      "id": "eq10:15:07",
+      "bbox": [
+        -110,
+        60,
+        -100,
+        70
+      ],
+      "center": [
+        -105,
+        65
+      ],
+      "coverageStatus": "not_yet_ingested"
+    },
+    {
+      "id": "eq10:15:08",
+      "bbox": [
+        -100,
+        60,
+        -90,
+        70
+      ],
+      "center": [
+        -95,
+        65
+      ],
+      "coverageStatus": "not_yet_ingested"
+    },
+    {
+      "id": "eq10:15:09",
+      "bbox": [
+        -90,
+        60,
+        -80,
+        70
+      ],
+      "center": [
+        -85,
+        65
+      ],
+      "coverageStatus": "not_yet_ingested"
+    },
+    {
+      "id": "eq10:15:10",
+      "bbox": [
+        -80,
+        60,
+        -70,
+        70
+      ],
+      "center": [
+        -75,
+        65
+      ],
+      "coverageStatus": "not_yet_ingested"
+    },
+    {
+      "id": "eq10:15:11",
+      "bbox": [
+        -70,
+        60,
+        -60,
+        70
+      ],
+      "center": [
+        -65,
+        65
+      ],
+      "coverageStatus": "not_yet_ingested"
+    },
+    {
+      "id": "eq10:15:12",
+      "bbox": [
+        -60,
+        60,
+        -50,
+        70
+      ],
+      "center": [
+        -55,
+        65
+      ],
+      "coverageStatus": "not_yet_ingested"
+    },
+    {
+      "id": "eq10:15:13",
+      "bbox": [
+        -50,
+        60,
+        -40,
+        70
+      ],
+      "center": [
+        -45,
+        65
+      ],
+      "coverageStatus": "not_yet_ingested"
+    },
+    {
+      "id": "eq10:15:14",
+      "bbox": [
+        -40,
+        60,
+        -30,
+        70
+      ],
+      "center": [
+        -35,
+        65
+      ],
+      "coverageStatus": "not_yet_ingested"
+    },
+    {
+      "id": "eq10:15:15",
+      "bbox": [
+        -30,
+        60,
+        -20,
+        70
+      ],
+      "center": [
+        -25,
+        65
+      ],
+      "coverageStatus": "not_yet_ingested"
+    },
+    {
+      "id": "eq10:15:16",
+      "bbox": [
+        -20,
+        60,
+        -10,
+        70
+      ],
+      "center": [
+        -15,
+        65
+      ],
+      "coverageStatus": "not_yet_ingested"
+    },
+    {
+      "id": "eq10:15:17",
+      "bbox": [
+        -10,
+        60,
+        0,
+        70
+      ],
+      "center": [
+        -5,
+        65
+      ],
+      "coverageStatus": "not_yet_ingested"
+    },
+    {
+      "id": "eq10:15:18",
+      "bbox": [
+        0,
+        60,
+        10,
+        70
+      ],
+      "center": [
+        5,
+        65
+      ],
+      "coverageStatus": "not_yet_ingested"
+    },
+    {
+      "id": "eq10:15:19",
+      "bbox": [
+        10,
+        60,
+        20,
+        70
+      ],
+      "center": [
+        15,
+        65
+      ],
+      "coverageStatus": "not_yet_ingested"
+    },
+    {
+      "id": "eq10:15:20",
+      "bbox": [
+        20,
+        60,
+        30,
+        70
+      ],
+      "center": [
+        25,
+        65
+      ],
+      "coverageStatus": "not_yet_ingested"
+    },
+    {
+      "id": "eq10:15:21",
+      "bbox": [
+        30,
+        60,
+        40,
+        70
+      ],
+      "center": [
+        35,
+        65
+      ],
+      "coverageStatus": "not_yet_ingested"
+    },
+    {
+      "id": "eq10:15:22",
+      "bbox": [
+        40,
+        60,
+        50,
+        70
+      ],
+      "center": [
+        45,
+        65
+      ],
+      "coverageStatus": "not_yet_ingested"
+    },
+    {
+      "id": "eq10:15:23",
+      "bbox": [
+        50,
+        60,
+        60,
+        70
+      ],
+      "center": [
+        55,
+        65
+      ],
+      "coverageStatus": "not_yet_ingested"
+    },
+    {
+      "id": "eq10:15:24",
+      "bbox": [
+        60,
+        60,
+        70,
+        70
+      ],
+      "center": [
+        65,
+        65
+      ],
+      "coverageStatus": "not_yet_ingested"
+    },
+    {
+      "id": "eq10:15:25",
+      "bbox": [
+        70,
+        60,
+        80,
+        70
+      ],
+      "center": [
+        75,
+        65
+      ],
+      "coverageStatus": "not_yet_ingested"
+    },
+    {
+      "id": "eq10:15:26",
+      "bbox": [
+        80,
+        60,
+        90,
+        70
+      ],
+      "center": [
+        85,
+        65
+      ],
+      "coverageStatus": "not_yet_ingested"
+    },
+    {
+      "id": "eq10:15:27",
+      "bbox": [
+        90,
+        60,
+        100,
+        70
+      ],
+      "center": [
+        95,
+        65
+      ],
+      "coverageStatus": "not_yet_ingested"
+    },
+    {
+      "id": "eq10:15:28",
+      "bbox": [
+        100,
+        60,
+        110,
+        70
+      ],
+      "center": [
+        105,
+        65
+      ],
+      "coverageStatus": "not_yet_ingested"
+    },
+    {
+      "id": "eq10:15:29",
+      "bbox": [
+        110,
+        60,
+        120,
+        70
+      ],
+      "center": [
+        115,
+        65
+      ],
+      "coverageStatus": "not_yet_ingested"
+    },
+    {
+      "id": "eq10:15:30",
+      "bbox": [
+        120,
+        60,
+        130,
+        70
+      ],
+      "center": [
+        125,
+        65
+      ],
+      "coverageStatus": "not_yet_ingested"
+    },
+    {
+      "id": "eq10:15:31",
+      "bbox": [
+        130,
+        60,
+        140,
+        70
+      ],
+      "center": [
+        135,
+        65
+      ],
+      "coverageStatus": "not_yet_ingested"
+    },
+    {
+      "id": "eq10:15:32",
+      "bbox": [
+        140,
+        60,
+        150,
+        70
+      ],
+      "center": [
+        145,
+        65
+      ],
+      "coverageStatus": "not_yet_ingested"
+    },
+    {
+      "id": "eq10:15:33",
+      "bbox": [
+        150,
+        60,
+        160,
+        70
+      ],
+      "center": [
+        155,
+        65
+      ],
+      "coverageStatus": "not_yet_ingested"
+    },
+    {
+      "id": "eq10:15:34",
+      "bbox": [
+        160,
+        60,
+        170,
+        70
+      ],
+      "center": [
+        165,
+        65
+      ],
+      "coverageStatus": "not_yet_ingested"
+    },
+    {
+      "id": "eq10:15:35",
+      "bbox": [
+        170,
+        60,
+        180,
+        70
+      ],
+      "center": [
+        175,
+        65
+      ],
+      "coverageStatus": "not_yet_ingested"
+    },
+    {
+      "id": "eq10:16:00",
+      "bbox": [
+        -180,
+        70,
+        -170,
+        80
+      ],
+      "center": [
+        -175,
+        75
+      ],
+      "coverageStatus": "not_yet_ingested"
+    },
+    {
+      "id": "eq10:16:01",
+      "bbox": [
+        -170,
+        70,
+        -160,
+        80
+      ],
+      "center": [
+        -165,
+        75
+      ],
+      "coverageStatus": "not_yet_ingested"
+    },
+    {
+      "id": "eq10:16:02",
+      "bbox": [
+        -160,
+        70,
+        -150,
+        80
+      ],
+      "center": [
+        -155,
+        75
+      ],
+      "coverageStatus": "not_yet_ingested"
+    },
+    {
+      "id": "eq10:16:03",
+      "bbox": [
+        -150,
+        70,
+        -140,
+        80
+      ],
+      "center": [
+        -145,
+        75
+      ],
+      "coverageStatus": "not_yet_ingested"
+    },
+    {
+      "id": "eq10:16:04",
+      "bbox": [
+        -140,
+        70,
+        -130,
+        80
+      ],
+      "center": [
+        -135,
+        75
+      ],
+      "coverageStatus": "not_yet_ingested"
+    },
+    {
+      "id": "eq10:16:05",
+      "bbox": [
+        -130,
+        70,
+        -120,
+        80
+      ],
+      "center": [
+        -125,
+        75
+      ],
+      "coverageStatus": "not_yet_ingested"
+    },
+    {
+      "id": "eq10:16:06",
+      "bbox": [
+        -120,
+        70,
+        -110,
+        80
+      ],
+      "center": [
+        -115,
+        75
+      ],
+      "coverageStatus": "not_yet_ingested"
+    },
+    {
+      "id": "eq10:16:07",
+      "bbox": [
+        -110,
+        70,
+        -100,
+        80
+      ],
+      "center": [
+        -105,
+        75
+      ],
+      "coverageStatus": "not_yet_ingested"
+    },
+    {
+      "id": "eq10:16:08",
+      "bbox": [
+        -100,
+        70,
+        -90,
+        80
+      ],
+      "center": [
+        -95,
+        75
+      ],
+      "coverageStatus": "not_yet_ingested"
+    },
+    {
+      "id": "eq10:16:09",
+      "bbox": [
+        -90,
+        70,
+        -80,
+        80
+      ],
+      "center": [
+        -85,
+        75
+      ],
+      "coverageStatus": "not_yet_ingested"
+    },
+    {
+      "id": "eq10:16:10",
+      "bbox": [
+        -80,
+        70,
+        -70,
+        80
+      ],
+      "center": [
+        -75,
+        75
+      ],
+      "coverageStatus": "not_yet_ingested"
+    },
+    {
+      "id": "eq10:16:11",
+      "bbox": [
+        -70,
+        70,
+        -60,
+        80
+      ],
+      "center": [
+        -65,
+        75
+      ],
+      "coverageStatus": "not_yet_ingested"
+    },
+    {
+      "id": "eq10:16:12",
+      "bbox": [
+        -60,
+        70,
+        -50,
+        80
+      ],
+      "center": [
+        -55,
+        75
+      ],
+      "coverageStatus": "not_yet_ingested"
+    },
+    {
+      "id": "eq10:16:13",
+      "bbox": [
+        -50,
+        70,
+        -40,
+        80
+      ],
+      "center": [
+        -45,
+        75
+      ],
+      "coverageStatus": "not_yet_ingested"
+    },
+    {
+      "id": "eq10:16:14",
+      "bbox": [
+        -40,
+        70,
+        -30,
+        80
+      ],
+      "center": [
+        -35,
+        75
+      ],
+      "coverageStatus": "not_yet_ingested"
+    },
+    {
+      "id": "eq10:16:15",
+      "bbox": [
+        -30,
+        70,
+        -20,
+        80
+      ],
+      "center": [
+        -25,
+        75
+      ],
+      "coverageStatus": "not_yet_ingested"
+    },
+    {
+      "id": "eq10:16:16",
+      "bbox": [
+        -20,
+        70,
+        -10,
+        80
+      ],
+      "center": [
+        -15,
+        75
+      ],
+      "coverageStatus": "not_yet_ingested"
+    },
+    {
+      "id": "eq10:16:17",
+      "bbox": [
+        -10,
+        70,
+        0,
+        80
+      ],
+      "center": [
+        -5,
+        75
+      ],
+      "coverageStatus": "not_yet_ingested"
+    },
+    {
+      "id": "eq10:16:18",
+      "bbox": [
+        0,
+        70,
+        10,
+        80
+      ],
+      "center": [
+        5,
+        75
+      ],
+      "coverageStatus": "not_yet_ingested"
+    },
+    {
+      "id": "eq10:16:19",
+      "bbox": [
+        10,
+        70,
+        20,
+        80
+      ],
+      "center": [
+        15,
+        75
+      ],
+      "coverageStatus": "not_yet_ingested"
+    },
+    {
+      "id": "eq10:16:20",
+      "bbox": [
+        20,
+        70,
+        30,
+        80
+      ],
+      "center": [
+        25,
+        75
+      ],
+      "coverageStatus": "not_yet_ingested"
+    },
+    {
+      "id": "eq10:16:21",
+      "bbox": [
+        30,
+        70,
+        40,
+        80
+      ],
+      "center": [
+        35,
+        75
+      ],
+      "coverageStatus": "not_yet_ingested"
+    },
+    {
+      "id": "eq10:16:22",
+      "bbox": [
+        40,
+        70,
+        50,
+        80
+      ],
+      "center": [
+        45,
+        75
+      ],
+      "coverageStatus": "not_yet_ingested"
+    },
+    {
+      "id": "eq10:16:23",
+      "bbox": [
+        50,
+        70,
+        60,
+        80
+      ],
+      "center": [
+        55,
+        75
+      ],
+      "coverageStatus": "not_yet_ingested"
+    },
+    {
+      "id": "eq10:16:24",
+      "bbox": [
+        60,
+        70,
+        70,
+        80
+      ],
+      "center": [
+        65,
+        75
+      ],
+      "coverageStatus": "not_yet_ingested"
+    },
+    {
+      "id": "eq10:16:25",
+      "bbox": [
+        70,
+        70,
+        80,
+        80
+      ],
+      "center": [
+        75,
+        75
+      ],
+      "coverageStatus": "not_yet_ingested"
+    },
+    {
+      "id": "eq10:16:26",
+      "bbox": [
+        80,
+        70,
+        90,
+        80
+      ],
+      "center": [
+        85,
+        75
+      ],
+      "coverageStatus": "not_yet_ingested"
+    },
+    {
+      "id": "eq10:16:27",
+      "bbox": [
+        90,
+        70,
+        100,
+        80
+      ],
+      "center": [
+        95,
+        75
+      ],
+      "coverageStatus": "not_yet_ingested"
+    },
+    {
+      "id": "eq10:16:28",
+      "bbox": [
+        100,
+        70,
+        110,
+        80
+      ],
+      "center": [
+        105,
+        75
+      ],
+      "coverageStatus": "not_yet_ingested"
+    },
+    {
+      "id": "eq10:16:29",
+      "bbox": [
+        110,
+        70,
+        120,
+        80
+      ],
+      "center": [
+        115,
+        75
+      ],
+      "coverageStatus": "not_yet_ingested"
+    },
+    {
+      "id": "eq10:16:30",
+      "bbox": [
+        120,
+        70,
+        130,
+        80
+      ],
+      "center": [
+        125,
+        75
+      ],
+      "coverageStatus": "not_yet_ingested"
+    },
+    {
+      "id": "eq10:16:31",
+      "bbox": [
+        130,
+        70,
+        140,
+        80
+      ],
+      "center": [
+        135,
+        75
+      ],
+      "coverageStatus": "not_yet_ingested"
+    },
+    {
+      "id": "eq10:16:32",
+      "bbox": [
+        140,
+        70,
+        150,
+        80
+      ],
+      "center": [
+        145,
+        75
+      ],
+      "coverageStatus": "not_yet_ingested"
+    },
+    {
+      "id": "eq10:16:33",
+      "bbox": [
+        150,
+        70,
+        160,
+        80
+      ],
+      "center": [
+        155,
+        75
+      ],
+      "coverageStatus": "not_yet_ingested"
+    },
+    {
+      "id": "eq10:16:34",
+      "bbox": [
+        160,
+        70,
+        170,
+        80
+      ],
+      "center": [
+        165,
+        75
+      ],
+      "coverageStatus": "not_yet_ingested"
+    },
+    {
+      "id": "eq10:16:35",
+      "bbox": [
+        170,
+        70,
+        180,
+        80
+      ],
+      "center": [
+        175,
+        75
+      ],
+      "coverageStatus": "not_yet_ingested"
+    },
+    {
+      "id": "eq10:17:00",
+      "bbox": [
+        -180,
+        80,
+        -170,
+        90
+      ],
+      "center": [
+        -175,
+        85
+      ],
+      "coverageStatus": "not_yet_ingested"
+    },
+    {
+      "id": "eq10:17:01",
+      "bbox": [
+        -170,
+        80,
+        -160,
+        90
+      ],
+      "center": [
+        -165,
+        85
+      ],
+      "coverageStatus": "not_yet_ingested"
+    },
+    {
+      "id": "eq10:17:02",
+      "bbox": [
+        -160,
+        80,
+        -150,
+        90
+      ],
+      "center": [
+        -155,
+        85
+      ],
+      "coverageStatus": "not_yet_ingested"
+    },
+    {
+      "id": "eq10:17:03",
+      "bbox": [
+        -150,
+        80,
+        -140,
+        90
+      ],
+      "center": [
+        -145,
+        85
+      ],
+      "coverageStatus": "not_yet_ingested"
+    },
+    {
+      "id": "eq10:17:04",
+      "bbox": [
+        -140,
+        80,
+        -130,
+        90
+      ],
+      "center": [
+        -135,
+        85
+      ],
+      "coverageStatus": "not_yet_ingested"
+    },
+    {
+      "id": "eq10:17:05",
+      "bbox": [
+        -130,
+        80,
+        -120,
+        90
+      ],
+      "center": [
+        -125,
+        85
+      ],
+      "coverageStatus": "not_yet_ingested"
+    },
+    {
+      "id": "eq10:17:06",
+      "bbox": [
+        -120,
+        80,
+        -110,
+        90
+      ],
+      "center": [
+        -115,
+        85
+      ],
+      "coverageStatus": "not_yet_ingested"
+    },
+    {
+      "id": "eq10:17:07",
+      "bbox": [
+        -110,
+        80,
+        -100,
+        90
+      ],
+      "center": [
+        -105,
+        85
+      ],
+      "coverageStatus": "not_yet_ingested"
+    },
+    {
+      "id": "eq10:17:08",
+      "bbox": [
+        -100,
+        80,
+        -90,
+        90
+      ],
+      "center": [
+        -95,
+        85
+      ],
+      "coverageStatus": "not_yet_ingested"
+    },
+    {
+      "id": "eq10:17:09",
+      "bbox": [
+        -90,
+        80,
+        -80,
+        90
+      ],
+      "center": [
+        -85,
+        85
+      ],
+      "coverageStatus": "not_yet_ingested"
+    },
+    {
+      "id": "eq10:17:10",
+      "bbox": [
+        -80,
+        80,
+        -70,
+        90
+      ],
+      "center": [
+        -75,
+        85
+      ],
+      "coverageStatus": "not_yet_ingested"
+    },
+    {
+      "id": "eq10:17:11",
+      "bbox": [
+        -70,
+        80,
+        -60,
+        90
+      ],
+      "center": [
+        -65,
+        85
+      ],
+      "coverageStatus": "not_yet_ingested"
+    },
+    {
+      "id": "eq10:17:12",
+      "bbox": [
+        -60,
+        80,
+        -50,
+        90
+      ],
+      "center": [
+        -55,
+        85
+      ],
+      "coverageStatus": "not_yet_ingested"
+    },
+    {
+      "id": "eq10:17:13",
+      "bbox": [
+        -50,
+        80,
+        -40,
+        90
+      ],
+      "center": [
+        -45,
+        85
+      ],
+      "coverageStatus": "not_yet_ingested"
+    },
+    {
+      "id": "eq10:17:14",
+      "bbox": [
+        -40,
+        80,
+        -30,
+        90
+      ],
+      "center": [
+        -35,
+        85
+      ],
+      "coverageStatus": "not_yet_ingested"
+    },
+    {
+      "id": "eq10:17:15",
+      "bbox": [
+        -30,
+        80,
+        -20,
+        90
+      ],
+      "center": [
+        -25,
+        85
+      ],
+      "coverageStatus": "not_yet_ingested"
+    },
+    {
+      "id": "eq10:17:16",
+      "bbox": [
+        -20,
+        80,
+        -10,
+        90
+      ],
+      "center": [
+        -15,
+        85
+      ],
+      "coverageStatus": "not_yet_ingested"
+    },
+    {
+      "id": "eq10:17:17",
+      "bbox": [
+        -10,
+        80,
+        0,
+        90
+      ],
+      "center": [
+        -5,
+        85
+      ],
+      "coverageStatus": "not_yet_ingested"
+    },
+    {
+      "id": "eq10:17:18",
+      "bbox": [
+        0,
+        80,
+        10,
+        90
+      ],
+      "center": [
+        5,
+        85
+      ],
+      "coverageStatus": "not_yet_ingested"
+    },
+    {
+      "id": "eq10:17:19",
+      "bbox": [
+        10,
+        80,
+        20,
+        90
+      ],
+      "center": [
+        15,
+        85
+      ],
+      "coverageStatus": "not_yet_ingested"
+    },
+    {
+      "id": "eq10:17:20",
+      "bbox": [
+        20,
+        80,
+        30,
+        90
+      ],
+      "center": [
+        25,
+        85
+      ],
+      "coverageStatus": "not_yet_ingested"
+    },
+    {
+      "id": "eq10:17:21",
+      "bbox": [
+        30,
+        80,
+        40,
+        90
+      ],
+      "center": [
+        35,
+        85
+      ],
+      "coverageStatus": "not_yet_ingested"
+    },
+    {
+      "id": "eq10:17:22",
+      "bbox": [
+        40,
+        80,
+        50,
+        90
+      ],
+      "center": [
+        45,
+        85
+      ],
+      "coverageStatus": "not_yet_ingested"
+    },
+    {
+      "id": "eq10:17:23",
+      "bbox": [
+        50,
+        80,
+        60,
+        90
+      ],
+      "center": [
+        55,
+        85
+      ],
+      "coverageStatus": "not_yet_ingested"
+    },
+    {
+      "id": "eq10:17:24",
+      "bbox": [
+        60,
+        80,
+        70,
+        90
+      ],
+      "center": [
+        65,
+        85
+      ],
+      "coverageStatus": "not_yet_ingested"
+    },
+    {
+      "id": "eq10:17:25",
+      "bbox": [
+        70,
+        80,
+        80,
+        90
+      ],
+      "center": [
+        75,
+        85
+      ],
+      "coverageStatus": "not_yet_ingested"
+    },
+    {
+      "id": "eq10:17:26",
+      "bbox": [
+        80,
+        80,
+        90,
+        90
+      ],
+      "center": [
+        85,
+        85
+      ],
+      "coverageStatus": "not_yet_ingested"
+    },
+    {
+      "id": "eq10:17:27",
+      "bbox": [
+        90,
+        80,
+        100,
+        90
+      ],
+      "center": [
+        95,
+        85
+      ],
+      "coverageStatus": "not_yet_ingested"
+    },
+    {
+      "id": "eq10:17:28",
+      "bbox": [
+        100,
+        80,
+        110,
+        90
+      ],
+      "center": [
+        105,
+        85
+      ],
+      "coverageStatus": "not_yet_ingested"
+    },
+    {
+      "id": "eq10:17:29",
+      "bbox": [
+        110,
+        80,
+        120,
+        90
+      ],
+      "center": [
+        115,
+        85
+      ],
+      "coverageStatus": "not_yet_ingested"
+    },
+    {
+      "id": "eq10:17:30",
+      "bbox": [
+        120,
+        80,
+        130,
+        90
+      ],
+      "center": [
+        125,
+        85
+      ],
+      "coverageStatus": "not_yet_ingested"
+    },
+    {
+      "id": "eq10:17:31",
+      "bbox": [
+        130,
+        80,
+        140,
+        90
+      ],
+      "center": [
+        135,
+        85
+      ],
+      "coverageStatus": "not_yet_ingested"
+    },
+    {
+      "id": "eq10:17:32",
+      "bbox": [
+        140,
+        80,
+        150,
+        90
+      ],
+      "center": [
+        145,
+        85
+      ],
+      "coverageStatus": "not_yet_ingested"
+    },
+    {
+      "id": "eq10:17:33",
+      "bbox": [
+        150,
+        80,
+        160,
+        90
+      ],
+      "center": [
+        155,
+        85
+      ],
+      "coverageStatus": "not_yet_ingested"
+    },
+    {
+      "id": "eq10:17:34",
+      "bbox": [
+        160,
+        80,
+        170,
+        90
+      ],
+      "center": [
+        165,
+        85
+      ],
+      "coverageStatus": "not_yet_ingested"
+    },
+    {
+      "id": "eq10:17:35",
+      "bbox": [
+        170,
+        80,
+        180,
+        90
+      ],
+      "center": [
+        175,
+        85
+      ],
+      "coverageStatus": "not_yet_ingested"
+    }
   ]
 }

@@ -15,6 +15,8 @@ export class WildlifeObservation {
   private complete = false;
   private _onKeyDown: (e: KeyboardEvent) => void;
   private _onKeyUp: (e: KeyboardEvent) => void;
+  private _onPointerDown: (e: PointerEvent) => void;
+  private _onPointerUp: (e: PointerEvent) => void;
 
   constructor(canvas: HTMLCanvasElement, species: PlayableSpecies, onComplete: () => void, _onCancel: () => void) {
     this.canvas = canvas;
@@ -36,8 +38,19 @@ export class WildlifeObservation {
     this._onKeyUp = (e: KeyboardEvent) => {
       if (e.code === 'Space') this.holding = false;
     };
+    this._onPointerDown = (e: PointerEvent) => {
+      e.preventDefault();
+      this.holding = true;
+    };
+    this._onPointerUp = (_e: PointerEvent) => {
+      this.holding = false;
+    };
     window.addEventListener('keydown', this._onKeyDown);
     window.addEventListener('keyup', this._onKeyUp);
+    this.canvas.addEventListener('pointerdown', this._onPointerDown);
+    this.canvas.addEventListener('pointerup', this._onPointerUp);
+    this.canvas.addEventListener('pointercancel', this._onPointerUp);
+    this.canvas.addEventListener('pointerleave', this._onPointerUp);
   }
 
   update(dt: number) {
@@ -116,7 +129,15 @@ export class WildlifeObservation {
     ctx.fillStyle = '#fff';
     ctx.font = '12px sans-serif';
     ctx.textAlign = 'center';
-    ctx.fillText(this.holding ? 'Observing... stay still!' : 'Hold Space to observe quietly', w / 2, h - 15);
+    ctx.fillText(
+      this.holding
+        ? 'Observing... stay still!'
+        : (typeof window !== 'undefined' && window.matchMedia?.('(pointer: coarse)').matches
+          ? 'Hold on screen to observe quietly'
+          : 'Hold Space to observe quietly'),
+      w / 2,
+      h - 15
+    );
   }
 
   getPatience() {
@@ -126,5 +147,9 @@ export class WildlifeObservation {
   destroy() {
     window.removeEventListener('keydown', this._onKeyDown);
     window.removeEventListener('keyup', this._onKeyUp);
+    this.canvas.removeEventListener('pointerdown', this._onPointerDown);
+    this.canvas.removeEventListener('pointerup', this._onPointerUp);
+    this.canvas.removeEventListener('pointercancel', this._onPointerUp);
+    this.canvas.removeEventListener('pointerleave', this._onPointerUp);
   }
 }

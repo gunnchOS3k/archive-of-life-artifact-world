@@ -22,6 +22,7 @@ import {
   type PlayableSpecies,
 } from '@/services/DataCatalogService';
 import { EarthLayerService } from '@/services/EarthLayerService';
+import { TemporalMapService } from '@/services/TemporalMapService';
 import { TimeAtlasService } from '@/time/TimeAtlasService';
 import type { SaveState } from '@/schema';
 
@@ -63,6 +64,7 @@ export class Game {
     catalog: DataCatalogService,
     earthService: EarthLayerService,
     timeService: TimeAtlasService,
+    temporalMapService: TemporalMapService,
     dexService: ArchiveDexService,
     state: SaveState
   ) {
@@ -89,6 +91,7 @@ export class Game {
     this.timeAtlasUI = new TimeAtlasUI(
       document.getElementById('panel-time')!,
       timeService,
+      temporalMapService,
       catalog
     );
     this.coverageDashboardUI = new CoverageDashboardUI(
@@ -118,22 +121,26 @@ export class Game {
     const parent = this.canvas.parentElement!;
     this.canvas.width = parent.clientWidth;
     this.canvas.height = parent.clientHeight;
-    this.bounds = { width: this.canvas.width, height: this.canvas.height };
+    // Movement bounds stay world-sized; canvas is the viewport.
   }
 
   private setupInput() {
     window.addEventListener('keydown', (e) => {
       this.keys[e.key] = true;
       if (this.activeMinigame) return;
-      if (this.isPanelOpen()) return;
+      if (this.isPanelOpen()) {
+        if (e.key === 'Escape') this.closeAllPanels();
+        return;
+      }
       if (e.key === 'e' || e.key === 'E') void this.interact();
-      if (e.key === 'a' || e.key === 'A') this.togglePanel('archive');
-      if (e.key === 'n' || e.key === 'N') this.togglePanel('notebook');
-      if (e.key === 'm' || e.key === 'M') this.togglePanel('map');
-      if (e.key === 'c' || e.key === 'C') this.togglePanel('companion');
-      if (e.key === 'q' || e.key === 'Q') this.togglePanel('quests');
-      if (e.key === 't' || e.key === 'T') this.togglePanel('earth');
-      if (e.key === 'y' || e.key === 'Y') this.togglePanel('time');
+      // Panel shortcuts use digit keys so WASD movement is never swallowed.
+      if (e.key === '1') this.togglePanel('archive');
+      if (e.key === '2') this.togglePanel('notebook');
+      if (e.key === '3') this.togglePanel('map');
+      if (e.key === '4') this.togglePanel('companion');
+      if (e.key === '5') this.togglePanel('quests');
+      if (e.key === '6') this.togglePanel('earth');
+      if (e.key === '7') this.togglePanel('time');
       if (this.devMode && (e.key === 'g' || e.key === 'G')) this.togglePanel('coverage');
       if (this.devMode && (e.key === 'i' || e.key === 'I')) this.togglePanel('implementation');
       if (e.key === 'Escape') this.closeAllPanels();
@@ -162,6 +169,110 @@ export class Game {
     document.getElementById('observe-hold')!.addEventListener('mouseup', () => {
       if (this.activeMinigame instanceof WildlifeObservation) this.activeMinigame.holding = false;
     });
+    document.getElementById('observe-hold')!.addEventListener('touchstart', (e) => {
+      e.preventDefault();
+      if (this.activeMinigame instanceof WildlifeObservation) this.activeMinigame.holding = true;
+    }, { passive: false });
+    document.getElementById('observe-hold')!.addEventListener('touchend', () => {
+      if (this.activeMinigame instanceof WildlifeObservation) this.activeMinigame.holding = false;
+    });
+
+    this.setupMobileTouch();
+  }
+
+  /** Canvas drag stick + tap-to-interact for Pixel / touch devices. */
+  private touchPointerId: number | null = null;
+  private touchOrigin: { x: number; y: number } | null = null;
+  private touchMoved = false;
+
+  private clearTouchKeys() {
+    for (const k of ['w', 'a', 's', 'd', 'ArrowUp', 'ArrowDown', 'ArrowLeft', 'ArrowRight'] as const) {
+      this.keys[k] = false;
+    }
+  }
+
+  private applyTouchVector(dx: number, dy: number) {
+    this.clearTouchKeys();
+    const dead = 12;
+    if (Math.hypot(dx, dy) < dead) return;
+    if (Math.abs(dx) >= Math.abs(dy)) {
+      if (dx < 0) this.keys['a'] = true;
+      else this.keys['d'] = true;
+    } else {
+      if (dy < 0) this.keys['w'] = true;
+      else this.keys['s'] = true;
+    }
+    // diagonal assist
+    if (Math.abs(dx) > dead && Math.abs(dy) > dead) {
+      if (dx < 0) this.keys['a'] = true;
+      else this.keys['d'] = true;
+      if (dy < 0) this.keys['w'] = true;
+      else this.keys['s'] = true;
+    }
+  }
+
+  private canvasToWorld(clientX: number, clientY: number) {
+    const rect = this.canvas.getBoundingClientRect();
+    const sx = this.canvas.width / Math.max(1, rect.width);
+    const sy = this.canvas.height / Math.max(1, rect.height);
+    const screenX = (clientX - rect.left) * sx;
+    const screenY = (clientY - rect.top) * sy;
+    const w = this.canvas.width;
+    const h = this.canvas.height;
+    const maxCamX = Math.max(0, this.bounds.width - w);
+    const maxCamY = Math.max(0, this.bounds.height - h);
+    const camX = Math.min(maxCamX, Math.max(0, this.player.x - w / 2));
+    const camY = Math.min(maxCamY, Math.max(0, this.player.y - h / 2));
+    return { x: screenX + camX, y: screenY + camY };
+  }
+
+  private setupMobileTouch() {
+    const onDown = (e: PointerEvent) => {
+      if (this.paused || this.activeMinigame || this.isPanelOpen()) return;
+      if (e.pointerType === 'mouse' && e.button !== 0) return;
+      this.touchPointerId = e.pointerId;
+      this.touchOrigin = { x: e.clientX, y: e.clientY };
+      this.touchMoved = false;
+      try {
+        this.canvas.setPointerCapture(e.pointerId);
+      } catch {
+        /* ignore */
+      }
+    };
+    const onMove = (e: PointerEvent) => {
+      if (this.touchPointerId !== e.pointerId || !this.touchOrigin) return;
+      const dx = e.clientX - this.touchOrigin.x;
+      const dy = e.clientY - this.touchOrigin.y;
+      if (Math.hypot(dx, dy) > 10) this.touchMoved = true;
+      this.applyTouchVector(dx, dy);
+    };
+    const onUp = (e: PointerEvent) => {
+      if (this.touchPointerId !== e.pointerId) return;
+      const wasTap = !this.touchMoved && this.touchOrigin;
+      this.touchPointerId = null;
+      this.touchOrigin = null;
+      this.clearTouchKeys();
+      if (wasTap && !this.paused && !this.activeMinigame && !this.isPanelOpen()) {
+        const world = this.canvasToWorld(e.clientX, e.clientY);
+        const near = this.world.getNearestInteractable(world.x, world.y);
+        if (near && Math.hypot(near.x - this.player.x, near.y - this.player.y) < 80) {
+          void this.interact();
+        } else if (near && Math.hypot(near.x - world.x, near.y - world.y) < 48) {
+          // Tap portal / target: walk beside then interact next frame.
+          this.player.x = near.x;
+          this.player.y = near.y;
+          this.state.player.x = near.x;
+          this.state.player.y = near.y;
+          this.nearestInteractable = near;
+          void this.interact();
+        }
+      }
+    };
+    this.canvas.style.touchAction = 'none';
+    this.canvas.addEventListener('pointerdown', onDown);
+    this.canvas.addEventListener('pointermove', onMove);
+    this.canvas.addEventListener('pointerup', onUp);
+    this.canvas.addEventListener('pointercancel', onUp);
   }
 
   private isPanelOpen() {
@@ -229,8 +340,9 @@ export class Game {
     }
     this.world.updateSpeciesMap(this.speciesById);
     this.world.loadRegion(regionId);
-    this.player.x = this.canvas.width / 2;
-    this.player.y = this.canvas.height / 2;
+    this.bounds = this.world.getWorldSize();
+    this.player.x = this.bounds.width / 2;
+    this.player.y = this.bounds.height / 2;
     this.state.player.x = this.player.x;
     this.state.player.y = this.player.y;
 
@@ -351,6 +463,76 @@ export class Game {
     this.toastTimer = setTimeout(() => toast.classList.add('hidden'), 3500);
   }
 
+  /** Acceptance / Playwright helpers — movement + travel without fragile canvas coordinates. */
+  async acceptTravel(regionId: string) {
+    await this.travelToRegion(regionId);
+  }
+
+  acceptMoveBesideTarget(kind?: 'species' | 'fossil' | 'portal') {
+    const targets = this.world.getInteractables().filter((item) => {
+      if (!kind) return item.type === 'species' || item.type === 'fossil';
+      return item.type === kind;
+    });
+    const target = targets[0];
+    if (!target) return null;
+    this.player.x = target.x;
+    this.player.y = target.y;
+    this.state.player.x = target.x;
+    this.state.player.y = target.y;
+    this.nearestInteractable = this.world.getNearestInteractable(this.player.x, this.player.y);
+    return {
+      type: target.type,
+      id: 'speciesId' in target ? target.speciesId : target.id,
+      label: 'label' in target ? target.label : ('species' in target ? target.species.commonName : 'unknown'),
+    };
+  }
+
+  async acceptInteract() {
+    await this.interact();
+  }
+
+  acceptSetMinigameHold(holding: boolean) {
+    if (this.activeMinigame instanceof WildlifeObservation) {
+      this.activeMinigame.holding = holding;
+      return true;
+    }
+    return false;
+  }
+
+  acceptCompleteFossilMinigame() {
+    if (this.activeMinigame instanceof FossilExcavation) {
+      this.activeMinigame.acceptRevealComplete();
+      return true;
+    }
+    return false;
+  }
+
+  acceptEquipTrait(traitId: string) {
+    const traits = this.state.companion.unlockedTraits;
+    if (!traits.includes(traitId)) traits.push(traitId);
+    if (!this.state.companion.equippedTraits.includes(traitId)) {
+      this.state.companion.equippedTraits.push(traitId);
+    }
+    this.save();
+    this.refreshUI();
+    return this.acceptSnapshot();
+  }
+
+  acceptSnapshot() {
+    return {
+      region: this.state.player.currentRegion,
+      artifacts: this.state.artifacts.map((a) => a.speciesId),
+      notebook: this.state.notebook?.length ?? 0,
+      unlockedTraits: [...this.state.companion.unlockedTraits],
+      equippedTraits: [...this.state.companion.equippedTraits],
+      minigame: this.activeMinigame
+        ? this.activeMinigame instanceof FossilExcavation
+          ? 'fossil'
+          : 'observe'
+        : null,
+    };
+  }
+
   save() {
     this.state.player.x = this.player.x;
     this.state.player.y = this.player.y;
@@ -391,7 +573,7 @@ export class Game {
   }
 
   private update(dt: number) {
-    this.player.update(dt, this.keys, this.bounds);
+    this.player.update(dt, this.keys, this.bounds, this.world.getSolidObstacles());
     this.lifeling.update(dt, this.player.x, this.player.y, this.state.companion);
 
     this.nearestInteractable = this.world.getNearestInteractable(this.player.x, this.player.y);
@@ -401,11 +583,13 @@ export class Game {
     if (this.nearestInteractable) {
       prompt.classList.remove('hidden');
       const item = this.nearestInteractable;
-      if (item.type === 'portal') promptText.textContent = `Press E — Travel to ${item.label}`;
-      else if (item.type === 'earth_console') promptText.textContent = `Press E — Open ${item.label}`;
-      else if (item.type === 'time_atlas') promptText.textContent = `Press E — Open ${item.label}`;
-      else if (item.type === 'fossil') promptText.textContent = `Press E — Excavate ${item.species.commonName} fossil`;
-      else promptText.textContent = `Press E — Observe ${item.species.commonName}`;
+      const coarse = typeof window !== 'undefined' && window.matchMedia?.('(pointer: coarse)').matches;
+      const act = coarse ? 'Tap' : 'Press E';
+      if (item.type === 'portal') promptText.textContent = `${act} — Travel to ${item.label}`;
+      else if (item.type === 'earth_console') promptText.textContent = `${act} — Open ${item.label}`;
+      else if (item.type === 'time_atlas') promptText.textContent = `${act} — Open ${item.label}`;
+      else if (item.type === 'fossil') promptText.textContent = `${act} — Excavate ${item.species.commonName} fossil`;
+      else promptText.textContent = `${act} — Observe ${item.species.commonName}`;
     } else {
       prompt.classList.add('hidden');
     }
@@ -414,12 +598,27 @@ export class Game {
   private render() {
     const w = this.canvas.width;
     const h = this.canvas.height;
-    this.world.draw(this.ctx, w, h);
+    const maxCamX = Math.max(0, this.bounds.width - w);
+    const maxCamY = Math.max(0, this.bounds.height - h);
+    const camX = Math.min(maxCamX, Math.max(0, this.player.x - w / 2));
+    const camY = Math.min(maxCamY, Math.max(0, this.player.y - h / 2));
+
+    this.ctx.clearRect(0, 0, w, h);
+    this.ctx.save();
+    this.ctx.translate(-camX, -camY);
+    this.world.draw(this.ctx, this.bounds.width, this.bounds.height);
     this.lifeling.draw(this.ctx, this.state.companion);
     this.player.draw(this.ctx);
+    this.ctx.restore();
+
     this.ctx.fillStyle = 'rgba(255,255,255,0.4)';
     this.ctx.font = '11px sans-serif';
     this.ctx.textAlign = 'left';
-    this.ctx.fillText('WASD/Arrows: Move | E: Interact | A/N/M/C/Q/T/Y: Menus', 10, h - 10);
+    const coarse = typeof window !== 'undefined' && window.matchMedia?.('(pointer: coarse)').matches;
+    if (!coarse) {
+      this.ctx.fillText('WASD/Arrows: Move | E: Interact | 1–7: Menus', 10, h - 10);
+    } else {
+      this.ctx.fillText('Drag to move · Tap portals & nearby targets to interact', 10, h - 10);
+    }
   }
 }

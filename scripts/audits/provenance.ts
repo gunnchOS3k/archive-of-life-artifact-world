@@ -47,5 +47,20 @@ export function auditProvenance(ctx: AuditContext): AuditResult[] {
     category: 'provenance',
   });
 
+  const approvedWithWeakChecksum = ctx.sourceSnapshots.snapshots.filter((snapshot) => {
+    if (!snapshot.approvedForUse) return false;
+    const checksum = snapshot.checksum?.replace(/^sha256:/, '') ?? '';
+    return !/^[a-f0-9]{64}$/.test(checksum);
+  });
+  results.push({
+    name: 'approved_snapshots_have_sha256',
+    passed: approvedWithWeakChecksum.length === 0,
+    message: approvedWithWeakChecksum.length
+      ? `Approved snapshots with missing/invalid SHA-256: ${approvedWithWeakChecksum.map((snapshot) => snapshot.id).join(', ')}`
+      : 'Every approved source snapshot has a valid SHA-256',
+    category: 'provenance',
+    blocking: true,
+  });
+
   return results;
 }

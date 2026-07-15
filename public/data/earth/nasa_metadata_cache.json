@@ -1,6 +1,9 @@
 {
   "generatedAt": "2026-07-05T03:41:38Z",
   "dataMode": "real_metadata",
+  "verificationMode": "source_verified",
+  "scope": "metadata_only",
+  "measurementDataMode": "not_ingested",
   "layers": [
     {
       "id": "natural_events",
@@ -21,5 +24,6 @@
       "sourceUrl": "https://power.larc.nasa.gov/"
     }
   ],
-  "recordCount": 21
+  "recordCount": 21,
+  "verifiedRecordCount": 21
 }

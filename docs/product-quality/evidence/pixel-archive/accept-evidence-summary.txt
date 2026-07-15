@@ -1,0 +1,1 @@
+07-14 16:30:43.956 I/AndroidRuntime( 7601): VM exiting with result code 0, cleanup skipped.

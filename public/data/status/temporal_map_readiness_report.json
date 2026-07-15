@@ -1,0 +1,79 @@
+{
+  "generatedAt": "2026-07-11T19:17:40.110Z",
+  "readyForProduction": false,
+  "strictMode": false,
+  "expectedGridCellCount": 648,
+  "supportedTimeGateCount": 17,
+  "sourceVerifiedMapCount": 0,
+  "incompleteMapCount": 17,
+  "blockedTimeGateIds": [
+    "gate_hadean",
+    "gate_archean",
+    "gate_proterozoic",
+    "gate_ediacaran",
+    "gate_cambrian",
+    "gate_ordovician",
+    "gate_silurian",
+    "gate_devonian",
+    "gate_carboniferous",
+    "gate_permian",
+    "gate_triassic",
+    "gate_jurassic",
+    "gate_cretaceous",
+    "gate_paleogene",
+    "gate_neogene",
+    "gate_pleistocene",
+    "gate_holocene"
+  ],
+  "checks": [
+    {
+      "name": "earth_grid_global_bounds",
+      "passed": true,
+      "message": "Earth grid declares the complete WGS84 world extent",
+      "category": "temporal_maps",
+      "blocking": true
+    },
+    {
+      "name": "earth_grid_dimensions",
+      "passed": true,
+      "message": "36 × 18 cells; expected=648",
+      "category": "temporal_maps",
+      "blocking": true
+    },
+    {
+      "name": "earth_grid_no_gaps_or_overlaps",
+      "passed": true,
+      "message": "All 648 deterministic cells cover the full Earth exactly once",
+      "category": "temporal_maps",
+      "blocking": true
+    },
+    {
+      "name": "one_temporal_map_requirement_per_gate",
+      "passed": true,
+      "message": "All 17 supported time gates have exactly one map requirement",
+      "category": "temporal_maps",
+      "blocking": true
+    },
+    {
+      "name": "temporal_map_records_truthful_and_valid",
+      "passed": true,
+      "message": "Map status, coverage, time ranges, assets, and provenance are internally consistent",
+      "category": "temporal_maps",
+      "blocking": true
+    },
+    {
+      "name": "temporal_map_catalog_mock_flag_matches_content",
+      "passed": true,
+      "message": "sourceVerified=0, incomplete=17, isMockData=true",
+      "category": "temporal_maps",
+      "blocking": true
+    },
+    {
+      "name": "all_temporal_maps_source_verified",
+      "passed": false,
+      "message": "17/17 full-Earth time maps still require approved scientific assets",
+      "category": "temporal_maps",
+      "blocking": false
+    }
+  ]
+}

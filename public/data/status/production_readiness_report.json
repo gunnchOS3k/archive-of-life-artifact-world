@@ -1,0 +1,39 @@
+{
+  "generatedAt": "2026-07-11T19:12:04.855Z",
+  "ready": false,
+  "blockingReasons": [
+    "Not source-verified: col, gbif, iucn, pbdb, neotoma",
+    "Time Atlas still uses the labeled ICS sample snapshot",
+    "17/17 supported time gates lack full-Earth source-verified maps",
+    "NASA metadata is cached, but displayed regional measurements remain sample fallback values",
+    "23/23 hero taxa still include mock scientific provenance"
+  ],
+  "checks": [
+    {
+      "name": "required_external_sources_verified",
+      "passed": false,
+      "message": "Not source-verified: col, gbif, iucn, pbdb, neotoma"
+    },
+    {
+      "name": "chronostratigraphy_not_mock",
+      "passed": false,
+      "message": "Time Atlas still uses the labeled ICS sample snapshot"
+    },
+    {
+      "name": "all_supported_period_maps_verified",
+      "passed": false,
+      "message": "17/17 supported time gates lack full-Earth source-verified maps"
+    },
+    {
+      "name": "nasa_region_measurements_not_mock",
+      "passed": false,
+      "message": "NASA metadata is cached, but displayed regional measurements remain sample fallback values"
+    },
+    {
+      "name": "hero_scientific_fields_not_mock",
+      "passed": false,
+      "message": "23/23 hero taxa still include mock scientific provenance"
+    }
+  ],
+  "verificationCommand": "npm run audit:production"
+}

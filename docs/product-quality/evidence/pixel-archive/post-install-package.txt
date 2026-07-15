@@ -1,0 +1,4 @@
+    codePath=/data/app/~~oOjNJCt_0EuD7_SoCYo0sQ==/com.gunnchos.archiveoflife-gdV-5xPz00GXM8O9dkbhbw==
+    versionCode=2 minSdk=22 targetSdk=34
+    versionName=1.1.0
+    pkgFlags=[ HAS_CODE ALLOW_CLEAR_USER_DATA ALLOW_BACKUP KILL_AFTER_RESTORE ]

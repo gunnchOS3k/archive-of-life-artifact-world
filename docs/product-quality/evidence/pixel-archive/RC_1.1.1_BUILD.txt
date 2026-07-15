@@ -1,0 +1,20 @@
+apk_path=/Users/gunnchos/Documents/Codex/2026-07-09/github-plugin-github-openai-curated-remote/work/repos/archive-of-life-artifact-world/build/android/archive-of-life-release.apk
+build_start_utc=2026-07-14T21:23:28Z
+build_end_utc=2026-07-14T21:28:06Z
+versionName=1.1.1
+versionCode=3
+sha256=5059b1c0bf973cc317522ed6f30dee2dee261bfa1ffc4c12f288a916073abcf2
+package=com.gunnchos.archiveoflife
+Signer #1 certificate DN: CN=Archive Internal RC, OU=GunnchOS, O=GunnchOS, L=Local, ST=NA, C=US
+Signer #1 certificate SHA-256 digest: d5bf4573218a8f0aba0690429776e290c608fa02563a838eb4530971f4ca9790
+Signer #1 certificate SHA-1 digest: 7887f49ca17772d05ff324b92a82314eb0282e55
+Signer #1 certificate MD5 digest: a369cf8540e5777632495072a1e327c2
+WARNING: META-INF/com/android/build/gradle/app-metadata.properties not protected by signature. Unauthorized modifications to this JAR entry will not be detected. Delete or move the entry outside of META-INF/.
+WARNING: META-INF/androidx.activity_activity.version not protected by signature. Unauthorized modifications to this JAR entry will not be detected. Delete or move the entry outside of META-INF/.
+WARNING: META-INF/androidx.annotation_annotation-experimental.version not protected by signature. Unauthorized modifications to this JAR entry will not be detected. Delete or move the entry outside of META-INF/.
+WARNING: META-INF/androidx.appcompat_appcompat-resources.version not protected by signature. Unauthorized modifications to this JAR entry will not be detected. Delete or move the entry outside of META-INF/.
+WARNING: META-INF/androidx.appcompat_appcompat.version not protected by signature. Unauthorized modifications to this JAR entry will not be detected. Delete or move the entry outside of META-INF/.
+WARNING: META-INF/androidx.arch.core_core-runtime.version not protected by signature. Unauthorized modifications to this JAR entry will not be detected. Delete or move the entry outside of META-INF/.
+WARNING: META-INF/androidx.coordinatorlayout_coordinatorlayout.version not protected by signature. Unauthorized modifications to this JAR entry will not be detected. Delete or move the entry outside of META-INF/.
+WARNING: META-INF/androidx.core_core-ktx.version not protected by signature. Unauthorized modifications to this JAR entry will not be detected. Delete or move the entry outside of META-INF/.
+local_test_data_reset_via_pm_clear=true

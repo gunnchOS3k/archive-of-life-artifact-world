@@ -50,6 +50,31 @@ function hasNasaRealMetadata(): boolean {
   return false;
 }
 
+function hasNasaVerifiedMeasurements(): boolean {
+  const manifest = readJsonSafe<{ regionLayersPath?: string }>('public/data/earth/nasa_manifest.json');
+  if (!manifest?.regionLayersPath) return false;
+  const bundle = readJsonSafe<{ isMockData?: boolean }>(
+    `public/data/earth/${manifest.regionLayersPath}`
+  );
+  return bundle?.isMockData === false;
+}
+
+function temporalMapsVerified(): boolean {
+  const catalog = readJsonSafe<{
+    isMockData?: boolean;
+    expectedTimeGateCount?: number;
+    maps?: Array<{ status?: string; fullEarthCoverage?: boolean }>;
+  }>('public/data/maps/temporal_map_catalog.json');
+  return Boolean(
+    catalog &&
+      catalog.isMockData === false &&
+      catalog.maps?.length === catalog.expectedTimeGateCount &&
+      (catalog.maps?.every(
+        (map) => map.status === 'source_verified' && map.fullEarthCoverage === true
+      ) ?? false)
+  );
+}
+
 function provenanceModelComplete(): boolean {
   const hero = readJsonSafe<{ species: Array<{ provenance?: Array<{ source?: string; verificationStatus?: string; isMockData?: boolean }> }> }>(
     'public/data/bundles/hero-species.json'
@@ -134,10 +159,16 @@ const STATUS_EVALUATORS: Record<string, () => { status: ImplementationStatus; no
       : { status: 'MOCK_SAMPLE_ONLY', notes: 'Provenance verification classes not yet applied to bundles.' },
 
   earth_layer_console: () => {
-    if (hasNasaRealMetadata()) {
+    if (hasNasaVerifiedMeasurements()) {
       return {
         status: 'FULLY_IMPLEMENTED',
-        notes: 'NASA Earth Layer Console fully implemented for metadata/display scope with real cached NASA metadata. Full Earthdata granule ingestion remains external.',
+        notes: 'NASA Earth Layer Console displays source-verified regional measurements with separate metadata provenance.',
+      };
+    }
+    if (hasNasaRealMetadata()) {
+      return {
+        status: 'PARTIAL_IMPLEMENTATION',
+        notes: 'NASA public metadata is cached, but the displayed regional measurements remain explicitly labeled sample fallback values.',
       };
     }
     if (fileExists('data-pipeline/src/archive_life_pipeline/nasa_ingest.py')) {
@@ -148,6 +179,18 @@ const STATUS_EVALUATORS: Record<string, () => { status: ImplementationStatus; no
     }
     return { status: 'MOCK_SAMPLE_ONLY' };
   },
+
+  temporal_earth_maps: () =>
+    temporalMapsVerified()
+      ? {
+          status: 'FULLY_IMPLEMENTED',
+          notes: 'Every supported time gate has a checksummed, source-approved full-Earth map asset.',
+        }
+      : {
+          status: 'BLOCKED_BY_EXTERNAL_DATA',
+          blockedReason: 'No approved full-Earth reconstruction assets are packaged for all supported time gates.',
+          notes: 'Full-Earth grid, one-record-per-gate catalog, provenance checks, UI status, and strict production audit are implemented without fabricating paleogeography.',
+        },
 
   source_snapshot_workflow: () =>
     fileExists('scripts/source-cli.ts') && fileExists('data-pipeline/src/archive_life_pipeline/source_import.py')
@@ -167,8 +210,13 @@ const STATUS_EVALUATORS: Record<string, () => { status: ImplementationStatus; no
         },
 
   nasa_earthdata_ingestion: () =>
-    sourceImported('nasa')
-      ? { status: 'FULLY_IMPLEMENTED', notes: 'NASA metadata/event/climate sources imported and cached.' }
+    sourceImported('nasa') && hasNasaVerifiedMeasurements()
+      ? { status: 'FULLY_IMPLEMENTED', notes: 'NASA metadata and regional measurement snapshots imported and verified.' }
+      : sourceImported('nasa')
+        ? {
+            status: 'PARTIAL_IMPLEMENTATION',
+            notes: 'NASA public metadata is imported; regional measurement/granule ingestion remains blocked.',
+          }
       : {
           status: 'BLOCKED_BY_EXTERNAL_DATA',
           blockedReason: 'No real NASA metadata cache yet. Run npm run source:import:nasa.',
@@ -193,7 +241,7 @@ export function computeSystemStatuses(): SystemRecord[] {
     const notes = computed.notes ?? base.notes;
     const scopedNote =
       computed.status === 'FULLY_IMPLEMENTED' &&
-      ['archivedex', 'time_atlas', 'global_coverage_matrix', 'coverage_dashboard', 'python_pipeline', 'sql_pipeline', 'earth_layer_console'].includes(base.id) &&
+      ['archivedex', 'time_atlas', 'global_coverage_matrix', 'coverage_dashboard', 'python_pipeline', 'sql_pipeline', 'earth_layer_console', 'temporal_earth_maps'].includes(base.id) &&
       !notes.includes('snapshot scope')
         ? `${notes} ${SNAPSHOT_SCOPE_NOTE}`
         : notes;
@@ -214,6 +262,7 @@ export function buildRealDataCompletionPlan(): object {
   const targets = [
     'archivedex',
     'time_atlas',
+    'temporal_earth_maps',
     'earth_layer_console',
     'global_coverage_matrix',
     'coverage_dashboard',
@@ -241,7 +290,14 @@ export function buildRealDataCompletionPlan(): object {
             ? 'BLOCKED_BY_EXTERNAL_DATA until real snapshot imported'
             : 'FULLY_IMPLEMENTED',
         canCompleteLocally: !id.includes('ingestion') || id === 'source_snapshot_workflow' || id === 'nasa_earthdata_ingestion',
-        validationCommand: id.includes('pipeline') ? 'npm run pipeline:all' : id.includes('ingestion') ? `npm run source:import:${id.includes('col') ? 'col' : id.includes('nasa') ? 'nasa' : id.includes('neotoma') ? 'neotoma' : 'all'}` : `npm run audit:${id.replace('_', ':')}`,
+        validationCommand:
+          id === 'temporal_earth_maps'
+            ? 'npm run audit:maps:production'
+            : id.includes('pipeline')
+              ? 'npm run pipeline:all'
+              : id.includes('ingestion')
+                ? `npm run source:import:${id.includes('col') ? 'col' : id.includes('nasa') ? 'nasa' : id.includes('neotoma') ? 'neotoma' : 'all'}`
+                : `npm run audit:${id.replace('_', ':')}`,
         releaseEligibleRule: 'Mock/sample and blocked external data never count as source-verified coverage.',
         notes: updated.notes,
         blockedReason: updated.blockedReason,

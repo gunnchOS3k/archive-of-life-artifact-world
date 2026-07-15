@@ -34,10 +34,14 @@ Release audits enforce:
 - `public/data/status/implementation_status.json`
 - `public/data/status/incomplete_inventory.json`
 - `public/data/status/release_readiness_report.json`
+- `public/data/status/temporal_map_readiness_report.json`
+- `public/data/status/production_readiness_report.json`
 
 Regenerate with:
 
 ```bash
 npm run audit:implementation
 npm run audit:release
+npm run audit:maps
+npm run audit:production  # strict; fails while external scientific data remains incomplete
 ```

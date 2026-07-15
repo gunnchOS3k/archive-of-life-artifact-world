@@ -1,0 +1,24 @@
+=== sources-loading failure capture ===
+device=27211JEGR06194
+installed_apk_sha256_prior=e817090669f17779cbe3d0868fe92818ffcb9729c551f6fb69ab0977a3aa64aa
+versionName=1.1.0 versionCode=2
+capture_utc=2026-07-14T21:07:12Z
+panel_open_attempted=notebook_sources_evidence_buttons_visible
+waited_seconds=25
+network_connectivity=NetworkProviders for:
+  7: WifiNetworkFactory
+  4: L2capNetworkProvider
+  9: RestrictedWifiNetworkFactory
+  10: OemPaidWifiNetworkFactory
+adb_shell_ping_check=PING 8.8.8.8 (8.8.8.8) 56(84) bytes of data.
+64 bytes from 8.8.8.8: icmp_seq=1 ttl=115 time=70.2 ms
+
+--- 8.8.8.8 pi g statistics ---
+1 packets tra smitted, 1 received, 0% packet loss, time 0ms
+rtt mi /avg/max/mdev = 70.294/70.294/70.294/0.000 ms
+artifact_state=notebook_entries_trilobite_and_lion_documented
+provider_request_state=unknown_ui_stuck_loading_per_prior_journey_KNOWN_LIMITATIONS
+failed_stage=6_provider_calls_started_through_10_ui_loading_state_not_ended
+root_cause_code_path=SourcesEvidencePanel awaits federationService.getSpeciesEvidence with no try/finally/timeout/retry; FederationService Promise.allSettled still hangs if any provider Promise never settles; fetchLiveJson AbortController.abort can leave fetch pending on Android WebView
+cdp_blocked=webview_devtools_remote_unavailable_on_non_debuggable_rc
+screenshots=sources-loading-failure.png sources-loading-failure-after-25s.png
