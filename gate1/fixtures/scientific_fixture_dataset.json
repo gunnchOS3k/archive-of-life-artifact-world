@@ -1,0 +1,44 @@
+{
+  "coverage_claim": "fixture_sample_not_complete_coverage",
+  "disclaimer": "Small Gate 1 fixture scientific dataset for core-loop validation only. Not a complete catalogue of life. Do not claim species coverage completeness.",
+  "organisms": [
+    {
+      "id": "fixture_panthera_leo",
+      "commonName": "Lion",
+      "scientificName": "Panthera leo",
+      "biome": "savanna",
+      "canonicalIdentifier": "COL:fixture-panthera-leo-001",
+      "taxonomicAuthority": "Linnaeus, 1758",
+      "sourceOrganization": "Catalogue of Life (fixture mirror)",
+      "sourceRecordId": "FX-COL-PLEO-001",
+      "license": "CC0-1.0",
+      "retrievalDate": "2026-08-06",
+      "version": "fixture-1.0.0",
+      "geographicProvenance": "Afrotropical savanna (fixture)",
+      "timeRange": "Present",
+      "confidence": "fixture_verified",
+      "editorialStatus": "fixture_reviewed",
+      "citation": "Gate 1 fixture dataset — Archive of Life. Not a live COL export.",
+      "artifactTypes": ["track_cast", "behavioral_field_note"]
+    },
+    {
+      "id": "fixture_danaus_plexippus",
+      "commonName": "Monarch Butterfly",
+      "scientificName": "Danaus plexippus",
+      "biome": "meadow",
+      "canonicalIdentifier": "COL:fixture-danaus-plexippus-001",
+      "taxonomicAuthority": "Linnaeus, 1758",
+      "sourceOrganization": "GBIF (fixture mirror)",
+      "sourceRecordId": "FX-GBIF-DPLEX-001",
+      "license": "CC-BY-4.0",
+      "retrievalDate": "2026-08-06",
+      "version": "fixture-1.0.0",
+      "geographicProvenance": "Nearctic migratory corridor (fixture)",
+      "timeRange": "Present",
+      "confidence": "fixture_verified",
+      "editorialStatus": "fixture_reviewed",
+      "citation": "Gate 1 fixture dataset — Archive of Life. Not a live GBIF export.",
+      "artifactTypes": ["wing_scale_note", "behavioral_field_note"]
+    }
+  ]
+}
