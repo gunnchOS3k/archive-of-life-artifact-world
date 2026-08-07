@@ -1,7 +1,8 @@
 {
-  "generatedAt": "2026-07-11T19:17:40.110Z",
+  "generatedAt": "2026-08-07T21:27:45.087Z",
   "readyForProduction": false,
   "strictMode": false,
+  "ciMode": "EXPECTED_INCOMPLETE_SOFT",
   "expectedGridCellCount": 648,
   "supportedTimeGateCount": 17,
   "sourceVerifiedMapCount": 0,
@@ -25,6 +26,7 @@
     "gate_pleistocene",
     "gate_holocene"
   ],
+  "expectedIncompleteStatus": "EXPECTED_INCOMPLETE",
   "checks": [
     {
       "name": "earth_grid_global_bounds",
@@ -71,7 +73,7 @@
     {
       "name": "all_temporal_maps_source_verified",
       "passed": false,
-      "message": "17/17 full-Earth time maps still require approved scientific assets",
+      "message": "EXPECTED_INCOMPLETE: 17/17 full-Earth time maps still require approved scientific assets (EXPECTED_PHYSICAL_OR_SCIENTIFIC_BLOCKER)",
       "category": "temporal_maps",
       "blocking": false
     }

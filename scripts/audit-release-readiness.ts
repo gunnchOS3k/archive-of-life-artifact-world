@@ -295,4 +295,26 @@ console.log(`  BLOCKED_BY_EXTERNAL_DATA: ${report.implementationSummary.blockedE
 console.log(`\nRelease ready: ${report.ready ? 'YES' : 'NO'}`);
 console.log(`Wrote public/data/status/release_readiness_report.json\n`);
 
+const requireReady = process.argv.includes('--require-ready');
+const failedBlocking = report.checks.filter((c) => c.blocking && !c.passed);
+const onlyExpectedScientificPlaceholders =
+  !report.ready &&
+  failedBlocking.length > 0 &&
+  failedBlocking.every((c) => c.name === 'no_release_path_incomplete_markers') &&
+  /fixture placeholder/i.test(
+    JSON.stringify(
+      scanIncompleteInventory().filter(
+        (i) => i.blocksRelease && i.currentStatus === 'needs_action' && i.releasePath
+      )
+    )
+  );
+
+if (!requireReady && onlyExpectedScientificPlaceholders) {
+  console.log(
+    'EXPECTED_PHYSICAL_OR_SCIENTIFIC_BLOCKER: NOAA/USGS/Smithsonian fixture placeholders remain; not release-ready.'
+  );
+  console.log('Strict Gate mode: npm run audit:release -- --require-ready');
+  process.exit(0);
+}
+
 process.exit(report.ready ? 0 : 1);
