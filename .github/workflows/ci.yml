@@ -1,13 +1,23 @@
 name: CI
 
 on:
+  pull_request:
+    branches: [main]
   push:
     branches: [main]
-  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ci-${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
 
 jobs:
   build-and-audit:
     runs-on: ubuntu-latest
+    timeout-minutes: 45
     steps:
       - uses: actions/checkout@v4
 
@@ -62,3 +72,6 @@ jobs:
 
       - name: SQLFluff lint
         run: cd data-pipeline && uv run sqlfluff lint sql/
+
+      - name: Gate1 core-loop (provenance + save/reload)
+        run: node gate1/tools/core_loop_test.mjs

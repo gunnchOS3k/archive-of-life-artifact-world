@@ -28,3 +28,9 @@ data-pipeline/exports/**
 # Local DuckDB / parquet working files
 data-pipeline/**/*.duckdb
 data-pipeline/**/*.parquet
+
+# Gate 1 runtime evidence outputs
+gate1/evidence/out/**
+!gate1/evidence/out/**/.gitkeep
+gate1/status/*
+!gate1/status/.gitkeep
