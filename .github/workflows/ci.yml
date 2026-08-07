@@ -58,6 +58,9 @@ jobs:
       - name: Audit ArchiveDex
         run: npm run audit:archivedex
 
+      # Soft mode: structural checks hard-fail; NOAA/USGS/Smithsonian fixture placeholders
+      # are EXPECTED_PHYSICAL_OR_SCIENTIFIC_BLOCKER until assets approved (exit 0).
+      # Gate strict mode: npm run audit:release:production (--require-ready).
       - name: Audit release readiness
         run: npm run audit:release
 
