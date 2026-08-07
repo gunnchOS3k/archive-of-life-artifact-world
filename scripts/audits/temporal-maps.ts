@@ -251,7 +251,9 @@ function validateCatalog(input: TemporalMapAuditInput): AuditResult[] {
     name: 'all_temporal_maps_source_verified',
     passed: incomplete.length === 0,
     message: incomplete.length
-      ? `${incomplete.length}/${catalog.maps.length} full-Earth time maps still require approved scientific assets`
+      ? requireVerified
+        ? `${incomplete.length}/${catalog.maps.length} full-Earth time maps still require approved scientific assets`
+        : `EXPECTED_INCOMPLETE: ${incomplete.length}/${catalog.maps.length} full-Earth time maps still require approved scientific assets (EXPECTED_PHYSICAL_OR_SCIENTIFIC_BLOCKER)`
       : `All ${catalog.maps.length} full-Earth time maps are source-verified`,
     category: 'temporal_maps',
     blocking: requireVerified,

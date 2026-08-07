@@ -49,6 +49,9 @@ jobs:
       - name: Audit global coverage
         run: npm run audit:coverage
 
+      # Soft/expected-incomplete mode: structural map integrity stays hard-fail;
+      # sourceVerified incompleteness is EXPECTED until scientific assets are approved (exit 0).
+      # Gate strict mode: npm run audit:maps:production (--require-source-verified).
       - name: Audit full-Earth temporal map inventory
         run: npm run audit:maps
 
