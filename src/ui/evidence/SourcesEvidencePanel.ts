@@ -273,9 +273,18 @@ function evidenceCard(record: FederatedRecord): string {
     record.latitude != null && record.longitude != null
       ? `${record.latitude.toFixed(4)}, ${record.longitude.toFixed(4)}`
       : 'Not available';
+  const colGbifCite =
+    record.providerId === 'col' || record.providerId === 'gbif'
+      ? `<p class="evidence-provenance-cite" data-provenance="col-gbif">${escapeHtml(
+          `${record.providerId.toUpperCase()} [${record.license}] ${record.attribution} — ${
+            record.scientificName ?? record.sourceRecordId
+          } (${record.cacheStatus})`,
+        )}</p>`
+      : '';
   return `<article class="evidence-card" data-provider="${escapeHtml(record.providerId)}" data-cache="${escapeHtml(record.cacheStatus)}">
     <header><strong>${escapeHtml(record.providerId.toUpperCase())}</strong> · ${statusLabel}</header>
     <p>${escapeHtml(record.attribution)}</p>
+    ${colGbifCite}
     <dl>
       <dt>Record ID</dt><dd>${escapeHtml(record.sourceRecordId)}</dd>
       <dt>Scientific name</dt><dd>${escapeHtml(record.scientificName ?? '—')}</dd>
