@@ -1061,3 +1061,36 @@ body {
 .dev-only-banner { border-left: 3px solid var(--accent-gold); padding-left: 0.5rem; }
 .implementation-system-list { font-size: 0.8rem; max-height: 220px; overflow-y: auto; }
 .implementation-system-list li { margin-bottom: 0.35rem; }
+
+/* G2-C6 device roles + accessibility */
+:root { --aol-world-scale: 1; }
+.device-role-handheld-hybrid #hud-buttons { flex-wrap: wrap; gap: 4px; }
+.device-role-ds-xl-coder.device-dual-pane #game-screen {
+  display: grid;
+  grid-template-columns: 1fr 320px;
+}
+.device-peripheral-only #game-canvas { opacity: 0.55; }
+.a11y-reduced-motion * { animation: none !important; transition: none !important; }
+.a11y-high-contrast {
+  --bg-dark: #000;
+  --bg-panel: #111;
+  --text-primary: #fff;
+  --accent-green: #9f9;
+  --border: #fff;
+}
+.a11y-large-text { font-size: 118%; }
+.companion-progress {
+  margin-top: 0.5rem;
+  font-size: 0.85rem;
+  color: var(--accent-gold);
+}
+.notebook-provenance {
+  margin: 0.4rem 0 0.6rem 1.1rem;
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+}
+.entry-period { font-size: 0.75rem; color: var(--accent-blue); margin-top: 0.25rem; }
+.settings-section { margin-bottom: 1.25rem; }
+.settings-section h3 { margin-bottom: 0.35rem; }
+.settings-hint { color: var(--text-secondary); font-size: 0.85rem; margin-bottom: 0.5rem; }
+.settings-check { display: block; margin: 0.35rem 0; }

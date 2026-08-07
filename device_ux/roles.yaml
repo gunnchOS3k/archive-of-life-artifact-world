@@ -3,3 +3,21 @@ devices: [student_14_5, handheld_hybrid, ds_xl_coder, edge_io_rings]
 source: field-kit-g2-c6
 evidence_class: SOFTWARE
 physical_status: PHYSICAL_PENDING
+runtime_module: src/device/deviceRoles.ts
+roles:
+  student_14_5:
+    input: pointer
+    layout: landscape
+    world_scale: classroom
+  handheld_hybrid:
+    input: touch
+    layout: portrait_or_landscape
+    world_scale: pocket
+  ds_xl_coder:
+    input: pointer_keyboard
+    layout: dual_pane_editor_world
+    world_scale: studio
+  edge_io_rings:
+    input: ring_select
+    layout: peripheral_only
+    world_scale: n/a

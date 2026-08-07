@@ -1,9 +1,26 @@
 import { Player, type Bounds } from './player';
 import { Lifeling } from './companion';
 import { World } from './world';
-import { collectArtifact, hasArtifact, formatArtifactType } from '@/systems/artifactSystem';
+import { collectArtifact, hasArtifact, formatArtifactType, getCollectedIds } from '@/systems/artifactSystem';
 import { visitRegion, checkQuestProgress } from '@/systems/questSystem';
 import { saveGame } from '@/systems/saveSystem';
+import {
+  buildEncounterTable,
+  describeEthicalPrompt,
+  rollSoftEncounter,
+  type EncounterTable,
+} from '@/systems/encounterSystem';
+import { ensureCompanionProgressFields } from '@/systems/companionProgression';
+import { track } from '@/systems/telemetry';
+import {
+  applyAccessibilitySettings,
+  loadAccessibilitySettings,
+} from '@/systems/accessibility';
+import {
+  applyDeviceRole,
+  resolveDeviceRole,
+  type DeviceRoleProfile,
+} from '@/device/deviceRoles';
 import { FossilExcavation } from '@/minigames/fossilExcavation';
 import { WildlifeObservation } from '@/minigames/wildlifeObservation';
 import { ArchiveDexUI } from '@/ui/archiveDexUI';
@@ -16,6 +33,7 @@ import { EarthLayerUI } from '@/ui/earthLayerUI';
 import { TimeAtlasUI } from '@/ui/timeAtlasUI';
 import { CoverageDashboardUI } from '@/ui/coverageDashboardUI';
 import { ImplementationStatusUI } from '@/ui/implementationStatusUI';
+import { SettingsUI } from '@/ui/settingsUI';
 import {
   DataCatalogService,
   toPlayableSpecies,
@@ -45,6 +63,9 @@ export class Game {
   private bounds: Bounds = { width: 800, height: 600 };
   private toastTimer: ReturnType<typeof setTimeout> | null = null;
   private speciesById = new Map<string, PlayableSpecies>();
+  private encounterTable: EncounterTable | null = null;
+  private softEncounterCooldown = 0;
+  private deviceRole: DeviceRoleProfile;
 
   private archiveDexUI: ArchiveDexUI;
   private notebookUI: NotebookUI;
@@ -55,6 +76,7 @@ export class Game {
   private timeAtlasUI: TimeAtlasUI;
   private coverageDashboardUI: CoverageDashboardUI;
   private implementationStatusUI: ImplementationStatusUI;
+  private settingsUI: SettingsUI;
   private devMode: boolean;
 
   private dexService: ArchiveDexService;
@@ -73,10 +95,26 @@ export class Game {
     this.catalog = catalog;
     this.dexService = dexService;
     this.state = state;
+    ensureCompanionProgressFields(this.state.companion);
+    if (!this.state.timeAtlas) {
+      this.state.timeAtlas = {
+        viewedTimeUnits: [],
+        viewedGates: [],
+        analyzedPeriods: [],
+        activeTimeUnitId: null,
+      };
+    }
 
     const config = catalog.getConfig();
     this.player = new Player(state.player.x, state.player.y);
     this.world = new World(config.regions, this.speciesById);
+
+    this.deviceRole = resolveDeviceRole(
+      null,
+      typeof window !== 'undefined' ? new URLSearchParams(window.location.search) : null,
+    );
+    applyDeviceRole(this.deviceRole);
+    applyAccessibilitySettings(loadAccessibilitySettings());
 
     this.archiveDexUI = new ArchiveDexUI(document.getElementById('panel-archive')!, dexService, catalog);
     this.notebookUI = new NotebookUI(document.getElementById('panel-notebook')!);
@@ -101,10 +139,27 @@ export class Game {
     this.implementationStatusUI = new ImplementationStatusUI(
       document.getElementById('panel-implementation')!
     );
+    this.settingsUI = new SettingsUI(document.getElementById('panel-settings')!, this.deviceRole);
+    this.settingsUI.onRoleChange = (role) => {
+      this.deviceRole = role;
+      this.resize();
+    };
     this.devMode = new URLSearchParams(window.location.search).has('dev');
 
     this.earthLayerUI.onTabViewed = () => {
       this.onEarthLayerProgress();
+    };
+
+    this.timeAtlasUI.onActivePeriodChange = (unitId) => {
+      this.state.timeAtlas.activeTimeUnitId = unitId;
+      track('time_period_filter', { unitId: unitId ?? 'none' });
+      this.rebuildEncounterTable();
+      this.save();
+      this.showToast(
+        unitId
+          ? `Time filter: ${unitId} — encounters use provenanced taxa for this period.`
+          : 'Time filter cleared.',
+      );
     };
 
     this.companionUI.setEmoteCallback((emote) => this.lifeling.triggerReaction(emote));
@@ -115,13 +170,18 @@ export class Game {
     void this.loadRegion(state.player.currentRegion);
     this.resize();
     window.addEventListener('resize', () => this.resize());
+    track('game_start', { role: this.deviceRole.id, region: state.player.currentRegion });
   }
 
   private resize() {
     const parent = this.canvas.parentElement!;
+    const scale = this.deviceRole.worldScaleFactor || 1;
+    // World scale from device role matrix — layout still fills parent; factor affects HUD density cue.
     this.canvas.width = parent.clientWidth;
     this.canvas.height = parent.clientHeight;
-    // Movement bounds stay world-sized; canvas is the viewport.
+    this.canvas.style.setProperty('--aol-world-scale', String(scale));
+    document.documentElement.classList.toggle('device-peripheral-only', this.deviceRole.peripheralOnly);
+    document.documentElement.classList.toggle('device-dual-pane', this.deviceRole.dualPane);
   }
 
   private setupInput() {
@@ -141,9 +201,14 @@ export class Game {
       if (e.key === '5') this.togglePanel('quests');
       if (e.key === '6') this.togglePanel('earth');
       if (e.key === '7') this.togglePanel('time');
+      if (e.key === '8' || e.key === ',') this.togglePanel('settings');
       if (this.devMode && (e.key === 'g' || e.key === 'G')) this.togglePanel('coverage');
       if (this.devMode && (e.key === 'i' || e.key === 'I')) this.togglePanel('implementation');
       if (e.key === 'Escape') this.closeAllPanels();
+      // Edge I/O rings: digit 0 cycles soft encounter accept when peripheral-only
+      if (this.deviceRole.input === 'ring_select' && (e.key === '0' || e.key === 'Enter')) {
+        void this.acceptSoftEncounterPrompt();
+      }
     });
     window.addEventListener('keyup', (e) => {
       this.keys[e.key] = false;
@@ -160,6 +225,7 @@ export class Game {
     document.getElementById('btn-quests')!.addEventListener('click', () => this.togglePanel('quests'));
     document.getElementById('btn-earth')!.addEventListener('click', () => this.togglePanel('earth'));
     document.getElementById('btn-time')!.addEventListener('click', () => this.togglePanel('time'));
+    document.getElementById('btn-settings')?.addEventListener('click', () => this.togglePanel('settings'));
 
     document.getElementById('fossil-cancel')!.addEventListener('click', () => this.endMinigame());
     document.getElementById('observe-cancel')!.addEventListener('click', () => this.endMinigame());
@@ -285,6 +351,7 @@ export class Game {
     this.closeAllPanels();
     if (!isOpen) {
       panel.classList.remove('hidden');
+      track('panel_open', { panel: name });
       if (name === 'earth') {
         this.earthLayerUI.open(this.state.player.currentRegion);
       }
@@ -296,6 +363,9 @@ export class Game {
       }
       if (name === 'implementation') {
         void this.implementationStatusUI.open();
+      }
+      if (name === 'settings') {
+        this.settingsUI.open();
       }
       this.refreshUI();
       this.paused = true;
@@ -345,10 +415,73 @@ export class Game {
     this.player.y = this.bounds.height / 2;
     this.state.player.x = this.player.x;
     this.state.player.y = this.player.y;
+    this.rebuildEncounterTable();
+    this.softEncounterCooldown = 4;
 
     const region = this.catalog.getConfig().regions.find((r) => r.id === regionId);
     document.getElementById('region-name')!.textContent = region?.name ?? regionId;
+    track('region_travel', {
+      region: regionId,
+      biome: region?.biome ?? '',
+      encounters: this.encounterTable?.candidates.length ?? 0,
+    });
     this.save();
+  }
+
+  private rebuildEncounterTable() {
+    const region = this.catalog.getConfig().regions.find((r) => r.id === this.state.player.currentRegion);
+    if (!region || region.type === 'hub') {
+      this.encounterTable = null;
+      return;
+    }
+    this.encounterTable = buildEncounterTable({
+      regionId: region.id,
+      biome: region.biome,
+      species: [...this.speciesById.values()],
+      timePeriodId: this.state.timeAtlas?.activeTimeUnitId ?? null,
+      collectedIds: getCollectedIds(this.state),
+    });
+  }
+
+  private pendingSoftSpecies: PlayableSpecies | null = null;
+
+  private trySoftEncounter() {
+    if (!this.encounterTable || this.softEncounterCooldown > 0) return;
+    if (this.state.player.currentRegion === 'museum') return;
+    const roll = rollSoftEncounter(this.encounterTable, {
+      collectedIds: getCollectedIds(this.state),
+    });
+    this.softEncounterCooldown = 8;
+    if (roll.reason !== 'hit' || !roll.candidate) return;
+    this.pendingSoftSpecies = roll.candidate.species;
+    track('encounter_soft', {
+      speciesId: roll.candidate.speciesId,
+      ethical: roll.candidate.ethicalFlow,
+    });
+    this.showToast(`${describeEthicalPrompt(roll.candidate)} — Press E nearby or 0 (rings) to begin.`);
+    // Place a temporary walk-up marker beside the player
+    const sp = roll.candidate.species;
+    const isFossil = roll.candidate.ethicalFlow === 'excavate';
+    this.world.interactables.push({
+      type: isFossil ? 'fossil' : 'species',
+      speciesId: sp.id,
+      species: sp,
+      x: this.player.x + 48,
+      y: this.player.y,
+      radius: 28,
+    });
+  }
+
+  private async acceptSoftEncounterPrompt() {
+    if (!this.pendingSoftSpecies) return;
+    const sp = this.pendingSoftSpecies;
+    this.pendingSoftSpecies = null;
+    if (hasArtifact(this.state, sp.id)) {
+      this.showToast(`Already documented ${sp.commonName}.`);
+      return;
+    }
+    if (sp.conservationStatus === 'Extinct') this.startFossilMinigame(sp);
+    else this.startObservationMinigame(sp);
   }
 
   private async travelToRegion(regionId: string) {
@@ -402,6 +535,7 @@ export class Game {
         this.showToast(`Already documented ${item.species.commonName}.`);
         return;
       }
+      track('encounter_walk_up', { speciesId: item.speciesId, type: item.type });
       if (item.type === 'fossil') this.startFossilMinigame(item.species);
       else this.startObservationMinigame(item.species);
     }
@@ -409,6 +543,7 @@ export class Game {
 
   private startFossilMinigame(species: PlayableSpecies) {
     this.paused = true;
+    track('excavate_start', { speciesId: species.id });
     document.getElementById('minigame-fossil')!.classList.remove('hidden');
     const canvas = document.getElementById('fossil-canvas') as HTMLCanvasElement;
     this.activeMinigame = new FossilExcavation(canvas, () => this.onMinigameComplete(species), () => this.endMinigame());
@@ -416,6 +551,7 @@ export class Game {
 
   private startObservationMinigame(species: PlayableSpecies) {
     this.paused = true;
+    track('observe_start', { speciesId: species.id });
     document.getElementById('minigame-observe')!.classList.remove('hidden');
     document.getElementById('observe-species-name')!.textContent =
       `Observe: ${species.commonName} (${species.scientificName})`;
@@ -425,10 +561,24 @@ export class Game {
 
   private async onMinigameComplete(species: PlayableSpecies) {
     const traits = this.catalog.getConfig().traits;
-    const result = collectArtifact(this.state, species, traits);
+    const result = collectArtifact(this.state, species, traits, {
+      timePeriodId: this.state.timeAtlas?.activeTimeUnitId ?? null,
+    });
     if (result.success) {
       this.lifeling.triggerReaction('celebrate');
-      this.state.companion.bond = Math.min(100, this.state.companion.bond + 5);
+      const kind = species.conservationStatus === 'Extinct' ? 'excavate_complete' : 'observe_complete';
+      track(kind, {
+        speciesId: species.id,
+        level: this.state.companion.level ?? 1,
+        xp: this.state.companion.xp ?? 0,
+      });
+      if (result.progression?.leveledUp) {
+        track('companion_level_up', {
+          level: result.progression.level,
+          from: result.progression.previousLevel,
+        });
+        this.showToast(`Lifeling grew to level ${result.progression.level}!`);
+      }
       const entry = await this.dexService.getEntryById(species.id, this.state);
       if (entry) {
         await this.archiveDexUI.showUnlockModal(entry, result.artifact);
@@ -441,6 +591,7 @@ export class Game {
       for (const update of questUpdates) {
         if (update.completed) this.showToast(`Quest complete: ${update.quest.title}!`);
       }
+      this.rebuildEncounterTable();
       this.save();
       this.refreshUI();
     }
@@ -525,6 +676,11 @@ export class Game {
       notebook: this.state.notebook?.length ?? 0,
       unlockedTraits: [...this.state.companion.unlockedTraits],
       equippedTraits: [...this.state.companion.equippedTraits],
+      companionLevel: this.state.companion.level ?? 1,
+      companionXp: this.state.companion.xp ?? 0,
+      activeTimeUnitId: this.state.timeAtlas?.activeTimeUnitId ?? null,
+      encounterCount: this.encounterTable?.candidates.length ?? 0,
+      deviceRole: this.deviceRole.id,
       minigame: this.activeMinigame
         ? this.activeMinigame instanceof FossilExcavation
           ? 'fossil'
@@ -576,6 +732,12 @@ export class Game {
     this.player.update(dt, this.keys, this.bounds, this.world.getSolidObstacles());
     this.lifeling.update(dt, this.player.x, this.player.y, this.state.companion);
 
+    if (this.softEncounterCooldown > 0) this.softEncounterCooldown -= dt;
+    const moving = ['w', 'a', 's', 'd', 'ArrowUp', 'ArrowDown', 'ArrowLeft', 'ArrowRight'].some(
+      (k) => this.keys[k],
+    );
+    if (moving && !this.deviceRole.peripheralOnly) this.trySoftEncounter();
+
     this.nearestInteractable = this.world.getNearestInteractable(this.player.x, this.player.y);
     const prompt = document.getElementById('interaction-prompt')!;
     const promptText = document.getElementById('prompt-text')!;
@@ -583,8 +745,10 @@ export class Game {
     if (this.nearestInteractable) {
       prompt.classList.remove('hidden');
       const item = this.nearestInteractable;
-      const coarse = typeof window !== 'undefined' && window.matchMedia?.('(pointer: coarse)').matches;
-      const act = coarse ? 'Tap' : 'Press E';
+      const coarse =
+        this.deviceRole.touchPrimary ||
+        (typeof window !== 'undefined' && window.matchMedia?.('(pointer: coarse)').matches);
+      const act = this.deviceRole.input === 'ring_select' ? 'Ring/0' : coarse ? 'Tap' : 'Press E';
       if (item.type === 'portal') promptText.textContent = `${act} — Travel to ${item.label}`;
       else if (item.type === 'earth_console') promptText.textContent = `${act} — Open ${item.label}`;
       else if (item.type === 'time_atlas') promptText.textContent = `${act} — Open ${item.label}`;
@@ -614,9 +778,13 @@ export class Game {
     this.ctx.fillStyle = 'rgba(255,255,255,0.4)';
     this.ctx.font = '11px sans-serif';
     this.ctx.textAlign = 'left';
-    const coarse = typeof window !== 'undefined' && window.matchMedia?.('(pointer: coarse)').matches;
-    if (!coarse) {
-      this.ctx.fillText('WASD/Arrows: Move | E: Interact | 1–7: Menus', 10, h - 10);
+    const coarse =
+      this.deviceRole.touchPrimary ||
+      (typeof window !== 'undefined' && window.matchMedia?.('(pointer: coarse)').matches);
+    if (this.deviceRole.peripheralOnly) {
+      this.ctx.fillText('Edge rings: 0/Enter confirm · 8 settings · WASD optional', 10, h - 10);
+    } else if (!coarse) {
+      this.ctx.fillText('WASD/Arrows: Move | E: Interact | 1–7: Menus | 8: Settings', 10, h - 10);
     } else {
       this.ctx.fillText('Drag to move · Tap portals & nearby targets to interact', 10, h - 10);
     }

@@ -4,15 +4,32 @@ import { earthLayerService } from '@/services/EarthLayerService';
 import { ArchiveDexService } from '@/services/ArchiveDexService';
 import { temporalMapService } from '@/services/TemporalMapService';
 import { timeAtlasService } from '@/time/TimeAtlasService';
-import { createDefaultSave, loadSave, hasSave } from '@/systems/saveSystem';
+import { createDefaultSave, loadSave, loadSaveAsync, hasSave } from '@/systems/saveSystem';
+import {
+  applyAccessibilitySettings,
+  loadAccessibilitySettings,
+} from '@/systems/accessibility';
+import { applyDeviceRole, resolveDeviceRole } from '@/device/deviceRoles';
+import { track } from '@/systems/telemetry';
 import { Game } from '@/game/Game';
 
 let game: Game | null = null;
 const archiveDexService = new ArchiveDexService(dataCatalog, timeAtlasService);
 
 async function init() {
+  const role = resolveDeviceRole(
+    null,
+    typeof window !== 'undefined' ? new URLSearchParams(window.location.search) : null,
+  );
+  applyDeviceRole(role);
+  applyAccessibilitySettings(loadAccessibilitySettings());
+
   const continueBtn = document.getElementById('btn-continue')!;
+  // Prefer sync hasSave; async backup may rehydrate continue after IDB check.
   continueBtn.style.display = hasSave() ? 'inline-block' : 'none';
+  void loadSaveAsync().then((s) => {
+    if (s) continueBtn.style.display = 'inline-block';
+  });
 
   document.getElementById('btn-new-game')!.addEventListener('click', () => void startGame(false));
   document.getElementById('btn-continue')!.addEventListener('click', () => void startGame(true));
@@ -81,7 +98,7 @@ async function startGame(continuing: boolean) {
     timeAtlasService.initialize(),
     temporalMapService.initialize(),
   ]);
-  const state = continuing ? loadSave() : createDefaultSave();
+  const state = continuing ? (await loadSaveAsync()) ?? loadSave() : createDefaultSave();
   if (!state) {
     alert('Could not load save. Starting new expedition.');
     return startGame(false);
@@ -90,7 +107,12 @@ async function startGame(continuing: boolean) {
     state.earthLayers = { viewedTabs: [], analyzedRegions: [] };
   }
   if (!state.timeAtlas) {
-    state.timeAtlas = { viewedTimeUnits: [], viewedGates: [], analyzedPeriods: [] };
+    state.timeAtlas = {
+      viewedTimeUnits: [],
+      viewedGates: [],
+      analyzedPeriods: [],
+      activeTimeUnitId: null,
+    };
   }
 
   document.getElementById('title-screen')!.classList.remove('active');
@@ -108,6 +130,7 @@ async function startGame(continuing: boolean) {
   );
   game.start();
   (window as unknown as { __aolGame: Game | null }).__aolGame = game;
+  track('game_start', { continuing, region: state.player.currentRegion });
 
   if (!continuing) {
     game.showToast(

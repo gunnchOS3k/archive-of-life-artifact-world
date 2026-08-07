@@ -26,6 +26,8 @@ export class TimeAtlasUI {
   private state: SaveState | null = null;
   private selectedUnitId: string | null = null;
   private activeRank: GeologicTimeRank = 'eon';
+  /** Fired when explorer sets active time filter for encounters. */
+  onActivePeriodChange: ((unitId: string | null) => void) | null = null;
 
   constructor(
     panel: HTMLElement,
@@ -63,6 +65,11 @@ export class TimeAtlasUI {
     if (!this.state.timeAtlas.viewedTimeUnits.includes(unitId)) {
       this.state.timeAtlas.viewedTimeUnits.push(unitId);
     }
+    if (!this.state.timeAtlas.analyzedPeriods.includes(unitId)) {
+      this.state.timeAtlas.analyzedPeriods.push(unitId);
+    }
+    this.state.timeAtlas.activeTimeUnitId = unitId;
+    this.onActivePeriodChange?.(unitId);
   }
 
   private recordGateView(gateId: string) {

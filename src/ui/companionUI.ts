@@ -1,5 +1,6 @@
 import type { SaveState, LifelingTrait } from '@/schema';
 import { Lifeling } from '@/game/companion';
+import { companionProgressSummary, ensureCompanionProgressFields } from '@/systems/companionProgression';
 
 export class CompanionUI {
   private canvas: HTMLCanvasElement;
@@ -9,6 +10,7 @@ export class CompanionUI {
   private equippedEl: HTMLElement;
   private inventoryEl: HTMLElement;
   private emoteEl: HTMLElement;
+  private progressEl: HTMLElement | null = null;
   private lifeling = new Lifeling();
   private state: SaveState | null = null;
   private traits: LifelingTrait[] = [];
@@ -23,6 +25,7 @@ export class CompanionUI {
     this.equippedEl = panel.querySelector('#equipped-traits')!;
     this.inventoryEl = panel.querySelector('#trait-inventory')!;
     this.emoteEl = panel.querySelector('#emote-buttons')!;
+    this.progressEl = panel.querySelector('#companion-progress');
 
     this.nameInput.addEventListener('input', () => this.updateCompanion());
     this.colorInput.addEventListener('input', () => this.updateCompanion());
@@ -35,6 +38,7 @@ export class CompanionUI {
   setData(state: SaveState, traits: LifelingTrait[]) {
     this.state = state;
     this.traits = traits;
+    ensureCompanionProgressFields(state.companion);
     this.nameInput.value = state.companion.name;
     this.colorInput.value = state.companion.bodyColor;
     this.render();
@@ -50,6 +54,9 @@ export class CompanionUI {
 
   private render() {
     if (!this.state) return;
+    if (this.progressEl) {
+      this.progressEl.textContent = companionProgressSummary(this.state.companion);
+    }
     this.renderTraits();
     this.renderEmotes();
     this.renderPreview();

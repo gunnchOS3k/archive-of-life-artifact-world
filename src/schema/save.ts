@@ -16,10 +16,24 @@ export interface CollectedArtifact {
   region: string;
 }
 
+export interface NotebookProvenanceCite {
+  providerId: string;
+  license: string;
+  citation: string;
+  sourceRecordId?: string;
+  sourceUrl?: string;
+  cacheStatus?: string;
+}
+
 export interface NotebookEntry {
   time: number;
   text: string;
   speciesId: string;
+  /** Provenance citations for journal depth (COL/GBIF/authored). */
+  provenanceCitations?: NotebookProvenanceCite[];
+  scientificName?: string;
+  regionId?: string;
+  timePeriodId?: string | null;
 }
 
 export interface CompanionState {
@@ -28,6 +42,12 @@ export interface CompanionState {
   equippedTraits: string[];
   unlockedTraits: string[];
   bond: number;
+  /** Lifeling progression level (original Archive model). */
+  level?: number;
+  /** Cumulative observation XP. */
+  xp?: number;
+  /** Successful ethical observations / excavations. */
+  observationCount?: number;
 }
 
 export interface QuestState {
@@ -50,6 +70,8 @@ export interface TimeAtlasProgress {
   viewedTimeUnits: string[];
   viewedGates: string[];
   analyzedPeriods: string[];
+  /** Active period/unit filter for encounter tables. */
+  activeTimeUnitId?: string | null;
 }
 
 export interface SaveState {
