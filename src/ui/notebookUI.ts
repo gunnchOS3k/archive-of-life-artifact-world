@@ -22,16 +22,32 @@ export class NotebookUI {
       return;
     }
     this.entries.innerHTML = state.notebook
-      .map(
-        (entry, i) => `
+      .map((entry, i) => {
+        const cites =
+          entry.provenanceCitations?.length
+            ? `<ul class="notebook-provenance">${entry.provenanceCitations
+                .map(
+                  (c) =>
+                    `<li><strong>${c.providerId}</strong> [${c.license}] ${c.citation}${
+                      c.cacheStatus ? ` · ${c.cacheStatus}` : ''
+                    }</li>`,
+                )
+                .join('')}</ul>`
+            : '';
+        const period = entry.timePeriodId
+          ? `<div class="entry-period">Time filter: ${entry.timePeriodId}</div>`
+          : '';
+        return `
       <div class="notebook-entry" data-species-id="${entry.speciesId}">
         <div class="entry-time">${new Date(entry.time).toLocaleString()}</div>
         <div class="entry-text">${entry.text}</div>
+        ${period}
+        ${cites}
         <button type="button" class="btn-secondary notebook-evidence-btn" data-idx="${i}" data-species-id="${entry.speciesId}">Sources &amp; Evidence</button>
         <div class="notebook-evidence-mount evidence-panel hidden" id="notebook-evidence-${i}"></div>
       </div>
-    `,
-      )
+    `;
+      })
       .join('');
 
     this.entries.querySelectorAll('.notebook-evidence-btn').forEach((btn) => {
@@ -48,8 +64,10 @@ export class NotebookUI {
         if (!opening) return;
         mount.classList.remove('hidden');
         const entry = state.notebook[Number(idx)];
-        const sciMatch = entry?.text.match(/\(([^)]+)\)/);
-        this.openHandle = renderSourcesEvidencePanel(mount, speciesId, sciMatch?.[1]);
+        const sci =
+          entry?.scientificName ??
+          entry?.text.match(/\(([^)]+)\)/)?.[1];
+        this.openHandle = renderSourcesEvidencePanel(mount, speciesId, sci);
       });
     });
   }

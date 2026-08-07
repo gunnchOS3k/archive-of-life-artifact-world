@@ -1,4 +1,5 @@
 import type { FederatedRecord, ProviderConflict, SpeciesEvidenceResult } from './types';
+import { federatedToProvenanced } from './provenanceAdapters';
 import { federationHealthSummary, getProvider, PROVIDER_REGISTRY } from './registry';
 import {
   PROVIDER_TIMEOUT_MS,
@@ -252,13 +253,13 @@ export class FederationService {
       };
     }
 
-    const records: FederatedRecord[] = [];
+    const rawRecords: FederatedRecord[] = [];
     const failures: ProviderTaskFailure[] = [];
 
     settled.forEach((result, index) => {
       const providerId = tasks[index]?.providerId ?? `provider_${index}`;
       if (result.status === 'fulfilled') {
-        records.push(...result.value.records);
+        rawRecords.push(...result.value.records);
         return;
       }
       const reason =
@@ -269,6 +270,33 @@ export class FederationService {
         timedOut: isTimeoutError(result.reason),
       });
     });
+
+    // COL/GBIF: enforce license + real taxon names via provenance adapter (never invent taxa).
+    const records: FederatedRecord[] = [];
+    for (const record of rawRecords) {
+      if (record.providerId === 'col' || record.providerId === 'gbif') {
+        const adapted = federatedToProvenanced(record, record.providerId);
+        if (!adapted) {
+          failures.push({
+            providerId: record.providerId,
+            reason: `rejected unnamed/invalid taxon ${record.sourceRecordId}`,
+            timedOut: false,
+          });
+          continue;
+        }
+        records.push({
+          ...record,
+          scientificName: adapted.scientificName,
+          acceptedName: adapted.acceptedName ?? record.acceptedName,
+          taxonomicRank: adapted.taxonomicRank ?? record.taxonomicRank,
+          license: adapted.license,
+          attribution: adapted.attribution,
+          sourceUrl: adapted.sourceUrl ?? record.sourceUrl,
+        });
+        continue;
+      }
+      records.push(record);
+    }
 
     this.lastProviderFailures = failures;
     this.lastNameConflicts = this.detectNameConflicts(records);

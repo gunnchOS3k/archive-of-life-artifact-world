@@ -292,6 +292,10 @@ export interface PlayableSpecies {
   whyItMatters: string;
   fossilLocations?: string[];
   livingRelatives?: string[];
+  /** Time Atlas unit ids for encounter filtering */
+  timeUnitIds?: string[];
+  /** Provenance snapshots for journal citations — never invent taxa */
+  provenance?: ArchiveSpecies['provenance'];
 }
 
 export function toPlayableSpecies(sp: ArchiveSpecies): PlayableSpecies {
@@ -319,6 +323,8 @@ export function toPlayableSpecies(sp: ArchiveSpecies): PlayableSpecies {
     whyItMatters: gp?.whyItMatters ?? '',
     fossilLocations: sp.fossil?.fossilLocations ?? gp?.fossilLocations,
     livingRelatives: sp.fossil?.livingRelatives ?? gp?.livingRelatives,
+    timeUnitIds: sp.timeUnitIds,
+    provenance: sp.provenance,
   };
 }
 

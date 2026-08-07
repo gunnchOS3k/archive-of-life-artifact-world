@@ -1,10 +1,12 @@
-import type { SaveState, LifelingTrait } from '@/schema';
+import type { SaveState, LifelingTrait, NotebookProvenanceCite } from '@/schema';
 import type { PlayableSpecies } from '@/services/DataCatalogService';
+import { applyObservationProgress } from '@/systems/companionProgression';
 
 export function collectArtifact(
   state: SaveState,
   species: PlayableSpecies,
-  traits: LifelingTrait[]
+  traits: LifelingTrait[],
+  opts: { timePeriodId?: string | null } = {},
 ) {
   if (state.artifacts.some((a) => a.speciesId === species.id)) {
     return { success: false as const, reason: 'already_collected' };
@@ -25,26 +27,47 @@ export function collectArtifact(
   state.artifacts.push(artifact);
   state.stats.artifactsCollected++;
   state.stats.speciesDocumented++;
+
+  const provenanceCitations = provenanceFromSpecies(species);
+  const citeLine =
+    provenanceCitations.length > 0
+      ? ` Provenance: ${provenanceCitations
+          .map((c) => `${c.providerId} [${c.license}] ${c.citation}`)
+          .join('; ')}.`
+      : ' Provenance: authored species record — COL/GBIF live/fixture pending.';
+
+  const kind = species.conservationStatus === 'Extinct' ? 'excavate' : 'observe';
+  const periodNote = opts.timePeriodId ? ` Time filter: ${opts.timePeriodId}.` : '';
+
   state.notebook.unshift({
     time: Date.now(),
-    text: `Collected ${formatArtifactType(artifactType)} from ${species.commonName} (${species.scientificName}) in ${state.player.currentRegion}.`,
+    text: `Collected ${formatArtifactType(artifactType)} from ${species.commonName} (${species.scientificName}) in ${state.player.currentRegion}.${periodNote}${citeLine}`,
     speciesId: species.id,
+    scientificName: species.scientificName,
+    regionId: state.player.currentRegion,
+    timePeriodId: opts.timePeriodId ?? state.timeAtlas?.activeTimeUnitId ?? null,
+    provenanceCitations,
   });
 
-  unlockCompanionTraits(state, species.id, traits);
-  return { success: true as const, artifact };
+  const progression = applyObservationProgress(state.companion, {
+    kind,
+    speciesId: species.id,
+    traits,
+  });
+
+  return { success: true as const, artifact, progression };
 }
 
-function unlockCompanionTraits(state: SaveState, speciesId: string, traits: LifelingTrait[]) {
-  const toUnlock = traits.filter((t) => t.unlockedBy === speciesId || t.unlockedBy === 'any_artifact');
-  for (const trait of toUnlock) {
-    if (!state.companion.unlockedTraits.includes(trait.id)) {
-      state.companion.unlockedTraits.push(trait.id);
-    }
-  }
-  if (!state.companion.unlockedTraits.includes('celebrate_emote')) {
-    state.companion.unlockedTraits.push('celebrate_emote');
-  }
+function provenanceFromSpecies(species: PlayableSpecies): NotebookProvenanceCite[] {
+  const rows = species.provenance ?? [];
+  return rows.map((p) => ({
+    providerId: p.source,
+    license: p.license,
+    citation: p.citation,
+    sourceRecordId: p.sourceRecordId ?? p.catalogueOfLifeId ?? (p.gbifTaxonKey != null ? String(p.gbifTaxonKey) : undefined),
+    sourceUrl: undefined,
+    cacheStatus: p.verificationStatus ?? (p.isMockData ? 'mock_sample' : 'source'),
+  }));
 }
 
 export function formatArtifactType(type: string): string {

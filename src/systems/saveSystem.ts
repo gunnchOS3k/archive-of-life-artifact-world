@@ -1,10 +1,15 @@
 import type { SaveState } from '@/schema';
+import { ensureCompanionProgressFields } from '@/systems/companionProgression';
+import { speciesCache } from '@/services/IndexedDBCache';
+import { track } from '@/systems/telemetry';
 
 const SAVE_KEY = 'archive_of_life_save';
+const SAVE_BACKUP_KEY = 'save_state';
+export const SAVE_VERSION = 3;
 
 export function createDefaultSave(): SaveState {
   return {
-    version: 2,
+    version: SAVE_VERSION,
     player: {
       x: 400,
       y: 300,
@@ -34,6 +39,9 @@ export function createDefaultSave(): SaveState {
       equippedTraits: [],
       unlockedTraits: ['celebrate_emote'],
       bond: 0,
+      level: 1,
+      xp: 0,
+      observationCount: 0,
     },
     stats: {
       artifactsCollected: 0,
@@ -48,31 +56,110 @@ export function createDefaultSave(): SaveState {
       viewedTimeUnits: [],
       viewedGates: [],
       analyzedPeriods: [],
+      activeTimeUnitId: null,
     },
     timestamp: Date.now(),
   };
+}
+
+function migrateSave(raw: Partial<SaveState>): SaveState {
+  const defaults = createDefaultSave();
+  const merged: SaveState = {
+    ...defaults,
+    ...raw,
+    version: SAVE_VERSION,
+    player: { ...defaults.player, ...(raw.player ?? {}) },
+    quests: { ...defaults.quests, ...(raw.quests ?? {}) },
+    companion: ensureCompanionProgressFields({
+      ...defaults.companion,
+      ...(raw.companion ?? {}),
+    }),
+    stats: { ...defaults.stats, ...(raw.stats ?? {}) },
+    earthLayers: raw.earthLayers ?? defaults.earthLayers,
+    timeAtlas: {
+      ...defaults.timeAtlas,
+      ...(raw.timeAtlas ?? {}),
+      activeTimeUnitId: raw.timeAtlas?.activeTimeUnitId ?? null,
+    },
+    artifacts: Array.isArray(raw.artifacts) ? raw.artifacts : [],
+    notebook: Array.isArray(raw.notebook) ? raw.notebook : [],
+    timestamp: typeof raw.timestamp === 'number' ? raw.timestamp : Date.now(),
+  };
+  return merged;
+}
+
+export function validateSave(state: unknown): state is SaveState {
+  if (!state || typeof state !== 'object') return false;
+  const s = state as Partial<SaveState>;
+  return (
+    !!s.player &&
+    typeof s.player.currentRegion === 'string' &&
+    Array.isArray(s.artifacts) &&
+    Array.isArray(s.notebook) &&
+    !!s.companion &&
+    !!s.quests &&
+    !!s.stats
+  );
 }
 
 export function loadSave(): SaveState | null {
   try {
     const raw = localStorage.getItem(SAVE_KEY);
     if (!raw) return null;
-    const save = JSON.parse(raw) as Partial<SaveState>;
-    const defaults = createDefaultSave();
-    return {
-      ...defaults,
-      ...save,
-      earthLayers: save.earthLayers ?? defaults.earthLayers,
-      timeAtlas: save.timeAtlas ?? defaults.timeAtlas,
-    };
+    const parsed = JSON.parse(raw) as Partial<SaveState>;
+    if (!validateSave({ ...createDefaultSave(), ...parsed })) return null;
+    const save = migrateSave(parsed);
+    track('load', { region: save.player.currentRegion, version: save.version });
+    return save;
   } catch {
     return null;
   }
 }
 
+/** Async load: localStorage first, then IndexedDB offline backup. */
+export async function loadSaveAsync(): Promise<SaveState | null> {
+  const local = loadSave();
+  if (local) return local;
+  try {
+    const backup = await speciesCache.getBundle<SaveState>(SAVE_BACKUP_KEY);
+    if (backup && validateSave(backup)) {
+      const migrated = migrateSave(backup);
+      // Rehydrate localStorage for subsequent sync reads
+      try {
+        localStorage.setItem(SAVE_KEY, JSON.stringify(migrated));
+      } catch {
+        /* ignore */
+      }
+      track('load', { region: migrated.player.currentRegion, version: migrated.version, source: 'idb' });
+      return migrated;
+    }
+  } catch {
+    /* ignore */
+  }
+  return null;
+}
+
 export function saveGame(state: SaveState): void {
-  const data: SaveState = {
-    version: 2,
+  const data = serializeSave(state);
+  try {
+    localStorage.setItem(SAVE_KEY, JSON.stringify(data));
+  } catch {
+    /* quota — still try IndexedDB below */
+  }
+  void speciesCache.setBundle(SAVE_BACKUP_KEY, `save-v${SAVE_VERSION}`, data).catch(() => {
+    /* offline cache optional */
+  });
+  track('save', {
+    region: data.player.currentRegion,
+    artifacts: data.stats.artifactsCollected,
+    companionLevel: data.companion.level ?? 1,
+  });
+}
+
+export function serializeSave(state: SaveState): SaveState {
+  ensureCompanionProgressFields(state.companion);
+  return {
+    version: SAVE_VERSION,
     player: state.player,
     artifacts: state.artifacts,
     notebook: state.notebook,
@@ -80,10 +167,14 @@ export function saveGame(state: SaveState): void {
     companion: state.companion,
     stats: state.stats,
     earthLayers: state.earthLayers ?? { viewedTabs: [], analyzedRegions: [] },
-    timeAtlas: state.timeAtlas ?? { viewedTimeUnits: [], viewedGates: [], analyzedPeriods: [] },
+    timeAtlas: {
+      viewedTimeUnits: state.timeAtlas?.viewedTimeUnits ?? [],
+      viewedGates: state.timeAtlas?.viewedGates ?? [],
+      analyzedPeriods: state.timeAtlas?.analyzedPeriods ?? [],
+      activeTimeUnitId: state.timeAtlas?.activeTimeUnitId ?? null,
+    },
     timestamp: Date.now(),
   };
-  localStorage.setItem(SAVE_KEY, JSON.stringify(data));
 }
 
 export function hasSave(): boolean {
@@ -92,4 +183,19 @@ export function hasSave(): boolean {
 
 export function deleteSave(): void {
   localStorage.removeItem(SAVE_KEY);
+  void speciesCache.deleteBundle(SAVE_BACKUP_KEY);
+}
+
+export async function exportSaveJson(state: SaveState): Promise<string> {
+  return JSON.stringify(serializeSave(state), null, 2);
+}
+
+export function importSaveJson(json: string): SaveState | null {
+  try {
+    const parsed = JSON.parse(json) as Partial<SaveState>;
+    if (!validateSave({ ...createDefaultSave(), ...parsed })) return null;
+    return migrateSave(parsed);
+  } catch {
+    return null;
+  }
 }

@@ -44,6 +44,7 @@
             <button class="hud-btn" id="btn-quests" title="Quests (5)">📋 Quests</button>
             <button class="hud-btn" id="btn-earth" title="Earth Layers (6)">🛰️ Earth</button>
             <button class="hud-btn" id="btn-time" title="Time Atlas (7)">⏳ Time</button>
+            <button class="hud-btn" id="btn-settings" title="Settings (8)">⚙️ Settings</button>
           </div>
         </div>
       </div>
@@ -199,6 +200,7 @@
           <div class="companion-info">
             <label>Name: <input type="text" id="companion-name" maxlength="20" value="Relic"></label>
             <label>Body Color: <input type="color" id="companion-color" value="#7EC8A3"></label>
+            <p id="companion-progress" class="companion-progress" aria-live="polite">Lv 1</p>
           </div>
         </div>
         <div class="trait-section"><h3>Equipped Traits</h3><div id="equipped-traits"></div></div>
@@ -269,6 +271,14 @@
         </div>
         <div id="time-atlas-gates" class="time-atlas-gates"></div>
       </div>
+    </div>
+
+    <div id="panel-settings" class="panel hidden panel-settings">
+      <div class="panel-header">
+        <h2>Settings</h2>
+        <button class="panel-close" data-panel="settings">✕</button>
+      </div>
+      <div class="panel-body"></div>
     </div>
 
     <div id="minigame-fossil" class="minigame-overlay hidden">

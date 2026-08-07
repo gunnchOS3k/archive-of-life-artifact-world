@@ -6,6 +6,8 @@ import type {
   TaxonQuery,
 } from './types';
 import { PROVIDER_TIMEOUT_MS, withBoundedTimeout } from './boundedPromise';
+import { assertRealTaxonName } from './provenanceAdapters';
+import { speciesCache } from '@/services/IndexedDBCache';
 
 const NASA_METADATA = '/data/earth/nasa_metadata_cache.json';
 const GBIF_FIXTURE = '/data/bundles/gbif-occurrences.json';
@@ -92,6 +94,36 @@ function wrapRecord<T>(
     payload,
     ...extras,
   };
+}
+
+/** COL/GBIF only — skip invented/placeholder scientific names. */
+function wrapTaxonRecord<T>(
+  providerId: 'col' | 'gbif',
+  sourceRecordId: string,
+  payload: T,
+  attribution: string,
+  license: string,
+  cacheStatus: FederatedRecord['cacheStatus'],
+  interpretation: FederatedRecord['interpretation'] = 'observed',
+  extras: Partial<FederatedRecord<T>> = {},
+): FederatedRecord<T> | null {
+  const name =
+    extras.scientificName ??
+    strOrUndefined((payload as Record<string, unknown>)?.scientificName);
+  if (!assertRealTaxonName(name)) return null;
+  if (!license || !license.trim()) return null;
+  return wrapRecord(providerId, sourceRecordId, payload, attribution, license, cacheStatus, interpretation, {
+    ...extras,
+    scientificName: name,
+  });
+}
+
+async function cacheProviderPayload(key: string, data: unknown): Promise<void> {
+  await speciesCache.setProviderCache(key, 'live-or-fixture', data);
+}
+
+async function readProviderCache<T>(key: string): Promise<T | null> {
+  return speciesCache.getProviderCache<T>(key);
 }
 
 function wrapFixture<T>(
@@ -234,6 +266,7 @@ export const gbifProvider: DataProvider = {
   async getOccurrences(query: OccurrenceQuery) {
     const limit = query.limit ?? 5;
     const name = query.scientificName?.trim();
+    const cacheKey = `gbif:occ:${name ?? query.taxonId ?? 'all'}:${limit}`;
     if (name) {
       try {
         const live = await fetchLiveJson<{
@@ -243,64 +276,84 @@ export const gbifProvider: DataProvider = {
         );
         const rows = live.results ?? [];
         if (rows.length) {
-          return rows.map((row, i) =>
-            wrapRecord(
-              'gbif',
-              String(row.key ?? row.gbifID ?? i),
-              row,
-              'GBIF Occurrence API',
-              String(row.license ?? 'CC BY 4.0'),
-              'live',
-              'observed',
-              {
-                scientificName: strOrUndefined(row.scientificName),
-                acceptedName: strOrUndefined(row.acceptedScientificName),
-                taxonomicRank: strOrUndefined(row.taxonRank),
-                eventDate: strOrUndefined(row.eventDate),
-                latitude: numOrUndefined(row.decimalLatitude),
-                longitude: numOrUndefined(row.decimalLongitude),
-                sourceUrl: row.key
-                  ? `https://www.gbif.org/occurrence/${row.key}`
-                  : 'https://www.gbif.org/',
-                geographicPrecision: row.coordinateUncertaintyInMeters
-                  ? `${row.coordinateUncertaintyInMeters}m`
-                  : row.decimalLatitude != null
-                    ? 'point'
-                    : 'unknown',
-                temporalPrecision: row.eventDate ? 'eventDate' : 'unknown',
-                qualityFlag: Array.isArray(row.issues) && row.issues.length
-                  ? `gbif_issues:${(row.issues as unknown[]).slice(0, 3).join('|')}`
-                  : strOrUndefined(row.basisOfRecord) ?? 'gbif_live',
-              },
-            ),
-          );
+          const mapped = rows
+            .map((row, i) =>
+              wrapTaxonRecord(
+                'gbif',
+                String(row.key ?? row.gbifID ?? i),
+                row,
+                'GBIF Occurrence API',
+                String(row.license ?? 'CC BY 4.0'),
+                'live',
+                'observed',
+                {
+                  scientificName: strOrUndefined(row.scientificName),
+                  acceptedName: strOrUndefined(row.acceptedScientificName),
+                  taxonomicRank: strOrUndefined(row.taxonRank),
+                  eventDate: strOrUndefined(row.eventDate),
+                  latitude: numOrUndefined(row.decimalLatitude),
+                  longitude: numOrUndefined(row.decimalLongitude),
+                  sourceUrl: row.key
+                    ? `https://www.gbif.org/occurrence/${row.key}`
+                    : 'https://www.gbif.org/',
+                  geographicPrecision: row.coordinateUncertaintyInMeters
+                    ? `${row.coordinateUncertaintyInMeters}m`
+                    : row.decimalLatitude != null
+                      ? 'point'
+                      : 'unknown',
+                  temporalPrecision: row.eventDate ? 'eventDate' : 'unknown',
+                  qualityFlag: Array.isArray(row.issues) && row.issues.length
+                    ? `gbif_issues:${(row.issues as unknown[]).slice(0, 3).join('|')}`
+                    : strOrUndefined(row.basisOfRecord) ?? 'gbif_live',
+                },
+              ),
+            )
+            .filter((r): r is NonNullable<typeof r> => r != null);
+          if (mapped.length) {
+            await cacheProviderPayload(cacheKey, mapped);
+            return mapped;
+          }
         }
       } catch {
-        /* fall through to fixture */
+        /* fall through to fixture / offline cache */
       }
+    }
+
+    const cached = await readProviderCache<FederatedRecord[]>(cacheKey);
+    if (cached?.length) {
+      return cached.map((r) => ({ ...r, cacheStatus: 'cached' as const }));
     }
 
     const bundle = await fetchJson<{ records: Array<Record<string, unknown>> }>(GBIF_FIXTURE);
     const filtered = bundle.records.filter((row) => matchesSpecies(row, query));
     const rows = (filtered.length ? filtered : bundle.records).slice(0, limit);
-    return rows.map((row, i) =>
-      wrapFixture(
-        'gbif',
-        String(row.gbifTaxonKey ?? row.speciesId ?? i),
-        row,
-        'GBIF occurrence fixture',
-        'CC BY 4.0',
-        'observed',
-        {
-          scientificName: strOrUndefined(row.scientificName),
-          acceptedName: strOrUndefined(row.acceptedScientificName),
-          latitude: numOrUndefined(row.decimalLatitude ?? row.latitude),
-          longitude: numOrUndefined(row.decimalLongitude ?? row.longitude),
-          eventDate: strOrUndefined(row.eventDate),
-          qualityFlag: 'gbif_fixture',
-        },
-      ),
-    );
+    const fixtures = rows
+      .map((row, i) => {
+        const sci =
+          strOrUndefined(row.scientificName) ??
+          strOrUndefined(row.acceptedScientificName) ??
+          (row.speciesId ? String(row.speciesId).replace(/_/g, ' ') : undefined);
+        return wrapTaxonRecord(
+          'gbif',
+          String(row.gbifTaxonKey ?? row.speciesId ?? i),
+          row,
+          'GBIF occurrence fixture',
+          'CC BY 4.0',
+          'fixture',
+          'observed',
+          {
+            scientificName: sci,
+            acceptedName: strOrUndefined(row.acceptedScientificName),
+            latitude: numOrUndefined(row.decimalLatitude ?? row.latitude),
+            longitude: numOrUndefined(row.decimalLongitude ?? row.longitude),
+            eventDate: strOrUndefined(row.eventDate),
+            qualityFlag: 'gbif_fixture',
+          },
+        );
+      })
+      .filter((r): r is NonNullable<typeof r> => r != null);
+    await cacheProviderPayload(cacheKey, fixtures);
+    return fixtures;
   },
 };
 
@@ -427,6 +480,7 @@ export const colProvider: DataProvider = {
   },
   async searchTaxa(query: TaxonQuery) {
     const q = query.scientificName?.trim();
+    const cacheKey = `col:taxa:${q ?? 'all'}`;
     if (q) {
       try {
         const live = await fetchLiveJson<{
@@ -436,32 +490,43 @@ export const colProvider: DataProvider = {
         );
         const hits = live.result ?? [];
         if (hits.length) {
-          return hits.map((hit, i) => {
-            const usage = (hit.usage ?? hit) as Record<string, unknown>;
-            return wrapRecord(
-              'col',
-              String(hit.id ?? usage.id ?? i),
-              usage,
-              'Catalogue of Life ChecklistBank',
-              'COL terms',
-              'live',
-              'observed',
-              {
-                scientificName: strOrUndefined(usage.scientificName ?? usage.label ?? usage.name),
-                acceptedName: strOrUndefined(
-                  (usage.accepted as Record<string, unknown> | undefined)?.name ??
-                    usage.acceptedName,
-                ),
-                taxonomicRank: strOrUndefined(usage.rank ?? usage.status),
-                sourceUrl: 'https://www.catalogueoflife.org/',
-                qualityFlag: 'col_live',
-              },
-            );
-          });
+          const mapped = hits
+            .map((hit, i) => {
+              const usage = (hit.usage ?? hit) as Record<string, unknown>;
+              return wrapTaxonRecord(
+                'col',
+                String(hit.id ?? usage.id ?? i),
+                usage,
+                'Catalogue of Life ChecklistBank',
+                'COL terms',
+                'live',
+                'observed',
+                {
+                  scientificName: strOrUndefined(usage.scientificName ?? usage.label ?? usage.name),
+                  acceptedName: strOrUndefined(
+                    (usage.accepted as Record<string, unknown> | undefined)?.name ??
+                      usage.acceptedName,
+                  ),
+                  taxonomicRank: strOrUndefined(usage.rank ?? usage.status),
+                  sourceUrl: 'https://www.catalogueoflife.org/',
+                  qualityFlag: 'col_live',
+                },
+              );
+            })
+            .filter((r): r is NonNullable<typeof r> => r != null);
+          if (mapped.length) {
+            await cacheProviderPayload(cacheKey, mapped);
+            return mapped;
+          }
         }
       } catch {
         /* fall through */
       }
+    }
+
+    const cached = await readProviderCache<FederatedRecord[]>(cacheKey);
+    if (cached?.length) {
+      return cached.map((r) => ({ ...r, cacheStatus: 'cached' as const }));
     }
 
     const index = await fetchJson<{ entries: Array<Record<string, unknown>> }>(COL_FIXTURE);
@@ -469,21 +534,26 @@ export const colProvider: DataProvider = {
     const hits = index.entries
       .filter((e) => !needle || String(e.scientificName ?? '').toLowerCase().includes(needle))
       .slice(0, 5);
-    return hits.map((row, i) =>
-      wrapFixture(
-        'col',
-        String(row.id ?? i),
-        row,
-        'Catalogue of Life via search index fixture',
-        'COL terms',
-        'observed',
-        {
-          scientificName: strOrUndefined(row.scientificName),
-          taxonomicRank: strOrUndefined(row.rank),
-          qualityFlag: 'col_fixture',
-        },
-      ),
-    );
+    const fixtures = hits
+      .map((row, i) =>
+        wrapTaxonRecord(
+          'col',
+          String(row.id ?? i),
+          row,
+          'Catalogue of Life via search index fixture',
+          'COL terms',
+          'fixture',
+          'observed',
+          {
+            scientificName: strOrUndefined(row.scientificName),
+            taxonomicRank: strOrUndefined(row.rank),
+            qualityFlag: 'col_fixture',
+          },
+        ),
+      )
+      .filter((r): r is NonNullable<typeof r> => r != null);
+    await cacheProviderPayload(cacheKey, fixtures);
+    return fixtures;
   },
 };
 
