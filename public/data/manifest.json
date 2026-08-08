@@ -1,8 +1,8 @@
 {
-  "snapshotId": "wave-f-alpha-2026-08",
-  "version": "4.0.0-wave-f-alpha",
-  "generatedAt": "2026-08-07T19:00:00.000Z",
-  "description": "Wave F Alpha \u2014 12 regions (polar incl.), encounter catalog \u2265120, 24 flagship; authored taxonomy + live COL/GBIF/PBDB ingestion service. Fixtures never claimed as live.",
+  "snapshotId": "alpha-exit-2026-08",
+  "version": "4.1.0-alpha-exit",
+  "generatedAt": "2026-08-08T01:00:00.000Z",
+  "description": "Alpha exit digital — 12 regions, ADR E/F floors, batch/snapshot Tier R ingest path, observation/scanning/codex/offline pack. Authored taxonomy liveClaim=false; fixtures never claimed live. Not Beta/RC.",
   "bundles": {
     "heroSpecies": {
       "path": "bundles/hero-species.json",
@@ -166,6 +166,6 @@
     "timeUnits": 42,
     "playableTimeGates": 1,
     "taxaWithTimeRanges": 24,
-    "honestNotes": "Encounter catalog is authored_public_taxonomy (liveClaim=false). Live COL/GBIF/PBDB via ScientificIngestionService. Fixtures only for offline/tests."
+    "honestNotes": "Encounter catalog is authored_public_taxonomy (liveClaim=false). Tier R import counts are actual by source with explicit liveClaim. Fixtures never claimed live. Not Beta/RC / not global live ingest."
   }
 }

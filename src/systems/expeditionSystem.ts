@@ -8,7 +8,10 @@ export type ExpeditionObjectiveType =
   | 'visit_region'
   | 'collect_artifact'
   | 'discover_clue'
-  | 'journal_entry';
+  | 'journal_entry'
+  | 'observe_species'
+  | 'scan_taxon'
+  | 'view_time_unit';
 
 export interface ExpeditionObjective {
   id: string;
@@ -132,6 +135,28 @@ export function evaluateExpedition(
         break;
       case 'journal_entry':
         ok = state.notebook.some((n) => n.text.includes(obj.target) || n.speciesId === obj.target);
+        break;
+      case 'observe_species':
+        ok = state.notebook.some(
+          (n) =>
+            n.speciesId === obj.target &&
+            (n.text.startsWith('Observed') || n.text.startsWith('Codex:')),
+        );
+        break;
+      case 'scan_taxon': {
+        const scans = (state as SaveState & { scans?: Array<{ scientificName?: string; matchedId?: string }> })
+          .scans;
+        ok = Array.isArray(scans)
+          ? scans.some(
+              (s) =>
+                s.matchedId === obj.target ||
+                (s.scientificName?.toLowerCase() ?? '') === obj.target.toLowerCase(),
+            )
+          : false;
+        break;
+      }
+      case 'view_time_unit':
+        ok = (state.timeAtlas?.viewedTimeUnits ?? []).includes(obj.target);
         break;
     }
     if (ok) {

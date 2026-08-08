@@ -1,0 +1,35 @@
+[
+  {
+    "source": "col",
+    "queryKey": "*|limit=10000",
+    "snapshotVersion": "1.0.0",
+    "offset": 10000,
+    "page": 1,
+    "recordsImported": 260,
+    "lastSuccessAt": "2026-08-08T01:17:58.190Z",
+    "liveClaim": false,
+    "errors": []
+  },
+  {
+    "source": "gbif",
+    "queryKey": "*|limit=10000",
+    "snapshotVersion": "1.0.0",
+    "offset": 10000,
+    "page": 1,
+    "recordsImported": 130,
+    "lastSuccessAt": "2026-08-08T01:17:58.191Z",
+    "liveClaim": false,
+    "errors": []
+  },
+  {
+    "source": "pbdb",
+    "queryKey": "*|limit=10000",
+    "snapshotVersion": "1.0.0",
+    "offset": 10000,
+    "page": 1,
+    "recordsImported": 105,
+    "lastSuccessAt": "2026-08-08T01:17:58.191Z",
+    "liveClaim": false,
+    "errors": []
+  }
+]
