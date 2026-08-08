@@ -1,6 +1,6 @@
 {
-  "snapshotId": "wave-f-alpha-2026-08",
-  "generatedAt": "2026-08-08T21:07:56.476Z",
+  "snapshotId": "sample-2026-07",
+  "generatedAt": "2026-08-08T21:11:07.118Z",
   "statusToken": "ARCHIVE_DIGITAL_RC_READY",
   "claimLevel": "digital_rc",
   "doesNotClaim": [
@@ -118,7 +118,7 @@
   },
   "gaps": [],
   "scientificOps": {
-    "generatedAt": "2026-08-08T21:07:56.476Z",
+    "generatedAt": "2026-08-08T21:11:07.117Z",
     "checks": [
       {
         "id": "source_registry",

@@ -1,14 +1,23 @@
 /**
  * Restore frozen launch Tier E/F + region floors after generate:bundles.
- * generate:bundles still emits sample heroes/regions (6 / 23); launch product
- * floors remain the Cont V/VI audited sets (12 regions, E≥120, F=24).
+ * generate:bundles still emits a sample hero/region set; launch product floors
+ * remain the Cont V/VI audited sets (12 regions, E≥120 playable, F=24).
+ * Also syncs search-index + manifest so audit:data stays consistent.
  */
-import { copyFileSync, existsSync, mkdirSync, readdirSync } from 'fs';
+import {
+  copyFileSync,
+  existsSync,
+  mkdirSync,
+  readdirSync,
+  readFileSync,
+  writeFileSync,
+} from 'fs';
 import { join } from 'path';
 
 const ROOT = process.cwd();
 const FREEZE = join(ROOT, 'public/data/launch/frozen');
 const BUNDLES = join(ROOT, 'public/data/bundles');
+const MANIFEST = join(ROOT, 'public/data/manifest.json');
 
 const FILES = [
   'regions.json',
@@ -17,8 +26,100 @@ const FILES = [
   'clues.json',
   'companion-modules.json',
   'expeditions.json',
-  'search-index.json',
 ];
+
+function loadJson<T>(path: string): T {
+  return JSON.parse(readFileSync(path, 'utf8')) as T;
+}
+
+function syncIndexAndManifest(): void {
+  const heroes = loadJson<{
+    species: Array<{
+      id: string;
+      commonName?: string;
+      scientificName: string;
+      group?: string;
+      taxonomy?: { family?: string };
+      conservation?: { iucnCategory?: string; assessed?: boolean };
+      isExtinct?: boolean;
+      conservationStatus?: string;
+      region?: string;
+      timeUnitIds?: string[];
+      provenance?: Array<{ source?: string }>;
+    }>;
+  }>(join(BUNDLES, 'hero-species.json'));
+
+  const indexPath = join(BUNDLES, 'search-index.json');
+  const index = loadJson<{
+    snapshotId?: string;
+    totalCount?: number;
+    entries: Array<Record<string, unknown>>;
+  }>(indexPath);
+
+  const byId = new Map(index.entries.map((e) => [String(e.id), e]));
+  for (const s of heroes.species) {
+    if (byId.has(s.id)) continue;
+    const extinct = Boolean(s.isExtinct || s.conservationStatus === 'Extinct');
+    const iucn = s.conservation?.iucnCategory;
+    const threatened = ['CR', 'EN', 'VU', 'NT'].includes(String(iucn ?? ''));
+    byId.set(s.id, {
+      id: s.id,
+      commonName: s.commonName ?? s.scientificName,
+      scientificName: s.scientificName,
+      group: s.group ?? 'unknown',
+      family: s.taxonomy?.family ?? 'unknown',
+      tier: 'hero',
+      representationTier: 1,
+      lifeStatus: extinct ? 'extinct' : 'extant',
+      timeUnitIds: s.timeUnitIds ?? [],
+      sources: ['mock_sample'],
+      region: s.region,
+      iucnCategory: iucn,
+      isExtinct: extinct,
+      isThreatened: threatened,
+      isPlayable: true,
+      programTier: 'F_Flagship',
+    });
+  }
+
+  const entries = [...byId.values()];
+  const nextIndex = {
+    ...index,
+    totalCount: entries.length,
+    entries,
+  };
+  writeFileSync(indexPath, JSON.stringify(nextIndex, null, 2) + '\n');
+
+  if (existsSync(MANIFEST)) {
+    const manifest = loadJson<{
+      bundles?: Record<string, { recordCount?: number; path?: string; kind?: string }>;
+      coverage?: Record<string, number>;
+      [k: string]: unknown;
+    }>(MANIFEST);
+    const threatened = entries.filter((e) => e.isThreatened).length;
+    const extinct = entries.filter((e) => e.isExtinct).length;
+    const iucnAssessed = heroes.species.filter((s) => s.conservation?.assessed).length;
+    if (manifest.bundles?.heroSpecies) {
+      manifest.bundles.heroSpecies.recordCount = heroes.species.length;
+    }
+    if (manifest.bundles?.searchIndex) {
+      manifest.bundles.searchIndex.recordCount = entries.length;
+    }
+    manifest.coverage = {
+      ...(manifest.coverage ?? {}),
+      representedSpecies: entries.length,
+      heroSpecies: heroes.species.length,
+      playableQuestSpecies: heroes.species.length,
+      threatened,
+      extinctFossil: extinct,
+      iucnAssessed: Math.max(manifest.coverage?.iucnAssessed ?? 0, iucnAssessed),
+    };
+    writeFileSync(MANIFEST, JSON.stringify(manifest, null, 2) + '\n');
+  }
+  console.log(
+    `synced search-index=${entries.length} heroes=${heroes.species.length} threatened=${entries.filter((e) => e.isThreatened).length}`,
+  );
+}
 
 function main(): void {
   if (!existsSync(FREEZE)) {
@@ -41,6 +142,7 @@ function main(): void {
       console.log(`restored ${name}`);
     }
   }
+  syncIndexAndManifest();
   console.log('launch floors restored');
 }
 
