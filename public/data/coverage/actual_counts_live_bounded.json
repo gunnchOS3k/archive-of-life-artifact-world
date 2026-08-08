@@ -1,64 +1,57 @@
 {
   "schemaVersion": "1.0.0",
-  "snapshotId": "beta-rc-live-bounded-2026-08",
-  "snapshotVersion": "2.0.0",
-  "generatedAt": "2026-08-08T19:44:18.258Z",
+  "snapshotId": "cont-v-production-probe-2026-08",
+  "snapshotVersion": "2.1.0-cont-v",
+  "generatedAt": "2026-08-08T20:19:29.803Z",
   "globalCompleteClaim": false,
   "liveClaimAny": true,
   "records_by_source": {
-    "col": 1,
-    "gbif": 0,
-    "pbdb": 0
+    "col": 92,
+    "gbif": 100,
+    "pbdb": 12
   },
   "records_by_source_detail": [
     {
       "source": "col",
-      "records": 1,
+      "records": 92,
       "mode": "live",
       "liveClaim": true,
       "sourceState": "LIVE_PUBLIC"
     },
     {
       "source": "gbif",
-      "records": 0,
+      "records": 100,
       "mode": "live",
-      "liveClaim": false,
+      "liveClaim": true,
       "sourceState": "LIVE_PUBLIC"
     },
     {
       "source": "pbdb",
-      "records": 0,
+      "records": 12,
       "mode": "live",
-      "liveClaim": false,
+      "liveClaim": true,
       "sourceState": "LIVE_PUBLIC"
     }
   ],
-  "unique_taxa": 1,
-  "unique_taxa_by_accepted_name": 1,
+  "unique_taxa": 111,
+  "unique_taxa_by_accepted_name": 111,
   "synonyms": 0,
   "synonym_edges": 0,
   "conflicts": 0,
   "rejected": 0,
   "dropped_by_id": 0,
   "dropped_by_name": 0,
-  "pages_fetched": 3,
+  "pages_fetched": 5,
   "checkpoint_count": 3,
-  "cache_entries": 3,
-  "synonymStats": {
-    "synonymEdges": 0,
-    "uniqueSynonyms": 0,
-    "uniqueAcceptedViaSynonym": 0,
-    "conflicts": 0,
-    "conflictDetails": []
-  },
+  "cache_entries": 0,
   "honesty": {
     "fixturesNeverClaimedLive": true,
     "liveOnlyWhenQueried": true,
     "noFabricatedGlobalComplete": true
   },
   "notes": [
-    "Actual import counts for this run only",
-    "Not a claim of global COL/GBIF/PBDB completeness",
-    "Live only where LIVE_PUBLIC and queried"
+    "Cont V production multi-page live probe",
+    "Multi-source live pagination with ≥10 records and ≥2 live sources",
+    "Not GLOBAL_DATA_COMPLETE"
   ]
 }

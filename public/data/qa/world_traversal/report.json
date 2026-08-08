@@ -1,0 +1,67 @@
+{
+  "generatedAt": "2026-08-08T20:19:40.096Z",
+  "pass": true,
+  "experienceClass": "exploration_expedition_observation_research",
+  "not": [
+    "Agar.io-like",
+    "arena-only",
+    "floating collectible prototype"
+  ],
+  "explorationSignals": {
+    "regionsVisited": 12,
+    "observations": 10,
+    "scans": 10,
+    "timeUnitsViewed": 2,
+    "expeditionsAvailable": 3,
+    "companionPathsDiverge": true,
+    "biomes": [
+      "museum",
+      "savanna",
+      "forest",
+      "wetland",
+      "coastal",
+      "fossil_bed",
+      "ancient_swamp",
+      "polar_ice",
+      "subterranean_cave",
+      "urban_human_modified",
+      "atmospheric_aerial",
+      "marine_coastal"
+    ],
+    "hasHubAndSpokes": true,
+    "fieldGameplayReady": true
+  },
+  "agarSignals": {
+    "arenaOnly": false,
+    "floatingCollectiblePrototype": false,
+    "agarIoLike": false
+  },
+  "visitedRegions": [
+    "museum",
+    "savanna",
+    "forest",
+    "wetland",
+    "coastal",
+    "fossil_site",
+    "indiana_ancient_swamp",
+    "polar_ice",
+    "subterranean_cave",
+    "urban_park",
+    "atmospheric_corridor",
+    "deep_marine"
+  ],
+  "sampleObservations": [
+    "polar_ice:pagophilus_groenlandicus",
+    "polar_ice:odobenus_rosmarus",
+    "subterranean_cave:proteus_anguinus",
+    "subterranean_cave:amblyopsis_spelaea",
+    "urban_park:passer_domesticus",
+    "urban_park:columba_livia",
+    "atmospheric_corridor:hirundo_rustica",
+    "atmospheric_corridor:falco_peregrinus",
+    "deep_marine:physeter_macrocephalus",
+    "deep_marine:orcinus_orca"
+  ],
+  "failures": [],
+  "evidenceNote": "Headless runtime traversal of all region hubs/spokes with observation/scan/codex/deep-time; not a visual screenshot proof."
+}

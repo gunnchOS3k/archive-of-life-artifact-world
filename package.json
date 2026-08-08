@@ -55,7 +55,13 @@
     "source:import:all": "tsx scripts/source-cli.ts import all",
     "status": "tsx scripts/status.ts",
     "verify": "npm run typecheck && npm run audit:maps && npm run build",
-    "report:beta-rc": "tsx scripts/report-beta-rc.ts"
+    "report:beta-rc": "tsx scripts/report-claim-ledger.ts",
+    "ingest:production-probe": "tsx scripts/ingest-production-probe.ts",
+    "ingest:bulk-manifest": "tsx scripts/ingest-bulk-manifest.ts",
+    "report:claims": "tsx scripts/report-claim-ledger.ts",
+    "qa:world-traversal": "tsx scripts/qa/world-traversal-qa.ts",
+    "audit:claim-firewall": "tsx scripts/validate_archive_claim_firewall.ts",
+    "report:beta-rc:legacy": "tsx scripts/report-beta-rc.ts"
   },
   "devDependencies": {
     "@types/node": "^22.0.0",

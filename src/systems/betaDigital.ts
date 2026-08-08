@@ -51,6 +51,8 @@ export interface BetaDigitalReport {
     fixturesNeverClaimedLive: true;
     liveOnlyWhenQueried: true;
   };
+  /** Explicit: Beta never asserts global scientific ingest */
+  scientificCoverageClaim: 'none';
   gaps: string[];
 }
 
@@ -130,10 +132,13 @@ export function evaluateBetaDigital(input: BetaDigitalInput): BetaDigitalReport 
     claimLevel,
     doesNotClaim: [
       'global live COL/GBIF/PBDB coverage',
+      'GLOBAL_DATA_COMPLETE',
+      'ALL_SPECIES_INGESTED',
       'physical product / Gate 1 hardware completeness',
       'source-verified production scientific release of all known life',
       'IUCN/authorized-bulk completeness',
     ],
+    scientificCoverageClaim: 'none' as const,
     systems,
     requiredMet,
     actualCounts: input.actualCounts,

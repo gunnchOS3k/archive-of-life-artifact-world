@@ -1,0 +1,55 @@
+{
+  "snapshotId": "wave-f-alpha-2026-08",
+  "generatedAt": "2026-08-08T20:20:36.494Z",
+  "tierE": {
+    "required": 120,
+    "actual": 156,
+    "met": true,
+    "playable": 156,
+    "byRegion": {
+      "polar_ice": 13,
+      "subterranean_cave": 8,
+      "urban_park": 18,
+      "atmospheric_corridor": 8,
+      "deep_marine": 15,
+      "savanna": 20,
+      "forest": 25,
+      "wetland": 19,
+      "coastal": 14,
+      "fossil_site": 10,
+      "indiana_ancient_swamp": 6
+    }
+  },
+  "tierF": {
+    "required": 24,
+    "actual": 24,
+    "met": true,
+    "withGameplay": 24,
+    "withArtifacts": 24
+  },
+  "regions": {
+    "required": 12,
+    "actual": 12,
+    "met": true,
+    "biomes": [
+      "museum",
+      "savanna",
+      "forest",
+      "wetland",
+      "coastal",
+      "fossil_bed",
+      "ancient_swamp",
+      "polar_ice",
+      "subterranean_cave",
+      "urban_human_modified",
+      "atmospheric_aerial",
+      "marine_coastal"
+    ],
+    "polarPresent": true
+  },
+  "tokens": {
+    "LAUNCH_TIER_E_COMPLETE": true,
+    "LAUNCH_TIER_F_COMPLETE": true
+  },
+  "gaps": []
+}

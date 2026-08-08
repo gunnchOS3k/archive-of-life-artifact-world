@@ -1,11 +1,13 @@
 {
   "snapshotId": "wave-f-alpha-2026-08",
-  "generatedAt": "2026-08-08T19:44:25.915Z",
+  "generatedAt": "2026-08-08T20:20:36.505Z",
   "statusToken": "ARCHIVE_DIGITAL_RC_READY",
   "claimLevel": "digital_rc",
   "doesNotClaim": [
     "physical RC / device certification",
     "global live archive completeness",
+    "GLOBAL_DATA_COMPLETE",
+    "ALL_SPECIES_INGESTED",
     "store submission approval",
     "IUCN full authorized coverage"
   ],
@@ -57,20 +59,13 @@
     "version": "2.0.0",
     "artifactPaths": [
       "rc/package_manifest.json",
-      "rc/provenance_bundle.json",
-      "bundles/offline-pack-manifest.json",
-      "coverage/actual_counts.json",
-      "coverage/tier_r_index.json",
-      "coverage/tier_r_import_counts.json",
-      "status/beta_digital_report.json",
-      "status/digital_rc_report.json",
-      "status/source_states.json",
-      "status/batch_ingest_report.json"
+      "claims/claim_ledger.json",
+      "status/production_probe_report.json"
     ]
   },
   "gaps": [],
   "scientificOps": {
-    "generatedAt": "2026-08-08T19:44:25.915Z",
+    "generatedAt": "2026-08-08T20:20:36.504Z",
     "checks": [
       {
         "id": "source_registry",
@@ -157,5 +152,6 @@
       }
     ],
     "gaps": []
-  }
+  },
+  "claimLedgerRef": "claims/claim_ledger.json"
 }
