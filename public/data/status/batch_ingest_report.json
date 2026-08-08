@@ -1,0 +1,81 @@
+{
+  "snapshotId": "alpha-exit-fixture-tier-r-2026-08",
+  "snapshotVersion": "1.0.0",
+  "generatedAt": "2026-08-08T01:17:58.201Z",
+  "mode": "fixture",
+  "anyLiveClaim": false,
+  "totals": {
+    "imported": 365,
+    "rejected": 0,
+    "bySource": {
+      "col": 260,
+      "gbif": 130,
+      "pbdb": 105
+    }
+  },
+  "bySource": [
+    {
+      "source": "col",
+      "imported": 260,
+      "mode": "fixture",
+      "liveClaim": false
+    },
+    {
+      "source": "gbif",
+      "imported": 130,
+      "mode": "fixture",
+      "liveClaim": false
+    },
+    {
+      "source": "pbdb",
+      "imported": 105,
+      "mode": "fixture",
+      "liveClaim": false
+    }
+  ],
+  "importStats": {
+    "added": 365,
+    "skipped": 0,
+    "rejected": 0
+  },
+  "checkpoints": [
+    {
+      "source": "col",
+      "queryKey": "*|limit=10000",
+      "snapshotVersion": "1.0.0",
+      "offset": 10000,
+      "page": 1,
+      "recordsImported": 260,
+      "lastSuccessAt": "2026-08-08T01:17:58.190Z",
+      "liveClaim": false,
+      "errors": []
+    },
+    {
+      "source": "gbif",
+      "queryKey": "*|limit=10000",
+      "snapshotVersion": "1.0.0",
+      "offset": 10000,
+      "page": 1,
+      "recordsImported": 130,
+      "lastSuccessAt": "2026-08-08T01:17:58.191Z",
+      "liveClaim": false,
+      "errors": []
+    },
+    {
+      "source": "pbdb",
+      "queryKey": "*|limit=10000",
+      "snapshotVersion": "1.0.0",
+      "offset": 10000,
+      "page": 1,
+      "recordsImported": 105,
+      "lastSuccessAt": "2026-08-08T01:17:58.191Z",
+      "liveClaim": false,
+      "errors": []
+    }
+  ],
+  "honesty": {
+    "fixturesNeverClaimedLive": true,
+    "liveOnlyWhenQueried": true,
+    "note": "Fixture snapshot ingest — liveClaim false for all sources"
+  }
+}

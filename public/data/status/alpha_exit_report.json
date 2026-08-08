@@ -1,0 +1,168 @@
+{
+  "snapshotId": "wave-f-alpha-2026-08",
+  "generatedAt": "2026-08-08T01:18:20.217Z",
+  "statusToken": "ARCHIVE_ALPHA_EXIT_DIGITAL_PASS",
+  "claimLevel": "alpha_exit",
+  "doesNotClaim": [
+    "Beta",
+    "RC",
+    "global live COL/GBIF/PBDB coverage",
+    "source-verified production scientific release",
+    "complete known-life archive"
+  ],
+  "floors": {
+    "regions": {
+      "required": 12,
+      "actual": 12,
+      "met": true
+    },
+    "encounterTaxa": {
+      "required": 120,
+      "actual": 167,
+      "met": true
+    },
+    "flagship": {
+      "required": 24,
+      "actual": 24,
+      "met": true
+    },
+    "polarRegion": {
+      "required": true,
+      "present": true,
+      "met": true
+    }
+  },
+  "systems": [
+    {
+      "id": "batch_ingest",
+      "present": true,
+      "launchCritical": false,
+      "detail": "BatchSnapshotIngest + batch-ingest-snapshot script"
+    },
+    {
+      "id": "clues",
+      "present": true,
+      "launchCritical": true,
+      "detail": "5 clues"
+    },
+    {
+      "id": "codex",
+      "present": true,
+      "launchCritical": true,
+      "detail": "ArchiveDex + codexSystem progress helpers"
+    },
+    {
+      "id": "companion",
+      "present": true,
+      "launchCritical": true,
+      "detail": "10 companion modules"
+    },
+    {
+      "id": "deep_time",
+      "present": true,
+      "launchCritical": true,
+      "detail": "TimeAtlasService + deepTimeSystem present"
+    },
+    {
+      "id": "expedition",
+      "present": true,
+      "launchCritical": true,
+      "detail": "3 expeditions"
+    },
+    {
+      "id": "map_regions",
+      "present": true,
+      "launchCritical": true,
+      "detail": "12 regions"
+    },
+    {
+      "id": "objectives",
+      "present": true,
+      "launchCritical": true,
+      "detail": "Expedition objectives evaluate visit/collect/clue/observe/scan/time"
+    },
+    {
+      "id": "observation",
+      "present": true,
+      "launchCritical": true,
+      "detail": "observationSystem + WildlifeObservation minigame"
+    },
+    {
+      "id": "offline_pack",
+      "present": true,
+      "launchCritical": true,
+      "detail": "offline pack ready (tierR=365)"
+    },
+    {
+      "id": "scanning",
+      "present": true,
+      "launchCritical": true,
+      "detail": "scanningSystem against catalog + Tier R"
+    },
+    {
+      "id": "tier_r_index",
+      "present": true,
+      "launchCritical": false,
+      "detail": "365 Tier R records indexed"
+    }
+  ],
+  "launchCriticalMet": true,
+  "floorsMet": true,
+  "tierR": {
+    "totalRecords": 365,
+    "bySource": [
+      {
+        "source": "col",
+        "records": 260,
+        "liveClaim": false,
+        "mode": "fixture"
+      },
+      {
+        "source": "gbif",
+        "records": 130,
+        "liveClaim": false,
+        "mode": "fixture"
+      },
+      {
+        "source": "pbdb",
+        "records": 105,
+        "liveClaim": false,
+        "mode": "fixture"
+      }
+    ],
+    "scalesBeyondEncounterCatalog": true
+  },
+  "honesty": {
+    "authoredPublicTaxonomyLiveClaim": false,
+    "globalLiveIngestClaimed": false,
+    "fixturesNeverClaimedLive": true
+  },
+  "gaps": [
+    "Live bounded probe: 1 unique record(s); not global live ingest"
+  ],
+  "liveBounded": {
+    "totalRecords": 1,
+    "anyLiveClaim": true,
+    "bySource": [
+      {
+        "source": "col",
+        "imported": 1,
+        "mode": "live",
+        "liveClaim": true
+      },
+      {
+        "source": "gbif",
+        "imported": 0,
+        "mode": "live",
+        "liveClaim": false
+      },
+      {
+        "source": "pbdb",
+        "imported": 0,
+        "mode": "live",
+        "liveClaim": false
+      }
+    ],
+    "note": "Bounded live probe only — not global coverage"
+  }
+}

@@ -1,0 +1,40 @@
+{
+  "snapshotId": "alpha-exit-live-bounded-2026-08",
+  "snapshotVersion": "1.0.0",
+  "generatedAt": "2026-08-08T01:17:59.903Z",
+  "totalRecords": 1,
+  "uniqueRecords": 1,
+  "importedBySource": [
+    {
+      "source": "col",
+      "imported": 1,
+      "mode": "live",
+      "liveClaim": true
+    },
+    {
+      "source": "gbif",
+      "imported": 0,
+      "mode": "live",
+      "liveClaim": false
+    },
+    {
+      "source": "pbdb",
+      "imported": 0,
+      "mode": "live",
+      "liveClaim": false
+    }
+  ],
+  "capacityNote": "In-memory Map index; designed to scale beyond authored encounter catalog (~167). Not a claim of global COL coverage.",
+  "bySource": [
+    {
+      "source": "col",
+      "records": 1,
+      "mode": "live",
+      "liveClaim": true
+    }
+  ],
+  "honesty": {
+    "fixturesNeverClaimedLive": true,
+    "liveOnlyWhenQueried": true
+  }
+}

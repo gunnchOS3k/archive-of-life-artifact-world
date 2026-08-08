@@ -1,0 +1,48 @@
+{
+  "snapshotId": "alpha-exit-fixture-tier-r-2026-08",
+  "snapshotVersion": "1.0.0",
+  "generatedAt": "2026-08-08T01:17:58.192Z",
+  "totalRecords": 365,
+  "uniqueRecords": 365,
+  "importedBySource": [
+    {
+      "source": "col",
+      "imported": 260,
+      "mode": "fixture",
+      "liveClaim": false
+    },
+    {
+      "source": "gbif",
+      "imported": 130,
+      "mode": "fixture",
+      "liveClaim": false
+    },
+    {
+      "source": "pbdb",
+      "imported": 105,
+      "mode": "fixture",
+      "liveClaim": false
+    }
+  ],
+  "capacityNote": "In-memory Map index; designed to scale beyond authored encounter catalog (~167). Not a claim of global COL coverage.",
+  "bySource": [
+    {
+      "source": "col",
+      "records": 260,
+      "mode": "fixture",
+      "liveClaim": false,
+      "notes": "Fixture/snapshot import — not a live ingest claim"
+    },
+    {
+      "source": "pbdb",
+      "records": 105,
+      "mode": "fixture",
+      "liveClaim": false,
+      "notes": "Fixture/snapshot import — not a live ingest claim"
+    }
+  ],
+  "honesty": {
+    "fixturesNeverClaimedLive": true,
+    "liveOnlyWhenQueried": true
+  }
+}

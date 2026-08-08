@@ -1,0 +1,21 @@
+{
+  "snapshotId": "alpha-exit-live-bounded-2026-08",
+  "snapshotVersion": "1.0.0",
+  "records": [
+    {
+      "key": "col:8YD85",
+      "scientificName": "Bryaxis ursus ursus",
+      "source": "col",
+      "sourceRecordId": "8YD85",
+      "license": "COL terms of use",
+      "attribution": "Catalogue of Life ChecklistBank",
+      "citation": "Catalogue of Life — Bryaxis ursus ursus (8YD85)",
+      "sourceUrl": "https://www.catalogueoflife.org/",
+      "mode": "live",
+      "liveClaim": true,
+      "snapshotId": "alpha-exit-live-bounded-2026-08",
+      "snapshotVersion": "1.0.0",
+      "importedAt": "2026-08-08T01:17:59.903Z"
+    }
+  ]
+}

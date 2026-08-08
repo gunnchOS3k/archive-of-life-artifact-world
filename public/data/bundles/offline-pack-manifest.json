@@ -1,0 +1,61 @@
+{
+  "packId": "alpha-exit-offline-pack",
+  "snapshotId": "wave-f-alpha-2026-08",
+  "createdAt": "2026-08-08T01:18:20.216Z",
+  "liveClaim": false,
+  "bundles": [
+    {
+      "key": "regions",
+      "path": "bundles/regions.json",
+      "recordCount": 12,
+      "required": true
+    },
+    {
+      "key": "encounterTaxa",
+      "path": "bundles/encounter-taxa.json",
+      "recordCount": 156,
+      "required": true
+    },
+    {
+      "key": "heroSpecies",
+      "path": "bundles/hero-species.json",
+      "recordCount": 24,
+      "required": true
+    },
+    {
+      "key": "expeditions",
+      "path": "bundles/expeditions.json",
+      "recordCount": 1,
+      "required": false
+    },
+    {
+      "key": "clues",
+      "path": "bundles/clues.json",
+      "recordCount": 1,
+      "required": false
+    },
+    {
+      "key": "companionModules",
+      "path": "bundles/companion-modules.json",
+      "recordCount": 1,
+      "required": false
+    },
+    {
+      "key": "gameConfig",
+      "path": "bundles/game-config.json",
+      "recordCount": 1,
+      "required": false
+    },
+    {
+      "key": "searchIndex",
+      "path": "bundles/search-index.json",
+      "recordCount": 1,
+      "required": false
+    }
+  ],
+  "tierRRecordCount": 365,
+  "regionCount": 12,
+  "encounterCount": 156,
+  "flagshipCount": 24,
+  "notes": "Offline pack is authored + imported snapshot content only. liveClaim is always false — no live ingest while offline."
+}

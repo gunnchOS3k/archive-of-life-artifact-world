@@ -1,0 +1,81 @@
+{
+  "snapshotId": "alpha-exit-live-bounded-2026-08",
+  "snapshotVersion": "1.0.0",
+  "generatedAt": "2026-08-08T01:17:59.904Z",
+  "mode": "live_optional",
+  "anyLiveClaim": true,
+  "totals": {
+    "imported": 1,
+    "rejected": 0,
+    "bySource": {
+      "col": 1,
+      "gbif": 0,
+      "pbdb": 0
+    }
+  },
+  "bySource": [
+    {
+      "source": "col",
+      "imported": 1,
+      "mode": "live",
+      "liveClaim": true
+    },
+    {
+      "source": "gbif",
+      "imported": 0,
+      "mode": "live",
+      "liveClaim": false
+    },
+    {
+      "source": "pbdb",
+      "imported": 0,
+      "mode": "live",
+      "liveClaim": false
+    }
+  ],
+  "importStats": {
+    "added": 1,
+    "skipped": 0,
+    "rejected": 0
+  },
+  "checkpoints": [
+    {
+      "source": "col",
+      "queryKey": "Ursus|limit=25",
+      "snapshotVersion": "1.0.0",
+      "offset": 25,
+      "page": 1,
+      "recordsImported": 1,
+      "lastSuccessAt": "2026-08-08T01:17:59.161Z",
+      "liveClaim": true,
+      "errors": []
+    },
+    {
+      "source": "gbif",
+      "queryKey": "Ursus|limit=25",
+      "snapshotVersion": "1.0.0",
+      "offset": 25,
+      "page": 1,
+      "recordsImported": 0,
+      "lastSuccessAt": "2026-08-08T01:17:59.724Z",
+      "liveClaim": false,
+      "errors": []
+    },
+    {
+      "source": "pbdb",
+      "queryKey": "Tyrannosaurus|limit=25",
+      "snapshotVersion": "1.0.0",
+      "offset": 25,
+      "page": 1,
+      "recordsImported": 0,
+      "lastSuccessAt": "2026-08-08T01:17:59.903Z",
+      "liveClaim": false,
+      "errors": []
+    }
+  ],
+  "honesty": {
+    "fixturesNeverClaimedLive": true,
+    "liveOnlyWhenQueried": true,
+    "note": "Bounded live queries only — not global archive coverage"
+  }
+}

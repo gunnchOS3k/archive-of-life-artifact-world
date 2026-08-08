@@ -1,0 +1,532 @@
+{
+  "snapshotId": "fixture-pbdb-tier-r-2026-08",
+  "license": "CC BY 4.0",
+  "liveClaim": false,
+  "records": [
+    {
+      "scientificName": "Tyrannosaurus rex",
+      "paleobiodbTaxonNo": 80000,
+      "speciesId": "FIX-PBDB-1"
+    },
+    {
+      "scientificName": "Triceratops horridus",
+      "paleobiodbTaxonNo": 80001,
+      "speciesId": "FIX-PBDB-2"
+    },
+    {
+      "scientificName": "Velociraptor mongoliensis",
+      "paleobiodbTaxonNo": 80002,
+      "speciesId": "FIX-PBDB-3"
+    },
+    {
+      "scientificName": "Stegosaurus stenops",
+      "paleobiodbTaxonNo": 80003,
+      "speciesId": "FIX-PBDB-4"
+    },
+    {
+      "scientificName": "Brachiosaurus altithorax",
+      "paleobiodbTaxonNo": 80004,
+      "speciesId": "FIX-PBDB-5"
+    },
+    {
+      "scientificName": "Allosaurus fragilis",
+      "paleobiodbTaxonNo": 80005,
+      "speciesId": "FIX-PBDB-6"
+    },
+    {
+      "scientificName": "Diplodocus longus",
+      "paleobiodbTaxonNo": 80006,
+      "speciesId": "FIX-PBDB-7"
+    },
+    {
+      "scientificName": "Ankylosaurus magniventris",
+      "paleobiodbTaxonNo": 80007,
+      "speciesId": "FIX-PBDB-8"
+    },
+    {
+      "scientificName": "Spinosaurus aegyptiacus",
+      "paleobiodbTaxonNo": 80008,
+      "speciesId": "FIX-PBDB-9"
+    },
+    {
+      "scientificName": "Archaeopteryx lithographica",
+      "paleobiodbTaxonNo": 80009,
+      "speciesId": "FIX-PBDB-10"
+    },
+    {
+      "scientificName": "Dimetrodon grandis",
+      "paleobiodbTaxonNo": 80010,
+      "speciesId": "FIX-PBDB-11"
+    },
+    {
+      "scientificName": "Dunkleosteus terrelli",
+      "paleobiodbTaxonNo": 80011,
+      "speciesId": "FIX-PBDB-12"
+    },
+    {
+      "scientificName": "Tiktaalik roseae",
+      "paleobiodbTaxonNo": 80012,
+      "speciesId": "FIX-PBDB-13"
+    },
+    {
+      "scientificName": "Ichthyostega stensioei",
+      "paleobiodbTaxonNo": 80013,
+      "speciesId": "FIX-PBDB-14"
+    },
+    {
+      "scientificName": "Meganeura monyi",
+      "paleobiodbTaxonNo": 80014,
+      "speciesId": "FIX-PBDB-15"
+    },
+    {
+      "scientificName": "Hallucigenia sparsa",
+      "paleobiodbTaxonNo": 80015,
+      "speciesId": "FIX-PBDB-16"
+    },
+    {
+      "scientificName": "Anomalocaris canadensis",
+      "paleobiodbTaxonNo": 80016,
+      "speciesId": "FIX-PBDB-17"
+    },
+    {
+      "scientificName": "Opabinia regalis",
+      "paleobiodbTaxonNo": 80017,
+      "speciesId": "FIX-PBDB-18"
+    },
+    {
+      "scientificName": "Trilobita",
+      "paleobiodbTaxonNo": 80018,
+      "speciesId": "FIX-PBDB-19"
+    },
+    {
+      "scientificName": "Ammonites",
+      "paleobiodbTaxonNo": 80019,
+      "speciesId": "FIX-PBDB-20"
+    },
+    {
+      "scientificName": "Mammuthus primigenius",
+      "paleobiodbTaxonNo": 80020,
+      "speciesId": "FIX-PBDB-21"
+    },
+    {
+      "scientificName": "Smilodon fatalis",
+      "paleobiodbTaxonNo": 80021,
+      "speciesId": "FIX-PBDB-22"
+    },
+    {
+      "scientificName": "Megatherium americanum",
+      "paleobiodbTaxonNo": 80022,
+      "speciesId": "FIX-PBDB-23"
+    },
+    {
+      "scientificName": "Glyptodon clavipes",
+      "paleobiodbTaxonNo": 80023,
+      "speciesId": "FIX-PBDB-24"
+    },
+    {
+      "scientificName": "Equus simplicidens",
+      "paleobiodbTaxonNo": 80024,
+      "speciesId": "FIX-PBDB-25"
+    },
+    {
+      "scientificName": "Basilosaurus cetoides",
+      "paleobiodbTaxonNo": 80025,
+      "speciesId": "FIX-PBDB-26"
+    },
+    {
+      "scientificName": "Pakicetus attocki",
+      "paleobiodbTaxonNo": 80026,
+      "speciesId": "FIX-PBDB-27"
+    },
+    {
+      "scientificName": "Ambulocetus natans",
+      "paleobiodbTaxonNo": 80027,
+      "speciesId": "FIX-PBDB-28"
+    },
+    {
+      "scientificName": "Moeritherium lyonsi",
+      "paleobiodbTaxonNo": 80028,
+      "speciesId": "FIX-PBDB-29"
+    },
+    {
+      "scientificName": "Uintatherium anceps",
+      "paleobiodbTaxonNo": 80029,
+      "speciesId": "FIX-PBDB-30"
+    },
+    {
+      "scientificName": "Andrewsarchus mongoliensis",
+      "paleobiodbTaxonNo": 80030,
+      "speciesId": "FIX-PBDB-31"
+    },
+    {
+      "scientificName": "Paraceratherium transouralicum",
+      "paleobiodbTaxonNo": 80031,
+      "speciesId": "FIX-PBDB-32"
+    },
+    {
+      "scientificName": "Elasmotherium sibiricum",
+      "paleobiodbTaxonNo": 80032,
+      "speciesId": "FIX-PBDB-33"
+    },
+    {
+      "scientificName": "Coelodonta antiquitatis",
+      "paleobiodbTaxonNo": 80033,
+      "speciesId": "FIX-PBDB-34"
+    },
+    {
+      "scientificName": "Megaloceros giganteus",
+      "paleobiodbTaxonNo": 80034,
+      "speciesId": "FIX-PBDB-35"
+    },
+    {
+      "scientificName": "Dire wolf",
+      "paleobiodbTaxonNo": 80035,
+      "speciesId": "FIX-PBDB-36"
+    },
+    {
+      "scientificName": "Canis dirus",
+      "paleobiodbTaxonNo": 80036,
+      "speciesId": "FIX-PBDB-37"
+    },
+    {
+      "scientificName": "Panthera atrox",
+      "paleobiodbTaxonNo": 80037,
+      "speciesId": "FIX-PBDB-38"
+    },
+    {
+      "scientificName": "Arctodus simus",
+      "paleobiodbTaxonNo": 80038,
+      "speciesId": "FIX-PBDB-39"
+    },
+    {
+      "scientificName": "Castoroides ohioensis",
+      "paleobiodbTaxonNo": 80039,
+      "speciesId": "FIX-PBDB-40"
+    },
+    {
+      "scientificName": "Titanoboa cerrejonensis",
+      "paleobiodbTaxonNo": 80040,
+      "speciesId": "FIX-PBDB-41"
+    },
+    {
+      "scientificName": "Sarcosuchus imperator",
+      "paleobiodbTaxonNo": 80041,
+      "speciesId": "FIX-PBDB-42"
+    },
+    {
+      "scientificName": "Deinosuchus rugosus",
+      "paleobiodbTaxonNo": 80042,
+      "speciesId": "FIX-PBDB-43"
+    },
+    {
+      "scientificName": "Dunkleosteus",
+      "paleobiodbTaxonNo": 80043,
+      "speciesId": "FIX-PBDB-44"
+    },
+    {
+      "scientificName": "Bothriolepis canadensis",
+      "paleobiodbTaxonNo": 80044,
+      "speciesId": "FIX-PBDB-45"
+    },
+    {
+      "scientificName": "Eusthenopteron foordi",
+      "paleobiodbTaxonNo": 80045,
+      "speciesId": "FIX-PBDB-46"
+    },
+    {
+      "scientificName": "Acanthostega gunnari",
+      "paleobiodbTaxonNo": 80046,
+      "speciesId": "FIX-PBDB-47"
+    },
+    {
+      "scientificName": "Pederpes finneyae",
+      "paleobiodbTaxonNo": 80047,
+      "speciesId": "FIX-PBDB-48"
+    },
+    {
+      "scientificName": "Eryops megacephalus",
+      "paleobiodbTaxonNo": 80048,
+      "speciesId": "FIX-PBDB-49"
+    },
+    {
+      "scientificName": "Dimetrodon",
+      "paleobiodbTaxonNo": 80049,
+      "speciesId": "FIX-PBDB-50"
+    },
+    {
+      "scientificName": "Edaphosaurus boanerges",
+      "paleobiodbTaxonNo": 80050,
+      "speciesId": "FIX-PBDB-51"
+    },
+    {
+      "scientificName": "Diadectes sideropelicus",
+      "paleobiodbTaxonNo": 80051,
+      "speciesId": "FIX-PBDB-52"
+    },
+    {
+      "scientificName": "Seymouria baylorensis",
+      "paleobiodbTaxonNo": 80052,
+      "speciesId": "FIX-PBDB-53"
+    },
+    {
+      "scientificName": "Petrolacosaurus kansensis",
+      "paleobiodbTaxonNo": 80053,
+      "speciesId": "FIX-PBDB-54"
+    },
+    {
+      "scientificName": "Hylonomus lyelli",
+      "paleobiodbTaxonNo": 80054,
+      "speciesId": "FIX-PBDB-55"
+    },
+    {
+      "scientificName": "Mesosaurus tenuidens",
+      "paleobiodbTaxonNo": 80055,
+      "speciesId": "FIX-PBDB-56"
+    },
+    {
+      "scientificName": "Pareiasaurus serridens",
+      "paleobiodbTaxonNo": 80056,
+      "speciesId": "FIX-PBDB-57"
+    },
+    {
+      "scientificName": "Lystrosaurus murrayi",
+      "paleobiodbTaxonNo": 80057,
+      "speciesId": "FIX-PBDB-58"
+    },
+    {
+      "scientificName": "Cynognathus crateronotus",
+      "paleobiodbTaxonNo": 80058,
+      "speciesId": "FIX-PBDB-59"
+    },
+    {
+      "scientificName": "Thrinaxodon liorhinus",
+      "paleobiodbTaxonNo": 80059,
+      "speciesId": "FIX-PBDB-60"
+    },
+    {
+      "scientificName": "Morganucodon oehleri",
+      "paleobiodbTaxonNo": 80060,
+      "speciesId": "FIX-PBDB-61"
+    },
+    {
+      "scientificName": "Repenomamus robustus",
+      "paleobiodbTaxonNo": 80061,
+      "speciesId": "FIX-PBDB-62"
+    },
+    {
+      "scientificName": "Castorocauda lutrasimilis",
+      "paleobiodbTaxonNo": 80062,
+      "speciesId": "FIX-PBDB-63"
+    },
+    {
+      "scientificName": "Volaticotherium antiquum",
+      "paleobiodbTaxonNo": 80063,
+      "speciesId": "FIX-PBDB-64"
+    },
+    {
+      "scientificName": "Juramaia sinensis",
+      "paleobiodbTaxonNo": 80064,
+      "speciesId": "FIX-PBDB-65"
+    },
+    {
+      "scientificName": "Eomaia scansoria",
+      "paleobiodbTaxonNo": 80065,
+      "speciesId": "FIX-PBDB-66"
+    },
+    {
+      "scientificName": "Pakicetus",
+      "paleobiodbTaxonNo": 80066,
+      "speciesId": "FIX-PBDB-67"
+    },
+    {
+      "scientificName": "Ambulocetus",
+      "paleobiodbTaxonNo": 80067,
+      "speciesId": "FIX-PBDB-68"
+    },
+    {
+      "scientificName": "Rodhocetus kasrani",
+      "paleobiodbTaxonNo": 80068,
+      "speciesId": "FIX-PBDB-69"
+    },
+    {
+      "scientificName": "Dorudon atrox",
+      "paleobiodbTaxonNo": 80069,
+      "speciesId": "FIX-PBDB-70"
+    },
+    {
+      "scientificName": "Odontochelys semitestacea",
+      "paleobiodbTaxonNo": 80070,
+      "speciesId": "FIX-PBDB-71"
+    },
+    {
+      "scientificName": "Proganochelys quenstedti",
+      "paleobiodbTaxonNo": 80071,
+      "speciesId": "FIX-PBDB-72"
+    },
+    {
+      "scientificName": "Archelon ischyros",
+      "paleobiodbTaxonNo": 80072,
+      "speciesId": "FIX-PBDB-73"
+    },
+    {
+      "scientificName": "Plesiosaurus dolichodeirus",
+      "paleobiodbTaxonNo": 80073,
+      "speciesId": "FIX-PBDB-74"
+    },
+    {
+      "scientificName": "Elasmosaurus platyurus",
+      "paleobiodbTaxonNo": 80074,
+      "speciesId": "FIX-PBDB-75"
+    },
+    {
+      "scientificName": "Liopleurodon ferox",
+      "paleobiodbTaxonNo": 80075,
+      "speciesId": "FIX-PBDB-76"
+    },
+    {
+      "scientificName": "Kronosaurus queenslandicus",
+      "paleobiodbTaxonNo": 80076,
+      "speciesId": "FIX-PBDB-77"
+    },
+    {
+      "scientificName": "Ichthyosaurus communis",
+      "paleobiodbTaxonNo": 80077,
+      "speciesId": "FIX-PBDB-78"
+    },
+    {
+      "scientificName": "Ophthalmosaurus icenicus",
+      "paleobiodbTaxonNo": 80078,
+      "speciesId": "FIX-PBDB-79"
+    },
+    {
+      "scientificName": "Shonisaurus popularis",
+      "paleobiodbTaxonNo": 80079,
+      "speciesId": "FIX-PBDB-80"
+    },
+    {
+      "scientificName": "Quetzalcoatlus northropi",
+      "paleobiodbTaxonNo": 80080,
+      "speciesId": "FIX-PBDB-81"
+    },
+    {
+      "scientificName": "Pteranodon longiceps",
+      "paleobiodbTaxonNo": 80081,
+      "speciesId": "FIX-PBDB-82"
+    },
+    {
+      "scientificName": "Rhamphorhynchus muensteri",
+      "paleobiodbTaxonNo": 80082,
+      "speciesId": "FIX-PBDB-83"
+    },
+    {
+      "scientificName": "Dimorphodon macronyx",
+      "paleobiodbTaxonNo": 80083,
+      "speciesId": "FIX-PBDB-84"
+    },
+    {
+      "scientificName": "Anurognathus ammoni",
+      "paleobiodbTaxonNo": 80084,
+      "speciesId": "FIX-PBDB-85"
+    },
+    {
+      "scientificName": "Confuciusornis sanctus",
+      "paleobiodbTaxonNo": 80085,
+      "speciesId": "FIX-PBDB-86"
+    },
+    {
+      "scientificName": "Hesperornis regalis",
+      "paleobiodbTaxonNo": 80086,
+      "speciesId": "FIX-PBDB-87"
+    },
+    {
+      "scientificName": "Ichthyornis dispar",
+      "paleobiodbTaxonNo": 80087,
+      "speciesId": "FIX-PBDB-88"
+    },
+    {
+      "scientificName": "Gastornis giganteus",
+      "paleobiodbTaxonNo": 80088,
+      "speciesId": "FIX-PBDB-89"
+    },
+    {
+      "scientificName": "Phorusrhacos longissimus",
+      "paleobiodbTaxonNo": 80089,
+      "speciesId": "FIX-PBDB-90"
+    },
+    {
+      "scientificName": "Terror bird",
+      "paleobiodbTaxonNo": 80090,
+      "speciesId": "FIX-PBDB-91"
+    },
+    {
+      "scientificName": "Titanis walleri",
+      "paleobiodbTaxonNo": 80091,
+      "speciesId": "FIX-PBDB-92"
+    },
+    {
+      "scientificName": "Diatryma gigantea",
+      "paleobiodbTaxonNo": 80092,
+      "speciesId": "FIX-PBDB-93"
+    },
+    {
+      "scientificName": "Aepyornis maximus",
+      "paleobiodbTaxonNo": 80093,
+      "speciesId": "FIX-PBDB-94"
+    },
+    {
+      "scientificName": "Dinornis novaezealandiae",
+      "paleobiodbTaxonNo": 80094,
+      "speciesId": "FIX-PBDB-95"
+    },
+    {
+      "scientificName": "Dodo",
+      "paleobiodbTaxonNo": 80095,
+      "speciesId": "FIX-PBDB-96"
+    },
+    {
+      "scientificName": "Raphus cucullatus",
+      "paleobiodbTaxonNo": 80096,
+      "speciesId": "FIX-PBDB-97"
+    },
+    {
+      "scientificName": "Great auk",
+      "paleobiodbTaxonNo": 80097,
+      "speciesId": "FIX-PBDB-98"
+    },
+    {
+      "scientificName": "Pinguinus impennis",
+      "paleobiodbTaxonNo": 80098,
+      "speciesId": "FIX-PBDB-99"
+    },
+    {
+      "scientificName": "Passenger pigeon",
+      "paleobiodbTaxonNo": 80099,
+      "speciesId": "FIX-PBDB-100"
+    },
+    {
+      "scientificName": "Ectopistes migratorius",
+      "paleobiodbTaxonNo": 80100,
+      "speciesId": "FIX-PBDB-101"
+    },
+    {
+      "scientificName": "Thylacine",
+      "paleobiodbTaxonNo": 80101,
+      "speciesId": "FIX-PBDB-102"
+    },
+    {
+      "scientificName": "Thylacinus cynocephalus",
+      "paleobiodbTaxonNo": 80102,
+      "speciesId": "FIX-PBDB-103"
+    },
+    {
+      "scientificName": "Quagga",
+      "paleobiodbTaxonNo": 80103,
+      "speciesId": "FIX-PBDB-104"
+    },
+    {
+      "scientificName": "Equus quagga quagga",
+      "paleobiodbTaxonNo": 80104,
+      "speciesId": "FIX-PBDB-105"
+    }
+  ]
+}
