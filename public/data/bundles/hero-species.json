@@ -3473,8 +3473,8 @@
           "citationRequired": true,
           "retrievedAt": "2026-08-07T19:00:00.000Z",
           "lastUpdated": "2026-08-07T19:00:00.000Z",
-          "isMockData": false,
-          "verificationStatus": "needs_source_verification"
+          "isMockData": true,
+          "verificationStatus": "mock_sample"
         }
       ]
     }

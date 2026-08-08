@@ -1,10 +1,24 @@
 {
   "packId": "archive-of-life-digital-rc",
-  "version": "2.1.0-cont-vi",
-  "title": "Archive of Life — Artifact World",
-  "uniqueTitle": "Archive of Life — Artifact World",
-  "iconPath": "public/icons/archive-of-life-icon.svg",
-  "generatedAt": "2026-08-08T21:08:04.559Z",
-  "scienceDb": "public/data/science/archive_science.sqlite",
-  "globalCompleteClaim": false
+  "version": "2.0.0",
+  "snapshotId": "sample-2026-07",
+  "generatedAt": "2026-08-08T21:11:07.119Z",
+  "liveClaim": false,
+  "globalCompleteClaim": false,
+  "artifacts": [
+    "rc/package_manifest.json",
+    "rc/provenance_bundle.json",
+    "claims/claim_ledger.json",
+    "claims/launch_tier_audit.json",
+    "claims/bulk_snapshot_manifest.json",
+    "status/production_probe_report.json",
+    "qa/world_traversal/report.json",
+    "coverage/actual_counts.json",
+    "coverage/actual_counts_live_bounded.json"
+  ],
+  "statusTokens": {
+    "beta": "ARCHIVE_BETA_CONTENT_COMPLETE_DIGITAL",
+    "rc": "ARCHIVE_DIGITAL_RC_READY",
+    "pipeline": "PIPELINE_COMPLETE"
+  }
 }
