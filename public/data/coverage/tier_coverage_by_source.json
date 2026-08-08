@@ -1,0 +1,88 @@
+{
+  "snapshotId": "wave-f-alpha-2026-08",
+  "generatedAt": "2026-08-08T00:53:07.823Z",
+  "floors": {
+    "regions": {
+      "required": 12,
+      "actual": 12,
+      "met": true
+    },
+    "encounterTaxa": {
+      "required": 120,
+      "actual": 167,
+      "met": true
+    },
+    "flagship": {
+      "required": 24,
+      "actual": 24,
+      "met": true
+    },
+    "polarRegion": {
+      "required": true,
+      "present": true,
+      "met": true
+    }
+  },
+  "totals": {
+    "records": 5,
+    "encounters": 167,
+    "flagship": 24,
+    "taxa": 196
+  },
+  "bySource": [
+    {
+      "source": "catalogue_of_life",
+      "records": 1,
+      "encounters": 44,
+      "flagship": 24,
+      "mode": "mixed",
+      "liveClaim": false,
+      "notes": "Index references must not be reported as live ingest"
+    },
+    {
+      "source": "game_authored",
+      "records": 1,
+      "encounters": 156,
+      "flagship": 24,
+      "mode": "authored",
+      "liveClaim": false,
+      "notes": "Authored public taxonomy — not a live ingest claim"
+    },
+    {
+      "source": "gbif",
+      "records": 0,
+      "encounters": 112,
+      "flagship": 0,
+      "mode": "mixed",
+      "liveClaim": false,
+      "notes": "Index references must not be reported as live ingest"
+    },
+    {
+      "source": "neotoma",
+      "records": 0,
+      "encounters": 1,
+      "flagship": 0,
+      "mode": "unknown",
+      "liveClaim": false
+    },
+    {
+      "source": "paleobiodb",
+      "records": 3,
+      "encounters": 11,
+      "flagship": 0,
+      "mode": "mixed",
+      "liveClaim": false,
+      "notes": "Index references must not be reported as live ingest"
+    }
+  ],
+  "honesty": {
+    "fixturesNeverClaimedLive": true,
+    "authoredPublicTaxonomyLiveClaim": false,
+    "ingestionService": "src/services/ingestion/ScientificIngestionService.ts"
+  },
+  "programTierLegend": {
+    "R_Record": "representationTier 0–1",
+    "E_Encounter": "representationTier 2–4 (plus playable encounter catalog)",
+    "F_Flagship": "representationTier 5–6 / hero"
+  }
+}

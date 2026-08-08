@@ -1,11 +1,13 @@
 import type { SaveState } from '@/schema';
 import { ensureCompanionProgressFields } from '@/systems/companionProgression';
+import { ensureCompanionModules } from '@/systems/companionModules';
+import { createEmptyExpeditionSlice, ensureExpeditionSlice } from '@/systems/expeditionSystem';
 import { speciesCache } from '@/services/IndexedDBCache';
 import { track } from '@/systems/telemetry';
 
 const SAVE_KEY = 'archive_of_life_save';
 const SAVE_BACKUP_KEY = 'save_state';
-export const SAVE_VERSION = 3;
+export const SAVE_VERSION = 4;
 
 export function createDefaultSave(): SaveState {
   return {
@@ -42,6 +44,12 @@ export function createDefaultSave(): SaveState {
       level: 1,
       xp: 0,
       observationCount: 0,
+      modules: {
+        unlockedModules: [],
+        pathHistory: [],
+        affinities: {},
+        pathHash: 'empty',
+      },
     },
     stats: {
       artifactsCollected: 0,
@@ -58,22 +66,30 @@ export function createDefaultSave(): SaveState {
       analyzedPeriods: [],
       activeTimeUnitId: null,
     },
+    expeditions: createEmptyExpeditionSlice(),
     timestamp: Date.now(),
   };
 }
 
 function migrateSave(raw: Partial<SaveState>): SaveState {
   const defaults = createDefaultSave();
+  const companion = ensureCompanionProgressFields({
+    ...defaults.companion,
+    ...(raw.companion ?? {}),
+    modules: {
+      ...defaults.companion.modules!,
+      ...(raw.companion?.modules ?? {}),
+    },
+  });
+  ensureCompanionModules(companion);
+
   const merged: SaveState = {
     ...defaults,
     ...raw,
     version: SAVE_VERSION,
     player: { ...defaults.player, ...(raw.player ?? {}) },
     quests: { ...defaults.quests, ...(raw.quests ?? {}) },
-    companion: ensureCompanionProgressFields({
-      ...defaults.companion,
-      ...(raw.companion ?? {}),
-    }),
+    companion,
     stats: { ...defaults.stats, ...(raw.stats ?? {}) },
     earthLayers: raw.earthLayers ?? defaults.earthLayers,
     timeAtlas: {
@@ -81,10 +97,12 @@ function migrateSave(raw: Partial<SaveState>): SaveState {
       ...(raw.timeAtlas ?? {}),
       activeTimeUnitId: raw.timeAtlas?.activeTimeUnitId ?? null,
     },
+    expeditions: raw.expeditions ?? defaults.expeditions,
     artifacts: Array.isArray(raw.artifacts) ? raw.artifacts : [],
     notebook: Array.isArray(raw.notebook) ? raw.notebook : [],
     timestamp: typeof raw.timestamp === 'number' ? raw.timestamp : Date.now(),
   };
+  ensureExpeditionSlice(merged);
   return merged;
 }
 
@@ -158,6 +176,8 @@ export function saveGame(state: SaveState): void {
 
 export function serializeSave(state: SaveState): SaveState {
   ensureCompanionProgressFields(state.companion);
+  ensureCompanionModules(state.companion);
+  ensureExpeditionSlice(state);
   return {
     version: SAVE_VERSION,
     player: state.player,
@@ -173,6 +193,7 @@ export function serializeSave(state: SaveState): SaveState {
       analyzedPeriods: state.timeAtlas?.analyzedPeriods ?? [],
       activeTimeUnitId: state.timeAtlas?.activeTimeUnitId ?? null,
     },
+    expeditions: state.expeditions ?? createEmptyExpeditionSlice(),
     timestamp: Date.now(),
   };
 }
