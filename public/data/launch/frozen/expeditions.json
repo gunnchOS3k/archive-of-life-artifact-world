@@ -1,0 +1,100 @@
+{
+  "snapshotId": "wave-f-alpha-2026-08",
+  "expeditions": [
+    {
+      "id": "exp_indiana_carboniferous",
+      "name": "Indiana Carboniferous Swamp",
+      "regionId": "indiana_ancient_swamp",
+      "biome": "ancient_swamp",
+      "description": "Document Carboniferous swamp flora and arthropods with labeled reconstruction layers.",
+      "objectives": [
+        {
+          "id": "obj_visit_swamp",
+          "type": "visit_region",
+          "target": "indiana_ancient_swamp",
+          "label": "Enter the ancient swamp"
+        },
+        {
+          "id": "obj_collect_mega",
+          "type": "collect_artifact",
+          "target": "meganeura_monyi",
+          "label": "Document Meganeura evidence"
+        },
+        {
+          "id": "obj_clue_fern",
+          "type": "discover_clue",
+          "target": "clue_scale_tree",
+          "label": "Find the scale-tree bark clue"
+        }
+      ],
+      "clueIds": [
+        "clue_scale_tree",
+        "clue_giant_arthropod"
+      ],
+      "journalPrompt": "Compare living dragonflies with Carboniferous meganeurids \u2014 note reconstruction labels."
+    },
+    {
+      "id": "exp_polar_ice_edge",
+      "name": "Polar Ice-Edge Survey",
+      "regionId": "polar_ice",
+      "biome": "polar_ice",
+      "description": "Survey cryosphere taxa at the ice edge; prioritize ethical distance observation.",
+      "objectives": [
+        {
+          "id": "obj_visit_polar",
+          "type": "visit_region",
+          "target": "polar_ice",
+          "label": "Reach polar ice systems"
+        },
+        {
+          "id": "obj_observe_polar_bear",
+          "type": "collect_artifact",
+          "target": "ursus_maritimus",
+          "label": "Document polar bear observation"
+        },
+        {
+          "id": "obj_clue_ice",
+          "type": "discover_clue",
+          "target": "clue_ice_edge_foodweb",
+          "label": "Map ice-edge food web clue"
+        }
+      ],
+      "clueIds": [
+        "clue_ice_edge_foodweb",
+        "clue_penguin_rookery"
+      ],
+      "journalPrompt": "Record sea-ice dependence for seals and polar bears without inventing taxa."
+    },
+    {
+      "id": "exp_urban_synanthrope",
+      "name": "Urban Synanthrope Circuit",
+      "regionId": "urban_park",
+      "biome": "urban_human_modified",
+      "description": "Document species that thrive alongside humans.",
+      "objectives": [
+        {
+          "id": "obj_visit_urban",
+          "type": "visit_region",
+          "target": "urban_park",
+          "label": "Enter urban park"
+        },
+        {
+          "id": "obj_sparrow",
+          "type": "collect_artifact",
+          "target": "passer_domesticus",
+          "label": "Document house sparrow"
+        },
+        {
+          "id": "obj_clue_nest",
+          "type": "discover_clue",
+          "target": "clue_nest_ledge",
+          "label": "Find ledge nesting clue"
+        }
+      ],
+      "clueIds": [
+        "clue_nest_ledge"
+      ],
+      "journalPrompt": "Note synanthropic traits and human-structure nesting."
+    }
+  ]
+}

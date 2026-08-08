@@ -1,0 +1,557 @@
+{
+  "regionId": "atmospheric_corridor",
+  "speciesIds": [
+    "hirundo_rustica",
+    "falco_peregrinus",
+    "anthus_trivialis",
+    "aedes_aegypti",
+    "danaus_plexippus_mig",
+    "tachycineta_bicolor",
+    "archilochus_colubris",
+    "buteo_jamaicensis"
+  ],
+  "species": [
+    {
+      "id": "hirundo_rustica",
+      "commonName": "Barn Swallow",
+      "scientificName": "Hirundo rustica",
+      "group": "Bird",
+      "tier": "regional",
+      "representationTier": 3,
+      "lifeStatus": "extant",
+      "timeUnitIds": [
+        "holocene"
+      ],
+      "taxonomy": {
+        "family": "Hirundinidae",
+        "rank": "species",
+        "acceptedName": "Hirundo rustica"
+      },
+      "artifactTemplates": [
+        {
+          "id": "hirundo_rustica_field_note",
+          "artifactType": "behavioral_field_note",
+          "label": "field note",
+          "ethical": true,
+          "description": "Ethical field documentation of Barn Swallow"
+        }
+      ],
+      "gameplay": {
+        "region": "atmospheric_corridor",
+        "questType": "observation",
+        "dangerLevel": 2,
+        "ethicalInteraction": "observe_from_distance",
+        "timeRange": "Present",
+        "diet": "Unknown",
+        "activity": "Diurnal",
+        "size": "varies",
+        "behavior": "Wave F encounter taxon",
+        "learningTopics": [
+          "bird",
+          "atmospheric_corridor"
+        ],
+        "funFacts": [],
+        "whyItMatters": "Hirundo rustica is a real taxon used for Alpha encounter coverage."
+      },
+      "provenance": [
+        {
+          "source": "game_authored",
+          "sourceVersion": "wave-f-alpha-2026-08",
+          "sourceRecordId": "hirundo_rustica",
+          "gbifTaxonKey": 5231203,
+          "license": "GAME-ORIGINAL",
+          "citation": "Archive of Life Wave F authored encounter entry for Hirundo rustica (real taxon; not a live COL/GBIF ingest claim)",
+          "citationRequired": false,
+          "retrievedAt": "2026-08-07T19:00:00.000Z",
+          "lastUpdated": "2026-08-07T19:00:00.000Z",
+          "isMockData": false,
+          "verificationStatus": "game_authored_verified"
+        },
+        {
+          "source": "gbif",
+          "sourceVersion": "public-key-reference",
+          "sourceRecordId": "5231203",
+          "gbifTaxonKey": 5231203,
+          "license": "CC-BY-4.0",
+          "citation": "GBIF taxon key 5231203 referenced for Hirundo rustica; live occurrence fetch via ScientificIngestionService",
+          "citationRequired": true,
+          "retrievedAt": "2026-08-07T19:00:00.000Z",
+          "lastUpdated": "2026-08-07T19:00:00.000Z",
+          "isMockData": false,
+          "verificationStatus": "needs_source_verification"
+        }
+      ]
+    },
+    {
+      "id": "falco_peregrinus",
+      "commonName": "Peregrine Falcon",
+      "scientificName": "Falco peregrinus",
+      "group": "Bird",
+      "tier": "regional",
+      "representationTier": 4,
+      "lifeStatus": "extant",
+      "timeUnitIds": [
+        "holocene"
+      ],
+      "taxonomy": {
+        "family": "Falconidae",
+        "rank": "species",
+        "acceptedName": "Falco peregrinus"
+      },
+      "artifactTemplates": [
+        {
+          "id": "falco_peregrinus_field_note",
+          "artifactType": "behavioral_field_note",
+          "label": "field note",
+          "ethical": true,
+          "description": "Ethical field documentation of Peregrine Falcon"
+        }
+      ],
+      "gameplay": {
+        "region": "atmospheric_corridor",
+        "questType": "observation",
+        "dangerLevel": 2,
+        "ethicalInteraction": "observe_from_distance",
+        "timeRange": "Present",
+        "diet": "Unknown",
+        "activity": "Diurnal",
+        "size": "varies",
+        "behavior": "Wave F encounter taxon",
+        "learningTopics": [
+          "bird",
+          "atmospheric_corridor"
+        ],
+        "funFacts": [],
+        "whyItMatters": "Falco peregrinus is a real taxon used for Alpha encounter coverage."
+      },
+      "provenance": [
+        {
+          "source": "game_authored",
+          "sourceVersion": "wave-f-alpha-2026-08",
+          "sourceRecordId": "falco_peregrinus",
+          "gbifTaxonKey": 2483378,
+          "license": "GAME-ORIGINAL",
+          "citation": "Archive of Life Wave F authored encounter entry for Falco peregrinus (real taxon; not a live COL/GBIF ingest claim)",
+          "citationRequired": false,
+          "retrievedAt": "2026-08-07T19:00:00.000Z",
+          "lastUpdated": "2026-08-07T19:00:00.000Z",
+          "isMockData": false,
+          "verificationStatus": "game_authored_verified"
+        },
+        {
+          "source": "gbif",
+          "sourceVersion": "public-key-reference",
+          "sourceRecordId": "2483378",
+          "gbifTaxonKey": 2483378,
+          "license": "CC-BY-4.0",
+          "citation": "GBIF taxon key 2483378 referenced for Falco peregrinus; live occurrence fetch via ScientificIngestionService",
+          "citationRequired": true,
+          "retrievedAt": "2026-08-07T19:00:00.000Z",
+          "lastUpdated": "2026-08-07T19:00:00.000Z",
+          "isMockData": false,
+          "verificationStatus": "needs_source_verification"
+        }
+      ]
+    },
+    {
+      "id": "anthus_trivialis",
+      "commonName": "Tree Pipit",
+      "scientificName": "Anthus trivialis",
+      "group": "Bird",
+      "tier": "regional",
+      "representationTier": 2,
+      "lifeStatus": "extant",
+      "timeUnitIds": [
+        "holocene"
+      ],
+      "taxonomy": {
+        "family": "Motacillidae",
+        "rank": "species",
+        "acceptedName": "Anthus trivialis"
+      },
+      "artifactTemplates": [
+        {
+          "id": "anthus_trivialis_field_note",
+          "artifactType": "behavioral_field_note",
+          "label": "field note",
+          "ethical": true,
+          "description": "Ethical field documentation of Tree Pipit"
+        }
+      ],
+      "gameplay": {
+        "region": "atmospheric_corridor",
+        "questType": "observation",
+        "dangerLevel": 2,
+        "ethicalInteraction": "observe_from_distance",
+        "timeRange": "Present",
+        "diet": "Unknown",
+        "activity": "Diurnal",
+        "size": "varies",
+        "behavior": "Wave F encounter taxon",
+        "learningTopics": [
+          "bird",
+          "atmospheric_corridor"
+        ],
+        "funFacts": [],
+        "whyItMatters": "Anthus trivialis is a real taxon used for Alpha encounter coverage."
+      },
+      "provenance": [
+        {
+          "source": "game_authored",
+          "sourceVersion": "wave-f-alpha-2026-08",
+          "sourceRecordId": "anthus_trivialis",
+          "gbifTaxonKey": null,
+          "license": "GAME-ORIGINAL",
+          "citation": "Archive of Life Wave F authored encounter entry for Anthus trivialis (real taxon; not a live COL/GBIF ingest claim)",
+          "citationRequired": false,
+          "retrievedAt": "2026-08-07T19:00:00.000Z",
+          "lastUpdated": "2026-08-07T19:00:00.000Z",
+          "isMockData": false,
+          "verificationStatus": "game_authored_verified"
+        }
+      ]
+    },
+    {
+      "id": "aedes_aegypti",
+      "commonName": "Yellow Fever Mosquito",
+      "scientificName": "Aedes aegypti",
+      "group": "Insect",
+      "tier": "regional",
+      "representationTier": 3,
+      "lifeStatus": "extant",
+      "timeUnitIds": [
+        "holocene"
+      ],
+      "taxonomy": {
+        "family": "Culicidae",
+        "rank": "species",
+        "acceptedName": "Aedes aegypti"
+      },
+      "artifactTemplates": [
+        {
+          "id": "aedes_aegypti_field_note",
+          "artifactType": "behavioral_field_note",
+          "label": "field note",
+          "ethical": true,
+          "description": "Ethical field documentation of Yellow Fever Mosquito"
+        }
+      ],
+      "gameplay": {
+        "region": "atmospheric_corridor",
+        "questType": "observation",
+        "dangerLevel": 2,
+        "ethicalInteraction": "observe_from_distance",
+        "timeRange": "Present",
+        "diet": "Unknown",
+        "activity": "Diurnal",
+        "size": "varies",
+        "behavior": "Wave F encounter taxon",
+        "learningTopics": [
+          "insect",
+          "atmospheric_corridor"
+        ],
+        "funFacts": [],
+        "whyItMatters": "Aedes aegypti is a real taxon used for Alpha encounter coverage."
+      },
+      "provenance": [
+        {
+          "source": "game_authored",
+          "sourceVersion": "wave-f-alpha-2026-08",
+          "sourceRecordId": "aedes_aegypti",
+          "gbifTaxonKey": 1651430,
+          "license": "GAME-ORIGINAL",
+          "citation": "Archive of Life Wave F authored encounter entry for Aedes aegypti (real taxon; not a live COL/GBIF ingest claim)",
+          "citationRequired": false,
+          "retrievedAt": "2026-08-07T19:00:00.000Z",
+          "lastUpdated": "2026-08-07T19:00:00.000Z",
+          "isMockData": false,
+          "verificationStatus": "game_authored_verified"
+        },
+        {
+          "source": "gbif",
+          "sourceVersion": "public-key-reference",
+          "sourceRecordId": "1651430",
+          "gbifTaxonKey": 1651430,
+          "license": "CC-BY-4.0",
+          "citation": "GBIF taxon key 1651430 referenced for Aedes aegypti; live occurrence fetch via ScientificIngestionService",
+          "citationRequired": true,
+          "retrievedAt": "2026-08-07T19:00:00.000Z",
+          "lastUpdated": "2026-08-07T19:00:00.000Z",
+          "isMockData": false,
+          "verificationStatus": "needs_source_verification"
+        }
+      ]
+    },
+    {
+      "id": "danaus_plexippus_mig",
+      "commonName": "Monarch Butterfly",
+      "scientificName": "Danaus plexippus",
+      "group": "Insect",
+      "tier": "regional",
+      "representationTier": 4,
+      "lifeStatus": "extant",
+      "timeUnitIds": [
+        "holocene"
+      ],
+      "taxonomy": {
+        "family": "Nymphalidae",
+        "rank": "species",
+        "acceptedName": "Danaus plexippus"
+      },
+      "artifactTemplates": [
+        {
+          "id": "danaus_plexippus_mig_field_note",
+          "artifactType": "behavioral_field_note",
+          "label": "field note",
+          "ethical": true,
+          "description": "Ethical field documentation of Monarch Butterfly"
+        }
+      ],
+      "gameplay": {
+        "region": "atmospheric_corridor",
+        "questType": "observation",
+        "dangerLevel": 2,
+        "ethicalInteraction": "observe_from_distance",
+        "timeRange": "Present",
+        "diet": "Unknown",
+        "activity": "Diurnal",
+        "size": "varies",
+        "behavior": "Wave F encounter taxon",
+        "learningTopics": [
+          "insect",
+          "atmospheric_corridor"
+        ],
+        "funFacts": [],
+        "whyItMatters": "Danaus plexippus is a real taxon used for Alpha encounter coverage."
+      },
+      "provenance": [
+        {
+          "source": "game_authored",
+          "sourceVersion": "wave-f-alpha-2026-08",
+          "sourceRecordId": "danaus_plexippus_mig",
+          "gbifTaxonKey": 5133058,
+          "license": "GAME-ORIGINAL",
+          "citation": "Archive of Life Wave F authored encounter entry for Danaus plexippus (real taxon; not a live COL/GBIF ingest claim)",
+          "citationRequired": false,
+          "retrievedAt": "2026-08-07T19:00:00.000Z",
+          "lastUpdated": "2026-08-07T19:00:00.000Z",
+          "isMockData": false,
+          "verificationStatus": "game_authored_verified"
+        },
+        {
+          "source": "gbif",
+          "sourceVersion": "public-key-reference",
+          "sourceRecordId": "5133058",
+          "gbifTaxonKey": 5133058,
+          "license": "CC-BY-4.0",
+          "citation": "GBIF taxon key 5133058 referenced for Danaus plexippus; live occurrence fetch via ScientificIngestionService",
+          "citationRequired": true,
+          "retrievedAt": "2026-08-07T19:00:00.000Z",
+          "lastUpdated": "2026-08-07T19:00:00.000Z",
+          "isMockData": false,
+          "verificationStatus": "needs_source_verification"
+        }
+      ]
+    },
+    {
+      "id": "tachycineta_bicolor",
+      "commonName": "Tree Swallow",
+      "scientificName": "Tachycineta bicolor",
+      "group": "Bird",
+      "tier": "regional",
+      "representationTier": 3,
+      "lifeStatus": "extant",
+      "timeUnitIds": [
+        "holocene"
+      ],
+      "taxonomy": {
+        "family": "Hirundinidae",
+        "rank": "species",
+        "acceptedName": "Tachycineta bicolor"
+      },
+      "artifactTemplates": [
+        {
+          "id": "tachycineta_bicolor_field_note",
+          "artifactType": "behavioral_field_note",
+          "label": "field note",
+          "ethical": true,
+          "description": "Ethical field documentation of Tree Swallow"
+        }
+      ],
+      "gameplay": {
+        "region": "atmospheric_corridor",
+        "questType": "observation",
+        "dangerLevel": 2,
+        "ethicalInteraction": "observe_from_distance",
+        "timeRange": "Present",
+        "diet": "Unknown",
+        "activity": "Diurnal",
+        "size": "varies",
+        "behavior": "Wave F encounter taxon",
+        "learningTopics": [
+          "bird",
+          "atmospheric_corridor"
+        ],
+        "funFacts": [],
+        "whyItMatters": "Tachycineta bicolor is a real taxon used for Alpha encounter coverage."
+      },
+      "provenance": [
+        {
+          "source": "game_authored",
+          "sourceVersion": "wave-f-alpha-2026-08",
+          "sourceRecordId": "tachycineta_bicolor",
+          "gbifTaxonKey": null,
+          "license": "GAME-ORIGINAL",
+          "citation": "Archive of Life Wave F authored encounter entry for Tachycineta bicolor (real taxon; not a live COL/GBIF ingest claim)",
+          "citationRequired": false,
+          "retrievedAt": "2026-08-07T19:00:00.000Z",
+          "lastUpdated": "2026-08-07T19:00:00.000Z",
+          "isMockData": false,
+          "verificationStatus": "game_authored_verified"
+        }
+      ]
+    },
+    {
+      "id": "archilochus_colubris",
+      "commonName": "Ruby-throated Hummingbird",
+      "scientificName": "Archilochus colubris",
+      "group": "Bird",
+      "tier": "regional",
+      "representationTier": 3,
+      "lifeStatus": "extant",
+      "timeUnitIds": [
+        "holocene"
+      ],
+      "taxonomy": {
+        "family": "Trochilidae",
+        "rank": "species",
+        "acceptedName": "Archilochus colubris"
+      },
+      "artifactTemplates": [
+        {
+          "id": "archilochus_colubris_field_note",
+          "artifactType": "behavioral_field_note",
+          "label": "field note",
+          "ethical": true,
+          "description": "Ethical field documentation of Ruby-throated Hummingbird"
+        }
+      ],
+      "gameplay": {
+        "region": "atmospheric_corridor",
+        "questType": "observation",
+        "dangerLevel": 2,
+        "ethicalInteraction": "observe_from_distance",
+        "timeRange": "Present",
+        "diet": "Unknown",
+        "activity": "Diurnal",
+        "size": "varies",
+        "behavior": "Wave F encounter taxon",
+        "learningTopics": [
+          "bird",
+          "atmospheric_corridor"
+        ],
+        "funFacts": [],
+        "whyItMatters": "Archilochus colubris is a real taxon used for Alpha encounter coverage."
+      },
+      "provenance": [
+        {
+          "source": "game_authored",
+          "sourceVersion": "wave-f-alpha-2026-08",
+          "sourceRecordId": "archilochus_colubris",
+          "gbifTaxonKey": 2476410,
+          "license": "GAME-ORIGINAL",
+          "citation": "Archive of Life Wave F authored encounter entry for Archilochus colubris (real taxon; not a live COL/GBIF ingest claim)",
+          "citationRequired": false,
+          "retrievedAt": "2026-08-07T19:00:00.000Z",
+          "lastUpdated": "2026-08-07T19:00:00.000Z",
+          "isMockData": false,
+          "verificationStatus": "game_authored_verified"
+        },
+        {
+          "source": "gbif",
+          "sourceVersion": "public-key-reference",
+          "sourceRecordId": "2476410",
+          "gbifTaxonKey": 2476410,
+          "license": "CC-BY-4.0",
+          "citation": "GBIF taxon key 2476410 referenced for Archilochus colubris; live occurrence fetch via ScientificIngestionService",
+          "citationRequired": true,
+          "retrievedAt": "2026-08-07T19:00:00.000Z",
+          "lastUpdated": "2026-08-07T19:00:00.000Z",
+          "isMockData": false,
+          "verificationStatus": "needs_source_verification"
+        }
+      ]
+    },
+    {
+      "id": "buteo_jamaicensis",
+      "commonName": "Red-tailed Hawk",
+      "scientificName": "Buteo jamaicensis",
+      "group": "Bird",
+      "tier": "regional",
+      "representationTier": 3,
+      "lifeStatus": "extant",
+      "timeUnitIds": [
+        "holocene"
+      ],
+      "taxonomy": {
+        "family": "Accipitridae",
+        "rank": "species",
+        "acceptedName": "Buteo jamaicensis"
+      },
+      "artifactTemplates": [
+        {
+          "id": "buteo_jamaicensis_field_note",
+          "artifactType": "behavioral_field_note",
+          "label": "field note",
+          "ethical": true,
+          "description": "Ethical field documentation of Red-tailed Hawk"
+        }
+      ],
+      "gameplay": {
+        "region": "atmospheric_corridor",
+        "questType": "observation",
+        "dangerLevel": 2,
+        "ethicalInteraction": "observe_from_distance",
+        "timeRange": "Present",
+        "diet": "Unknown",
+        "activity": "Diurnal",
+        "size": "varies",
+        "behavior": "Wave F encounter taxon",
+        "learningTopics": [
+          "bird",
+          "atmospheric_corridor"
+        ],
+        "funFacts": [],
+        "whyItMatters": "Buteo jamaicensis is a real taxon used for Alpha encounter coverage."
+      },
+      "provenance": [
+        {
+          "source": "game_authored",
+          "sourceVersion": "wave-f-alpha-2026-08",
+          "sourceRecordId": "buteo_jamaicensis",
+          "gbifTaxonKey": 2480540,
+          "license": "GAME-ORIGINAL",
+          "citation": "Archive of Life Wave F authored encounter entry for Buteo jamaicensis (real taxon; not a live COL/GBIF ingest claim)",
+          "citationRequired": false,
+          "retrievedAt": "2026-08-07T19:00:00.000Z",
+          "lastUpdated": "2026-08-07T19:00:00.000Z",
+          "isMockData": false,
+          "verificationStatus": "game_authored_verified"
+        },
+        {
+          "source": "gbif",
+          "sourceVersion": "public-key-reference",
+          "sourceRecordId": "2480540",
+          "gbifTaxonKey": 2480540,
+          "license": "CC-BY-4.0",
+          "citation": "GBIF taxon key 2480540 referenced for Buteo jamaicensis; live occurrence fetch via ScientificIngestionService",
+          "citationRequired": true,
+          "retrievedAt": "2026-08-07T19:00:00.000Z",
+          "lastUpdated": "2026-08-07T19:00:00.000Z",
+          "isMockData": false,
+          "verificationStatus": "needs_source_verification"
+        }
+      ]
+    }
+  ]
+}

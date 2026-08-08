@@ -40,6 +40,9 @@ jobs:
       - name: Generate data bundles
         run: npm run generate:bundles
 
+      - name: Restore frozen launch floors (E/F/regions)
+        run: npm run restore:launch-floors
+
       - name: Typecheck
         run: npm run typecheck
 

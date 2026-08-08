@@ -32,6 +32,7 @@
     "ingest:batch:live": "tsx scripts/batch-ingest-snapshot.ts --live --limit=25",
     "ingest:batch:resume": "tsx scripts/batch-ingest-snapshot.ts --resume",
     "generate:bundles": "tsx scripts/generate-bundles.ts",
+    "restore:launch-floors": "tsx scripts/restore-launch-floors.ts",
     "generate:time-atlas": "tsx scripts/generate-time-atlas.ts",
     "generate:earth-grid": "tsx scripts/generate-earth-grid.ts",
     "generate:temporal-maps": "tsx scripts/generate-temporal-map-catalog.ts",

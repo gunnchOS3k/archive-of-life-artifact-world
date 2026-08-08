@@ -1,0 +1,3482 @@
+{
+  "species": [
+    {
+      "id": "panthera_leo",
+      "commonName": "Lion",
+      "scientificName": "Panthera leo",
+      "group": "Mammal",
+      "tier": "hero",
+      "representationTier": 6,
+      "lifeStatus": "extant",
+      "timeUnitIds": [
+        "pleistocene",
+        "holocene"
+      ],
+      "taxonomy": {
+        "family": "Felidae",
+        "rank": "species",
+        "acceptedName": "Panthera leo",
+        "catalogueOfLifeId": "MOCK-COL-panthera_leo"
+      },
+      "conservation": {
+        "iucnCategory": "Vulnerable",
+        "assessed": true,
+        "sourceVersion": "mock-iucn-2026-07",
+        "lastUpdated": "2026-07-02",
+        "iucnTaxonId": 97119
+      },
+      "distribution": {
+        "continents": [
+          "Africa"
+        ],
+        "habitats": [
+          "savanna",
+          "grassland"
+        ],
+        "sourceVersion": "mock-gbif-2026-07",
+        "lastUpdated": "2026-07-02",
+        "gbifTaxonKey": 8114792,
+        "occurrenceSummaries": [
+          {
+            "region": "Africa",
+            "occurrenceCount": 1734
+          }
+        ]
+      },
+      "artifactTemplates": [
+        {
+          "id": "panthera_leo_track_cast",
+          "artifactType": "track_cast",
+          "label": "track cast",
+          "ethical": true,
+          "description": "Ethical track cast collection"
+        },
+        {
+          "id": "panthera_leo_audio_roar_recording",
+          "artifactType": "audio_roar_recording",
+          "label": "audio roar recording",
+          "ethical": true,
+          "description": "Ethical audio roar recording collection"
+        },
+        {
+          "id": "panthera_leo_behavioral_field_note",
+          "artifactType": "behavioral_field_note",
+          "label": "behavioral field note",
+          "ethical": true,
+          "description": "Ethical behavioral field note collection"
+        }
+      ],
+      "gameplay": {
+        "region": "savanna",
+        "questType": "tracking_observation",
+        "dangerLevel": 5,
+        "ethicalInteraction": "observe_from_distance",
+        "timeRange": "Present",
+        "diet": "Carnivore",
+        "activity": "Crepuscular",
+        "size": "1.2\u20131.8 m body length",
+        "behavior": "Social pride hunter; cooperative group living",
+        "learningTopics": [
+          "social behavior",
+          "apex predators",
+          "food webs",
+          "conservation"
+        ],
+        "funFacts": [
+          "Only cats with visible sexual dimorphism in mane",
+          "Prides are mostly related females"
+        ],
+        "whyItMatters": "Apex predators regulate herbivore populations and indicate healthy savanna ecosystems."
+      },
+      "nasaLayerDependencies": [
+        {
+          "layer": "fire",
+          "product": "firms",
+          "reason": "Fire regime influences grazer distribution and predator hunting"
+        },
+        {
+          "layer": "heat_drought",
+          "product": "ecostress",
+          "reason": "Dry-season stress affects crepuscular activity patterns"
+        },
+        {
+          "layer": "climate",
+          "product": "power",
+          "reason": "Field expedition planning uses local climate baselines"
+        }
+      ],
+      "provenance": [
+        {
+          "source": "game_authored",
+          "sourceVersion": "mvp-current",
+          "sourceRecordId": "panthera_leo",
+          "license": "GAME-ORIGINAL",
+          "citation": "Archive of Life: Artifact World authored prototype content",
+          "citationRequired": false,
+          "retrievedAt": "2026-07-05T03:27:29.538Z",
+          "lastUpdated": "2026-07-05T03:27:29.538Z",
+          "isMockData": false,
+          "verificationStatus": "game_authored_verified"
+        },
+        {
+          "source": "catalogue_of_life",
+          "sourceVersion": "mock-sample-2026-07",
+          "sourceRecordId": "MOCK-panthera_leo",
+          "catalogueOfLifeId": "MOCK-COL-panthera_leo",
+          "license": "MOCK-SAMPLE",
+          "citation": "MOCK SAMPLE \u2014 not sourced from live API; requires approved source snapshot import",
+          "citationRequired": true,
+          "retrievedAt": "2026-07-05T03:27:29.538Z",
+          "lastUpdated": "2026-07-05T03:27:29.538Z",
+          "isMockData": true,
+          "verificationStatus": "mock_sample"
+        }
+      ]
+    },
+    {
+      "id": "loxodonta_africana",
+      "commonName": "African Elephant",
+      "scientificName": "Loxodonta africana",
+      "group": "Mammal",
+      "tier": "hero",
+      "representationTier": 6,
+      "lifeStatus": "extant",
+      "timeUnitIds": [
+        "pliocene",
+        "pleistocene",
+        "holocene"
+      ],
+      "taxonomy": {
+        "family": "Elephantidae",
+        "rank": "species",
+        "acceptedName": "Loxodonta africana",
+        "catalogueOfLifeId": "MOCK-COL-loxodonta_africana"
+      },
+      "conservation": {
+        "iucnCategory": "Endangered",
+        "assessed": true,
+        "sourceVersion": "mock-iucn-2026-07",
+        "lastUpdated": "2026-07-02",
+        "iucnTaxonId": 79571
+      },
+      "distribution": {
+        "continents": [
+          "Africa"
+        ],
+        "habitats": [
+          "savanna",
+          "forest"
+        ],
+        "sourceVersion": "mock-gbif-2026-07",
+        "lastUpdated": "2026-07-02",
+        "gbifTaxonKey": 4922002,
+        "occurrenceSummaries": [
+          {
+            "region": "Africa",
+            "occurrenceCount": 4886
+          }
+        ]
+      },
+      "artifactTemplates": [
+        {
+          "id": "loxodonta_africana_track_cast",
+          "artifactType": "track_cast",
+          "label": "track cast",
+          "ethical": true,
+          "description": "Ethical track cast collection"
+        },
+        {
+          "id": "loxodonta_africana_dung_sample",
+          "artifactType": "dung_sample",
+          "label": "dung sample",
+          "ethical": true,
+          "description": "Ethical dung sample collection"
+        },
+        {
+          "id": "loxodonta_africana_behavioral_field_note",
+          "artifactType": "behavioral_field_note",
+          "label": "behavioral field note",
+          "ethical": true,
+          "description": "Ethical behavioral field note collection"
+        }
+      ],
+      "gameplay": {
+        "region": "savanna",
+        "questType": "observation",
+        "dangerLevel": 4,
+        "ethicalInteraction": "observe_from_distance",
+        "timeRange": "Present",
+        "diet": "Herbivore",
+        "activity": "Diurnal",
+        "size": "Up to 4 m at shoulder",
+        "behavior": "Matriarchal herds; long-distance migration",
+        "learningTopics": [
+          "keystone species",
+          "migration",
+          "conservation"
+        ],
+        "funFacts": [
+          "Can recognize themselves in mirrors",
+          "Create water holes used by many species"
+        ],
+        "whyItMatters": "Keystone species that shape landscapes and support biodiversity."
+      },
+      "nasaLayerDependencies": [
+        {
+          "layer": "forest_structure",
+          "product": "gedi",
+          "reason": "Canopy structure shapes arboreal and forest-floor species niches"
+        },
+        {
+          "layer": "vegetation",
+          "product": "hls",
+          "reason": "NDVI tracks seasonal canopy and understory productivity"
+        },
+        {
+          "layer": "fire",
+          "product": "firms",
+          "reason": "Fire regime influences grazer distribution and predator hunting"
+        },
+        {
+          "layer": "heat_drought",
+          "product": "ecostress",
+          "reason": "Dry-season stress affects crepuscular activity patterns"
+        },
+        {
+          "layer": "climate",
+          "product": "power",
+          "reason": "Field expedition planning uses local climate baselines"
+        }
+      ],
+      "requiredHabitatSignals": [
+        {
+          "signal": "dense_canopy",
+          "layer": "forest_structure",
+          "required": true,
+          "description": "Requires closed or partial canopy cover"
+        }
+      ],
+      "provenance": [
+        {
+          "source": "game_authored",
+          "sourceVersion": "mvp-current",
+          "sourceRecordId": "loxodonta_africana",
+          "license": "GAME-ORIGINAL",
+          "citation": "Archive of Life: Artifact World authored prototype content",
+          "citationRequired": false,
+          "retrievedAt": "2026-07-05T03:27:29.538Z",
+          "lastUpdated": "2026-07-05T03:27:29.538Z",
+          "isMockData": false,
+          "verificationStatus": "game_authored_verified"
+        },
+        {
+          "source": "catalogue_of_life",
+          "sourceVersion": "mock-sample-2026-07",
+          "sourceRecordId": "MOCK-loxodonta_africana",
+          "catalogueOfLifeId": "MOCK-COL-loxodonta_africana",
+          "license": "MOCK-SAMPLE",
+          "citation": "MOCK SAMPLE \u2014 not sourced from live API; requires approved source snapshot import",
+          "citationRequired": true,
+          "retrievedAt": "2026-07-05T03:27:29.538Z",
+          "lastUpdated": "2026-07-05T03:27:29.538Z",
+          "isMockData": true,
+          "verificationStatus": "mock_sample"
+        }
+      ]
+    },
+    {
+      "id": "canis_lupus",
+      "commonName": "Gray Wolf",
+      "scientificName": "Canis lupus",
+      "group": "Mammal",
+      "tier": "hero",
+      "representationTier": 6,
+      "lifeStatus": "extant",
+      "timeUnitIds": [
+        "pleistocene",
+        "holocene"
+      ],
+      "taxonomy": {
+        "family": "Canidae",
+        "rank": "species",
+        "acceptedName": "Canis lupus",
+        "catalogueOfLifeId": "MOCK-COL-canis_lupus"
+      },
+      "conservation": {
+        "iucnCategory": "Least Concern",
+        "assessed": true,
+        "sourceVersion": "mock-iucn-2026-07",
+        "lastUpdated": "2026-07-02",
+        "iucnTaxonId": 77909
+      },
+      "distribution": {
+        "continents": [
+          "North America",
+          "Europe",
+          "Asia"
+        ],
+        "habitats": [
+          "forest",
+          "grassland",
+          "tundra"
+        ],
+        "sourceVersion": "mock-gbif-2026-07",
+        "lastUpdated": "2026-07-02",
+        "gbifTaxonKey": 6040710,
+        "occurrenceSummaries": [
+          {
+            "region": "North America",
+            "occurrenceCount": 970
+          }
+        ]
+      },
+      "artifactTemplates": [
+        {
+          "id": "canis_lupus_track_cast",
+          "artifactType": "track_cast",
+          "label": "track cast",
+          "ethical": true,
+          "description": "Ethical track cast collection"
+        },
+        {
+          "id": "canis_lupus_audio_howl_recording",
+          "artifactType": "audio_howl_recording",
+          "label": "audio howl recording",
+          "ethical": true,
+          "description": "Ethical audio howl recording collection"
+        },
+        {
+          "id": "canis_lupus_scat_sample",
+          "artifactType": "scat_sample",
+          "label": "scat sample",
+          "ethical": true,
+          "description": "Ethical scat sample collection"
+        }
+      ],
+      "gameplay": {
+        "region": "forest",
+        "questType": "tracking",
+        "dangerLevel": 4,
+        "ethicalInteraction": "observe_from_distance",
+        "timeRange": "Present",
+        "diet": "Carnivore",
+        "activity": "Crepuscular",
+        "size": "1.0\u20131.6 m body length",
+        "behavior": "Pack hunter with complex social hierarchy",
+        "learningTopics": [
+          "pack behavior",
+          "trophic cascades",
+          "reintroduction"
+        ],
+        "funFacts": [
+          "Howls can be heard up to 10 km away",
+          "Yellowstone wolf reintroduction changed river courses"
+        ],
+        "whyItMatters": "Top predators restore balance through trophic cascades."
+      },
+      "nasaLayerDependencies": [
+        {
+          "layer": "forest_structure",
+          "product": "gedi",
+          "reason": "Canopy structure shapes arboreal and forest-floor species niches"
+        },
+        {
+          "layer": "vegetation",
+          "product": "hls",
+          "reason": "NDVI tracks seasonal canopy and understory productivity"
+        },
+        {
+          "layer": "climate",
+          "product": "power",
+          "reason": "Field expedition planning uses local climate baselines"
+        }
+      ],
+      "requiredHabitatSignals": [
+        {
+          "signal": "dense_canopy",
+          "layer": "forest_structure",
+          "required": true,
+          "description": "Requires closed or partial canopy cover"
+        }
+      ],
+      "provenance": [
+        {
+          "source": "game_authored",
+          "sourceVersion": "mvp-current",
+          "sourceRecordId": "canis_lupus",
+          "license": "GAME-ORIGINAL",
+          "citation": "Archive of Life: Artifact World authored prototype content",
+          "citationRequired": false,
+          "retrievedAt": "2026-07-05T03:27:29.539Z",
+          "lastUpdated": "2026-07-05T03:27:29.539Z",
+          "isMockData": false,
+          "verificationStatus": "game_authored_verified"
+        },
+        {
+          "source": "catalogue_of_life",
+          "sourceVersion": "mock-sample-2026-07",
+          "sourceRecordId": "MOCK-canis_lupus",
+          "catalogueOfLifeId": "MOCK-COL-canis_lupus",
+          "license": "MOCK-SAMPLE",
+          "citation": "MOCK SAMPLE \u2014 not sourced from live API; requires approved source snapshot import",
+          "citationRequired": true,
+          "retrievedAt": "2026-07-05T03:27:29.539Z",
+          "lastUpdated": "2026-07-05T03:27:29.539Z",
+          "isMockData": true,
+          "verificationStatus": "mock_sample"
+        }
+      ]
+    },
+    {
+      "id": "odocoileus_virginianus",
+      "commonName": "White-tailed Deer",
+      "scientificName": "Odocoileus virginianus",
+      "group": "Mammal",
+      "tier": "hero",
+      "representationTier": 6,
+      "lifeStatus": "extant",
+      "timeUnitIds": [
+        "holocene"
+      ],
+      "taxonomy": {
+        "family": "Cervidae",
+        "rank": "species",
+        "acceptedName": "Odocoileus virginianus",
+        "catalogueOfLifeId": "MOCK-COL-odocoileus_virginianus"
+      },
+      "conservation": {
+        "iucnCategory": "Least Concern",
+        "assessed": true,
+        "sourceVersion": "mock-iucn-2026-07",
+        "lastUpdated": "2026-07-02",
+        "iucnTaxonId": 39537
+      },
+      "distribution": {
+        "continents": [
+          "North America"
+        ],
+        "habitats": [
+          "forest",
+          "grassland",
+          "wetland"
+        ],
+        "sourceVersion": "mock-gbif-2026-07",
+        "lastUpdated": "2026-07-02",
+        "gbifTaxonKey": 9596551,
+        "occurrenceSummaries": [
+          {
+            "region": "North America",
+            "occurrenceCount": 4069
+          }
+        ]
+      },
+      "artifactTemplates": [
+        {
+          "id": "odocoileus_virginianus_shed_antler",
+          "artifactType": "shed_antler",
+          "label": "shed antler",
+          "ethical": true,
+          "description": "Ethical shed antler collection"
+        },
+        {
+          "id": "odocoileus_virginianus_track_cast",
+          "artifactType": "track_cast",
+          "label": "track cast",
+          "ethical": true,
+          "description": "Ethical track cast collection"
+        },
+        {
+          "id": "odocoileus_virginianus_behavioral_field_note",
+          "artifactType": "behavioral_field_note",
+          "label": "behavioral field note",
+          "ethical": true,
+          "description": "Ethical behavioral field note collection"
+        }
+      ],
+      "gameplay": {
+        "region": "forest",
+        "questType": "tracking",
+        "dangerLevel": 1,
+        "ethicalInteraction": "observe_quietly",
+        "timeRange": "Present",
+        "diet": "Herbivore",
+        "activity": "Crepuscular",
+        "size": "0.9\u20131.1 m shoulder height",
+        "behavior": "Alert grazer; seasonal antler growth in males",
+        "learningTopics": [
+          "herbivory",
+          "predator-prey",
+          "adaptation"
+        ],
+        "funFacts": [
+          "Antlers regrow every year",
+          "Tail flash signals alarm to herd"
+        ],
+        "whyItMatters": "Important prey species linking forest and grassland food webs."
+      },
+      "nasaLayerDependencies": [
+        {
+          "layer": "forest_structure",
+          "product": "gedi",
+          "reason": "Canopy structure shapes arboreal and forest-floor species niches"
+        },
+        {
+          "layer": "vegetation",
+          "product": "hls",
+          "reason": "NDVI tracks seasonal canopy and understory productivity"
+        },
+        {
+          "layer": "water",
+          "product": "gibs",
+          "reason": "Surface water extent critical for wetland specialists"
+        },
+        {
+          "layer": "water",
+          "product": "gibs",
+          "reason": "Breeding depends on wetland water availability"
+        },
+        {
+          "layer": "heat_drought",
+          "product": "ecostress",
+          "reason": "Temperature and moisture gate amphibian activity"
+        },
+        {
+          "layer": "climate",
+          "product": "power",
+          "reason": "Field expedition planning uses local climate baselines"
+        }
+      ],
+      "requiredHabitatSignals": [
+        {
+          "signal": "dense_canopy",
+          "layer": "forest_structure",
+          "required": true,
+          "description": "Requires closed or partial canopy cover"
+        },
+        {
+          "signal": "surface_water",
+          "layer": "water",
+          "minValue": 0.3,
+          "required": true,
+          "description": "Depends on standing water or saturated soils"
+        }
+      ],
+      "provenance": [
+        {
+          "source": "game_authored",
+          "sourceVersion": "mvp-current",
+          "sourceRecordId": "odocoileus_virginianus",
+          "license": "GAME-ORIGINAL",
+          "citation": "Archive of Life: Artifact World authored prototype content",
+          "citationRequired": false,
+          "retrievedAt": "2026-07-05T03:27:29.539Z",
+          "lastUpdated": "2026-07-05T03:27:29.539Z",
+          "isMockData": false,
+          "verificationStatus": "game_authored_verified"
+        },
+        {
+          "source": "catalogue_of_life",
+          "sourceVersion": "mock-sample-2026-07",
+          "sourceRecordId": "MOCK-odocoileus_virginianus",
+          "catalogueOfLifeId": "MOCK-COL-odocoileus_virginianus",
+          "license": "MOCK-SAMPLE",
+          "citation": "MOCK SAMPLE \u2014 not sourced from live API; requires approved source snapshot import",
+          "citationRequired": true,
+          "retrievedAt": "2026-07-05T03:27:29.539Z",
+          "lastUpdated": "2026-07-05T03:27:29.539Z",
+          "isMockData": true,
+          "verificationStatus": "mock_sample"
+        }
+      ]
+    },
+    {
+      "id": "balaenoptera_musculus",
+      "commonName": "Blue Whale",
+      "scientificName": "Balaenoptera musculus",
+      "group": "Mammal",
+      "tier": "hero",
+      "representationTier": 6,
+      "lifeStatus": "extant",
+      "timeUnitIds": [
+        "holocene"
+      ],
+      "taxonomy": {
+        "family": "Balaenopteridae",
+        "rank": "species",
+        "acceptedName": "Balaenoptera musculus",
+        "catalogueOfLifeId": "MOCK-COL-balaenoptera_musculus"
+      },
+      "conservation": {
+        "iucnCategory": "Endangered",
+        "assessed": true,
+        "sourceVersion": "mock-iucn-2026-07",
+        "lastUpdated": "2026-07-02",
+        "iucnTaxonId": 27409
+      },
+      "distribution": {
+        "continents": [
+          "Global oceans"
+        ],
+        "habitats": [
+          "ocean",
+          "coastal"
+        ],
+        "sourceVersion": "mock-gbif-2026-07",
+        "lastUpdated": "2026-07-02",
+        "gbifTaxonKey": 7146193,
+        "occurrenceSummaries": [
+          {
+            "region": "Global oceans",
+            "occurrenceCount": 2679
+          }
+        ]
+      },
+      "artifactTemplates": [
+        {
+          "id": "balaenoptera_musculus_photo_record",
+          "artifactType": "photo_record",
+          "label": "photo record",
+          "ethical": true,
+          "description": "Ethical photo record collection"
+        },
+        {
+          "id": "balaenoptera_musculus_audio_recording",
+          "artifactType": "audio_recording",
+          "label": "audio recording",
+          "ethical": true,
+          "description": "Ethical audio recording collection"
+        },
+        {
+          "id": "balaenoptera_musculus_migration_tag_data",
+          "artifactType": "migration_tag_data",
+          "label": "migration tag data",
+          "ethical": true,
+          "description": "Ethical migration tag data collection"
+        }
+      ],
+      "gameplay": {
+        "region": "coastal",
+        "questType": "observation",
+        "dangerLevel": 1,
+        "ethicalInteraction": "observe_from_boat",
+        "timeRange": "Present",
+        "diet": "Carnivore (filter feeder)",
+        "activity": "Diurnal",
+        "size": "Up to 30 m \u2014 largest animal ever",
+        "behavior": "Long-distance ocean migrant; vocal communication",
+        "learningTopics": [
+          "marine ecosystems",
+          "migration",
+          "conservation"
+        ],
+        "funFacts": [
+          "Heart weighs as much as a car",
+          "Eats up to 4 tonnes of krill daily"
+        ],
+        "whyItMatters": "Indicator of ocean health; nutrient cycling through vertical migration."
+      },
+      "nasaLayerDependencies": [
+        {
+          "layer": "ocean_biology",
+          "product": "ocean_color",
+          "reason": "Chlorophyll blooms drive marine prey aggregations"
+        },
+        {
+          "layer": "climate",
+          "product": "power",
+          "reason": "Coastal wind and temperature affect migration timing"
+        },
+        {
+          "layer": "climate",
+          "product": "power",
+          "reason": "Field expedition planning uses local climate baselines"
+        }
+      ],
+      "requiredHabitatSignals": [
+        {
+          "signal": "ocean_productivity",
+          "layer": "ocean_biology",
+          "minValue": 0.5,
+          "required": true,
+          "description": "Migration and foraging follow ocean productivity seasons"
+        }
+      ],
+      "provenance": [
+        {
+          "source": "game_authored",
+          "sourceVersion": "mvp-current",
+          "sourceRecordId": "balaenoptera_musculus",
+          "license": "GAME-ORIGINAL",
+          "citation": "Archive of Life: Artifact World authored prototype content",
+          "citationRequired": false,
+          "retrievedAt": "2026-07-05T03:27:29.539Z",
+          "lastUpdated": "2026-07-05T03:27:29.539Z",
+          "isMockData": false,
+          "verificationStatus": "game_authored_verified"
+        },
+        {
+          "source": "catalogue_of_life",
+          "sourceVersion": "mock-sample-2026-07",
+          "sourceRecordId": "MOCK-balaenoptera_musculus",
+          "catalogueOfLifeId": "MOCK-COL-balaenoptera_musculus",
+          "license": "MOCK-SAMPLE",
+          "citation": "MOCK SAMPLE \u2014 not sourced from live API; requires approved source snapshot import",
+          "citationRequired": true,
+          "retrievedAt": "2026-07-05T03:27:29.539Z",
+          "lastUpdated": "2026-07-05T03:27:29.539Z",
+          "isMockData": true,
+          "verificationStatus": "mock_sample"
+        }
+      ]
+    },
+    {
+      "id": "ursus_americanus",
+      "commonName": "American Black Bear",
+      "scientificName": "Ursus americanus",
+      "group": "Mammal",
+      "tier": "hero",
+      "representationTier": 6,
+      "lifeStatus": "extant",
+      "timeUnitIds": [
+        "holocene"
+      ],
+      "taxonomy": {
+        "family": "Ursidae",
+        "rank": "species",
+        "acceptedName": "Ursus americanus",
+        "catalogueOfLifeId": "MOCK-COL-ursus_americanus"
+      },
+      "conservation": {
+        "iucnCategory": "Least Concern",
+        "assessed": true,
+        "sourceVersion": "mock-iucn-2026-07",
+        "lastUpdated": "2026-07-02",
+        "iucnTaxonId": 30877
+      },
+      "distribution": {
+        "continents": [
+          "North America"
+        ],
+        "habitats": [
+          "forest",
+          "mountain"
+        ],
+        "sourceVersion": "mock-gbif-2026-07",
+        "lastUpdated": "2026-07-02",
+        "gbifTaxonKey": 4343390,
+        "occurrenceSummaries": [
+          {
+            "region": "North America",
+            "occurrenceCount": 4114
+          }
+        ]
+      },
+      "artifactTemplates": [
+        {
+          "id": "ursus_americanus_track_cast",
+          "artifactType": "track_cast",
+          "label": "track cast",
+          "ethical": true,
+          "description": "Ethical track cast collection"
+        },
+        {
+          "id": "ursus_americanus_scat_sample",
+          "artifactType": "scat_sample",
+          "label": "scat sample",
+          "ethical": true,
+          "description": "Ethical scat sample collection"
+        },
+        {
+          "id": "ursus_americanus_behavioral_field_note",
+          "artifactType": "behavioral_field_note",
+          "label": "behavioral field note",
+          "ethical": true,
+          "description": "Ethical behavioral field note collection"
+        }
+      ],
+      "gameplay": {
+        "region": "forest",
+        "questType": "tracking",
+        "dangerLevel": 3,
+        "ethicalInteraction": "avoid_and_observe",
+        "timeRange": "Present",
+        "diet": "Omnivore",
+        "activity": "Diurnal",
+        "size": "1.2\u20131.8 m body length",
+        "behavior": "Solitary forager; hibernates in winter",
+        "learningTopics": [
+          "omnivory",
+          "hibernation",
+          "human-wildlife coexistence"
+        ],
+        "funFacts": [
+          "Can run 50 km/h despite size",
+          "Excellent sense of smell \u2014 7x better than dogs"
+        ],
+        "whyItMatters": "Umbrella species for forest conservation planning."
+      },
+      "nasaLayerDependencies": [
+        {
+          "layer": "forest_structure",
+          "product": "gedi",
+          "reason": "Canopy structure shapes arboreal and forest-floor species niches"
+        },
+        {
+          "layer": "vegetation",
+          "product": "hls",
+          "reason": "NDVI tracks seasonal canopy and understory productivity"
+        },
+        {
+          "layer": "climate",
+          "product": "power",
+          "reason": "Field expedition planning uses local climate baselines"
+        }
+      ],
+      "requiredHabitatSignals": [
+        {
+          "signal": "dense_canopy",
+          "layer": "forest_structure",
+          "required": true,
+          "description": "Requires closed or partial canopy cover"
+        }
+      ],
+      "provenance": [
+        {
+          "source": "game_authored",
+          "sourceVersion": "mvp-current",
+          "sourceRecordId": "ursus_americanus",
+          "license": "GAME-ORIGINAL",
+          "citation": "Archive of Life: Artifact World authored prototype content",
+          "citationRequired": false,
+          "retrievedAt": "2026-07-05T03:27:29.539Z",
+          "lastUpdated": "2026-07-05T03:27:29.539Z",
+          "isMockData": false,
+          "verificationStatus": "game_authored_verified"
+        },
+        {
+          "source": "catalogue_of_life",
+          "sourceVersion": "mock-sample-2026-07",
+          "sourceRecordId": "MOCK-ursus_americanus",
+          "catalogueOfLifeId": "MOCK-COL-ursus_americanus",
+          "license": "MOCK-SAMPLE",
+          "citation": "MOCK SAMPLE \u2014 not sourced from live API; requires approved source snapshot import",
+          "citationRequired": true,
+          "retrievedAt": "2026-07-05T03:27:29.539Z",
+          "lastUpdated": "2026-07-05T03:27:29.539Z",
+          "isMockData": true,
+          "verificationStatus": "mock_sample"
+        }
+      ]
+    },
+    {
+      "id": "castor_canadensis",
+      "commonName": "North American Beaver",
+      "scientificName": "Castor canadensis",
+      "group": "Mammal",
+      "tier": "hero",
+      "representationTier": 6,
+      "lifeStatus": "extant",
+      "timeUnitIds": [
+        "holocene"
+      ],
+      "taxonomy": {
+        "family": "Castoridae",
+        "rank": "species",
+        "acceptedName": "Castor canadensis",
+        "catalogueOfLifeId": "MOCK-COL-castor_canadensis"
+      },
+      "conservation": {
+        "iucnCategory": "Least Concern",
+        "assessed": true,
+        "sourceVersion": "mock-iucn-2026-07",
+        "lastUpdated": "2026-07-02",
+        "iucnTaxonId": 67590
+      },
+      "distribution": {
+        "continents": [
+          "North America"
+        ],
+        "habitats": [
+          "wetland",
+          "river"
+        ],
+        "sourceVersion": "mock-gbif-2026-07",
+        "lastUpdated": "2026-07-02",
+        "gbifTaxonKey": 2633674,
+        "occurrenceSummaries": [
+          {
+            "region": "North America",
+            "occurrenceCount": 4368
+          }
+        ]
+      },
+      "artifactTemplates": [
+        {
+          "id": "castor_canadensis_gnaw_mark_sample",
+          "artifactType": "gnaw_mark_sample",
+          "label": "gnaw mark sample",
+          "ethical": true,
+          "description": "Ethical gnaw mark sample collection"
+        },
+        {
+          "id": "castor_canadensis_lodge_observation",
+          "artifactType": "lodge_observation",
+          "label": "lodge observation",
+          "ethical": true,
+          "description": "Ethical lodge observation collection"
+        },
+        {
+          "id": "castor_canadensis_track_cast",
+          "artifactType": "track_cast",
+          "label": "track cast",
+          "ethical": true,
+          "description": "Ethical track cast collection"
+        }
+      ],
+      "gameplay": {
+        "region": "wetland",
+        "questType": "habitat_study",
+        "dangerLevel": 1,
+        "ethicalInteraction": "observe_quietly",
+        "timeRange": "Present",
+        "diet": "Herbivore",
+        "activity": "Nocturnal",
+        "size": "0.7\u20131.0 m body length",
+        "behavior": "Ecosystem engineer; builds dams and lodges",
+        "learningTopics": [
+          "ecosystem engineering",
+          "wetland ecology",
+          "keystone species"
+        ],
+        "funFacts": [
+          "Teeth never stop growing",
+          "Dams create wetlands supporting hundreds of species"
+        ],
+        "whyItMatters": "Creates wetlands that filter water and support biodiversity."
+      },
+      "nasaLayerDependencies": [
+        {
+          "layer": "water",
+          "product": "gibs",
+          "reason": "Surface water extent critical for wetland specialists"
+        },
+        {
+          "layer": "water",
+          "product": "gibs",
+          "reason": "Breeding depends on wetland water availability"
+        },
+        {
+          "layer": "heat_drought",
+          "product": "ecostress",
+          "reason": "Temperature and moisture gate amphibian activity"
+        },
+        {
+          "layer": "climate",
+          "product": "power",
+          "reason": "Field expedition planning uses local climate baselines"
+        }
+      ],
+      "requiredHabitatSignals": [
+        {
+          "signal": "surface_water",
+          "layer": "water",
+          "minValue": 0.3,
+          "required": true,
+          "description": "Depends on standing water or saturated soils"
+        }
+      ],
+      "provenance": [
+        {
+          "source": "game_authored",
+          "sourceVersion": "mvp-current",
+          "sourceRecordId": "castor_canadensis",
+          "license": "GAME-ORIGINAL",
+          "citation": "Archive of Life: Artifact World authored prototype content",
+          "citationRequired": false,
+          "retrievedAt": "2026-07-05T03:27:29.539Z",
+          "lastUpdated": "2026-07-05T03:27:29.539Z",
+          "isMockData": false,
+          "verificationStatus": "game_authored_verified"
+        },
+        {
+          "source": "catalogue_of_life",
+          "sourceVersion": "mock-sample-2026-07",
+          "sourceRecordId": "MOCK-castor_canadensis",
+          "catalogueOfLifeId": "MOCK-COL-castor_canadensis",
+          "license": "MOCK-SAMPLE",
+          "citation": "MOCK SAMPLE \u2014 not sourced from live API; requires approved source snapshot import",
+          "citationRequired": true,
+          "retrievedAt": "2026-07-05T03:27:29.539Z",
+          "lastUpdated": "2026-07-05T03:27:29.539Z",
+          "isMockData": true,
+          "verificationStatus": "mock_sample"
+        }
+      ]
+    },
+    {
+      "id": "lontra_canadensis",
+      "commonName": "North American River Otter",
+      "scientificName": "Lontra canadensis",
+      "group": "Mammal",
+      "tier": "hero",
+      "representationTier": 6,
+      "lifeStatus": "extant",
+      "timeUnitIds": [
+        "holocene"
+      ],
+      "taxonomy": {
+        "family": "Mustelidae",
+        "rank": "species",
+        "acceptedName": "Lontra canadensis",
+        "catalogueOfLifeId": "MOCK-COL-lontra_canadensis"
+      },
+      "conservation": {
+        "iucnCategory": "Least Concern",
+        "assessed": true,
+        "sourceVersion": "mock-iucn-2026-07",
+        "lastUpdated": "2026-07-02",
+        "iucnTaxonId": 5266
+      },
+      "distribution": {
+        "continents": [
+          "North America"
+        ],
+        "habitats": [
+          "wetland",
+          "river",
+          "coastal"
+        ],
+        "sourceVersion": "mock-gbif-2026-07",
+        "lastUpdated": "2026-07-02",
+        "gbifTaxonKey": 8218660,
+        "occurrenceSummaries": [
+          {
+            "region": "North America",
+            "occurrenceCount": 594
+          }
+        ]
+      },
+      "artifactTemplates": [
+        {
+          "id": "lontra_canadensis_track_cast",
+          "artifactType": "track_cast",
+          "label": "track cast",
+          "ethical": true,
+          "description": "Ethical track cast collection"
+        },
+        {
+          "id": "lontra_canadensis_photo_record",
+          "artifactType": "photo_record",
+          "label": "photo record",
+          "ethical": true,
+          "description": "Ethical photo record collection"
+        },
+        {
+          "id": "lontra_canadensis_behavioral_field_note",
+          "artifactType": "behavioral_field_note",
+          "label": "behavioral field note",
+          "ethical": true,
+          "description": "Ethical behavioral field note collection"
+        }
+      ],
+      "gameplay": {
+        "region": "wetland",
+        "questType": "observation",
+        "dangerLevel": 1,
+        "ethicalInteraction": "observe_quietly",
+        "timeRange": "Present",
+        "diet": "Carnivore",
+        "activity": "Diurnal",
+        "size": "0.6\u20131.0 m body length",
+        "behavior": "Playful swimmer; uses slides on riverbanks",
+        "learningTopics": [
+          "aquatic adaptation",
+          "play behavior",
+          "water quality"
+        ],
+        "funFacts": [
+          "Can hold breath up to 8 minutes",
+          "Play behavior helps young develop hunting skills"
+        ],
+        "whyItMatters": "Indicator species for clean freshwater ecosystems."
+      },
+      "nasaLayerDependencies": [
+        {
+          "layer": "water",
+          "product": "gibs",
+          "reason": "Surface water extent critical for wetland specialists"
+        },
+        {
+          "layer": "water",
+          "product": "gibs",
+          "reason": "Breeding depends on wetland water availability"
+        },
+        {
+          "layer": "heat_drought",
+          "product": "ecostress",
+          "reason": "Temperature and moisture gate amphibian activity"
+        },
+        {
+          "layer": "climate",
+          "product": "power",
+          "reason": "Field expedition planning uses local climate baselines"
+        }
+      ],
+      "requiredHabitatSignals": [
+        {
+          "signal": "surface_water",
+          "layer": "water",
+          "minValue": 0.3,
+          "required": true,
+          "description": "Depends on standing water or saturated soils"
+        }
+      ],
+      "provenance": [
+        {
+          "source": "game_authored",
+          "sourceVersion": "mvp-current",
+          "sourceRecordId": "lontra_canadensis",
+          "license": "GAME-ORIGINAL",
+          "citation": "Archive of Life: Artifact World authored prototype content",
+          "citationRequired": false,
+          "retrievedAt": "2026-07-05T03:27:29.539Z",
+          "lastUpdated": "2026-07-05T03:27:29.539Z",
+          "isMockData": false,
+          "verificationStatus": "game_authored_verified"
+        },
+        {
+          "source": "catalogue_of_life",
+          "sourceVersion": "mock-sample-2026-07",
+          "sourceRecordId": "MOCK-lontra_canadensis",
+          "catalogueOfLifeId": "MOCK-COL-lontra_canadensis",
+          "license": "MOCK-SAMPLE",
+          "citation": "MOCK SAMPLE \u2014 not sourced from live API; requires approved source snapshot import",
+          "citationRequired": true,
+          "retrievedAt": "2026-07-05T03:27:29.539Z",
+          "lastUpdated": "2026-07-05T03:27:29.539Z",
+          "isMockData": true,
+          "verificationStatus": "mock_sample"
+        }
+      ]
+    },
+    {
+      "id": "phoca_vitulina",
+      "commonName": "Harbor Seal",
+      "scientificName": "Phoca vitulina",
+      "group": "Mammal",
+      "tier": "hero",
+      "representationTier": 6,
+      "lifeStatus": "extant",
+      "timeUnitIds": [
+        "holocene"
+      ],
+      "taxonomy": {
+        "family": "Phocidae",
+        "rank": "species",
+        "acceptedName": "Phoca vitulina",
+        "catalogueOfLifeId": "MOCK-COL-phoca_vitulina"
+      },
+      "conservation": {
+        "iucnCategory": "Least Concern",
+        "assessed": true,
+        "sourceVersion": "mock-iucn-2026-07",
+        "lastUpdated": "2026-07-02",
+        "iucnTaxonId": 91836
+      },
+      "distribution": {
+        "continents": [
+          "North Atlantic",
+          "North Pacific"
+        ],
+        "habitats": [
+          "coastal",
+          "ocean"
+        ],
+        "sourceVersion": "mock-gbif-2026-07",
+        "lastUpdated": "2026-07-02",
+        "gbifTaxonKey": 5107101,
+        "occurrenceSummaries": [
+          {
+            "region": "North Atlantic",
+            "occurrenceCount": 2480
+          }
+        ]
+      },
+      "artifactTemplates": [
+        {
+          "id": "phoca_vitulina_photo_record",
+          "artifactType": "photo_record",
+          "label": "photo record",
+          "ethical": true,
+          "description": "Ethical photo record collection"
+        },
+        {
+          "id": "phoca_vitulina_track_cast",
+          "artifactType": "track_cast",
+          "label": "track cast",
+          "ethical": true,
+          "description": "Ethical track cast collection"
+        },
+        {
+          "id": "phoca_vitulina_behavioral_field_note",
+          "artifactType": "behavioral_field_note",
+          "label": "behavioral field note",
+          "ethical": true,
+          "description": "Ethical behavioral field note collection"
+        }
+      ],
+      "gameplay": {
+        "region": "coastal",
+        "questType": "observation",
+        "dangerLevel": 1,
+        "ethicalInteraction": "observe_from_distance",
+        "timeRange": "Present",
+        "diet": "Carnivore",
+        "activity": "Diurnal",
+        "size": "1.5\u20131.9 m body length",
+        "behavior": "Social haul-out on rocks; agile swimmer",
+        "learningTopics": [
+          "marine mammals",
+          "coastal ecology",
+          "thermoregulation"
+        ],
+        "funFacts": [
+          "Can sleep underwater",
+          "Whiskers detect fish vibrations"
+        ],
+        "whyItMatters": "Sentinel species for coastal pollution and fisheries health."
+      },
+      "nasaLayerDependencies": [
+        {
+          "layer": "ocean_biology",
+          "product": "ocean_color",
+          "reason": "Chlorophyll blooms drive marine prey aggregations"
+        },
+        {
+          "layer": "climate",
+          "product": "power",
+          "reason": "Coastal wind and temperature affect migration timing"
+        },
+        {
+          "layer": "climate",
+          "product": "power",
+          "reason": "Field expedition planning uses local climate baselines"
+        }
+      ],
+      "requiredHabitatSignals": [
+        {
+          "signal": "ocean_productivity",
+          "layer": "ocean_biology",
+          "minValue": 0.5,
+          "required": true,
+          "description": "Migration and foraging follow ocean productivity seasons"
+        }
+      ],
+      "provenance": [
+        {
+          "source": "game_authored",
+          "sourceVersion": "mvp-current",
+          "sourceRecordId": "phoca_vitulina",
+          "license": "GAME-ORIGINAL",
+          "citation": "Archive of Life: Artifact World authored prototype content",
+          "citationRequired": false,
+          "retrievedAt": "2026-07-05T03:27:29.539Z",
+          "lastUpdated": "2026-07-05T03:27:29.539Z",
+          "isMockData": false,
+          "verificationStatus": "game_authored_verified"
+        },
+        {
+          "source": "catalogue_of_life",
+          "sourceVersion": "mock-sample-2026-07",
+          "sourceRecordId": "MOCK-phoca_vitulina",
+          "catalogueOfLifeId": "MOCK-COL-phoca_vitulina",
+          "license": "MOCK-SAMPLE",
+          "citation": "MOCK SAMPLE \u2014 not sourced from live API; requires approved source snapshot import",
+          "citationRequired": true,
+          "retrievedAt": "2026-07-05T03:27:29.539Z",
+          "lastUpdated": "2026-07-05T03:27:29.539Z",
+          "isMockData": true,
+          "verificationStatus": "mock_sample"
+        }
+      ]
+    },
+    {
+      "id": "equus_caballus_ferus",
+      "commonName": "Przewalski's Horse",
+      "scientificName": "Equus ferus przewalskii",
+      "group": "Mammal",
+      "tier": "hero",
+      "representationTier": 6,
+      "lifeStatus": "extant",
+      "timeUnitIds": [
+        "holocene"
+      ],
+      "taxonomy": {
+        "family": "Equidae",
+        "rank": "subspecies",
+        "acceptedName": "Equus ferus przewalskii",
+        "catalogueOfLifeId": "MOCK-COL-equus_caballus_ferus"
+      },
+      "conservation": {
+        "iucnCategory": "Endangered",
+        "assessed": true,
+        "sourceVersion": "mock-iucn-2026-07",
+        "lastUpdated": "2026-07-02",
+        "iucnTaxonId": 65063
+      },
+      "distribution": {
+        "continents": [
+          "Asia"
+        ],
+        "habitats": [
+          "grassland",
+          "steppe"
+        ],
+        "sourceVersion": "mock-gbif-2026-07",
+        "lastUpdated": "2026-07-02",
+        "gbifTaxonKey": 9792217,
+        "occurrenceSummaries": [
+          {
+            "region": "Asia",
+            "occurrenceCount": 4356
+          }
+        ]
+      },
+      "artifactTemplates": [
+        {
+          "id": "equus_caballus_ferus_track_cast",
+          "artifactType": "track_cast",
+          "label": "track cast",
+          "ethical": true,
+          "description": "Ethical track cast collection"
+        },
+        {
+          "id": "equus_caballus_ferus_photo_record",
+          "artifactType": "photo_record",
+          "label": "photo record",
+          "ethical": true,
+          "description": "Ethical photo record collection"
+        },
+        {
+          "id": "equus_caballus_ferus_conservation_report",
+          "artifactType": "conservation_report",
+          "label": "conservation report",
+          "ethical": true,
+          "description": "Ethical conservation report collection"
+        }
+      ],
+      "gameplay": {
+        "region": "savanna",
+        "questType": "conservation",
+        "dangerLevel": 1,
+        "ethicalInteraction": "observe_from_distance",
+        "timeRange": "Present",
+        "diet": "Herbivore",
+        "activity": "Diurnal",
+        "size": "1.2\u20131.4 m shoulder height",
+        "behavior": "Social herd grazer; only truly wild horse",
+        "learningTopics": [
+          "conservation success",
+          "reintroduction",
+          "grassland ecology"
+        ],
+        "funFacts": [
+          "Went extinct in wild in 1960s",
+          "Successfully reintroduced to Mongolia"
+        ],
+        "whyItMatters": "Symbol of successful species recovery through captive breeding."
+      },
+      "nasaLayerDependencies": [
+        {
+          "layer": "fire",
+          "product": "firms",
+          "reason": "Fire regime influences grazer distribution and predator hunting"
+        },
+        {
+          "layer": "heat_drought",
+          "product": "ecostress",
+          "reason": "Dry-season stress affects crepuscular activity patterns"
+        },
+        {
+          "layer": "climate",
+          "product": "power",
+          "reason": "Field expedition planning uses local climate baselines"
+        }
+      ],
+      "provenance": [
+        {
+          "source": "game_authored",
+          "sourceVersion": "mvp-current",
+          "sourceRecordId": "equus_caballus_ferus",
+          "license": "GAME-ORIGINAL",
+          "citation": "Archive of Life: Artifact World authored prototype content",
+          "citationRequired": false,
+          "retrievedAt": "2026-07-05T03:27:29.539Z",
+          "lastUpdated": "2026-07-05T03:27:29.539Z",
+          "isMockData": false,
+          "verificationStatus": "game_authored_verified"
+        },
+        {
+          "source": "catalogue_of_life",
+          "sourceVersion": "mock-sample-2026-07",
+          "sourceRecordId": "MOCK-equus_caballus_ferus",
+          "catalogueOfLifeId": "MOCK-COL-equus_caballus_ferus",
+          "license": "MOCK-SAMPLE",
+          "citation": "MOCK SAMPLE \u2014 not sourced from live API; requires approved source snapshot import",
+          "citationRequired": true,
+          "retrievedAt": "2026-07-05T03:27:29.539Z",
+          "lastUpdated": "2026-07-05T03:27:29.539Z",
+          "isMockData": true,
+          "verificationStatus": "mock_sample"
+        }
+      ]
+    },
+    {
+      "id": "danaus_plexippus",
+      "commonName": "Monarch Butterfly",
+      "scientificName": "Danaus plexippus",
+      "group": "Insect",
+      "tier": "hero",
+      "representationTier": 6,
+      "lifeStatus": "extant",
+      "timeUnitIds": [
+        "pleistocene",
+        "holocene"
+      ],
+      "taxonomy": {
+        "family": "Nymphalidae",
+        "rank": "species",
+        "acceptedName": "Danaus plexippus",
+        "catalogueOfLifeId": "MOCK-COL-danaus_plexippus"
+      },
+      "conservation": {
+        "iucnCategory": "Endangered",
+        "assessed": true,
+        "sourceVersion": "mock-iucn-2026-07",
+        "lastUpdated": "2026-07-02",
+        "iucnTaxonId": 48926
+      },
+      "distribution": {
+        "continents": [
+          "North America"
+        ],
+        "habitats": [
+          "grassland",
+          "wetland",
+          "forest edge"
+        ],
+        "sourceVersion": "mock-gbif-2026-07",
+        "lastUpdated": "2026-07-02",
+        "gbifTaxonKey": 5972042,
+        "occurrenceSummaries": [
+          {
+            "region": "North America",
+            "occurrenceCount": 2332
+          }
+        ]
+      },
+      "artifactTemplates": [
+        {
+          "id": "danaus_plexippus_photo_record",
+          "artifactType": "photo_record",
+          "label": "photo record",
+          "ethical": true,
+          "description": "Ethical photo record collection"
+        },
+        {
+          "id": "danaus_plexippus_wing_pattern_scan",
+          "artifactType": "wing_pattern_scan",
+          "label": "wing pattern scan",
+          "ethical": true,
+          "description": "Ethical wing pattern scan collection"
+        },
+        {
+          "id": "danaus_plexippus_migration_tag_data",
+          "artifactType": "migration_tag_data",
+          "label": "migration tag data",
+          "ethical": true,
+          "description": "Ethical migration tag data collection"
+        }
+      ],
+      "gameplay": {
+        "region": "grassland",
+        "questType": "behavior",
+        "dangerLevel": 0,
+        "ethicalInteraction": "observe_without_touching",
+        "timeRange": "Present",
+        "diet": "Herbivore (larva); Nectar (adult)",
+        "activity": "Diurnal",
+        "size": "Wingspan 8.9\u201310.2 cm",
+        "behavior": "Multi-generational migration up to 4,800 km",
+        "learningTopics": [
+          "migration",
+          "metamorphosis",
+          "pollination",
+          "conservation"
+        ],
+        "funFacts": [
+          "Fourth generation migrates to Mexico",
+          "Milkweed toxins make them poisonous to predators"
+        ],
+        "whyItMatters": "Iconic pollinator whose decline signals habitat loss."
+      },
+      "nasaLayerDependencies": [
+        {
+          "layer": "water",
+          "product": "gibs",
+          "reason": "Surface water extent critical for wetland specialists"
+        },
+        {
+          "layer": "vegetation",
+          "product": "hls",
+          "reason": "Flowering plant availability tied to vegetation health"
+        },
+        {
+          "layer": "heat_drought",
+          "product": "ecostress",
+          "reason": "Drought stress reduces nectar resources for pollinators"
+        },
+        {
+          "layer": "water",
+          "product": "gibs",
+          "reason": "Breeding depends on wetland water availability"
+        },
+        {
+          "layer": "heat_drought",
+          "product": "ecostress",
+          "reason": "Temperature and moisture gate amphibian activity"
+        },
+        {
+          "layer": "climate",
+          "product": "power",
+          "reason": "Field expedition planning uses local climate baselines"
+        }
+      ],
+      "requiredHabitatSignals": [
+        {
+          "signal": "surface_water",
+          "layer": "water",
+          "minValue": 0.3,
+          "required": true,
+          "description": "Depends on standing water or saturated soils"
+        },
+        {
+          "signal": "low_fire_activity",
+          "layer": "fire",
+          "required": false,
+          "description": "Pollinator fields benefit from low recent fire activity"
+        }
+      ],
+      "provenance": [
+        {
+          "source": "game_authored",
+          "sourceVersion": "mvp-current",
+          "sourceRecordId": "danaus_plexippus",
+          "license": "GAME-ORIGINAL",
+          "citation": "Archive of Life: Artifact World authored prototype content",
+          "citationRequired": false,
+          "retrievedAt": "2026-07-05T03:27:29.539Z",
+          "lastUpdated": "2026-07-05T03:27:29.539Z",
+          "isMockData": false,
+          "verificationStatus": "game_authored_verified"
+        },
+        {
+          "source": "catalogue_of_life",
+          "sourceVersion": "mock-sample-2026-07",
+          "sourceRecordId": "MOCK-danaus_plexippus",
+          "catalogueOfLifeId": "MOCK-COL-danaus_plexippus",
+          "license": "MOCK-SAMPLE",
+          "citation": "MOCK SAMPLE \u2014 not sourced from live API; requires approved source snapshot import",
+          "citationRequired": true,
+          "retrievedAt": "2026-07-05T03:27:29.539Z",
+          "lastUpdated": "2026-07-05T03:27:29.539Z",
+          "isMockData": true,
+          "verificationStatus": "mock_sample"
+        }
+      ]
+    },
+    {
+      "id": "apis_mellifera",
+      "commonName": "Western Honeybee",
+      "scientificName": "Apis mellifera",
+      "group": "Insect",
+      "tier": "hero",
+      "representationTier": 6,
+      "lifeStatus": "extant",
+      "timeUnitIds": [
+        "neogene",
+        "pleistocene",
+        "holocene"
+      ],
+      "taxonomy": {
+        "family": "Apidae",
+        "rank": "species",
+        "acceptedName": "Apis mellifera",
+        "catalogueOfLifeId": "MOCK-COL-apis_mellifera"
+      },
+      "conservation": {
+        "iucnCategory": "Data Deficient",
+        "assessed": true,
+        "sourceVersion": "mock-iucn-2026-07",
+        "lastUpdated": "2026-07-02",
+        "iucnTaxonId": 41146
+      },
+      "distribution": {
+        "continents": [
+          "Global"
+        ],
+        "habitats": [
+          "grassland",
+          "forest",
+          "urban"
+        ],
+        "sourceVersion": "mock-gbif-2026-07",
+        "lastUpdated": "2026-07-02",
+        "gbifTaxonKey": 4325664,
+        "occurrenceSummaries": [
+          {
+            "region": "Global",
+            "occurrenceCount": 3071
+          }
+        ]
+      },
+      "artifactTemplates": [
+        {
+          "id": "apis_mellifera_hive_observation",
+          "artifactType": "hive_observation",
+          "label": "hive observation",
+          "ethical": true,
+          "description": "Ethical hive observation collection"
+        },
+        {
+          "id": "apis_mellifera_pollination_event_record",
+          "artifactType": "pollination_event_record",
+          "label": "pollination event record",
+          "ethical": true,
+          "description": "Ethical pollination event record collection"
+        },
+        {
+          "id": "apis_mellifera_behavioral_field_note",
+          "artifactType": "behavioral_field_note",
+          "label": "behavioral field note",
+          "ethical": true,
+          "description": "Ethical behavioral field note collection"
+        }
+      ],
+      "gameplay": {
+        "region": "grassland",
+        "questType": "behavior",
+        "dangerLevel": 1,
+        "ethicalInteraction": "observe_from_distance",
+        "timeRange": "Present",
+        "diet": "Herbivore (nectar/pollen)",
+        "activity": "Diurnal",
+        "size": "1.2\u20131.5 cm body length",
+        "behavior": "Eusocial colony; waggle dance communication",
+        "learningTopics": [
+          "pollination",
+          "colony behavior",
+          "food webs"
+        ],
+        "funFacts": [
+          "Waggle dance encodes distance and direction to flowers",
+          "Pollinate 1/3 of food crops"
+        ],
+        "whyItMatters": "Essential pollinator supporting global agriculture and wild plants."
+      },
+      "nasaLayerDependencies": [
+        {
+          "layer": "forest_structure",
+          "product": "gedi",
+          "reason": "Canopy structure shapes arboreal and forest-floor species niches"
+        },
+        {
+          "layer": "vegetation",
+          "product": "hls",
+          "reason": "NDVI tracks seasonal canopy and understory productivity"
+        },
+        {
+          "layer": "vegetation",
+          "product": "hls",
+          "reason": "Flowering plant availability tied to vegetation health"
+        },
+        {
+          "layer": "heat_drought",
+          "product": "ecostress",
+          "reason": "Drought stress reduces nectar resources for pollinators"
+        },
+        {
+          "layer": "climate",
+          "product": "power",
+          "reason": "Field expedition planning uses local climate baselines"
+        }
+      ],
+      "requiredHabitatSignals": [
+        {
+          "signal": "dense_canopy",
+          "layer": "forest_structure",
+          "required": true,
+          "description": "Requires closed or partial canopy cover"
+        },
+        {
+          "signal": "low_fire_activity",
+          "layer": "fire",
+          "required": false,
+          "description": "Pollinator fields benefit from low recent fire activity"
+        }
+      ],
+      "provenance": [
+        {
+          "source": "game_authored",
+          "sourceVersion": "mvp-current",
+          "sourceRecordId": "apis_mellifera",
+          "license": "GAME-ORIGINAL",
+          "citation": "Archive of Life: Artifact World authored prototype content",
+          "citationRequired": false,
+          "retrievedAt": "2026-07-05T03:27:29.539Z",
+          "lastUpdated": "2026-07-05T03:27:29.539Z",
+          "isMockData": false,
+          "verificationStatus": "game_authored_verified"
+        },
+        {
+          "source": "catalogue_of_life",
+          "sourceVersion": "mock-sample-2026-07",
+          "sourceRecordId": "MOCK-apis_mellifera",
+          "catalogueOfLifeId": "MOCK-COL-apis_mellifera",
+          "license": "MOCK-SAMPLE",
+          "citation": "MOCK SAMPLE \u2014 not sourced from live API; requires approved source snapshot import",
+          "citationRequired": true,
+          "retrievedAt": "2026-07-05T03:27:29.539Z",
+          "lastUpdated": "2026-07-05T03:27:29.539Z",
+          "isMockData": true,
+          "verificationStatus": "mock_sample"
+        }
+      ]
+    },
+    {
+      "id": "formica_rufa",
+      "commonName": "Red Wood Ant",
+      "scientificName": "Formica rufa",
+      "group": "Insect",
+      "tier": "hero",
+      "representationTier": 6,
+      "lifeStatus": "extant",
+      "timeUnitIds": [
+        "holocene"
+      ],
+      "taxonomy": {
+        "family": "Formicidae",
+        "rank": "species",
+        "acceptedName": "Formica rufa",
+        "catalogueOfLifeId": "MOCK-COL-formica_rufa"
+      },
+      "conservation": {
+        "iucnCategory": "Least Concern",
+        "assessed": true,
+        "sourceVersion": "mock-iucn-2026-07",
+        "lastUpdated": "2026-07-02",
+        "iucnTaxonId": 91840
+      },
+      "distribution": {
+        "continents": [
+          "Europe"
+        ],
+        "habitats": [
+          "forest"
+        ],
+        "sourceVersion": "mock-gbif-2026-07",
+        "lastUpdated": "2026-07-02",
+        "gbifTaxonKey": 7956046,
+        "occurrenceSummaries": [
+          {
+            "region": "Europe",
+            "occurrenceCount": 4851
+          }
+        ]
+      },
+      "artifactTemplates": [
+        {
+          "id": "formica_rufa_burrow_cast",
+          "artifactType": "burrow_cast",
+          "label": "burrow cast",
+          "ethical": true,
+          "description": "Ethical burrow cast collection"
+        },
+        {
+          "id": "formica_rufa_behavioral_field_note",
+          "artifactType": "behavioral_field_note",
+          "label": "behavioral field note",
+          "ethical": true,
+          "description": "Ethical behavioral field note collection"
+        },
+        {
+          "id": "formica_rufa_colony_map",
+          "artifactType": "colony_map",
+          "label": "colony map",
+          "ethical": true,
+          "description": "Ethical colony map collection"
+        }
+      ],
+      "gameplay": {
+        "region": "forest",
+        "questType": "micro_world",
+        "dangerLevel": 0,
+        "ethicalInteraction": "observe_without_disturbing",
+        "timeRange": "Present",
+        "diet": "Omnivore",
+        "activity": "Diurnal",
+        "size": "4.5\u20139 mm workers",
+        "behavior": "Large mound-building colonies; chemical communication",
+        "learningTopics": [
+          "colony behavior",
+          "soil ecology",
+          "decomposition"
+        ],
+        "funFacts": [
+          "Mounds can be 2 m tall",
+          "Farm aphids for honeydew"
+        ],
+        "whyItMatters": "Soil aerators and decomposers critical to forest health."
+      },
+      "nasaLayerDependencies": [
+        {
+          "layer": "forest_structure",
+          "product": "gedi",
+          "reason": "Canopy structure shapes arboreal and forest-floor species niches"
+        },
+        {
+          "layer": "vegetation",
+          "product": "hls",
+          "reason": "NDVI tracks seasonal canopy and understory productivity"
+        },
+        {
+          "layer": "climate",
+          "product": "power",
+          "reason": "Field expedition planning uses local climate baselines"
+        }
+      ],
+      "requiredHabitatSignals": [
+        {
+          "signal": "dense_canopy",
+          "layer": "forest_structure",
+          "required": true,
+          "description": "Requires closed or partial canopy cover"
+        }
+      ],
+      "provenance": [
+        {
+          "source": "game_authored",
+          "sourceVersion": "mvp-current",
+          "sourceRecordId": "formica_rufa",
+          "license": "GAME-ORIGINAL",
+          "citation": "Archive of Life: Artifact World authored prototype content",
+          "citationRequired": false,
+          "retrievedAt": "2026-07-05T03:27:29.539Z",
+          "lastUpdated": "2026-07-05T03:27:29.539Z",
+          "isMockData": false,
+          "verificationStatus": "game_authored_verified"
+        },
+        {
+          "source": "catalogue_of_life",
+          "sourceVersion": "mock-sample-2026-07",
+          "sourceRecordId": "MOCK-formica_rufa",
+          "catalogueOfLifeId": "MOCK-COL-formica_rufa",
+          "license": "MOCK-SAMPLE",
+          "citation": "MOCK SAMPLE \u2014 not sourced from live API; requires approved source snapshot import",
+          "citationRequired": true,
+          "retrievedAt": "2026-07-05T03:27:29.539Z",
+          "lastUpdated": "2026-07-05T03:27:29.539Z",
+          "isMockData": true,
+          "verificationStatus": "mock_sample"
+        }
+      ]
+    },
+    {
+      "id": "anax_junius",
+      "commonName": "Common Green Darner",
+      "scientificName": "Anax junius",
+      "group": "Insect",
+      "tier": "hero",
+      "representationTier": 6,
+      "lifeStatus": "extant",
+      "timeUnitIds": [
+        "holocene"
+      ],
+      "taxonomy": {
+        "family": "Aeshnidae",
+        "rank": "species",
+        "acceptedName": "Anax junius",
+        "catalogueOfLifeId": "MOCK-COL-anax_junius"
+      },
+      "conservation": {
+        "iucnCategory": "Least Concern",
+        "assessed": true,
+        "sourceVersion": "mock-iucn-2026-07",
+        "lastUpdated": "2026-07-02",
+        "iucnTaxonId": 10084
+      },
+      "distribution": {
+        "continents": [
+          "North America"
+        ],
+        "habitats": [
+          "wetland",
+          "pond",
+          "river"
+        ],
+        "sourceVersion": "mock-gbif-2026-07",
+        "lastUpdated": "2026-07-02",
+        "gbifTaxonKey": 4100354,
+        "occurrenceSummaries": [
+          {
+            "region": "North America",
+            "occurrenceCount": 2562
+          }
+        ]
+      },
+      "artifactTemplates": [
+        {
+          "id": "anax_junius_photo_record",
+          "artifactType": "photo_record",
+          "label": "photo record",
+          "ethical": true,
+          "description": "Ethical photo record collection"
+        },
+        {
+          "id": "anax_junius_molted_exoskeleton",
+          "artifactType": "molted_exoskeleton",
+          "label": "molted exoskeleton",
+          "ethical": true,
+          "description": "Ethical molted exoskeleton collection"
+        },
+        {
+          "id": "anax_junius_behavioral_field_note",
+          "artifactType": "behavioral_field_note",
+          "label": "behavioral field note",
+          "ethical": true,
+          "description": "Ethical behavioral field note collection"
+        }
+      ],
+      "gameplay": {
+        "region": "wetland",
+        "questType": "behavior",
+        "dangerLevel": 0,
+        "ethicalInteraction": "observe_without_capturing",
+        "timeRange": "Present",
+        "diet": "Carnivore",
+        "activity": "Diurnal",
+        "size": "Wingspan 7.0\u20138.0 cm",
+        "behavior": "Aerial predator; migratory",
+        "learningTopics": [
+          "flight mechanics",
+          "aquatic larvae",
+          "predation"
+        ],
+        "funFacts": [
+          "Can fly 50 km/h",
+          "Larvae live underwater up to 2 years"
+        ],
+        "whyItMatters": "Controls mosquito populations; indicator of wetland health."
+      },
+      "nasaLayerDependencies": [
+        {
+          "layer": "water",
+          "product": "gibs",
+          "reason": "Surface water extent critical for wetland specialists"
+        },
+        {
+          "layer": "water",
+          "product": "gibs",
+          "reason": "Breeding depends on wetland water availability"
+        },
+        {
+          "layer": "heat_drought",
+          "product": "ecostress",
+          "reason": "Temperature and moisture gate amphibian activity"
+        },
+        {
+          "layer": "climate",
+          "product": "power",
+          "reason": "Field expedition planning uses local climate baselines"
+        }
+      ],
+      "requiredHabitatSignals": [
+        {
+          "signal": "surface_water",
+          "layer": "water",
+          "minValue": 0.3,
+          "required": true,
+          "description": "Depends on standing water or saturated soils"
+        }
+      ],
+      "provenance": [
+        {
+          "source": "game_authored",
+          "sourceVersion": "mvp-current",
+          "sourceRecordId": "anax_junius",
+          "license": "GAME-ORIGINAL",
+          "citation": "Archive of Life: Artifact World authored prototype content",
+          "citationRequired": false,
+          "retrievedAt": "2026-07-05T03:27:29.539Z",
+          "lastUpdated": "2026-07-05T03:27:29.539Z",
+          "isMockData": false,
+          "verificationStatus": "game_authored_verified"
+        },
+        {
+          "source": "catalogue_of_life",
+          "sourceVersion": "mock-sample-2026-07",
+          "sourceRecordId": "MOCK-anax_junius",
+          "catalogueOfLifeId": "MOCK-COL-anax_junius",
+          "license": "MOCK-SAMPLE",
+          "citation": "MOCK SAMPLE \u2014 not sourced from live API; requires approved source snapshot import",
+          "citationRequired": true,
+          "retrievedAt": "2026-07-05T03:27:29.539Z",
+          "lastUpdated": "2026-07-05T03:27:29.539Z",
+          "isMockData": true,
+          "verificationStatus": "mock_sample"
+        }
+      ]
+    },
+    {
+      "id": "latrodectus_mactans",
+      "commonName": "Southern Black Widow",
+      "scientificName": "Latrodectus mactans",
+      "group": "Arachnid",
+      "tier": "hero",
+      "representationTier": 6,
+      "lifeStatus": "extant",
+      "timeUnitIds": [
+        "holocene"
+      ],
+      "taxonomy": {
+        "family": "Theridiidae",
+        "rank": "species",
+        "acceptedName": "Latrodectus mactans",
+        "catalogueOfLifeId": "MOCK-COL-latrodectus_mactans"
+      },
+      "conservation": {
+        "iucnCategory": "Least Concern",
+        "assessed": true,
+        "sourceVersion": "mock-iucn-2026-07",
+        "lastUpdated": "2026-07-02",
+        "iucnTaxonId": 36110
+      },
+      "distribution": {
+        "continents": [
+          "North America"
+        ],
+        "habitats": [
+          "grassland",
+          "forest edge",
+          "urban"
+        ],
+        "sourceVersion": "mock-gbif-2026-07",
+        "lastUpdated": "2026-07-02",
+        "gbifTaxonKey": 759577,
+        "occurrenceSummaries": [
+          {
+            "region": "North America",
+            "occurrenceCount": 3037
+          }
+        ]
+      },
+      "artifactTemplates": [
+        {
+          "id": "latrodectus_mactans_web_silk_sample",
+          "artifactType": "web_silk_sample",
+          "label": "web silk sample",
+          "ethical": true,
+          "description": "Ethical web silk sample collection"
+        },
+        {
+          "id": "latrodectus_mactans_photo_record",
+          "artifactType": "photo_record",
+          "label": "photo record",
+          "ethical": true,
+          "description": "Ethical photo record collection"
+        },
+        {
+          "id": "latrodectus_mactans_behavioral_field_note",
+          "artifactType": "behavioral_field_note",
+          "label": "behavioral field note",
+          "ethical": true,
+          "description": "Ethical behavioral field note collection"
+        }
+      ],
+      "gameplay": {
+        "region": "grassland",
+        "questType": "observation",
+        "dangerLevel": 2,
+        "ethicalInteraction": "observe_from_distance",
+        "timeRange": "Present",
+        "diet": "Carnivore",
+        "activity": "Nocturnal",
+        "size": "Body 8\u201313 mm",
+        "behavior": "Web-building ambush predator",
+        "learningTopics": [
+          "web physics",
+          "venom",
+          "pest control"
+        ],
+        "funFacts": [
+          "Silk is stronger than steel by weight",
+          "Bites are rarely fatal to humans"
+        ],
+        "whyItMatters": "Natural pest control; teaches respect for misunderstood species."
+      },
+      "nasaLayerDependencies": [
+        {
+          "layer": "climate",
+          "product": "power",
+          "reason": "Field expedition planning uses local climate baselines"
+        }
+      ],
+      "provenance": [
+        {
+          "source": "game_authored",
+          "sourceVersion": "mvp-current",
+          "sourceRecordId": "latrodectus_mactans",
+          "license": "GAME-ORIGINAL",
+          "citation": "Archive of Life: Artifact World authored prototype content",
+          "citationRequired": false,
+          "retrievedAt": "2026-07-05T03:27:29.539Z",
+          "lastUpdated": "2026-07-05T03:27:29.539Z",
+          "isMockData": false,
+          "verificationStatus": "game_authored_verified"
+        },
+        {
+          "source": "catalogue_of_life",
+          "sourceVersion": "mock-sample-2026-07",
+          "sourceRecordId": "MOCK-latrodectus_mactans",
+          "catalogueOfLifeId": "MOCK-COL-latrodectus_mactans",
+          "license": "MOCK-SAMPLE",
+          "citation": "MOCK SAMPLE \u2014 not sourced from live API; requires approved source snapshot import",
+          "citationRequired": true,
+          "retrievedAt": "2026-07-05T03:27:29.539Z",
+          "lastUpdated": "2026-07-05T03:27:29.539Z",
+          "isMockData": true,
+          "verificationStatus": "mock_sample"
+        }
+      ]
+    },
+    {
+      "id": "dynastes_hercules",
+      "commonName": "Hercules Beetle",
+      "scientificName": "Dynastes hercules",
+      "group": "Insect",
+      "tier": "hero",
+      "representationTier": 6,
+      "lifeStatus": "extant",
+      "timeUnitIds": [
+        "holocene"
+      ],
+      "taxonomy": {
+        "family": "Scarabaeidae",
+        "rank": "species",
+        "acceptedName": "Dynastes hercules",
+        "catalogueOfLifeId": "MOCK-COL-dynastes_hercules"
+      },
+      "conservation": {
+        "iucnCategory": "Least Concern",
+        "assessed": true,
+        "sourceVersion": "mock-iucn-2026-07",
+        "lastUpdated": "2026-07-02",
+        "iucnTaxonId": 33149
+      },
+      "distribution": {
+        "continents": [
+          "Central America",
+          "South America"
+        ],
+        "habitats": [
+          "rainforest"
+        ],
+        "sourceVersion": "mock-gbif-2026-07",
+        "lastUpdated": "2026-07-02",
+        "gbifTaxonKey": 6144646,
+        "occurrenceSummaries": [
+          {
+            "region": "Central America",
+            "occurrenceCount": 1157
+          }
+        ]
+      },
+      "artifactTemplates": [
+        {
+          "id": "dynastes_hercules_molted_exoskeleton",
+          "artifactType": "molted_exoskeleton",
+          "label": "molted exoskeleton",
+          "ethical": true,
+          "description": "Ethical molted exoskeleton collection"
+        },
+        {
+          "id": "dynastes_hercules_photo_record",
+          "artifactType": "photo_record",
+          "label": "photo record",
+          "ethical": true,
+          "description": "Ethical photo record collection"
+        },
+        {
+          "id": "dynastes_hercules_behavioral_field_note",
+          "artifactType": "behavioral_field_note",
+          "label": "behavioral field note",
+          "ethical": true,
+          "description": "Ethical behavioral field note collection"
+        }
+      ],
+      "gameplay": {
+        "region": "forest",
+        "questType": "micro_world",
+        "dangerLevel": 0,
+        "ethicalInteraction": "observe_without_harming",
+        "timeRange": "Present",
+        "diet": "Herbivore (larva); Nectar/fruit (adult)",
+        "activity": "Nocturnal",
+        "size": "Up to 17 cm including horn",
+        "behavior": "Males compete with horns; larvae in decaying wood",
+        "learningTopics": [
+          "sexual selection",
+          "decomposition",
+          "exoskeleton"
+        ],
+        "funFacts": [
+          "Can lift 850 times its body weight",
+          "Horn is for competition not defense"
+        ],
+        "whyItMatters": "Decomposer larvae recycle rainforest nutrients."
+      },
+      "nasaLayerDependencies": [
+        {
+          "layer": "forest_structure",
+          "product": "gedi",
+          "reason": "Canopy structure shapes arboreal and forest-floor species niches"
+        },
+        {
+          "layer": "vegetation",
+          "product": "hls",
+          "reason": "NDVI tracks seasonal canopy and understory productivity"
+        },
+        {
+          "layer": "vegetation",
+          "product": "hls",
+          "reason": "Flowering plant availability tied to vegetation health"
+        },
+        {
+          "layer": "heat_drought",
+          "product": "ecostress",
+          "reason": "Drought stress reduces nectar resources for pollinators"
+        },
+        {
+          "layer": "climate",
+          "product": "power",
+          "reason": "Field expedition planning uses local climate baselines"
+        }
+      ],
+      "requiredHabitatSignals": [
+        {
+          "signal": "dense_canopy",
+          "layer": "forest_structure",
+          "required": true,
+          "description": "Requires closed or partial canopy cover"
+        },
+        {
+          "signal": "low_fire_activity",
+          "layer": "fire",
+          "required": false,
+          "description": "Pollinator fields benefit from low recent fire activity"
+        }
+      ],
+      "provenance": [
+        {
+          "source": "game_authored",
+          "sourceVersion": "mvp-current",
+          "sourceRecordId": "dynastes_hercules",
+          "license": "GAME-ORIGINAL",
+          "citation": "Archive of Life: Artifact World authored prototype content",
+          "citationRequired": false,
+          "retrievedAt": "2026-07-05T03:27:29.539Z",
+          "lastUpdated": "2026-07-05T03:27:29.539Z",
+          "isMockData": false,
+          "verificationStatus": "game_authored_verified"
+        },
+        {
+          "source": "catalogue_of_life",
+          "sourceVersion": "mock-sample-2026-07",
+          "sourceRecordId": "MOCK-dynastes_hercules",
+          "catalogueOfLifeId": "MOCK-COL-dynastes_hercules",
+          "license": "MOCK-SAMPLE",
+          "citation": "MOCK SAMPLE \u2014 not sourced from live API; requires approved source snapshot import",
+          "citationRequired": true,
+          "retrievedAt": "2026-07-05T03:27:29.539Z",
+          "lastUpdated": "2026-07-05T03:27:29.539Z",
+          "isMockData": true,
+          "verificationStatus": "mock_sample"
+        }
+      ]
+    },
+    {
+      "id": "libellula_quadrimaculata",
+      "commonName": "Four-spotted Skimmer",
+      "scientificName": "Libellula quadrimaculata",
+      "group": "Insect",
+      "tier": "hero",
+      "representationTier": 6,
+      "lifeStatus": "extant",
+      "timeUnitIds": [
+        "holocene"
+      ],
+      "taxonomy": {
+        "family": "Libellulidae",
+        "rank": "species",
+        "acceptedName": "Libellula quadrimaculata",
+        "catalogueOfLifeId": "MOCK-COL-libellula_quadrimaculata"
+      },
+      "conservation": {
+        "iucnCategory": "Least Concern",
+        "assessed": true,
+        "sourceVersion": "mock-iucn-2026-07",
+        "lastUpdated": "2026-07-02",
+        "iucnTaxonId": 64823
+      },
+      "distribution": {
+        "continents": [
+          "Europe",
+          "North America"
+        ],
+        "habitats": [
+          "wetland",
+          "pond"
+        ],
+        "sourceVersion": "mock-gbif-2026-07",
+        "lastUpdated": "2026-07-02",
+        "gbifTaxonKey": 1246352,
+        "occurrenceSummaries": [
+          {
+            "region": "Europe",
+            "occurrenceCount": 1304
+          }
+        ]
+      },
+      "artifactTemplates": [
+        {
+          "id": "libellula_quadrimaculata_photo_record",
+          "artifactType": "photo_record",
+          "label": "photo record",
+          "ethical": true,
+          "description": "Ethical photo record collection"
+        },
+        {
+          "id": "libellula_quadrimaculata_molted_exoskeleton",
+          "artifactType": "molted_exoskeleton",
+          "label": "molted exoskeleton",
+          "ethical": true,
+          "description": "Ethical molted exoskeleton collection"
+        },
+        {
+          "id": "libellula_quadrimaculata_behavioral_field_note",
+          "artifactType": "behavioral_field_note",
+          "label": "behavioral field note",
+          "ethical": true,
+          "description": "Ethical behavioral field note collection"
+        }
+      ],
+      "gameplay": {
+        "region": "wetland",
+        "questType": "behavior",
+        "dangerLevel": 0,
+        "ethicalInteraction": "observe_without_capturing",
+        "timeRange": "Present",
+        "diet": "Carnivore",
+        "activity": "Diurnal",
+        "size": "Wingspan 7.0\u20138.5 cm",
+        "behavior": "Territorial perch-hunter over water",
+        "learningTopics": [
+          "flight",
+          "metamorphosis",
+          "wetland ecology"
+        ],
+        "funFacts": [
+          "Four wings move independently",
+          "Nearly 360\u00b0 vision"
+        ],
+        "whyItMatters": "Top aerial predator in pond ecosystems."
+      },
+      "nasaLayerDependencies": [
+        {
+          "layer": "water",
+          "product": "gibs",
+          "reason": "Surface water extent critical for wetland specialists"
+        },
+        {
+          "layer": "water",
+          "product": "gibs",
+          "reason": "Breeding depends on wetland water availability"
+        },
+        {
+          "layer": "heat_drought",
+          "product": "ecostress",
+          "reason": "Temperature and moisture gate amphibian activity"
+        },
+        {
+          "layer": "climate",
+          "product": "power",
+          "reason": "Field expedition planning uses local climate baselines"
+        }
+      ],
+      "requiredHabitatSignals": [
+        {
+          "signal": "surface_water",
+          "layer": "water",
+          "minValue": 0.3,
+          "required": true,
+          "description": "Depends on standing water or saturated soils"
+        }
+      ],
+      "provenance": [
+        {
+          "source": "game_authored",
+          "sourceVersion": "mvp-current",
+          "sourceRecordId": "libellula_quadrimaculata",
+          "license": "GAME-ORIGINAL",
+          "citation": "Archive of Life: Artifact World authored prototype content",
+          "citationRequired": false,
+          "retrievedAt": "2026-07-05T03:27:29.539Z",
+          "lastUpdated": "2026-07-05T03:27:29.539Z",
+          "isMockData": false,
+          "verificationStatus": "game_authored_verified"
+        },
+        {
+          "source": "catalogue_of_life",
+          "sourceVersion": "mock-sample-2026-07",
+          "sourceRecordId": "MOCK-libellula_quadrimaculata",
+          "catalogueOfLifeId": "MOCK-COL-libellula_quadrimaculata",
+          "license": "MOCK-SAMPLE",
+          "citation": "MOCK SAMPLE \u2014 not sourced from live API; requires approved source snapshot import",
+          "citationRequired": true,
+          "retrievedAt": "2026-07-05T03:27:29.539Z",
+          "lastUpdated": "2026-07-05T03:27:29.539Z",
+          "isMockData": true,
+          "verificationStatus": "mock_sample"
+        }
+      ]
+    },
+    {
+      "id": "bombus_terrestris",
+      "commonName": "Buff-tailed Bumblebee",
+      "scientificName": "Bombus terrestris",
+      "group": "Insect",
+      "tier": "hero",
+      "representationTier": 6,
+      "lifeStatus": "extant",
+      "timeUnitIds": [
+        "holocene"
+      ],
+      "taxonomy": {
+        "family": "Apidae",
+        "rank": "species",
+        "acceptedName": "Bombus terrestris",
+        "catalogueOfLifeId": "MOCK-COL-bombus_terrestris"
+      },
+      "conservation": {
+        "iucnCategory": "Least Concern",
+        "assessed": true,
+        "sourceVersion": "mock-iucn-2026-07",
+        "lastUpdated": "2026-07-02",
+        "iucnTaxonId": 27095
+      },
+      "distribution": {
+        "continents": [
+          "Europe"
+        ],
+        "habitats": [
+          "grassland",
+          "forest",
+          "garden"
+        ],
+        "sourceVersion": "mock-gbif-2026-07",
+        "lastUpdated": "2026-07-02",
+        "gbifTaxonKey": 8408237,
+        "occurrenceSummaries": [
+          {
+            "region": "Europe",
+            "occurrenceCount": 2964
+          }
+        ]
+      },
+      "artifactTemplates": [
+        {
+          "id": "bombus_terrestris_pollination_event_record",
+          "artifactType": "pollination_event_record",
+          "label": "pollination event record",
+          "ethical": true,
+          "description": "Ethical pollination event record collection"
+        },
+        {
+          "id": "bombus_terrestris_hive_observation",
+          "artifactType": "hive_observation",
+          "label": "hive observation",
+          "ethical": true,
+          "description": "Ethical hive observation collection"
+        },
+        {
+          "id": "bombus_terrestris_photo_record",
+          "artifactType": "photo_record",
+          "label": "photo record",
+          "ethical": true,
+          "description": "Ethical photo record collection"
+        }
+      ],
+      "gameplay": {
+        "region": "grassland",
+        "questType": "behavior",
+        "dangerLevel": 1,
+        "ethicalInteraction": "observe_from_distance",
+        "timeRange": "Present",
+        "diet": "Herbivore (nectar/pollen)",
+        "activity": "Diurnal",
+        "size": "1.5\u20132.0 cm body length",
+        "behavior": "Colony nesting; buzz pollination",
+        "learningTopics": [
+          "pollination",
+          "buzz pollination",
+          "colony collapse"
+        ],
+        "funFacts": [
+          "Can fly in cooler weather than honeybees",
+          "Buzz pollination releases trapped pollen"
+        ],
+        "whyItMatters": "Critical wild pollinator for tomatoes, blueberries, and wildflowers."
+      },
+      "nasaLayerDependencies": [
+        {
+          "layer": "forest_structure",
+          "product": "gedi",
+          "reason": "Canopy structure shapes arboreal and forest-floor species niches"
+        },
+        {
+          "layer": "vegetation",
+          "product": "hls",
+          "reason": "NDVI tracks seasonal canopy and understory productivity"
+        },
+        {
+          "layer": "vegetation",
+          "product": "hls",
+          "reason": "Flowering plant availability tied to vegetation health"
+        },
+        {
+          "layer": "heat_drought",
+          "product": "ecostress",
+          "reason": "Drought stress reduces nectar resources for pollinators"
+        },
+        {
+          "layer": "climate",
+          "product": "power",
+          "reason": "Field expedition planning uses local climate baselines"
+        }
+      ],
+      "requiredHabitatSignals": [
+        {
+          "signal": "dense_canopy",
+          "layer": "forest_structure",
+          "required": true,
+          "description": "Requires closed or partial canopy cover"
+        },
+        {
+          "signal": "low_fire_activity",
+          "layer": "fire",
+          "required": false,
+          "description": "Pollinator fields benefit from low recent fire activity"
+        }
+      ],
+      "provenance": [
+        {
+          "source": "game_authored",
+          "sourceVersion": "mvp-current",
+          "sourceRecordId": "bombus_terrestris",
+          "license": "GAME-ORIGINAL",
+          "citation": "Archive of Life: Artifact World authored prototype content",
+          "citationRequired": false,
+          "retrievedAt": "2026-07-05T03:27:29.539Z",
+          "lastUpdated": "2026-07-05T03:27:29.539Z",
+          "isMockData": false,
+          "verificationStatus": "game_authored_verified"
+        },
+        {
+          "source": "catalogue_of_life",
+          "sourceVersion": "mock-sample-2026-07",
+          "sourceRecordId": "MOCK-bombus_terrestris",
+          "catalogueOfLifeId": "MOCK-COL-bombus_terrestris",
+          "license": "MOCK-SAMPLE",
+          "citation": "MOCK SAMPLE \u2014 not sourced from live API; requires approved source snapshot import",
+          "citationRequired": true,
+          "retrievedAt": "2026-07-05T03:27:29.539Z",
+          "lastUpdated": "2026-07-05T03:27:29.539Z",
+          "isMockData": true,
+          "verificationStatus": "mock_sample"
+        }
+      ]
+    },
+    {
+      "id": "acanthoscurria_geniculata",
+      "commonName": "Brazilian Whiteknee Tarantula",
+      "scientificName": "Acanthoscurria geniculata",
+      "group": "Arachnid",
+      "tier": "hero",
+      "representationTier": 6,
+      "lifeStatus": "extant",
+      "timeUnitIds": [
+        "holocene"
+      ],
+      "taxonomy": {
+        "family": "Theraphosidae",
+        "rank": "species",
+        "acceptedName": "Acanthoscurria geniculata",
+        "catalogueOfLifeId": "MOCK-COL-acanthoscurria_geniculata"
+      },
+      "conservation": {
+        "iucnCategory": "Least Concern",
+        "assessed": true,
+        "sourceVersion": "mock-iucn-2026-07",
+        "lastUpdated": "2026-07-02",
+        "iucnTaxonId": 97897
+      },
+      "distribution": {
+        "continents": [
+          "South America"
+        ],
+        "habitats": [
+          "rainforest floor"
+        ],
+        "sourceVersion": "mock-gbif-2026-07",
+        "lastUpdated": "2026-07-02",
+        "gbifTaxonKey": 2430698,
+        "occurrenceSummaries": [
+          {
+            "region": "South America",
+            "occurrenceCount": 2505
+          }
+        ]
+      },
+      "artifactTemplates": [
+        {
+          "id": "acanthoscurria_geniculata_molted_exoskeleton",
+          "artifactType": "molted_exoskeleton",
+          "label": "molted exoskeleton",
+          "ethical": true,
+          "description": "Ethical molted exoskeleton collection"
+        },
+        {
+          "id": "acanthoscurria_geniculata_burrow_cast",
+          "artifactType": "burrow_cast",
+          "label": "burrow cast",
+          "ethical": true,
+          "description": "Ethical burrow cast collection"
+        },
+        {
+          "id": "acanthoscurria_geniculata_photo_record",
+          "artifactType": "photo_record",
+          "label": "photo record",
+          "ethical": true,
+          "description": "Ethical photo record collection"
+        }
+      ],
+      "gameplay": {
+        "region": "forest",
+        "questType": "micro_world",
+        "dangerLevel": 1,
+        "ethicalInteraction": "observe_without_disturbing",
+        "timeRange": "Present",
+        "diet": "Carnivore",
+        "activity": "Nocturnal",
+        "size": "Leg span up to 20 cm",
+        "behavior": "Burrowing ambush predator; molting growth",
+        "learningTopics": [
+          "molting",
+          "exoskeleton",
+          "rainforest floor ecology"
+        ],
+        "funFacts": [
+          "Can live 20+ years",
+          "Urticating hairs used for defense"
+        ],
+        "whyItMatters": "Controls insect populations on rainforest floor."
+      },
+      "nasaLayerDependencies": [
+        {
+          "layer": "climate",
+          "product": "power",
+          "reason": "Field expedition planning uses local climate baselines"
+        }
+      ],
+      "provenance": [
+        {
+          "source": "game_authored",
+          "sourceVersion": "mvp-current",
+          "sourceRecordId": "acanthoscurria_geniculata",
+          "license": "GAME-ORIGINAL",
+          "citation": "Archive of Life: Artifact World authored prototype content",
+          "citationRequired": false,
+          "retrievedAt": "2026-07-05T03:27:29.539Z",
+          "lastUpdated": "2026-07-05T03:27:29.539Z",
+          "isMockData": false,
+          "verificationStatus": "game_authored_verified"
+        },
+        {
+          "source": "catalogue_of_life",
+          "sourceVersion": "mock-sample-2026-07",
+          "sourceRecordId": "MOCK-acanthoscurria_geniculata",
+          "catalogueOfLifeId": "MOCK-COL-acanthoscurria_geniculata",
+          "license": "MOCK-SAMPLE",
+          "citation": "MOCK SAMPLE \u2014 not sourced from live API; requires approved source snapshot import",
+          "citationRequired": true,
+          "retrievedAt": "2026-07-05T03:27:29.539Z",
+          "lastUpdated": "2026-07-05T03:27:29.539Z",
+          "isMockData": true,
+          "verificationStatus": "mock_sample"
+        }
+      ]
+    },
+    {
+      "id": "pachnoda_marginata",
+      "commonName": "Sun Beetle",
+      "scientificName": "Pachnoda marginata",
+      "group": "Insect",
+      "tier": "hero",
+      "representationTier": 6,
+      "lifeStatus": "extant",
+      "timeUnitIds": [
+        "holocene"
+      ],
+      "taxonomy": {
+        "family": "Scarabaeidae",
+        "rank": "species",
+        "acceptedName": "Pachnoda marginata",
+        "catalogueOfLifeId": "MOCK-COL-pachnoda_marginata"
+      },
+      "conservation": {
+        "iucnCategory": "Least Concern",
+        "assessed": true,
+        "sourceVersion": "mock-iucn-2026-07",
+        "lastUpdated": "2026-07-02",
+        "iucnTaxonId": 92682
+      },
+      "distribution": {
+        "continents": [
+          "Africa"
+        ],
+        "habitats": [
+          "tropical forest",
+          "savanna"
+        ],
+        "sourceVersion": "mock-gbif-2026-07",
+        "lastUpdated": "2026-07-02",
+        "gbifTaxonKey": 1375208,
+        "occurrenceSummaries": [
+          {
+            "region": "Africa",
+            "occurrenceCount": 823
+          }
+        ]
+      },
+      "artifactTemplates": [
+        {
+          "id": "pachnoda_marginata_molted_exoskeleton",
+          "artifactType": "molted_exoskeleton",
+          "label": "molted exoskeleton",
+          "ethical": true,
+          "description": "Ethical molted exoskeleton collection"
+        },
+        {
+          "id": "pachnoda_marginata_photo_record",
+          "artifactType": "photo_record",
+          "label": "photo record",
+          "ethical": true,
+          "description": "Ethical photo record collection"
+        },
+        {
+          "id": "pachnoda_marginata_behavioral_field_note",
+          "artifactType": "behavioral_field_note",
+          "label": "behavioral field note",
+          "ethical": true,
+          "description": "Ethical behavioral field note collection"
+        }
+      ],
+      "gameplay": {
+        "region": "savanna",
+        "questType": "micro_world",
+        "dangerLevel": 0,
+        "ethicalInteraction": "observe_without_harming",
+        "timeRange": "Present",
+        "diet": "Herbivore (fruit/flowers)",
+        "activity": "Diurnal",
+        "size": "2.5\u20133.5 cm body length",
+        "behavior": "Bright coloration; larvae in compost",
+        "learningTopics": [
+          "decomposition",
+          "coloration",
+          "life cycle"
+        ],
+        "funFacts": [
+          "Bright yellow warns predators",
+          "Larvae are important decomposers"
+        ],
+        "whyItMatters": "Recycles organic matter in tropical ecosystems."
+      },
+      "nasaLayerDependencies": [
+        {
+          "layer": "fire",
+          "product": "firms",
+          "reason": "Fire regime influences grazer distribution and predator hunting"
+        },
+        {
+          "layer": "heat_drought",
+          "product": "ecostress",
+          "reason": "Dry-season stress affects crepuscular activity patterns"
+        },
+        {
+          "layer": "climate",
+          "product": "power",
+          "reason": "Field expedition planning uses local climate baselines"
+        }
+      ],
+      "provenance": [
+        {
+          "source": "game_authored",
+          "sourceVersion": "mvp-current",
+          "sourceRecordId": "pachnoda_marginata",
+          "license": "GAME-ORIGINAL",
+          "citation": "Archive of Life: Artifact World authored prototype content",
+          "citationRequired": false,
+          "retrievedAt": "2026-07-05T03:27:29.539Z",
+          "lastUpdated": "2026-07-05T03:27:29.539Z",
+          "isMockData": false,
+          "verificationStatus": "game_authored_verified"
+        },
+        {
+          "source": "catalogue_of_life",
+          "sourceVersion": "mock-sample-2026-07",
+          "sourceRecordId": "MOCK-pachnoda_marginata",
+          "catalogueOfLifeId": "MOCK-COL-pachnoda_marginata",
+          "license": "MOCK-SAMPLE",
+          "citation": "MOCK SAMPLE \u2014 not sourced from live API; requires approved source snapshot import",
+          "citationRequired": true,
+          "retrievedAt": "2026-07-05T03:27:29.539Z",
+          "lastUpdated": "2026-07-05T03:27:29.539Z",
+          "isMockData": true,
+          "verificationStatus": "mock_sample"
+        }
+      ]
+    },
+    {
+      "id": "mammuthus_primigenius",
+      "commonName": "Woolly Mammoth",
+      "scientificName": "Mammuthus primigenius",
+      "group": "Mammal",
+      "tier": "hero",
+      "representationTier": 6,
+      "lifeStatus": "extinct",
+      "timeUnitIds": [
+        "pleistocene",
+        "holocene"
+      ],
+      "taxonomy": {
+        "family": "Elephantidae",
+        "rank": "species",
+        "acceptedName": "Mammuthus primigenius",
+        "catalogueOfLifeId": "MOCK-COL-mammuthus_primigenius"
+      },
+      "conservation": {
+        "iucnCategory": "Extinct",
+        "assessed": true,
+        "sourceVersion": "mock-iucn-2026-07",
+        "lastUpdated": "2026-07-02",
+        "iucnTaxonId": 76059
+      },
+      "distribution": {
+        "continents": [
+          "Eurasia",
+          "North America"
+        ],
+        "habitats": [
+          "tundra",
+          "steppe"
+        ],
+        "sourceVersion": "mock-gbif-2026-07",
+        "lastUpdated": "2026-07-02",
+        "gbifTaxonKey": 1926216,
+        "occurrenceSummaries": [
+          {
+            "region": "Eurasia",
+            "occurrenceCount": 5058
+          }
+        ]
+      },
+      "fossil": {
+        "timeRange": "Pleistocene\u2013Holocene (extinct ~4,000 years ago)",
+        "fossilLocations": [
+          "Siberia",
+          "Alaska",
+          "Yukon"
+        ],
+        "paleoenvironment": "Mammoth steppe \u2014 cold grassland",
+        "livingRelatives": [
+          "Asian Elephant"
+        ],
+        "paleobiodbTaxonNo": 612372,
+        "sourceVersion": "mock-pbdb-2026-07",
+        "lastUpdated": "2026-07-02"
+      },
+      "artifactTemplates": [
+        {
+          "id": "mammuthus_primigenius_fossil_tooth_replica",
+          "artifactType": "fossil_tooth_replica",
+          "label": "fossil tooth replica",
+          "ethical": true,
+          "description": "Ethical fossil tooth replica collection"
+        },
+        {
+          "id": "mammuthus_primigenius_fossil_bone_cast",
+          "artifactType": "fossil_bone_cast",
+          "label": "fossil bone cast",
+          "ethical": true,
+          "description": "Ethical fossil bone cast collection"
+        },
+        {
+          "id": "mammuthus_primigenius_excavation_field_note",
+          "artifactType": "excavation_field_note",
+          "label": "excavation field note",
+          "ethical": true,
+          "description": "Ethical excavation field note collection"
+        }
+      ],
+      "gameplay": {
+        "region": "fossil_site",
+        "questType": "fossil",
+        "dangerLevel": 0,
+        "ethicalInteraction": "excavate_carefully",
+        "timeRange": "Pleistocene\u2013Holocene (extinct ~4,000 years ago)",
+        "diet": "Herbivore",
+        "activity": "Diurnal",
+        "size": "Up to 3.4 m shoulder height",
+        "behavior": "Herd grazer adapted to ice age cold",
+        "learningTopics": [
+          "ice age",
+          "adaptation",
+          "extinction",
+          "climate change"
+        ],
+        "funFacts": [
+          "Covered in long fur up to 1 meter",
+          "Closest living relative is the Asian elephant"
+        ],
+        "whyItMatters": "Teaches ice age ecology and human-driven extinction.",
+        "fossilLocations": [
+          "Siberia",
+          "Alaska",
+          "Yukon"
+        ],
+        "livingRelatives": [
+          "Asian Elephant"
+        ]
+      },
+      "nasaLayerDependencies": [
+        {
+          "layer": "natural_events",
+          "product": "eonet",
+          "reason": "Paleoenvironmental context for extinction events"
+        },
+        {
+          "layer": "climate",
+          "product": "power",
+          "reason": "Field expedition planning uses local climate baselines"
+        }
+      ],
+      "provenance": [
+        {
+          "source": "game_authored",
+          "sourceVersion": "mvp-current",
+          "sourceRecordId": "mammuthus_primigenius",
+          "license": "GAME-ORIGINAL",
+          "citation": "Archive of Life: Artifact World authored prototype content",
+          "citationRequired": false,
+          "retrievedAt": "2026-07-05T03:27:29.539Z",
+          "lastUpdated": "2026-07-05T03:27:29.539Z",
+          "isMockData": false,
+          "verificationStatus": "game_authored_verified"
+        },
+        {
+          "source": "paleobiodb",
+          "sourceVersion": "mock-sample-2026-07",
+          "sourceRecordId": "MOCK-mammuthus_primigenius",
+          "paleobiodbTaxonNo": 257354,
+          "license": "MOCK-SAMPLE",
+          "citation": "MOCK SAMPLE \u2014 not sourced from live API; requires approved source snapshot import",
+          "citationRequired": true,
+          "retrievedAt": "2026-07-05T03:27:29.539Z",
+          "lastUpdated": "2026-07-05T03:27:29.539Z",
+          "isMockData": true,
+          "verificationStatus": "mock_sample"
+        }
+      ]
+    },
+    {
+      "id": "tyrannosaurus_rex",
+      "commonName": "Tyrannosaurus rex",
+      "scientificName": "Tyrannosaurus rex",
+      "group": "Reptile",
+      "tier": "hero",
+      "representationTier": 6,
+      "lifeStatus": "extinct",
+      "timeUnitIds": [
+        "late_cretaceous",
+        "cretaceous"
+      ],
+      "taxonomy": {
+        "family": "Tyrannosauridae",
+        "rank": "species",
+        "acceptedName": "Tyrannosaurus rex",
+        "catalogueOfLifeId": "MOCK-COL-tyrannosaurus_rex"
+      },
+      "conservation": {
+        "iucnCategory": "Extinct",
+        "assessed": true,
+        "sourceVersion": "mock-iucn-2026-07",
+        "lastUpdated": "2026-07-02",
+        "iucnTaxonId": 98710
+      },
+      "distribution": {
+        "continents": [
+          "North America"
+        ],
+        "habitats": [
+          "floodplain",
+          "forest"
+        ],
+        "sourceVersion": "mock-gbif-2026-07",
+        "lastUpdated": "2026-07-02",
+        "gbifTaxonKey": 3768675,
+        "occurrenceSummaries": [
+          {
+            "region": "North America",
+            "occurrenceCount": 2322
+          }
+        ]
+      },
+      "fossil": {
+        "timeRange": "Late Cretaceous (~68\u201366 Ma)",
+        "fossilLocations": [
+          "Montana",
+          "South Dakota",
+          "Alberta"
+        ],
+        "paleoenvironment": "Subtropical floodplain with rivers",
+        "livingRelatives": [
+          "Chickens",
+          "All birds"
+        ],
+        "paleobiodbTaxonNo": 534128,
+        "sourceVersion": "mock-pbdb-2026-07",
+        "lastUpdated": "2026-07-02"
+      },
+      "artifactTemplates": [
+        {
+          "id": "tyrannosaurus_rex_fossil_tooth_replica",
+          "artifactType": "fossil_tooth_replica",
+          "label": "fossil tooth replica",
+          "ethical": true,
+          "description": "Ethical fossil tooth replica collection"
+        },
+        {
+          "id": "tyrannosaurus_rex_footprint_slab",
+          "artifactType": "footprint_slab",
+          "label": "footprint slab",
+          "ethical": true,
+          "description": "Ethical footprint slab collection"
+        },
+        {
+          "id": "tyrannosaurus_rex_excavation_field_note",
+          "artifactType": "excavation_field_note",
+          "label": "excavation field note",
+          "ethical": true,
+          "description": "Ethical excavation field note collection"
+        }
+      ],
+      "gameplay": {
+        "region": "fossil_site",
+        "questType": "fossil",
+        "dangerLevel": 0,
+        "ethicalInteraction": "excavate_carefully",
+        "timeRange": "Late Cretaceous (~68\u201366 Ma)",
+        "diet": "Carnivore",
+        "activity": "Unknown (likely crepuscular)",
+        "size": "Up to 12.3 m body length",
+        "behavior": "Apex predator; possibly scavenger opportunist",
+        "learningTopics": [
+          "mesozoic",
+          "apex predators",
+          "fossil evidence",
+          "scientific uncertainty"
+        ],
+        "funFacts": [
+          "Bite force strongest of any land animal",
+          "May have had feathers as juveniles"
+        ],
+        "whyItMatters": "Gateway to understanding dinosaur paleontology and Mesozoic ecosystems.",
+        "fossilLocations": [
+          "Montana",
+          "South Dakota",
+          "Alberta"
+        ],
+        "livingRelatives": [
+          "Chickens",
+          "All birds"
+        ]
+      },
+      "nasaLayerDependencies": [
+        {
+          "layer": "forest_structure",
+          "product": "gedi",
+          "reason": "Canopy structure shapes arboreal and forest-floor species niches"
+        },
+        {
+          "layer": "vegetation",
+          "product": "hls",
+          "reason": "NDVI tracks seasonal canopy and understory productivity"
+        },
+        {
+          "layer": "natural_events",
+          "product": "eonet",
+          "reason": "Paleoenvironmental context for extinction events"
+        },
+        {
+          "layer": "climate",
+          "product": "power",
+          "reason": "Field expedition planning uses local climate baselines"
+        }
+      ],
+      "requiredHabitatSignals": [
+        {
+          "signal": "dense_canopy",
+          "layer": "forest_structure",
+          "required": true,
+          "description": "Requires closed or partial canopy cover"
+        }
+      ],
+      "provenance": [
+        {
+          "source": "game_authored",
+          "sourceVersion": "mvp-current",
+          "sourceRecordId": "tyrannosaurus_rex",
+          "license": "GAME-ORIGINAL",
+          "citation": "Archive of Life: Artifact World authored prototype content",
+          "citationRequired": false,
+          "retrievedAt": "2026-07-05T03:27:29.539Z",
+          "lastUpdated": "2026-07-05T03:27:29.539Z",
+          "isMockData": false,
+          "verificationStatus": "game_authored_verified"
+        },
+        {
+          "source": "paleobiodb",
+          "sourceVersion": "mock-sample-2026-07",
+          "sourceRecordId": "MOCK-tyrannosaurus_rex",
+          "paleobiodbTaxonNo": 305798,
+          "license": "MOCK-SAMPLE",
+          "citation": "MOCK SAMPLE \u2014 not sourced from live API; requires approved source snapshot import",
+          "citationRequired": true,
+          "retrievedAt": "2026-07-05T03:27:29.539Z",
+          "lastUpdated": "2026-07-05T03:27:29.539Z",
+          "isMockData": true,
+          "verificationStatus": "mock_sample"
+        }
+      ]
+    },
+    {
+      "id": "trilobita_order",
+      "commonName": "Trilobite",
+      "scientificName": "Trilobita (order)",
+      "group": "Arthropod",
+      "tier": "hero",
+      "representationTier": 6,
+      "lifeStatus": "representative_group",
+      "timeUnitIds": [
+        "cambrian",
+        "ordovician",
+        "silurian",
+        "devonian",
+        "carboniferous",
+        "permian"
+      ],
+      "taxonomy": {
+        "family": "Trilobita",
+        "rank": "order",
+        "acceptedName": "Trilobita (order)",
+        "catalogueOfLifeId": "MOCK-COL-trilobita_order"
+      },
+      "conservation": {
+        "iucnCategory": "Extinct",
+        "assessed": true,
+        "sourceVersion": "mock-iucn-2026-07",
+        "lastUpdated": "2026-07-02",
+        "iucnTaxonId": 60887
+      },
+      "distribution": {
+        "continents": [
+          "Global ancient oceans"
+        ],
+        "habitats": [
+          "ancient seafloor"
+        ],
+        "sourceVersion": "mock-gbif-2026-07",
+        "lastUpdated": "2026-07-02",
+        "gbifTaxonKey": 294847,
+        "occurrenceSummaries": [
+          {
+            "region": "Global ancient oceans",
+            "occurrenceCount": 3452
+          }
+        ]
+      },
+      "fossil": {
+        "timeRange": "Cambrian\u2013Permian (~521\u2013252 Ma)",
+        "fossilLocations": [
+          "Morocco",
+          "Utah",
+          "Czech Republic"
+        ],
+        "paleoenvironment": "Shallow tropical seas",
+        "livingRelatives": [
+          "Horseshoe crabs",
+          "Arachnids"
+        ],
+        "paleobiodbTaxonNo": 62096,
+        "sourceVersion": "mock-pbdb-2026-07",
+        "lastUpdated": "2026-07-02"
+      },
+      "artifactTemplates": [
+        {
+          "id": "trilobita_order_shell_fossil",
+          "artifactType": "shell_fossil",
+          "label": "shell fossil",
+          "ethical": true,
+          "description": "Ethical shell fossil collection"
+        },
+        {
+          "id": "trilobita_order_trace_fossil",
+          "artifactType": "trace_fossil",
+          "label": "trace fossil",
+          "ethical": true,
+          "description": "Ethical trace fossil collection"
+        },
+        {
+          "id": "trilobita_order_excavation_field_note",
+          "artifactType": "excavation_field_note",
+          "label": "excavation field note",
+          "ethical": true,
+          "description": "Ethical excavation field note collection"
+        }
+      ],
+      "gameplay": {
+        "region": "fossil_site",
+        "questType": "fossil",
+        "dangerLevel": 0,
+        "ethicalInteraction": "excavate_carefully",
+        "timeRange": "Cambrian\u2013Permian (~521\u2013252 Ma)",
+        "diet": "Varied (detritivore, predator, filter feeder)",
+        "activity": "Unknown",
+        "size": "1 mm to 72 cm",
+        "behavior": "Diverse marine arthropods; molted exoskeletons",
+        "learningTopics": [
+          "cambrian explosion",
+          "marine fossils",
+          "exoskeleton evolution"
+        ],
+        "funFacts": [
+          "Over 20,000 species described",
+          "Named for three-lobed body"
+        ],
+        "whyItMatters": "Icon of the Cambrian explosion and early animal diversity.",
+        "fossilLocations": [
+          "Morocco",
+          "Utah",
+          "Czech Republic"
+        ],
+        "livingRelatives": [
+          "Horseshoe crabs",
+          "Arachnids"
+        ]
+      },
+      "nasaLayerDependencies": [
+        {
+          "layer": "natural_events",
+          "product": "eonet",
+          "reason": "Paleoenvironmental context for extinction events"
+        },
+        {
+          "layer": "climate",
+          "product": "power",
+          "reason": "Field expedition planning uses local climate baselines"
+        }
+      ],
+      "provenance": [
+        {
+          "source": "game_authored",
+          "sourceVersion": "mvp-current",
+          "sourceRecordId": "trilobita_order",
+          "license": "GAME-ORIGINAL",
+          "citation": "Archive of Life: Artifact World authored prototype content",
+          "citationRequired": false,
+          "retrievedAt": "2026-07-05T03:27:29.539Z",
+          "lastUpdated": "2026-07-05T03:27:29.539Z",
+          "isMockData": false,
+          "verificationStatus": "game_authored_verified"
+        },
+        {
+          "source": "paleobiodb",
+          "sourceVersion": "mock-sample-2026-07",
+          "sourceRecordId": "MOCK-trilobita_order",
+          "paleobiodbTaxonNo": 447527,
+          "license": "MOCK-SAMPLE",
+          "citation": "MOCK SAMPLE \u2014 not sourced from live API; requires approved source snapshot import",
+          "citationRequired": true,
+          "retrievedAt": "2026-07-05T03:27:29.539Z",
+          "lastUpdated": "2026-07-05T03:27:29.539Z",
+          "isMockData": true,
+          "verificationStatus": "mock_sample"
+        }
+      ]
+    },
+    {
+      "id": "ursus_maritimus",
+      "commonName": "Polar Bear",
+      "scientificName": "Ursus maritimus",
+      "group": "Mammal",
+      "tier": "hero",
+      "representationTier": 6,
+      "lifeStatus": "extant",
+      "timeUnitIds": [
+        "pleistocene",
+        "holocene"
+      ],
+      "taxonomy": {
+        "family": "Ursidae",
+        "rank": "species",
+        "acceptedName": "Ursus maritimus",
+        "catalogueOfLifeId": "NEEDS-LIVE-COL-LOOKUP"
+      },
+      "conservation": {
+        "iucnCategory": "Vulnerable",
+        "assessed": true,
+        "sourceVersion": "wave-f-alpha",
+        "lastUpdated": "2026-08-07",
+        "iucnTaxonId": 22823
+      },
+      "distribution": {
+        "continents": [
+          "Arctic"
+        ],
+        "habitats": [
+          "polar_ice",
+          "sea_ice"
+        ],
+        "sourceVersion": "wave-f-alpha",
+        "lastUpdated": "2026-08-07",
+        "gbifTaxonKey": 2433406,
+        "occurrenceSummaries": [
+          {
+            "region": "Arctic",
+            "occurrenceCount": 0
+          }
+        ]
+      },
+      "artifactTemplates": [
+        {
+          "id": "ursus_maritimus_track_cast",
+          "artifactType": "track_cast",
+          "label": "track cast",
+          "ethical": true,
+          "description": "Ethical track cast"
+        },
+        {
+          "id": "ursus_maritimus_behavioral_field_note",
+          "artifactType": "behavioral_field_note",
+          "label": "behavioral field note",
+          "ethical": true,
+          "description": "Ethical field note"
+        }
+      ],
+      "gameplay": {
+        "region": "polar_ice",
+        "questType": "tracking_observation",
+        "dangerLevel": 5,
+        "ethicalInteraction": "observe_from_distance",
+        "timeRange": "Present",
+        "diet": "Carnivore",
+        "activity": "Diurnal",
+        "size": "2\u20132.5 m",
+        "behavior": "Sea-ice dependent apex predator",
+        "learningTopics": [
+          "cryosphere",
+          "apex predators",
+          "climate"
+        ],
+        "funFacts": [
+          "Depends on sea ice to hunt seals"
+        ],
+        "whyItMatters": "Flagship indicator of Arctic sea-ice ecosystems."
+      },
+      "nasaLayerDependencies": [
+        {
+          "layer": "forest_structure",
+          "product": "gedi",
+          "reason": "Canopy structure shapes arboreal and forest-floor species niches"
+        },
+        {
+          "layer": "vegetation",
+          "product": "hls",
+          "reason": "NDVI tracks seasonal canopy and understory productivity"
+        },
+        {
+          "layer": "climate",
+          "product": "power",
+          "reason": "Field expedition planning uses local climate baselines"
+        }
+      ],
+      "requiredHabitatSignals": [
+        {
+          "signal": "dense_canopy",
+          "layer": "forest_structure",
+          "required": true,
+          "description": "Requires closed or partial canopy cover"
+        }
+      ],
+      "provenance": [
+        {
+          "source": "game_authored",
+          "sourceVersion": "wave-f-alpha-2026-08",
+          "sourceRecordId": "ursus_maritimus",
+          "gbifTaxonKey": 2433406,
+          "license": "GAME-ORIGINAL",
+          "citation": "Archive of Life Wave F flagship: Ursus maritimus (real taxon; COL id pending live lookup)",
+          "citationRequired": false,
+          "retrievedAt": "2026-08-07T19:00:00.000Z",
+          "lastUpdated": "2026-08-07T19:00:00.000Z",
+          "isMockData": false,
+          "verificationStatus": "game_authored_verified"
+        },
+        {
+          "source": "gbif",
+          "sourceVersion": "public-key-reference",
+          "sourceRecordId": "2433406",
+          "gbifTaxonKey": 2433406,
+          "license": "CC-BY-4.0",
+          "citation": "GBIF taxon key 2433406 for Ursus maritimus \u2014 live occurrences via ScientificIngestionService",
+          "citationRequired": true,
+          "retrievedAt": "2026-08-07T19:00:00.000Z",
+          "lastUpdated": "2026-08-07T19:00:00.000Z",
+          "isMockData": false,
+          "verificationStatus": "needs_source_verification"
+        }
+      ]
+    }
+  ]
+}

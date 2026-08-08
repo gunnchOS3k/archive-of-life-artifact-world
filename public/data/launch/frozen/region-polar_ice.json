@@ -1,0 +1,806 @@
+{
+  "regionId": "polar_ice",
+  "speciesIds": [
+    "pagophilus_groenlandicus",
+    "odobenus_rosmarus",
+    "pygoscelis_adeliae",
+    "aptendytes_forsteri",
+    "somniosus_microcephalus",
+    "boreogadus_saida",
+    "vulpes_lagopus",
+    "rangifer_tarandus",
+    "alca_torda",
+    "calanus_glacialis",
+    "ursus_maritimus",
+    "aptendytes_patagonicus"
+  ],
+  "species": [
+    {
+      "id": "pagophilus_groenlandicus",
+      "commonName": "Harp Seal",
+      "scientificName": "Pagophilus groenlandicus",
+      "group": "Mammal",
+      "tier": "regional",
+      "representationTier": 3,
+      "lifeStatus": "extant",
+      "timeUnitIds": [
+        "holocene"
+      ],
+      "taxonomy": {
+        "family": "Phocidae",
+        "rank": "species",
+        "acceptedName": "Pagophilus groenlandicus"
+      },
+      "artifactTemplates": [
+        {
+          "id": "pagophilus_groenlandicus_field_note",
+          "artifactType": "behavioral_field_note",
+          "label": "field note",
+          "ethical": true,
+          "description": "Ethical field documentation of Harp Seal"
+        }
+      ],
+      "gameplay": {
+        "region": "polar_ice",
+        "questType": "observation",
+        "dangerLevel": 2,
+        "ethicalInteraction": "observe_from_distance",
+        "timeRange": "Present",
+        "diet": "Unknown",
+        "activity": "Diurnal",
+        "size": "varies",
+        "behavior": "Wave F encounter taxon",
+        "learningTopics": [
+          "mammal",
+          "polar_ice"
+        ],
+        "funFacts": [],
+        "whyItMatters": "Pagophilus groenlandicus is a real taxon used for Alpha encounter coverage."
+      },
+      "provenance": [
+        {
+          "source": "game_authored",
+          "sourceVersion": "wave-f-alpha-2026-08",
+          "sourceRecordId": "pagophilus_groenlandicus",
+          "gbifTaxonKey": null,
+          "license": "GAME-ORIGINAL",
+          "citation": "Archive of Life Wave F authored encounter entry for Pagophilus groenlandicus (real taxon; not a live COL/GBIF ingest claim)",
+          "citationRequired": false,
+          "retrievedAt": "2026-08-07T19:00:00.000Z",
+          "lastUpdated": "2026-08-07T19:00:00.000Z",
+          "isMockData": false,
+          "verificationStatus": "game_authored_verified"
+        }
+      ]
+    },
+    {
+      "id": "odobenus_rosmarus",
+      "commonName": "Walrus",
+      "scientificName": "Odobenus rosmarus",
+      "group": "Mammal",
+      "tier": "regional",
+      "representationTier": 3,
+      "lifeStatus": "extant",
+      "timeUnitIds": [
+        "holocene"
+      ],
+      "taxonomy": {
+        "family": "Odobenidae",
+        "rank": "species",
+        "acceptedName": "Odobenus rosmarus"
+      },
+      "artifactTemplates": [
+        {
+          "id": "odobenus_rosmarus_field_note",
+          "artifactType": "behavioral_field_note",
+          "label": "field note",
+          "ethical": true,
+          "description": "Ethical field documentation of Walrus"
+        }
+      ],
+      "gameplay": {
+        "region": "polar_ice",
+        "questType": "observation",
+        "dangerLevel": 2,
+        "ethicalInteraction": "observe_from_distance",
+        "timeRange": "Present",
+        "diet": "Unknown",
+        "activity": "Diurnal",
+        "size": "varies",
+        "behavior": "Wave F encounter taxon",
+        "learningTopics": [
+          "mammal",
+          "polar_ice"
+        ],
+        "funFacts": [],
+        "whyItMatters": "Odobenus rosmarus is a real taxon used for Alpha encounter coverage."
+      },
+      "provenance": [
+        {
+          "source": "game_authored",
+          "sourceVersion": "wave-f-alpha-2026-08",
+          "sourceRecordId": "odobenus_rosmarus",
+          "gbifTaxonKey": 2433417,
+          "license": "GAME-ORIGINAL",
+          "citation": "Archive of Life Wave F authored encounter entry for Odobenus rosmarus (real taxon; not a live COL/GBIF ingest claim)",
+          "citationRequired": false,
+          "retrievedAt": "2026-08-07T19:00:00.000Z",
+          "lastUpdated": "2026-08-07T19:00:00.000Z",
+          "isMockData": false,
+          "verificationStatus": "game_authored_verified"
+        },
+        {
+          "source": "gbif",
+          "sourceVersion": "public-key-reference",
+          "sourceRecordId": "2433417",
+          "gbifTaxonKey": 2433417,
+          "license": "CC-BY-4.0",
+          "citation": "GBIF taxon key 2433417 referenced for Odobenus rosmarus; live occurrence fetch via ScientificIngestionService",
+          "citationRequired": true,
+          "retrievedAt": "2026-08-07T19:00:00.000Z",
+          "lastUpdated": "2026-08-07T19:00:00.000Z",
+          "isMockData": false,
+          "verificationStatus": "needs_source_verification"
+        }
+      ]
+    },
+    {
+      "id": "pygoscelis_adeliae",
+      "commonName": "Ad\u00e9lie Penguin",
+      "scientificName": "Pygoscelis adeliae",
+      "group": "Bird",
+      "tier": "regional",
+      "representationTier": 3,
+      "lifeStatus": "extant",
+      "timeUnitIds": [
+        "holocene"
+      ],
+      "taxonomy": {
+        "family": "Spheniscidae",
+        "rank": "species",
+        "acceptedName": "Pygoscelis adeliae"
+      },
+      "artifactTemplates": [
+        {
+          "id": "pygoscelis_adeliae_field_note",
+          "artifactType": "behavioral_field_note",
+          "label": "field note",
+          "ethical": true,
+          "description": "Ethical field documentation of Ad\u00e9lie Penguin"
+        }
+      ],
+      "gameplay": {
+        "region": "polar_ice",
+        "questType": "observation",
+        "dangerLevel": 2,
+        "ethicalInteraction": "observe_from_distance",
+        "timeRange": "Present",
+        "diet": "Unknown",
+        "activity": "Diurnal",
+        "size": "varies",
+        "behavior": "Wave F encounter taxon",
+        "learningTopics": [
+          "bird",
+          "polar_ice"
+        ],
+        "funFacts": [],
+        "whyItMatters": "Pygoscelis adeliae is a real taxon used for Alpha encounter coverage."
+      },
+      "provenance": [
+        {
+          "source": "game_authored",
+          "sourceVersion": "wave-f-alpha-2026-08",
+          "sourceRecordId": "pygoscelis_adeliae",
+          "gbifTaxonKey": 2481662,
+          "license": "GAME-ORIGINAL",
+          "citation": "Archive of Life Wave F authored encounter entry for Pygoscelis adeliae (real taxon; not a live COL/GBIF ingest claim)",
+          "citationRequired": false,
+          "retrievedAt": "2026-08-07T19:00:00.000Z",
+          "lastUpdated": "2026-08-07T19:00:00.000Z",
+          "isMockData": false,
+          "verificationStatus": "game_authored_verified"
+        },
+        {
+          "source": "gbif",
+          "sourceVersion": "public-key-reference",
+          "sourceRecordId": "2481662",
+          "gbifTaxonKey": 2481662,
+          "license": "CC-BY-4.0",
+          "citation": "GBIF taxon key 2481662 referenced for Pygoscelis adeliae; live occurrence fetch via ScientificIngestionService",
+          "citationRequired": true,
+          "retrievedAt": "2026-08-07T19:00:00.000Z",
+          "lastUpdated": "2026-08-07T19:00:00.000Z",
+          "isMockData": false,
+          "verificationStatus": "needs_source_verification"
+        }
+      ]
+    },
+    {
+      "id": "aptendytes_forsteri",
+      "commonName": "Emperor Penguin",
+      "scientificName": "Aptenodytes forsteri",
+      "group": "Bird",
+      "tier": "regional",
+      "representationTier": 4,
+      "lifeStatus": "extant",
+      "timeUnitIds": [
+        "holocene"
+      ],
+      "taxonomy": {
+        "family": "Spheniscidae",
+        "rank": "species",
+        "acceptedName": "Aptenodytes forsteri"
+      },
+      "artifactTemplates": [
+        {
+          "id": "aptendytes_forsteri_field_note",
+          "artifactType": "behavioral_field_note",
+          "label": "field note",
+          "ethical": true,
+          "description": "Ethical field documentation of Emperor Penguin"
+        }
+      ],
+      "gameplay": {
+        "region": "polar_ice",
+        "questType": "observation",
+        "dangerLevel": 2,
+        "ethicalInteraction": "observe_from_distance",
+        "timeRange": "Present",
+        "diet": "Unknown",
+        "activity": "Diurnal",
+        "size": "varies",
+        "behavior": "Wave F encounter taxon",
+        "learningTopics": [
+          "bird",
+          "polar_ice"
+        ],
+        "funFacts": [],
+        "whyItMatters": "Aptenodytes forsteri is a real taxon used for Alpha encounter coverage."
+      },
+      "provenance": [
+        {
+          "source": "game_authored",
+          "sourceVersion": "wave-f-alpha-2026-08",
+          "sourceRecordId": "aptendytes_forsteri",
+          "gbifTaxonKey": 2481660,
+          "license": "GAME-ORIGINAL",
+          "citation": "Archive of Life Wave F authored encounter entry for Aptenodytes forsteri (real taxon; not a live COL/GBIF ingest claim)",
+          "citationRequired": false,
+          "retrievedAt": "2026-08-07T19:00:00.000Z",
+          "lastUpdated": "2026-08-07T19:00:00.000Z",
+          "isMockData": false,
+          "verificationStatus": "game_authored_verified"
+        },
+        {
+          "source": "gbif",
+          "sourceVersion": "public-key-reference",
+          "sourceRecordId": "2481660",
+          "gbifTaxonKey": 2481660,
+          "license": "CC-BY-4.0",
+          "citation": "GBIF taxon key 2481660 referenced for Aptenodytes forsteri; live occurrence fetch via ScientificIngestionService",
+          "citationRequired": true,
+          "retrievedAt": "2026-08-07T19:00:00.000Z",
+          "lastUpdated": "2026-08-07T19:00:00.000Z",
+          "isMockData": false,
+          "verificationStatus": "needs_source_verification"
+        }
+      ]
+    },
+    {
+      "id": "somniosus_microcephalus",
+      "commonName": "Greenland Shark",
+      "scientificName": "Somniosus microcephalus",
+      "group": "Fish",
+      "tier": "regional",
+      "representationTier": 3,
+      "lifeStatus": "extant",
+      "timeUnitIds": [
+        "holocene"
+      ],
+      "taxonomy": {
+        "family": "Somniosidae",
+        "rank": "species",
+        "acceptedName": "Somniosus microcephalus"
+      },
+      "artifactTemplates": [
+        {
+          "id": "somniosus_microcephalus_field_note",
+          "artifactType": "behavioral_field_note",
+          "label": "field note",
+          "ethical": true,
+          "description": "Ethical field documentation of Greenland Shark"
+        }
+      ],
+      "gameplay": {
+        "region": "polar_ice",
+        "questType": "observation",
+        "dangerLevel": 2,
+        "ethicalInteraction": "observe_from_distance",
+        "timeRange": "Present",
+        "diet": "Unknown",
+        "activity": "Diurnal",
+        "size": "varies",
+        "behavior": "Wave F encounter taxon",
+        "learningTopics": [
+          "fish",
+          "polar_ice"
+        ],
+        "funFacts": [],
+        "whyItMatters": "Somniosus microcephalus is a real taxon used for Alpha encounter coverage."
+      },
+      "provenance": [
+        {
+          "source": "game_authored",
+          "sourceVersion": "wave-f-alpha-2026-08",
+          "sourceRecordId": "somniosus_microcephalus",
+          "gbifTaxonKey": null,
+          "license": "GAME-ORIGINAL",
+          "citation": "Archive of Life Wave F authored encounter entry for Somniosus microcephalus (real taxon; not a live COL/GBIF ingest claim)",
+          "citationRequired": false,
+          "retrievedAt": "2026-08-07T19:00:00.000Z",
+          "lastUpdated": "2026-08-07T19:00:00.000Z",
+          "isMockData": false,
+          "verificationStatus": "game_authored_verified"
+        }
+      ]
+    },
+    {
+      "id": "boreogadus_saida",
+      "commonName": "Arctic Cod",
+      "scientificName": "Boreogadus saida",
+      "group": "Fish",
+      "tier": "regional",
+      "representationTier": 2,
+      "lifeStatus": "extant",
+      "timeUnitIds": [
+        "holocene"
+      ],
+      "taxonomy": {
+        "family": "Gadidae",
+        "rank": "species",
+        "acceptedName": "Boreogadus saida"
+      },
+      "artifactTemplates": [
+        {
+          "id": "boreogadus_saida_field_note",
+          "artifactType": "behavioral_field_note",
+          "label": "field note",
+          "ethical": true,
+          "description": "Ethical field documentation of Arctic Cod"
+        }
+      ],
+      "gameplay": {
+        "region": "polar_ice",
+        "questType": "observation",
+        "dangerLevel": 2,
+        "ethicalInteraction": "observe_from_distance",
+        "timeRange": "Present",
+        "diet": "Unknown",
+        "activity": "Diurnal",
+        "size": "varies",
+        "behavior": "Wave F encounter taxon",
+        "learningTopics": [
+          "fish",
+          "polar_ice"
+        ],
+        "funFacts": [],
+        "whyItMatters": "Boreogadus saida is a real taxon used for Alpha encounter coverage."
+      },
+      "provenance": [
+        {
+          "source": "game_authored",
+          "sourceVersion": "wave-f-alpha-2026-08",
+          "sourceRecordId": "boreogadus_saida",
+          "gbifTaxonKey": null,
+          "license": "GAME-ORIGINAL",
+          "citation": "Archive of Life Wave F authored encounter entry for Boreogadus saida (real taxon; not a live COL/GBIF ingest claim)",
+          "citationRequired": false,
+          "retrievedAt": "2026-08-07T19:00:00.000Z",
+          "lastUpdated": "2026-08-07T19:00:00.000Z",
+          "isMockData": false,
+          "verificationStatus": "game_authored_verified"
+        }
+      ]
+    },
+    {
+      "id": "vulpes_lagopus",
+      "commonName": "Arctic Fox",
+      "scientificName": "Vulpes lagopus",
+      "group": "Mammal",
+      "tier": "regional",
+      "representationTier": 3,
+      "lifeStatus": "extant",
+      "timeUnitIds": [
+        "holocene"
+      ],
+      "taxonomy": {
+        "family": "Canidae",
+        "rank": "species",
+        "acceptedName": "Vulpes lagopus"
+      },
+      "artifactTemplates": [
+        {
+          "id": "vulpes_lagopus_field_note",
+          "artifactType": "behavioral_field_note",
+          "label": "field note",
+          "ethical": true,
+          "description": "Ethical field documentation of Arctic Fox"
+        }
+      ],
+      "gameplay": {
+        "region": "polar_ice",
+        "questType": "observation",
+        "dangerLevel": 2,
+        "ethicalInteraction": "observe_from_distance",
+        "timeRange": "Present",
+        "diet": "Unknown",
+        "activity": "Diurnal",
+        "size": "varies",
+        "behavior": "Wave F encounter taxon",
+        "learningTopics": [
+          "mammal",
+          "polar_ice"
+        ],
+        "funFacts": [],
+        "whyItMatters": "Vulpes lagopus is a real taxon used for Alpha encounter coverage."
+      },
+      "provenance": [
+        {
+          "source": "game_authored",
+          "sourceVersion": "wave-f-alpha-2026-08",
+          "sourceRecordId": "vulpes_lagopus",
+          "gbifTaxonKey": 5219254,
+          "license": "GAME-ORIGINAL",
+          "citation": "Archive of Life Wave F authored encounter entry for Vulpes lagopus (real taxon; not a live COL/GBIF ingest claim)",
+          "citationRequired": false,
+          "retrievedAt": "2026-08-07T19:00:00.000Z",
+          "lastUpdated": "2026-08-07T19:00:00.000Z",
+          "isMockData": false,
+          "verificationStatus": "game_authored_verified"
+        },
+        {
+          "source": "gbif",
+          "sourceVersion": "public-key-reference",
+          "sourceRecordId": "5219254",
+          "gbifTaxonKey": 5219254,
+          "license": "CC-BY-4.0",
+          "citation": "GBIF taxon key 5219254 referenced for Vulpes lagopus; live occurrence fetch via ScientificIngestionService",
+          "citationRequired": true,
+          "retrievedAt": "2026-08-07T19:00:00.000Z",
+          "lastUpdated": "2026-08-07T19:00:00.000Z",
+          "isMockData": false,
+          "verificationStatus": "needs_source_verification"
+        }
+      ]
+    },
+    {
+      "id": "rangifer_tarandus",
+      "commonName": "Reindeer",
+      "scientificName": "Rangifer tarandus",
+      "group": "Mammal",
+      "tier": "regional",
+      "representationTier": 3,
+      "lifeStatus": "extant",
+      "timeUnitIds": [
+        "holocene"
+      ],
+      "taxonomy": {
+        "family": "Cervidae",
+        "rank": "species",
+        "acceptedName": "Rangifer tarandus"
+      },
+      "artifactTemplates": [
+        {
+          "id": "rangifer_tarandus_field_note",
+          "artifactType": "behavioral_field_note",
+          "label": "field note",
+          "ethical": true,
+          "description": "Ethical field documentation of Reindeer"
+        }
+      ],
+      "gameplay": {
+        "region": "polar_ice",
+        "questType": "observation",
+        "dangerLevel": 2,
+        "ethicalInteraction": "observe_from_distance",
+        "timeRange": "Present",
+        "diet": "Unknown",
+        "activity": "Diurnal",
+        "size": "varies",
+        "behavior": "Wave F encounter taxon",
+        "learningTopics": [
+          "mammal",
+          "polar_ice"
+        ],
+        "funFacts": [],
+        "whyItMatters": "Rangifer tarandus is a real taxon used for Alpha encounter coverage."
+      },
+      "provenance": [
+        {
+          "source": "game_authored",
+          "sourceVersion": "wave-f-alpha-2026-08",
+          "sourceRecordId": "rangifer_tarandus",
+          "gbifTaxonKey": 2440942,
+          "license": "GAME-ORIGINAL",
+          "citation": "Archive of Life Wave F authored encounter entry for Rangifer tarandus (real taxon; not a live COL/GBIF ingest claim)",
+          "citationRequired": false,
+          "retrievedAt": "2026-08-07T19:00:00.000Z",
+          "lastUpdated": "2026-08-07T19:00:00.000Z",
+          "isMockData": false,
+          "verificationStatus": "game_authored_verified"
+        },
+        {
+          "source": "gbif",
+          "sourceVersion": "public-key-reference",
+          "sourceRecordId": "2440942",
+          "gbifTaxonKey": 2440942,
+          "license": "CC-BY-4.0",
+          "citation": "GBIF taxon key 2440942 referenced for Rangifer tarandus; live occurrence fetch via ScientificIngestionService",
+          "citationRequired": true,
+          "retrievedAt": "2026-08-07T19:00:00.000Z",
+          "lastUpdated": "2026-08-07T19:00:00.000Z",
+          "isMockData": false,
+          "verificationStatus": "needs_source_verification"
+        }
+      ]
+    },
+    {
+      "id": "alca_torda",
+      "commonName": "Razorbill",
+      "scientificName": "Alca torda",
+      "group": "Bird",
+      "tier": "regional",
+      "representationTier": 2,
+      "lifeStatus": "extant",
+      "timeUnitIds": [
+        "holocene"
+      ],
+      "taxonomy": {
+        "family": "Alcidae",
+        "rank": "species",
+        "acceptedName": "Alca torda"
+      },
+      "artifactTemplates": [
+        {
+          "id": "alca_torda_field_note",
+          "artifactType": "behavioral_field_note",
+          "label": "field note",
+          "ethical": true,
+          "description": "Ethical field documentation of Razorbill"
+        }
+      ],
+      "gameplay": {
+        "region": "polar_ice",
+        "questType": "observation",
+        "dangerLevel": 2,
+        "ethicalInteraction": "observe_from_distance",
+        "timeRange": "Present",
+        "diet": "Unknown",
+        "activity": "Diurnal",
+        "size": "varies",
+        "behavior": "Wave F encounter taxon",
+        "learningTopics": [
+          "bird",
+          "polar_ice"
+        ],
+        "funFacts": [],
+        "whyItMatters": "Alca torda is a real taxon used for Alpha encounter coverage."
+      },
+      "provenance": [
+        {
+          "source": "game_authored",
+          "sourceVersion": "wave-f-alpha-2026-08",
+          "sourceRecordId": "alca_torda",
+          "gbifTaxonKey": null,
+          "license": "GAME-ORIGINAL",
+          "citation": "Archive of Life Wave F authored encounter entry for Alca torda (real taxon; not a live COL/GBIF ingest claim)",
+          "citationRequired": false,
+          "retrievedAt": "2026-08-07T19:00:00.000Z",
+          "lastUpdated": "2026-08-07T19:00:00.000Z",
+          "isMockData": false,
+          "verificationStatus": "game_authored_verified"
+        }
+      ]
+    },
+    {
+      "id": "calanus_glacialis",
+      "commonName": "Arctic Copepod",
+      "scientificName": "Calanus glacialis",
+      "group": "Arthropod",
+      "tier": "regional",
+      "representationTier": 2,
+      "lifeStatus": "extant",
+      "timeUnitIds": [
+        "holocene"
+      ],
+      "taxonomy": {
+        "family": "Calanidae",
+        "rank": "species",
+        "acceptedName": "Calanus glacialis"
+      },
+      "artifactTemplates": [
+        {
+          "id": "calanus_glacialis_field_note",
+          "artifactType": "behavioral_field_note",
+          "label": "field note",
+          "ethical": true,
+          "description": "Ethical field documentation of Arctic Copepod"
+        }
+      ],
+      "gameplay": {
+        "region": "polar_ice",
+        "questType": "observation",
+        "dangerLevel": 2,
+        "ethicalInteraction": "observe_from_distance",
+        "timeRange": "Present",
+        "diet": "Unknown",
+        "activity": "Diurnal",
+        "size": "varies",
+        "behavior": "Wave F encounter taxon",
+        "learningTopics": [
+          "arthropod",
+          "polar_ice"
+        ],
+        "funFacts": [],
+        "whyItMatters": "Calanus glacialis is a real taxon used for Alpha encounter coverage."
+      },
+      "provenance": [
+        {
+          "source": "game_authored",
+          "sourceVersion": "wave-f-alpha-2026-08",
+          "sourceRecordId": "calanus_glacialis",
+          "gbifTaxonKey": null,
+          "license": "GAME-ORIGINAL",
+          "citation": "Archive of Life Wave F authored encounter entry for Calanus glacialis (real taxon; not a live COL/GBIF ingest claim)",
+          "citationRequired": false,
+          "retrievedAt": "2026-08-07T19:00:00.000Z",
+          "lastUpdated": "2026-08-07T19:00:00.000Z",
+          "isMockData": false,
+          "verificationStatus": "game_authored_verified"
+        }
+      ]
+    },
+    {
+      "id": "ursus_maritimus",
+      "commonName": "Polar Bear",
+      "scientificName": "Ursus maritimus",
+      "group": "Mammal",
+      "tier": "hero",
+      "representationTier": 6,
+      "lifeStatus": "extant",
+      "timeUnitIds": [
+        "holocene"
+      ],
+      "taxonomy": {
+        "family": "Ursidae",
+        "rank": "species",
+        "acceptedName": "Ursus maritimus"
+      },
+      "artifactTemplates": [
+        {
+          "id": "ursus_maritimus_field_note",
+          "artifactType": "behavioral_field_note",
+          "label": "field note",
+          "ethical": true,
+          "description": "Ethical field documentation of Polar Bear"
+        }
+      ],
+      "gameplay": {
+        "region": "polar_ice",
+        "questType": "observation",
+        "dangerLevel": 2,
+        "ethicalInteraction": "observe_from_distance",
+        "timeRange": "Present",
+        "diet": "Unknown",
+        "activity": "Diurnal",
+        "size": "varies",
+        "behavior": "Wave F encounter taxon",
+        "learningTopics": [
+          "mammal",
+          "polar_ice"
+        ],
+        "funFacts": [],
+        "whyItMatters": "Ursus maritimus is a real taxon used for Alpha encounter coverage."
+      },
+      "provenance": [
+        {
+          "source": "game_authored",
+          "sourceVersion": "wave-f-alpha-2026-08",
+          "sourceRecordId": "ursus_maritimus",
+          "gbifTaxonKey": 2433406,
+          "license": "GAME-ORIGINAL",
+          "citation": "Archive of Life Wave F authored encounter entry for Ursus maritimus (real taxon; not a live COL/GBIF ingest claim)",
+          "citationRequired": false,
+          "retrievedAt": "2026-08-07T19:00:00.000Z",
+          "lastUpdated": "2026-08-07T19:00:00.000Z",
+          "isMockData": false,
+          "verificationStatus": "game_authored_verified"
+        },
+        {
+          "source": "gbif",
+          "sourceVersion": "public-key-reference",
+          "sourceRecordId": "2433406",
+          "gbifTaxonKey": 2433406,
+          "license": "CC-BY-4.0",
+          "citation": "GBIF taxon key 2433406 referenced for Ursus maritimus; live occurrence fetch via ScientificIngestionService",
+          "citationRequired": true,
+          "retrievedAt": "2026-08-07T19:00:00.000Z",
+          "lastUpdated": "2026-08-07T19:00:00.000Z",
+          "isMockData": false,
+          "verificationStatus": "needs_source_verification"
+        }
+      ]
+    },
+    {
+      "id": "aptendytes_patagonicus",
+      "commonName": "King Penguin",
+      "scientificName": "Aptenodytes patagonicus",
+      "group": "Bird",
+      "tier": "regional",
+      "representationTier": 3,
+      "lifeStatus": "extant",
+      "timeUnitIds": [
+        "holocene"
+      ],
+      "taxonomy": {
+        "family": "Spheniscidae",
+        "rank": "species",
+        "acceptedName": "Aptenodytes patagonicus"
+      },
+      "artifactTemplates": [
+        {
+          "id": "aptendytes_patagonicus_field_note",
+          "artifactType": "behavioral_field_note",
+          "label": "field note",
+          "ethical": true,
+          "description": "Ethical field documentation of King Penguin"
+        }
+      ],
+      "gameplay": {
+        "region": "polar_ice",
+        "questType": "observation",
+        "dangerLevel": 2,
+        "ethicalInteraction": "observe_from_distance",
+        "timeRange": "Present",
+        "diet": "Unknown",
+        "activity": "Diurnal",
+        "size": "varies",
+        "behavior": "Wave F encounter taxon",
+        "learningTopics": [
+          "bird",
+          "polar_ice"
+        ],
+        "funFacts": [],
+        "whyItMatters": "Aptenodytes patagonicus is a real taxon used for Alpha encounter coverage."
+      },
+      "provenance": [
+        {
+          "source": "game_authored",
+          "sourceVersion": "wave-f-alpha-2026-08",
+          "sourceRecordId": "aptendytes_patagonicus",
+          "gbifTaxonKey": 2481661,
+          "license": "GAME-ORIGINAL",
+          "citation": "Archive of Life Wave F authored encounter entry for Aptenodytes patagonicus (real taxon; not a live COL/GBIF ingest claim)",
+          "citationRequired": false,
+          "retrievedAt": "2026-08-07T19:00:00.000Z",
+          "lastUpdated": "2026-08-07T19:00:00.000Z",
+          "isMockData": false,
+          "verificationStatus": "game_authored_verified"
+        },
+        {
+          "source": "gbif",
+          "sourceVersion": "public-key-reference",
+          "sourceRecordId": "2481661",
+          "gbifTaxonKey": 2481661,
+          "license": "CC-BY-4.0",
+          "citation": "GBIF taxon key 2481661 referenced for Aptenodytes patagonicus; live occurrence fetch via ScientificIngestionService",
+          "citationRequired": true,
+          "retrievedAt": "2026-08-07T19:00:00.000Z",
+          "lastUpdated": "2026-08-07T19:00:00.000Z",
+          "isMockData": false,
+          "verificationStatus": "needs_source_verification"
+        }
+      ]
+    }
+  ]
+}

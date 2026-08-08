@@ -2,101 +2,101 @@
   "records": [
     {
       "speciesId": "panthera_leo",
-      "gbifTaxonKey": 8114792,
+      "gbifTaxonKey": 92274,
       "summaries": [
         {
           "region": "Africa",
-          "occurrenceCount": 1734
+          "occurrenceCount": 2791
         }
       ]
     },
     {
       "speciesId": "loxodonta_africana",
-      "gbifTaxonKey": 4922002,
+      "gbifTaxonKey": 6998739,
       "summaries": [
         {
           "region": "Africa",
-          "occurrenceCount": 4886
+          "occurrenceCount": 3867
         }
       ]
     },
     {
       "speciesId": "canis_lupus",
-      "gbifTaxonKey": 6040710,
+      "gbifTaxonKey": 9904470,
       "summaries": [
         {
           "region": "North America",
-          "occurrenceCount": 970
+          "occurrenceCount": 3535
         }
       ]
     },
     {
       "speciesId": "odocoileus_virginianus",
-      "gbifTaxonKey": 9596551,
+      "gbifTaxonKey": 8115250,
       "summaries": [
         {
           "region": "North America",
-          "occurrenceCount": 4069
+          "occurrenceCount": 4883
         }
       ]
     },
     {
       "speciesId": "balaenoptera_musculus",
-      "gbifTaxonKey": 7146193,
+      "gbifTaxonKey": 7819889,
       "summaries": [
         {
           "region": "Global oceans",
-          "occurrenceCount": 2679
+          "occurrenceCount": 3357
         }
       ]
     },
     {
       "speciesId": "ursus_americanus",
-      "gbifTaxonKey": 4343390,
+      "gbifTaxonKey": 7270715,
       "summaries": [
         {
           "region": "North America",
-          "occurrenceCount": 4114
+          "occurrenceCount": 2022
         }
       ]
     },
     {
       "speciesId": "castor_canadensis",
-      "gbifTaxonKey": 2633674,
+      "gbifTaxonKey": 3395460,
       "summaries": [
         {
           "region": "North America",
-          "occurrenceCount": 4368
+          "occurrenceCount": 1080
         }
       ]
     },
     {
       "speciesId": "lontra_canadensis",
-      "gbifTaxonKey": 8218660,
+      "gbifTaxonKey": 4839021,
       "summaries": [
         {
           "region": "North America",
-          "occurrenceCount": 594
+          "occurrenceCount": 4933
         }
       ]
     },
     {
       "speciesId": "phoca_vitulina",
-      "gbifTaxonKey": 5107101,
+      "gbifTaxonKey": 9531017,
       "summaries": [
         {
           "region": "North Atlantic",
-          "occurrenceCount": 2480
+          "occurrenceCount": 1570
         }
       ]
     },
     {
       "speciesId": "equus_caballus_ferus",
-      "gbifTaxonKey": 9792217,
+      "gbifTaxonKey": 6329846,
       "summaries": [
         {
           "region": "Asia",
-          "occurrenceCount": 4356
+          "occurrenceCount": 2967
         }
       ]
     }

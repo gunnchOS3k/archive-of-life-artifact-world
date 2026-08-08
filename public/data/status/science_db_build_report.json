@@ -1,15 +1,15 @@
 {
-  "generatedAt": "2026-08-08T21:01:23.975Z",
+  "generatedAt": "2026-08-08T21:07:51.456Z",
   "dbPath": "/Users/gunnchos/Downloads/gunnchos-7gc-research-product-spine/repos/archive-of-life-artifact-world/public/data/science/archive_science.sqlite",
   "stats": {
     "schemaVersion": 1,
-    "taxa": 1149,
-    "synonyms": 91,
-    "provenance": 1413,
+    "taxa": 1570,
+    "synonyms": 172,
+    "provenance": 2440,
     "geo": 157,
     "timeRanges": 181,
     "snapshots": 1,
-    "contentHash": "2234dc2b56629df52973583c27fe20ad5f7fd55c7ec3a3a8a10405e5ffeb936a",
+    "contentHash": "dd5b73e9993523d515853ce40aa6844a864d873721d1432df3e1a7d6ccff7481",
     "snapshotId": "cont-vi-science-db-2026-08",
     "offline": true
   },
@@ -19,7 +19,7 @@
     "to": 1,
     "applied": []
   },
-  "elapsedMs": 1434,
-  "contentHash": "2234dc2b56629df52973583c27fe20ad5f7fd55c7ec3a3a8a10405e5ffeb936a",
+  "elapsedMs": 1108,
+  "contentHash": "dd5b73e9993523d515853ce40aa6844a864d873721d1432df3e1a7d6ccff7481",
   "globalCompleteClaim": false
 }

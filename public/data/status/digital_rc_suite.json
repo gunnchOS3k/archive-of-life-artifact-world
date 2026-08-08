@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-08T21:04:52.278Z",
+  "generatedAt": "2026-08-08T21:08:05.663Z",
   "checks": {
     "db_migration": {
       "ok": true,
@@ -11,7 +11,7 @@
     },
     "snapshot_corrupt_detect": {
       "ok": true,
-      "detail": "hash mismatch detected (good=0a2f226d1f bad=828b18fbc1)"
+      "detail": "hash mismatch detected (good=2bd9a3be1a bad=6f7fd90003)"
     },
     "offline": {
       "ok": true,
