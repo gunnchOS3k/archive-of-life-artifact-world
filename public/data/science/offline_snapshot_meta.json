@@ -1,0 +1,34 @@
+{
+  "schemaVersion": 1,
+  "snapshotId": "cont-vi-science-db-2026-08",
+  "snapshotVersion": "science-1.0.0",
+  "generatedAt": "2026-08-08T21:08:05.660Z",
+  "dbPath": "public/data/science/archive_science.sqlite",
+  "contentHash": "dd5b73e9993523d515853ce40aa6844a864d873721d1432df3e1a7d6ccff7481",
+  "stats": {
+    "schemaVersion": 1,
+    "taxa": 1570,
+    "synonyms": 172,
+    "provenance": 2440,
+    "geo": 157,
+    "timeRanges": 181,
+    "snapshots": 1,
+    "contentHash": "dd5b73e9993523d515853ce40aa6844a864d873721d1432df3e1a7d6ccff7481",
+    "snapshotId": "cont-vi-science-db-2026-08",
+    "offline": true
+  },
+  "indexes": [
+    "taxa.scientific_name",
+    "taxa.accepted_name",
+    "taxa.region_id",
+    "taxa.biome",
+    "taxa.program_tier",
+    "taxa.era_id",
+    "synonyms.synonym_name",
+    "provenance.taxon_id",
+    "geo_occurrence.taxon_id",
+    "time_ranges.era_id"
+  ],
+  "globalCompleteClaim": false,
+  "elapsedMs": 1099
+}

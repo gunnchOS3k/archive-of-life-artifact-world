@@ -1,0 +1,13 @@
+{
+  "locale": "en",
+  "localizationReady": true,
+  "strings": {
+    "app.title": "Archive of Life — Artifact World",
+    "app.tagline": "Explore known life across biomes and deep time",
+    "ui.observe": "Observe",
+    "ui.scan": "Scan",
+    "ui.codex": "Codex",
+    "ui.companion": "Companion",
+    "ui.provenance": "Provenance"
+  }
+}

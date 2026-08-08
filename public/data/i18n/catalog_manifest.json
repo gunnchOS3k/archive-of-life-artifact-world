@@ -1,0 +1,8 @@
+{
+  "defaultLocale": "en",
+  "locales": [
+    "en"
+  ],
+  "localizationReady": true,
+  "message": "String catalog present; additional locales can be added without code changes"
+}

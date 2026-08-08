@@ -1,57 +1,66 @@
 {
   "schemaVersion": "1.0.0",
-  "snapshotId": "cont-v-production-probe-2026-08",
-  "snapshotVersion": "2.1.0-cont-v",
-  "generatedAt": "2026-08-08T20:19:29.803Z",
+  "snapshotId": "cont-vi-production-ops-2026-08",
+  "snapshotVersion": "2.2.0-cont-vi",
+  "generatedAt": "2026-08-08T21:04:20.758Z",
+  "elapsedMs": 6885,
+  "contentHash": "40edfb887d2d92cfd8e5320811f5a36850b0fc50a515025f6a30fbaf4b4b4015",
   "globalCompleteClaim": false,
   "liveClaimAny": true,
   "records_by_source": {
-    "col": 92,
-    "gbif": 100,
-    "pbdb": 12
+    "col": 405,
+    "gbif": 396,
+    "pbdb": 226
   },
   "records_by_source_detail": [
     {
       "source": "col",
-      "records": 92,
+      "records": 405,
       "mode": "live",
       "liveClaim": true,
       "sourceState": "LIVE_PUBLIC"
     },
     {
       "source": "gbif",
-      "records": 100,
+      "records": 396,
       "mode": "live",
       "liveClaim": true,
       "sourceState": "LIVE_PUBLIC"
     },
     {
       "source": "pbdb",
-      "records": 12,
+      "records": 226,
       "mode": "live",
       "liveClaim": true,
       "sourceState": "LIVE_PUBLIC"
     }
   ],
-  "unique_taxa": 111,
-  "unique_taxa_by_accepted_name": 111,
+  "unique_taxa": 431,
+  "unique_taxa_by_accepted_name": 431,
   "synonyms": 0,
   "synonym_edges": 0,
   "conflicts": 0,
   "rejected": 0,
   "dropped_by_id": 0,
   "dropped_by_name": 0,
-  "pages_fetched": 5,
-  "checkpoint_count": 3,
+  "pages_fetched": 27,
+  "queries_run": 12,
+  "total_records": 1027,
+  "checkpoint_count": 12,
   "cache_entries": 0,
   "honesty": {
     "fixturesNeverClaimedLive": true,
     "liveOnlyWhenQueried": true,
-    "noFabricatedGlobalComplete": true
+    "noFabricatedGlobalComplete": true,
+    "noFabricatedTargets": true
   },
   "notes": [
-    "Cont V production multi-page live probe",
-    "Multi-source live pagination with ≥10 records and ≥2 live sources",
+    "Cont VI production multi-query live ops",
+    "Cont VI multi-query live ops: sources=3 pages=27 records=1027 unique=431 hash=40edfb887d2d",
+    "elapsedMs=6885",
+    "contentHash=40edfb887d2d92cfd8e5320811f5a36850b0fc50a515025f6a30fbaf4b4b4015",
+    "materiallyLargerThanContV=true",
     "Not GLOBAL_DATA_COMPLETE"
-  ]
+  ],
+  "errors": []
 }

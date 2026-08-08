@@ -1,0 +1,518 @@
+{
+  "regionId": "subterranean_cave",
+  "speciesIds": [
+    "proteus_anguinus",
+    "amblyopsis_spelaea",
+    "hadenoecus_subterraneus",
+    "meta_menardi",
+    "neaphaenops_tellkampfi",
+    "typhlichthys_subterraneus",
+    "plecotus_auritus",
+    "myotis_lucifugus"
+  ],
+  "species": [
+    {
+      "id": "proteus_anguinus",
+      "commonName": "Olm",
+      "scientificName": "Proteus anguinus",
+      "group": "Amphibian",
+      "tier": "regional",
+      "representationTier": 4,
+      "lifeStatus": "extant",
+      "timeUnitIds": [
+        "holocene"
+      ],
+      "taxonomy": {
+        "family": "Proteidae",
+        "rank": "species",
+        "acceptedName": "Proteus anguinus"
+      },
+      "artifactTemplates": [
+        {
+          "id": "proteus_anguinus_field_note",
+          "artifactType": "behavioral_field_note",
+          "label": "field note",
+          "ethical": true,
+          "description": "Ethical field documentation of Olm"
+        }
+      ],
+      "gameplay": {
+        "region": "subterranean_cave",
+        "questType": "observation",
+        "dangerLevel": 2,
+        "ethicalInteraction": "observe_from_distance",
+        "timeRange": "Present",
+        "diet": "Unknown",
+        "activity": "Diurnal",
+        "size": "varies",
+        "behavior": "Wave F encounter taxon",
+        "learningTopics": [
+          "amphibian",
+          "subterranean_cave"
+        ],
+        "funFacts": [],
+        "whyItMatters": "Proteus anguinus is a real taxon used for Alpha encounter coverage."
+      },
+      "provenance": [
+        {
+          "source": "game_authored",
+          "sourceVersion": "wave-f-alpha-2026-08",
+          "sourceRecordId": "proteus_anguinus",
+          "gbifTaxonKey": 2431837,
+          "license": "GAME-ORIGINAL",
+          "citation": "Archive of Life Wave F authored encounter entry for Proteus anguinus (real taxon; not a live COL/GBIF ingest claim)",
+          "citationRequired": false,
+          "retrievedAt": "2026-08-07T19:00:00.000Z",
+          "lastUpdated": "2026-08-07T19:00:00.000Z",
+          "isMockData": false,
+          "verificationStatus": "game_authored_verified"
+        },
+        {
+          "source": "gbif",
+          "sourceVersion": "public-key-reference",
+          "sourceRecordId": "2431837",
+          "gbifTaxonKey": 2431837,
+          "license": "CC-BY-4.0",
+          "citation": "GBIF taxon key 2431837 referenced for Proteus anguinus; live occurrence fetch via ScientificIngestionService",
+          "citationRequired": true,
+          "retrievedAt": "2026-08-07T19:00:00.000Z",
+          "lastUpdated": "2026-08-07T19:00:00.000Z",
+          "isMockData": false,
+          "verificationStatus": "needs_source_verification"
+        }
+      ]
+    },
+    {
+      "id": "amblyopsis_spelaea",
+      "commonName": "Northern Cavefish",
+      "scientificName": "Amblyopsis spelaea",
+      "group": "Fish",
+      "tier": "regional",
+      "representationTier": 3,
+      "lifeStatus": "extant",
+      "timeUnitIds": [
+        "holocene"
+      ],
+      "taxonomy": {
+        "family": "Amblyopsidae",
+        "rank": "species",
+        "acceptedName": "Amblyopsis spelaea"
+      },
+      "artifactTemplates": [
+        {
+          "id": "amblyopsis_spelaea_field_note",
+          "artifactType": "behavioral_field_note",
+          "label": "field note",
+          "ethical": true,
+          "description": "Ethical field documentation of Northern Cavefish"
+        }
+      ],
+      "gameplay": {
+        "region": "subterranean_cave",
+        "questType": "observation",
+        "dangerLevel": 2,
+        "ethicalInteraction": "observe_from_distance",
+        "timeRange": "Present",
+        "diet": "Unknown",
+        "activity": "Diurnal",
+        "size": "varies",
+        "behavior": "Wave F encounter taxon",
+        "learningTopics": [
+          "fish",
+          "subterranean_cave"
+        ],
+        "funFacts": [],
+        "whyItMatters": "Amblyopsis spelaea is a real taxon used for Alpha encounter coverage."
+      },
+      "provenance": [
+        {
+          "source": "game_authored",
+          "sourceVersion": "wave-f-alpha-2026-08",
+          "sourceRecordId": "amblyopsis_spelaea",
+          "gbifTaxonKey": null,
+          "license": "GAME-ORIGINAL",
+          "citation": "Archive of Life Wave F authored encounter entry for Amblyopsis spelaea (real taxon; not a live COL/GBIF ingest claim)",
+          "citationRequired": false,
+          "retrievedAt": "2026-08-07T19:00:00.000Z",
+          "lastUpdated": "2026-08-07T19:00:00.000Z",
+          "isMockData": false,
+          "verificationStatus": "game_authored_verified"
+        }
+      ]
+    },
+    {
+      "id": "hadenoecus_subterraneus",
+      "commonName": "Cave Cricket",
+      "scientificName": "Hadenoecus subterraneus",
+      "group": "Insect",
+      "tier": "regional",
+      "representationTier": 2,
+      "lifeStatus": "extant",
+      "timeUnitIds": [
+        "holocene"
+      ],
+      "taxonomy": {
+        "family": "Rhaphidophoridae",
+        "rank": "species",
+        "acceptedName": "Hadenoecus subterraneus"
+      },
+      "artifactTemplates": [
+        {
+          "id": "hadenoecus_subterraneus_field_note",
+          "artifactType": "behavioral_field_note",
+          "label": "field note",
+          "ethical": true,
+          "description": "Ethical field documentation of Cave Cricket"
+        }
+      ],
+      "gameplay": {
+        "region": "subterranean_cave",
+        "questType": "observation",
+        "dangerLevel": 2,
+        "ethicalInteraction": "observe_from_distance",
+        "timeRange": "Present",
+        "diet": "Unknown",
+        "activity": "Diurnal",
+        "size": "varies",
+        "behavior": "Wave F encounter taxon",
+        "learningTopics": [
+          "insect",
+          "subterranean_cave"
+        ],
+        "funFacts": [],
+        "whyItMatters": "Hadenoecus subterraneus is a real taxon used for Alpha encounter coverage."
+      },
+      "provenance": [
+        {
+          "source": "game_authored",
+          "sourceVersion": "wave-f-alpha-2026-08",
+          "sourceRecordId": "hadenoecus_subterraneus",
+          "gbifTaxonKey": null,
+          "license": "GAME-ORIGINAL",
+          "citation": "Archive of Life Wave F authored encounter entry for Hadenoecus subterraneus (real taxon; not a live COL/GBIF ingest claim)",
+          "citationRequired": false,
+          "retrievedAt": "2026-08-07T19:00:00.000Z",
+          "lastUpdated": "2026-08-07T19:00:00.000Z",
+          "isMockData": false,
+          "verificationStatus": "game_authored_verified"
+        }
+      ]
+    },
+    {
+      "id": "meta_menardi",
+      "commonName": "European Cave Spider",
+      "scientificName": "Meta menardi",
+      "group": "Arachnid",
+      "tier": "regional",
+      "representationTier": 2,
+      "lifeStatus": "extant",
+      "timeUnitIds": [
+        "holocene"
+      ],
+      "taxonomy": {
+        "family": "Tetragnathidae",
+        "rank": "species",
+        "acceptedName": "Meta menardi"
+      },
+      "artifactTemplates": [
+        {
+          "id": "meta_menardi_field_note",
+          "artifactType": "behavioral_field_note",
+          "label": "field note",
+          "ethical": true,
+          "description": "Ethical field documentation of European Cave Spider"
+        }
+      ],
+      "gameplay": {
+        "region": "subterranean_cave",
+        "questType": "observation",
+        "dangerLevel": 2,
+        "ethicalInteraction": "observe_from_distance",
+        "timeRange": "Present",
+        "diet": "Unknown",
+        "activity": "Diurnal",
+        "size": "varies",
+        "behavior": "Wave F encounter taxon",
+        "learningTopics": [
+          "arachnid",
+          "subterranean_cave"
+        ],
+        "funFacts": [],
+        "whyItMatters": "Meta menardi is a real taxon used for Alpha encounter coverage."
+      },
+      "provenance": [
+        {
+          "source": "game_authored",
+          "sourceVersion": "wave-f-alpha-2026-08",
+          "sourceRecordId": "meta_menardi",
+          "gbifTaxonKey": null,
+          "license": "GAME-ORIGINAL",
+          "citation": "Archive of Life Wave F authored encounter entry for Meta menardi (real taxon; not a live COL/GBIF ingest claim)",
+          "citationRequired": false,
+          "retrievedAt": "2026-08-07T19:00:00.000Z",
+          "lastUpdated": "2026-08-07T19:00:00.000Z",
+          "isMockData": false,
+          "verificationStatus": "game_authored_verified"
+        }
+      ]
+    },
+    {
+      "id": "neaphaenops_tellkampfi",
+      "commonName": "Kentucky Cave Beetle",
+      "scientificName": "Neaphaenops tellkampfi",
+      "group": "Insect",
+      "tier": "regional",
+      "representationTier": 2,
+      "lifeStatus": "extant",
+      "timeUnitIds": [
+        "holocene"
+      ],
+      "taxonomy": {
+        "family": "Carabidae",
+        "rank": "species",
+        "acceptedName": "Neaphaenops tellkampfi"
+      },
+      "artifactTemplates": [
+        {
+          "id": "neaphaenops_tellkampfi_field_note",
+          "artifactType": "behavioral_field_note",
+          "label": "field note",
+          "ethical": true,
+          "description": "Ethical field documentation of Kentucky Cave Beetle"
+        }
+      ],
+      "gameplay": {
+        "region": "subterranean_cave",
+        "questType": "observation",
+        "dangerLevel": 2,
+        "ethicalInteraction": "observe_from_distance",
+        "timeRange": "Present",
+        "diet": "Unknown",
+        "activity": "Diurnal",
+        "size": "varies",
+        "behavior": "Wave F encounter taxon",
+        "learningTopics": [
+          "insect",
+          "subterranean_cave"
+        ],
+        "funFacts": [],
+        "whyItMatters": "Neaphaenops tellkampfi is a real taxon used for Alpha encounter coverage."
+      },
+      "provenance": [
+        {
+          "source": "game_authored",
+          "sourceVersion": "wave-f-alpha-2026-08",
+          "sourceRecordId": "neaphaenops_tellkampfi",
+          "gbifTaxonKey": null,
+          "license": "GAME-ORIGINAL",
+          "citation": "Archive of Life Wave F authored encounter entry for Neaphaenops tellkampfi (real taxon; not a live COL/GBIF ingest claim)",
+          "citationRequired": false,
+          "retrievedAt": "2026-08-07T19:00:00.000Z",
+          "lastUpdated": "2026-08-07T19:00:00.000Z",
+          "isMockData": false,
+          "verificationStatus": "game_authored_verified"
+        }
+      ]
+    },
+    {
+      "id": "typhlichthys_subterraneus",
+      "commonName": "Southern Cavefish",
+      "scientificName": "Typhlichthys subterraneus",
+      "group": "Fish",
+      "tier": "regional",
+      "representationTier": 3,
+      "lifeStatus": "extant",
+      "timeUnitIds": [
+        "holocene"
+      ],
+      "taxonomy": {
+        "family": "Amblyopsidae",
+        "rank": "species",
+        "acceptedName": "Typhlichthys subterraneus"
+      },
+      "artifactTemplates": [
+        {
+          "id": "typhlichthys_subterraneus_field_note",
+          "artifactType": "behavioral_field_note",
+          "label": "field note",
+          "ethical": true,
+          "description": "Ethical field documentation of Southern Cavefish"
+        }
+      ],
+      "gameplay": {
+        "region": "subterranean_cave",
+        "questType": "observation",
+        "dangerLevel": 2,
+        "ethicalInteraction": "observe_from_distance",
+        "timeRange": "Present",
+        "diet": "Unknown",
+        "activity": "Diurnal",
+        "size": "varies",
+        "behavior": "Wave F encounter taxon",
+        "learningTopics": [
+          "fish",
+          "subterranean_cave"
+        ],
+        "funFacts": [],
+        "whyItMatters": "Typhlichthys subterraneus is a real taxon used for Alpha encounter coverage."
+      },
+      "provenance": [
+        {
+          "source": "game_authored",
+          "sourceVersion": "wave-f-alpha-2026-08",
+          "sourceRecordId": "typhlichthys_subterraneus",
+          "gbifTaxonKey": null,
+          "license": "GAME-ORIGINAL",
+          "citation": "Archive of Life Wave F authored encounter entry for Typhlichthys subterraneus (real taxon; not a live COL/GBIF ingest claim)",
+          "citationRequired": false,
+          "retrievedAt": "2026-08-07T19:00:00.000Z",
+          "lastUpdated": "2026-08-07T19:00:00.000Z",
+          "isMockData": false,
+          "verificationStatus": "game_authored_verified"
+        }
+      ]
+    },
+    {
+      "id": "plecotus_auritus",
+      "commonName": "Brown Long-eared Bat",
+      "scientificName": "Plecotus auritus",
+      "group": "Mammal",
+      "tier": "regional",
+      "representationTier": 3,
+      "lifeStatus": "extant",
+      "timeUnitIds": [
+        "holocene"
+      ],
+      "taxonomy": {
+        "family": "Vespertilionidae",
+        "rank": "species",
+        "acceptedName": "Plecotus auritus"
+      },
+      "artifactTemplates": [
+        {
+          "id": "plecotus_auritus_field_note",
+          "artifactType": "behavioral_field_note",
+          "label": "field note",
+          "ethical": true,
+          "description": "Ethical field documentation of Brown Long-eared Bat"
+        }
+      ],
+      "gameplay": {
+        "region": "subterranean_cave",
+        "questType": "observation",
+        "dangerLevel": 2,
+        "ethicalInteraction": "observe_from_distance",
+        "timeRange": "Present",
+        "diet": "Unknown",
+        "activity": "Diurnal",
+        "size": "varies",
+        "behavior": "Wave F encounter taxon",
+        "learningTopics": [
+          "mammal",
+          "subterranean_cave"
+        ],
+        "funFacts": [],
+        "whyItMatters": "Plecotus auritus is a real taxon used for Alpha encounter coverage."
+      },
+      "provenance": [
+        {
+          "source": "game_authored",
+          "sourceVersion": "wave-f-alpha-2026-08",
+          "sourceRecordId": "plecotus_auritus",
+          "gbifTaxonKey": 2432524,
+          "license": "GAME-ORIGINAL",
+          "citation": "Archive of Life Wave F authored encounter entry for Plecotus auritus (real taxon; not a live COL/GBIF ingest claim)",
+          "citationRequired": false,
+          "retrievedAt": "2026-08-07T19:00:00.000Z",
+          "lastUpdated": "2026-08-07T19:00:00.000Z",
+          "isMockData": false,
+          "verificationStatus": "game_authored_verified"
+        },
+        {
+          "source": "gbif",
+          "sourceVersion": "public-key-reference",
+          "sourceRecordId": "2432524",
+          "gbifTaxonKey": 2432524,
+          "license": "CC-BY-4.0",
+          "citation": "GBIF taxon key 2432524 referenced for Plecotus auritus; live occurrence fetch via ScientificIngestionService",
+          "citationRequired": true,
+          "retrievedAt": "2026-08-07T19:00:00.000Z",
+          "lastUpdated": "2026-08-07T19:00:00.000Z",
+          "isMockData": false,
+          "verificationStatus": "needs_source_verification"
+        }
+      ]
+    },
+    {
+      "id": "myotis_lucifugus",
+      "commonName": "Little Brown Bat",
+      "scientificName": "Myotis lucifugus",
+      "group": "Mammal",
+      "tier": "regional",
+      "representationTier": 3,
+      "lifeStatus": "extant",
+      "timeUnitIds": [
+        "holocene"
+      ],
+      "taxonomy": {
+        "family": "Vespertilionidae",
+        "rank": "species",
+        "acceptedName": "Myotis lucifugus"
+      },
+      "artifactTemplates": [
+        {
+          "id": "myotis_lucifugus_field_note",
+          "artifactType": "behavioral_field_note",
+          "label": "field note",
+          "ethical": true,
+          "description": "Ethical field documentation of Little Brown Bat"
+        }
+      ],
+      "gameplay": {
+        "region": "subterranean_cave",
+        "questType": "observation",
+        "dangerLevel": 2,
+        "ethicalInteraction": "observe_from_distance",
+        "timeRange": "Present",
+        "diet": "Unknown",
+        "activity": "Diurnal",
+        "size": "varies",
+        "behavior": "Wave F encounter taxon",
+        "learningTopics": [
+          "mammal",
+          "subterranean_cave"
+        ],
+        "funFacts": [],
+        "whyItMatters": "Myotis lucifugus is a real taxon used for Alpha encounter coverage."
+      },
+      "provenance": [
+        {
+          "source": "game_authored",
+          "sourceVersion": "wave-f-alpha-2026-08",
+          "sourceRecordId": "myotis_lucifugus",
+          "gbifTaxonKey": 2432411,
+          "license": "GAME-ORIGINAL",
+          "citation": "Archive of Life Wave F authored encounter entry for Myotis lucifugus (real taxon; not a live COL/GBIF ingest claim)",
+          "citationRequired": false,
+          "retrievedAt": "2026-08-07T19:00:00.000Z",
+          "lastUpdated": "2026-08-07T19:00:00.000Z",
+          "isMockData": false,
+          "verificationStatus": "game_authored_verified"
+        },
+        {
+          "source": "gbif",
+          "sourceVersion": "public-key-reference",
+          "sourceRecordId": "2432411",
+          "gbifTaxonKey": 2432411,
+          "license": "CC-BY-4.0",
+          "citation": "GBIF taxon key 2432411 referenced for Myotis lucifugus; live occurrence fetch via ScientificIngestionService",
+          "citationRequired": true,
+          "retrievedAt": "2026-08-07T19:00:00.000Z",
+          "lastUpdated": "2026-08-07T19:00:00.000Z",
+          "isMockData": false,
+          "verificationStatus": "needs_source_verification"
+        }
+      ]
+    }
+  ]
+}

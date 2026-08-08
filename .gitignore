@@ -29,6 +29,13 @@ data-pipeline/exports/**
 data-pipeline/**/*.duckdb
 data-pipeline/**/*.parquet
 
+# Science DB WAL/SHM + backups (track primary sqlite + meta)
+public/data/science/*.backup.sqlite
+public/data/science/*.corrupt-probe.sqlite
+public/data/science/*-wal
+public/data/science/*-shm
+public/data/science/test_*.sqlite
+
 # Gate 1 runtime evidence outputs
 gate1/evidence/out/**
 !gate1/evidence/out/**/.gitkeep

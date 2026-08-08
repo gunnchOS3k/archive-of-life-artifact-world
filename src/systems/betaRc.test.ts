@@ -209,22 +209,61 @@ describe('Beta + Digital RC tokens', () => {
     expect(beta.honesty.globalCompleteClaim).toBe(false);
   });
 
-  it('emits ARCHIVE_DIGITAL_RC_READY when package path complete', () => {
+  it('emits ARCHIVE_DIGITAL_RC_READY only when runtime DB integration + suite pass', () => {
     const rc = evaluateDigitalRc({
       snapshotId: 'test',
       betaDigitalPass: true,
+      pipelineComplete: true,
+      runtimeDbIntegration: true,
+      dbMigrationOk: true,
+      snapshotUpdateOk: true,
+      snapshotCorruptDetectOk: true,
+      offlineOk: true,
+      sourceUpdateOk: true,
+      saveMigrateOk: true,
       packageManifestPresent: true,
-      provenanceBundlePresent: true,
-      offlinePackReady: true,
+      updateRollbackOk: true,
+      provenanceDisplayOk: true,
+      a11yOk: true,
+      localizationReady: true,
+      uniqueIconTitleOk: true,
       actualCountsPresent: true,
-      sourceStatesDeclared: true,
       ingestCheckpointResume: true,
       testsGreenSignal: true,
       packId: 'archive-of-life-digital-rc',
-      version: '2.0.0',
+      version: '2.1.0-cont-vi',
       artifactPaths: ['rc/package_manifest.json'],
     });
     expect(rc.statusToken).toBe('ARCHIVE_DIGITAL_RC_READY');
+  });
+
+  it('blocks ARCHIVE_DIGITAL_RC_READY without runtime DB integration', () => {
+    const rc = evaluateDigitalRc({
+      snapshotId: 'test',
+      betaDigitalPass: true,
+      pipelineComplete: true,
+      runtimeDbIntegration: false,
+      dbMigrationOk: true,
+      snapshotUpdateOk: true,
+      snapshotCorruptDetectOk: true,
+      offlineOk: true,
+      sourceUpdateOk: true,
+      saveMigrateOk: true,
+      packageManifestPresent: true,
+      updateRollbackOk: true,
+      provenanceDisplayOk: true,
+      a11yOk: true,
+      localizationReady: true,
+      uniqueIconTitleOk: true,
+      actualCountsPresent: true,
+      ingestCheckpointResume: true,
+      testsGreenSignal: true,
+      packId: 'archive-of-life-digital-rc',
+      version: '2.1.0-cont-vi',
+      artifactPaths: ['rc/package_manifest.json'],
+    });
+    expect(rc.statusToken).not.toBe('ARCHIVE_DIGITAL_RC_READY');
+    expect(rc.gaps.some((g) => g.includes('runtime_db_integration'))).toBe(true);
   });
 
   it('builds digital RC offline pack with provenance pointers', () => {

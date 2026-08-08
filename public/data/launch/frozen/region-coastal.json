@@ -1,0 +1,290 @@
+{
+  "regionId": "coastal",
+  "speciesIds": [
+    "balaenoptera_musculus",
+    "phoca_vitulina"
+  ],
+  "species": [
+    {
+      "id": "balaenoptera_musculus",
+      "commonName": "Blue Whale",
+      "scientificName": "Balaenoptera musculus",
+      "group": "Mammal",
+      "tier": "hero",
+      "representationTier": 6,
+      "lifeStatus": "extant",
+      "timeUnitIds": [
+        "holocene"
+      ],
+      "taxonomy": {
+        "family": "Balaenopteridae",
+        "rank": "species",
+        "acceptedName": "Balaenoptera musculus",
+        "catalogueOfLifeId": "MOCK-COL-balaenoptera_musculus"
+      },
+      "conservation": {
+        "iucnCategory": "Endangered",
+        "assessed": true,
+        "sourceVersion": "mock-iucn-2026-07",
+        "lastUpdated": "2026-07-02",
+        "iucnTaxonId": 27409
+      },
+      "distribution": {
+        "continents": [
+          "Global oceans"
+        ],
+        "habitats": [
+          "ocean",
+          "coastal"
+        ],
+        "sourceVersion": "mock-gbif-2026-07",
+        "lastUpdated": "2026-07-02",
+        "gbifTaxonKey": 7146193,
+        "occurrenceSummaries": [
+          {
+            "region": "Global oceans",
+            "occurrenceCount": 2679
+          }
+        ]
+      },
+      "artifactTemplates": [
+        {
+          "id": "balaenoptera_musculus_photo_record",
+          "artifactType": "photo_record",
+          "label": "photo record",
+          "ethical": true,
+          "description": "Ethical photo record collection"
+        },
+        {
+          "id": "balaenoptera_musculus_audio_recording",
+          "artifactType": "audio_recording",
+          "label": "audio recording",
+          "ethical": true,
+          "description": "Ethical audio recording collection"
+        },
+        {
+          "id": "balaenoptera_musculus_migration_tag_data",
+          "artifactType": "migration_tag_data",
+          "label": "migration tag data",
+          "ethical": true,
+          "description": "Ethical migration tag data collection"
+        }
+      ],
+      "gameplay": {
+        "region": "coastal",
+        "questType": "observation",
+        "dangerLevel": 1,
+        "ethicalInteraction": "observe_from_boat",
+        "timeRange": "Present",
+        "diet": "Carnivore (filter feeder)",
+        "activity": "Diurnal",
+        "size": "Up to 30 m — largest animal ever",
+        "behavior": "Long-distance ocean migrant; vocal communication",
+        "learningTopics": [
+          "marine ecosystems",
+          "migration",
+          "conservation"
+        ],
+        "funFacts": [
+          "Heart weighs as much as a car",
+          "Eats up to 4 tonnes of krill daily"
+        ],
+        "whyItMatters": "Indicator of ocean health; nutrient cycling through vertical migration."
+      },
+      "nasaLayerDependencies": [
+        {
+          "layer": "ocean_biology",
+          "product": "ocean_color",
+          "reason": "Chlorophyll blooms drive marine prey aggregations"
+        },
+        {
+          "layer": "climate",
+          "product": "power",
+          "reason": "Coastal wind and temperature affect migration timing"
+        },
+        {
+          "layer": "climate",
+          "product": "power",
+          "reason": "Field expedition planning uses local climate baselines"
+        }
+      ],
+      "requiredHabitatSignals": [
+        {
+          "signal": "ocean_productivity",
+          "layer": "ocean_biology",
+          "minValue": 0.5,
+          "required": true,
+          "description": "Migration and foraging follow ocean productivity seasons"
+        }
+      ],
+      "provenance": [
+        {
+          "source": "game_authored",
+          "sourceVersion": "mvp-current",
+          "sourceRecordId": "balaenoptera_musculus",
+          "license": "GAME-ORIGINAL",
+          "citation": "Archive of Life: Artifact World authored prototype content",
+          "citationRequired": false,
+          "retrievedAt": "2026-07-05T03:27:29.539Z",
+          "lastUpdated": "2026-07-05T03:27:29.539Z",
+          "isMockData": false,
+          "verificationStatus": "game_authored_verified"
+        },
+        {
+          "source": "catalogue_of_life",
+          "sourceVersion": "mock-sample-2026-07",
+          "sourceRecordId": "MOCK-balaenoptera_musculus",
+          "catalogueOfLifeId": "MOCK-COL-balaenoptera_musculus",
+          "license": "MOCK-SAMPLE",
+          "citation": "MOCK SAMPLE — not sourced from live API; requires approved source snapshot import",
+          "citationRequired": true,
+          "retrievedAt": "2026-07-05T03:27:29.539Z",
+          "lastUpdated": "2026-07-05T03:27:29.539Z",
+          "isMockData": true,
+          "verificationStatus": "mock_sample"
+        }
+      ]
+    },
+    {
+      "id": "phoca_vitulina",
+      "commonName": "Harbor Seal",
+      "scientificName": "Phoca vitulina",
+      "group": "Mammal",
+      "tier": "hero",
+      "representationTier": 6,
+      "lifeStatus": "extant",
+      "timeUnitIds": [
+        "holocene"
+      ],
+      "taxonomy": {
+        "family": "Phocidae",
+        "rank": "species",
+        "acceptedName": "Phoca vitulina",
+        "catalogueOfLifeId": "MOCK-COL-phoca_vitulina"
+      },
+      "conservation": {
+        "iucnCategory": "Least Concern",
+        "assessed": true,
+        "sourceVersion": "mock-iucn-2026-07",
+        "lastUpdated": "2026-07-02",
+        "iucnTaxonId": 91836
+      },
+      "distribution": {
+        "continents": [
+          "North Atlantic",
+          "North Pacific"
+        ],
+        "habitats": [
+          "coastal",
+          "ocean"
+        ],
+        "sourceVersion": "mock-gbif-2026-07",
+        "lastUpdated": "2026-07-02",
+        "gbifTaxonKey": 5107101,
+        "occurrenceSummaries": [
+          {
+            "region": "North Atlantic",
+            "occurrenceCount": 2480
+          }
+        ]
+      },
+      "artifactTemplates": [
+        {
+          "id": "phoca_vitulina_photo_record",
+          "artifactType": "photo_record",
+          "label": "photo record",
+          "ethical": true,
+          "description": "Ethical photo record collection"
+        },
+        {
+          "id": "phoca_vitulina_track_cast",
+          "artifactType": "track_cast",
+          "label": "track cast",
+          "ethical": true,
+          "description": "Ethical track cast collection"
+        },
+        {
+          "id": "phoca_vitulina_behavioral_field_note",
+          "artifactType": "behavioral_field_note",
+          "label": "behavioral field note",
+          "ethical": true,
+          "description": "Ethical behavioral field note collection"
+        }
+      ],
+      "gameplay": {
+        "region": "coastal",
+        "questType": "observation",
+        "dangerLevel": 1,
+        "ethicalInteraction": "observe_from_distance",
+        "timeRange": "Present",
+        "diet": "Carnivore",
+        "activity": "Diurnal",
+        "size": "1.5–1.9 m body length",
+        "behavior": "Social haul-out on rocks; agile swimmer",
+        "learningTopics": [
+          "marine mammals",
+          "coastal ecology",
+          "thermoregulation"
+        ],
+        "funFacts": [
+          "Can sleep underwater",
+          "Whiskers detect fish vibrations"
+        ],
+        "whyItMatters": "Sentinel species for coastal pollution and fisheries health."
+      },
+      "nasaLayerDependencies": [
+        {
+          "layer": "ocean_biology",
+          "product": "ocean_color",
+          "reason": "Chlorophyll blooms drive marine prey aggregations"
+        },
+        {
+          "layer": "climate",
+          "product": "power",
+          "reason": "Coastal wind and temperature affect migration timing"
+        },
+        {
+          "layer": "climate",
+          "product": "power",
+          "reason": "Field expedition planning uses local climate baselines"
+        }
+      ],
+      "requiredHabitatSignals": [
+        {
+          "signal": "ocean_productivity",
+          "layer": "ocean_biology",
+          "minValue": 0.5,
+          "required": true,
+          "description": "Migration and foraging follow ocean productivity seasons"
+        }
+      ],
+      "provenance": [
+        {
+          "source": "game_authored",
+          "sourceVersion": "mvp-current",
+          "sourceRecordId": "phoca_vitulina",
+          "license": "GAME-ORIGINAL",
+          "citation": "Archive of Life: Artifact World authored prototype content",
+          "citationRequired": false,
+          "retrievedAt": "2026-07-05T03:27:29.539Z",
+          "lastUpdated": "2026-07-05T03:27:29.539Z",
+          "isMockData": false,
+          "verificationStatus": "game_authored_verified"
+        },
+        {
+          "source": "catalogue_of_life",
+          "sourceVersion": "mock-sample-2026-07",
+          "sourceRecordId": "MOCK-phoca_vitulina",
+          "catalogueOfLifeId": "MOCK-COL-phoca_vitulina",
+          "license": "MOCK-SAMPLE",
+          "citation": "MOCK SAMPLE — not sourced from live API; requires approved source snapshot import",
+          "citationRequired": true,
+          "retrievedAt": "2026-07-05T03:27:29.539Z",
+          "lastUpdated": "2026-07-05T03:27:29.539Z",
+          "isMockData": true,
+          "verificationStatus": "mock_sample"
+        }
+      ]
+    }
+  ]
+}

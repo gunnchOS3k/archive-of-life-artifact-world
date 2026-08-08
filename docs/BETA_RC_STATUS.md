@@ -1,30 +1,25 @@
-# Beta + Digital RC status — Archive of Life (Cont V)
+# Beta / Digital RC status (Cont VI)
 
-**Branch:** `cursor/full-product-continuation-v-archive-closure`  
-**Base:** origin/main `5cb81fb` (#20)
+**Beta digital** = frozen launch Tier E/F + systems + world/runtime traversal.  
+Does **not** mean global scientific ingest.
 
-## Cont V claim posture
+**Digital RC** = Beta + `PIPELINE_COMPLETE` + **runtime science-DB integration** + RC suite.
 
-Beta digital means **frozen launch Tier E/F + systems + world traversal**.  
-It does **not** mean global scientific ingest. Fixture `unique_taxa≈987` is not global coverage.
-
-Digital RC additionally requires earned `PIPELINE_COMPLETE` (multi-source live production path).
-
-See `docs/CLAIM_FIREWALL.md` and `public/data/claims/claim_ledger.json`.
-
-## Commands
+| Token | Status |
+|-------|--------|
+| `LAUNCH_TIER_E_COMPLETE` | E=156 playable (floor 120) |
+| `LAUNCH_TIER_F_COMPLETE` | F=24 gameplay+artifacts |
+| `PIPELINE_COMPLETE` | Cont VI multi-query live ops (see `production_ops_report.json`) |
+| `ARCHIVE_BETA_CONTENT_COMPLETE_DIGITAL` | earned |
+| `ARCHIVE_DIGITAL_RC_READY` | earned only with runtime DB integration |
+| `GLOBAL_DATA_COMPLETE` | always rejected |
+| `ALL_SPECIES_INGESTED` | always rejected |
 
 ```bash
-npm run ingest:production-probe
-npm run qa:world-traversal
+npm run ingest:production-ops
+npm run build:science-db
+npm run qa:tier-ef-runtime
+npm run rc:digital-suite
 npm run report:claims
 npm run audit:claim-firewall
-npm test
 ```
-
-## Non-claims
-
-- Not `GLOBAL_DATA_COMPLETE` / `ALL_SPECIES_INGESTED`
-- Not IUCN authorized-bulk completeness
-- Not physical / device RC
-- Fixtures never counted as live

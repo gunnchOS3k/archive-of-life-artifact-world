@@ -6,6 +6,7 @@ import sys
 
 from archive_life_pipeline.audit import run_pipeline_audit
 from archive_life_pipeline.duckdb_runner import run_sql_pipeline
+from archive_life_pipeline.science_db import build_durable_science_duckdb
 from archive_life_pipeline.snapshot import build_snapshot_manifest
 from archive_life_pipeline.source_import import (
     IMPORTERS,
@@ -25,6 +26,7 @@ def main() -> None:
     sub.add_parser("sql", help="Run SQL validation pipeline")
     sub.add_parser("audit", help="Run pipeline audit")
     sub.add_parser("build-snapshot", help="Build release snapshot manifest")
+    sub.add_parser("build-science-db", help="Build durable DuckDB science snapshot")
     sub.add_parser("validate-snapshots", help="Validate configured source snapshots")
     sub.add_parser("status", help="Show pipeline and source import status")
     sub.add_parser("export-bundles", help="Export bundle checksum manifest")
@@ -47,6 +49,14 @@ def main() -> None:
             if r.get("error"):
                 print(f"  {r['error']}")
         sys.exit(1 if errors else 0)
+
+    if args.command == "build-science-db":
+        meta = build_durable_science_duckdb()
+        print(
+            f"DuckDB science snapshot: taxa={meta['taxa']} "
+            f"sha256={meta['sha256'][:12]}… globalCompleteClaim={meta['globalCompleteClaim']}"
+        )
+        sys.exit(0)
 
     if args.command == "audit":
         summary = run_pipeline_audit()

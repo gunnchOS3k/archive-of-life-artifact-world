@@ -40,6 +40,9 @@ jobs:
       - name: Generate data bundles
         run: npm run generate:bundles
 
+      - name: Restore frozen launch floors (E/F/regions)
+        run: npm run restore:launch-floors
+
       - name: Typecheck
         run: npm run typecheck
 
@@ -81,3 +84,21 @@ jobs:
 
       - name: Gate1 core-loop (provenance + save/reload)
         run: node gate1/tools/core_loop_test.mjs
+
+      - name: Build durable science DB (SQLite)
+        run: npm run build:science-db
+
+      - name: Digital RC suite
+        run: npm run rc:digital-suite
+
+      - name: Tier E/F runtime traversal (DB-backed)
+        run: npm run qa:tier-ef-runtime
+
+      - name: Unit tests
+        run: npm test
+
+      - name: Claim firewall
+        run: npm run audit:claim-firewall
+
+      - name: Build DuckDB science snapshot
+        run: cd data-pipeline && uv run archive-pipeline build-science-db

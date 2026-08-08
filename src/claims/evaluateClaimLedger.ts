@@ -33,6 +33,8 @@ export interface ClaimLedgerInput {
   /** World traversal QA passed (not Agar.io) */
   worldTraversalPass: boolean;
   worldTraversalDetail: string;
+  /** Cont VI: game runtime integrated to durable science DB across launch regions */
+  runtimeDbIntegration?: boolean;
 }
 
 function earned(
@@ -130,11 +132,12 @@ export function evaluateClaimLedger(input: ClaimLedgerInput): ClaimLedger {
     ],
   );
 
-  // Digital RC requires Beta + production pipeline evidence (not fixture-only).
-  const rcComplete = betaComplete && pipeline.earned;
+  // Cont VI: Digital RC requires Beta + PIPELINE + runtime science-DB integration.
+  const runtimeOk = input.runtimeDbIntegration === true;
+  const rcComplete = betaComplete && pipeline.earned && runtimeOk;
   const rcToken = rcComplete
     ? 'ARCHIVE_DIGITAL_RC_READY'
-    : betaComplete || pipeline.earned
+    : betaComplete || pipeline.earned || runtimeOk
       ? 'ARCHIVE_DIGITAL_RC_IN_PROGRESS'
       : 'ARCHIVE_DIGITAL_RC_NOT_READY';
 
@@ -142,11 +145,12 @@ export function evaluateClaimLedger(input: ClaimLedgerInput): ClaimLedger {
     rcToken,
     rcComplete,
     rcComplete
-      ? 'Beta digital + PIPELINE_COMPLETE production path'
-      : `RC blocked until Beta+PIPELINE_COMPLETE (liveTotal=${liveTotal} liveSources=${liveSources})`,
+      ? 'Beta digital + PIPELINE_COMPLETE + runtime science-DB integration'
+      : `RC blocked until Beta+PIPELINE_COMPLETE+runtime DB (liveTotal=${liveTotal} liveSources=${liveSources} runtime=${runtimeOk})`,
     [
       'public/data/status/digital_rc_report.json',
       'public/data/status/production_probe_report.json',
+      'public/data/qa/tier_ef_runtime/report.json',
     ],
   );
 

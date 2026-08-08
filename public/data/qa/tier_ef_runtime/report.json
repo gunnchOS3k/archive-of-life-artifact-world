@@ -1,0 +1,257 @@
+{
+  "generatedAt": "2026-08-08T21:07:51.830Z",
+  "pass": true,
+  "runtimeIntegrationComplete": true,
+  "launchTier": {
+    "E": {
+      "required": 120,
+      "actual": 156,
+      "met": true,
+      "playable": 156,
+      "byRegion": {
+        "polar_ice": 13,
+        "subterranean_cave": 8,
+        "urban_park": 18,
+        "atmospheric_corridor": 8,
+        "deep_marine": 15,
+        "savanna": 20,
+        "forest": 25,
+        "wetland": 19,
+        "coastal": 14,
+        "fossil_site": 10,
+        "indiana_ancient_swamp": 6
+      }
+    },
+    "F": {
+      "required": 24,
+      "actual": 24,
+      "met": true,
+      "withGameplay": 24,
+      "withArtifacts": 24
+    },
+    "regions": {
+      "required": 12,
+      "actual": 12,
+      "met": true,
+      "biomes": [
+        "museum",
+        "savanna",
+        "forest",
+        "wetland",
+        "coastal",
+        "fossil_bed",
+        "ancient_swamp",
+        "polar_ice",
+        "subterranean_cave",
+        "urban_human_modified",
+        "atmospheric_aerial",
+        "marine_coastal"
+      ],
+      "polarPresent": true
+    },
+    "tokens": {
+      "LAUNCH_TIER_E_COMPLETE": true,
+      "LAUNCH_TIER_F_COMPLETE": true
+    },
+    "playableNotCountOnly": {
+      "tierE_playable": 156,
+      "tierE_actual": 156,
+      "tierF_gameplay": 24,
+      "tierF_artifacts": 24,
+      "ok": true
+    }
+  },
+  "traversal": {
+    "ok": true,
+    "regionsTraversed": 12,
+    "encounters": 24,
+    "biomes": [
+      "museum",
+      "savanna",
+      "forest",
+      "wetland",
+      "coastal",
+      "fossil_bed",
+      "ancient_swamp",
+      "polar_ice",
+      "subterranean_cave",
+      "urban_human_modified",
+      "atmospheric_aerial",
+      "marine_coastal"
+    ],
+    "eras": [
+      "holocene",
+      "cretaceous",
+      "deep_time"
+    ],
+    "clues": 3,
+    "observations": 24,
+    "artifacts": 24,
+    "journalEntries": 75,
+    "codexDocumented": 12,
+    "companionPathsTouched": 24,
+    "dbTaxa": 1570,
+    "dbUsedForLookups": true,
+    "steps": [
+      {
+        "regionId": "museum",
+        "biome": "museum",
+        "observed": true,
+        "artifactCollected": true,
+        "codexDocumented": true,
+        "companionUpdated": true,
+        "provenanceShown": true,
+        "errors": [],
+        "encounterTaxonId": "anax_junius",
+        "eraId": "holocene"
+      },
+      {
+        "regionId": "savanna",
+        "biome": "savanna",
+        "observed": true,
+        "artifactCollected": true,
+        "codexDocumented": true,
+        "companionUpdated": true,
+        "provenanceShown": true,
+        "errors": [],
+        "encounterTaxonId": "acrocephalus_baeticatus",
+        "eraId": "cretaceous"
+      },
+      {
+        "regionId": "forest",
+        "biome": "forest",
+        "observed": true,
+        "artifactCollected": true,
+        "codexDocumented": true,
+        "companionUpdated": true,
+        "provenanceShown": true,
+        "errors": [],
+        "encounterTaxonId": "ailuropoda_melanoleuca",
+        "eraId": "deep_time"
+      },
+      {
+        "regionId": "wetland",
+        "biome": "wetland",
+        "observed": true,
+        "artifactCollected": true,
+        "codexDocumented": true,
+        "companionUpdated": true,
+        "provenanceShown": true,
+        "errors": [],
+        "encounterTaxonId": "axolotl_mexicanum",
+        "eraId": "holocene"
+      },
+      {
+        "regionId": "coastal",
+        "biome": "coastal",
+        "observed": true,
+        "artifactCollected": true,
+        "codexDocumented": true,
+        "companionUpdated": true,
+        "provenanceShown": true,
+        "errors": [],
+        "encounterTaxonId": "carcinus_maenas",
+        "eraId": "cretaceous"
+      },
+      {
+        "regionId": "fossil_site",
+        "biome": "fossil_bed",
+        "observed": true,
+        "artifactCollected": true,
+        "codexDocumented": true,
+        "companionUpdated": true,
+        "provenanceShown": true,
+        "errors": [],
+        "encounterTaxonId": "dimetrodon_limbatus",
+        "eraId": "deep_time"
+      },
+      {
+        "regionId": "indiana_ancient_swamp",
+        "biome": "ancient_swamp",
+        "observed": true,
+        "artifactCollected": true,
+        "codexDocumented": true,
+        "companionUpdated": true,
+        "provenanceShown": true,
+        "errors": [],
+        "encounterTaxonId": "calamites_suckowi",
+        "clueId": "clue_scale_tree",
+        "eraId": "holocene"
+      },
+      {
+        "regionId": "polar_ice",
+        "biome": "polar_ice",
+        "observed": true,
+        "artifactCollected": true,
+        "codexDocumented": true,
+        "companionUpdated": true,
+        "provenanceShown": true,
+        "errors": [],
+        "encounterTaxonId": "aptendytes_forsteri",
+        "clueId": "clue_ice_edge_foodweb",
+        "eraId": "cretaceous"
+      },
+      {
+        "regionId": "subterranean_cave",
+        "biome": "subterranean_cave",
+        "observed": true,
+        "artifactCollected": true,
+        "codexDocumented": true,
+        "companionUpdated": true,
+        "provenanceShown": true,
+        "errors": [],
+        "encounterTaxonId": "hadenoecus_subterraneus",
+        "eraId": "deep_time"
+      },
+      {
+        "regionId": "urban_park",
+        "biome": "urban_human_modified",
+        "observed": true,
+        "artifactCollected": true,
+        "codexDocumented": true,
+        "companionUpdated": true,
+        "provenanceShown": true,
+        "errors": [],
+        "encounterTaxonId": "blattella_germanica",
+        "clueId": "clue_nest_ledge",
+        "eraId": "holocene"
+      },
+      {
+        "regionId": "atmospheric_corridor",
+        "biome": "atmospheric_aerial",
+        "observed": true,
+        "artifactCollected": true,
+        "codexDocumented": true,
+        "companionUpdated": true,
+        "provenanceShown": true,
+        "errors": [],
+        "encounterTaxonId": "anthus_trivialis",
+        "eraId": "cretaceous"
+      },
+      {
+        "regionId": "deep_marine",
+        "biome": "marine_coastal",
+        "observed": true,
+        "artifactCollected": true,
+        "codexDocumented": true,
+        "companionUpdated": true,
+        "provenanceShown": true,
+        "errors": [],
+        "encounterTaxonId": "aurelia_aurita",
+        "eraId": "deep_time"
+      }
+    ],
+    "gaps": []
+  },
+  "systemsExercised": [
+    "encounter",
+    "biome",
+    "era",
+    "clue",
+    "observation",
+    "artifact",
+    "journal_codex",
+    "companion"
+  ],
+  "evidenceNote": "Headless runtime traversal backed by durable ScientificDb lookups — not in-memory fixture-only."
+}

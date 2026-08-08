@@ -95,6 +95,18 @@ const probe = existsSync(join(STATUS, 'production_probe_report.json'))
 const worldQa = existsSync(join(QA, 'report.json'))
   ? loadJson<{ pass: boolean; experienceClass: string }>(join(QA, 'report.json'))
   : { pass: false, experienceClass: 'missing' };
+const tierEfRuntime = existsSync(join(ROOT, 'qa/tier_ef_runtime/report.json'))
+  ? loadJson<{
+      pass: boolean;
+      runtimeIntegrationComplete: boolean;
+    }>(join(ROOT, 'qa/tier_ef_runtime/report.json'))
+  : { pass: false, runtimeIntegrationComplete: false };
+const rcSuite = existsSync(join(STATUS, 'digital_rc_suite.json'))
+  ? loadJson<{
+      allOk: boolean;
+      checks: Record<string, { ok: boolean; detail: string }>;
+    }>(join(STATUS, 'digital_rc_suite.json'))
+  : null;
 
 const priorBeta = existsSync(join(STATUS, 'beta_digital_report.json'))
   ? loadJson<{ statusToken: string }>(join(STATUS, 'beta_digital_report.json')).statusToken
@@ -119,6 +131,7 @@ const ledger = evaluateClaimLedger({
   worldTraversalDetail: worldQa.pass
     ? worldQa.experienceClass
     : `world traversal QA not pass (${worldQa.experienceClass})`,
+  runtimeDbIntegration: tierEfRuntime.runtimeIntegrationComplete === true,
 });
 
 const bulk = buildBulkSnapshotManifest({
@@ -251,28 +264,46 @@ if (betaComplete) {
 const digitalRc = evaluateDigitalRc({
   snapshotId: index.snapshotId,
   betaDigitalPass: beta.statusToken === 'ARCHIVE_BETA_CONTENT_COMPLETE_DIGITAL',
+  pipelineComplete,
+  runtimeDbIntegration: tierEfRuntime.runtimeIntegrationComplete === true,
+  dbMigrationOk: rcSuite?.checks.db_migration?.ok === true,
+  snapshotUpdateOk: rcSuite?.checks.snapshot_update?.ok === true,
+  snapshotCorruptDetectOk: rcSuite?.checks.snapshot_corrupt_detect?.ok === true,
+  offlineOk: rcSuite?.checks.offline?.ok === true && packReady.ready,
+  sourceUpdateOk: rcSuite?.checks.source_update?.ok === true,
+  saveMigrateOk: rcSuite?.checks.save_migrate?.ok === true,
   packageManifestPresent: true,
-  provenanceBundlePresent: true,
-  offlinePackReady: packReady.ready,
+  updateRollbackOk: rcSuite?.checks.update_rollback?.ok === true,
+  provenanceDisplayOk: rcSuite?.checks.provenance_display?.ok === true,
+  a11yOk: rcSuite?.checks.a11y?.ok === true,
+  localizationReady: rcSuite?.checks.localization_ready?.ok === true,
+  uniqueIconTitleOk: rcSuite?.checks.unique_icon_title?.ok === true,
   actualCountsPresent: !!actualCounts,
-  sourceStatesDeclared: true,
-  ingestCheckpointResume: existsSync(join(STATUS, 'ingest_checkpoints.json')),
+  ingestCheckpointResume:
+    existsSync(join(STATUS, 'ingest_checkpoints.json')) ||
+    existsSync(join(STATUS, 'ingest_checkpoints_live.json')),
   testsGreenSignal: true,
   packId: 'archive-of-life-digital-rc',
-  version: '2.0.0',
+  version: '2.1.0-cont-vi',
   artifactPaths: [
     'rc/package_manifest.json',
     'claims/claim_ledger.json',
     'status/production_probe_report.json',
+    'status/digital_rc_suite.json',
+    'qa/tier_ef_runtime/report.json',
+    'science/offline_snapshot_meta.json',
   ],
 });
 
-if (!pipelineComplete && digitalRc.statusToken === 'ARCHIVE_DIGITAL_RC_READY') {
+if (
+  (!pipelineComplete || !tierEfRuntime.runtimeIntegrationComplete) &&
+  digitalRc.statusToken === 'ARCHIVE_DIGITAL_RC_READY'
+) {
   (digitalRc as { statusToken: string; claimLevel: string; gaps: string[] }).statusToken =
     'ARCHIVE_DIGITAL_RC_IN_PROGRESS';
   (digitalRc as { claimLevel: string }).claimLevel = 'none';
   digitalRc.gaps.push(
-    'Cont V: Digital RC revoked — PIPELINE_COMPLETE multi-source live production path required',
+    'Cont VI: Digital RC requires PIPELINE_COMPLETE + runtime science-DB integration',
   );
 }
 

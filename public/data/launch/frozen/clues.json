@@ -1,0 +1,45 @@
+{
+  "snapshotId": "wave-f-alpha-2026-08",
+  "clues": [
+    {
+      "id": "clue_scale_tree",
+      "expeditionId": "exp_indiana_carboniferous",
+      "regionId": "indiana_ancient_swamp",
+      "title": "Scale-tree bark impression",
+      "text": "Diamond-pattern bark suggests Lepidodendron \u2014 cross-check fossil plant records.",
+      "unlocksJournal": true
+    },
+    {
+      "id": "clue_giant_arthropod",
+      "expeditionId": "exp_indiana_carboniferous",
+      "regionId": "indiana_ancient_swamp",
+      "title": "Trackway of a giant arthropod",
+      "text": "Wide Carboniferous trackways consistent with Arthropleura body plans.",
+      "unlocksJournal": true
+    },
+    {
+      "id": "clue_ice_edge_foodweb",
+      "expeditionId": "exp_polar_ice_edge",
+      "regionId": "polar_ice",
+      "title": "Ice-edge food web sketch",
+      "text": "Copepods \u2192 fish \u2192 seals \u2192 polar bear \u2014 cryosphere trophic chain.",
+      "unlocksJournal": true
+    },
+    {
+      "id": "clue_penguin_rookery",
+      "expeditionId": "exp_polar_ice_edge",
+      "regionId": "polar_ice",
+      "title": "Penguin rookery markers",
+      "text": "Guano and nest scrapes indicate Pygoscelis / Aptenodytes presence.",
+      "unlocksJournal": true
+    },
+    {
+      "id": "clue_nest_ledge",
+      "expeditionId": "exp_urban_synanthrope",
+      "regionId": "urban_park",
+      "title": "Building ledge nests",
+      "text": "Columbidae and Passeridae use human ledges as cliff analogs.",
+      "unlocksJournal": true
+    }
+  ]
+}

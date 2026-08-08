@@ -1,6 +1,6 @@
 {
   "snapshotId": "wave-f-alpha-2026-08",
-  "generatedAt": "2026-08-08T20:20:36.505Z",
+  "generatedAt": "2026-08-08T21:07:56.476Z",
   "statusToken": "ARCHIVE_DIGITAL_RC_READY",
   "claimLevel": "digital_rc",
   "doesNotClaim": [
@@ -18,29 +18,79 @@
       "detail": "ARCHIVE_BETA_CONTENT_COMPLETE_DIGITAL"
     },
     {
+      "id": "pipeline_complete",
+      "ok": true,
+      "detail": "PIPELINE_COMPLETE production ops"
+    },
+    {
+      "id": "runtime_db_integration",
+      "ok": true,
+      "detail": "Game runtime queries durable science DB across launch regions"
+    },
+    {
+      "id": "db_migration",
+      "ok": true,
+      "detail": "schema migration applied"
+    },
+    {
+      "id": "snapshot_update",
+      "ok": true,
+      "detail": "snapshot update path ok"
+    },
+    {
+      "id": "snapshot_corrupt_detect",
+      "ok": true,
+      "detail": "corrupt snapshot detected via hash mismatch"
+    },
+    {
+      "id": "offline",
+      "ok": true,
+      "detail": "offline snapshot/pack ready"
+    },
+    {
+      "id": "source_update",
+      "ok": true,
+      "detail": "source update path exercised"
+    },
+    {
+      "id": "save_migrate",
+      "ok": true,
+      "detail": "save migrate path ok"
+    },
+    {
       "id": "package_manifest",
       "ok": true,
       "detail": "RC package manifest present"
     },
     {
-      "id": "provenance_bundle",
+      "id": "update_rollback",
       "ok": true,
-      "detail": "provenance bundle present"
+      "detail": "update/rollback path ok"
     },
     {
-      "id": "offline_pack",
+      "id": "provenance_display",
       "ok": true,
-      "detail": "offline pack ready"
+      "detail": "provenance display path ok"
+    },
+    {
+      "id": "a11y",
+      "ok": true,
+      "detail": "a11y settings apply path ok"
+    },
+    {
+      "id": "localization_ready",
+      "ok": true,
+      "detail": "localization-ready string catalog present"
+    },
+    {
+      "id": "unique_icon_title",
+      "ok": true,
+      "detail": "unique product icon + title declared"
     },
     {
       "id": "actual_counts_artifact",
       "ok": true,
       "detail": "actual counts artifact present"
-    },
-    {
-      "id": "source_states_declared",
-      "ok": true,
-      "detail": "source states LIVE_PUBLIC|AUTHORIZED_BULK|SNAPSHOT|FIXTURE_TEST_ONLY|UNAVAILABLE declared"
     },
     {
       "id": "ingest_checkpoint_resume",
@@ -56,16 +106,19 @@
   "allOk": true,
   "package": {
     "packId": "archive-of-life-digital-rc",
-    "version": "2.0.0",
+    "version": "2.1.0-cont-vi",
     "artifactPaths": [
       "rc/package_manifest.json",
       "claims/claim_ledger.json",
-      "status/production_probe_report.json"
+      "status/production_probe_report.json",
+      "status/digital_rc_suite.json",
+      "qa/tier_ef_runtime/report.json",
+      "science/offline_snapshot_meta.json"
     ]
   },
   "gaps": [],
   "scientificOps": {
-    "generatedAt": "2026-08-08T20:20:36.504Z",
+    "generatedAt": "2026-08-08T21:07:56.476Z",
     "checks": [
       {
         "id": "source_registry",

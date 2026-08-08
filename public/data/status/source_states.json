@@ -1,94 +1,51 @@
 {
-  "generatedAt": "2026-08-08T19:44:18.259Z",
-  "states": [
+  "generatedAt": "2026-08-08T21:08:04.558Z",
+  "sources": [
     {
       "id": "col",
       "state": "LIVE_PUBLIC",
-      "ingestPermitted": true,
-      "fixtureOnly": false,
-      "licenseNotes": "Respect COL / ChecklistBank terms of use",
-      "notes": "Public nameusage search; bulk dumps prefer SNAPSHOT/AUTHORIZED_BULK"
+      "updatedAt": "2026-08-08T21:08:04.558Z"
     },
     {
       "id": "gbif",
       "state": "LIVE_PUBLIC",
-      "ingestPermitted": true,
-      "fixtureOnly": false,
-      "licenseNotes": "Occurrence licenses vary; prefer download DOI for bulk",
-      "notes": "Bounded live search OK; millions of records require AUTHORIZED_BULK download"
+      "updatedAt": "2026-08-08T21:08:04.558Z"
     },
     {
       "id": "pbdb",
       "state": "LIVE_PUBLIC",
-      "ingestPermitted": true,
-      "fixtureOnly": false,
-      "licenseNotes": "CC BY 4.0",
-      "notes": "Public occurrence/taxon API"
+      "updatedAt": "2026-08-08T21:08:04.558Z"
     },
     {
       "id": "iucn",
       "state": "AUTHORIZED_BULK",
-      "ingestPermitted": false,
-      "fixtureOnly": true,
-      "licenseNotes": "API token required",
-      "notes": "Token / authorized bulk required — not auto-live in Beta path"
+      "updatedAt": "2026-08-08T21:08:04.558Z"
     },
     {
       "id": "neotoma",
       "state": "SNAPSHOT",
-      "ingestPermitted": true,
-      "fixtureOnly": false,
-      "licenseNotes": "Respect Neotoma terms; prefer approved snapshot",
-      "notes": "Snapshot preferred; API sample optional"
+      "updatedAt": "2026-08-08T21:08:04.558Z"
     },
     {
       "id": "nasa",
       "state": "LIVE_PUBLIC",
-      "ingestPermitted": true,
-      "fixtureOnly": false,
-      "licenseNotes": "Public NASA metadata APIs",
-      "notes": "Metadata only — not taxonomy"
+      "updatedAt": "2026-08-08T21:08:04.558Z"
     },
     {
       "id": "inaturalist",
       "state": "UNAVAILABLE",
-      "ingestPermitted": false,
-      "fixtureOnly": true,
-      "licenseNotes": "API rate limits; licensing review pending",
-      "notes": "Adapter not production-enabled"
+      "updatedAt": "2026-08-08T21:08:04.558Z"
     },
     {
       "id": "obis",
       "state": "UNAVAILABLE",
-      "ingestPermitted": false,
-      "fixtureOnly": true,
-      "licenseNotes": "Open API — adapter stub",
-      "notes": "Marine occurrences — not started"
+      "updatedAt": "2026-08-08T21:08:04.558Z"
     },
     {
       "id": "worms",
       "state": "UNAVAILABLE",
-      "ingestPermitted": false,
-      "fixtureOnly": true,
-      "licenseNotes": "Open API — not started",
-      "notes": "Marine taxonomy — not started"
+      "updatedAt": "2026-08-08T21:08:04.558Z"
     }
   ],
-  "runSourceStates": [
-    {
-      "id": "col",
-      "state": "LIVE_PUBLIC",
-      "mode": "live"
-    },
-    {
-      "id": "gbif",
-      "state": "LIVE_PUBLIC",
-      "mode": "live"
-    },
-    {
-      "id": "pbdb",
-      "state": "LIVE_PUBLIC",
-      "mode": "live"
-    }
-  ]
+  "updatePath": "registry→status/source_states.json"
 }

@@ -1,0 +1,8 @@
+{
+  "engine": "duckdb",
+  "path": "public/data/science/archive_science.duckdb",
+  "taxa": 180,
+  "sha256": "f295d5b8f0272849d3c07a7d25dc31f92eb334915f6e1078abb67e9e3f29293c",
+  "globalCompleteClaim": false,
+  "repoRoot": "/Users/gunnchos/Downloads/gunnchos-7gc-research-product-spine/repos/archive-of-life-artifact-world"
+}

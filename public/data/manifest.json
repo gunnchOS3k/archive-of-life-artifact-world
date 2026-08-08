@@ -1,13 +1,13 @@
 {
-  "snapshotId": "alpha-exit-2026-08",
-  "version": "4.1.0-alpha-exit",
-  "generatedAt": "2026-08-08T01:00:00.000Z",
-  "description": "Alpha exit digital — 12 regions, ADR E/F floors, batch/snapshot Tier R ingest path, observation/scanning/codex/offline pack. Authored taxonomy liveClaim=false; fixtures never claimed live. Not Beta/RC.",
+  "snapshotId": "sample-2026-07",
+  "version": "3.0.0",
+  "generatedAt": "2026-08-08T21:07:49.680Z",
+  "description": "Sample biodiversity + Time Atlas snapshot — tiered representation with mock provenance",
   "bundles": {
     "heroSpecies": {
       "path": "bundles/hero-species.json",
       "kind": "hero_species",
-      "recordCount": 24
+      "recordCount": 23
     },
     "archiveStubs": {
       "path": "bundles/archive-stubs.json",
@@ -32,12 +32,12 @@
     "searchIndex": {
       "path": "bundles/search-index.json",
       "kind": "search_index",
-      "recordCount": 196
+      "recordCount": 39
     },
     "regions": {
       "path": "bundles/regions.json",
       "kind": "game_config",
-      "recordCount": 12
+      "recordCount": 6
     },
     "quests": {
       "path": "bundles/quests.json",
@@ -79,36 +79,6 @@
         "path": "bundles/region-fossil_site.json",
         "kind": "region_species",
         "recordCount": 3
-      },
-      "indiana_ancient_swamp": {
-        "path": "bundles/region-indiana_ancient_swamp.json",
-        "kind": "region_species",
-        "recordCount": 2
-      },
-      "polar_ice": {
-        "path": "bundles/region-polar_ice.json",
-        "kind": "region_species",
-        "recordCount": 12
-      },
-      "subterranean_cave": {
-        "path": "bundles/region-subterranean_cave.json",
-        "kind": "region_species",
-        "recordCount": 8
-      },
-      "urban_park": {
-        "path": "bundles/region-urban_park.json",
-        "kind": "region_species",
-        "recordCount": 12
-      },
-      "atmospheric_corridor": {
-        "path": "bundles/region-atmospheric_corridor.json",
-        "kind": "region_species",
-        "recordCount": 8
-      },
-      "deep_marine": {
-        "path": "bundles/region-deep_marine.json",
-        "kind": "region_species",
-        "recordCount": 12
       }
     },
     "timeAtlas": {
@@ -131,41 +101,17 @@
         "kind": "time_atlas",
         "recordCount": 24
       }
-    },
-    "encounterTaxa": {
-      "path": "bundles/encounter-taxa.json",
-      "kind": "encounter_taxa",
-      "recordCount": 157
-    },
-    "expeditions": {
-      "path": "bundles/expeditions.json",
-      "kind": "expeditions",
-      "recordCount": 3
-    },
-    "clues": {
-      "path": "bundles/clues.json",
-      "kind": "clues",
-      "recordCount": 5
-    },
-    "companionModules": {
-      "path": "bundles/companion-modules.json",
-      "kind": "companion_modules",
-      "recordCount": 10
     }
   },
   "coverage": {
-    "representedSpecies": 196,
-    "encounterTaxa": 191,
-    "iucnAssessed": 24,
-    "threatened": 6,
-    "extinctFossil": 30,
-    "playableQuestSpecies": 24,
-    "heroSpecies": 24,
-    "flagship": 24,
-    "regions": 12,
+    "representedSpecies": 39,
+    "iucnAssessed": 23,
+    "threatened": 5,
+    "extinctFossil": 15,
+    "playableQuestSpecies": 23,
+    "heroSpecies": 23,
     "timeUnits": 42,
     "playableTimeGates": 1,
-    "taxaWithTimeRanges": 24,
-    "honestNotes": "Encounter catalog is authored_public_taxonomy (liveClaim=false). Tier R import counts are actual by source with explicit liveClaim. Fixtures never claimed live. Not Beta/RC / not global live ingest."
+    "taxaWithTimeRanges": 24
   }
 }
