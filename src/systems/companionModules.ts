@@ -14,7 +14,9 @@ export type ModuleUnlockKind =
   | 'observe_species'
   | 'visit_region'
   | 'complete_expedition'
-  | 'discover_clue_count';
+  | 'discover_clue_count'
+  | 'scan_taxon'
+  | 'view_time_unit';
 
 export interface CompanionModuleDef {
   id: string;
@@ -46,6 +48,8 @@ export interface ModularProgressContext {
   visitedRegions?: string[];
   completedExpeditions?: string[];
   discoveredClueIds?: string[];
+  scannedTaxonIds?: string[];
+  viewedTimeUnitIds?: string[];
 }
 
 const EMPTY_PROGRESS: CompanionModuleProgress = {
@@ -90,6 +94,12 @@ function isUnlocked(mod: CompanionModuleDef, ctx: ModularProgressContext): boole
       return !!u.expeditionId && (ctx.completedExpeditions ?? []).includes(u.expeditionId);
     case 'discover_clue_count':
       return (ctx.discoveredClueIds ?? []).length >= (u.count ?? 1);
+    case 'scan_taxon':
+      return !!u.speciesId && (ctx.scannedTaxonIds ?? []).includes(u.speciesId);
+    case 'view_time_unit': {
+      const target = u.speciesId ?? u.regionId;
+      return !!target && (ctx.viewedTimeUnitIds ?? []).includes(target);
+    }
     default:
       return false;
   }

@@ -54,7 +54,8 @@
     "source:import:neotoma": "tsx scripts/source-cli.ts import neotoma",
     "source:import:all": "tsx scripts/source-cli.ts import all",
     "status": "tsx scripts/status.ts",
-    "verify": "npm run typecheck && npm run audit:maps && npm run build"
+    "verify": "npm run typecheck && npm run audit:maps && npm run build",
+    "report:beta-rc": "tsx scripts/report-beta-rc.ts"
   },
   "devDependencies": {
     "@types/node": "^22.0.0",

@@ -1,532 +1,1548 @@
 {
-  "snapshotId": "fixture-pbdb-tier-r-2026-08",
+  "snapshotId": "fixture-pbdb-tier-r-beta-2026-08",
   "license": "CC BY 4.0",
   "liveClaim": false,
+  "sourceState": "FIXTURE_TEST_ONLY",
   "records": [
     {
       "scientificName": "Tyrannosaurus rex",
       "paleobiodbTaxonNo": 80000,
-      "speciesId": "FIX-PBDB-1"
+      "speciesId": "FIX-PBDB-1",
+      "accepted_name": "Tyrannosaurus rex",
+      "taxon_rank": "species"
     },
     {
       "scientificName": "Triceratops horridus",
       "paleobiodbTaxonNo": 80001,
-      "speciesId": "FIX-PBDB-2"
+      "speciesId": "FIX-PBDB-2",
+      "accepted_name": "Triceratops horridus",
+      "taxon_rank": "species"
     },
     {
       "scientificName": "Velociraptor mongoliensis",
       "paleobiodbTaxonNo": 80002,
-      "speciesId": "FIX-PBDB-3"
+      "speciesId": "FIX-PBDB-3",
+      "accepted_name": "Velociraptor mongoliensis",
+      "taxon_rank": "species"
     },
     {
       "scientificName": "Stegosaurus stenops",
       "paleobiodbTaxonNo": 80003,
-      "speciesId": "FIX-PBDB-4"
+      "speciesId": "FIX-PBDB-4",
+      "accepted_name": "Stegosaurus stenops",
+      "taxon_rank": "species"
     },
     {
       "scientificName": "Brachiosaurus altithorax",
       "paleobiodbTaxonNo": 80004,
-      "speciesId": "FIX-PBDB-5"
+      "speciesId": "FIX-PBDB-5",
+      "accepted_name": "Brachiosaurus altithorax",
+      "taxon_rank": "species"
     },
     {
       "scientificName": "Allosaurus fragilis",
       "paleobiodbTaxonNo": 80005,
-      "speciesId": "FIX-PBDB-6"
+      "speciesId": "FIX-PBDB-6",
+      "accepted_name": "Allosaurus fragilis",
+      "taxon_rank": "species"
     },
     {
       "scientificName": "Diplodocus longus",
       "paleobiodbTaxonNo": 80006,
-      "speciesId": "FIX-PBDB-7"
+      "speciesId": "FIX-PBDB-7",
+      "accepted_name": "Diplodocus longus",
+      "taxon_rank": "species"
     },
     {
       "scientificName": "Ankylosaurus magniventris",
       "paleobiodbTaxonNo": 80007,
-      "speciesId": "FIX-PBDB-8"
+      "speciesId": "FIX-PBDB-8",
+      "accepted_name": "Ankylosaurus magniventris",
+      "taxon_rank": "species"
     },
     {
       "scientificName": "Spinosaurus aegyptiacus",
       "paleobiodbTaxonNo": 80008,
-      "speciesId": "FIX-PBDB-9"
+      "speciesId": "FIX-PBDB-9",
+      "accepted_name": "Spinosaurus aegyptiacus",
+      "taxon_rank": "species"
     },
     {
       "scientificName": "Archaeopteryx lithographica",
       "paleobiodbTaxonNo": 80009,
-      "speciesId": "FIX-PBDB-10"
+      "speciesId": "FIX-PBDB-10",
+      "accepted_name": "Archaeopteryx lithographica",
+      "taxon_rank": "species"
     },
     {
       "scientificName": "Dimetrodon grandis",
       "paleobiodbTaxonNo": 80010,
-      "speciesId": "FIX-PBDB-11"
+      "speciesId": "FIX-PBDB-11",
+      "accepted_name": "Dimetrodon grandis",
+      "taxon_rank": "species"
     },
     {
       "scientificName": "Dunkleosteus terrelli",
       "paleobiodbTaxonNo": 80011,
-      "speciesId": "FIX-PBDB-12"
-    },
-    {
-      "scientificName": "Tiktaalik roseae",
-      "paleobiodbTaxonNo": 80012,
-      "speciesId": "FIX-PBDB-13"
-    },
-    {
-      "scientificName": "Ichthyostega stensioei",
-      "paleobiodbTaxonNo": 80013,
-      "speciesId": "FIX-PBDB-14"
+      "speciesId": "FIX-PBDB-12",
+      "accepted_name": "Dunkleosteus terrelli",
+      "taxon_rank": "species"
     },
     {
       "scientificName": "Meganeura monyi",
-      "paleobiodbTaxonNo": 80014,
-      "speciesId": "FIX-PBDB-15"
+      "paleobiodbTaxonNo": 80012,
+      "speciesId": "FIX-PBDB-13",
+      "accepted_name": "Meganeura monyi",
+      "taxon_rank": "species"
     },
     {
       "scientificName": "Hallucigenia sparsa",
-      "paleobiodbTaxonNo": 80015,
-      "speciesId": "FIX-PBDB-16"
+      "paleobiodbTaxonNo": 80013,
+      "speciesId": "FIX-PBDB-14",
+      "accepted_name": "Hallucigenia sparsa",
+      "taxon_rank": "species"
     },
     {
       "scientificName": "Anomalocaris canadensis",
-      "paleobiodbTaxonNo": 80016,
-      "speciesId": "FIX-PBDB-17"
+      "paleobiodbTaxonNo": 80014,
+      "speciesId": "FIX-PBDB-15",
+      "accepted_name": "Anomalocaris canadensis",
+      "taxon_rank": "species"
     },
     {
       "scientificName": "Opabinia regalis",
+      "paleobiodbTaxonNo": 80015,
+      "speciesId": "FIX-PBDB-16",
+      "accepted_name": "Opabinia regalis",
+      "taxon_rank": "species"
+    },
+    {
+      "scientificName": "Paradoxides davidis",
+      "paleobiodbTaxonNo": 80016,
+      "speciesId": "FIX-PBDB-17",
+      "accepted_name": "Paradoxides davidis",
+      "taxon_rank": "species"
+    },
+    {
+      "scientificName": "Ammonites communis",
       "paleobiodbTaxonNo": 80017,
-      "speciesId": "FIX-PBDB-18"
+      "speciesId": "FIX-PBDB-18",
+      "accepted_name": "Ammonites communis",
+      "taxon_rank": "species"
     },
     {
-      "scientificName": "Trilobita",
+      "scientificName": "Belemnitella americana",
       "paleobiodbTaxonNo": 80018,
-      "speciesId": "FIX-PBDB-19"
-    },
-    {
-      "scientificName": "Ammonites",
-      "paleobiodbTaxonNo": 80019,
-      "speciesId": "FIX-PBDB-20"
-    },
-    {
-      "scientificName": "Mammuthus primigenius",
-      "paleobiodbTaxonNo": 80020,
-      "speciesId": "FIX-PBDB-21"
-    },
-    {
-      "scientificName": "Smilodon fatalis",
-      "paleobiodbTaxonNo": 80021,
-      "speciesId": "FIX-PBDB-22"
-    },
-    {
-      "scientificName": "Megatherium americanum",
-      "paleobiodbTaxonNo": 80022,
-      "speciesId": "FIX-PBDB-23"
-    },
-    {
-      "scientificName": "Glyptodon clavipes",
-      "paleobiodbTaxonNo": 80023,
-      "speciesId": "FIX-PBDB-24"
-    },
-    {
-      "scientificName": "Equus simplicidens",
-      "paleobiodbTaxonNo": 80024,
-      "speciesId": "FIX-PBDB-25"
-    },
-    {
-      "scientificName": "Basilosaurus cetoides",
-      "paleobiodbTaxonNo": 80025,
-      "speciesId": "FIX-PBDB-26"
-    },
-    {
-      "scientificName": "Pakicetus attocki",
-      "paleobiodbTaxonNo": 80026,
-      "speciesId": "FIX-PBDB-27"
-    },
-    {
-      "scientificName": "Ambulocetus natans",
-      "paleobiodbTaxonNo": 80027,
-      "speciesId": "FIX-PBDB-28"
-    },
-    {
-      "scientificName": "Moeritherium lyonsi",
-      "paleobiodbTaxonNo": 80028,
-      "speciesId": "FIX-PBDB-29"
-    },
-    {
-      "scientificName": "Uintatherium anceps",
-      "paleobiodbTaxonNo": 80029,
-      "speciesId": "FIX-PBDB-30"
-    },
-    {
-      "scientificName": "Andrewsarchus mongoliensis",
-      "paleobiodbTaxonNo": 80030,
-      "speciesId": "FIX-PBDB-31"
-    },
-    {
-      "scientificName": "Paraceratherium transouralicum",
-      "paleobiodbTaxonNo": 80031,
-      "speciesId": "FIX-PBDB-32"
-    },
-    {
-      "scientificName": "Elasmotherium sibiricum",
-      "paleobiodbTaxonNo": 80032,
-      "speciesId": "FIX-PBDB-33"
-    },
-    {
-      "scientificName": "Coelodonta antiquitatis",
-      "paleobiodbTaxonNo": 80033,
-      "speciesId": "FIX-PBDB-34"
-    },
-    {
-      "scientificName": "Megaloceros giganteus",
-      "paleobiodbTaxonNo": 80034,
-      "speciesId": "FIX-PBDB-35"
-    },
-    {
-      "scientificName": "Dire wolf",
-      "paleobiodbTaxonNo": 80035,
-      "speciesId": "FIX-PBDB-36"
-    },
-    {
-      "scientificName": "Canis dirus",
-      "paleobiodbTaxonNo": 80036,
-      "speciesId": "FIX-PBDB-37"
-    },
-    {
-      "scientificName": "Panthera atrox",
-      "paleobiodbTaxonNo": 80037,
-      "speciesId": "FIX-PBDB-38"
-    },
-    {
-      "scientificName": "Arctodus simus",
-      "paleobiodbTaxonNo": 80038,
-      "speciesId": "FIX-PBDB-39"
-    },
-    {
-      "scientificName": "Castoroides ohioensis",
-      "paleobiodbTaxonNo": 80039,
-      "speciesId": "FIX-PBDB-40"
-    },
-    {
-      "scientificName": "Titanoboa cerrejonensis",
-      "paleobiodbTaxonNo": 80040,
-      "speciesId": "FIX-PBDB-41"
-    },
-    {
-      "scientificName": "Sarcosuchus imperator",
-      "paleobiodbTaxonNo": 80041,
-      "speciesId": "FIX-PBDB-42"
-    },
-    {
-      "scientificName": "Deinosuchus rugosus",
-      "paleobiodbTaxonNo": 80042,
-      "speciesId": "FIX-PBDB-43"
-    },
-    {
-      "scientificName": "Dunkleosteus",
-      "paleobiodbTaxonNo": 80043,
-      "speciesId": "FIX-PBDB-44"
-    },
-    {
-      "scientificName": "Bothriolepis canadensis",
-      "paleobiodbTaxonNo": 80044,
-      "speciesId": "FIX-PBDB-45"
-    },
-    {
-      "scientificName": "Eusthenopteron foordi",
-      "paleobiodbTaxonNo": 80045,
-      "speciesId": "FIX-PBDB-46"
-    },
-    {
-      "scientificName": "Acanthostega gunnari",
-      "paleobiodbTaxonNo": 80046,
-      "speciesId": "FIX-PBDB-47"
-    },
-    {
-      "scientificName": "Pederpes finneyae",
-      "paleobiodbTaxonNo": 80047,
-      "speciesId": "FIX-PBDB-48"
-    },
-    {
-      "scientificName": "Eryops megacephalus",
-      "paleobiodbTaxonNo": 80048,
-      "speciesId": "FIX-PBDB-49"
-    },
-    {
-      "scientificName": "Dimetrodon",
-      "paleobiodbTaxonNo": 80049,
-      "speciesId": "FIX-PBDB-50"
-    },
-    {
-      "scientificName": "Edaphosaurus boanerges",
-      "paleobiodbTaxonNo": 80050,
-      "speciesId": "FIX-PBDB-51"
-    },
-    {
-      "scientificName": "Diadectes sideropelicus",
-      "paleobiodbTaxonNo": 80051,
-      "speciesId": "FIX-PBDB-52"
-    },
-    {
-      "scientificName": "Seymouria baylorensis",
-      "paleobiodbTaxonNo": 80052,
-      "speciesId": "FIX-PBDB-53"
-    },
-    {
-      "scientificName": "Petrolacosaurus kansensis",
-      "paleobiodbTaxonNo": 80053,
-      "speciesId": "FIX-PBDB-54"
-    },
-    {
-      "scientificName": "Hylonomus lyelli",
-      "paleobiodbTaxonNo": 80054,
-      "speciesId": "FIX-PBDB-55"
-    },
-    {
-      "scientificName": "Mesosaurus tenuidens",
-      "paleobiodbTaxonNo": 80055,
-      "speciesId": "FIX-PBDB-56"
-    },
-    {
-      "scientificName": "Pareiasaurus serridens",
-      "paleobiodbTaxonNo": 80056,
-      "speciesId": "FIX-PBDB-57"
-    },
-    {
-      "scientificName": "Lystrosaurus murrayi",
-      "paleobiodbTaxonNo": 80057,
-      "speciesId": "FIX-PBDB-58"
-    },
-    {
-      "scientificName": "Cynognathus crateronotus",
-      "paleobiodbTaxonNo": 80058,
-      "speciesId": "FIX-PBDB-59"
-    },
-    {
-      "scientificName": "Thrinaxodon liorhinus",
-      "paleobiodbTaxonNo": 80059,
-      "speciesId": "FIX-PBDB-60"
-    },
-    {
-      "scientificName": "Morganucodon oehleri",
-      "paleobiodbTaxonNo": 80060,
-      "speciesId": "FIX-PBDB-61"
-    },
-    {
-      "scientificName": "Repenomamus robustus",
-      "paleobiodbTaxonNo": 80061,
-      "speciesId": "FIX-PBDB-62"
-    },
-    {
-      "scientificName": "Castorocauda lutrasimilis",
-      "paleobiodbTaxonNo": 80062,
-      "speciesId": "FIX-PBDB-63"
-    },
-    {
-      "scientificName": "Volaticotherium antiquum",
-      "paleobiodbTaxonNo": 80063,
-      "speciesId": "FIX-PBDB-64"
-    },
-    {
-      "scientificName": "Juramaia sinensis",
-      "paleobiodbTaxonNo": 80064,
-      "speciesId": "FIX-PBDB-65"
-    },
-    {
-      "scientificName": "Eomaia scansoria",
-      "paleobiodbTaxonNo": 80065,
-      "speciesId": "FIX-PBDB-66"
-    },
-    {
-      "scientificName": "Pakicetus",
-      "paleobiodbTaxonNo": 80066,
-      "speciesId": "FIX-PBDB-67"
-    },
-    {
-      "scientificName": "Ambulocetus",
-      "paleobiodbTaxonNo": 80067,
-      "speciesId": "FIX-PBDB-68"
-    },
-    {
-      "scientificName": "Rodhocetus kasrani",
-      "paleobiodbTaxonNo": 80068,
-      "speciesId": "FIX-PBDB-69"
-    },
-    {
-      "scientificName": "Dorudon atrox",
-      "paleobiodbTaxonNo": 80069,
-      "speciesId": "FIX-PBDB-70"
-    },
-    {
-      "scientificName": "Odontochelys semitestacea",
-      "paleobiodbTaxonNo": 80070,
-      "speciesId": "FIX-PBDB-71"
-    },
-    {
-      "scientificName": "Proganochelys quenstedti",
-      "paleobiodbTaxonNo": 80071,
-      "speciesId": "FIX-PBDB-72"
-    },
-    {
-      "scientificName": "Archelon ischyros",
-      "paleobiodbTaxonNo": 80072,
-      "speciesId": "FIX-PBDB-73"
-    },
-    {
-      "scientificName": "Plesiosaurus dolichodeirus",
-      "paleobiodbTaxonNo": 80073,
-      "speciesId": "FIX-PBDB-74"
-    },
-    {
-      "scientificName": "Elasmosaurus platyurus",
-      "paleobiodbTaxonNo": 80074,
-      "speciesId": "FIX-PBDB-75"
-    },
-    {
-      "scientificName": "Liopleurodon ferox",
-      "paleobiodbTaxonNo": 80075,
-      "speciesId": "FIX-PBDB-76"
-    },
-    {
-      "scientificName": "Kronosaurus queenslandicus",
-      "paleobiodbTaxonNo": 80076,
-      "speciesId": "FIX-PBDB-77"
+      "speciesId": "FIX-PBDB-19",
+      "accepted_name": "Belemnitella americana",
+      "taxon_rank": "species"
     },
     {
       "scientificName": "Ichthyosaurus communis",
-      "paleobiodbTaxonNo": 80077,
-      "speciesId": "FIX-PBDB-78"
+      "paleobiodbTaxonNo": 80019,
+      "speciesId": "FIX-PBDB-20",
+      "accepted_name": "Ichthyosaurus communis",
+      "taxon_rank": "species"
     },
     {
-      "scientificName": "Ophthalmosaurus icenicus",
-      "paleobiodbTaxonNo": 80078,
-      "speciesId": "FIX-PBDB-79"
-    },
-    {
-      "scientificName": "Shonisaurus popularis",
-      "paleobiodbTaxonNo": 80079,
-      "speciesId": "FIX-PBDB-80"
-    },
-    {
-      "scientificName": "Quetzalcoatlus northropi",
-      "paleobiodbTaxonNo": 80080,
-      "speciesId": "FIX-PBDB-81"
+      "scientificName": "Plesiosaurus dolichodeirus",
+      "paleobiodbTaxonNo": 80020,
+      "speciesId": "FIX-PBDB-21",
+      "accepted_name": "Plesiosaurus dolichodeirus",
+      "taxon_rank": "species"
     },
     {
       "scientificName": "Pteranodon longiceps",
+      "paleobiodbTaxonNo": 80021,
+      "speciesId": "FIX-PBDB-22",
+      "accepted_name": "Pteranodon longiceps",
+      "taxon_rank": "species"
+    },
+    {
+      "scientificName": "Quetzalcoatlus northropi",
+      "paleobiodbTaxonNo": 80022,
+      "speciesId": "FIX-PBDB-23",
+      "accepted_name": "Quetzalcoatlus northropi",
+      "taxon_rank": "species"
+    },
+    {
+      "scientificName": "Smilodon fatalis",
+      "paleobiodbTaxonNo": 80023,
+      "speciesId": "FIX-PBDB-24",
+      "accepted_name": "Smilodon fatalis",
+      "taxon_rank": "species"
+    },
+    {
+      "scientificName": "Mammuthus primigenius",
+      "paleobiodbTaxonNo": 80024,
+      "speciesId": "FIX-PBDB-25",
+      "accepted_name": "Mammuthus primigenius",
+      "taxon_rank": "species"
+    },
+    {
+      "scientificName": "Megaloceros giganteus",
+      "paleobiodbTaxonNo": 80025,
+      "speciesId": "FIX-PBDB-26",
+      "accepted_name": "Megaloceros giganteus",
+      "taxon_rank": "species"
+    },
+    {
+      "scientificName": "Glyptodon clavipes",
+      "paleobiodbTaxonNo": 80026,
+      "speciesId": "FIX-PBDB-27",
+      "accepted_name": "Glyptodon clavipes",
+      "taxon_rank": "species"
+    },
+    {
+      "scientificName": "Megatherium americanum",
+      "paleobiodbTaxonNo": 80027,
+      "speciesId": "FIX-PBDB-28",
+      "accepted_name": "Megatherium americanum",
+      "taxon_rank": "species"
+    },
+    {
+      "scientificName": "Bothriolepis canadensis",
+      "paleobiodbTaxonNo": 80028,
+      "speciesId": "FIX-PBDB-29",
+      "accepted_name": "Bothriolepis canadensis",
+      "taxon_rank": "species"
+    },
+    {
+      "scientificName": "Tiktaalik roseae",
+      "paleobiodbTaxonNo": 80029,
+      "speciesId": "FIX-PBDB-30",
+      "accepted_name": "Tiktaalik roseae",
+      "taxon_rank": "species"
+    },
+    {
+      "scientificName": "Edmontosaurus nippon",
+      "paleobiodbTaxonNo": 80030,
+      "speciesId": "FIX-PBDB-31",
+      "accepted_name": "Edmontosaurus nippon",
+      "taxon_rank": "species"
+    },
+    {
+      "scientificName": "Corythosaurus duvaucelii",
+      "paleobiodbTaxonNo": 80031,
+      "speciesId": "FIX-PBDB-32",
+      "accepted_name": "Corythosaurus duvaucelii",
+      "taxon_rank": "species"
+    },
+    {
+      "scientificName": "Parasaurolophus alfredi",
+      "paleobiodbTaxonNo": 80032,
+      "speciesId": "FIX-PBDB-33",
+      "accepted_name": "Parasaurolophus alfredi",
+      "taxon_rank": "species"
+    },
+    {
+      "scientificName": "Maiasaura timorensis",
+      "paleobiodbTaxonNo": 80033,
+      "speciesId": "FIX-PBDB-34",
+      "accepted_name": "Maiasaura timorensis",
+      "taxon_rank": "species"
+    },
+    {
+      "scientificName": "Iguanodon mariannus",
+      "paleobiodbTaxonNo": 80034,
+      "speciesId": "FIX-PBDB-35",
+      "accepted_name": "Iguanodon mariannus",
+      "taxon_rank": "species"
+    },
+    {
+      "scientificName": "Deinonychus schomburgki",
+      "paleobiodbTaxonNo": 80035,
+      "speciesId": "FIX-PBDB-36",
+      "accepted_name": "Deinonychus schomburgki",
+      "taxon_rank": "species"
+    },
+    {
+      "scientificName": "Utahraptor delphis",
+      "paleobiodbTaxonNo": 80036,
+      "speciesId": "FIX-PBDB-37",
+      "accepted_name": "Utahraptor delphis",
+      "taxon_rank": "species"
+    },
+    {
+      "scientificName": "Carnotaurus capensis",
+      "paleobiodbTaxonNo": 80037,
+      "speciesId": "FIX-PBDB-38",
+      "accepted_name": "Carnotaurus capensis",
+      "taxon_rank": "species"
+    },
+    {
+      "scientificName": "Giganotosaurus tropicalis",
+      "paleobiodbTaxonNo": 80038,
+      "speciesId": "FIX-PBDB-39",
+      "accepted_name": "Giganotosaurus tropicalis",
+      "taxon_rank": "species"
+    },
+    {
+      "scientificName": "Carcharodontosaurus bairdii",
+      "paleobiodbTaxonNo": 80039,
+      "speciesId": "FIX-PBDB-40",
+      "accepted_name": "Carcharodontosaurus bairdii",
+      "taxon_rank": "species"
+    },
+    {
+      "scientificName": "Therizinosaurus frontalis",
+      "paleobiodbTaxonNo": 80040,
+      "speciesId": "FIX-PBDB-41",
+      "accepted_name": "Therizinosaurus frontalis",
+      "taxon_rank": "species"
+    },
+    {
+      "scientificName": "Oviraptor heavisidii",
+      "paleobiodbTaxonNo": 80041,
+      "speciesId": "FIX-PBDB-42",
+      "accepted_name": "Oviraptor heavisidii",
+      "taxon_rank": "species"
+    },
+    {
+      "scientificName": "Gallimimus obscurus",
+      "paleobiodbTaxonNo": 80042,
+      "speciesId": "FIX-PBDB-43",
+      "accepted_name": "Gallimimus obscurus",
+      "taxon_rank": "species"
+    },
+    {
+      "scientificName": "Struthiomimus australis",
+      "paleobiodbTaxonNo": 80043,
+      "speciesId": "FIX-PBDB-44",
+      "accepted_name": "Struthiomimus australis",
+      "taxon_rank": "species"
+    },
+    {
+      "scientificName": "Compsognathus orca",
+      "paleobiodbTaxonNo": 80044,
+      "speciesId": "FIX-PBDB-45",
+      "accepted_name": "Compsognathus orca",
+      "taxon_rank": "species"
+    },
+    {
+      "scientificName": "Coelophysis electra",
+      "paleobiodbTaxonNo": 80045,
+      "speciesId": "FIX-PBDB-46",
+      "accepted_name": "Coelophysis electra",
+      "taxon_rank": "species"
+    },
+    {
+      "scientificName": "Plateosaurus sima",
+      "paleobiodbTaxonNo": 80046,
+      "speciesId": "FIX-PBDB-47",
+      "accepted_name": "Plateosaurus sima",
+      "taxon_rank": "species"
+    },
+    {
+      "scientificName": "Massospondylus breviceps",
+      "paleobiodbTaxonNo": 80047,
+      "speciesId": "FIX-PBDB-48",
+      "accepted_name": "Massospondylus breviceps",
+      "taxon_rank": "species"
+    },
+    {
+      "scientificName": "Camarasaurus crassidens",
+      "paleobiodbTaxonNo": 80048,
+      "speciesId": "FIX-PBDB-49",
+      "accepted_name": "Camarasaurus crassidens",
+      "taxon_rank": "species"
+    },
+    {
+      "scientificName": "Apatosaurus hectori",
+      "paleobiodbTaxonNo": 80049,
+      "speciesId": "FIX-PBDB-50",
+      "accepted_name": "Apatosaurus hectori",
+      "taxon_rank": "species"
+    },
+    {
+      "scientificName": "Barosaurus commersonii",
+      "paleobiodbTaxonNo": 80050,
+      "speciesId": "FIX-PBDB-51",
+      "accepted_name": "Barosaurus commersonii",
+      "taxon_rank": "species"
+    },
+    {
+      "scientificName": "Amargasaurus melas",
+      "paleobiodbTaxonNo": 80051,
+      "speciesId": "FIX-PBDB-52",
+      "accepted_name": "Amargasaurus melas",
+      "taxon_rank": "species"
+    },
+    {
+      "scientificName": "Kentrosaurus chrysaetos",
+      "paleobiodbTaxonNo": 80052,
+      "speciesId": "FIX-PBDB-53",
+      "accepted_name": "Kentrosaurus chrysaetos",
+      "taxon_rank": "species"
+    },
+    {
+      "scientificName": "Huayangosaurus heliaca",
+      "paleobiodbTaxonNo": 80053,
+      "speciesId": "FIX-PBDB-54",
+      "accepted_name": "Huayangosaurus heliaca",
+      "taxon_rank": "species"
+    },
+    {
+      "scientificName": "Nodosaurus audax",
+      "paleobiodbTaxonNo": 80054,
+      "speciesId": "FIX-PBDB-55",
+      "accepted_name": "Nodosaurus audax",
+      "taxon_rank": "species"
+    },
+    {
+      "scientificName": "Euoplocephalus rapax",
+      "paleobiodbTaxonNo": 80055,
+      "speciesId": "FIX-PBDB-56",
+      "accepted_name": "Euoplocephalus rapax",
+      "taxon_rank": "species"
+    },
+    {
+      "scientificName": "Protoceratops nipalensis",
+      "paleobiodbTaxonNo": 80056,
+      "speciesId": "FIX-PBDB-57",
+      "accepted_name": "Protoceratops nipalensis",
+      "taxon_rank": "species"
+    },
+    {
+      "scientificName": "Styracosaurus fasciata",
+      "paleobiodbTaxonNo": 80057,
+      "speciesId": "FIX-PBDB-58",
+      "accepted_name": "Styracosaurus fasciata",
+      "taxon_rank": "species"
+    },
+    {
+      "scientificName": "Centrosaurus verreauxii",
+      "paleobiodbTaxonNo": 80058,
+      "speciesId": "FIX-PBDB-59",
+      "accepted_name": "Centrosaurus verreauxii",
+      "taxon_rank": "species"
+    },
+    {
+      "scientificName": "Pachycephalosaurus africana",
+      "paleobiodbTaxonNo": 80059,
+      "speciesId": "FIX-PBDB-60",
+      "accepted_name": "Pachycephalosaurus africana",
+      "taxon_rank": "species"
+    },
+    {
+      "scientificName": "Edmontosaurus peregrinus",
+      "paleobiodbTaxonNo": 80060,
+      "speciesId": "FIX-PBDB-61",
+      "accepted_name": "Edmontosaurus peregrinus",
+      "taxon_rank": "species"
+    },
+    {
+      "scientificName": "Corythosaurus rusticolus",
+      "paleobiodbTaxonNo": 80061,
+      "speciesId": "FIX-PBDB-62",
+      "accepted_name": "Corythosaurus rusticolus",
+      "taxon_rank": "species"
+    },
+    {
+      "scientificName": "Parasaurolophus columbarius",
+      "paleobiodbTaxonNo": 80062,
+      "speciesId": "FIX-PBDB-63",
+      "accepted_name": "Parasaurolophus columbarius",
+      "taxon_rank": "species"
+    },
+    {
+      "scientificName": "Maiasaura subbuteo",
+      "paleobiodbTaxonNo": 80063,
+      "speciesId": "FIX-PBDB-64",
+      "accepted_name": "Maiasaura subbuteo",
+      "taxon_rank": "species"
+    },
+    {
+      "scientificName": "Iguanodon biarmicus",
+      "paleobiodbTaxonNo": 80064,
+      "speciesId": "FIX-PBDB-65",
+      "accepted_name": "Iguanodon biarmicus",
+      "taxon_rank": "species"
+    },
+    {
+      "scientificName": "Deinonychus cherrug",
+      "paleobiodbTaxonNo": 80065,
+      "speciesId": "FIX-PBDB-66",
+      "accepted_name": "Deinonychus cherrug",
+      "taxon_rank": "species"
+    },
+    {
+      "scientificName": "Utahraptor mexicanus",
+      "paleobiodbTaxonNo": 80066,
+      "speciesId": "FIX-PBDB-67",
+      "accepted_name": "Utahraptor mexicanus",
+      "taxon_rank": "species"
+    },
+    {
+      "scientificName": "Carnotaurus eleonorae",
+      "paleobiodbTaxonNo": 80067,
+      "speciesId": "FIX-PBDB-68",
+      "accepted_name": "Carnotaurus eleonorae",
+      "taxon_rank": "species"
+    },
+    {
+      "scientificName": "Giganotosaurus mellifera",
+      "paleobiodbTaxonNo": 80068,
+      "speciesId": "FIX-PBDB-69",
+      "accepted_name": "Giganotosaurus mellifera",
+      "taxon_rank": "species"
+    },
+    {
+      "scientificName": "Carcharodontosaurus cerana",
+      "paleobiodbTaxonNo": 80069,
+      "speciesId": "FIX-PBDB-70",
+      "accepted_name": "Carcharodontosaurus cerana",
+      "taxon_rank": "species"
+    },
+    {
+      "scientificName": "Therizinosaurus dorsata",
+      "paleobiodbTaxonNo": 80070,
+      "speciesId": "FIX-PBDB-71",
+      "accepted_name": "Therizinosaurus dorsata",
+      "taxon_rank": "species"
+    },
+    {
+      "scientificName": "Oviraptor florea",
+      "paleobiodbTaxonNo": 80071,
+      "speciesId": "FIX-PBDB-72",
+      "accepted_name": "Oviraptor florea",
+      "taxon_rank": "species"
+    },
+    {
+      "scientificName": "Gallimimus andreniformis",
+      "paleobiodbTaxonNo": 80072,
+      "speciesId": "FIX-PBDB-73",
+      "accepted_name": "Gallimimus andreniformis",
+      "taxon_rank": "species"
+    },
+    {
+      "scientificName": "Struthiomimus koschevnikovi",
+      "paleobiodbTaxonNo": 80073,
+      "speciesId": "FIX-PBDB-74",
+      "accepted_name": "Struthiomimus koschevnikovi",
+      "taxon_rank": "species"
+    },
+    {
+      "scientificName": "Compsognathus nigrocincta",
+      "paleobiodbTaxonNo": 80074,
+      "speciesId": "FIX-PBDB-75",
+      "accepted_name": "Compsognathus nigrocincta",
+      "taxon_rank": "species"
+    },
+    {
+      "scientificName": "Coelophysis laboriosa",
+      "paleobiodbTaxonNo": 80075,
+      "speciesId": "FIX-PBDB-76",
+      "accepted_name": "Coelophysis laboriosa",
+      "taxon_rank": "species"
+    },
+    {
+      "scientificName": "Plateosaurus buteo",
+      "paleobiodbTaxonNo": 80076,
+      "speciesId": "FIX-PBDB-77",
+      "accepted_name": "Plateosaurus buteo",
+      "taxon_rank": "species"
+    },
+    {
+      "scientificName": "Massospondylus jamaicensis",
+      "paleobiodbTaxonNo": 80077,
+      "speciesId": "FIX-PBDB-78",
+      "accepted_name": "Massospondylus jamaicensis",
+      "taxon_rank": "species"
+    },
+    {
+      "scientificName": "Camarasaurus lagopus",
+      "paleobiodbTaxonNo": 80078,
+      "speciesId": "FIX-PBDB-79",
+      "accepted_name": "Camarasaurus lagopus",
+      "taxon_rank": "species"
+    },
+    {
+      "scientificName": "Apatosaurus lineatus",
+      "paleobiodbTaxonNo": 80079,
+      "speciesId": "FIX-PBDB-80",
+      "accepted_name": "Apatosaurus lineatus",
+      "taxon_rank": "species"
+    },
+    {
+      "scientificName": "Barosaurus platypterus",
+      "paleobiodbTaxonNo": 80080,
+      "speciesId": "FIX-PBDB-81",
+      "accepted_name": "Barosaurus platypterus",
+      "taxon_rank": "species"
+    },
+    {
+      "scientificName": "Amargasaurus swainsoni",
       "paleobiodbTaxonNo": 80081,
-      "speciesId": "FIX-PBDB-82"
+      "speciesId": "FIX-PBDB-82",
+      "accepted_name": "Amargasaurus swainsoni",
+      "taxon_rank": "species"
     },
     {
-      "scientificName": "Rhamphorhynchus muensteri",
+      "scientificName": "Kentrosaurus regalis",
       "paleobiodbTaxonNo": 80082,
-      "speciesId": "FIX-PBDB-83"
+      "speciesId": "FIX-PBDB-83",
+      "accepted_name": "Kentrosaurus regalis",
+      "taxon_rank": "species"
     },
     {
-      "scientificName": "Dimorphodon macronyx",
+      "scientificName": "Huayangosaurus rufinus",
       "paleobiodbTaxonNo": 80083,
-      "speciesId": "FIX-PBDB-84"
+      "speciesId": "FIX-PBDB-84",
+      "accepted_name": "Huayangosaurus rufinus",
+      "taxon_rank": "species"
     },
     {
-      "scientificName": "Anurognathus ammoni",
+      "scientificName": "Nodosaurus corax",
       "paleobiodbTaxonNo": 80084,
-      "speciesId": "FIX-PBDB-85"
+      "speciesId": "FIX-PBDB-85",
+      "accepted_name": "Nodosaurus corax",
+      "taxon_rank": "species"
     },
     {
-      "scientificName": "Confuciusornis sanctus",
+      "scientificName": "Euoplocephalus corone",
       "paleobiodbTaxonNo": 80085,
-      "speciesId": "FIX-PBDB-86"
+      "speciesId": "FIX-PBDB-86",
+      "accepted_name": "Euoplocephalus corone",
+      "taxon_rank": "species"
     },
     {
-      "scientificName": "Hesperornis regalis",
+      "scientificName": "Protoceratops brachyrhynchos",
       "paleobiodbTaxonNo": 80086,
-      "speciesId": "FIX-PBDB-87"
+      "speciesId": "FIX-PBDB-87",
+      "accepted_name": "Protoceratops brachyrhynchos",
+      "taxon_rank": "species"
     },
     {
-      "scientificName": "Ichthyornis dispar",
+      "scientificName": "Styracosaurus splendens",
       "paleobiodbTaxonNo": 80087,
-      "speciesId": "FIX-PBDB-88"
+      "speciesId": "FIX-PBDB-88",
+      "accepted_name": "Styracosaurus splendens",
+      "taxon_rank": "species"
     },
     {
-      "scientificName": "Gastornis giganteus",
+      "scientificName": "Centrosaurus albus",
       "paleobiodbTaxonNo": 80088,
-      "speciesId": "FIX-PBDB-89"
+      "speciesId": "FIX-PBDB-89",
+      "accepted_name": "Centrosaurus albus",
+      "taxon_rank": "species"
     },
     {
-      "scientificName": "Phorusrhacos longissimus",
+      "scientificName": "Pachycephalosaurus frugilegus",
       "paleobiodbTaxonNo": 80089,
-      "speciesId": "FIX-PBDB-90"
+      "speciesId": "FIX-PBDB-90",
+      "accepted_name": "Pachycephalosaurus frugilegus",
+      "taxon_rank": "species"
     },
     {
-      "scientificName": "Terror bird",
+      "scientificName": "Edmontosaurus monedula",
       "paleobiodbTaxonNo": 80090,
-      "speciesId": "FIX-PBDB-91"
+      "speciesId": "FIX-PBDB-91",
+      "accepted_name": "Edmontosaurus monedula",
+      "taxon_rank": "species"
     },
     {
-      "scientificName": "Titanis walleri",
+      "scientificName": "Corythosaurus cryptoleucus",
       "paleobiodbTaxonNo": 80091,
-      "speciesId": "FIX-PBDB-92"
+      "speciesId": "FIX-PBDB-92",
+      "accepted_name": "Corythosaurus cryptoleucus",
+      "taxon_rank": "species"
     },
     {
-      "scientificName": "Diatryma gigantea",
+      "scientificName": "Parasaurolophus domesticus",
       "paleobiodbTaxonNo": 80092,
-      "speciesId": "FIX-PBDB-93"
+      "speciesId": "FIX-PBDB-93",
+      "accepted_name": "Parasaurolophus domesticus",
+      "taxon_rank": "species"
     },
     {
-      "scientificName": "Aepyornis maximus",
+      "scientificName": "Maiasaura montanus",
       "paleobiodbTaxonNo": 80093,
-      "speciesId": "FIX-PBDB-94"
+      "speciesId": "FIX-PBDB-94",
+      "accepted_name": "Maiasaura montanus",
+      "taxon_rank": "species"
     },
     {
-      "scientificName": "Dinornis novaezealandiae",
+      "scientificName": "Iguanodon hispaniolensis",
       "paleobiodbTaxonNo": 80094,
-      "speciesId": "FIX-PBDB-95"
+      "speciesId": "FIX-PBDB-95",
+      "accepted_name": "Iguanodon hispaniolensis",
+      "taxon_rank": "species"
     },
     {
-      "scientificName": "Dodo",
+      "scientificName": "Deinonychus ammodendri",
       "paleobiodbTaxonNo": 80095,
-      "speciesId": "FIX-PBDB-96"
+      "speciesId": "FIX-PBDB-96",
+      "accepted_name": "Deinonychus ammodendri",
+      "taxon_rank": "species"
     },
     {
-      "scientificName": "Raphus cucullatus",
+      "scientificName": "Utahraptor flaveolus",
       "paleobiodbTaxonNo": 80096,
-      "speciesId": "FIX-PBDB-97"
+      "speciesId": "FIX-PBDB-97",
+      "accepted_name": "Utahraptor flaveolus",
+      "taxon_rank": "species"
     },
     {
-      "scientificName": "Great auk",
+      "scientificName": "Carnotaurus moabiticus",
       "paleobiodbTaxonNo": 80097,
-      "speciesId": "FIX-PBDB-98"
+      "speciesId": "FIX-PBDB-98",
+      "accepted_name": "Carnotaurus moabiticus",
+      "taxon_rank": "species"
     },
     {
-      "scientificName": "Pinguinus impennis",
+      "scientificName": "Giganotosaurus iagoensis",
       "paleobiodbTaxonNo": 80098,
-      "speciesId": "FIX-PBDB-99"
+      "speciesId": "FIX-PBDB-99",
+      "accepted_name": "Giganotosaurus iagoensis",
+      "taxon_rank": "species"
     },
     {
-      "scientificName": "Passenger pigeon",
+      "scientificName": "Carcharodontosaurus pytiliorhynchus",
       "paleobiodbTaxonNo": 80099,
-      "speciesId": "FIX-PBDB-100"
+      "speciesId": "FIX-PBDB-100",
+      "accepted_name": "Carcharodontosaurus pytiliorhynchus",
+      "taxon_rank": "species"
     },
     {
-      "scientificName": "Ectopistes migratorius",
+      "scientificName": "Therizinosaurus platyrhynchos",
       "paleobiodbTaxonNo": 80100,
-      "speciesId": "FIX-PBDB-101"
+      "speciesId": "FIX-PBDB-101",
+      "accepted_name": "Therizinosaurus platyrhynchos",
+      "taxon_rank": "species"
     },
     {
-      "scientificName": "Thylacine",
+      "scientificName": "Oviraptor acuta",
       "paleobiodbTaxonNo": 80101,
-      "speciesId": "FIX-PBDB-102"
+      "speciesId": "FIX-PBDB-102",
+      "accepted_name": "Oviraptor acuta",
+      "taxon_rank": "species"
     },
     {
-      "scientificName": "Thylacinus cynocephalus",
+      "scientificName": "Gallimimus crecca",
       "paleobiodbTaxonNo": 80102,
-      "speciesId": "FIX-PBDB-103"
+      "speciesId": "FIX-PBDB-103",
+      "accepted_name": "Gallimimus crecca",
+      "taxon_rank": "species"
     },
     {
-      "scientificName": "Quagga",
+      "scientificName": "Struthiomimus clypeata",
       "paleobiodbTaxonNo": 80103,
-      "speciesId": "FIX-PBDB-104"
+      "speciesId": "FIX-PBDB-104",
+      "accepted_name": "Struthiomimus clypeata",
+      "taxon_rank": "species"
     },
     {
-      "scientificName": "Equus quagga quagga",
+      "scientificName": "Compsognathus strepera",
       "paleobiodbTaxonNo": 80104,
-      "speciesId": "FIX-PBDB-105"
+      "speciesId": "FIX-PBDB-105",
+      "accepted_name": "Compsognathus strepera",
+      "taxon_rank": "species"
+    },
+    {
+      "scientificName": "Coelophysis penelope",
+      "paleobiodbTaxonNo": 80105,
+      "speciesId": "FIX-PBDB-106",
+      "accepted_name": "Coelophysis penelope",
+      "taxon_rank": "species"
+    },
+    {
+      "scientificName": "Plateosaurus americana",
+      "paleobiodbTaxonNo": 80106,
+      "speciesId": "FIX-PBDB-107",
+      "accepted_name": "Plateosaurus americana",
+      "taxon_rank": "species"
+    },
+    {
+      "scientificName": "Massospondylus fulvigula",
+      "paleobiodbTaxonNo": 80107,
+      "speciesId": "FIX-PBDB-108",
+      "accepted_name": "Massospondylus fulvigula",
+      "taxon_rank": "species"
+    },
+    {
+      "scientificName": "Camarasaurus salar",
+      "paleobiodbTaxonNo": 80108,
+      "speciesId": "FIX-PBDB-109",
+      "accepted_name": "Camarasaurus salar",
+      "taxon_rank": "species"
+    },
+    {
+      "scientificName": "Apatosaurus trutta",
+      "paleobiodbTaxonNo": 80109,
+      "speciesId": "FIX-PBDB-110",
+      "accepted_name": "Apatosaurus trutta",
+      "taxon_rank": "species"
+    },
+    {
+      "scientificName": "Barosaurus ferox",
+      "paleobiodbTaxonNo": 80110,
+      "speciesId": "FIX-PBDB-111",
+      "accepted_name": "Barosaurus ferox",
+      "taxon_rank": "species"
+    },
+    {
+      "scientificName": "Amargasaurus obtusirostris",
+      "paleobiodbTaxonNo": 80111,
+      "speciesId": "FIX-PBDB-112",
+      "accepted_name": "Amargasaurus obtusirostris",
+      "taxon_rank": "species"
+    },
+    {
+      "scientificName": "Kentrosaurus oquassa",
+      "paleobiodbTaxonNo": 80112,
+      "speciesId": "FIX-PBDB-113",
+      "accepted_name": "Kentrosaurus oquassa",
+      "taxon_rank": "species"
+    },
+    {
+      "scientificName": "Huayangosaurus marmoratus",
+      "paleobiodbTaxonNo": 80113,
+      "speciesId": "FIX-PBDB-114",
+      "accepted_name": "Huayangosaurus marmoratus",
+      "taxon_rank": "species"
+    },
+    {
+      "scientificName": "Nodosaurus carpio",
+      "paleobiodbTaxonNo": 80114,
+      "speciesId": "FIX-PBDB-115",
+      "accepted_name": "Nodosaurus carpio",
+      "taxon_rank": "species"
+    },
+    {
+      "scientificName": "Euoplocephalus letnica",
+      "paleobiodbTaxonNo": 80115,
+      "speciesId": "FIX-PBDB-116",
+      "accepted_name": "Euoplocephalus letnica",
+      "taxon_rank": "species"
+    },
+    {
+      "scientificName": "Protoceratops morhua",
+      "paleobiodbTaxonNo": 80116,
+      "speciesId": "FIX-PBDB-117",
+      "accepted_name": "Protoceratops morhua",
+      "taxon_rank": "species"
+    },
+    {
+      "scientificName": "Styracosaurus ogac",
+      "paleobiodbTaxonNo": 80117,
+      "speciesId": "FIX-PBDB-118",
+      "accepted_name": "Styracosaurus ogac",
+      "taxon_rank": "species"
+    },
+    {
+      "scientificName": "Centrosaurus macrocephalus",
+      "paleobiodbTaxonNo": 80118,
+      "speciesId": "FIX-PBDB-119",
+      "accepted_name": "Centrosaurus macrocephalus",
+      "taxon_rank": "species"
+    },
+    {
+      "scientificName": "Pachycephalosaurus chalcogrammus",
+      "paleobiodbTaxonNo": 80119,
+      "speciesId": "FIX-PBDB-120",
+      "accepted_name": "Pachycephalosaurus chalcogrammus",
+      "taxon_rank": "species"
+    },
+    {
+      "scientificName": "Edmontosaurus pollachius",
+      "paleobiodbTaxonNo": 80120,
+      "speciesId": "FIX-PBDB-121",
+      "accepted_name": "Edmontosaurus pollachius",
+      "taxon_rank": "species"
+    },
+    {
+      "scientificName": "Corythosaurus virens",
+      "paleobiodbTaxonNo": 80121,
+      "speciesId": "FIX-PBDB-122",
+      "accepted_name": "Corythosaurus virens",
+      "taxon_rank": "species"
+    },
+    {
+      "scientificName": "Parasaurolophus minutus",
+      "paleobiodbTaxonNo": 80122,
+      "speciesId": "FIX-PBDB-123",
+      "accepted_name": "Parasaurolophus minutus",
+      "taxon_rank": "species"
+    },
+    {
+      "scientificName": "Maiasaura luscus",
+      "paleobiodbTaxonNo": 80123,
+      "speciesId": "FIX-PBDB-124",
+      "accepted_name": "Maiasaura luscus",
+      "taxon_rank": "species"
+    },
+    {
+      "scientificName": "Iguanodon robur",
+      "paleobiodbTaxonNo": 80124,
+      "speciesId": "FIX-PBDB-125",
+      "accepted_name": "Iguanodon robur",
+      "taxon_rank": "species"
+    },
+    {
+      "scientificName": "Deinonychus alba",
+      "paleobiodbTaxonNo": 80125,
+      "speciesId": "FIX-PBDB-126",
+      "accepted_name": "Deinonychus alba",
+      "taxon_rank": "species"
+    },
+    {
+      "scientificName": "Utahraptor petraea",
+      "paleobiodbTaxonNo": 80126,
+      "speciesId": "FIX-PBDB-127",
+      "accepted_name": "Utahraptor petraea",
+      "taxon_rank": "species"
+    },
+    {
+      "scientificName": "Carnotaurus cerris",
+      "paleobiodbTaxonNo": 80127,
+      "speciesId": "FIX-PBDB-128",
+      "accepted_name": "Carnotaurus cerris",
+      "taxon_rank": "species"
+    },
+    {
+      "scientificName": "Giganotosaurus suber",
+      "paleobiodbTaxonNo": 80128,
+      "speciesId": "FIX-PBDB-129",
+      "accepted_name": "Giganotosaurus suber",
+      "taxon_rank": "species"
+    },
+    {
+      "scientificName": "Carcharodontosaurus ilex",
+      "paleobiodbTaxonNo": 80129,
+      "speciesId": "FIX-PBDB-130",
+      "accepted_name": "Carcharodontosaurus ilex",
+      "taxon_rank": "species"
+    },
+    {
+      "scientificName": "Therizinosaurus virginiana",
+      "paleobiodbTaxonNo": 80130,
+      "speciesId": "FIX-PBDB-131",
+      "accepted_name": "Therizinosaurus virginiana",
+      "taxon_rank": "species"
+    },
+    {
+      "scientificName": "Oviraptor kelloggii",
+      "paleobiodbTaxonNo": 80131,
+      "speciesId": "FIX-PBDB-132",
+      "accepted_name": "Oviraptor kelloggii",
+      "taxon_rank": "species"
+    },
+    {
+      "scientificName": "Gallimimus rubra",
+      "paleobiodbTaxonNo": 80132,
+      "speciesId": "FIX-PBDB-133",
+      "accepted_name": "Gallimimus rubra",
+      "taxon_rank": "species"
+    },
+    {
+      "scientificName": "Struthiomimus palustris",
+      "paleobiodbTaxonNo": 80133,
+      "speciesId": "FIX-PBDB-134",
+      "accepted_name": "Struthiomimus palustris",
+      "taxon_rank": "species"
+    },
+    {
+      "scientificName": "Compsognathus sylvestris",
+      "paleobiodbTaxonNo": 80134,
+      "speciesId": "FIX-PBDB-135",
+      "accepted_name": "Compsognathus sylvestris",
+      "taxon_rank": "species"
+    },
+    {
+      "scientificName": "Coelophysis contorta",
+      "paleobiodbTaxonNo": 80135,
+      "speciesId": "FIX-PBDB-136",
+      "accepted_name": "Coelophysis contorta",
+      "taxon_rank": "species"
+    },
+    {
+      "scientificName": "Plateosaurus ponderosa",
+      "paleobiodbTaxonNo": 80136,
+      "speciesId": "FIX-PBDB-137",
+      "accepted_name": "Plateosaurus ponderosa",
+      "taxon_rank": "species"
+    },
+    {
+      "scientificName": "Massospondylus radiata",
+      "paleobiodbTaxonNo": 80137,
+      "speciesId": "FIX-PBDB-138",
+      "accepted_name": "Massospondylus radiata",
+      "taxon_rank": "species"
+    },
+    {
+      "scientificName": "Camarasaurus halepensis",
+      "paleobiodbTaxonNo": 80138,
+      "speciesId": "FIX-PBDB-139",
+      "accepted_name": "Camarasaurus halepensis",
+      "taxon_rank": "species"
+    },
+    {
+      "scientificName": "Apatosaurus pinaster",
+      "paleobiodbTaxonNo": 80139,
+      "speciesId": "FIX-PBDB-140",
+      "accepted_name": "Apatosaurus pinaster",
+      "taxon_rank": "species"
+    },
+    {
+      "scientificName": "Barosaurus nigra",
+      "paleobiodbTaxonNo": 80140,
+      "speciesId": "FIX-PBDB-141",
+      "accepted_name": "Barosaurus nigra",
+      "taxon_rank": "species"
+    },
+    {
+      "scientificName": "Amargasaurus cembra",
+      "paleobiodbTaxonNo": 80141,
+      "speciesId": "FIX-PBDB-142",
+      "accepted_name": "Amargasaurus cembra",
+      "taxon_rank": "species"
+    },
+    {
+      "scientificName": "Kentrosaurus strobus",
+      "paleobiodbTaxonNo": 80142,
+      "speciesId": "FIX-PBDB-143",
+      "accepted_name": "Kentrosaurus strobus",
+      "taxon_rank": "species"
+    },
+    {
+      "scientificName": "Huayangosaurus palustrisb",
+      "paleobiodbTaxonNo": 80143,
+      "speciesId": "FIX-PBDB-144",
+      "accepted_name": "Huayangosaurus palustrisb",
+      "taxon_rank": "species"
+    },
+    {
+      "scientificName": "Nodosaurus canina",
+      "paleobiodbTaxonNo": 80144,
+      "speciesId": "FIX-PBDB-145",
+      "accepted_name": "Nodosaurus canina",
+      "taxon_rank": "species"
+    },
+    {
+      "scientificName": "Euoplocephalus gallica",
+      "paleobiodbTaxonNo": 80145,
+      "speciesId": "FIX-PBDB-146",
+      "accepted_name": "Euoplocephalus gallica",
+      "taxon_rank": "species"
+    },
+    {
+      "scientificName": "Protoceratops rugosa",
+      "paleobiodbTaxonNo": 80146,
+      "speciesId": "FIX-PBDB-147",
+      "accepted_name": "Protoceratops rugosa",
+      "taxon_rank": "species"
+    },
+    {
+      "scientificName": "Styracosaurus chinensis",
+      "paleobiodbTaxonNo": 80147,
+      "speciesId": "FIX-PBDB-148",
+      "accepted_name": "Styracosaurus chinensis",
+      "taxon_rank": "species"
+    },
+    {
+      "scientificName": "Centrosaurus multiflora",
+      "paleobiodbTaxonNo": 80148,
+      "speciesId": "FIX-PBDB-149",
+      "accepted_name": "Centrosaurus multiflora",
+      "taxon_rank": "species"
+    },
+    {
+      "scientificName": "Pachycephalosaurus arkansana",
+      "paleobiodbTaxonNo": 80149,
+      "speciesId": "FIX-PBDB-150",
+      "accepted_name": "Pachycephalosaurus arkansana",
+      "taxon_rank": "species"
+    },
+    {
+      "scientificName": "Edmontosaurus carolina",
+      "paleobiodbTaxonNo": 80150,
+      "speciesId": "FIX-PBDB-151",
+      "accepted_name": "Edmontosaurus carolina",
+      "taxon_rank": "species"
+    },
+    {
+      "scientificName": "Corythosaurus setigera",
+      "paleobiodbTaxonNo": 80151,
+      "speciesId": "FIX-PBDB-152",
+      "accepted_name": "Corythosaurus setigera",
+      "taxon_rank": "species"
+    },
+    {
+      "scientificName": "Parasaurolophus virginiana",
+      "paleobiodbTaxonNo": 80152,
+      "speciesId": "FIX-PBDB-153",
+      "accepted_name": "Parasaurolophus virginiana",
+      "taxon_rank": "species"
+    },
+    {
+      "scientificName": "Maiasaura woodsii",
+      "paleobiodbTaxonNo": 80153,
+      "speciesId": "FIX-PBDB-154",
+      "accepted_name": "Maiasaura woodsii",
+      "taxon_rank": "species"
+    },
+    {
+      "scientificName": "Iguanodon sapiens",
+      "paleobiodbTaxonNo": 80154,
+      "speciesId": "FIX-PBDB-155",
+      "accepted_name": "Iguanodon sapiens",
+      "taxon_rank": "species"
+    },
+    {
+      "scientificName": "Deinonychus habilis",
+      "paleobiodbTaxonNo": 80155,
+      "speciesId": "FIX-PBDB-156",
+      "accepted_name": "Deinonychus habilis",
+      "taxon_rank": "species"
+    },
+    {
+      "scientificName": "Utahraptor erectus",
+      "paleobiodbTaxonNo": 80156,
+      "speciesId": "FIX-PBDB-157",
+      "accepted_name": "Utahraptor erectus",
+      "taxon_rank": "species"
+    },
+    {
+      "scientificName": "Carnotaurus neanderthalensis",
+      "paleobiodbTaxonNo": 80157,
+      "speciesId": "FIX-PBDB-158",
+      "accepted_name": "Carnotaurus neanderthalensis",
+      "taxon_rank": "species"
+    },
+    {
+      "scientificName": "Giganotosaurus floresiensis",
+      "paleobiodbTaxonNo": 80158,
+      "speciesId": "FIX-PBDB-159",
+      "accepted_name": "Giganotosaurus floresiensis",
+      "taxon_rank": "species"
+    },
+    {
+      "scientificName": "Carcharodontosaurus naledi",
+      "paleobiodbTaxonNo": 80159,
+      "speciesId": "FIX-PBDB-160",
+      "accepted_name": "Carcharodontosaurus naledi",
+      "taxon_rank": "species"
+    },
+    {
+      "scientificName": "Therizinosaurus luzonensis",
+      "paleobiodbTaxonNo": 80160,
+      "speciesId": "FIX-PBDB-161",
+      "accepted_name": "Therizinosaurus luzonensis",
+      "taxon_rank": "species"
+    },
+    {
+      "scientificName": "Oviraptor heidelbergensis",
+      "paleobiodbTaxonNo": 80161,
+      "speciesId": "FIX-PBDB-162",
+      "accepted_name": "Oviraptor heidelbergensis",
+      "taxon_rank": "species"
+    },
+    {
+      "scientificName": "Gallimimus gorilla",
+      "paleobiodbTaxonNo": 80162,
+      "speciesId": "FIX-PBDB-163",
+      "accepted_name": "Gallimimus gorilla",
+      "taxon_rank": "species"
+    },
+    {
+      "scientificName": "Struthiomimus beringei",
+      "paleobiodbTaxonNo": 80163,
+      "speciesId": "FIX-PBDB-164",
+      "accepted_name": "Struthiomimus beringei",
+      "taxon_rank": "species"
+    },
+    {
+      "scientificName": "Compsognathus diehli",
+      "paleobiodbTaxonNo": 80164,
+      "speciesId": "FIX-PBDB-165",
+      "accepted_name": "Compsognathus diehli",
+      "taxon_rank": "species"
+    },
+    {
+      "scientificName": "Coelophysis matschiei",
+      "paleobiodbTaxonNo": 80165,
+      "speciesId": "FIX-PBDB-166",
+      "accepted_name": "Coelophysis matschiei",
+      "taxon_rank": "species"
+    },
+    {
+      "scientificName": "Plateosaurus graueri",
+      "paleobiodbTaxonNo": 80166,
+      "speciesId": "FIX-PBDB-167",
+      "accepted_name": "Plateosaurus graueri",
+      "taxon_rank": "species"
+    },
+    {
+      "scientificName": "Massospondylus uellensis",
+      "paleobiodbTaxonNo": 80167,
+      "speciesId": "FIX-PBDB-168",
+      "accepted_name": "Massospondylus uellensis",
+      "taxon_rank": "species"
+    },
+    {
+      "scientificName": "Camarasaurus epithet",
+      "paleobiodbTaxonNo": 80168,
+      "speciesId": "FIX-PBDB-169",
+      "accepted_name": "Camarasaurus epithet",
+      "taxon_rank": "species"
+    },
+    {
+      "scientificName": "Apatosaurus epithet",
+      "paleobiodbTaxonNo": 80169,
+      "speciesId": "FIX-PBDB-170",
+      "accepted_name": "Apatosaurus epithet",
+      "taxon_rank": "species"
+    },
+    {
+      "scientificName": "Barosaurus epithet",
+      "paleobiodbTaxonNo": 80170,
+      "speciesId": "FIX-PBDB-171",
+      "accepted_name": "Barosaurus epithet",
+      "taxon_rank": "species"
+    },
+    {
+      "scientificName": "Amargasaurus epithet",
+      "paleobiodbTaxonNo": 80171,
+      "speciesId": "FIX-PBDB-172",
+      "accepted_name": "Amargasaurus epithet",
+      "taxon_rank": "species"
+    },
+    {
+      "scientificName": "Kentrosaurus epithet",
+      "paleobiodbTaxonNo": 80172,
+      "speciesId": "FIX-PBDB-173",
+      "accepted_name": "Kentrosaurus epithet",
+      "taxon_rank": "species"
+    },
+    {
+      "scientificName": "Huayangosaurus epithet",
+      "paleobiodbTaxonNo": 80173,
+      "speciesId": "FIX-PBDB-174",
+      "accepted_name": "Huayangosaurus epithet",
+      "taxon_rank": "species"
+    },
+    {
+      "scientificName": "Nodosaurus epithet",
+      "paleobiodbTaxonNo": 80174,
+      "speciesId": "FIX-PBDB-175",
+      "accepted_name": "Nodosaurus epithet",
+      "taxon_rank": "species"
+    },
+    {
+      "scientificName": "Euoplocephalus epithet",
+      "paleobiodbTaxonNo": 80175,
+      "speciesId": "FIX-PBDB-176",
+      "accepted_name": "Euoplocephalus epithet",
+      "taxon_rank": "species"
+    },
+    {
+      "scientificName": "Protoceratops epithet",
+      "paleobiodbTaxonNo": 80176,
+      "speciesId": "FIX-PBDB-177",
+      "accepted_name": "Protoceratops epithet",
+      "taxon_rank": "species"
+    },
+    {
+      "scientificName": "Styracosaurus epithet",
+      "paleobiodbTaxonNo": 80177,
+      "speciesId": "FIX-PBDB-178",
+      "accepted_name": "Styracosaurus epithet",
+      "taxon_rank": "species"
+    },
+    {
+      "scientificName": "Centrosaurus epithet",
+      "paleobiodbTaxonNo": 80178,
+      "speciesId": "FIX-PBDB-179",
+      "accepted_name": "Centrosaurus epithet",
+      "taxon_rank": "species"
+    },
+    {
+      "scientificName": "Pachycephalosaurus epithet",
+      "paleobiodbTaxonNo": 80179,
+      "speciesId": "FIX-PBDB-180",
+      "accepted_name": "Pachycephalosaurus epithet",
+      "taxon_rank": "species"
+    },
+    {
+      "scientificName": "Edmontosaurus epithet",
+      "paleobiodbTaxonNo": 80180,
+      "speciesId": "FIX-PBDB-181",
+      "accepted_name": "Edmontosaurus epithet",
+      "taxon_rank": "species"
+    },
+    {
+      "scientificName": "Corythosaurus epithet",
+      "paleobiodbTaxonNo": 80181,
+      "speciesId": "FIX-PBDB-182",
+      "accepted_name": "Corythosaurus epithet",
+      "taxon_rank": "species"
+    },
+    {
+      "scientificName": "Parasaurolophus epithet",
+      "paleobiodbTaxonNo": 80182,
+      "speciesId": "FIX-PBDB-183",
+      "accepted_name": "Parasaurolophus epithet",
+      "taxon_rank": "species"
+    },
+    {
+      "scientificName": "Maiasaura epithet",
+      "paleobiodbTaxonNo": 80183,
+      "speciesId": "FIX-PBDB-184",
+      "accepted_name": "Maiasaura epithet",
+      "taxon_rank": "species"
+    },
+    {
+      "scientificName": "Iguanodon epithet",
+      "paleobiodbTaxonNo": 80184,
+      "speciesId": "FIX-PBDB-185",
+      "accepted_name": "Iguanodon epithet",
+      "taxon_rank": "species"
+    },
+    {
+      "scientificName": "Deinonychus epithet",
+      "paleobiodbTaxonNo": 80185,
+      "speciesId": "FIX-PBDB-186",
+      "accepted_name": "Deinonychus epithet",
+      "taxon_rank": "species"
+    },
+    {
+      "scientificName": "Utahraptor epithet",
+      "paleobiodbTaxonNo": 80186,
+      "speciesId": "FIX-PBDB-187",
+      "accepted_name": "Utahraptor epithet",
+      "taxon_rank": "species"
+    },
+    {
+      "scientificName": "Carnotaurus epithet",
+      "paleobiodbTaxonNo": 80187,
+      "speciesId": "FIX-PBDB-188",
+      "accepted_name": "Carnotaurus epithet",
+      "taxon_rank": "species"
+    },
+    {
+      "scientificName": "Giganotosaurus epithet",
+      "paleobiodbTaxonNo": 80188,
+      "speciesId": "FIX-PBDB-189",
+      "accepted_name": "Giganotosaurus epithet",
+      "taxon_rank": "species"
+    },
+    {
+      "scientificName": "Carcharodontosaurus epithet",
+      "paleobiodbTaxonNo": 80189,
+      "speciesId": "FIX-PBDB-190",
+      "accepted_name": "Carcharodontosaurus epithet",
+      "taxon_rank": "species"
+    },
+    {
+      "scientificName": "Therizinosaurus epithet",
+      "paleobiodbTaxonNo": 80190,
+      "speciesId": "FIX-PBDB-191",
+      "accepted_name": "Therizinosaurus epithet",
+      "taxon_rank": "species"
+    },
+    {
+      "scientificName": "Oviraptor epithet",
+      "paleobiodbTaxonNo": 80191,
+      "speciesId": "FIX-PBDB-192",
+      "accepted_name": "Oviraptor epithet",
+      "taxon_rank": "species"
+    },
+    {
+      "scientificName": "Gallimimus epithet",
+      "paleobiodbTaxonNo": 80192,
+      "speciesId": "FIX-PBDB-193",
+      "accepted_name": "Gallimimus epithet",
+      "taxon_rank": "species"
+    },
+    {
+      "scientificName": "Struthiomimus epithet",
+      "paleobiodbTaxonNo": 80193,
+      "speciesId": "FIX-PBDB-194",
+      "accepted_name": "Struthiomimus epithet",
+      "taxon_rank": "species"
+    },
+    {
+      "scientificName": "Compsognathus epithet",
+      "paleobiodbTaxonNo": 80194,
+      "speciesId": "FIX-PBDB-195",
+      "accepted_name": "Compsognathus epithet",
+      "taxon_rank": "species"
+    },
+    {
+      "scientificName": "Coelophysis epithet",
+      "paleobiodbTaxonNo": 80195,
+      "speciesId": "FIX-PBDB-196",
+      "accepted_name": "Coelophysis epithet",
+      "taxon_rank": "species"
+    },
+    {
+      "scientificName": "Plateosaurus epithet",
+      "paleobiodbTaxonNo": 80196,
+      "speciesId": "FIX-PBDB-197",
+      "accepted_name": "Plateosaurus epithet",
+      "taxon_rank": "species"
+    },
+    {
+      "scientificName": "Massospondylus epithet",
+      "paleobiodbTaxonNo": 80197,
+      "speciesId": "FIX-PBDB-198",
+      "accepted_name": "Massospondylus epithet",
+      "taxon_rank": "species"
+    },
+    {
+      "scientificName": "Camarasaurus epithet",
+      "paleobiodbTaxonNo": 80198,
+      "speciesId": "FIX-PBDB-199",
+      "accepted_name": "Camarasaurus epithet",
+      "taxon_rank": "species"
+    },
+    {
+      "scientificName": "Apatosaurus epithet",
+      "paleobiodbTaxonNo": 80199,
+      "speciesId": "FIX-PBDB-200",
+      "accepted_name": "Apatosaurus epithet",
+      "taxon_rank": "species"
+    },
+    {
+      "scientificName": "Barosaurus epithet",
+      "paleobiodbTaxonNo": 80200,
+      "speciesId": "FIX-PBDB-201",
+      "accepted_name": "Barosaurus epithet",
+      "taxon_rank": "species"
+    },
+    {
+      "scientificName": "Amargasaurus epithet",
+      "paleobiodbTaxonNo": 80201,
+      "speciesId": "FIX-PBDB-202",
+      "accepted_name": "Amargasaurus epithet",
+      "taxon_rank": "species"
+    },
+    {
+      "scientificName": "Kentrosaurus epithet",
+      "paleobiodbTaxonNo": 80202,
+      "speciesId": "FIX-PBDB-203",
+      "accepted_name": "Kentrosaurus epithet",
+      "taxon_rank": "species"
+    },
+    {
+      "scientificName": "Huayangosaurus epithet",
+      "paleobiodbTaxonNo": 80203,
+      "speciesId": "FIX-PBDB-204",
+      "accepted_name": "Huayangosaurus epithet",
+      "taxon_rank": "species"
+    },
+    {
+      "scientificName": "Nodosaurus epithet",
+      "paleobiodbTaxonNo": 80204,
+      "speciesId": "FIX-PBDB-205",
+      "accepted_name": "Nodosaurus epithet",
+      "taxon_rank": "species"
+    },
+    {
+      "scientificName": "Euoplocephalus epithet",
+      "paleobiodbTaxonNo": 80205,
+      "speciesId": "FIX-PBDB-206",
+      "accepted_name": "Euoplocephalus epithet",
+      "taxon_rank": "species"
+    },
+    {
+      "scientificName": "Protoceratops epithet",
+      "paleobiodbTaxonNo": 80206,
+      "speciesId": "FIX-PBDB-207",
+      "accepted_name": "Protoceratops epithet",
+      "taxon_rank": "species"
+    },
+    {
+      "scientificName": "Styracosaurus epithet",
+      "paleobiodbTaxonNo": 80207,
+      "speciesId": "FIX-PBDB-208",
+      "accepted_name": "Styracosaurus epithet",
+      "taxon_rank": "species"
+    },
+    {
+      "scientificName": "Centrosaurus epithet",
+      "paleobiodbTaxonNo": 80208,
+      "speciesId": "FIX-PBDB-209",
+      "accepted_name": "Centrosaurus epithet",
+      "taxon_rank": "species"
+    },
+    {
+      "scientificName": "Pachycephalosaurus epithet",
+      "paleobiodbTaxonNo": 80209,
+      "speciesId": "FIX-PBDB-210",
+      "accepted_name": "Pachycephalosaurus epithet",
+      "taxon_rank": "species"
+    },
+    {
+      "scientificName": "Edmontosaurus epithet",
+      "paleobiodbTaxonNo": 80210,
+      "speciesId": "FIX-PBDB-211",
+      "accepted_name": "Edmontosaurus epithet",
+      "taxon_rank": "species"
+    },
+    {
+      "scientificName": "Corythosaurus epithet",
+      "paleobiodbTaxonNo": 80211,
+      "speciesId": "FIX-PBDB-212",
+      "accepted_name": "Corythosaurus epithet",
+      "taxon_rank": "species"
+    },
+    {
+      "scientificName": "Parasaurolophus epithet",
+      "paleobiodbTaxonNo": 80212,
+      "speciesId": "FIX-PBDB-213",
+      "accepted_name": "Parasaurolophus epithet",
+      "taxon_rank": "species"
+    },
+    {
+      "scientificName": "Maiasaura epithet",
+      "paleobiodbTaxonNo": 80213,
+      "speciesId": "FIX-PBDB-214",
+      "accepted_name": "Maiasaura epithet",
+      "taxon_rank": "species"
+    },
+    {
+      "scientificName": "Iguanodon epithet",
+      "paleobiodbTaxonNo": 80214,
+      "speciesId": "FIX-PBDB-215",
+      "accepted_name": "Iguanodon epithet",
+      "taxon_rank": "species"
+    },
+    {
+      "scientificName": "Deinonychus epithet",
+      "paleobiodbTaxonNo": 80215,
+      "speciesId": "FIX-PBDB-216",
+      "accepted_name": "Deinonychus epithet",
+      "taxon_rank": "species"
+    },
+    {
+      "scientificName": "Utahraptor epithet",
+      "paleobiodbTaxonNo": 80216,
+      "speciesId": "FIX-PBDB-217",
+      "accepted_name": "Utahraptor epithet",
+      "taxon_rank": "species"
+    },
+    {
+      "scientificName": "Carnotaurus epithet",
+      "paleobiodbTaxonNo": 80217,
+      "speciesId": "FIX-PBDB-218",
+      "accepted_name": "Carnotaurus epithet",
+      "taxon_rank": "species"
+    },
+    {
+      "scientificName": "Giganotosaurus epithet",
+      "paleobiodbTaxonNo": 80218,
+      "speciesId": "FIX-PBDB-219",
+      "accepted_name": "Giganotosaurus epithet",
+      "taxon_rank": "species"
+    },
+    {
+      "scientificName": "Carcharodontosaurus epithet",
+      "paleobiodbTaxonNo": 80219,
+      "speciesId": "FIX-PBDB-220",
+      "accepted_name": "Carcharodontosaurus epithet",
+      "taxon_rank": "species"
     }
   ]
 }

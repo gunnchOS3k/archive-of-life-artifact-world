@@ -6,3 +6,4 @@ export * from './CoverageAuditService';
 export * from './TierCoverageReport';
 export * from './TierRRecordIndex';
 export { CoverageAuditRunner } from './CoverageAuditRunner';
+export * from './ActualCountsReport';

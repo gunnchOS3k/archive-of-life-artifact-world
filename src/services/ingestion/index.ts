@@ -5,3 +5,7 @@ export * from './dedup';
 export * from './checkpointStore';
 export * from './validateRecord';
 export * from './BatchSnapshotIngest';
+export * from './sourceRegistry';
+export * from './ingestCache';
+export * from './synonyms';
+export * from './ProductionIngestOrchestrator';

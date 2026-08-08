@@ -1,787 +1,2368 @@
 {
-  "snapshotId": "fixture-gbif-tier-r-2026-08",
+  "snapshotId": "fixture-gbif-tier-r-beta-2026-08",
   "license": "CC BY 4.0",
   "liveClaim": false,
+  "sourceState": "FIXTURE_TEST_ONLY",
   "records": [
     {
       "key": 9000000,
       "gbifTaxonKey": 9000000,
       "scientificName": "Ursus maritimus",
-      "license": "CC BY 4.0"
+      "license": "CC BY 4.0",
+      "acceptedScientificName": "Ursus maritimus",
+      "taxonRank": "SPECIES",
+      "synonyms": [
+        "Ursus oldname"
+      ]
     },
     {
       "key": 9000001,
       "gbifTaxonKey": 9000001,
-      "scientificName": "Panthera leo",
-      "license": "CC BY 4.0"
+      "scientificName": "Panthera arctos",
+      "license": "CC BY 4.0",
+      "acceptedScientificName": "Panthera arctos",
+      "taxonRank": "SPECIES"
     },
     {
       "key": 9000002,
       "gbifTaxonKey": 9000002,
-      "scientificName": "Danaus plexippus",
-      "license": "CC BY 4.0"
+      "scientificName": "Canis americanus",
+      "license": "CC BY 4.0",
+      "acceptedScientificName": "Canis americanus",
+      "taxonRank": "SPECIES"
     },
     {
       "key": 9000003,
       "gbifTaxonKey": 9000003,
-      "scientificName": "Apis mellifera",
-      "license": "CC BY 4.0"
+      "scientificName": "Cervus horribilis",
+      "license": "CC BY 4.0",
+      "acceptedScientificName": "Cervus horribilis",
+      "taxonRank": "SPECIES"
     },
     {
       "key": 9000004,
       "gbifTaxonKey": 9000004,
-      "scientificName": "Quercus alba",
-      "license": "CC BY 4.0"
+      "scientificName": "Delphinus thibetanus",
+      "license": "CC BY 4.0",
+      "acceptedScientificName": "Delphinus thibetanus",
+      "taxonRank": "SPECIES"
     },
     {
       "key": 9000005,
       "gbifTaxonKey": 9000005,
-      "scientificName": "Homo sapiens",
-      "license": "CC BY 4.0"
+      "scientificName": "Orcinus malayanus",
+      "license": "CC BY 4.0",
+      "acceptedScientificName": "Orcinus malayanus",
+      "taxonRank": "SPECIES"
     },
     {
       "key": 9000006,
       "gbifTaxonKey": 9000006,
-      "scientificName": "Mus musculus",
-      "license": "CC BY 4.0"
+      "scientificName": "Aquila spelaeus",
+      "license": "CC BY 4.0",
+      "acceptedScientificName": "Aquila spelaeus",
+      "taxonRank": "SPECIES"
     },
     {
       "key": 9000007,
       "gbifTaxonKey": 9000007,
-      "scientificName": "Gallus gallus",
-      "license": "CC BY 4.0"
+      "scientificName": "Falco minimus",
+      "license": "CC BY 4.0",
+      "acceptedScientificName": "Falco minimus",
+      "taxonRank": "SPECIES",
+      "synonyms": [
+        "Falco oldname"
+      ]
     },
     {
       "key": 9000008,
       "gbifTaxonKey": 9000008,
-      "scientificName": "Zea mays",
-      "license": "CC BY 4.0"
+      "scientificName": "Apis leo",
+      "license": "CC BY 4.0",
+      "acceptedScientificName": "Apis leo",
+      "taxonRank": "SPECIES"
     },
     {
       "key": 9000009,
       "gbifTaxonKey": 9000009,
-      "scientificName": "Arabidopsis thaliana",
-      "license": "CC BY 4.0"
+      "scientificName": "Buteo tigris",
+      "license": "CC BY 4.0",
+      "acceptedScientificName": "Buteo tigris",
+      "taxonRank": "SPECIES"
     },
     {
       "key": 9000010,
       "gbifTaxonKey": 9000010,
-      "scientificName": "Escherichia coli",
-      "license": "CC BY 4.0"
+      "scientificName": "Corvus pardus",
+      "license": "CC BY 4.0",
+      "acceptedScientificName": "Corvus pardus",
+      "taxonRank": "SPECIES"
     },
     {
       "key": 9000011,
       "gbifTaxonKey": 9000011,
-      "scientificName": "Saccharomyces cerevisiae",
-      "license": "CC BY 4.0"
+      "scientificName": "Passer onca",
+      "license": "CC BY 4.0",
+      "acceptedScientificName": "Passer onca",
+      "taxonRank": "SPECIES"
     },
     {
       "key": 9000012,
       "gbifTaxonKey": 9000012,
-      "scientificName": "Drosophila melanogaster",
-      "license": "CC BY 4.0"
+      "scientificName": "Anas uncia",
+      "license": "CC BY 4.0",
+      "acceptedScientificName": "Anas uncia",
+      "taxonRank": "SPECIES"
     },
     {
       "key": 9000013,
       "gbifTaxonKey": 9000013,
-      "scientificName": "Caenorhabditis elegans",
-      "license": "CC BY 4.0"
+      "scientificName": "Salmo aurea",
+      "license": "CC BY 4.0",
+      "acceptedScientificName": "Salmo aurea",
+      "taxonRank": "SPECIES"
     },
     {
       "key": 9000014,
       "gbifTaxonKey": 9000014,
-      "scientificName": "Danio rerio",
-      "license": "CC BY 4.0"
+      "scientificName": "Gadus yagouaroundi",
+      "license": "CC BY 4.0",
+      "acceptedScientificName": "Gadus yagouaroundi",
+      "taxonRank": "SPECIES",
+      "synonyms": [
+        "Gadus oldname"
+      ]
     },
     {
       "key": 9000015,
       "gbifTaxonKey": 9000015,
-      "scientificName": "Balaenoptera musculus",
-      "license": "CC BY 4.0"
+      "scientificName": "Quercus concolor",
+      "license": "CC BY 4.0",
+      "acceptedScientificName": "Quercus concolor",
+      "taxonRank": "SPECIES"
     },
     {
       "key": 9000016,
       "gbifTaxonKey": 9000016,
-      "scientificName": "Orcinus orca",
-      "license": "CC BY 4.0"
+      "scientificName": "Pinus wiedii",
+      "license": "CC BY 4.0",
+      "acceptedScientificName": "Pinus wiedii",
+      "taxonRank": "SPECIES"
     },
     {
       "key": 9000017,
       "gbifTaxonKey": 9000017,
-      "scientificName": "Chelonia mydas",
-      "license": "CC BY 4.0"
+      "scientificName": "Rosa geoffroyi",
+      "license": "CC BY 4.0",
+      "acceptedScientificName": "Rosa geoffroyi",
+      "taxonRank": "SPECIES"
     },
     {
       "key": 9000018,
       "gbifTaxonKey": 9000018,
-      "scientificName": "Aquila chrysaetos",
-      "license": "CC BY 4.0"
+      "scientificName": "Homo lupus",
+      "license": "CC BY 4.0",
+      "acceptedScientificName": "Homo lupus",
+      "taxonRank": "SPECIES"
     },
     {
       "key": 9000019,
       "gbifTaxonKey": 9000019,
-      "scientificName": "Canis lupus",
-      "license": "CC BY 4.0"
+      "scientificName": "Gorilla latrans",
+      "license": "CC BY 4.0",
+      "acceptedScientificName": "Gorilla latrans",
+      "taxonRank": "SPECIES"
     },
     {
       "key": 9000020,
       "gbifTaxonKey": 9000020,
-      "scientificName": "Felis silvestris",
-      "license": "CC BY 4.0"
+      "scientificName": "Macaca aureus",
+      "license": "CC BY 4.0",
+      "acceptedScientificName": "Macaca aureus",
+      "taxonRank": "SPECIES"
     },
     {
       "key": 9000021,
       "gbifTaxonKey": 9000021,
-      "scientificName": "Lynx lynx",
-      "license": "CC BY 4.0"
+      "scientificName": "Equus simensis",
+      "license": "CC BY 4.0",
+      "acceptedScientificName": "Equus simensis",
+      "taxonRank": "SPECIES",
+      "synonyms": [
+        "Equus oldname"
+      ]
     },
     {
       "key": 9000022,
       "gbifTaxonKey": 9000022,
-      "scientificName": "Alces alces",
-      "license": "CC BY 4.0"
+      "scientificName": "Bos adustus",
+      "license": "CC BY 4.0",
+      "acceptedScientificName": "Bos adustus",
+      "taxonRank": "SPECIES"
     },
     {
       "key": 9000023,
       "gbifTaxonKey": 9000023,
-      "scientificName": "Rangifer tarandus",
-      "license": "CC BY 4.0"
+      "scientificName": "Sus mesomelas",
+      "license": "CC BY 4.0",
+      "acceptedScientificName": "Sus mesomelas",
+      "taxonRank": "SPECIES"
     },
     {
       "key": 9000024,
       "gbifTaxonKey": 9000024,
-      "scientificName": "Castor canadensis",
-      "license": "CC BY 4.0"
+      "scientificName": "Felis dingo",
+      "license": "CC BY 4.0",
+      "acceptedScientificName": "Felis dingo",
+      "taxonRank": "SPECIES"
     },
     {
       "key": 9000025,
       "gbifTaxonKey": 9000025,
-      "scientificName": "Enhydra lutris",
-      "license": "CC BY 4.0"
+      "scientificName": "Lynx rufus",
+      "license": "CC BY 4.0",
+      "acceptedScientificName": "Lynx rufus",
+      "taxonRank": "SPECIES"
     },
     {
       "key": 9000026,
       "gbifTaxonKey": 9000026,
-      "scientificName": "Phoca vitulina",
-      "license": "CC BY 4.0"
+      "scientificName": "Vulpes lycaon",
+      "license": "CC BY 4.0",
+      "acceptedScientificName": "Vulpes lycaon",
+      "taxonRank": "SPECIES"
     },
     {
       "key": 9000027,
       "gbifTaxonKey": 9000027,
-      "scientificName": "Tursiops truncatus",
-      "license": "CC BY 4.0"
+      "scientificName": "Lepus familiaris",
+      "license": "CC BY 4.0",
+      "acceptedScientificName": "Lepus familiaris",
+      "taxonRank": "SPECIES"
     },
     {
       "key": 9000028,
       "gbifTaxonKey": 9000028,
-      "scientificName": "Megaptera novaeangliae",
-      "license": "CC BY 4.0"
+      "scientificName": "Sciurus elaphus",
+      "license": "CC BY 4.0",
+      "acceptedScientificName": "Sciurus elaphus",
+      "taxonRank": "SPECIES",
+      "synonyms": [
+        "Sciurus oldname"
+      ]
     },
     {
       "key": 9000029,
       "gbifTaxonKey": 9000029,
-      "scientificName": "Delphinus delphis",
-      "license": "CC BY 4.0"
+      "scientificName": "Castor canadensis",
+      "license": "CC BY 4.0",
+      "acceptedScientificName": "Castor canadensis",
+      "taxonRank": "SPECIES"
     },
     {
       "key": 9000030,
       "gbifTaxonKey": 9000030,
-      "scientificName": "Corvus corax",
-      "license": "CC BY 4.0"
+      "scientificName": "Ursus nippon",
+      "license": "CC BY 4.0",
+      "acceptedScientificName": "Ursus nippon",
+      "taxonRank": "SPECIES"
     },
     {
       "key": 9000031,
       "gbifTaxonKey": 9000031,
-      "scientificName": "Passer domesticus",
-      "license": "CC BY 4.0"
+      "scientificName": "Panthera duvaucelii",
+      "license": "CC BY 4.0",
+      "acceptedScientificName": "Panthera duvaucelii",
+      "taxonRank": "SPECIES"
     },
     {
       "key": 9000032,
       "gbifTaxonKey": 9000032,
-      "scientificName": "Anas platyrhynchos",
-      "license": "CC BY 4.0"
+      "scientificName": "Canis alfredi",
+      "license": "CC BY 4.0",
+      "acceptedScientificName": "Canis alfredi",
+      "taxonRank": "SPECIES"
     },
     {
       "key": 9000033,
       "gbifTaxonKey": 9000033,
-      "scientificName": "Branta canadensis",
-      "license": "CC BY 4.0"
+      "scientificName": "Cervus timorensis",
+      "license": "CC BY 4.0",
+      "acceptedScientificName": "Cervus timorensis",
+      "taxonRank": "SPECIES"
     },
     {
       "key": 9000034,
       "gbifTaxonKey": 9000034,
-      "scientificName": "Haliaeetus leucocephalus",
-      "license": "CC BY 4.0"
+      "scientificName": "Delphinus mariannus",
+      "license": "CC BY 4.0",
+      "acceptedScientificName": "Delphinus mariannus",
+      "taxonRank": "SPECIES"
     },
     {
       "key": 9000035,
       "gbifTaxonKey": 9000035,
-      "scientificName": "Alligator mississippiensis",
-      "license": "CC BY 4.0"
+      "scientificName": "Orcinus schomburgki",
+      "license": "CC BY 4.0",
+      "acceptedScientificName": "Orcinus schomburgki",
+      "taxonRank": "SPECIES",
+      "synonyms": [
+        "Orcinus oldname"
+      ]
     },
     {
       "key": 9000036,
       "gbifTaxonKey": 9000036,
-      "scientificName": "Rana catesbeiana",
-      "license": "CC BY 4.0"
+      "scientificName": "Aquila delphis",
+      "license": "CC BY 4.0",
+      "acceptedScientificName": "Aquila delphis",
+      "taxonRank": "SPECIES"
     },
     {
       "key": 9000037,
       "gbifTaxonKey": 9000037,
-      "scientificName": "Salmo salar",
-      "license": "CC BY 4.0"
+      "scientificName": "Falco capensis",
+      "license": "CC BY 4.0",
+      "acceptedScientificName": "Falco capensis",
+      "taxonRank": "SPECIES"
     },
     {
       "key": 9000038,
       "gbifTaxonKey": 9000038,
-      "scientificName": "Oncorhynchus mykiss",
-      "license": "CC BY 4.0"
+      "scientificName": "Apis tropicalis",
+      "license": "CC BY 4.0",
+      "acceptedScientificName": "Apis tropicalis",
+      "taxonRank": "SPECIES"
     },
     {
       "key": 9000039,
       "gbifTaxonKey": 9000039,
-      "scientificName": "Esox lucius",
-      "license": "CC BY 4.0"
+      "scientificName": "Buteo bairdii",
+      "license": "CC BY 4.0",
+      "acceptedScientificName": "Buteo bairdii",
+      "taxonRank": "SPECIES"
     },
     {
       "key": 9000040,
       "gbifTaxonKey": 9000040,
-      "scientificName": "Pinus strobus",
-      "license": "CC BY 4.0"
+      "scientificName": "Corvus frontalis",
+      "license": "CC BY 4.0",
+      "acceptedScientificName": "Corvus frontalis",
+      "taxonRank": "SPECIES"
     },
     {
       "key": 9000041,
       "gbifTaxonKey": 9000041,
-      "scientificName": "Acer saccharum",
-      "license": "CC BY 4.0"
+      "scientificName": "Passer heavisidii",
+      "license": "CC BY 4.0",
+      "acceptedScientificName": "Passer heavisidii",
+      "taxonRank": "SPECIES"
     },
     {
       "key": 9000042,
       "gbifTaxonKey": 9000042,
-      "scientificName": "Betula papyrifera",
-      "license": "CC BY 4.0"
+      "scientificName": "Anas obscurus",
+      "license": "CC BY 4.0",
+      "acceptedScientificName": "Anas obscurus",
+      "taxonRank": "SPECIES",
+      "synonyms": [
+        "Anas oldname"
+      ]
     },
     {
       "key": 9000043,
       "gbifTaxonKey": 9000043,
-      "scientificName": "Sequoia sempervirens",
-      "license": "CC BY 4.0"
+      "scientificName": "Salmo australis",
+      "license": "CC BY 4.0",
+      "acceptedScientificName": "Salmo australis",
+      "taxonRank": "SPECIES"
     },
     {
       "key": 9000044,
       "gbifTaxonKey": 9000044,
-      "scientificName": "Ginkgo biloba",
-      "license": "CC BY 4.0"
+      "scientificName": "Gadus orca",
+      "license": "CC BY 4.0",
+      "acceptedScientificName": "Gadus orca",
+      "taxonRank": "SPECIES"
     },
     {
       "key": 9000045,
       "gbifTaxonKey": 9000045,
-      "scientificName": "Helianthus annuus",
-      "license": "CC BY 4.0"
+      "scientificName": "Quercus electra",
+      "license": "CC BY 4.0",
+      "acceptedScientificName": "Quercus electra",
+      "taxonRank": "SPECIES"
     },
     {
       "key": 9000046,
       "gbifTaxonKey": 9000046,
-      "scientificName": "Taraxacum officinale",
-      "license": "CC BY 4.0"
+      "scientificName": "Pinus sima",
+      "license": "CC BY 4.0",
+      "acceptedScientificName": "Pinus sima",
+      "taxonRank": "SPECIES"
     },
     {
       "key": 9000047,
       "gbifTaxonKey": 9000047,
-      "scientificName": "Trifolium repens",
-      "license": "CC BY 4.0"
+      "scientificName": "Rosa breviceps",
+      "license": "CC BY 4.0",
+      "acceptedScientificName": "Rosa breviceps",
+      "taxonRank": "SPECIES"
     },
     {
       "key": 9000048,
       "gbifTaxonKey": 9000048,
-      "scientificName": "Poa pratensis",
-      "license": "CC BY 4.0"
+      "scientificName": "Homo crassidens",
+      "license": "CC BY 4.0",
+      "acceptedScientificName": "Homo crassidens",
+      "taxonRank": "SPECIES"
     },
     {
       "key": 9000049,
       "gbifTaxonKey": 9000049,
-      "scientificName": "Rosa gallica",
-      "license": "CC BY 4.0"
+      "scientificName": "Gorilla hectori",
+      "license": "CC BY 4.0",
+      "acceptedScientificName": "Gorilla hectori",
+      "taxonRank": "SPECIES",
+      "synonyms": [
+        "Gorilla oldname"
+      ]
     },
     {
       "key": 9000050,
       "gbifTaxonKey": 9000050,
-      "scientificName": "Bombus terrestris",
-      "license": "CC BY 4.0"
+      "scientificName": "Macaca commersonii",
+      "license": "CC BY 4.0",
+      "acceptedScientificName": "Macaca commersonii",
+      "taxonRank": "SPECIES"
     },
     {
       "key": 9000051,
       "gbifTaxonKey": 9000051,
-      "scientificName": "Formica rufa",
-      "license": "CC BY 4.0"
+      "scientificName": "Equus melas",
+      "license": "CC BY 4.0",
+      "acceptedScientificName": "Equus melas",
+      "taxonRank": "SPECIES"
     },
     {
       "key": 9000052,
       "gbifTaxonKey": 9000052,
-      "scientificName": "Anax junius",
-      "license": "CC BY 4.0"
+      "scientificName": "Bos chrysaetos",
+      "license": "CC BY 4.0",
+      "acceptedScientificName": "Bos chrysaetos",
+      "taxonRank": "SPECIES"
     },
     {
       "key": 9000053,
       "gbifTaxonKey": 9000053,
-      "scientificName": "Coccinella septempunctata",
-      "license": "CC BY 4.0"
+      "scientificName": "Sus heliaca",
+      "license": "CC BY 4.0",
+      "acceptedScientificName": "Sus heliaca",
+      "taxonRank": "SPECIES"
     },
     {
       "key": 9000054,
       "gbifTaxonKey": 9000054,
-      "scientificName": "Latrodectus mactans",
-      "license": "CC BY 4.0"
+      "scientificName": "Felis audax",
+      "license": "CC BY 4.0",
+      "acceptedScientificName": "Felis audax",
+      "taxonRank": "SPECIES"
     },
     {
       "key": 9000055,
       "gbifTaxonKey": 9000055,
-      "scientificName": "Puma concolor",
-      "license": "CC BY 4.0"
+      "scientificName": "Lynx rapax",
+      "license": "CC BY 4.0",
+      "acceptedScientificName": "Lynx rapax",
+      "taxonRank": "SPECIES"
     },
     {
       "key": 9000056,
       "gbifTaxonKey": 9000056,
-      "scientificName": "Lynx rufus",
-      "license": "CC BY 4.0"
+      "scientificName": "Vulpes nipalensis",
+      "license": "CC BY 4.0",
+      "acceptedScientificName": "Vulpes nipalensis",
+      "taxonRank": "SPECIES",
+      "synonyms": [
+        "Vulpes oldname"
+      ]
     },
     {
       "key": 9000057,
       "gbifTaxonKey": 9000057,
-      "scientificName": "Vulpes vulpes",
-      "license": "CC BY 4.0"
+      "scientificName": "Lepus fasciata",
+      "license": "CC BY 4.0",
+      "acceptedScientificName": "Lepus fasciata",
+      "taxonRank": "SPECIES"
     },
     {
       "key": 9000058,
       "gbifTaxonKey": 9000058,
-      "scientificName": "Procyon lotor",
-      "license": "CC BY 4.0"
+      "scientificName": "Sciurus verreauxii",
+      "license": "CC BY 4.0",
+      "acceptedScientificName": "Sciurus verreauxii",
+      "taxonRank": "SPECIES"
     },
     {
       "key": 9000059,
       "gbifTaxonKey": 9000059,
-      "scientificName": "Mephitis mephitis",
-      "license": "CC BY 4.0"
+      "scientificName": "Castor africana",
+      "license": "CC BY 4.0",
+      "acceptedScientificName": "Castor africana",
+      "taxonRank": "SPECIES"
     },
     {
       "key": 9000060,
       "gbifTaxonKey": 9000060,
-      "scientificName": "Sciurus carolinensis",
-      "license": "CC BY 4.0"
+      "scientificName": "Ursus peregrinus",
+      "license": "CC BY 4.0",
+      "acceptedScientificName": "Ursus peregrinus",
+      "taxonRank": "SPECIES"
     },
     {
       "key": 9000061,
       "gbifTaxonKey": 9000061,
-      "scientificName": "Tamias striatus",
-      "license": "CC BY 4.0"
+      "scientificName": "Panthera rusticolus",
+      "license": "CC BY 4.0",
+      "acceptedScientificName": "Panthera rusticolus",
+      "taxonRank": "SPECIES"
     },
     {
       "key": 9000062,
       "gbifTaxonKey": 9000062,
-      "scientificName": "Marmota monax",
-      "license": "CC BY 4.0"
+      "scientificName": "Canis columbarius",
+      "license": "CC BY 4.0",
+      "acceptedScientificName": "Canis columbarius",
+      "taxonRank": "SPECIES"
     },
     {
       "key": 9000063,
       "gbifTaxonKey": 9000063,
-      "scientificName": "Odocoileus virginianus",
-      "license": "CC BY 4.0"
+      "scientificName": "Cervus subbuteo",
+      "license": "CC BY 4.0",
+      "acceptedScientificName": "Cervus subbuteo",
+      "taxonRank": "SPECIES",
+      "synonyms": [
+        "Cervus oldname"
+      ]
     },
     {
       "key": 9000064,
       "gbifTaxonKey": 9000064,
-      "scientificName": "Cervus elaphus",
-      "license": "CC BY 4.0"
+      "scientificName": "Delphinus biarmicus",
+      "license": "CC BY 4.0",
+      "acceptedScientificName": "Delphinus biarmicus",
+      "taxonRank": "SPECIES"
     },
     {
       "key": 9000065,
       "gbifTaxonKey": 9000065,
-      "scientificName": "Bison bison",
-      "license": "CC BY 4.0"
+      "scientificName": "Orcinus cherrug",
+      "license": "CC BY 4.0",
+      "acceptedScientificName": "Orcinus cherrug",
+      "taxonRank": "SPECIES"
     },
     {
       "key": 9000066,
       "gbifTaxonKey": 9000066,
-      "scientificName": "Equus ferus",
-      "license": "CC BY 4.0"
+      "scientificName": "Aquila mexicanus",
+      "license": "CC BY 4.0",
+      "acceptedScientificName": "Aquila mexicanus",
+      "taxonRank": "SPECIES"
     },
     {
       "key": 9000067,
       "gbifTaxonKey": 9000067,
-      "scientificName": "Sus scrofa",
-      "license": "CC BY 4.0"
+      "scientificName": "Falco eleonorae",
+      "license": "CC BY 4.0",
+      "acceptedScientificName": "Falco eleonorae",
+      "taxonRank": "SPECIES"
     },
     {
       "key": 9000068,
       "gbifTaxonKey": 9000068,
-      "scientificName": "Loxodonta africana",
-      "license": "CC BY 4.0"
+      "scientificName": "Apis mellifera",
+      "license": "CC BY 4.0",
+      "acceptedScientificName": "Apis mellifera",
+      "taxonRank": "SPECIES"
     },
     {
       "key": 9000069,
       "gbifTaxonKey": 9000069,
-      "scientificName": "Giraffa camelopardalis",
-      "license": "CC BY 4.0"
+      "scientificName": "Buteo cerana",
+      "license": "CC BY 4.0",
+      "acceptedScientificName": "Buteo cerana",
+      "taxonRank": "SPECIES"
     },
     {
       "key": 9000070,
       "gbifTaxonKey": 9000070,
-      "scientificName": "Acinonyx jubatus",
-      "license": "CC BY 4.0"
+      "scientificName": "Corvus dorsata",
+      "license": "CC BY 4.0",
+      "acceptedScientificName": "Corvus dorsata",
+      "taxonRank": "SPECIES",
+      "synonyms": [
+        "Corvus oldname"
+      ]
     },
     {
       "key": 9000071,
       "gbifTaxonKey": 9000071,
-      "scientificName": "Panthera tigris",
-      "license": "CC BY 4.0"
+      "scientificName": "Passer florea",
+      "license": "CC BY 4.0",
+      "acceptedScientificName": "Passer florea",
+      "taxonRank": "SPECIES"
     },
     {
       "key": 9000072,
       "gbifTaxonKey": 9000072,
-      "scientificName": "Panthera pardus",
-      "license": "CC BY 4.0"
+      "scientificName": "Anas andreniformis",
+      "license": "CC BY 4.0",
+      "acceptedScientificName": "Anas andreniformis",
+      "taxonRank": "SPECIES"
     },
     {
       "key": 9000073,
       "gbifTaxonKey": 9000073,
-      "scientificName": "Panthera onca",
-      "license": "CC BY 4.0"
+      "scientificName": "Salmo koschevnikovi",
+      "license": "CC BY 4.0",
+      "acceptedScientificName": "Salmo koschevnikovi",
+      "taxonRank": "SPECIES"
     },
     {
       "key": 9000074,
       "gbifTaxonKey": 9000074,
-      "scientificName": "Ursus arctos",
-      "license": "CC BY 4.0"
+      "scientificName": "Gadus nigrocincta",
+      "license": "CC BY 4.0",
+      "acceptedScientificName": "Gadus nigrocincta",
+      "taxonRank": "SPECIES"
     },
     {
       "key": 9000075,
       "gbifTaxonKey": 9000075,
-      "scientificName": "Gorilla gorilla",
-      "license": "CC BY 4.0"
+      "scientificName": "Quercus laboriosa",
+      "license": "CC BY 4.0",
+      "acceptedScientificName": "Quercus laboriosa",
+      "taxonRank": "SPECIES"
     },
     {
       "key": 9000076,
       "gbifTaxonKey": 9000076,
-      "scientificName": "Pan troglodytes",
-      "license": "CC BY 4.0"
+      "scientificName": "Pinus buteo",
+      "license": "CC BY 4.0",
+      "acceptedScientificName": "Pinus buteo",
+      "taxonRank": "SPECIES"
     },
     {
       "key": 9000077,
       "gbifTaxonKey": 9000077,
-      "scientificName": "Macaca mulatta",
-      "license": "CC BY 4.0"
+      "scientificName": "Rosa jamaicensis",
+      "license": "CC BY 4.0",
+      "acceptedScientificName": "Rosa jamaicensis",
+      "taxonRank": "SPECIES",
+      "synonyms": [
+        "Rosa oldname"
+      ]
     },
     {
       "key": 9000078,
       "gbifTaxonKey": 9000078,
-      "scientificName": "Xenopus laevis",
-      "license": "CC BY 4.0"
+      "scientificName": "Homo lagopus",
+      "license": "CC BY 4.0",
+      "acceptedScientificName": "Homo lagopus",
+      "taxonRank": "SPECIES"
     },
     {
       "key": 9000079,
       "gbifTaxonKey": 9000079,
-      "scientificName": "Strongylocentrotus purpuratus",
-      "license": "CC BY 4.0"
+      "scientificName": "Gorilla lineatus",
+      "license": "CC BY 4.0",
+      "acceptedScientificName": "Gorilla lineatus",
+      "taxonRank": "SPECIES"
     },
     {
       "key": 9000080,
       "gbifTaxonKey": 9000080,
-      "scientificName": "Hydra vulgaris",
-      "license": "CC BY 4.0"
+      "scientificName": "Macaca platypterus",
+      "license": "CC BY 4.0",
+      "acceptedScientificName": "Macaca platypterus",
+      "taxonRank": "SPECIES"
     },
     {
       "key": 9000081,
       "gbifTaxonKey": 9000081,
-      "scientificName": "Nematostella vectensis",
-      "license": "CC BY 4.0"
+      "scientificName": "Equus swainsoni",
+      "license": "CC BY 4.0",
+      "acceptedScientificName": "Equus swainsoni",
+      "taxonRank": "SPECIES"
     },
     {
       "key": 9000082,
       "gbifTaxonKey": 9000082,
-      "scientificName": "Volvox carteri",
-      "license": "CC BY 4.0"
+      "scientificName": "Bos regalis",
+      "license": "CC BY 4.0",
+      "acceptedScientificName": "Bos regalis",
+      "taxonRank": "SPECIES"
     },
     {
       "key": 9000083,
       "gbifTaxonKey": 9000083,
-      "scientificName": "Chlamydomonas reinhardtii",
-      "license": "CC BY 4.0"
+      "scientificName": "Sus rufinus",
+      "license": "CC BY 4.0",
+      "acceptedScientificName": "Sus rufinus",
+      "taxonRank": "SPECIES"
     },
     {
       "key": 9000084,
       "gbifTaxonKey": 9000084,
-      "scientificName": "Physarum polycephalum",
-      "license": "CC BY 4.0"
+      "scientificName": "Felis corax",
+      "license": "CC BY 4.0",
+      "acceptedScientificName": "Felis corax",
+      "taxonRank": "SPECIES",
+      "synonyms": [
+        "Felis oldname"
+      ]
     },
     {
       "key": 9000085,
       "gbifTaxonKey": 9000085,
-      "scientificName": "Agaricus bisporus",
-      "license": "CC BY 4.0"
+      "scientificName": "Lynx corone",
+      "license": "CC BY 4.0",
+      "acceptedScientificName": "Lynx corone",
+      "taxonRank": "SPECIES"
     },
     {
       "key": 9000086,
       "gbifTaxonKey": 9000086,
-      "scientificName": "Pleurotus ostreatus",
-      "license": "CC BY 4.0"
+      "scientificName": "Vulpes brachyrhynchos",
+      "license": "CC BY 4.0",
+      "acceptedScientificName": "Vulpes brachyrhynchos",
+      "taxonRank": "SPECIES"
     },
     {
       "key": 9000087,
       "gbifTaxonKey": 9000087,
-      "scientificName": "Aspergillus niger",
-      "license": "CC BY 4.0"
+      "scientificName": "Lepus splendens",
+      "license": "CC BY 4.0",
+      "acceptedScientificName": "Lepus splendens",
+      "taxonRank": "SPECIES"
     },
     {
       "key": 9000088,
       "gbifTaxonKey": 9000088,
-      "scientificName": "Bacillus subtilis",
-      "license": "CC BY 4.0"
+      "scientificName": "Sciurus albus",
+      "license": "CC BY 4.0",
+      "acceptedScientificName": "Sciurus albus",
+      "taxonRank": "SPECIES"
     },
     {
       "key": 9000089,
       "gbifTaxonKey": 9000089,
-      "scientificName": "Streptomyces coelicolor",
-      "license": "CC BY 4.0"
+      "scientificName": "Castor frugilegus",
+      "license": "CC BY 4.0",
+      "acceptedScientificName": "Castor frugilegus",
+      "taxonRank": "SPECIES"
     },
     {
       "key": 9000090,
       "gbifTaxonKey": 9000090,
-      "scientificName": "Zostera marina",
-      "license": "CC BY 4.0"
+      "scientificName": "Ursus monedula",
+      "license": "CC BY 4.0",
+      "acceptedScientificName": "Ursus monedula",
+      "taxonRank": "SPECIES"
     },
     {
       "key": 9000091,
       "gbifTaxonKey": 9000091,
-      "scientificName": "Ulva lactuca",
-      "license": "CC BY 4.0"
+      "scientificName": "Panthera cryptoleucus",
+      "license": "CC BY 4.0",
+      "acceptedScientificName": "Panthera cryptoleucus",
+      "taxonRank": "SPECIES",
+      "synonyms": [
+        "Panthera oldname"
+      ]
     },
     {
       "key": 9000092,
       "gbifTaxonKey": 9000092,
-      "scientificName": "Laminaria digitata",
-      "license": "CC BY 4.0"
+      "scientificName": "Canis domesticus",
+      "license": "CC BY 4.0",
+      "acceptedScientificName": "Canis domesticus",
+      "taxonRank": "SPECIES"
     },
     {
       "key": 9000093,
       "gbifTaxonKey": 9000093,
-      "scientificName": "Fucus vesiculosus",
-      "license": "CC BY 4.0"
+      "scientificName": "Cervus montanus",
+      "license": "CC BY 4.0",
+      "acceptedScientificName": "Cervus montanus",
+      "taxonRank": "SPECIES"
     },
     {
       "key": 9000094,
       "gbifTaxonKey": 9000094,
-      "scientificName": "Chondrus crispus",
-      "license": "CC BY 4.0"
+      "scientificName": "Delphinus hispaniolensis",
+      "license": "CC BY 4.0",
+      "acceptedScientificName": "Delphinus hispaniolensis",
+      "taxonRank": "SPECIES"
     },
     {
       "key": 9000095,
       "gbifTaxonKey": 9000095,
-      "scientificName": "Sphagnum magellanicum",
-      "license": "CC BY 4.0"
+      "scientificName": "Orcinus ammodendri",
+      "license": "CC BY 4.0",
+      "acceptedScientificName": "Orcinus ammodendri",
+      "taxonRank": "SPECIES"
     },
     {
       "key": 9000096,
       "gbifTaxonKey": 9000096,
-      "scientificName": "Marchantia polymorpha",
-      "license": "CC BY 4.0"
+      "scientificName": "Aquila flaveolus",
+      "license": "CC BY 4.0",
+      "acceptedScientificName": "Aquila flaveolus",
+      "taxonRank": "SPECIES"
     },
     {
       "key": 9000097,
       "gbifTaxonKey": 9000097,
-      "scientificName": "Equisetum arvense",
-      "license": "CC BY 4.0"
+      "scientificName": "Falco moabiticus",
+      "license": "CC BY 4.0",
+      "acceptedScientificName": "Falco moabiticus",
+      "taxonRank": "SPECIES"
     },
     {
       "key": 9000098,
       "gbifTaxonKey": 9000098,
-      "scientificName": "Pteridium aquilinum",
-      "license": "CC BY 4.0"
+      "scientificName": "Apis iagoensis",
+      "license": "CC BY 4.0",
+      "acceptedScientificName": "Apis iagoensis",
+      "taxonRank": "SPECIES",
+      "synonyms": [
+        "Apis oldname"
+      ]
     },
     {
       "key": 9000099,
       "gbifTaxonKey": 9000099,
-      "scientificName": "Cycas revoluta",
-      "license": "CC BY 4.0"
+      "scientificName": "Buteo pytiliorhynchus",
+      "license": "CC BY 4.0",
+      "acceptedScientificName": "Buteo pytiliorhynchus",
+      "taxonRank": "SPECIES"
     },
     {
       "key": 9000100,
       "gbifTaxonKey": 9000100,
-      "scientificName": "Nymphaea alba",
-      "license": "CC BY 4.0"
+      "scientificName": "Corvus platyrhynchos",
+      "license": "CC BY 4.0",
+      "acceptedScientificName": "Corvus platyrhynchos",
+      "taxonRank": "SPECIES"
     },
     {
       "key": 9000101,
       "gbifTaxonKey": 9000101,
-      "scientificName": "Dionaea muscipula",
-      "license": "CC BY 4.0"
+      "scientificName": "Passer acuta",
+      "license": "CC BY 4.0",
+      "acceptedScientificName": "Passer acuta",
+      "taxonRank": "SPECIES"
     },
     {
       "key": 9000102,
       "gbifTaxonKey": 9000102,
-      "scientificName": "Sarracenia purpurea",
-      "license": "CC BY 4.0"
+      "scientificName": "Anas crecca",
+      "license": "CC BY 4.0",
+      "acceptedScientificName": "Anas crecca",
+      "taxonRank": "SPECIES"
     },
     {
       "key": 9000103,
       "gbifTaxonKey": 9000103,
-      "scientificName": "Drosera rotundifolia",
-      "license": "CC BY 4.0"
+      "scientificName": "Salmo clypeata",
+      "license": "CC BY 4.0",
+      "acceptedScientificName": "Salmo clypeata",
+      "taxonRank": "SPECIES"
     },
     {
       "key": 9000104,
       "gbifTaxonKey": 9000104,
-      "scientificName": "Utricularia vulgaris",
-      "license": "CC BY 4.0"
+      "scientificName": "Gadus strepera",
+      "license": "CC BY 4.0",
+      "acceptedScientificName": "Gadus strepera",
+      "taxonRank": "SPECIES"
     },
     {
       "key": 9000105,
       "gbifTaxonKey": 9000105,
-      "scientificName": "Fagus sylvatica",
-      "license": "CC BY 4.0"
+      "scientificName": "Quercus penelope",
+      "license": "CC BY 4.0",
+      "acceptedScientificName": "Quercus penelope",
+      "taxonRank": "SPECIES",
+      "synonyms": [
+        "Quercus oldname"
+      ]
     },
     {
       "key": 9000106,
       "gbifTaxonKey": 9000106,
-      "scientificName": "Juglans nigra",
-      "license": "CC BY 4.0"
+      "scientificName": "Pinus americana",
+      "license": "CC BY 4.0",
+      "acceptedScientificName": "Pinus americana",
+      "taxonRank": "SPECIES"
     },
     {
       "key": 9000107,
       "gbifTaxonKey": 9000107,
-      "scientificName": "Platanus occidentalis",
-      "license": "CC BY 4.0"
+      "scientificName": "Rosa fulvigula",
+      "license": "CC BY 4.0",
+      "acceptedScientificName": "Rosa fulvigula",
+      "taxonRank": "SPECIES"
     },
     {
       "key": 9000108,
       "gbifTaxonKey": 9000108,
-      "scientificName": "Cornus florida",
-      "license": "CC BY 4.0"
+      "scientificName": "Homo salar",
+      "license": "CC BY 4.0",
+      "acceptedScientificName": "Homo salar",
+      "taxonRank": "SPECIES"
     },
     {
       "key": 9000109,
       "gbifTaxonKey": 9000109,
-      "scientificName": "Vaccinium corymbosum",
-      "license": "CC BY 4.0"
+      "scientificName": "Gorilla trutta",
+      "license": "CC BY 4.0",
+      "acceptedScientificName": "Gorilla trutta",
+      "taxonRank": "SPECIES"
     },
     {
       "key": 9000110,
       "gbifTaxonKey": 9000110,
-      "scientificName": "Malus domestica",
-      "license": "CC BY 4.0"
+      "scientificName": "Macaca ferox",
+      "license": "CC BY 4.0",
+      "acceptedScientificName": "Macaca ferox",
+      "taxonRank": "SPECIES"
     },
     {
       "key": 9000111,
       "gbifTaxonKey": 9000111,
-      "scientificName": "Vitis vinifera",
-      "license": "CC BY 4.0"
+      "scientificName": "Equus obtusirostris",
+      "license": "CC BY 4.0",
+      "acceptedScientificName": "Equus obtusirostris",
+      "taxonRank": "SPECIES"
     },
     {
       "key": 9000112,
       "gbifTaxonKey": 9000112,
-      "scientificName": "Citrus sinensis",
-      "license": "CC BY 4.0"
+      "scientificName": "Bos oquassa",
+      "license": "CC BY 4.0",
+      "acceptedScientificName": "Bos oquassa",
+      "taxonRank": "SPECIES",
+      "synonyms": [
+        "Bos oldname"
+      ]
     },
     {
       "key": 9000113,
       "gbifTaxonKey": 9000113,
-      "scientificName": "Coffea arabica",
-      "license": "CC BY 4.0"
+      "scientificName": "Sus marmoratus",
+      "license": "CC BY 4.0",
+      "acceptedScientificName": "Sus marmoratus",
+      "taxonRank": "SPECIES"
     },
     {
       "key": 9000114,
       "gbifTaxonKey": 9000114,
-      "scientificName": "Theobroma cacao",
-      "license": "CC BY 4.0"
+      "scientificName": "Felis carpio",
+      "license": "CC BY 4.0",
+      "acceptedScientificName": "Felis carpio",
+      "taxonRank": "SPECIES"
     },
     {
       "key": 9000115,
       "gbifTaxonKey": 9000115,
-      "scientificName": "Glycine max",
-      "license": "CC BY 4.0"
+      "scientificName": "Lynx letnica",
+      "license": "CC BY 4.0",
+      "acceptedScientificName": "Lynx letnica",
+      "taxonRank": "SPECIES"
     },
     {
       "key": 9000116,
       "gbifTaxonKey": 9000116,
-      "scientificName": "Oryza sativa",
-      "license": "CC BY 4.0"
+      "scientificName": "Vulpes morhua",
+      "license": "CC BY 4.0",
+      "acceptedScientificName": "Vulpes morhua",
+      "taxonRank": "SPECIES"
     },
     {
       "key": 9000117,
       "gbifTaxonKey": 9000117,
-      "scientificName": "Triticum aestivum",
-      "license": "CC BY 4.0"
+      "scientificName": "Lepus ogac",
+      "license": "CC BY 4.0",
+      "acceptedScientificName": "Lepus ogac",
+      "taxonRank": "SPECIES"
     },
     {
       "key": 9000118,
       "gbifTaxonKey": 9000118,
-      "scientificName": "Solanum lycopersicum",
-      "license": "CC BY 4.0"
+      "scientificName": "Sciurus macrocephalus",
+      "license": "CC BY 4.0",
+      "acceptedScientificName": "Sciurus macrocephalus",
+      "taxonRank": "SPECIES"
     },
     {
       "key": 9000119,
       "gbifTaxonKey": 9000119,
-      "scientificName": "Solanum tuberosum",
-      "license": "CC BY 4.0"
+      "scientificName": "Castor chalcogrammus",
+      "license": "CC BY 4.0",
+      "acceptedScientificName": "Castor chalcogrammus",
+      "taxonRank": "SPECIES",
+      "synonyms": [
+        "Castor oldname"
+      ]
     },
     {
       "key": 9000120,
       "gbifTaxonKey": 9000120,
-      "scientificName": "Phaseolus vulgaris",
-      "license": "CC BY 4.0"
+      "scientificName": "Ursus pollachius",
+      "license": "CC BY 4.0",
+      "acceptedScientificName": "Ursus pollachius",
+      "taxonRank": "SPECIES"
     },
     {
       "key": 9000121,
       "gbifTaxonKey": 9000121,
-      "scientificName": "Pisum sativum",
-      "license": "CC BY 4.0"
+      "scientificName": "Panthera virens",
+      "license": "CC BY 4.0",
+      "acceptedScientificName": "Panthera virens",
+      "taxonRank": "SPECIES"
     },
     {
       "key": 9000122,
       "gbifTaxonKey": 9000122,
-      "scientificName": "Medicago sativa",
-      "license": "CC BY 4.0"
+      "scientificName": "Canis minutus",
+      "license": "CC BY 4.0",
+      "acceptedScientificName": "Canis minutus",
+      "taxonRank": "SPECIES"
     },
     {
       "key": 9000123,
       "gbifTaxonKey": 9000123,
-      "scientificName": "Brassica oleracea",
-      "license": "CC BY 4.0"
+      "scientificName": "Cervus luscus",
+      "license": "CC BY 4.0",
+      "acceptedScientificName": "Cervus luscus",
+      "taxonRank": "SPECIES"
     },
     {
       "key": 9000124,
       "gbifTaxonKey": 9000124,
-      "scientificName": "Daucus carota",
-      "license": "CC BY 4.0"
+      "scientificName": "Delphinus robur",
+      "license": "CC BY 4.0",
+      "acceptedScientificName": "Delphinus robur",
+      "taxonRank": "SPECIES"
     },
     {
       "key": 9000125,
       "gbifTaxonKey": 9000125,
-      "scientificName": "Allium cepa",
-      "license": "CC BY 4.0"
+      "scientificName": "Orcinus alba",
+      "license": "CC BY 4.0",
+      "acceptedScientificName": "Orcinus alba",
+      "taxonRank": "SPECIES"
     },
     {
       "key": 9000126,
       "gbifTaxonKey": 9000126,
-      "scientificName": "Lactuca sativa",
-      "license": "CC BY 4.0"
+      "scientificName": "Aquila petraea",
+      "license": "CC BY 4.0",
+      "acceptedScientificName": "Aquila petraea",
+      "taxonRank": "SPECIES",
+      "synonyms": [
+        "Aquila oldname"
+      ]
     },
     {
       "key": 9000127,
       "gbifTaxonKey": 9000127,
-      "scientificName": "Spinacia oleracea",
-      "license": "CC BY 4.0"
+      "scientificName": "Falco cerris",
+      "license": "CC BY 4.0",
+      "acceptedScientificName": "Falco cerris",
+      "taxonRank": "SPECIES"
     },
     {
       "key": 9000128,
       "gbifTaxonKey": 9000128,
-      "scientificName": "Cucumis sativus",
-      "license": "CC BY 4.0"
+      "scientificName": "Apis suber",
+      "license": "CC BY 4.0",
+      "acceptedScientificName": "Apis suber",
+      "taxonRank": "SPECIES"
     },
     {
       "key": 9000129,
       "gbifTaxonKey": 9000129,
-      "scientificName": "Capsicum annuum",
-      "license": "CC BY 4.0"
+      "scientificName": "Buteo ilex",
+      "license": "CC BY 4.0",
+      "acceptedScientificName": "Buteo ilex",
+      "taxonRank": "SPECIES"
+    },
+    {
+      "key": 9000130,
+      "gbifTaxonKey": 9000130,
+      "scientificName": "Corvus virginiana",
+      "license": "CC BY 4.0",
+      "acceptedScientificName": "Corvus virginiana",
+      "taxonRank": "SPECIES"
+    },
+    {
+      "key": 9000131,
+      "gbifTaxonKey": 9000131,
+      "scientificName": "Passer kelloggii",
+      "license": "CC BY 4.0",
+      "acceptedScientificName": "Passer kelloggii",
+      "taxonRank": "SPECIES"
+    },
+    {
+      "key": 9000132,
+      "gbifTaxonKey": 9000132,
+      "scientificName": "Anas rubra",
+      "license": "CC BY 4.0",
+      "acceptedScientificName": "Anas rubra",
+      "taxonRank": "SPECIES"
+    },
+    {
+      "key": 9000133,
+      "gbifTaxonKey": 9000133,
+      "scientificName": "Salmo palustris",
+      "license": "CC BY 4.0",
+      "acceptedScientificName": "Salmo palustris",
+      "taxonRank": "SPECIES",
+      "synonyms": [
+        "Salmo oldname"
+      ]
+    },
+    {
+      "key": 9000134,
+      "gbifTaxonKey": 9000134,
+      "scientificName": "Gadus sylvestris",
+      "license": "CC BY 4.0",
+      "acceptedScientificName": "Gadus sylvestris",
+      "taxonRank": "SPECIES"
+    },
+    {
+      "key": 9000135,
+      "gbifTaxonKey": 9000135,
+      "scientificName": "Quercus contorta",
+      "license": "CC BY 4.0",
+      "acceptedScientificName": "Quercus contorta",
+      "taxonRank": "SPECIES"
+    },
+    {
+      "key": 9000136,
+      "gbifTaxonKey": 9000136,
+      "scientificName": "Pinus ponderosa",
+      "license": "CC BY 4.0",
+      "acceptedScientificName": "Pinus ponderosa",
+      "taxonRank": "SPECIES"
+    },
+    {
+      "key": 9000137,
+      "gbifTaxonKey": 9000137,
+      "scientificName": "Rosa radiata",
+      "license": "CC BY 4.0",
+      "acceptedScientificName": "Rosa radiata",
+      "taxonRank": "SPECIES"
+    },
+    {
+      "key": 9000138,
+      "gbifTaxonKey": 9000138,
+      "scientificName": "Homo halepensis",
+      "license": "CC BY 4.0",
+      "acceptedScientificName": "Homo halepensis",
+      "taxonRank": "SPECIES"
+    },
+    {
+      "key": 9000139,
+      "gbifTaxonKey": 9000139,
+      "scientificName": "Gorilla pinaster",
+      "license": "CC BY 4.0",
+      "acceptedScientificName": "Gorilla pinaster",
+      "taxonRank": "SPECIES"
+    },
+    {
+      "key": 9000140,
+      "gbifTaxonKey": 9000140,
+      "scientificName": "Macaca nigra",
+      "license": "CC BY 4.0",
+      "acceptedScientificName": "Macaca nigra",
+      "taxonRank": "SPECIES",
+      "synonyms": [
+        "Macaca oldname"
+      ]
+    },
+    {
+      "key": 9000141,
+      "gbifTaxonKey": 9000141,
+      "scientificName": "Equus cembra",
+      "license": "CC BY 4.0",
+      "acceptedScientificName": "Equus cembra",
+      "taxonRank": "SPECIES"
+    },
+    {
+      "key": 9000142,
+      "gbifTaxonKey": 9000142,
+      "scientificName": "Bos strobus",
+      "license": "CC BY 4.0",
+      "acceptedScientificName": "Bos strobus",
+      "taxonRank": "SPECIES"
+    },
+    {
+      "key": 9000143,
+      "gbifTaxonKey": 9000143,
+      "scientificName": "Sus palustrisb",
+      "license": "CC BY 4.0",
+      "acceptedScientificName": "Sus palustrisb",
+      "taxonRank": "SPECIES"
+    },
+    {
+      "key": 9000144,
+      "gbifTaxonKey": 9000144,
+      "scientificName": "Felis canina",
+      "license": "CC BY 4.0",
+      "acceptedScientificName": "Felis canina",
+      "taxonRank": "SPECIES"
+    },
+    {
+      "key": 9000145,
+      "gbifTaxonKey": 9000145,
+      "scientificName": "Lynx gallica",
+      "license": "CC BY 4.0",
+      "acceptedScientificName": "Lynx gallica",
+      "taxonRank": "SPECIES"
+    },
+    {
+      "key": 9000146,
+      "gbifTaxonKey": 9000146,
+      "scientificName": "Vulpes rugosa",
+      "license": "CC BY 4.0",
+      "acceptedScientificName": "Vulpes rugosa",
+      "taxonRank": "SPECIES"
+    },
+    {
+      "key": 9000147,
+      "gbifTaxonKey": 9000147,
+      "scientificName": "Lepus chinensis",
+      "license": "CC BY 4.0",
+      "acceptedScientificName": "Lepus chinensis",
+      "taxonRank": "SPECIES",
+      "synonyms": [
+        "Lepus oldname"
+      ]
+    },
+    {
+      "key": 9000148,
+      "gbifTaxonKey": 9000148,
+      "scientificName": "Sciurus multiflora",
+      "license": "CC BY 4.0",
+      "acceptedScientificName": "Sciurus multiflora",
+      "taxonRank": "SPECIES"
+    },
+    {
+      "key": 9000149,
+      "gbifTaxonKey": 9000149,
+      "scientificName": "Castor arkansana",
+      "license": "CC BY 4.0",
+      "acceptedScientificName": "Castor arkansana",
+      "taxonRank": "SPECIES"
+    },
+    {
+      "key": 9000150,
+      "gbifTaxonKey": 9000150,
+      "scientificName": "Ursus carolina",
+      "license": "CC BY 4.0",
+      "acceptedScientificName": "Ursus carolina",
+      "taxonRank": "SPECIES"
+    },
+    {
+      "key": 9000151,
+      "gbifTaxonKey": 9000151,
+      "scientificName": "Panthera setigera",
+      "license": "CC BY 4.0",
+      "acceptedScientificName": "Panthera setigera",
+      "taxonRank": "SPECIES"
+    },
+    {
+      "key": 9000152,
+      "gbifTaxonKey": 9000152,
+      "scientificName": "Canis virginiana",
+      "license": "CC BY 4.0",
+      "acceptedScientificName": "Canis virginiana",
+      "taxonRank": "SPECIES"
+    },
+    {
+      "key": 9000153,
+      "gbifTaxonKey": 9000153,
+      "scientificName": "Cervus woodsii",
+      "license": "CC BY 4.0",
+      "acceptedScientificName": "Cervus woodsii",
+      "taxonRank": "SPECIES"
+    },
+    {
+      "key": 9000154,
+      "gbifTaxonKey": 9000154,
+      "scientificName": "Delphinus sapiens",
+      "license": "CC BY 4.0",
+      "acceptedScientificName": "Delphinus sapiens",
+      "taxonRank": "SPECIES",
+      "synonyms": [
+        "Delphinus oldname"
+      ]
+    },
+    {
+      "key": 9000155,
+      "gbifTaxonKey": 9000155,
+      "scientificName": "Orcinus habilis",
+      "license": "CC BY 4.0",
+      "acceptedScientificName": "Orcinus habilis",
+      "taxonRank": "SPECIES"
+    },
+    {
+      "key": 9000156,
+      "gbifTaxonKey": 9000156,
+      "scientificName": "Aquila erectus",
+      "license": "CC BY 4.0",
+      "acceptedScientificName": "Aquila erectus",
+      "taxonRank": "SPECIES"
+    },
+    {
+      "key": 9000157,
+      "gbifTaxonKey": 9000157,
+      "scientificName": "Falco neanderthalensis",
+      "license": "CC BY 4.0",
+      "acceptedScientificName": "Falco neanderthalensis",
+      "taxonRank": "SPECIES"
+    },
+    {
+      "key": 9000158,
+      "gbifTaxonKey": 9000158,
+      "scientificName": "Apis floresiensis",
+      "license": "CC BY 4.0",
+      "acceptedScientificName": "Apis floresiensis",
+      "taxonRank": "SPECIES"
+    },
+    {
+      "key": 9000159,
+      "gbifTaxonKey": 9000159,
+      "scientificName": "Buteo naledi",
+      "license": "CC BY 4.0",
+      "acceptedScientificName": "Buteo naledi",
+      "taxonRank": "SPECIES"
+    },
+    {
+      "key": 9000160,
+      "gbifTaxonKey": 9000160,
+      "scientificName": "Corvus luzonensis",
+      "license": "CC BY 4.0",
+      "acceptedScientificName": "Corvus luzonensis",
+      "taxonRank": "SPECIES"
+    },
+    {
+      "key": 9000161,
+      "gbifTaxonKey": 9000161,
+      "scientificName": "Passer heidelbergensis",
+      "license": "CC BY 4.0",
+      "acceptedScientificName": "Passer heidelbergensis",
+      "taxonRank": "SPECIES",
+      "synonyms": [
+        "Passer oldname"
+      ]
+    },
+    {
+      "key": 9000162,
+      "gbifTaxonKey": 9000162,
+      "scientificName": "Anas gorilla",
+      "license": "CC BY 4.0",
+      "acceptedScientificName": "Anas gorilla",
+      "taxonRank": "SPECIES"
+    },
+    {
+      "key": 9000163,
+      "gbifTaxonKey": 9000163,
+      "scientificName": "Salmo beringei",
+      "license": "CC BY 4.0",
+      "acceptedScientificName": "Salmo beringei",
+      "taxonRank": "SPECIES"
+    },
+    {
+      "key": 9000164,
+      "gbifTaxonKey": 9000164,
+      "scientificName": "Gadus diehli",
+      "license": "CC BY 4.0",
+      "acceptedScientificName": "Gadus diehli",
+      "taxonRank": "SPECIES"
+    },
+    {
+      "key": 9000165,
+      "gbifTaxonKey": 9000165,
+      "scientificName": "Quercus matschiei",
+      "license": "CC BY 4.0",
+      "acceptedScientificName": "Quercus matschiei",
+      "taxonRank": "SPECIES"
+    },
+    {
+      "key": 9000166,
+      "gbifTaxonKey": 9000166,
+      "scientificName": "Pinus graueri",
+      "license": "CC BY 4.0",
+      "acceptedScientificName": "Pinus graueri",
+      "taxonRank": "SPECIES"
+    },
+    {
+      "key": 9000167,
+      "gbifTaxonKey": 9000167,
+      "scientificName": "Rosa uellensis",
+      "license": "CC BY 4.0",
+      "acceptedScientificName": "Rosa uellensis",
+      "taxonRank": "SPECIES"
+    },
+    {
+      "key": 9000168,
+      "gbifTaxonKey": 9000168,
+      "scientificName": "Homo epithet",
+      "license": "CC BY 4.0",
+      "acceptedScientificName": "Homo epithet",
+      "taxonRank": "SPECIES",
+      "synonyms": [
+        "Homo oldname"
+      ]
+    },
+    {
+      "key": 9000169,
+      "gbifTaxonKey": 9000169,
+      "scientificName": "Gorilla epithet",
+      "license": "CC BY 4.0",
+      "acceptedScientificName": "Gorilla epithet",
+      "taxonRank": "SPECIES"
+    },
+    {
+      "key": 9000170,
+      "gbifTaxonKey": 9000170,
+      "scientificName": "Macaca epithet",
+      "license": "CC BY 4.0",
+      "acceptedScientificName": "Macaca epithet",
+      "taxonRank": "SPECIES"
+    },
+    {
+      "key": 9000171,
+      "gbifTaxonKey": 9000171,
+      "scientificName": "Equus epithet",
+      "license": "CC BY 4.0",
+      "acceptedScientificName": "Equus epithet",
+      "taxonRank": "SPECIES"
+    },
+    {
+      "key": 9000172,
+      "gbifTaxonKey": 9000172,
+      "scientificName": "Bos epithet",
+      "license": "CC BY 4.0",
+      "acceptedScientificName": "Bos epithet",
+      "taxonRank": "SPECIES"
+    },
+    {
+      "key": 9000173,
+      "gbifTaxonKey": 9000173,
+      "scientificName": "Sus epithet",
+      "license": "CC BY 4.0",
+      "acceptedScientificName": "Sus epithet",
+      "taxonRank": "SPECIES"
+    },
+    {
+      "key": 9000174,
+      "gbifTaxonKey": 9000174,
+      "scientificName": "Felis epithet",
+      "license": "CC BY 4.0",
+      "acceptedScientificName": "Felis epithet",
+      "taxonRank": "SPECIES"
+    },
+    {
+      "key": 9000175,
+      "gbifTaxonKey": 9000175,
+      "scientificName": "Lynx epithet",
+      "license": "CC BY 4.0",
+      "acceptedScientificName": "Lynx epithet",
+      "taxonRank": "SPECIES",
+      "synonyms": [
+        "Lynx oldname"
+      ]
+    },
+    {
+      "key": 9000176,
+      "gbifTaxonKey": 9000176,
+      "scientificName": "Vulpes epithet",
+      "license": "CC BY 4.0",
+      "acceptedScientificName": "Vulpes epithet",
+      "taxonRank": "SPECIES"
+    },
+    {
+      "key": 9000177,
+      "gbifTaxonKey": 9000177,
+      "scientificName": "Lepus epithet",
+      "license": "CC BY 4.0",
+      "acceptedScientificName": "Lepus epithet",
+      "taxonRank": "SPECIES"
+    },
+    {
+      "key": 9000178,
+      "gbifTaxonKey": 9000178,
+      "scientificName": "Sciurus epithet",
+      "license": "CC BY 4.0",
+      "acceptedScientificName": "Sciurus epithet",
+      "taxonRank": "SPECIES"
+    },
+    {
+      "key": 9000179,
+      "gbifTaxonKey": 9000179,
+      "scientificName": "Castor epithet",
+      "license": "CC BY 4.0",
+      "acceptedScientificName": "Castor epithet",
+      "taxonRank": "SPECIES"
+    },
+    {
+      "key": 9000180,
+      "gbifTaxonKey": 9000180,
+      "scientificName": "Ursus epithet",
+      "license": "CC BY 4.0",
+      "acceptedScientificName": "Ursus epithet",
+      "taxonRank": "SPECIES"
+    },
+    {
+      "key": 9000181,
+      "gbifTaxonKey": 9000181,
+      "scientificName": "Panthera epithet",
+      "license": "CC BY 4.0",
+      "acceptedScientificName": "Panthera epithet",
+      "taxonRank": "SPECIES"
+    },
+    {
+      "key": 9000182,
+      "gbifTaxonKey": 9000182,
+      "scientificName": "Canis epithet",
+      "license": "CC BY 4.0",
+      "acceptedScientificName": "Canis epithet",
+      "taxonRank": "SPECIES",
+      "synonyms": [
+        "Canis oldname"
+      ]
+    },
+    {
+      "key": 9000183,
+      "gbifTaxonKey": 9000183,
+      "scientificName": "Cervus epithet",
+      "license": "CC BY 4.0",
+      "acceptedScientificName": "Cervus epithet",
+      "taxonRank": "SPECIES"
+    },
+    {
+      "key": 9000184,
+      "gbifTaxonKey": 9000184,
+      "scientificName": "Delphinus epithet",
+      "license": "CC BY 4.0",
+      "acceptedScientificName": "Delphinus epithet",
+      "taxonRank": "SPECIES"
+    },
+    {
+      "key": 9000185,
+      "gbifTaxonKey": 9000185,
+      "scientificName": "Orcinus epithet",
+      "license": "CC BY 4.0",
+      "acceptedScientificName": "Orcinus epithet",
+      "taxonRank": "SPECIES"
+    },
+    {
+      "key": 9000186,
+      "gbifTaxonKey": 9000186,
+      "scientificName": "Aquila epithet",
+      "license": "CC BY 4.0",
+      "acceptedScientificName": "Aquila epithet",
+      "taxonRank": "SPECIES"
+    },
+    {
+      "key": 9000187,
+      "gbifTaxonKey": 9000187,
+      "scientificName": "Falco epithet",
+      "license": "CC BY 4.0",
+      "acceptedScientificName": "Falco epithet",
+      "taxonRank": "SPECIES"
+    },
+    {
+      "key": 9000188,
+      "gbifTaxonKey": 9000188,
+      "scientificName": "Apis epithet",
+      "license": "CC BY 4.0",
+      "acceptedScientificName": "Apis epithet",
+      "taxonRank": "SPECIES"
+    },
+    {
+      "key": 9000189,
+      "gbifTaxonKey": 9000189,
+      "scientificName": "Buteo epithet",
+      "license": "CC BY 4.0",
+      "acceptedScientificName": "Buteo epithet",
+      "taxonRank": "SPECIES",
+      "synonyms": [
+        "Buteo oldname"
+      ]
+    },
+    {
+      "key": 9000190,
+      "gbifTaxonKey": 9000190,
+      "scientificName": "Corvus epithet",
+      "license": "CC BY 4.0",
+      "acceptedScientificName": "Corvus epithet",
+      "taxonRank": "SPECIES"
+    },
+    {
+      "key": 9000191,
+      "gbifTaxonKey": 9000191,
+      "scientificName": "Passer epithet",
+      "license": "CC BY 4.0",
+      "acceptedScientificName": "Passer epithet",
+      "taxonRank": "SPECIES"
+    },
+    {
+      "key": 9000192,
+      "gbifTaxonKey": 9000192,
+      "scientificName": "Anas epithet",
+      "license": "CC BY 4.0",
+      "acceptedScientificName": "Anas epithet",
+      "taxonRank": "SPECIES"
+    },
+    {
+      "key": 9000193,
+      "gbifTaxonKey": 9000193,
+      "scientificName": "Salmo epithet",
+      "license": "CC BY 4.0",
+      "acceptedScientificName": "Salmo epithet",
+      "taxonRank": "SPECIES"
+    },
+    {
+      "key": 9000194,
+      "gbifTaxonKey": 9000194,
+      "scientificName": "Gadus epithet",
+      "license": "CC BY 4.0",
+      "acceptedScientificName": "Gadus epithet",
+      "taxonRank": "SPECIES"
+    },
+    {
+      "key": 9000195,
+      "gbifTaxonKey": 9000195,
+      "scientificName": "Quercus epithet",
+      "license": "CC BY 4.0",
+      "acceptedScientificName": "Quercus epithet",
+      "taxonRank": "SPECIES"
+    },
+    {
+      "key": 9000196,
+      "gbifTaxonKey": 9000196,
+      "scientificName": "Pinus epithet",
+      "license": "CC BY 4.0",
+      "acceptedScientificName": "Pinus epithet",
+      "taxonRank": "SPECIES",
+      "synonyms": [
+        "Pinus oldname"
+      ]
+    },
+    {
+      "key": 9000197,
+      "gbifTaxonKey": 9000197,
+      "scientificName": "Rosa epithet",
+      "license": "CC BY 4.0",
+      "acceptedScientificName": "Rosa epithet",
+      "taxonRank": "SPECIES"
+    },
+    {
+      "key": 9000198,
+      "gbifTaxonKey": 9000198,
+      "scientificName": "Homo epithet",
+      "license": "CC BY 4.0",
+      "acceptedScientificName": "Homo epithet",
+      "taxonRank": "SPECIES"
+    },
+    {
+      "key": 9000199,
+      "gbifTaxonKey": 9000199,
+      "scientificName": "Gorilla epithet",
+      "license": "CC BY 4.0",
+      "acceptedScientificName": "Gorilla epithet",
+      "taxonRank": "SPECIES"
+    },
+    {
+      "key": 9000200,
+      "gbifTaxonKey": 9000200,
+      "scientificName": "Macaca epithet",
+      "license": "CC BY 4.0",
+      "acceptedScientificName": "Macaca epithet",
+      "taxonRank": "SPECIES"
+    },
+    {
+      "key": 9000201,
+      "gbifTaxonKey": 9000201,
+      "scientificName": "Equus epithet",
+      "license": "CC BY 4.0",
+      "acceptedScientificName": "Equus epithet",
+      "taxonRank": "SPECIES"
+    },
+    {
+      "key": 9000202,
+      "gbifTaxonKey": 9000202,
+      "scientificName": "Bos epithet",
+      "license": "CC BY 4.0",
+      "acceptedScientificName": "Bos epithet",
+      "taxonRank": "SPECIES"
+    },
+    {
+      "key": 9000203,
+      "gbifTaxonKey": 9000203,
+      "scientificName": "Sus epithet",
+      "license": "CC BY 4.0",
+      "acceptedScientificName": "Sus epithet",
+      "taxonRank": "SPECIES",
+      "synonyms": [
+        "Sus oldname"
+      ]
+    },
+    {
+      "key": 9000204,
+      "gbifTaxonKey": 9000204,
+      "scientificName": "Felis epithet",
+      "license": "CC BY 4.0",
+      "acceptedScientificName": "Felis epithet",
+      "taxonRank": "SPECIES"
+    },
+    {
+      "key": 9000205,
+      "gbifTaxonKey": 9000205,
+      "scientificName": "Lynx epithet",
+      "license": "CC BY 4.0",
+      "acceptedScientificName": "Lynx epithet",
+      "taxonRank": "SPECIES"
+    },
+    {
+      "key": 9000206,
+      "gbifTaxonKey": 9000206,
+      "scientificName": "Vulpes epithet",
+      "license": "CC BY 4.0",
+      "acceptedScientificName": "Vulpes epithet",
+      "taxonRank": "SPECIES"
+    },
+    {
+      "key": 9000207,
+      "gbifTaxonKey": 9000207,
+      "scientificName": "Lepus epithet",
+      "license": "CC BY 4.0",
+      "acceptedScientificName": "Lepus epithet",
+      "taxonRank": "SPECIES"
+    },
+    {
+      "key": 9000208,
+      "gbifTaxonKey": 9000208,
+      "scientificName": "Sciurus epithet",
+      "license": "CC BY 4.0",
+      "acceptedScientificName": "Sciurus epithet",
+      "taxonRank": "SPECIES"
+    },
+    {
+      "key": 9000209,
+      "gbifTaxonKey": 9000209,
+      "scientificName": "Castor epithet",
+      "license": "CC BY 4.0",
+      "acceptedScientificName": "Castor epithet",
+      "taxonRank": "SPECIES"
+    },
+    {
+      "key": 9000210,
+      "gbifTaxonKey": 9000210,
+      "scientificName": "Ursus epithet",
+      "license": "CC BY 4.0",
+      "acceptedScientificName": "Ursus epithet",
+      "taxonRank": "SPECIES",
+      "synonyms": [
+        "Ursus oldname"
+      ]
+    },
+    {
+      "key": 9000211,
+      "gbifTaxonKey": 9000211,
+      "scientificName": "Panthera epithet",
+      "license": "CC BY 4.0",
+      "acceptedScientificName": "Panthera epithet",
+      "taxonRank": "SPECIES"
+    },
+    {
+      "key": 9000212,
+      "gbifTaxonKey": 9000212,
+      "scientificName": "Canis epithet",
+      "license": "CC BY 4.0",
+      "acceptedScientificName": "Canis epithet",
+      "taxonRank": "SPECIES"
+    },
+    {
+      "key": 9000213,
+      "gbifTaxonKey": 9000213,
+      "scientificName": "Cervus epithet",
+      "license": "CC BY 4.0",
+      "acceptedScientificName": "Cervus epithet",
+      "taxonRank": "SPECIES"
+    },
+    {
+      "key": 9000214,
+      "gbifTaxonKey": 9000214,
+      "scientificName": "Delphinus epithet",
+      "license": "CC BY 4.0",
+      "acceptedScientificName": "Delphinus epithet",
+      "taxonRank": "SPECIES"
+    },
+    {
+      "key": 9000215,
+      "gbifTaxonKey": 9000215,
+      "scientificName": "Orcinus epithet",
+      "license": "CC BY 4.0",
+      "acceptedScientificName": "Orcinus epithet",
+      "taxonRank": "SPECIES"
+    },
+    {
+      "key": 9000216,
+      "gbifTaxonKey": 9000216,
+      "scientificName": "Aquila epithet",
+      "license": "CC BY 4.0",
+      "acceptedScientificName": "Aquila epithet",
+      "taxonRank": "SPECIES"
+    },
+    {
+      "key": 9000217,
+      "gbifTaxonKey": 9000217,
+      "scientificName": "Falco epithet",
+      "license": "CC BY 4.0",
+      "acceptedScientificName": "Falco epithet",
+      "taxonRank": "SPECIES",
+      "synonyms": [
+        "Falco oldname"
+      ]
+    },
+    {
+      "key": 9000218,
+      "gbifTaxonKey": 9000218,
+      "scientificName": "Apis epithet",
+      "license": "CC BY 4.0",
+      "acceptedScientificName": "Apis epithet",
+      "taxonRank": "SPECIES"
+    },
+    {
+      "key": 9000219,
+      "gbifTaxonKey": 9000219,
+      "scientificName": "Buteo epithet",
+      "license": "CC BY 4.0",
+      "acceptedScientificName": "Buteo epithet",
+      "taxonRank": "SPECIES"
+    },
+    {
+      "key": 9000220,
+      "gbifTaxonKey": 9000220,
+      "scientificName": "Corvus epithet",
+      "license": "CC BY 4.0",
+      "acceptedScientificName": "Corvus epithet",
+      "taxonRank": "SPECIES"
+    },
+    {
+      "key": 9000221,
+      "gbifTaxonKey": 9000221,
+      "scientificName": "Passer epithet",
+      "license": "CC BY 4.0",
+      "acceptedScientificName": "Passer epithet",
+      "taxonRank": "SPECIES"
+    },
+    {
+      "key": 9000222,
+      "gbifTaxonKey": 9000222,
+      "scientificName": "Anas epithet",
+      "license": "CC BY 4.0",
+      "acceptedScientificName": "Anas epithet",
+      "taxonRank": "SPECIES"
+    },
+    {
+      "key": 9000223,
+      "gbifTaxonKey": 9000223,
+      "scientificName": "Salmo epithet",
+      "license": "CC BY 4.0",
+      "acceptedScientificName": "Salmo epithet",
+      "taxonRank": "SPECIES"
+    },
+    {
+      "key": 9000224,
+      "gbifTaxonKey": 9000224,
+      "scientificName": "Gadus epithet",
+      "license": "CC BY 4.0",
+      "acceptedScientificName": "Gadus epithet",
+      "taxonRank": "SPECIES",
+      "synonyms": [
+        "Gadus oldname"
+      ]
+    },
+    {
+      "key": 9000225,
+      "gbifTaxonKey": 9000225,
+      "scientificName": "Quercus epithet",
+      "license": "CC BY 4.0",
+      "acceptedScientificName": "Quercus epithet",
+      "taxonRank": "SPECIES"
+    },
+    {
+      "key": 9000226,
+      "gbifTaxonKey": 9000226,
+      "scientificName": "Pinus epithet",
+      "license": "CC BY 4.0",
+      "acceptedScientificName": "Pinus epithet",
+      "taxonRank": "SPECIES"
+    },
+    {
+      "key": 9000227,
+      "gbifTaxonKey": 9000227,
+      "scientificName": "Rosa epithet",
+      "license": "CC BY 4.0",
+      "acceptedScientificName": "Rosa epithet",
+      "taxonRank": "SPECIES"
+    },
+    {
+      "key": 9000228,
+      "gbifTaxonKey": 9000228,
+      "scientificName": "Homo epithet",
+      "license": "CC BY 4.0",
+      "acceptedScientificName": "Homo epithet",
+      "taxonRank": "SPECIES"
+    },
+    {
+      "key": 9000229,
+      "gbifTaxonKey": 9000229,
+      "scientificName": "Gorilla epithet",
+      "license": "CC BY 4.0",
+      "acceptedScientificName": "Gorilla epithet",
+      "taxonRank": "SPECIES"
+    },
+    {
+      "key": 9000230,
+      "gbifTaxonKey": 9000230,
+      "scientificName": "Macaca epithet",
+      "license": "CC BY 4.0",
+      "acceptedScientificName": "Macaca epithet",
+      "taxonRank": "SPECIES"
+    },
+    {
+      "key": 9000231,
+      "gbifTaxonKey": 9000231,
+      "scientificName": "Equus epithet",
+      "license": "CC BY 4.0",
+      "acceptedScientificName": "Equus epithet",
+      "taxonRank": "SPECIES",
+      "synonyms": [
+        "Equus oldname"
+      ]
+    },
+    {
+      "key": 9000232,
+      "gbifTaxonKey": 9000232,
+      "scientificName": "Bos epithet",
+      "license": "CC BY 4.0",
+      "acceptedScientificName": "Bos epithet",
+      "taxonRank": "SPECIES"
+    },
+    {
+      "key": 9000233,
+      "gbifTaxonKey": 9000233,
+      "scientificName": "Sus epithet",
+      "license": "CC BY 4.0",
+      "acceptedScientificName": "Sus epithet",
+      "taxonRank": "SPECIES"
+    },
+    {
+      "key": 9000234,
+      "gbifTaxonKey": 9000234,
+      "scientificName": "Felis epithet",
+      "license": "CC BY 4.0",
+      "acceptedScientificName": "Felis epithet",
+      "taxonRank": "SPECIES"
+    },
+    {
+      "key": 9000235,
+      "gbifTaxonKey": 9000235,
+      "scientificName": "Lynx epithet",
+      "license": "CC BY 4.0",
+      "acceptedScientificName": "Lynx epithet",
+      "taxonRank": "SPECIES"
+    },
+    {
+      "key": 9000236,
+      "gbifTaxonKey": 9000236,
+      "scientificName": "Vulpes epithet",
+      "license": "CC BY 4.0",
+      "acceptedScientificName": "Vulpes epithet",
+      "taxonRank": "SPECIES"
+    },
+    {
+      "key": 9000237,
+      "gbifTaxonKey": 9000237,
+      "scientificName": "Lepus epithet",
+      "license": "CC BY 4.0",
+      "acceptedScientificName": "Lepus epithet",
+      "taxonRank": "SPECIES"
+    },
+    {
+      "key": 9000238,
+      "gbifTaxonKey": 9000238,
+      "scientificName": "Sciurus epithet",
+      "license": "CC BY 4.0",
+      "acceptedScientificName": "Sciurus epithet",
+      "taxonRank": "SPECIES",
+      "synonyms": [
+        "Sciurus oldname"
+      ]
+    },
+    {
+      "key": 9000239,
+      "gbifTaxonKey": 9000239,
+      "scientificName": "Castor epithet",
+      "license": "CC BY 4.0",
+      "acceptedScientificName": "Castor epithet",
+      "taxonRank": "SPECIES"
+    },
+    {
+      "key": 9000240,
+      "gbifTaxonKey": 9000240,
+      "scientificName": "Ursus epithet",
+      "license": "CC BY 4.0",
+      "acceptedScientificName": "Ursus epithet",
+      "taxonRank": "SPECIES"
+    },
+    {
+      "key": 9000241,
+      "gbifTaxonKey": 9000241,
+      "scientificName": "Panthera epithet",
+      "license": "CC BY 4.0",
+      "acceptedScientificName": "Panthera epithet",
+      "taxonRank": "SPECIES"
+    },
+    {
+      "key": 9000242,
+      "gbifTaxonKey": 9000242,
+      "scientificName": "Canis epithet",
+      "license": "CC BY 4.0",
+      "acceptedScientificName": "Canis epithet",
+      "taxonRank": "SPECIES"
+    },
+    {
+      "key": 9000243,
+      "gbifTaxonKey": 9000243,
+      "scientificName": "Cervus epithet",
+      "license": "CC BY 4.0",
+      "acceptedScientificName": "Cervus epithet",
+      "taxonRank": "SPECIES"
+    },
+    {
+      "key": 9000244,
+      "gbifTaxonKey": 9000244,
+      "scientificName": "Delphinus epithet",
+      "license": "CC BY 4.0",
+      "acceptedScientificName": "Delphinus epithet",
+      "taxonRank": "SPECIES"
+    },
+    {
+      "key": 9000245,
+      "gbifTaxonKey": 9000245,
+      "scientificName": "Orcinus epithet",
+      "license": "CC BY 4.0",
+      "acceptedScientificName": "Orcinus epithet",
+      "taxonRank": "SPECIES",
+      "synonyms": [
+        "Orcinus oldname"
+      ]
+    },
+    {
+      "key": 9000246,
+      "gbifTaxonKey": 9000246,
+      "scientificName": "Aquila epithet",
+      "license": "CC BY 4.0",
+      "acceptedScientificName": "Aquila epithet",
+      "taxonRank": "SPECIES"
+    },
+    {
+      "key": 9000247,
+      "gbifTaxonKey": 9000247,
+      "scientificName": "Falco epithet",
+      "license": "CC BY 4.0",
+      "acceptedScientificName": "Falco epithet",
+      "taxonRank": "SPECIES"
+    },
+    {
+      "key": 9000248,
+      "gbifTaxonKey": 9000248,
+      "scientificName": "Apis epithet",
+      "license": "CC BY 4.0",
+      "acceptedScientificName": "Apis epithet",
+      "taxonRank": "SPECIES"
+    },
+    {
+      "key": 9000249,
+      "gbifTaxonKey": 9000249,
+      "scientificName": "Buteo epithet",
+      "license": "CC BY 4.0",
+      "acceptedScientificName": "Buteo epithet",
+      "taxonRank": "SPECIES"
+    },
+    {
+      "key": 9000250,
+      "gbifTaxonKey": 9000250,
+      "scientificName": "Corvus epithet",
+      "license": "CC BY 4.0",
+      "acceptedScientificName": "Corvus epithet",
+      "taxonRank": "SPECIES"
+    },
+    {
+      "key": 9000251,
+      "gbifTaxonKey": 9000251,
+      "scientificName": "Passer epithet",
+      "license": "CC BY 4.0",
+      "acceptedScientificName": "Passer epithet",
+      "taxonRank": "SPECIES"
+    },
+    {
+      "key": 9000252,
+      "gbifTaxonKey": 9000252,
+      "scientificName": "Anas epithet",
+      "license": "CC BY 4.0",
+      "acceptedScientificName": "Anas epithet",
+      "taxonRank": "SPECIES",
+      "synonyms": [
+        "Anas oldname"
+      ]
+    },
+    {
+      "key": 9000253,
+      "gbifTaxonKey": 9000253,
+      "scientificName": "Salmo epithet",
+      "license": "CC BY 4.0",
+      "acceptedScientificName": "Salmo epithet",
+      "taxonRank": "SPECIES"
+    },
+    {
+      "key": 9000254,
+      "gbifTaxonKey": 9000254,
+      "scientificName": "Gadus epithet",
+      "license": "CC BY 4.0",
+      "acceptedScientificName": "Gadus epithet",
+      "taxonRank": "SPECIES"
+    },
+    {
+      "key": 9000255,
+      "gbifTaxonKey": 9000255,
+      "scientificName": "Quercus epithet",
+      "license": "CC BY 4.0",
+      "acceptedScientificName": "Quercus epithet",
+      "taxonRank": "SPECIES"
+    },
+    {
+      "key": 9000256,
+      "gbifTaxonKey": 9000256,
+      "scientificName": "Pinus epithet",
+      "license": "CC BY 4.0",
+      "acceptedScientificName": "Pinus epithet",
+      "taxonRank": "SPECIES"
+    },
+    {
+      "key": 9000257,
+      "gbifTaxonKey": 9000257,
+      "scientificName": "Rosa epithet",
+      "license": "CC BY 4.0",
+      "acceptedScientificName": "Rosa epithet",
+      "taxonRank": "SPECIES"
+    },
+    {
+      "key": 9000258,
+      "gbifTaxonKey": 9000258,
+      "scientificName": "Homo epithet",
+      "license": "CC BY 4.0",
+      "acceptedScientificName": "Homo epithet",
+      "taxonRank": "SPECIES"
+    },
+    {
+      "key": 9000259,
+      "gbifTaxonKey": 9000259,
+      "scientificName": "Gorilla epithet",
+      "license": "CC BY 4.0",
+      "acceptedScientificName": "Gorilla epithet",
+      "taxonRank": "SPECIES",
+      "synonyms": [
+        "Gorilla oldname"
+      ]
+    },
+    {
+      "key": 9000260,
+      "gbifTaxonKey": 9000260,
+      "scientificName": "Macaca epithet",
+      "license": "CC BY 4.0",
+      "acceptedScientificName": "Macaca epithet",
+      "taxonRank": "SPECIES"
+    },
+    {
+      "key": 9000261,
+      "gbifTaxonKey": 9000261,
+      "scientificName": "Equus epithet",
+      "license": "CC BY 4.0",
+      "acceptedScientificName": "Equus epithet",
+      "taxonRank": "SPECIES"
+    },
+    {
+      "key": 9000262,
+      "gbifTaxonKey": 9000262,
+      "scientificName": "Bos epithet",
+      "license": "CC BY 4.0",
+      "acceptedScientificName": "Bos epithet",
+      "taxonRank": "SPECIES"
+    },
+    {
+      "key": 9000263,
+      "gbifTaxonKey": 9000263,
+      "scientificName": "Sus epithet",
+      "license": "CC BY 4.0",
+      "acceptedScientificName": "Sus epithet",
+      "taxonRank": "SPECIES"
+    },
+    {
+      "key": 9000264,
+      "gbifTaxonKey": 9000264,
+      "scientificName": "Felis epithet",
+      "license": "CC BY 4.0",
+      "acceptedScientificName": "Felis epithet",
+      "taxonRank": "SPECIES"
+    },
+    {
+      "key": 9000265,
+      "gbifTaxonKey": 9000265,
+      "scientificName": "Lynx epithet",
+      "license": "CC BY 4.0",
+      "acceptedScientificName": "Lynx epithet",
+      "taxonRank": "SPECIES"
+    },
+    {
+      "key": 9000266,
+      "gbifTaxonKey": 9000266,
+      "scientificName": "Vulpes epithet",
+      "license": "CC BY 4.0",
+      "acceptedScientificName": "Vulpes epithet",
+      "taxonRank": "SPECIES",
+      "synonyms": [
+        "Vulpes oldname"
+      ]
+    },
+    {
+      "key": 9000267,
+      "gbifTaxonKey": 9000267,
+      "scientificName": "Lepus epithet",
+      "license": "CC BY 4.0",
+      "acceptedScientificName": "Lepus epithet",
+      "taxonRank": "SPECIES"
+    },
+    {
+      "key": 9000268,
+      "gbifTaxonKey": 9000268,
+      "scientificName": "Sciurus epithet",
+      "license": "CC BY 4.0",
+      "acceptedScientificName": "Sciurus epithet",
+      "taxonRank": "SPECIES"
+    },
+    {
+      "key": 9000269,
+      "gbifTaxonKey": 9000269,
+      "scientificName": "Castor epithet",
+      "license": "CC BY 4.0",
+      "acceptedScientificName": "Castor epithet",
+      "taxonRank": "SPECIES"
+    },
+    {
+      "key": 9000270,
+      "gbifTaxonKey": 9000270,
+      "scientificName": "Ursus epithet",
+      "license": "CC BY 4.0",
+      "acceptedScientificName": "Ursus epithet",
+      "taxonRank": "SPECIES"
+    },
+    {
+      "key": 9000271,
+      "gbifTaxonKey": 9000271,
+      "scientificName": "Panthera epithet",
+      "license": "CC BY 4.0",
+      "acceptedScientificName": "Panthera epithet",
+      "taxonRank": "SPECIES"
+    },
+    {
+      "key": 9000272,
+      "gbifTaxonKey": 9000272,
+      "scientificName": "Canis epithet",
+      "license": "CC BY 4.0",
+      "acceptedScientificName": "Canis epithet",
+      "taxonRank": "SPECIES"
+    },
+    {
+      "key": 9000273,
+      "gbifTaxonKey": 9000273,
+      "scientificName": "Cervus epithet",
+      "license": "CC BY 4.0",
+      "acceptedScientificName": "Cervus epithet",
+      "taxonRank": "SPECIES",
+      "synonyms": [
+        "Cervus oldname"
+      ]
+    },
+    {
+      "key": 9000274,
+      "gbifTaxonKey": 9000274,
+      "scientificName": "Delphinus epithet",
+      "license": "CC BY 4.0",
+      "acceptedScientificName": "Delphinus epithet",
+      "taxonRank": "SPECIES"
+    },
+    {
+      "key": 9000275,
+      "gbifTaxonKey": 9000275,
+      "scientificName": "Orcinus epithet",
+      "license": "CC BY 4.0",
+      "acceptedScientificName": "Orcinus epithet",
+      "taxonRank": "SPECIES"
+    },
+    {
+      "key": 9000276,
+      "gbifTaxonKey": 9000276,
+      "scientificName": "Aquila epithet",
+      "license": "CC BY 4.0",
+      "acceptedScientificName": "Aquila epithet",
+      "taxonRank": "SPECIES"
+    },
+    {
+      "key": 9000277,
+      "gbifTaxonKey": 9000277,
+      "scientificName": "Falco epithet",
+      "license": "CC BY 4.0",
+      "acceptedScientificName": "Falco epithet",
+      "taxonRank": "SPECIES"
+    },
+    {
+      "key": 9000278,
+      "gbifTaxonKey": 9000278,
+      "scientificName": "Apis epithet",
+      "license": "CC BY 4.0",
+      "acceptedScientificName": "Apis epithet",
+      "taxonRank": "SPECIES"
+    },
+    {
+      "key": 9000279,
+      "gbifTaxonKey": 9000279,
+      "scientificName": "Buteo epithet",
+      "license": "CC BY 4.0",
+      "acceptedScientificName": "Buteo epithet",
+      "taxonRank": "SPECIES"
     }
   ]
 }

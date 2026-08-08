@@ -1,6 +1,6 @@
 {
-  "snapshotId": "alpha-exit-live-bounded-2026-08",
-  "snapshotVersion": "1.0.0",
+  "snapshotId": "beta-rc-live-bounded-2026-08",
+  "snapshotVersion": "2.0.0",
   "records": [
     {
       "key": "col:8YD85",
@@ -13,9 +13,9 @@
       "sourceUrl": "https://www.catalogueoflife.org/",
       "mode": "live",
       "liveClaim": true,
-      "snapshotId": "alpha-exit-live-bounded-2026-08",
-      "snapshotVersion": "1.0.0",
-      "importedAt": "2026-08-08T01:17:59.903Z"
+      "snapshotId": "beta-rc-live-bounded-2026-08",
+      "snapshotVersion": "2.0.0",
+      "importedAt": "2026-08-08T19:44:18.258Z"
     }
   ]
 }
