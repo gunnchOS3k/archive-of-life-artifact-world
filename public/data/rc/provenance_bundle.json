@@ -1,7 +1,7 @@
 {
   "bundleId": "digital-rc-provenance",
   "version": "2.0.0",
-  "generatedAt": "2026-08-08T19:44:25.915Z",
+  "generatedAt": "2026-08-08T20:20:36.505Z",
   "liveClaim": false,
   "sources": [
     {
@@ -62,9 +62,10 @@
   "policies": [
     "docs/SOURCE_PROVENANCE_POLICY.md",
     "docs/MOCK_SAMPLE_DATA_POLICY.md",
-    "docs/SOURCE_SNAPSHOT_POLICY.md"
+    "docs/CLAIM_FIREWALL.md"
   ],
   "actualCountsPath": "coverage/actual_counts.json",
+  "liveProbePath": "coverage/actual_counts_live_bounded.json",
   "honesty": {
     "fixturesNeverClaimedLive": true,
     "neverCallFixtureLive": true,

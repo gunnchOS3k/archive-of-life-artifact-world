@@ -125,6 +125,8 @@ export function evaluateDigitalRc(input: DigitalRcInput): DigitalRcReport {
     doesNotClaim: [
       'physical RC / device certification',
       'global live archive completeness',
+      'GLOBAL_DATA_COMPLETE',
+      'ALL_SPECIES_INGESTED',
       'store submission approval',
       'IUCN full authorized coverage',
     ],

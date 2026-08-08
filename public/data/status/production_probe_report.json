@@ -1,0 +1,64 @@
+{
+  "snapshotId": "cont-v-production-probe-2026-08",
+  "snapshotVersion": "2.1.0-cont-v",
+  "generatedAt": "2026-08-08T20:19:29.803Z",
+  "pagesFetched": 5,
+  "recordsBySource": {
+    "col": 92,
+    "gbif": 100,
+    "pbdb": 12
+  },
+  "uniqueNames": 111,
+  "anyLiveClaim": true,
+  "checkpoints": [
+    {
+      "source": "col",
+      "queryKey": "Ursus arctos|limit=100",
+      "snapshotVersion": "2.1.0-cont-v",
+      "offset": 50,
+      "page": 2,
+      "recordsImported": 92,
+      "lastSuccessAt": "2026-08-08T20:19:27.898Z",
+      "liveClaim": true,
+      "errors": []
+    },
+    {
+      "source": "gbif",
+      "queryKey": "Ursus arctos|limit=100",
+      "snapshotVersion": "2.1.0-cont-v",
+      "offset": 50,
+      "page": 2,
+      "recordsImported": 100,
+      "lastSuccessAt": "2026-08-08T20:19:29.690Z",
+      "liveClaim": true,
+      "errors": []
+    },
+    {
+      "source": "pbdb",
+      "queryKey": "Tyrannosaurus|limit=100",
+      "snapshotVersion": "2.1.0-cont-v",
+      "offset": 50,
+      "page": 1,
+      "recordsImported": 12,
+      "lastSuccessAt": "2026-08-08T20:19:29.803Z",
+      "liveClaim": true,
+      "errors": []
+    }
+  ],
+  "errors": [],
+  "pipelineStagesExercised": [
+    "live_http",
+    "pagination",
+    "checkpoint",
+    "validation",
+    "dedup",
+    "provenance",
+    "license",
+    "fresh_run"
+  ],
+  "globalCompleteClaim": false,
+  "tokenHints": {
+    "PIPELINE_COMPLETE": true,
+    "reason": "Multi-source live pagination with ≥10 records and ≥2 live sources"
+  }
+}

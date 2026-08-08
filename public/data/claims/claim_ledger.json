@@ -1,0 +1,78 @@
+{
+  "generatedAt": "2026-08-08T20:20:36.495Z",
+  "snapshotId": "wave-f-alpha-2026-08",
+  "earned": [
+    {
+      "token": "LAUNCH_TIER_E_COMPLETE",
+      "earned": true,
+      "reason": "Tier E=156 (floor 120)",
+      "evidencePaths": [
+        "public/data/claims/launch_tier_audit.json",
+        "public/data/bundles/encounter-taxa.json"
+      ]
+    },
+    {
+      "token": "LAUNCH_TIER_F_COMPLETE",
+      "earned": true,
+      "reason": "Tier F=24 gameplay=24",
+      "evidencePaths": [
+        "public/data/claims/launch_tier_audit.json",
+        "public/data/bundles/hero-species.json"
+      ]
+    },
+    {
+      "token": "PIPELINE_COMPLETE",
+      "earned": true,
+      "reason": "Multi-source live pagination with ≥10 records and ≥2 live sources",
+      "evidencePaths": [
+        "public/data/status/production_probe_report.json",
+        "public/data/coverage/actual_counts_live_bounded.json"
+      ]
+    },
+    {
+      "token": "SNAPSHOT_VERSION_FIXTURE_2_0_0_LOADED",
+      "earned": true,
+      "reason": "Fixture/authored snapshot 2.0.0 loaded (unique_taxa=987) — not official global dump",
+      "evidencePaths": [
+        "public/data/coverage/actual_counts.json",
+        "public/data/claims/bulk_snapshot_manifest.json"
+      ]
+    },
+    {
+      "token": "ARCHIVE_BETA_CONTENT_COMPLETE_DIGITAL",
+      "earned": true,
+      "reason": "Launch Tier E/F complete + region floors + world traversal QA (does not claim global scientific ingest)",
+      "evidencePaths": [
+        "public/data/claims/claim_ledger.json",
+        "public/data/claims/launch_tier_audit.json",
+        "public/data/qa/world_traversal/report.json"
+      ]
+    },
+    {
+      "token": "ARCHIVE_DIGITAL_RC_READY",
+      "earned": true,
+      "reason": "Beta digital + PIPELINE_COMPLETE production path",
+      "evidencePaths": [
+        "public/data/status/digital_rc_report.json",
+        "public/data/status/production_probe_report.json"
+      ]
+    }
+  ],
+  "revoked": [],
+  "forbiddenRejected": [
+    {
+      "token": "GLOBAL_DATA_COMPLETE",
+      "reason": "Rejected — liveTotal=204 fixtureUnique=987; no authoritative global coverage evidence"
+    },
+    {
+      "token": "ALL_SPECIES_INGESTED",
+      "reason": "Rejected — product never asserts all-species ingest without authoritative census"
+    }
+  ],
+  "notes": [
+    "Beta/RC must not imply GLOBAL_DATA_COMPLETE or ALL_SPECIES_INGESTED.",
+    "Fixture-scale Tier R (e.g. unique_taxa≈987) is not global scientific coverage.",
+    "Bounded live probes are evidence of pipeline capability only.",
+    "Prior Beta COMPLETE retained only after Cont V re-audit of launch Tier E/F + world traversal (still not global ingest)."
+  ]
+}

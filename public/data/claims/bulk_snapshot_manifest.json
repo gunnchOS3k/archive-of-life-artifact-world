@@ -1,0 +1,54 @@
+{
+  "schemaVersion": "1.0.0",
+  "snapshotId": "wave-f-alpha-2026-08",
+  "snapshotVersion": "2.0.0",
+  "generatedAt": "2026-08-08T20:20:36.495Z",
+  "globalCompleteClaim": false,
+  "sources": [
+    {
+      "source": "col",
+      "product": "Catalogue of Life / ChecklistBank NameUsage export (dataset 3LR or approved freeze)",
+      "acquisitionUrl": "https://www.checklistbank.org/",
+      "license": "COL terms of use",
+      "localRelativePath": "col/nameusage_export.jsonl",
+      "sha256": null,
+      "bytes": null,
+      "format": "json",
+      "notes": "Place approved ChecklistBank export locally; do not commit the dump."
+    },
+    {
+      "source": "gbif",
+      "product": "GBIF Occurrence or Species download (DwC-A / DOI)",
+      "acquisitionUrl": "https://www.gbif.org/occurrence/download",
+      "license": "Varies per dataset — record in provenance",
+      "localRelativePath": "gbif/download.zip",
+      "sha256": null,
+      "bytes": null,
+      "format": "dwca",
+      "notes": "Use official GBIF download DOI; stream/decompress outside git."
+    },
+    {
+      "source": "pbdb",
+      "product": "Paleobiology Database taxa/occurrences export",
+      "acquisitionUrl": "https://paleobiodb.org/data1.2/",
+      "license": "CC BY 4.0",
+      "localRelativePath": "pbdb/taxa_export.csv",
+      "sha256": null,
+      "bytes": null,
+      "format": "csv",
+      "notes": "PBDB public API or dump; hash after download."
+    }
+  ],
+  "commands": [
+    "npm run ingest:batch",
+    "npm run ingest:batch:live -- --limit=100",
+    "npm run ingest:production-probe",
+    "npm run ingest:bulk-manifest",
+    "# Place dumps under data-pipeline/snapshots/<source>/ then: npm run ingest:bulk-hash"
+  ],
+  "honesty": {
+    "neverCommitHugeDatasets": true,
+    "liveClaimOnlyWhenQueried": true,
+    "noFabricatedGlobalComplete": true
+  }
+}
