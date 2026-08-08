@@ -1,0 +1,54 @@
+{
+  "generatedAt": "2026-08-08T21:04:52.278Z",
+  "checks": {
+    "db_migration": {
+      "ok": true,
+      "detail": "migrated→v1 taxa=1570 applied=none liveCached=1027"
+    },
+    "snapshot_update": {
+      "ok": true,
+      "detail": "updated hash=dd5b73e99935 taxa=1570"
+    },
+    "snapshot_corrupt_detect": {
+      "ok": true,
+      "detail": "hash mismatch detected (good=0a2f226d1f bad=828b18fbc1)"
+    },
+    "offline": {
+      "ok": true,
+      "detail": "offline_meta=true pack=true dbOffline=true"
+    },
+    "source_update": {
+      "ok": true,
+      "detail": "9 sources written to source_states.json"
+    },
+    "save_migrate": {
+      "ok": true,
+      "detail": "legacy v1 → v4"
+    },
+    "package_manifest": {
+      "ok": true,
+      "detail": "RC package manifest written"
+    },
+    "update_rollback": {
+      "ok": true,
+      "detail": "rollback taxa=1570; restored taxa=1570"
+    },
+    "provenance_display": {
+      "ok": true,
+      "detail": "taxon=acer_saccharum provenanceRows=2"
+    },
+    "a11y": {
+      "ok": true,
+      "detail": "a11y settings apply path ok"
+    },
+    "localization_ready": {
+      "ok": true,
+      "detail": "public/data/i18n/en.json + catalog_manifest.json"
+    },
+    "unique_icon_title": {
+      "ok": true,
+      "detail": "title=\"Archive of Life — Artifact World\" icon=public/icons/archive-of-life-icon.svg"
+    }
+  },
+  "allOk": true
+}

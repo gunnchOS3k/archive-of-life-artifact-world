@@ -1,19 +1,16 @@
 {
-  "generatedAt": "2026-08-08T20:19:40.096Z",
+  "generatedAt": "2026-08-08T21:04:23.933Z",
   "pass": true,
   "experienceClass": "exploration_expedition_observation_research",
   "not": [
     "Agar.io-like",
     "arena-only",
-    "floating collectible prototype"
+    "floating collectible prototype",
+    "count-only tiers"
   ],
   "explorationSignals": {
     "regionsVisited": 12,
-    "observations": 10,
-    "scans": 10,
-    "timeUnitsViewed": 2,
-    "expeditionsAvailable": 3,
-    "companionPathsDiverge": true,
+    "observations": 24,
     "biomes": [
       "museum",
       "savanna",
@@ -28,7 +25,16 @@
       "atmospheric_aerial",
       "marine_coastal"
     ],
-    "hasHubAndSpokes": true,
+    "eras": [
+      "holocene",
+      "cretaceous",
+      "deep_time"
+    ],
+    "clues": 3,
+    "artifacts": 24,
+    "companionPathsTouched": 24,
+    "dbTaxa": 1570,
+    "dbUsedForLookups": true,
     "fieldGameplayReady": true
   },
   "agarSignals": {
@@ -50,18 +56,6 @@
     "atmospheric_corridor",
     "deep_marine"
   ],
-  "sampleObservations": [
-    "polar_ice:pagophilus_groenlandicus",
-    "polar_ice:odobenus_rosmarus",
-    "subterranean_cave:proteus_anguinus",
-    "subterranean_cave:amblyopsis_spelaea",
-    "urban_park:passer_domesticus",
-    "urban_park:columba_livia",
-    "atmospheric_corridor:hirundo_rustica",
-    "atmospheric_corridor:falco_peregrinus",
-    "deep_marine:physeter_macrocephalus",
-    "deep_marine:orcinus_orca"
-  ],
   "failures": [],
-  "evidenceNote": "Headless runtime traversal of all region hubs/spokes with observation/scan/codex/deep-time; not a visual screenshot proof."
+  "evidenceNote": "Headless runtime traversal backed by durable ScientificDb lookups — not in-memory fixture-only."
 }

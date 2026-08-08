@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-08T20:20:36.495Z",
+  "generatedAt": "2026-08-08T21:04:37.390Z",
   "snapshotId": "wave-f-alpha-2026-08",
   "earned": [
     {
@@ -23,7 +23,7 @@
     {
       "token": "PIPELINE_COMPLETE",
       "earned": true,
-      "reason": "Multi-source live pagination with ≥10 records and ≥2 live sources",
+      "reason": "Cont VI multi-query live ops: sources=3 pages=27 records=1027 unique=431 hash=40edfb887d2d",
       "evidencePaths": [
         "public/data/status/production_probe_report.json",
         "public/data/coverage/actual_counts_live_bounded.json"
@@ -51,10 +51,11 @@
     {
       "token": "ARCHIVE_DIGITAL_RC_READY",
       "earned": true,
-      "reason": "Beta digital + PIPELINE_COMPLETE production path",
+      "reason": "Beta digital + PIPELINE_COMPLETE + runtime science-DB integration",
       "evidencePaths": [
         "public/data/status/digital_rc_report.json",
-        "public/data/status/production_probe_report.json"
+        "public/data/status/production_probe_report.json",
+        "public/data/qa/tier_ef_runtime/report.json"
       ]
     }
   ],
@@ -62,7 +63,7 @@
   "forbiddenRejected": [
     {
       "token": "GLOBAL_DATA_COMPLETE",
-      "reason": "Rejected — liveTotal=204 fixtureUnique=987; no authoritative global coverage evidence"
+      "reason": "Rejected — liveTotal=1027 fixtureUnique=987; no authoritative global coverage evidence"
     },
     {
       "token": "ALL_SPECIES_INGESTED",

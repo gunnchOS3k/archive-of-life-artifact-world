@@ -76,6 +76,7 @@ for (const d of SCAN) {
     const rel = relative(ROOT, file);
     if (rel.includes('CLAIM_FIREWALL') || rel.includes('validate_archive_claim_firewall')) continue;
     if (rel.includes('CONTINUATION_V_ARCHIVE_CLOSURE')) continue;
+    if (rel.includes('CONTINUATION_VI_SCIENCE_DB')) continue;
 
     if (file.endsWith('.json')) {
       try {

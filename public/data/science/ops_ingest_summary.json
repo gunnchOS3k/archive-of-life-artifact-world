@@ -1,0 +1,28 @@
+{
+  "generatedAt": "2026-08-08T21:04:20.758Z",
+  "elapsedMs": 6885,
+  "pagesFetched": 27,
+  "totalRecords": 1027,
+  "uniqueNames": 431,
+  "recordsBySource": {
+    "col": 405,
+    "gbif": 396,
+    "pbdb": 226
+  },
+  "contentHash": "40edfb887d2d92cfd8e5320811f5a36850b0fc50a515025f6a30fbaf4b4b4015",
+  "errors": [],
+  "scienceDb": {
+    "schemaVersion": 1,
+    "taxa": 1570,
+    "synonyms": 172,
+    "provenance": 2440,
+    "geo": 157,
+    "timeRanges": 181,
+    "snapshots": 1,
+    "contentHash": "dd5b73e9993523d515853ce40aa6844a864d873721d1432df3e1a7d6ccff7481",
+    "snapshotId": "cont-vi-production-ops-2026-08",
+    "offline": true
+  },
+  "PIPELINE_COMPLETE": true,
+  "globalCompleteClaim": false
+}
