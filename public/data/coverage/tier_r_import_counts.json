@@ -1,25 +1,25 @@
 {
-  "snapshotId": "alpha-exit-fixture-tier-r-2026-08",
-  "snapshotVersion": "1.0.0",
-  "generatedAt": "2026-08-08T01:17:58.192Z",
-  "totalRecords": 365,
-  "uniqueRecords": 365,
+  "snapshotId": "beta-rc-fixture-tier-r-2026-08",
+  "snapshotVersion": "2.0.0",
+  "generatedAt": "2026-08-08T19:42:40.351Z",
+  "totalRecords": 987,
+  "uniqueRecords": 987,
   "importedBySource": [
     {
       "source": "col",
-      "imported": 260,
+      "imported": 595,
       "mode": "fixture",
       "liveClaim": false
     },
     {
       "source": "gbif",
-      "imported": 130,
+      "imported": 198,
       "mode": "fixture",
       "liveClaim": false
     },
     {
       "source": "pbdb",
-      "imported": 105,
+      "imported": 198,
       "mode": "fixture",
       "liveClaim": false
     }
@@ -28,14 +28,21 @@
   "bySource": [
     {
       "source": "col",
-      "records": 260,
+      "records": 595,
+      "mode": "fixture",
+      "liveClaim": false,
+      "notes": "Fixture/snapshot import — not a live ingest claim"
+    },
+    {
+      "source": "gbif",
+      "records": 194,
       "mode": "fixture",
       "liveClaim": false,
       "notes": "Fixture/snapshot import — not a live ingest claim"
     },
     {
       "source": "pbdb",
-      "records": 105,
+      "records": 198,
       "mode": "fixture",
       "liveClaim": false,
       "notes": "Fixture/snapshot import — not a live ingest claim"

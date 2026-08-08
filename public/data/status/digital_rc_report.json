@@ -1,0 +1,161 @@
+{
+  "snapshotId": "wave-f-alpha-2026-08",
+  "generatedAt": "2026-08-08T19:44:25.915Z",
+  "statusToken": "ARCHIVE_DIGITAL_RC_READY",
+  "claimLevel": "digital_rc",
+  "doesNotClaim": [
+    "physical RC / device certification",
+    "global live archive completeness",
+    "store submission approval",
+    "IUCN full authorized coverage"
+  ],
+  "checks": [
+    {
+      "id": "beta_digital_pass",
+      "ok": true,
+      "detail": "ARCHIVE_BETA_CONTENT_COMPLETE_DIGITAL"
+    },
+    {
+      "id": "package_manifest",
+      "ok": true,
+      "detail": "RC package manifest present"
+    },
+    {
+      "id": "provenance_bundle",
+      "ok": true,
+      "detail": "provenance bundle present"
+    },
+    {
+      "id": "offline_pack",
+      "ok": true,
+      "detail": "offline pack ready"
+    },
+    {
+      "id": "actual_counts_artifact",
+      "ok": true,
+      "detail": "actual counts artifact present"
+    },
+    {
+      "id": "source_states_declared",
+      "ok": true,
+      "detail": "source states LIVE_PUBLIC|AUTHORIZED_BULK|SNAPSHOT|FIXTURE_TEST_ONLY|UNAVAILABLE declared"
+    },
+    {
+      "id": "ingest_checkpoint_resume",
+      "ok": true,
+      "detail": "checkpoint/resume path present"
+    },
+    {
+      "id": "tests_green_signal",
+      "ok": true,
+      "detail": "tests green signal recorded"
+    }
+  ],
+  "allOk": true,
+  "package": {
+    "packId": "archive-of-life-digital-rc",
+    "version": "2.0.0",
+    "artifactPaths": [
+      "rc/package_manifest.json",
+      "rc/provenance_bundle.json",
+      "bundles/offline-pack-manifest.json",
+      "coverage/actual_counts.json",
+      "coverage/tier_r_index.json",
+      "coverage/tier_r_import_counts.json",
+      "status/beta_digital_report.json",
+      "status/digital_rc_report.json",
+      "status/source_states.json",
+      "status/batch_ingest_report.json"
+    ]
+  },
+  "gaps": [],
+  "scientificOps": {
+    "generatedAt": "2026-08-08T19:44:25.915Z",
+    "checks": [
+      {
+        "id": "source_registry",
+        "ok": true,
+        "detail": "9 registered sources"
+      },
+      {
+        "id": "actual_counts",
+        "ok": true,
+        "detail": "unique_taxa=987 synonyms=79 conflicts=0"
+      },
+      {
+        "id": "batch_ingest_report",
+        "ok": true,
+        "detail": "batch ingest report present"
+      },
+      {
+        "id": "provenance_policy",
+        "ok": true,
+        "detail": "provenance policy present"
+      },
+      {
+        "id": "offline_pack",
+        "ok": true,
+        "detail": "offline pack ready"
+      },
+      {
+        "id": "fixture_honesty",
+        "ok": true,
+        "detail": "fixtures never called live"
+      },
+      {
+        "id": "no_global_complete_fabrication",
+        "ok": true,
+        "detail": "globalCompleteClaim must remain false"
+      }
+    ],
+    "allCriticalOk": true,
+    "sourceStates": [
+      {
+        "id": "col",
+        "state": "LIVE_PUBLIC",
+        "mayLive": true
+      },
+      {
+        "id": "gbif",
+        "state": "LIVE_PUBLIC",
+        "mayLive": true
+      },
+      {
+        "id": "pbdb",
+        "state": "LIVE_PUBLIC",
+        "mayLive": true
+      },
+      {
+        "id": "iucn",
+        "state": "AUTHORIZED_BULK",
+        "mayLive": false
+      },
+      {
+        "id": "neotoma",
+        "state": "SNAPSHOT",
+        "mayLive": false
+      },
+      {
+        "id": "nasa",
+        "state": "LIVE_PUBLIC",
+        "mayLive": true
+      },
+      {
+        "id": "inaturalist",
+        "state": "UNAVAILABLE",
+        "mayLive": false
+      },
+      {
+        "id": "obis",
+        "state": "UNAVAILABLE",
+        "mayLive": false
+      },
+      {
+        "id": "worms",
+        "state": "UNAVAILABLE",
+        "mayLive": false
+      }
+    ],
+    "gaps": []
+  }
+}

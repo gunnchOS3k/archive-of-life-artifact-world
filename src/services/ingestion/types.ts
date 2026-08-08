@@ -61,6 +61,8 @@ export interface IngestedTaxonRecord {
   scientificName: string;
   acceptedName?: string;
   taxonomicRank?: string;
+  /** Synonym strings when provided by source */
+  synonyms?: string[];
   provenance: ProvenanceStamp;
   confidence: DataConfidence;
   cacheStatus: CacheStatus;

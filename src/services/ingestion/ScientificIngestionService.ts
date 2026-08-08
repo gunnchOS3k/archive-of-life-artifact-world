@@ -338,8 +338,8 @@ export class ScientificIngestionService {
     const offset = query.offset ?? 0;
     const slice = filtered.slice(offset, offset + limit);
     const records = slice
-      .map((e, i) =>
-        toRecord(
+      .map((e, i) => {
+        const rec = toRecord(
           str(e.scientificName),
           'col',
           String(e.id ?? i),
@@ -348,8 +348,16 @@ export class ScientificIngestionService {
           `COL fixture — ${str(e.scientificName)}`,
           'fixture',
           e,
-        ),
-      )
+          {
+            acceptedName: str(e.acceptedName),
+            taxonomicRank: str(e.rank),
+          },
+        );
+        if (rec && Array.isArray(e.synonyms)) {
+          rec.synonyms = (e.synonyms as unknown[]).map(String);
+        }
+        return rec;
+      })
       .filter((r): r is IngestedTaxonRecord => r != null);
     ScientificIngestionService.assertHonestMode(records);
     return {
@@ -374,8 +382,8 @@ export class ScientificIngestionService {
     const offset = query.offset ?? 0;
     const slice = filtered.slice(offset, offset + limit);
     const records = slice
-      .map((e, i) =>
-        toRecord(
+      .map((e, i) => {
+        const rec = toRecord(
           str(e.scientificName ?? e.acceptedScientificName),
           'gbif',
           String(e.gbifTaxonKey ?? e.key ?? i),
@@ -384,8 +392,16 @@ export class ScientificIngestionService {
           `GBIF fixture — ${str(e.scientificName)}`,
           'fixture',
           e,
-        ),
-      )
+          {
+            acceptedName: str(e.acceptedScientificName),
+            taxonomicRank: str(e.taxonRank),
+          },
+        );
+        if (rec && Array.isArray(e.synonyms)) {
+          rec.synonyms = (e.synonyms as unknown[]).map(String);
+        }
+        return rec;
+      })
       .filter((r): r is IngestedTaxonRecord => r != null);
     ScientificIngestionService.assertHonestMode(records);
     return {

@@ -1,81 +1,91 @@
 {
-  "snapshotId": "alpha-exit-fixture-tier-r-2026-08",
-  "snapshotVersion": "1.0.0",
-  "generatedAt": "2026-08-08T01:17:58.201Z",
+  "snapshotId": "beta-rc-fixture-tier-r-2026-08",
+  "snapshotVersion": "2.0.0",
+  "generatedAt": "2026-08-08T19:42:40.369Z",
   "mode": "fixture",
   "anyLiveClaim": false,
   "totals": {
-    "imported": 365,
-    "rejected": 0,
+    "imported": 987,
+    "rejected": 104,
     "bySource": {
-      "col": 260,
-      "gbif": 130,
-      "pbdb": 105
+      "col": 595,
+      "gbif": 198,
+      "pbdb": 198
     }
   },
   "bySource": [
     {
       "source": "col",
-      "imported": 260,
+      "imported": 595,
       "mode": "fixture",
       "liveClaim": false
     },
     {
       "source": "gbif",
-      "imported": 130,
+      "imported": 198,
       "mode": "fixture",
       "liveClaim": false
     },
     {
       "source": "pbdb",
-      "imported": 105,
+      "imported": 198,
       "mode": "fixture",
       "liveClaim": false
     }
   ],
   "importStats": {
-    "added": 365,
-    "skipped": 0,
-    "rejected": 0
+    "added": 987
+  },
+  "synonyms": 79,
+  "synonym_edges": 119,
+  "conflicts": 0,
+  "unique_taxa": 987,
+  "records_by_source": {
+    "col": 595,
+    "gbif": 198,
+    "pbdb": 198
   },
   "checkpoints": [
     {
       "source": "col",
       "queryKey": "*|limit=10000",
-      "snapshotVersion": "1.0.0",
+      "snapshotVersion": "2.0.0",
       "offset": 10000,
       "page": 1,
-      "recordsImported": 260,
-      "lastSuccessAt": "2026-08-08T01:17:58.190Z",
+      "recordsImported": 595,
+      "lastSuccessAt": "2026-08-08T19:42:40.345Z",
       "liveClaim": false,
       "errors": []
     },
     {
       "source": "gbif",
       "queryKey": "*|limit=10000",
-      "snapshotVersion": "1.0.0",
+      "snapshotVersion": "2.0.0",
       "offset": 10000,
       "page": 1,
-      "recordsImported": 130,
-      "lastSuccessAt": "2026-08-08T01:17:58.191Z",
+      "recordsImported": 198,
+      "lastSuccessAt": "2026-08-08T19:42:40.346Z",
       "liveClaim": false,
       "errors": []
     },
     {
       "source": "pbdb",
       "queryKey": "*|limit=10000",
-      "snapshotVersion": "1.0.0",
+      "snapshotVersion": "2.0.0",
       "offset": 10000,
       "page": 1,
-      "recordsImported": 105,
-      "lastSuccessAt": "2026-08-08T01:17:58.191Z",
+      "recordsImported": 198,
+      "lastSuccessAt": "2026-08-08T19:42:40.347Z",
       "liveClaim": false,
       "errors": []
     }
   ],
+  "cacheEntries": 3,
   "honesty": {
     "fixturesNeverClaimedLive": true,
     "liveOnlyWhenQueried": true,
+    "neverCallFixtureLive": true,
+    "noFabricatedGlobalComplete": true,
     "note": "Fixture snapshot ingest — liveClaim false for all sources"
   }
 }

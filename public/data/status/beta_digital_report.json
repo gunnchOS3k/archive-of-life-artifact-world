@@ -1,0 +1,114 @@
+{
+  "snapshotId": "wave-f-alpha-2026-08",
+  "generatedAt": "2026-08-08T19:44:25.915Z",
+  "statusToken": "ARCHIVE_BETA_CONTENT_COMPLETE_DIGITAL",
+  "claimLevel": "beta_digital",
+  "doesNotClaim": [
+    "global live COL/GBIF/PBDB coverage",
+    "physical product / Gate 1 hardware completeness",
+    "source-verified production scientific release of all known life",
+    "IUCN/authorized-bulk completeness"
+  ],
+  "systems": [
+    {
+      "id": "world_regions",
+      "present": true,
+      "required": true,
+      "detail": "12 regions"
+    },
+    {
+      "id": "deep_time",
+      "present": true,
+      "required": true,
+      "detail": "deepTimeSystem + Time Atlas"
+    },
+    {
+      "id": "field_gameplay",
+      "present": true,
+      "required": true,
+      "detail": "observe/scan/codex/expedition loop"
+    },
+    {
+      "id": "companion_divergence",
+      "present": true,
+      "required": true,
+      "detail": "10 companion modules; pathHash divergence"
+    },
+    {
+      "id": "scientific_ops",
+      "present": true,
+      "required": true,
+      "detail": "scientific ops critical checks ok"
+    },
+    {
+      "id": "tier_r_scale",
+      "present": true,
+      "required": true,
+      "detail": "Tier R unique=987 encounter=156"
+    },
+    {
+      "id": "actual_counts",
+      "present": true,
+      "required": true,
+      "detail": "unique_taxa=987 synonyms=79 conflicts=0"
+    },
+    {
+      "id": "source_registry",
+      "present": true,
+      "required": true,
+      "detail": "9 sources with LIVE_PUBLIC|AUTHORIZED_BULK|SNAPSHOT|FIXTURE_TEST_ONLY|UNAVAILABLE"
+    },
+    {
+      "id": "offline_pack",
+      "present": true,
+      "required": true,
+      "detail": "offline pack ready (tierR=987)"
+    },
+    {
+      "id": "synonym_resolution",
+      "present": true,
+      "required": true,
+      "detail": "synonyms=79 conflicts=0"
+    }
+  ],
+  "requiredMet": true,
+  "actualCounts": {
+    "unique_taxa": 987,
+    "records_by_source": {
+      "col": 595,
+      "gbif": 198,
+      "pbdb": 198
+    },
+    "synonyms": 79,
+    "conflicts": 0
+  },
+  "floors": {
+    "regions": {
+      "required": 12,
+      "actual": 12,
+      "met": true
+    },
+    "encounterTaxa": {
+      "required": 120,
+      "actual": 167,
+      "met": true
+    },
+    "flagship": {
+      "required": 24,
+      "actual": 24,
+      "met": true
+    },
+    "tierRBeyondEncounter": {
+      "required": true,
+      "actual": 987,
+      "encounter": 156,
+      "met": true
+    }
+  },
+  "honesty": {
+    "globalCompleteClaim": false,
+    "fixturesNeverClaimedLive": true,
+    "liveOnlyWhenQueried": true
+  },
+  "gaps": []
+}

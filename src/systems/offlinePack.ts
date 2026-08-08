@@ -19,7 +19,37 @@ export interface OfflinePackManifest {
   encounterCount: number;
   flagshipCount: number;
   notes: string;
+  /** Optional RC provenance pointer */
+  provenanceArtifact?: string;
+  actualCountsArtifact?: string;
 }
+
+export interface DigitalOfflinePackSpec {
+  manifest: OfflinePackManifest;
+  provenancePath: string;
+  actualCountsPath: string;
+  packageVersion: string;
+}
+
+export function buildDigitalRcOfflinePack(
+  input: OfflinePackInput & {
+    provenanceArtifact: string;
+    actualCountsArtifact: string;
+    packageVersion: string;
+  },
+): DigitalOfflinePackSpec {
+  const manifest = buildOfflinePackManifest(input);
+  manifest.packId = input.packId;
+  manifest.provenanceArtifact = input.provenanceArtifact;
+  manifest.actualCountsArtifact = input.actualCountsArtifact;
+  return {
+    manifest,
+    provenancePath: input.provenanceArtifact,
+    actualCountsPath: input.actualCountsArtifact,
+    packageVersion: input.packageVersion,
+  };
+}
+
 
 export interface OfflinePackInput {
   packId: string;

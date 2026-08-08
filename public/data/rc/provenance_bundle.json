@@ -1,0 +1,73 @@
+{
+  "bundleId": "digital-rc-provenance",
+  "version": "2.0.0",
+  "generatedAt": "2026-08-08T19:44:25.915Z",
+  "liveClaim": false,
+  "sources": [
+    {
+      "id": "col",
+      "state": "LIVE_PUBLIC",
+      "licenseNotes": "Respect COL / ChecklistBank terms of use",
+      "ingestPermitted": true
+    },
+    {
+      "id": "gbif",
+      "state": "LIVE_PUBLIC",
+      "licenseNotes": "Occurrence licenses vary; prefer download DOI for bulk",
+      "ingestPermitted": true
+    },
+    {
+      "id": "pbdb",
+      "state": "LIVE_PUBLIC",
+      "licenseNotes": "CC BY 4.0",
+      "ingestPermitted": true
+    },
+    {
+      "id": "iucn",
+      "state": "AUTHORIZED_BULK",
+      "licenseNotes": "API token required",
+      "ingestPermitted": false
+    },
+    {
+      "id": "neotoma",
+      "state": "SNAPSHOT",
+      "licenseNotes": "Respect Neotoma terms; prefer approved snapshot",
+      "ingestPermitted": true
+    },
+    {
+      "id": "nasa",
+      "state": "LIVE_PUBLIC",
+      "licenseNotes": "Public NASA metadata APIs",
+      "ingestPermitted": true
+    },
+    {
+      "id": "inaturalist",
+      "state": "UNAVAILABLE",
+      "licenseNotes": "API rate limits; licensing review pending",
+      "ingestPermitted": false
+    },
+    {
+      "id": "obis",
+      "state": "UNAVAILABLE",
+      "licenseNotes": "Open API — adapter stub",
+      "ingestPermitted": false
+    },
+    {
+      "id": "worms",
+      "state": "UNAVAILABLE",
+      "licenseNotes": "Open API — not started",
+      "ingestPermitted": false
+    }
+  ],
+  "policies": [
+    "docs/SOURCE_PROVENANCE_POLICY.md",
+    "docs/MOCK_SAMPLE_DATA_POLICY.md",
+    "docs/SOURCE_SNAPSHOT_POLICY.md"
+  ],
+  "actualCountsPath": "coverage/actual_counts.json",
+  "honesty": {
+    "fixturesNeverClaimedLive": true,
+    "neverCallFixtureLive": true,
+    "noFabricatedGlobalComplete": true
+  }
+}

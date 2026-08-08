@@ -1,0 +1,23 @@
+{
+  "packId": "archive-of-life-digital-rc",
+  "version": "2.0.0",
+  "snapshotId": "wave-f-alpha-2026-08",
+  "generatedAt": "2026-08-08T19:44:25.915Z",
+  "liveClaim": false,
+  "globalCompleteClaim": false,
+  "artifacts": [
+    "rc/package_manifest.json",
+    "rc/provenance_bundle.json",
+    "bundles/offline-pack-manifest.json",
+    "coverage/actual_counts.json",
+    "coverage/tier_r_index.json",
+    "coverage/tier_r_import_counts.json",
+    "status/beta_digital_report.json",
+    "status/digital_rc_report.json",
+    "status/source_states.json",
+    "status/batch_ingest_report.json"
+  ],
+  "statusTokens": {
+    "beta": "ARCHIVE_BETA_CONTENT_COMPLETE_DIGITAL"
+  }
+}

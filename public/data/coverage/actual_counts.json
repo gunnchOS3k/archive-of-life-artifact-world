@@ -1,0 +1,64 @@
+{
+  "schemaVersion": "1.0.0",
+  "snapshotId": "beta-rc-fixture-tier-r-2026-08",
+  "snapshotVersion": "2.0.0",
+  "generatedAt": "2026-08-08T19:42:40.351Z",
+  "globalCompleteClaim": false,
+  "liveClaimAny": false,
+  "records_by_source": {
+    "col": 595,
+    "gbif": 198,
+    "pbdb": 198
+  },
+  "records_by_source_detail": [
+    {
+      "source": "col",
+      "records": 595,
+      "mode": "fixture",
+      "liveClaim": false,
+      "sourceState": "FIXTURE_TEST_ONLY"
+    },
+    {
+      "source": "gbif",
+      "records": 198,
+      "mode": "fixture",
+      "liveClaim": false,
+      "sourceState": "FIXTURE_TEST_ONLY"
+    },
+    {
+      "source": "pbdb",
+      "records": 198,
+      "mode": "fixture",
+      "liveClaim": false,
+      "sourceState": "FIXTURE_TEST_ONLY"
+    }
+  ],
+  "unique_taxa": 987,
+  "unique_taxa_by_accepted_name": 947,
+  "synonyms": 79,
+  "synonym_edges": 119,
+  "conflicts": 0,
+  "rejected": 104,
+  "dropped_by_id": 0,
+  "dropped_by_name": 104,
+  "pages_fetched": 3,
+  "checkpoint_count": 3,
+  "cache_entries": 3,
+  "synonymStats": {
+    "synonymEdges": 119,
+    "uniqueSynonyms": 79,
+    "uniqueAcceptedViaSynonym": 79,
+    "conflicts": 0,
+    "conflictDetails": []
+  },
+  "honesty": {
+    "fixturesNeverClaimedLive": true,
+    "liveOnlyWhenQueried": true,
+    "noFabricatedGlobalComplete": true
+  },
+  "notes": [
+    "Actual import counts for this run only",
+    "Not a claim of global COL/GBIF/PBDB completeness",
+    "Run used FIXTURE_TEST_ONLY path — liveClaim false for all sources"
+  ]
+}

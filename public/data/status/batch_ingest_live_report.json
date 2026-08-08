@@ -1,7 +1,7 @@
 {
-  "snapshotId": "alpha-exit-live-bounded-2026-08",
-  "snapshotVersion": "1.0.0",
-  "generatedAt": "2026-08-08T01:17:59.904Z",
+  "snapshotId": "beta-rc-live-bounded-2026-08",
+  "snapshotVersion": "2.0.0",
+  "generatedAt": "2026-08-08T19:44:18.259Z",
   "mode": "live_optional",
   "anyLiveClaim": true,
   "totals": {
@@ -34,48 +34,58 @@
     }
   ],
   "importStats": {
-    "added": 1,
-    "skipped": 0,
-    "rejected": 0
+    "added": 1
+  },
+  "synonyms": 0,
+  "synonym_edges": 0,
+  "conflicts": 0,
+  "unique_taxa": 1,
+  "records_by_source": {
+    "col": 1,
+    "gbif": 0,
+    "pbdb": 0
   },
   "checkpoints": [
     {
       "source": "col",
       "queryKey": "Ursus|limit=25",
-      "snapshotVersion": "1.0.0",
+      "snapshotVersion": "2.0.0",
       "offset": 25,
       "page": 1,
       "recordsImported": 1,
-      "lastSuccessAt": "2026-08-08T01:17:59.161Z",
+      "lastSuccessAt": "2026-08-08T19:44:17.408Z",
       "liveClaim": true,
       "errors": []
     },
     {
       "source": "gbif",
       "queryKey": "Ursus|limit=25",
-      "snapshotVersion": "1.0.0",
+      "snapshotVersion": "2.0.0",
       "offset": 25,
       "page": 1,
       "recordsImported": 0,
-      "lastSuccessAt": "2026-08-08T01:17:59.724Z",
+      "lastSuccessAt": "2026-08-08T19:44:17.998Z",
       "liveClaim": false,
       "errors": []
     },
     {
       "source": "pbdb",
       "queryKey": "Tyrannosaurus|limit=25",
-      "snapshotVersion": "1.0.0",
+      "snapshotVersion": "2.0.0",
       "offset": 25,
       "page": 1,
       "recordsImported": 0,
-      "lastSuccessAt": "2026-08-08T01:17:59.903Z",
+      "lastSuccessAt": "2026-08-08T19:44:18.258Z",
       "liveClaim": false,
       "errors": []
     }
   ],
+  "cacheEntries": 3,
   "honesty": {
     "fixturesNeverClaimedLive": true,
     "liveOnlyWhenQueried": true,
+    "neverCallFixtureLive": true,
+    "noFabricatedGlobalComplete": true,
     "note": "Bounded live queries only — not global archive coverage"
   }
 }
