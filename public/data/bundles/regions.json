@@ -3,7 +3,7 @@
     "id": "museum",
     "name": "Archive of Life Museum",
     "type": "hub",
-    "description": "Your central hub — the living museum where artifacts become knowledge.",
+    "description": "Your central hub \u2014 the living museum where artifacts become knowledge.",
     "color": "#4A6741",
     "biome": "museum",
     "speciesIds": [],
@@ -13,7 +13,12 @@
       "wetland",
       "coastal",
       "fossil_site",
-      "indiana_ancient_swamp"
+      "indiana_ancient_swamp",
+      "polar_ice",
+      "subterranean_cave",
+      "urban_park",
+      "atmospheric_corridor",
+      "deep_marine"
     ],
     "bundlePath": "bundles/region-museum.json"
   },
@@ -111,7 +116,7 @@
   },
   {
     "id": "indiana_ancient_swamp",
-    "name": "Indiana — Ancient Swamp Era",
+    "name": "Indiana \u2014 Ancient Swamp Era",
     "type": "expedition",
     "description": "Carboniferous swamp paths with giant ferns, dragonflies, and fossil plant evidence. Reconstruction layers are labeled.",
     "color": "#3D6B3A",
@@ -124,5 +129,127 @@
       "museum"
     ],
     "bundlePath": "bundles/region-indiana_ancient_swamp.json"
+  },
+  {
+    "id": "polar_ice",
+    "name": "Polar Ice Systems",
+    "type": "explore",
+    "description": "Sea ice, glaciers, and polar desert \u2014 cryosphere ecology with seals, penguins, and ice-edge food webs.",
+    "color": "#A8D5E5",
+    "biome": "polar_ice",
+    "speciesIds": [
+      "pagophilus_groenlandicus",
+      "odobenus_rosmarus",
+      "pygoscelis_adeliae",
+      "aptendytes_forsteri",
+      "somniosus_microcephalus",
+      "boreogadus_saida",
+      "vulpes_lagopus",
+      "rangifer_tarandus",
+      "alca_torda",
+      "calanus_glacialis",
+      "ursus_maritimus",
+      "aptendytes_patagonicus"
+    ],
+    "connections": [
+      "museum"
+    ],
+    "bundlePath": "bundles/region-polar_ice.json"
+  },
+  {
+    "id": "subterranean_cave",
+    "name": "Subterranean Cave System",
+    "type": "explore",
+    "description": "Dark, nutrient-limited caves with troglobites, bats, and groundwater-linked fauna.",
+    "color": "#4A3F55",
+    "biome": "subterranean_cave",
+    "speciesIds": [
+      "proteus_anguinus",
+      "amblyopsis_spelaea",
+      "hadenoecus_subterraneus",
+      "meta_menardi",
+      "neaphaenops_tellkampfi",
+      "typhlichthys_subterraneus",
+      "plecotus_auritus",
+      "myotis_lucifugus"
+    ],
+    "connections": [
+      "museum"
+    ],
+    "bundlePath": "bundles/region-subterranean_cave.json"
+  },
+  {
+    "id": "urban_park",
+    "name": "Urban / Human-Modified",
+    "type": "explore",
+    "description": "Cities and parks where synanthropic species share space with people.",
+    "color": "#6B7B8A",
+    "biome": "urban_human_modified",
+    "speciesIds": [
+      "passer_domesticus",
+      "columba_livia",
+      "rattus_norvegicus",
+      "felis_catus",
+      "sciurus_carolinensis",
+      "corvus_brachyrhynchos",
+      "turdus_migratorius",
+      "apis_mellifera_urban",
+      "pieris_rapae",
+      "taraxacum_officinale",
+      "pediculus_humanus",
+      "blattella_germanica"
+    ],
+    "connections": [
+      "museum"
+    ],
+    "bundlePath": "bundles/region-urban_park.json"
+  },
+  {
+    "id": "atmospheric_corridor",
+    "name": "Atmospheric Migration Corridor",
+    "type": "explore",
+    "description": "Aerial life zone \u2014 migratory birds, insects, and weather-linked movement.",
+    "color": "#7EB6D9",
+    "biome": "atmospheric_aerial",
+    "speciesIds": [
+      "hirundo_rustica",
+      "falco_peregrinus",
+      "anthus_trivialis",
+      "aedes_aegypti",
+      "danaus_plexippus_mig",
+      "tachycineta_bicolor",
+      "archilochus_colubris",
+      "buteo_jamaicensis"
+    ],
+    "connections": [
+      "museum"
+    ],
+    "bundlePath": "bundles/region-atmospheric_corridor.json"
+  },
+  {
+    "id": "deep_marine",
+    "name": "Deep Marine Pelagic",
+    "type": "explore",
+    "description": "Open-ocean pelagic systems \u2014 whales, sharks, turtles, and plankton webs.",
+    "color": "#1B4F72",
+    "biome": "marine_coastal",
+    "speciesIds": [
+      "physeter_macrocephalus",
+      "orcinus_orca",
+      "mola_mola",
+      "dermochelys_coriacea",
+      "chelonia_mydas",
+      "carcharodon_carcharias",
+      "architeuthis_dux",
+      "euphausia_superba",
+      "aurelia_aurita",
+      "homarus_americanus",
+      "megaptera_novaeangliae",
+      "balaenoptera_physalus"
+    ],
+    "connections": [
+      "museum"
+    ],
+    "bundlePath": "bundles/region-deep_marine.json"
   }
 ]

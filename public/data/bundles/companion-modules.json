@@ -1,0 +1,105 @@
+{
+  "snapshotId": "wave-f-alpha-2026-08",
+  "modules": [
+    {
+      "id": "mod_savanna_tracker",
+      "label": "Savanna Tracker",
+      "unlockWhen": {
+        "kind": "observe_species",
+        "speciesId": "panthera_leo"
+      },
+      "affinity": "savanna",
+      "xpBonus": 10
+    },
+    {
+      "id": "mod_forest_listener",
+      "label": "Forest Listener",
+      "unlockWhen": {
+        "kind": "observe_species",
+        "speciesId": "canis_lupus"
+      },
+      "affinity": "forest",
+      "xpBonus": 10
+    },
+    {
+      "id": "mod_wetland_engineer",
+      "label": "Wetland Engineer",
+      "unlockWhen": {
+        "kind": "observe_species",
+        "speciesId": "castor_canadensis"
+      },
+      "affinity": "wetland",
+      "xpBonus": 10
+    },
+    {
+      "id": "mod_polar_sentinel",
+      "label": "Polar Sentinel",
+      "unlockWhen": {
+        "kind": "observe_species",
+        "speciesId": "ursus_maritimus"
+      },
+      "affinity": "polar",
+      "xpBonus": 15
+    },
+    {
+      "id": "mod_cave_mapper",
+      "label": "Cave Mapper",
+      "unlockWhen": {
+        "kind": "visit_region",
+        "regionId": "subterranean_cave"
+      },
+      "affinity": "subterranean",
+      "xpBonus": 8
+    },
+    {
+      "id": "mod_urban_naturalist",
+      "label": "Urban Naturalist",
+      "unlockWhen": {
+        "kind": "visit_region",
+        "regionId": "urban_park"
+      },
+      "affinity": "urban",
+      "xpBonus": 8
+    },
+    {
+      "id": "mod_ice_expedition",
+      "label": "Ice Expeditioner",
+      "unlockWhen": {
+        "kind": "complete_expedition",
+        "expeditionId": "exp_polar_ice_edge"
+      },
+      "affinity": "polar",
+      "xpBonus": 20
+    },
+    {
+      "id": "mod_swamp_expedition",
+      "label": "Swamp Expeditioner",
+      "unlockWhen": {
+        "kind": "complete_expedition",
+        "expeditionId": "exp_indiana_carboniferous"
+      },
+      "affinity": "paleo",
+      "xpBonus": 20
+    },
+    {
+      "id": "mod_clue_hunter",
+      "label": "Clue Hunter",
+      "unlockWhen": {
+        "kind": "discover_clue_count",
+        "count": 2
+      },
+      "affinity": "investigation",
+      "xpBonus": 12
+    },
+    {
+      "id": "mod_marine_pelagic",
+      "label": "Pelagic Watcher",
+      "unlockWhen": {
+        "kind": "visit_region",
+        "regionId": "deep_marine"
+      },
+      "affinity": "marine",
+      "xpBonus": 8
+    }
+  ]
+}

@@ -26,6 +26,7 @@
     "audit:provenance": "tsx scripts/audit-provenance.ts",
     "audit:bias": "tsx scripts/audit-bias.ts",
     "report:coverage": "tsx scripts/report-coverage.ts",
+    "report:tier-coverage": "tsx scripts/report-tier-coverage.ts",
     "generate:bundles": "tsx scripts/generate-bundles.ts",
     "generate:time-atlas": "tsx scripts/generate-time-atlas.ts",
     "generate:earth-grid": "tsx scripts/generate-earth-grid.ts",

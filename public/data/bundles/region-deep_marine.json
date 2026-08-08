@@ -1,0 +1,871 @@
+{
+  "regionId": "deep_marine",
+  "speciesIds": [
+    "physeter_macrocephalus",
+    "orcinus_orca",
+    "mola_mola",
+    "dermochelys_coriacea",
+    "chelonia_mydas",
+    "carcharodon_carcharias",
+    "architeuthis_dux",
+    "euphausia_superba",
+    "aurelia_aurita",
+    "homarus_americanus",
+    "megaptera_novaeangliae",
+    "balaenoptera_physalus"
+  ],
+  "species": [
+    {
+      "id": "physeter_macrocephalus",
+      "commonName": "Sperm Whale",
+      "scientificName": "Physeter macrocephalus",
+      "group": "Mammal",
+      "tier": "regional",
+      "representationTier": 4,
+      "lifeStatus": "extant",
+      "timeUnitIds": [
+        "holocene"
+      ],
+      "taxonomy": {
+        "family": "Physeteridae",
+        "rank": "species",
+        "acceptedName": "Physeter macrocephalus"
+      },
+      "artifactTemplates": [
+        {
+          "id": "physeter_macrocephalus_field_note",
+          "artifactType": "behavioral_field_note",
+          "label": "field note",
+          "ethical": true,
+          "description": "Ethical field documentation of Sperm Whale"
+        }
+      ],
+      "gameplay": {
+        "region": "deep_marine",
+        "questType": "observation",
+        "dangerLevel": 2,
+        "ethicalInteraction": "observe_from_distance",
+        "timeRange": "Present",
+        "diet": "Unknown",
+        "activity": "Diurnal",
+        "size": "varies",
+        "behavior": "Wave F encounter taxon",
+        "learningTopics": [
+          "mammal",
+          "deep_marine"
+        ],
+        "funFacts": [],
+        "whyItMatters": "Physeter macrocephalus is a real taxon used for Alpha encounter coverage."
+      },
+      "provenance": [
+        {
+          "source": "game_authored",
+          "sourceVersion": "wave-f-alpha-2026-08",
+          "sourceRecordId": "physeter_macrocephalus",
+          "gbifTaxonKey": 2433551,
+          "license": "GAME-ORIGINAL",
+          "citation": "Archive of Life Wave F authored encounter entry for Physeter macrocephalus (real taxon; not a live COL/GBIF ingest claim)",
+          "citationRequired": false,
+          "retrievedAt": "2026-08-07T19:00:00.000Z",
+          "lastUpdated": "2026-08-07T19:00:00.000Z",
+          "isMockData": false,
+          "verificationStatus": "game_authored_verified"
+        },
+        {
+          "source": "gbif",
+          "sourceVersion": "public-key-reference",
+          "sourceRecordId": "2433551",
+          "gbifTaxonKey": 2433551,
+          "license": "CC-BY-4.0",
+          "citation": "GBIF taxon key 2433551 referenced for Physeter macrocephalus; live occurrence fetch via ScientificIngestionService",
+          "citationRequired": true,
+          "retrievedAt": "2026-08-07T19:00:00.000Z",
+          "lastUpdated": "2026-08-07T19:00:00.000Z",
+          "isMockData": false,
+          "verificationStatus": "needs_source_verification"
+        }
+      ]
+    },
+    {
+      "id": "orcinus_orca",
+      "commonName": "Orca",
+      "scientificName": "Orcinus orca",
+      "group": "Mammal",
+      "tier": "regional",
+      "representationTier": 4,
+      "lifeStatus": "extant",
+      "timeUnitIds": [
+        "holocene"
+      ],
+      "taxonomy": {
+        "family": "Delphinidae",
+        "rank": "species",
+        "acceptedName": "Orcinus orca"
+      },
+      "artifactTemplates": [
+        {
+          "id": "orcinus_orca_field_note",
+          "artifactType": "behavioral_field_note",
+          "label": "field note",
+          "ethical": true,
+          "description": "Ethical field documentation of Orca"
+        }
+      ],
+      "gameplay": {
+        "region": "deep_marine",
+        "questType": "observation",
+        "dangerLevel": 2,
+        "ethicalInteraction": "observe_from_distance",
+        "timeRange": "Present",
+        "diet": "Unknown",
+        "activity": "Diurnal",
+        "size": "varies",
+        "behavior": "Wave F encounter taxon",
+        "learningTopics": [
+          "mammal",
+          "deep_marine"
+        ],
+        "funFacts": [],
+        "whyItMatters": "Orcinus orca is a real taxon used for Alpha encounter coverage."
+      },
+      "provenance": [
+        {
+          "source": "game_authored",
+          "sourceVersion": "wave-f-alpha-2026-08",
+          "sourceRecordId": "orcinus_orca",
+          "gbifTaxonKey": 2433553,
+          "license": "GAME-ORIGINAL",
+          "citation": "Archive of Life Wave F authored encounter entry for Orcinus orca (real taxon; not a live COL/GBIF ingest claim)",
+          "citationRequired": false,
+          "retrievedAt": "2026-08-07T19:00:00.000Z",
+          "lastUpdated": "2026-08-07T19:00:00.000Z",
+          "isMockData": false,
+          "verificationStatus": "game_authored_verified"
+        },
+        {
+          "source": "gbif",
+          "sourceVersion": "public-key-reference",
+          "sourceRecordId": "2433553",
+          "gbifTaxonKey": 2433553,
+          "license": "CC-BY-4.0",
+          "citation": "GBIF taxon key 2433553 referenced for Orcinus orca; live occurrence fetch via ScientificIngestionService",
+          "citationRequired": true,
+          "retrievedAt": "2026-08-07T19:00:00.000Z",
+          "lastUpdated": "2026-08-07T19:00:00.000Z",
+          "isMockData": false,
+          "verificationStatus": "needs_source_verification"
+        }
+      ]
+    },
+    {
+      "id": "mola_mola",
+      "commonName": "Ocean Sunfish",
+      "scientificName": "Mola mola",
+      "group": "Fish",
+      "tier": "regional",
+      "representationTier": 3,
+      "lifeStatus": "extant",
+      "timeUnitIds": [
+        "holocene"
+      ],
+      "taxonomy": {
+        "family": "Molidae",
+        "rank": "species",
+        "acceptedName": "Mola mola"
+      },
+      "artifactTemplates": [
+        {
+          "id": "mola_mola_field_note",
+          "artifactType": "behavioral_field_note",
+          "label": "field note",
+          "ethical": true,
+          "description": "Ethical field documentation of Ocean Sunfish"
+        }
+      ],
+      "gameplay": {
+        "region": "deep_marine",
+        "questType": "observation",
+        "dangerLevel": 2,
+        "ethicalInteraction": "observe_from_distance",
+        "timeRange": "Present",
+        "diet": "Unknown",
+        "activity": "Diurnal",
+        "size": "varies",
+        "behavior": "Wave F encounter taxon",
+        "learningTopics": [
+          "fish",
+          "deep_marine"
+        ],
+        "funFacts": [],
+        "whyItMatters": "Mola mola is a real taxon used for Alpha encounter coverage."
+      },
+      "provenance": [
+        {
+          "source": "game_authored",
+          "sourceVersion": "wave-f-alpha-2026-08",
+          "sourceRecordId": "mola_mola",
+          "gbifTaxonKey": 2414024,
+          "license": "GAME-ORIGINAL",
+          "citation": "Archive of Life Wave F authored encounter entry for Mola mola (real taxon; not a live COL/GBIF ingest claim)",
+          "citationRequired": false,
+          "retrievedAt": "2026-08-07T19:00:00.000Z",
+          "lastUpdated": "2026-08-07T19:00:00.000Z",
+          "isMockData": false,
+          "verificationStatus": "game_authored_verified"
+        },
+        {
+          "source": "gbif",
+          "sourceVersion": "public-key-reference",
+          "sourceRecordId": "2414024",
+          "gbifTaxonKey": 2414024,
+          "license": "CC-BY-4.0",
+          "citation": "GBIF taxon key 2414024 referenced for Mola mola; live occurrence fetch via ScientificIngestionService",
+          "citationRequired": true,
+          "retrievedAt": "2026-08-07T19:00:00.000Z",
+          "lastUpdated": "2026-08-07T19:00:00.000Z",
+          "isMockData": false,
+          "verificationStatus": "needs_source_verification"
+        }
+      ]
+    },
+    {
+      "id": "dermochelys_coriacea",
+      "commonName": "Leatherback Sea Turtle",
+      "scientificName": "Dermochelys coriacea",
+      "group": "Reptile",
+      "tier": "regional",
+      "representationTier": 4,
+      "lifeStatus": "extant",
+      "timeUnitIds": [
+        "holocene"
+      ],
+      "taxonomy": {
+        "family": "Dermochelyidae",
+        "rank": "species",
+        "acceptedName": "Dermochelys coriacea"
+      },
+      "artifactTemplates": [
+        {
+          "id": "dermochelys_coriacea_field_note",
+          "artifactType": "behavioral_field_note",
+          "label": "field note",
+          "ethical": true,
+          "description": "Ethical field documentation of Leatherback Sea Turtle"
+        }
+      ],
+      "gameplay": {
+        "region": "deep_marine",
+        "questType": "observation",
+        "dangerLevel": 2,
+        "ethicalInteraction": "observe_from_distance",
+        "timeRange": "Present",
+        "diet": "Unknown",
+        "activity": "Diurnal",
+        "size": "varies",
+        "behavior": "Wave F encounter taxon",
+        "learningTopics": [
+          "reptile",
+          "deep_marine"
+        ],
+        "funFacts": [],
+        "whyItMatters": "Dermochelys coriacea is a real taxon used for Alpha encounter coverage."
+      },
+      "provenance": [
+        {
+          "source": "game_authored",
+          "sourceVersion": "wave-f-alpha-2026-08",
+          "sourceRecordId": "dermochelys_coriacea",
+          "gbifTaxonKey": 2442202,
+          "license": "GAME-ORIGINAL",
+          "citation": "Archive of Life Wave F authored encounter entry for Dermochelys coriacea (real taxon; not a live COL/GBIF ingest claim)",
+          "citationRequired": false,
+          "retrievedAt": "2026-08-07T19:00:00.000Z",
+          "lastUpdated": "2026-08-07T19:00:00.000Z",
+          "isMockData": false,
+          "verificationStatus": "game_authored_verified"
+        },
+        {
+          "source": "gbif",
+          "sourceVersion": "public-key-reference",
+          "sourceRecordId": "2442202",
+          "gbifTaxonKey": 2442202,
+          "license": "CC-BY-4.0",
+          "citation": "GBIF taxon key 2442202 referenced for Dermochelys coriacea; live occurrence fetch via ScientificIngestionService",
+          "citationRequired": true,
+          "retrievedAt": "2026-08-07T19:00:00.000Z",
+          "lastUpdated": "2026-08-07T19:00:00.000Z",
+          "isMockData": false,
+          "verificationStatus": "needs_source_verification"
+        }
+      ]
+    },
+    {
+      "id": "chelonia_mydas",
+      "commonName": "Green Sea Turtle",
+      "scientificName": "Chelonia mydas",
+      "group": "Reptile",
+      "tier": "regional",
+      "representationTier": 3,
+      "lifeStatus": "extant",
+      "timeUnitIds": [
+        "holocene"
+      ],
+      "taxonomy": {
+        "family": "Cheloniidae",
+        "rank": "species",
+        "acceptedName": "Chelonia mydas"
+      },
+      "artifactTemplates": [
+        {
+          "id": "chelonia_mydas_field_note",
+          "artifactType": "behavioral_field_note",
+          "label": "field note",
+          "ethical": true,
+          "description": "Ethical field documentation of Green Sea Turtle"
+        }
+      ],
+      "gameplay": {
+        "region": "deep_marine",
+        "questType": "observation",
+        "dangerLevel": 2,
+        "ethicalInteraction": "observe_from_distance",
+        "timeRange": "Present",
+        "diet": "Unknown",
+        "activity": "Diurnal",
+        "size": "varies",
+        "behavior": "Wave F encounter taxon",
+        "learningTopics": [
+          "reptile",
+          "deep_marine"
+        ],
+        "funFacts": [],
+        "whyItMatters": "Chelonia mydas is a real taxon used for Alpha encounter coverage."
+      },
+      "provenance": [
+        {
+          "source": "game_authored",
+          "sourceVersion": "wave-f-alpha-2026-08",
+          "sourceRecordId": "chelonia_mydas",
+          "gbifTaxonKey": 2442205,
+          "license": "GAME-ORIGINAL",
+          "citation": "Archive of Life Wave F authored encounter entry for Chelonia mydas (real taxon; not a live COL/GBIF ingest claim)",
+          "citationRequired": false,
+          "retrievedAt": "2026-08-07T19:00:00.000Z",
+          "lastUpdated": "2026-08-07T19:00:00.000Z",
+          "isMockData": false,
+          "verificationStatus": "game_authored_verified"
+        },
+        {
+          "source": "gbif",
+          "sourceVersion": "public-key-reference",
+          "sourceRecordId": "2442205",
+          "gbifTaxonKey": 2442205,
+          "license": "CC-BY-4.0",
+          "citation": "GBIF taxon key 2442205 referenced for Chelonia mydas; live occurrence fetch via ScientificIngestionService",
+          "citationRequired": true,
+          "retrievedAt": "2026-08-07T19:00:00.000Z",
+          "lastUpdated": "2026-08-07T19:00:00.000Z",
+          "isMockData": false,
+          "verificationStatus": "needs_source_verification"
+        }
+      ]
+    },
+    {
+      "id": "carcharodon_carcharias",
+      "commonName": "Great White Shark",
+      "scientificName": "Carcharodon carcharias",
+      "group": "Fish",
+      "tier": "regional",
+      "representationTier": 4,
+      "lifeStatus": "extant",
+      "timeUnitIds": [
+        "holocene"
+      ],
+      "taxonomy": {
+        "family": "Lamnidae",
+        "rank": "species",
+        "acceptedName": "Carcharodon carcharias"
+      },
+      "artifactTemplates": [
+        {
+          "id": "carcharodon_carcharias_field_note",
+          "artifactType": "behavioral_field_note",
+          "label": "field note",
+          "ethical": true,
+          "description": "Ethical field documentation of Great White Shark"
+        }
+      ],
+      "gameplay": {
+        "region": "deep_marine",
+        "questType": "observation",
+        "dangerLevel": 2,
+        "ethicalInteraction": "observe_from_distance",
+        "timeRange": "Present",
+        "diet": "Unknown",
+        "activity": "Diurnal",
+        "size": "varies",
+        "behavior": "Wave F encounter taxon",
+        "learningTopics": [
+          "fish",
+          "deep_marine"
+        ],
+        "funFacts": [],
+        "whyItMatters": "Carcharodon carcharias is a real taxon used for Alpha encounter coverage."
+      },
+      "provenance": [
+        {
+          "source": "game_authored",
+          "sourceVersion": "wave-f-alpha-2026-08",
+          "sourceRecordId": "carcharodon_carcharias",
+          "gbifTaxonKey": 2419990,
+          "license": "GAME-ORIGINAL",
+          "citation": "Archive of Life Wave F authored encounter entry for Carcharodon carcharias (real taxon; not a live COL/GBIF ingest claim)",
+          "citationRequired": false,
+          "retrievedAt": "2026-08-07T19:00:00.000Z",
+          "lastUpdated": "2026-08-07T19:00:00.000Z",
+          "isMockData": false,
+          "verificationStatus": "game_authored_verified"
+        },
+        {
+          "source": "gbif",
+          "sourceVersion": "public-key-reference",
+          "sourceRecordId": "2419990",
+          "gbifTaxonKey": 2419990,
+          "license": "CC-BY-4.0",
+          "citation": "GBIF taxon key 2419990 referenced for Carcharodon carcharias; live occurrence fetch via ScientificIngestionService",
+          "citationRequired": true,
+          "retrievedAt": "2026-08-07T19:00:00.000Z",
+          "lastUpdated": "2026-08-07T19:00:00.000Z",
+          "isMockData": false,
+          "verificationStatus": "needs_source_verification"
+        }
+      ]
+    },
+    {
+      "id": "architeuthis_dux",
+      "commonName": "Giant Squid",
+      "scientificName": "Architeuthis dux",
+      "group": "Mollusk",
+      "tier": "regional",
+      "representationTier": 3,
+      "lifeStatus": "extant",
+      "timeUnitIds": [
+        "holocene"
+      ],
+      "taxonomy": {
+        "family": "Architeuthidae",
+        "rank": "species",
+        "acceptedName": "Architeuthis dux"
+      },
+      "artifactTemplates": [
+        {
+          "id": "architeuthis_dux_field_note",
+          "artifactType": "behavioral_field_note",
+          "label": "field note",
+          "ethical": true,
+          "description": "Ethical field documentation of Giant Squid"
+        }
+      ],
+      "gameplay": {
+        "region": "deep_marine",
+        "questType": "observation",
+        "dangerLevel": 2,
+        "ethicalInteraction": "observe_from_distance",
+        "timeRange": "Present",
+        "diet": "Unknown",
+        "activity": "Diurnal",
+        "size": "varies",
+        "behavior": "Wave F encounter taxon",
+        "learningTopics": [
+          "mollusk",
+          "deep_marine"
+        ],
+        "funFacts": [],
+        "whyItMatters": "Architeuthis dux is a real taxon used for Alpha encounter coverage."
+      },
+      "provenance": [
+        {
+          "source": "game_authored",
+          "sourceVersion": "wave-f-alpha-2026-08",
+          "sourceRecordId": "architeuthis_dux",
+          "gbifTaxonKey": 2288695,
+          "license": "GAME-ORIGINAL",
+          "citation": "Archive of Life Wave F authored encounter entry for Architeuthis dux (real taxon; not a live COL/GBIF ingest claim)",
+          "citationRequired": false,
+          "retrievedAt": "2026-08-07T19:00:00.000Z",
+          "lastUpdated": "2026-08-07T19:00:00.000Z",
+          "isMockData": false,
+          "verificationStatus": "game_authored_verified"
+        },
+        {
+          "source": "gbif",
+          "sourceVersion": "public-key-reference",
+          "sourceRecordId": "2288695",
+          "gbifTaxonKey": 2288695,
+          "license": "CC-BY-4.0",
+          "citation": "GBIF taxon key 2288695 referenced for Architeuthis dux; live occurrence fetch via ScientificIngestionService",
+          "citationRequired": true,
+          "retrievedAt": "2026-08-07T19:00:00.000Z",
+          "lastUpdated": "2026-08-07T19:00:00.000Z",
+          "isMockData": false,
+          "verificationStatus": "needs_source_verification"
+        }
+      ]
+    },
+    {
+      "id": "euphausia_superba",
+      "commonName": "Antarctic Krill",
+      "scientificName": "Euphausia superba",
+      "group": "Arthropod",
+      "tier": "regional",
+      "representationTier": 3,
+      "lifeStatus": "extant",
+      "timeUnitIds": [
+        "holocene"
+      ],
+      "taxonomy": {
+        "family": "Euphausiidae",
+        "rank": "species",
+        "acceptedName": "Euphausia superba"
+      },
+      "artifactTemplates": [
+        {
+          "id": "euphausia_superba_field_note",
+          "artifactType": "behavioral_field_note",
+          "label": "field note",
+          "ethical": true,
+          "description": "Ethical field documentation of Antarctic Krill"
+        }
+      ],
+      "gameplay": {
+        "region": "deep_marine",
+        "questType": "observation",
+        "dangerLevel": 2,
+        "ethicalInteraction": "observe_from_distance",
+        "timeRange": "Present",
+        "diet": "Unknown",
+        "activity": "Diurnal",
+        "size": "varies",
+        "behavior": "Wave F encounter taxon",
+        "learningTopics": [
+          "arthropod",
+          "deep_marine"
+        ],
+        "funFacts": [],
+        "whyItMatters": "Euphausia superba is a real taxon used for Alpha encounter coverage."
+      },
+      "provenance": [
+        {
+          "source": "game_authored",
+          "sourceVersion": "wave-f-alpha-2026-08",
+          "sourceRecordId": "euphausia_superba",
+          "gbifTaxonKey": 2186703,
+          "license": "GAME-ORIGINAL",
+          "citation": "Archive of Life Wave F authored encounter entry for Euphausia superba (real taxon; not a live COL/GBIF ingest claim)",
+          "citationRequired": false,
+          "retrievedAt": "2026-08-07T19:00:00.000Z",
+          "lastUpdated": "2026-08-07T19:00:00.000Z",
+          "isMockData": false,
+          "verificationStatus": "game_authored_verified"
+        },
+        {
+          "source": "gbif",
+          "sourceVersion": "public-key-reference",
+          "sourceRecordId": "2186703",
+          "gbifTaxonKey": 2186703,
+          "license": "CC-BY-4.0",
+          "citation": "GBIF taxon key 2186703 referenced for Euphausia superba; live occurrence fetch via ScientificIngestionService",
+          "citationRequired": true,
+          "retrievedAt": "2026-08-07T19:00:00.000Z",
+          "lastUpdated": "2026-08-07T19:00:00.000Z",
+          "isMockData": false,
+          "verificationStatus": "needs_source_verification"
+        }
+      ]
+    },
+    {
+      "id": "aurelia_aurita",
+      "commonName": "Moon Jelly",
+      "scientificName": "Aurelia aurita",
+      "group": "Cnidarian",
+      "tier": "regional",
+      "representationTier": 2,
+      "lifeStatus": "extant",
+      "timeUnitIds": [
+        "holocene"
+      ],
+      "taxonomy": {
+        "family": "Ulmaridae",
+        "rank": "species",
+        "acceptedName": "Aurelia aurita"
+      },
+      "artifactTemplates": [
+        {
+          "id": "aurelia_aurita_field_note",
+          "artifactType": "behavioral_field_note",
+          "label": "field note",
+          "ethical": true,
+          "description": "Ethical field documentation of Moon Jelly"
+        }
+      ],
+      "gameplay": {
+        "region": "deep_marine",
+        "questType": "observation",
+        "dangerLevel": 2,
+        "ethicalInteraction": "observe_from_distance",
+        "timeRange": "Present",
+        "diet": "Unknown",
+        "activity": "Diurnal",
+        "size": "varies",
+        "behavior": "Wave F encounter taxon",
+        "learningTopics": [
+          "cnidarian",
+          "deep_marine"
+        ],
+        "funFacts": [],
+        "whyItMatters": "Aurelia aurita is a real taxon used for Alpha encounter coverage."
+      },
+      "provenance": [
+        {
+          "source": "game_authored",
+          "sourceVersion": "wave-f-alpha-2026-08",
+          "sourceRecordId": "aurelia_aurita",
+          "gbifTaxonKey": 2266580,
+          "license": "GAME-ORIGINAL",
+          "citation": "Archive of Life Wave F authored encounter entry for Aurelia aurita (real taxon; not a live COL/GBIF ingest claim)",
+          "citationRequired": false,
+          "retrievedAt": "2026-08-07T19:00:00.000Z",
+          "lastUpdated": "2026-08-07T19:00:00.000Z",
+          "isMockData": false,
+          "verificationStatus": "game_authored_verified"
+        },
+        {
+          "source": "gbif",
+          "sourceVersion": "public-key-reference",
+          "sourceRecordId": "2266580",
+          "gbifTaxonKey": 2266580,
+          "license": "CC-BY-4.0",
+          "citation": "GBIF taxon key 2266580 referenced for Aurelia aurita; live occurrence fetch via ScientificIngestionService",
+          "citationRequired": true,
+          "retrievedAt": "2026-08-07T19:00:00.000Z",
+          "lastUpdated": "2026-08-07T19:00:00.000Z",
+          "isMockData": false,
+          "verificationStatus": "needs_source_verification"
+        }
+      ]
+    },
+    {
+      "id": "homarus_americanus",
+      "commonName": "American Lobster",
+      "scientificName": "Homarus americanus",
+      "group": "Arthropod",
+      "tier": "regional",
+      "representationTier": 3,
+      "lifeStatus": "extant",
+      "timeUnitIds": [
+        "holocene"
+      ],
+      "taxonomy": {
+        "family": "Nephropidae",
+        "rank": "species",
+        "acceptedName": "Homarus americanus"
+      },
+      "artifactTemplates": [
+        {
+          "id": "homarus_americanus_field_note",
+          "artifactType": "behavioral_field_note",
+          "label": "field note",
+          "ethical": true,
+          "description": "Ethical field documentation of American Lobster"
+        }
+      ],
+      "gameplay": {
+        "region": "deep_marine",
+        "questType": "observation",
+        "dangerLevel": 2,
+        "ethicalInteraction": "observe_from_distance",
+        "timeRange": "Present",
+        "diet": "Unknown",
+        "activity": "Diurnal",
+        "size": "varies",
+        "behavior": "Wave F encounter taxon",
+        "learningTopics": [
+          "arthropod",
+          "deep_marine"
+        ],
+        "funFacts": [],
+        "whyItMatters": "Homarus americanus is a real taxon used for Alpha encounter coverage."
+      },
+      "provenance": [
+        {
+          "source": "game_authored",
+          "sourceVersion": "wave-f-alpha-2026-08",
+          "sourceRecordId": "homarus_americanus",
+          "gbifTaxonKey": 2227300,
+          "license": "GAME-ORIGINAL",
+          "citation": "Archive of Life Wave F authored encounter entry for Homarus americanus (real taxon; not a live COL/GBIF ingest claim)",
+          "citationRequired": false,
+          "retrievedAt": "2026-08-07T19:00:00.000Z",
+          "lastUpdated": "2026-08-07T19:00:00.000Z",
+          "isMockData": false,
+          "verificationStatus": "game_authored_verified"
+        },
+        {
+          "source": "gbif",
+          "sourceVersion": "public-key-reference",
+          "sourceRecordId": "2227300",
+          "gbifTaxonKey": 2227300,
+          "license": "CC-BY-4.0",
+          "citation": "GBIF taxon key 2227300 referenced for Homarus americanus; live occurrence fetch via ScientificIngestionService",
+          "citationRequired": true,
+          "retrievedAt": "2026-08-07T19:00:00.000Z",
+          "lastUpdated": "2026-08-07T19:00:00.000Z",
+          "isMockData": false,
+          "verificationStatus": "needs_source_verification"
+        }
+      ]
+    },
+    {
+      "id": "megaptera_novaeangliae",
+      "commonName": "Humpback Whale",
+      "scientificName": "Megaptera novaeangliae",
+      "group": "Mammal",
+      "tier": "regional",
+      "representationTier": 4,
+      "lifeStatus": "extant",
+      "timeUnitIds": [
+        "holocene"
+      ],
+      "taxonomy": {
+        "family": "Balaenopteridae",
+        "rank": "species",
+        "acceptedName": "Megaptera novaeangliae"
+      },
+      "artifactTemplates": [
+        {
+          "id": "megaptera_novaeangliae_field_note",
+          "artifactType": "behavioral_field_note",
+          "label": "field note",
+          "ethical": true,
+          "description": "Ethical field documentation of Humpback Whale"
+        }
+      ],
+      "gameplay": {
+        "region": "deep_marine",
+        "questType": "observation",
+        "dangerLevel": 2,
+        "ethicalInteraction": "observe_from_distance",
+        "timeRange": "Present",
+        "diet": "Unknown",
+        "activity": "Diurnal",
+        "size": "varies",
+        "behavior": "Wave F encounter taxon",
+        "learningTopics": [
+          "mammal",
+          "deep_marine"
+        ],
+        "funFacts": [],
+        "whyItMatters": "Megaptera novaeangliae is a real taxon used for Alpha encounter coverage."
+      },
+      "provenance": [
+        {
+          "source": "game_authored",
+          "sourceVersion": "wave-f-alpha-2026-08",
+          "sourceRecordId": "megaptera_novaeangliae",
+          "gbifTaxonKey": 2440726,
+          "license": "GAME-ORIGINAL",
+          "citation": "Archive of Life Wave F authored encounter entry for Megaptera novaeangliae (real taxon; not a live COL/GBIF ingest claim)",
+          "citationRequired": false,
+          "retrievedAt": "2026-08-07T19:00:00.000Z",
+          "lastUpdated": "2026-08-07T19:00:00.000Z",
+          "isMockData": false,
+          "verificationStatus": "game_authored_verified"
+        },
+        {
+          "source": "gbif",
+          "sourceVersion": "public-key-reference",
+          "sourceRecordId": "2440726",
+          "gbifTaxonKey": 2440726,
+          "license": "CC-BY-4.0",
+          "citation": "GBIF taxon key 2440726 referenced for Megaptera novaeangliae; live occurrence fetch via ScientificIngestionService",
+          "citationRequired": true,
+          "retrievedAt": "2026-08-07T19:00:00.000Z",
+          "lastUpdated": "2026-08-07T19:00:00.000Z",
+          "isMockData": false,
+          "verificationStatus": "needs_source_verification"
+        }
+      ]
+    },
+    {
+      "id": "balaenoptera_physalus",
+      "commonName": "Fin Whale",
+      "scientificName": "Balaenoptera physalus",
+      "group": "Mammal",
+      "tier": "regional",
+      "representationTier": 3,
+      "lifeStatus": "extant",
+      "timeUnitIds": [
+        "holocene"
+      ],
+      "taxonomy": {
+        "family": "Balaenopteridae",
+        "rank": "species",
+        "acceptedName": "Balaenoptera physalus"
+      },
+      "artifactTemplates": [
+        {
+          "id": "balaenoptera_physalus_field_note",
+          "artifactType": "behavioral_field_note",
+          "label": "field note",
+          "ethical": true,
+          "description": "Ethical field documentation of Fin Whale"
+        }
+      ],
+      "gameplay": {
+        "region": "deep_marine",
+        "questType": "observation",
+        "dangerLevel": 2,
+        "ethicalInteraction": "observe_from_distance",
+        "timeRange": "Present",
+        "diet": "Unknown",
+        "activity": "Diurnal",
+        "size": "varies",
+        "behavior": "Wave F encounter taxon",
+        "learningTopics": [
+          "mammal",
+          "deep_marine"
+        ],
+        "funFacts": [],
+        "whyItMatters": "Balaenoptera physalus is a real taxon used for Alpha encounter coverage."
+      },
+      "provenance": [
+        {
+          "source": "game_authored",
+          "sourceVersion": "wave-f-alpha-2026-08",
+          "sourceRecordId": "balaenoptera_physalus",
+          "gbifTaxonKey": 2440718,
+          "license": "GAME-ORIGINAL",
+          "citation": "Archive of Life Wave F authored encounter entry for Balaenoptera physalus (real taxon; not a live COL/GBIF ingest claim)",
+          "citationRequired": false,
+          "retrievedAt": "2026-08-07T19:00:00.000Z",
+          "lastUpdated": "2026-08-07T19:00:00.000Z",
+          "isMockData": false,
+          "verificationStatus": "game_authored_verified"
+        },
+        {
+          "source": "gbif",
+          "sourceVersion": "public-key-reference",
+          "sourceRecordId": "2440718",
+          "gbifTaxonKey": 2440718,
+          "license": "CC-BY-4.0",
+          "citation": "GBIF taxon key 2440718 referenced for Balaenoptera physalus; live occurrence fetch via ScientificIngestionService",
+          "citationRequired": true,
+          "retrievedAt": "2026-08-07T19:00:00.000Z",
+          "lastUpdated": "2026-08-07T19:00:00.000Z",
+          "isMockData": false,
+          "verificationStatus": "needs_source_verification"
+        }
+      ]
+    }
+  ]
+}

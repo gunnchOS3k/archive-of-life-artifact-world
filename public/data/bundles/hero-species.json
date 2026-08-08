@@ -74,7 +74,7 @@
         "timeRange": "Present",
         "diet": "Carnivore",
         "activity": "Crepuscular",
-        "size": "1.2–1.8 m body length",
+        "size": "1.2\u20131.8 m body length",
         "behavior": "Social pride hunter; cooperative group living",
         "learningTopics": [
           "social behavior",
@@ -124,7 +124,7 @@
           "sourceRecordId": "MOCK-panthera_leo",
           "catalogueOfLifeId": "MOCK-COL-panthera_leo",
           "license": "MOCK-SAMPLE",
-          "citation": "MOCK SAMPLE — not sourced from live API; requires approved source snapshot import",
+          "citation": "MOCK SAMPLE \u2014 not sourced from live API; requires approved source snapshot import",
           "citationRequired": true,
           "retrievedAt": "2026-07-05T03:27:29.538Z",
           "lastUpdated": "2026-07-05T03:27:29.538Z",
@@ -275,7 +275,7 @@
           "sourceRecordId": "MOCK-loxodonta_africana",
           "catalogueOfLifeId": "MOCK-COL-loxodonta_africana",
           "license": "MOCK-SAMPLE",
-          "citation": "MOCK SAMPLE — not sourced from live API; requires approved source snapshot import",
+          "citation": "MOCK SAMPLE \u2014 not sourced from live API; requires approved source snapshot import",
           "citationRequired": true,
           "retrievedAt": "2026-07-05T03:27:29.538Z",
           "lastUpdated": "2026-07-05T03:27:29.538Z",
@@ -361,7 +361,7 @@
         "timeRange": "Present",
         "diet": "Carnivore",
         "activity": "Crepuscular",
-        "size": "1.0–1.6 m body length",
+        "size": "1.0\u20131.6 m body length",
         "behavior": "Pack hunter with complex social hierarchy",
         "learningTopics": [
           "pack behavior",
@@ -418,7 +418,7 @@
           "sourceRecordId": "MOCK-canis_lupus",
           "catalogueOfLifeId": "MOCK-COL-canis_lupus",
           "license": "MOCK-SAMPLE",
-          "citation": "MOCK SAMPLE — not sourced from live API; requires approved source snapshot import",
+          "citation": "MOCK SAMPLE \u2014 not sourced from live API; requires approved source snapshot import",
           "citationRequired": true,
           "retrievedAt": "2026-07-05T03:27:29.539Z",
           "lastUpdated": "2026-07-05T03:27:29.539Z",
@@ -501,7 +501,7 @@
         "timeRange": "Present",
         "diet": "Herbivore",
         "activity": "Crepuscular",
-        "size": "0.9–1.1 m shoulder height",
+        "size": "0.9\u20131.1 m shoulder height",
         "behavior": "Alert grazer; seasonal antler growth in males",
         "learningTopics": [
           "herbivory",
@@ -580,7 +580,7 @@
           "sourceRecordId": "MOCK-odocoileus_virginianus",
           "catalogueOfLifeId": "MOCK-COL-odocoileus_virginianus",
           "license": "MOCK-SAMPLE",
-          "citation": "MOCK SAMPLE — not sourced from live API; requires approved source snapshot import",
+          "citation": "MOCK SAMPLE \u2014 not sourced from live API; requires approved source snapshot import",
           "citationRequired": true,
           "retrievedAt": "2026-07-05T03:27:29.539Z",
           "lastUpdated": "2026-07-05T03:27:29.539Z",
@@ -662,7 +662,7 @@
         "timeRange": "Present",
         "diet": "Carnivore (filter feeder)",
         "activity": "Diurnal",
-        "size": "Up to 30 m — largest animal ever",
+        "size": "Up to 30 m \u2014 largest animal ever",
         "behavior": "Long-distance ocean migrant; vocal communication",
         "learningTopics": [
           "marine ecosystems",
@@ -720,7 +720,7 @@
           "sourceRecordId": "MOCK-balaenoptera_musculus",
           "catalogueOfLifeId": "MOCK-COL-balaenoptera_musculus",
           "license": "MOCK-SAMPLE",
-          "citation": "MOCK SAMPLE — not sourced from live API; requires approved source snapshot import",
+          "citation": "MOCK SAMPLE \u2014 not sourced from live API; requires approved source snapshot import",
           "citationRequired": true,
           "retrievedAt": "2026-07-05T03:27:29.539Z",
           "lastUpdated": "2026-07-05T03:27:29.539Z",
@@ -802,7 +802,7 @@
         "timeRange": "Present",
         "diet": "Omnivore",
         "activity": "Diurnal",
-        "size": "1.2–1.8 m body length",
+        "size": "1.2\u20131.8 m body length",
         "behavior": "Solitary forager; hibernates in winter",
         "learningTopics": [
           "omnivory",
@@ -811,7 +811,7 @@
         ],
         "funFacts": [
           "Can run 50 km/h despite size",
-          "Excellent sense of smell — 7x better than dogs"
+          "Excellent sense of smell \u2014 7x better than dogs"
         ],
         "whyItMatters": "Umbrella species for forest conservation planning."
       },
@@ -859,7 +859,7 @@
           "sourceRecordId": "MOCK-ursus_americanus",
           "catalogueOfLifeId": "MOCK-COL-ursus_americanus",
           "license": "MOCK-SAMPLE",
-          "citation": "MOCK SAMPLE — not sourced from live API; requires approved source snapshot import",
+          "citation": "MOCK SAMPLE \u2014 not sourced from live API; requires approved source snapshot import",
           "citationRequired": true,
           "retrievedAt": "2026-07-05T03:27:29.539Z",
           "lastUpdated": "2026-07-05T03:27:29.539Z",
@@ -941,7 +941,7 @@
         "timeRange": "Present",
         "diet": "Herbivore",
         "activity": "Nocturnal",
-        "size": "0.7–1.0 m body length",
+        "size": "0.7\u20131.0 m body length",
         "behavior": "Ecosystem engineer; builds dams and lodges",
         "learningTopics": [
           "ecosystem engineering",
@@ -1004,7 +1004,7 @@
           "sourceRecordId": "MOCK-castor_canadensis",
           "catalogueOfLifeId": "MOCK-COL-castor_canadensis",
           "license": "MOCK-SAMPLE",
-          "citation": "MOCK SAMPLE — not sourced from live API; requires approved source snapshot import",
+          "citation": "MOCK SAMPLE \u2014 not sourced from live API; requires approved source snapshot import",
           "citationRequired": true,
           "retrievedAt": "2026-07-05T03:27:29.539Z",
           "lastUpdated": "2026-07-05T03:27:29.539Z",
@@ -1087,7 +1087,7 @@
         "timeRange": "Present",
         "diet": "Carnivore",
         "activity": "Diurnal",
-        "size": "0.6–1.0 m body length",
+        "size": "0.6\u20131.0 m body length",
         "behavior": "Playful swimmer; uses slides on riverbanks",
         "learningTopics": [
           "aquatic adaptation",
@@ -1150,7 +1150,7 @@
           "sourceRecordId": "MOCK-lontra_canadensis",
           "catalogueOfLifeId": "MOCK-COL-lontra_canadensis",
           "license": "MOCK-SAMPLE",
-          "citation": "MOCK SAMPLE — not sourced from live API; requires approved source snapshot import",
+          "citation": "MOCK SAMPLE \u2014 not sourced from live API; requires approved source snapshot import",
           "citationRequired": true,
           "retrievedAt": "2026-07-05T03:27:29.539Z",
           "lastUpdated": "2026-07-05T03:27:29.539Z",
@@ -1233,7 +1233,7 @@
         "timeRange": "Present",
         "diet": "Carnivore",
         "activity": "Diurnal",
-        "size": "1.5–1.9 m body length",
+        "size": "1.5\u20131.9 m body length",
         "behavior": "Social haul-out on rocks; agile swimmer",
         "learningTopics": [
           "marine mammals",
@@ -1291,7 +1291,7 @@
           "sourceRecordId": "MOCK-phoca_vitulina",
           "catalogueOfLifeId": "MOCK-COL-phoca_vitulina",
           "license": "MOCK-SAMPLE",
-          "citation": "MOCK SAMPLE — not sourced from live API; requires approved source snapshot import",
+          "citation": "MOCK SAMPLE \u2014 not sourced from live API; requires approved source snapshot import",
           "citationRequired": true,
           "retrievedAt": "2026-07-05T03:27:29.539Z",
           "lastUpdated": "2026-07-05T03:27:29.539Z",
@@ -1373,7 +1373,7 @@
         "timeRange": "Present",
         "diet": "Herbivore",
         "activity": "Diurnal",
-        "size": "1.2–1.4 m shoulder height",
+        "size": "1.2\u20131.4 m shoulder height",
         "behavior": "Social herd grazer; only truly wild horse",
         "learningTopics": [
           "conservation success",
@@ -1422,7 +1422,7 @@
           "sourceRecordId": "MOCK-equus_caballus_ferus",
           "catalogueOfLifeId": "MOCK-COL-equus_caballus_ferus",
           "license": "MOCK-SAMPLE",
-          "citation": "MOCK SAMPLE — not sourced from live API; requires approved source snapshot import",
+          "citation": "MOCK SAMPLE \u2014 not sourced from live API; requires approved source snapshot import",
           "citationRequired": true,
           "retrievedAt": "2026-07-05T03:27:29.539Z",
           "lastUpdated": "2026-07-05T03:27:29.539Z",
@@ -1506,7 +1506,7 @@
         "timeRange": "Present",
         "diet": "Herbivore (larva); Nectar (adult)",
         "activity": "Diurnal",
-        "size": "Wingspan 8.9–10.2 cm",
+        "size": "Wingspan 8.9\u201310.2 cm",
         "behavior": "Multi-generational migration up to 4,800 km",
         "learningTopics": [
           "migration",
@@ -1586,7 +1586,7 @@
           "sourceRecordId": "MOCK-danaus_plexippus",
           "catalogueOfLifeId": "MOCK-COL-danaus_plexippus",
           "license": "MOCK-SAMPLE",
-          "citation": "MOCK SAMPLE — not sourced from live API; requires approved source snapshot import",
+          "citation": "MOCK SAMPLE \u2014 not sourced from live API; requires approved source snapshot import",
           "citationRequired": true,
           "retrievedAt": "2026-07-05T03:27:29.539Z",
           "lastUpdated": "2026-07-05T03:27:29.539Z",
@@ -1671,7 +1671,7 @@
         "timeRange": "Present",
         "diet": "Herbivore (nectar/pollen)",
         "activity": "Diurnal",
-        "size": "1.2–1.5 cm body length",
+        "size": "1.2\u20131.5 cm body length",
         "behavior": "Eusocial colony; waggle dance communication",
         "learningTopics": [
           "pollination",
@@ -1744,7 +1744,7 @@
           "sourceRecordId": "MOCK-apis_mellifera",
           "catalogueOfLifeId": "MOCK-COL-apis_mellifera",
           "license": "MOCK-SAMPLE",
-          "citation": "MOCK SAMPLE — not sourced from live API; requires approved source snapshot import",
+          "citation": "MOCK SAMPLE \u2014 not sourced from live API; requires approved source snapshot import",
           "citationRequired": true,
           "retrievedAt": "2026-07-05T03:27:29.539Z",
           "lastUpdated": "2026-07-05T03:27:29.539Z",
@@ -1825,7 +1825,7 @@
         "timeRange": "Present",
         "diet": "Omnivore",
         "activity": "Diurnal",
-        "size": "4.5–9 mm workers",
+        "size": "4.5\u20139 mm workers",
         "behavior": "Large mound-building colonies; chemical communication",
         "learningTopics": [
           "colony behavior",
@@ -1882,7 +1882,7 @@
           "sourceRecordId": "MOCK-formica_rufa",
           "catalogueOfLifeId": "MOCK-COL-formica_rufa",
           "license": "MOCK-SAMPLE",
-          "citation": "MOCK SAMPLE — not sourced from live API; requires approved source snapshot import",
+          "citation": "MOCK SAMPLE \u2014 not sourced from live API; requires approved source snapshot import",
           "citationRequired": true,
           "retrievedAt": "2026-07-05T03:27:29.539Z",
           "lastUpdated": "2026-07-05T03:27:29.539Z",
@@ -1965,7 +1965,7 @@
         "timeRange": "Present",
         "diet": "Carnivore",
         "activity": "Diurnal",
-        "size": "Wingspan 7.0–8.0 cm",
+        "size": "Wingspan 7.0\u20138.0 cm",
         "behavior": "Aerial predator; migratory",
         "learningTopics": [
           "flight mechanics",
@@ -2028,7 +2028,7 @@
           "sourceRecordId": "MOCK-anax_junius",
           "catalogueOfLifeId": "MOCK-COL-anax_junius",
           "license": "MOCK-SAMPLE",
-          "citation": "MOCK SAMPLE — not sourced from live API; requires approved source snapshot import",
+          "citation": "MOCK SAMPLE \u2014 not sourced from live API; requires approved source snapshot import",
           "citationRequired": true,
           "retrievedAt": "2026-07-05T03:27:29.539Z",
           "lastUpdated": "2026-07-05T03:27:29.539Z",
@@ -2111,7 +2111,7 @@
         "timeRange": "Present",
         "diet": "Carnivore",
         "activity": "Nocturnal",
-        "size": "Body 8–13 mm",
+        "size": "Body 8\u201313 mm",
         "behavior": "Web-building ambush predator",
         "learningTopics": [
           "web physics",
@@ -2150,7 +2150,7 @@
           "sourceRecordId": "MOCK-latrodectus_mactans",
           "catalogueOfLifeId": "MOCK-COL-latrodectus_mactans",
           "license": "MOCK-SAMPLE",
-          "citation": "MOCK SAMPLE — not sourced from live API; requires approved source snapshot import",
+          "citation": "MOCK SAMPLE \u2014 not sourced from live API; requires approved source snapshot import",
           "citationRequired": true,
           "retrievedAt": "2026-07-05T03:27:29.539Z",
           "lastUpdated": "2026-07-05T03:27:29.539Z",
@@ -2305,7 +2305,7 @@
           "sourceRecordId": "MOCK-dynastes_hercules",
           "catalogueOfLifeId": "MOCK-COL-dynastes_hercules",
           "license": "MOCK-SAMPLE",
-          "citation": "MOCK SAMPLE — not sourced from live API; requires approved source snapshot import",
+          "citation": "MOCK SAMPLE \u2014 not sourced from live API; requires approved source snapshot import",
           "citationRequired": true,
           "retrievedAt": "2026-07-05T03:27:29.539Z",
           "lastUpdated": "2026-07-05T03:27:29.539Z",
@@ -2388,7 +2388,7 @@
         "timeRange": "Present",
         "diet": "Carnivore",
         "activity": "Diurnal",
-        "size": "Wingspan 7.0–8.5 cm",
+        "size": "Wingspan 7.0\u20138.5 cm",
         "behavior": "Territorial perch-hunter over water",
         "learningTopics": [
           "flight",
@@ -2397,7 +2397,7 @@
         ],
         "funFacts": [
           "Four wings move independently",
-          "Nearly 360° vision"
+          "Nearly 360\u00b0 vision"
         ],
         "whyItMatters": "Top aerial predator in pond ecosystems."
       },
@@ -2451,7 +2451,7 @@
           "sourceRecordId": "MOCK-libellula_quadrimaculata",
           "catalogueOfLifeId": "MOCK-COL-libellula_quadrimaculata",
           "license": "MOCK-SAMPLE",
-          "citation": "MOCK SAMPLE — not sourced from live API; requires approved source snapshot import",
+          "citation": "MOCK SAMPLE \u2014 not sourced from live API; requires approved source snapshot import",
           "citationRequired": true,
           "retrievedAt": "2026-07-05T03:27:29.539Z",
           "lastUpdated": "2026-07-05T03:27:29.539Z",
@@ -2534,7 +2534,7 @@
         "timeRange": "Present",
         "diet": "Herbivore (nectar/pollen)",
         "activity": "Diurnal",
-        "size": "1.5–2.0 cm body length",
+        "size": "1.5\u20132.0 cm body length",
         "behavior": "Colony nesting; buzz pollination",
         "learningTopics": [
           "pollination",
@@ -2607,7 +2607,7 @@
           "sourceRecordId": "MOCK-bombus_terrestris",
           "catalogueOfLifeId": "MOCK-COL-bombus_terrestris",
           "license": "MOCK-SAMPLE",
-          "citation": "MOCK SAMPLE — not sourced from live API; requires approved source snapshot import",
+          "citation": "MOCK SAMPLE \u2014 not sourced from live API; requires approved source snapshot import",
           "citationRequired": true,
           "retrievedAt": "2026-07-05T03:27:29.539Z",
           "lastUpdated": "2026-07-05T03:27:29.539Z",
@@ -2727,7 +2727,7 @@
           "sourceRecordId": "MOCK-acanthoscurria_geniculata",
           "catalogueOfLifeId": "MOCK-COL-acanthoscurria_geniculata",
           "license": "MOCK-SAMPLE",
-          "citation": "MOCK SAMPLE — not sourced from live API; requires approved source snapshot import",
+          "citation": "MOCK SAMPLE \u2014 not sourced from live API; requires approved source snapshot import",
           "citationRequired": true,
           "retrievedAt": "2026-07-05T03:27:29.539Z",
           "lastUpdated": "2026-07-05T03:27:29.539Z",
@@ -2809,7 +2809,7 @@
         "timeRange": "Present",
         "diet": "Herbivore (fruit/flowers)",
         "activity": "Diurnal",
-        "size": "2.5–3.5 cm body length",
+        "size": "2.5\u20133.5 cm body length",
         "behavior": "Bright coloration; larvae in compost",
         "learningTopics": [
           "decomposition",
@@ -2858,7 +2858,7 @@
           "sourceRecordId": "MOCK-pachnoda_marginata",
           "catalogueOfLifeId": "MOCK-COL-pachnoda_marginata",
           "license": "MOCK-SAMPLE",
-          "citation": "MOCK SAMPLE — not sourced from live API; requires approved source snapshot import",
+          "citation": "MOCK SAMPLE \u2014 not sourced from live API; requires approved source snapshot import",
           "citationRequired": true,
           "retrievedAt": "2026-07-05T03:27:29.539Z",
           "lastUpdated": "2026-07-05T03:27:29.539Z",
@@ -2912,13 +2912,13 @@
         ]
       },
       "fossil": {
-        "timeRange": "Pleistocene–Holocene (extinct ~4,000 years ago)",
+        "timeRange": "Pleistocene\u2013Holocene (extinct ~4,000 years ago)",
         "fossilLocations": [
           "Siberia",
           "Alaska",
           "Yukon"
         ],
-        "paleoenvironment": "Mammoth steppe — cold grassland",
+        "paleoenvironment": "Mammoth steppe \u2014 cold grassland",
         "livingRelatives": [
           "Asian Elephant"
         ],
@@ -2954,7 +2954,7 @@
         "questType": "fossil",
         "dangerLevel": 0,
         "ethicalInteraction": "excavate_carefully",
-        "timeRange": "Pleistocene–Holocene (extinct ~4,000 years ago)",
+        "timeRange": "Pleistocene\u2013Holocene (extinct ~4,000 years ago)",
         "diet": "Herbivore",
         "activity": "Diurnal",
         "size": "Up to 3.4 m shoulder height",
@@ -3010,7 +3010,7 @@
           "sourceRecordId": "MOCK-mammuthus_primigenius",
           "paleobiodbTaxonNo": 257354,
           "license": "MOCK-SAMPLE",
-          "citation": "MOCK SAMPLE — not sourced from live API; requires approved source snapshot import",
+          "citation": "MOCK SAMPLE \u2014 not sourced from live API; requires approved source snapshot import",
           "citationRequired": true,
           "retrievedAt": "2026-07-05T03:27:29.539Z",
           "lastUpdated": "2026-07-05T03:27:29.539Z",
@@ -3063,7 +3063,7 @@
         ]
       },
       "fossil": {
-        "timeRange": "Late Cretaceous (~68–66 Ma)",
+        "timeRange": "Late Cretaceous (~68\u201366 Ma)",
         "fossilLocations": [
           "Montana",
           "South Dakota",
@@ -3106,7 +3106,7 @@
         "questType": "fossil",
         "dangerLevel": 0,
         "ethicalInteraction": "excavate_carefully",
-        "timeRange": "Late Cretaceous (~68–66 Ma)",
+        "timeRange": "Late Cretaceous (~68\u201366 Ma)",
         "diet": "Carnivore",
         "activity": "Unknown (likely crepuscular)",
         "size": "Up to 12.3 m body length",
@@ -3181,7 +3181,7 @@
           "sourceRecordId": "MOCK-tyrannosaurus_rex",
           "paleobiodbTaxonNo": 305798,
           "license": "MOCK-SAMPLE",
-          "citation": "MOCK SAMPLE — not sourced from live API; requires approved source snapshot import",
+          "citation": "MOCK SAMPLE \u2014 not sourced from live API; requires approved source snapshot import",
           "citationRequired": true,
           "retrievedAt": "2026-07-05T03:27:29.539Z",
           "lastUpdated": "2026-07-05T03:27:29.539Z",
@@ -3237,7 +3237,7 @@
         ]
       },
       "fossil": {
-        "timeRange": "Cambrian–Permian (~521–252 Ma)",
+        "timeRange": "Cambrian\u2013Permian (~521\u2013252 Ma)",
         "fossilLocations": [
           "Morocco",
           "Utah",
@@ -3280,7 +3280,7 @@
         "questType": "fossil",
         "dangerLevel": 0,
         "ethicalInteraction": "excavate_carefully",
-        "timeRange": "Cambrian–Permian (~521–252 Ma)",
+        "timeRange": "Cambrian\u2013Permian (~521\u2013252 Ma)",
         "diet": "Varied (detritivore, predator, filter feeder)",
         "activity": "Unknown",
         "size": "1 mm to 72 cm",
@@ -3336,12 +3336,145 @@
           "sourceRecordId": "MOCK-trilobita_order",
           "paleobiodbTaxonNo": 447527,
           "license": "MOCK-SAMPLE",
-          "citation": "MOCK SAMPLE — not sourced from live API; requires approved source snapshot import",
+          "citation": "MOCK SAMPLE \u2014 not sourced from live API; requires approved source snapshot import",
           "citationRequired": true,
           "retrievedAt": "2026-07-05T03:27:29.539Z",
           "lastUpdated": "2026-07-05T03:27:29.539Z",
           "isMockData": true,
           "verificationStatus": "mock_sample"
+        }
+      ]
+    },
+    {
+      "id": "ursus_maritimus",
+      "commonName": "Polar Bear",
+      "scientificName": "Ursus maritimus",
+      "group": "Mammal",
+      "tier": "hero",
+      "representationTier": 6,
+      "lifeStatus": "extant",
+      "timeUnitIds": [
+        "pleistocene",
+        "holocene"
+      ],
+      "taxonomy": {
+        "family": "Ursidae",
+        "rank": "species",
+        "acceptedName": "Ursus maritimus",
+        "catalogueOfLifeId": "NEEDS-LIVE-COL-LOOKUP"
+      },
+      "conservation": {
+        "iucnCategory": "Vulnerable",
+        "assessed": true,
+        "sourceVersion": "wave-f-alpha",
+        "lastUpdated": "2026-08-07",
+        "iucnTaxonId": 22823
+      },
+      "distribution": {
+        "continents": [
+          "Arctic"
+        ],
+        "habitats": [
+          "polar_ice",
+          "sea_ice"
+        ],
+        "sourceVersion": "wave-f-alpha",
+        "lastUpdated": "2026-08-07",
+        "gbifTaxonKey": 2433406,
+        "occurrenceSummaries": [
+          {
+            "region": "Arctic",
+            "occurrenceCount": 0
+          }
+        ]
+      },
+      "artifactTemplates": [
+        {
+          "id": "ursus_maritimus_track_cast",
+          "artifactType": "track_cast",
+          "label": "track cast",
+          "ethical": true,
+          "description": "Ethical track cast"
+        },
+        {
+          "id": "ursus_maritimus_behavioral_field_note",
+          "artifactType": "behavioral_field_note",
+          "label": "behavioral field note",
+          "ethical": true,
+          "description": "Ethical field note"
+        }
+      ],
+      "gameplay": {
+        "region": "polar_ice",
+        "questType": "tracking_observation",
+        "dangerLevel": 5,
+        "ethicalInteraction": "observe_from_distance",
+        "timeRange": "Present",
+        "diet": "Carnivore",
+        "activity": "Diurnal",
+        "size": "2\u20132.5 m",
+        "behavior": "Sea-ice dependent apex predator",
+        "learningTopics": [
+          "cryosphere",
+          "apex predators",
+          "climate"
+        ],
+        "funFacts": [
+          "Depends on sea ice to hunt seals"
+        ],
+        "whyItMatters": "Flagship indicator of Arctic sea-ice ecosystems."
+      },
+      "nasaLayerDependencies": [
+        {
+          "layer": "forest_structure",
+          "product": "gedi",
+          "reason": "Canopy structure shapes arboreal and forest-floor species niches"
+        },
+        {
+          "layer": "vegetation",
+          "product": "hls",
+          "reason": "NDVI tracks seasonal canopy and understory productivity"
+        },
+        {
+          "layer": "climate",
+          "product": "power",
+          "reason": "Field expedition planning uses local climate baselines"
+        }
+      ],
+      "requiredHabitatSignals": [
+        {
+          "signal": "dense_canopy",
+          "layer": "forest_structure",
+          "required": true,
+          "description": "Requires closed or partial canopy cover"
+        }
+      ],
+      "provenance": [
+        {
+          "source": "game_authored",
+          "sourceVersion": "wave-f-alpha-2026-08",
+          "sourceRecordId": "ursus_maritimus",
+          "gbifTaxonKey": 2433406,
+          "license": "GAME-ORIGINAL",
+          "citation": "Archive of Life Wave F flagship: Ursus maritimus (real taxon; COL id pending live lookup)",
+          "citationRequired": false,
+          "retrievedAt": "2026-08-07T19:00:00.000Z",
+          "lastUpdated": "2026-08-07T19:00:00.000Z",
+          "isMockData": false,
+          "verificationStatus": "game_authored_verified"
+        },
+        {
+          "source": "gbif",
+          "sourceVersion": "public-key-reference",
+          "sourceRecordId": "2433406",
+          "gbifTaxonKey": 2433406,
+          "license": "CC-BY-4.0",
+          "citation": "GBIF taxon key 2433406 for Ursus maritimus \u2014 live occurrences via ScientificIngestionService",
+          "citationRequired": true,
+          "retrievedAt": "2026-08-07T19:00:00.000Z",
+          "lastUpdated": "2026-08-07T19:00:00.000Z",
+          "isMockData": false,
+          "verificationStatus": "needs_source_verification"
         }
       ]
     }

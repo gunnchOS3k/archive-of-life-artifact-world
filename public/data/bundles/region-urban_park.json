@@ -1,0 +1,871 @@
+{
+  "regionId": "urban_park",
+  "speciesIds": [
+    "passer_domesticus",
+    "columba_livia",
+    "rattus_norvegicus",
+    "felis_catus",
+    "sciurus_carolinensis",
+    "corvus_brachyrhynchos",
+    "turdus_migratorius",
+    "apis_mellifera_urban",
+    "pieris_rapae",
+    "taraxacum_officinale",
+    "pediculus_humanus",
+    "blattella_germanica"
+  ],
+  "species": [
+    {
+      "id": "passer_domesticus",
+      "commonName": "House Sparrow",
+      "scientificName": "Passer domesticus",
+      "group": "Bird",
+      "tier": "regional",
+      "representationTier": 3,
+      "lifeStatus": "extant",
+      "timeUnitIds": [
+        "holocene"
+      ],
+      "taxonomy": {
+        "family": "Passeridae",
+        "rank": "species",
+        "acceptedName": "Passer domesticus"
+      },
+      "artifactTemplates": [
+        {
+          "id": "passer_domesticus_field_note",
+          "artifactType": "behavioral_field_note",
+          "label": "field note",
+          "ethical": true,
+          "description": "Ethical field documentation of House Sparrow"
+        }
+      ],
+      "gameplay": {
+        "region": "urban_park",
+        "questType": "observation",
+        "dangerLevel": 2,
+        "ethicalInteraction": "observe_from_distance",
+        "timeRange": "Present",
+        "diet": "Unknown",
+        "activity": "Diurnal",
+        "size": "varies",
+        "behavior": "Wave F encounter taxon",
+        "learningTopics": [
+          "bird",
+          "urban_park"
+        ],
+        "funFacts": [],
+        "whyItMatters": "Passer domesticus is a real taxon used for Alpha encounter coverage."
+      },
+      "provenance": [
+        {
+          "source": "game_authored",
+          "sourceVersion": "wave-f-alpha-2026-08",
+          "sourceRecordId": "passer_domesticus",
+          "gbifTaxonKey": 5231190,
+          "license": "GAME-ORIGINAL",
+          "citation": "Archive of Life Wave F authored encounter entry for Passer domesticus (real taxon; not a live COL/GBIF ingest claim)",
+          "citationRequired": false,
+          "retrievedAt": "2026-08-07T19:00:00.000Z",
+          "lastUpdated": "2026-08-07T19:00:00.000Z",
+          "isMockData": false,
+          "verificationStatus": "game_authored_verified"
+        },
+        {
+          "source": "gbif",
+          "sourceVersion": "public-key-reference",
+          "sourceRecordId": "5231190",
+          "gbifTaxonKey": 5231190,
+          "license": "CC-BY-4.0",
+          "citation": "GBIF taxon key 5231190 referenced for Passer domesticus; live occurrence fetch via ScientificIngestionService",
+          "citationRequired": true,
+          "retrievedAt": "2026-08-07T19:00:00.000Z",
+          "lastUpdated": "2026-08-07T19:00:00.000Z",
+          "isMockData": false,
+          "verificationStatus": "needs_source_verification"
+        }
+      ]
+    },
+    {
+      "id": "columba_livia",
+      "commonName": "Rock Dove",
+      "scientificName": "Columba livia",
+      "group": "Bird",
+      "tier": "regional",
+      "representationTier": 3,
+      "lifeStatus": "extant",
+      "timeUnitIds": [
+        "holocene"
+      ],
+      "taxonomy": {
+        "family": "Columbidae",
+        "rank": "species",
+        "acceptedName": "Columba livia"
+      },
+      "artifactTemplates": [
+        {
+          "id": "columba_livia_field_note",
+          "artifactType": "behavioral_field_note",
+          "label": "field note",
+          "ethical": true,
+          "description": "Ethical field documentation of Rock Dove"
+        }
+      ],
+      "gameplay": {
+        "region": "urban_park",
+        "questType": "observation",
+        "dangerLevel": 2,
+        "ethicalInteraction": "observe_from_distance",
+        "timeRange": "Present",
+        "diet": "Unknown",
+        "activity": "Diurnal",
+        "size": "varies",
+        "behavior": "Wave F encounter taxon",
+        "learningTopics": [
+          "bird",
+          "urban_park"
+        ],
+        "funFacts": [],
+        "whyItMatters": "Columba livia is a real taxon used for Alpha encounter coverage."
+      },
+      "provenance": [
+        {
+          "source": "game_authored",
+          "sourceVersion": "wave-f-alpha-2026-08",
+          "sourceRecordId": "columba_livia",
+          "gbifTaxonKey": 2495435,
+          "license": "GAME-ORIGINAL",
+          "citation": "Archive of Life Wave F authored encounter entry for Columba livia (real taxon; not a live COL/GBIF ingest claim)",
+          "citationRequired": false,
+          "retrievedAt": "2026-08-07T19:00:00.000Z",
+          "lastUpdated": "2026-08-07T19:00:00.000Z",
+          "isMockData": false,
+          "verificationStatus": "game_authored_verified"
+        },
+        {
+          "source": "gbif",
+          "sourceVersion": "public-key-reference",
+          "sourceRecordId": "2495435",
+          "gbifTaxonKey": 2495435,
+          "license": "CC-BY-4.0",
+          "citation": "GBIF taxon key 2495435 referenced for Columba livia; live occurrence fetch via ScientificIngestionService",
+          "citationRequired": true,
+          "retrievedAt": "2026-08-07T19:00:00.000Z",
+          "lastUpdated": "2026-08-07T19:00:00.000Z",
+          "isMockData": false,
+          "verificationStatus": "needs_source_verification"
+        }
+      ]
+    },
+    {
+      "id": "rattus_norvegicus",
+      "commonName": "Brown Rat",
+      "scientificName": "Rattus norvegicus",
+      "group": "Mammal",
+      "tier": "regional",
+      "representationTier": 3,
+      "lifeStatus": "extant",
+      "timeUnitIds": [
+        "holocene"
+      ],
+      "taxonomy": {
+        "family": "Muridae",
+        "rank": "species",
+        "acceptedName": "Rattus norvegicus"
+      },
+      "artifactTemplates": [
+        {
+          "id": "rattus_norvegicus_field_note",
+          "artifactType": "behavioral_field_note",
+          "label": "field note",
+          "ethical": true,
+          "description": "Ethical field documentation of Brown Rat"
+        }
+      ],
+      "gameplay": {
+        "region": "urban_park",
+        "questType": "observation",
+        "dangerLevel": 2,
+        "ethicalInteraction": "observe_from_distance",
+        "timeRange": "Present",
+        "diet": "Unknown",
+        "activity": "Diurnal",
+        "size": "varies",
+        "behavior": "Wave F encounter taxon",
+        "learningTopics": [
+          "mammal",
+          "urban_park"
+        ],
+        "funFacts": [],
+        "whyItMatters": "Rattus norvegicus is a real taxon used for Alpha encounter coverage."
+      },
+      "provenance": [
+        {
+          "source": "game_authored",
+          "sourceVersion": "wave-f-alpha-2026-08",
+          "sourceRecordId": "rattus_norvegicus",
+          "gbifTaxonKey": 2439270,
+          "license": "GAME-ORIGINAL",
+          "citation": "Archive of Life Wave F authored encounter entry for Rattus norvegicus (real taxon; not a live COL/GBIF ingest claim)",
+          "citationRequired": false,
+          "retrievedAt": "2026-08-07T19:00:00.000Z",
+          "lastUpdated": "2026-08-07T19:00:00.000Z",
+          "isMockData": false,
+          "verificationStatus": "game_authored_verified"
+        },
+        {
+          "source": "gbif",
+          "sourceVersion": "public-key-reference",
+          "sourceRecordId": "2439270",
+          "gbifTaxonKey": 2439270,
+          "license": "CC-BY-4.0",
+          "citation": "GBIF taxon key 2439270 referenced for Rattus norvegicus; live occurrence fetch via ScientificIngestionService",
+          "citationRequired": true,
+          "retrievedAt": "2026-08-07T19:00:00.000Z",
+          "lastUpdated": "2026-08-07T19:00:00.000Z",
+          "isMockData": false,
+          "verificationStatus": "needs_source_verification"
+        }
+      ]
+    },
+    {
+      "id": "felis_catus",
+      "commonName": "Domestic Cat",
+      "scientificName": "Felis catus",
+      "group": "Mammal",
+      "tier": "regional",
+      "representationTier": 2,
+      "lifeStatus": "extant",
+      "timeUnitIds": [
+        "holocene"
+      ],
+      "taxonomy": {
+        "family": "Felidae",
+        "rank": "species",
+        "acceptedName": "Felis catus"
+      },
+      "artifactTemplates": [
+        {
+          "id": "felis_catus_field_note",
+          "artifactType": "behavioral_field_note",
+          "label": "field note",
+          "ethical": true,
+          "description": "Ethical field documentation of Domestic Cat"
+        }
+      ],
+      "gameplay": {
+        "region": "urban_park",
+        "questType": "observation",
+        "dangerLevel": 2,
+        "ethicalInteraction": "observe_from_distance",
+        "timeRange": "Present",
+        "diet": "Unknown",
+        "activity": "Diurnal",
+        "size": "varies",
+        "behavior": "Wave F encounter taxon",
+        "learningTopics": [
+          "mammal",
+          "urban_park"
+        ],
+        "funFacts": [],
+        "whyItMatters": "Felis catus is a real taxon used for Alpha encounter coverage."
+      },
+      "provenance": [
+        {
+          "source": "game_authored",
+          "sourceVersion": "wave-f-alpha-2026-08",
+          "sourceRecordId": "felis_catus",
+          "gbifTaxonKey": 2435035,
+          "license": "GAME-ORIGINAL",
+          "citation": "Archive of Life Wave F authored encounter entry for Felis catus (real taxon; not a live COL/GBIF ingest claim)",
+          "citationRequired": false,
+          "retrievedAt": "2026-08-07T19:00:00.000Z",
+          "lastUpdated": "2026-08-07T19:00:00.000Z",
+          "isMockData": false,
+          "verificationStatus": "game_authored_verified"
+        },
+        {
+          "source": "gbif",
+          "sourceVersion": "public-key-reference",
+          "sourceRecordId": "2435035",
+          "gbifTaxonKey": 2435035,
+          "license": "CC-BY-4.0",
+          "citation": "GBIF taxon key 2435035 referenced for Felis catus; live occurrence fetch via ScientificIngestionService",
+          "citationRequired": true,
+          "retrievedAt": "2026-08-07T19:00:00.000Z",
+          "lastUpdated": "2026-08-07T19:00:00.000Z",
+          "isMockData": false,
+          "verificationStatus": "needs_source_verification"
+        }
+      ]
+    },
+    {
+      "id": "sciurus_carolinensis",
+      "commonName": "Eastern Gray Squirrel",
+      "scientificName": "Sciurus carolinensis",
+      "group": "Mammal",
+      "tier": "regional",
+      "representationTier": 3,
+      "lifeStatus": "extant",
+      "timeUnitIds": [
+        "holocene"
+      ],
+      "taxonomy": {
+        "family": "Sciuridae",
+        "rank": "species",
+        "acceptedName": "Sciurus carolinensis"
+      },
+      "artifactTemplates": [
+        {
+          "id": "sciurus_carolinensis_field_note",
+          "artifactType": "behavioral_field_note",
+          "label": "field note",
+          "ethical": true,
+          "description": "Ethical field documentation of Eastern Gray Squirrel"
+        }
+      ],
+      "gameplay": {
+        "region": "urban_park",
+        "questType": "observation",
+        "dangerLevel": 2,
+        "ethicalInteraction": "observe_from_distance",
+        "timeRange": "Present",
+        "diet": "Unknown",
+        "activity": "Diurnal",
+        "size": "varies",
+        "behavior": "Wave F encounter taxon",
+        "learningTopics": [
+          "mammal",
+          "urban_park"
+        ],
+        "funFacts": [],
+        "whyItMatters": "Sciurus carolinensis is a real taxon used for Alpha encounter coverage."
+      },
+      "provenance": [
+        {
+          "source": "game_authored",
+          "sourceVersion": "wave-f-alpha-2026-08",
+          "sourceRecordId": "sciurus_carolinensis",
+          "gbifTaxonKey": 5219681,
+          "license": "GAME-ORIGINAL",
+          "citation": "Archive of Life Wave F authored encounter entry for Sciurus carolinensis (real taxon; not a live COL/GBIF ingest claim)",
+          "citationRequired": false,
+          "retrievedAt": "2026-08-07T19:00:00.000Z",
+          "lastUpdated": "2026-08-07T19:00:00.000Z",
+          "isMockData": false,
+          "verificationStatus": "game_authored_verified"
+        },
+        {
+          "source": "gbif",
+          "sourceVersion": "public-key-reference",
+          "sourceRecordId": "5219681",
+          "gbifTaxonKey": 5219681,
+          "license": "CC-BY-4.0",
+          "citation": "GBIF taxon key 5219681 referenced for Sciurus carolinensis; live occurrence fetch via ScientificIngestionService",
+          "citationRequired": true,
+          "retrievedAt": "2026-08-07T19:00:00.000Z",
+          "lastUpdated": "2026-08-07T19:00:00.000Z",
+          "isMockData": false,
+          "verificationStatus": "needs_source_verification"
+        }
+      ]
+    },
+    {
+      "id": "corvus_brachyrhynchos",
+      "commonName": "American Crow",
+      "scientificName": "Corvus brachyrhynchos",
+      "group": "Bird",
+      "tier": "regional",
+      "representationTier": 3,
+      "lifeStatus": "extant",
+      "timeUnitIds": [
+        "holocene"
+      ],
+      "taxonomy": {
+        "family": "Corvidae",
+        "rank": "species",
+        "acceptedName": "Corvus brachyrhynchos"
+      },
+      "artifactTemplates": [
+        {
+          "id": "corvus_brachyrhynchos_field_note",
+          "artifactType": "behavioral_field_note",
+          "label": "field note",
+          "ethical": true,
+          "description": "Ethical field documentation of American Crow"
+        }
+      ],
+      "gameplay": {
+        "region": "urban_park",
+        "questType": "observation",
+        "dangerLevel": 2,
+        "ethicalInteraction": "observe_from_distance",
+        "timeRange": "Present",
+        "diet": "Unknown",
+        "activity": "Diurnal",
+        "size": "varies",
+        "behavior": "Wave F encounter taxon",
+        "learningTopics": [
+          "bird",
+          "urban_park"
+        ],
+        "funFacts": [],
+        "whyItMatters": "Corvus brachyrhynchos is a real taxon used for Alpha encounter coverage."
+      },
+      "provenance": [
+        {
+          "source": "game_authored",
+          "sourceVersion": "wave-f-alpha-2026-08",
+          "sourceRecordId": "corvus_brachyrhynchos",
+          "gbifTaxonKey": 2482507,
+          "license": "GAME-ORIGINAL",
+          "citation": "Archive of Life Wave F authored encounter entry for Corvus brachyrhynchos (real taxon; not a live COL/GBIF ingest claim)",
+          "citationRequired": false,
+          "retrievedAt": "2026-08-07T19:00:00.000Z",
+          "lastUpdated": "2026-08-07T19:00:00.000Z",
+          "isMockData": false,
+          "verificationStatus": "game_authored_verified"
+        },
+        {
+          "source": "gbif",
+          "sourceVersion": "public-key-reference",
+          "sourceRecordId": "2482507",
+          "gbifTaxonKey": 2482507,
+          "license": "CC-BY-4.0",
+          "citation": "GBIF taxon key 2482507 referenced for Corvus brachyrhynchos; live occurrence fetch via ScientificIngestionService",
+          "citationRequired": true,
+          "retrievedAt": "2026-08-07T19:00:00.000Z",
+          "lastUpdated": "2026-08-07T19:00:00.000Z",
+          "isMockData": false,
+          "verificationStatus": "needs_source_verification"
+        }
+      ]
+    },
+    {
+      "id": "turdus_migratorius",
+      "commonName": "American Robin",
+      "scientificName": "Turdus migratorius",
+      "group": "Bird",
+      "tier": "regional",
+      "representationTier": 3,
+      "lifeStatus": "extant",
+      "timeUnitIds": [
+        "holocene"
+      ],
+      "taxonomy": {
+        "family": "Turdidae",
+        "rank": "species",
+        "acceptedName": "Turdus migratorius"
+      },
+      "artifactTemplates": [
+        {
+          "id": "turdus_migratorius_field_note",
+          "artifactType": "behavioral_field_note",
+          "label": "field note",
+          "ethical": true,
+          "description": "Ethical field documentation of American Robin"
+        }
+      ],
+      "gameplay": {
+        "region": "urban_park",
+        "questType": "observation",
+        "dangerLevel": 2,
+        "ethicalInteraction": "observe_from_distance",
+        "timeRange": "Present",
+        "diet": "Unknown",
+        "activity": "Diurnal",
+        "size": "varies",
+        "behavior": "Wave F encounter taxon",
+        "learningTopics": [
+          "bird",
+          "urban_park"
+        ],
+        "funFacts": [],
+        "whyItMatters": "Turdus migratorius is a real taxon used for Alpha encounter coverage."
+      },
+      "provenance": [
+        {
+          "source": "game_authored",
+          "sourceVersion": "wave-f-alpha-2026-08",
+          "sourceRecordId": "turdus_migratorius",
+          "gbifTaxonKey": 2490719,
+          "license": "GAME-ORIGINAL",
+          "citation": "Archive of Life Wave F authored encounter entry for Turdus migratorius (real taxon; not a live COL/GBIF ingest claim)",
+          "citationRequired": false,
+          "retrievedAt": "2026-08-07T19:00:00.000Z",
+          "lastUpdated": "2026-08-07T19:00:00.000Z",
+          "isMockData": false,
+          "verificationStatus": "game_authored_verified"
+        },
+        {
+          "source": "gbif",
+          "sourceVersion": "public-key-reference",
+          "sourceRecordId": "2490719",
+          "gbifTaxonKey": 2490719,
+          "license": "CC-BY-4.0",
+          "citation": "GBIF taxon key 2490719 referenced for Turdus migratorius; live occurrence fetch via ScientificIngestionService",
+          "citationRequired": true,
+          "retrievedAt": "2026-08-07T19:00:00.000Z",
+          "lastUpdated": "2026-08-07T19:00:00.000Z",
+          "isMockData": false,
+          "verificationStatus": "needs_source_verification"
+        }
+      ]
+    },
+    {
+      "id": "apis_mellifera_urban",
+      "commonName": "Western Honey Bee",
+      "scientificName": "Apis mellifera",
+      "group": "Insect",
+      "tier": "regional",
+      "representationTier": 3,
+      "lifeStatus": "extant",
+      "timeUnitIds": [
+        "holocene"
+      ],
+      "taxonomy": {
+        "family": "Apidae",
+        "rank": "species",
+        "acceptedName": "Apis mellifera"
+      },
+      "artifactTemplates": [
+        {
+          "id": "apis_mellifera_urban_field_note",
+          "artifactType": "behavioral_field_note",
+          "label": "field note",
+          "ethical": true,
+          "description": "Ethical field documentation of Western Honey Bee"
+        }
+      ],
+      "gameplay": {
+        "region": "urban_park",
+        "questType": "observation",
+        "dangerLevel": 2,
+        "ethicalInteraction": "observe_from_distance",
+        "timeRange": "Present",
+        "diet": "Unknown",
+        "activity": "Diurnal",
+        "size": "varies",
+        "behavior": "Wave F encounter taxon",
+        "learningTopics": [
+          "insect",
+          "urban_park"
+        ],
+        "funFacts": [],
+        "whyItMatters": "Apis mellifera is a real taxon used for Alpha encounter coverage."
+      },
+      "provenance": [
+        {
+          "source": "game_authored",
+          "sourceVersion": "wave-f-alpha-2026-08",
+          "sourceRecordId": "apis_mellifera_urban",
+          "gbifTaxonKey": 1341976,
+          "license": "GAME-ORIGINAL",
+          "citation": "Archive of Life Wave F authored encounter entry for Apis mellifera (real taxon; not a live COL/GBIF ingest claim)",
+          "citationRequired": false,
+          "retrievedAt": "2026-08-07T19:00:00.000Z",
+          "lastUpdated": "2026-08-07T19:00:00.000Z",
+          "isMockData": false,
+          "verificationStatus": "game_authored_verified"
+        },
+        {
+          "source": "gbif",
+          "sourceVersion": "public-key-reference",
+          "sourceRecordId": "1341976",
+          "gbifTaxonKey": 1341976,
+          "license": "CC-BY-4.0",
+          "citation": "GBIF taxon key 1341976 referenced for Apis mellifera; live occurrence fetch via ScientificIngestionService",
+          "citationRequired": true,
+          "retrievedAt": "2026-08-07T19:00:00.000Z",
+          "lastUpdated": "2026-08-07T19:00:00.000Z",
+          "isMockData": false,
+          "verificationStatus": "needs_source_verification"
+        }
+      ]
+    },
+    {
+      "id": "pieris_rapae",
+      "commonName": "Cabbage White",
+      "scientificName": "Pieris rapae",
+      "group": "Insect",
+      "tier": "regional",
+      "representationTier": 2,
+      "lifeStatus": "extant",
+      "timeUnitIds": [
+        "holocene"
+      ],
+      "taxonomy": {
+        "family": "Pieridae",
+        "rank": "species",
+        "acceptedName": "Pieris rapae"
+      },
+      "artifactTemplates": [
+        {
+          "id": "pieris_rapae_field_note",
+          "artifactType": "behavioral_field_note",
+          "label": "field note",
+          "ethical": true,
+          "description": "Ethical field documentation of Cabbage White"
+        }
+      ],
+      "gameplay": {
+        "region": "urban_park",
+        "questType": "observation",
+        "dangerLevel": 2,
+        "ethicalInteraction": "observe_from_distance",
+        "timeRange": "Present",
+        "diet": "Unknown",
+        "activity": "Diurnal",
+        "size": "varies",
+        "behavior": "Wave F encounter taxon",
+        "learningTopics": [
+          "insect",
+          "urban_park"
+        ],
+        "funFacts": [],
+        "whyItMatters": "Pieris rapae is a real taxon used for Alpha encounter coverage."
+      },
+      "provenance": [
+        {
+          "source": "game_authored",
+          "sourceVersion": "wave-f-alpha-2026-08",
+          "sourceRecordId": "pieris_rapae",
+          "gbifTaxonKey": 1920475,
+          "license": "GAME-ORIGINAL",
+          "citation": "Archive of Life Wave F authored encounter entry for Pieris rapae (real taxon; not a live COL/GBIF ingest claim)",
+          "citationRequired": false,
+          "retrievedAt": "2026-08-07T19:00:00.000Z",
+          "lastUpdated": "2026-08-07T19:00:00.000Z",
+          "isMockData": false,
+          "verificationStatus": "game_authored_verified"
+        },
+        {
+          "source": "gbif",
+          "sourceVersion": "public-key-reference",
+          "sourceRecordId": "1920475",
+          "gbifTaxonKey": 1920475,
+          "license": "CC-BY-4.0",
+          "citation": "GBIF taxon key 1920475 referenced for Pieris rapae; live occurrence fetch via ScientificIngestionService",
+          "citationRequired": true,
+          "retrievedAt": "2026-08-07T19:00:00.000Z",
+          "lastUpdated": "2026-08-07T19:00:00.000Z",
+          "isMockData": false,
+          "verificationStatus": "needs_source_verification"
+        }
+      ]
+    },
+    {
+      "id": "taraxacum_officinale",
+      "commonName": "Dandelion",
+      "scientificName": "Taraxacum officinale",
+      "group": "Plant",
+      "tier": "regional",
+      "representationTier": 2,
+      "lifeStatus": "extant",
+      "timeUnitIds": [
+        "holocene"
+      ],
+      "taxonomy": {
+        "family": "Asteraceae",
+        "rank": "species",
+        "acceptedName": "Taraxacum officinale"
+      },
+      "artifactTemplates": [
+        {
+          "id": "taraxacum_officinale_field_note",
+          "artifactType": "behavioral_field_note",
+          "label": "field note",
+          "ethical": true,
+          "description": "Ethical field documentation of Dandelion"
+        }
+      ],
+      "gameplay": {
+        "region": "urban_park",
+        "questType": "observation",
+        "dangerLevel": 2,
+        "ethicalInteraction": "observe_from_distance",
+        "timeRange": "Present",
+        "diet": "Unknown",
+        "activity": "Diurnal",
+        "size": "varies",
+        "behavior": "Wave F encounter taxon",
+        "learningTopics": [
+          "plant",
+          "urban_park"
+        ],
+        "funFacts": [],
+        "whyItMatters": "Taraxacum officinale is a real taxon used for Alpha encounter coverage."
+      },
+      "provenance": [
+        {
+          "source": "game_authored",
+          "sourceVersion": "wave-f-alpha-2026-08",
+          "sourceRecordId": "taraxacum_officinale",
+          "gbifTaxonKey": 3105283,
+          "license": "GAME-ORIGINAL",
+          "citation": "Archive of Life Wave F authored encounter entry for Taraxacum officinale (real taxon; not a live COL/GBIF ingest claim)",
+          "citationRequired": false,
+          "retrievedAt": "2026-08-07T19:00:00.000Z",
+          "lastUpdated": "2026-08-07T19:00:00.000Z",
+          "isMockData": false,
+          "verificationStatus": "game_authored_verified"
+        },
+        {
+          "source": "gbif",
+          "sourceVersion": "public-key-reference",
+          "sourceRecordId": "3105283",
+          "gbifTaxonKey": 3105283,
+          "license": "CC-BY-4.0",
+          "citation": "GBIF taxon key 3105283 referenced for Taraxacum officinale; live occurrence fetch via ScientificIngestionService",
+          "citationRequired": true,
+          "retrievedAt": "2026-08-07T19:00:00.000Z",
+          "lastUpdated": "2026-08-07T19:00:00.000Z",
+          "isMockData": false,
+          "verificationStatus": "needs_source_verification"
+        }
+      ]
+    },
+    {
+      "id": "pediculus_humanus",
+      "commonName": "Human Louse",
+      "scientificName": "Pediculus humanus",
+      "group": "Insect",
+      "tier": "regional",
+      "representationTier": 2,
+      "lifeStatus": "extant",
+      "timeUnitIds": [
+        "holocene"
+      ],
+      "taxonomy": {
+        "family": "Pediculidae",
+        "rank": "species",
+        "acceptedName": "Pediculus humanus"
+      },
+      "artifactTemplates": [
+        {
+          "id": "pediculus_humanus_field_note",
+          "artifactType": "behavioral_field_note",
+          "label": "field note",
+          "ethical": true,
+          "description": "Ethical field documentation of Human Louse"
+        }
+      ],
+      "gameplay": {
+        "region": "urban_park",
+        "questType": "observation",
+        "dangerLevel": 2,
+        "ethicalInteraction": "observe_from_distance",
+        "timeRange": "Present",
+        "diet": "Unknown",
+        "activity": "Diurnal",
+        "size": "varies",
+        "behavior": "Wave F encounter taxon",
+        "learningTopics": [
+          "insect",
+          "urban_park"
+        ],
+        "funFacts": [],
+        "whyItMatters": "Pediculus humanus is a real taxon used for Alpha encounter coverage."
+      },
+      "provenance": [
+        {
+          "source": "game_authored",
+          "sourceVersion": "wave-f-alpha-2026-08",
+          "sourceRecordId": "pediculus_humanus",
+          "gbifTaxonKey": 2025987,
+          "license": "GAME-ORIGINAL",
+          "citation": "Archive of Life Wave F authored encounter entry for Pediculus humanus (real taxon; not a live COL/GBIF ingest claim)",
+          "citationRequired": false,
+          "retrievedAt": "2026-08-07T19:00:00.000Z",
+          "lastUpdated": "2026-08-07T19:00:00.000Z",
+          "isMockData": false,
+          "verificationStatus": "game_authored_verified"
+        },
+        {
+          "source": "gbif",
+          "sourceVersion": "public-key-reference",
+          "sourceRecordId": "2025987",
+          "gbifTaxonKey": 2025987,
+          "license": "CC-BY-4.0",
+          "citation": "GBIF taxon key 2025987 referenced for Pediculus humanus; live occurrence fetch via ScientificIngestionService",
+          "citationRequired": true,
+          "retrievedAt": "2026-08-07T19:00:00.000Z",
+          "lastUpdated": "2026-08-07T19:00:00.000Z",
+          "isMockData": false,
+          "verificationStatus": "needs_source_verification"
+        }
+      ]
+    },
+    {
+      "id": "blattella_germanica",
+      "commonName": "German Cockroach",
+      "scientificName": "Blattella germanica",
+      "group": "Insect",
+      "tier": "regional",
+      "representationTier": 2,
+      "lifeStatus": "extant",
+      "timeUnitIds": [
+        "holocene"
+      ],
+      "taxonomy": {
+        "family": "Ectobiidae",
+        "rank": "species",
+        "acceptedName": "Blattella germanica"
+      },
+      "artifactTemplates": [
+        {
+          "id": "blattella_germanica_field_note",
+          "artifactType": "behavioral_field_note",
+          "label": "field note",
+          "ethical": true,
+          "description": "Ethical field documentation of German Cockroach"
+        }
+      ],
+      "gameplay": {
+        "region": "urban_park",
+        "questType": "observation",
+        "dangerLevel": 2,
+        "ethicalInteraction": "observe_from_distance",
+        "timeRange": "Present",
+        "diet": "Unknown",
+        "activity": "Diurnal",
+        "size": "varies",
+        "behavior": "Wave F encounter taxon",
+        "learningTopics": [
+          "insect",
+          "urban_park"
+        ],
+        "funFacts": [],
+        "whyItMatters": "Blattella germanica is a real taxon used for Alpha encounter coverage."
+      },
+      "provenance": [
+        {
+          "source": "game_authored",
+          "sourceVersion": "wave-f-alpha-2026-08",
+          "sourceRecordId": "blattella_germanica",
+          "gbifTaxonKey": 1726964,
+          "license": "GAME-ORIGINAL",
+          "citation": "Archive of Life Wave F authored encounter entry for Blattella germanica (real taxon; not a live COL/GBIF ingest claim)",
+          "citationRequired": false,
+          "retrievedAt": "2026-08-07T19:00:00.000Z",
+          "lastUpdated": "2026-08-07T19:00:00.000Z",
+          "isMockData": false,
+          "verificationStatus": "game_authored_verified"
+        },
+        {
+          "source": "gbif",
+          "sourceVersion": "public-key-reference",
+          "sourceRecordId": "1726964",
+          "gbifTaxonKey": 1726964,
+          "license": "CC-BY-4.0",
+          "citation": "GBIF taxon key 1726964 referenced for Blattella germanica; live occurrence fetch via ScientificIngestionService",
+          "citationRequired": true,
+          "retrievedAt": "2026-08-07T19:00:00.000Z",
+          "lastUpdated": "2026-08-07T19:00:00.000Z",
+          "isMockData": false,
+          "verificationStatus": "needs_source_verification"
+        }
+      ]
+    }
+  ]
+}

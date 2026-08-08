@@ -36,6 +36,13 @@ export interface NotebookEntry {
   timePeriodId?: string | null;
 }
 
+export interface CompanionModuleProgressState {
+  unlockedModules: string[];
+  pathHistory: string[];
+  affinities: Record<string, number>;
+  pathHash: string;
+}
+
 export interface CompanionState {
   name: string;
   bodyColor: string;
@@ -48,6 +55,8 @@ export interface CompanionState {
   xp?: number;
   /** Successful ethical observations / excavations. */
   observationCount?: number;
+  /** Wave F modular progression — two histories can diverge via pathHash. */
+  modules?: CompanionModuleProgressState;
 }
 
 export interface QuestState {
@@ -74,6 +83,21 @@ export interface TimeAtlasProgress {
   activeTimeUnitId?: string | null;
 }
 
+export interface ExpeditionProgressState {
+  expeditionId: string;
+  startedAt: number;
+  completedObjectiveIds: string[];
+  discoveredClueIds: string[];
+  completed: boolean;
+}
+
+export interface ExpeditionSaveState {
+  active: string[];
+  completed: string[];
+  progress: Record<string, ExpeditionProgressState>;
+  discoveredClueIds: string[];
+}
+
 export interface SaveState {
   version: number;
   player: PlayerState;
@@ -84,5 +108,7 @@ export interface SaveState {
   stats: GameStats;
   earthLayers: EarthLayerProgress;
   timeAtlas: TimeAtlasProgress;
+  /** Wave F expedition / clue progress */
+  expeditions?: ExpeditionSaveState;
   timestamp: number;
 }

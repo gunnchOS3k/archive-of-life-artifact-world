@@ -1,7 +1,7 @@
 {
-  "snapshotId": "sample-2026-07",
-  "version": "1.0.0",
-  "totalCount": 39,
+  "snapshotId": "wave-f-alpha-2026-08",
+  "version": "2.0.0",
+  "totalCount": 196,
   "entries": [
     {
       "id": "panthera_leo",
@@ -465,7 +465,7 @@
       ],
       "sources": [
         "game_authored",
-        "paleobiodb"
+        "catalogue_of_life"
       ],
       "region": "fossil_site",
       "iucnCategory": "Extinct",
@@ -488,7 +488,7 @@
       ],
       "sources": [
         "game_authored",
-        "paleobiodb"
+        "catalogue_of_life"
       ],
       "region": "fossil_site",
       "iucnCategory": "Extinct",
@@ -515,11 +515,11 @@
       ],
       "sources": [
         "game_authored",
-        "paleobiodb"
+        "catalogue_of_life"
       ],
       "region": "fossil_site",
       "iucnCategory": "Extinct",
-      "isExtinct": true,
+      "isExtinct": false,
       "isThreatened": false,
       "isPlayable": true
     },
@@ -834,7 +834,7 @@
       "commonName": "Prebiotic systems",
       "scientificName": "Prebiotic molecular systems",
       "group": "Pre-life",
-      "family": "—",
+      "family": "\u2014",
       "tier": "database",
       "representationTier": 0,
       "lifeStatus": "uncertain",
@@ -847,6 +847,3461 @@
       "isExtinct": false,
       "isThreatened": false,
       "isPlayable": false
+    },
+    {
+      "id": "ursus_maritimus",
+      "commonName": "Polar Bear",
+      "scientificName": "Ursus maritimus",
+      "group": "Mammal",
+      "family": "Ursidae",
+      "tier": "hero",
+      "representationTier": 6,
+      "lifeStatus": "extant",
+      "timeUnitIds": [
+        "pleistocene",
+        "holocene"
+      ],
+      "sources": [
+        "game_authored",
+        "catalogue_of_life"
+      ],
+      "region": "polar_ice",
+      "iucnCategory": "Vulnerable",
+      "isExtinct": false,
+      "isThreatened": true,
+      "isPlayable": true
+    },
+    {
+      "id": "pagophilus_groenlandicus",
+      "commonName": "Harp Seal",
+      "scientificName": "Pagophilus groenlandicus",
+      "group": "Mammal",
+      "family": "Phocidae",
+      "tier": "regional",
+      "representationTier": 3,
+      "lifeStatus": "extant",
+      "timeUnitIds": [
+        "holocene"
+      ],
+      "sources": [
+        "game_authored",
+        "catalogue_of_life"
+      ],
+      "region": "polar_ice",
+      "isExtinct": false,
+      "isThreatened": false,
+      "isPlayable": true,
+      "programTier": "E_Encounter"
+    },
+    {
+      "id": "odobenus_rosmarus",
+      "commonName": "Walrus",
+      "scientificName": "Odobenus rosmarus",
+      "group": "Mammal",
+      "family": "Odobenidae",
+      "tier": "regional",
+      "representationTier": 3,
+      "lifeStatus": "extant",
+      "timeUnitIds": [
+        "holocene"
+      ],
+      "sources": [
+        "game_authored",
+        "gbif"
+      ],
+      "region": "polar_ice",
+      "isExtinct": false,
+      "isThreatened": false,
+      "isPlayable": true,
+      "programTier": "E_Encounter"
+    },
+    {
+      "id": "pygoscelis_adeliae",
+      "commonName": "Ad\u00e9lie Penguin",
+      "scientificName": "Pygoscelis adeliae",
+      "group": "Bird",
+      "family": "Spheniscidae",
+      "tier": "regional",
+      "representationTier": 3,
+      "lifeStatus": "extant",
+      "timeUnitIds": [
+        "holocene"
+      ],
+      "sources": [
+        "game_authored",
+        "gbif"
+      ],
+      "region": "polar_ice",
+      "isExtinct": false,
+      "isThreatened": false,
+      "isPlayable": true,
+      "programTier": "E_Encounter"
+    },
+    {
+      "id": "aptendytes_forsteri",
+      "commonName": "Emperor Penguin",
+      "scientificName": "Aptenodytes forsteri",
+      "group": "Bird",
+      "family": "Spheniscidae",
+      "tier": "regional",
+      "representationTier": 4,
+      "lifeStatus": "extant",
+      "timeUnitIds": [
+        "holocene"
+      ],
+      "sources": [
+        "game_authored",
+        "gbif"
+      ],
+      "region": "polar_ice",
+      "isExtinct": false,
+      "isThreatened": false,
+      "isPlayable": true,
+      "programTier": "E_Encounter"
+    },
+    {
+      "id": "somniosus_microcephalus",
+      "commonName": "Greenland Shark",
+      "scientificName": "Somniosus microcephalus",
+      "group": "Fish",
+      "family": "Somniosidae",
+      "tier": "regional",
+      "representationTier": 3,
+      "lifeStatus": "extant",
+      "timeUnitIds": [
+        "holocene"
+      ],
+      "sources": [
+        "game_authored",
+        "catalogue_of_life"
+      ],
+      "region": "polar_ice",
+      "isExtinct": false,
+      "isThreatened": false,
+      "isPlayable": true,
+      "programTier": "E_Encounter"
+    },
+    {
+      "id": "boreogadus_saida",
+      "commonName": "Arctic Cod",
+      "scientificName": "Boreogadus saida",
+      "group": "Fish",
+      "family": "Gadidae",
+      "tier": "regional",
+      "representationTier": 2,
+      "lifeStatus": "extant",
+      "timeUnitIds": [
+        "holocene"
+      ],
+      "sources": [
+        "game_authored",
+        "catalogue_of_life"
+      ],
+      "region": "polar_ice",
+      "isExtinct": false,
+      "isThreatened": false,
+      "isPlayable": true,
+      "programTier": "E_Encounter"
+    },
+    {
+      "id": "vulpes_lagopus",
+      "commonName": "Arctic Fox",
+      "scientificName": "Vulpes lagopus",
+      "group": "Mammal",
+      "family": "Canidae",
+      "tier": "regional",
+      "representationTier": 3,
+      "lifeStatus": "extant",
+      "timeUnitIds": [
+        "holocene"
+      ],
+      "sources": [
+        "game_authored",
+        "gbif"
+      ],
+      "region": "polar_ice",
+      "isExtinct": false,
+      "isThreatened": false,
+      "isPlayable": true,
+      "programTier": "E_Encounter"
+    },
+    {
+      "id": "rangifer_tarandus",
+      "commonName": "Reindeer",
+      "scientificName": "Rangifer tarandus",
+      "group": "Mammal",
+      "family": "Cervidae",
+      "tier": "regional",
+      "representationTier": 3,
+      "lifeStatus": "extant",
+      "timeUnitIds": [
+        "holocene"
+      ],
+      "sources": [
+        "game_authored",
+        "gbif"
+      ],
+      "region": "polar_ice",
+      "isExtinct": false,
+      "isThreatened": false,
+      "isPlayable": true,
+      "programTier": "E_Encounter"
+    },
+    {
+      "id": "alca_torda",
+      "commonName": "Razorbill",
+      "scientificName": "Alca torda",
+      "group": "Bird",
+      "family": "Alcidae",
+      "tier": "regional",
+      "representationTier": 2,
+      "lifeStatus": "extant",
+      "timeUnitIds": [
+        "holocene"
+      ],
+      "sources": [
+        "game_authored",
+        "catalogue_of_life"
+      ],
+      "region": "polar_ice",
+      "isExtinct": false,
+      "isThreatened": false,
+      "isPlayable": true,
+      "programTier": "E_Encounter"
+    },
+    {
+      "id": "calanus_glacialis",
+      "commonName": "Arctic Copepod",
+      "scientificName": "Calanus glacialis",
+      "group": "Arthropod",
+      "family": "Calanidae",
+      "tier": "regional",
+      "representationTier": 2,
+      "lifeStatus": "extant",
+      "timeUnitIds": [
+        "holocene"
+      ],
+      "sources": [
+        "game_authored",
+        "catalogue_of_life"
+      ],
+      "region": "polar_ice",
+      "isExtinct": false,
+      "isThreatened": false,
+      "isPlayable": true,
+      "programTier": "E_Encounter"
+    },
+    {
+      "id": "proteus_anguinus",
+      "commonName": "Olm",
+      "scientificName": "Proteus anguinus",
+      "group": "Amphibian",
+      "family": "Proteidae",
+      "tier": "regional",
+      "representationTier": 4,
+      "lifeStatus": "extant",
+      "timeUnitIds": [
+        "holocene"
+      ],
+      "sources": [
+        "game_authored",
+        "gbif"
+      ],
+      "region": "subterranean_cave",
+      "isExtinct": false,
+      "isThreatened": false,
+      "isPlayable": true,
+      "programTier": "E_Encounter"
+    },
+    {
+      "id": "amblyopsis_spelaea",
+      "commonName": "Northern Cavefish",
+      "scientificName": "Amblyopsis spelaea",
+      "group": "Fish",
+      "family": "Amblyopsidae",
+      "tier": "regional",
+      "representationTier": 3,
+      "lifeStatus": "extant",
+      "timeUnitIds": [
+        "holocene"
+      ],
+      "sources": [
+        "game_authored",
+        "catalogue_of_life"
+      ],
+      "region": "subterranean_cave",
+      "isExtinct": false,
+      "isThreatened": false,
+      "isPlayable": true,
+      "programTier": "E_Encounter"
+    },
+    {
+      "id": "hadenoecus_subterraneus",
+      "commonName": "Cave Cricket",
+      "scientificName": "Hadenoecus subterraneus",
+      "group": "Insect",
+      "family": "Rhaphidophoridae",
+      "tier": "regional",
+      "representationTier": 2,
+      "lifeStatus": "extant",
+      "timeUnitIds": [
+        "holocene"
+      ],
+      "sources": [
+        "game_authored",
+        "catalogue_of_life"
+      ],
+      "region": "subterranean_cave",
+      "isExtinct": false,
+      "isThreatened": false,
+      "isPlayable": true,
+      "programTier": "E_Encounter"
+    },
+    {
+      "id": "meta_menardi",
+      "commonName": "European Cave Spider",
+      "scientificName": "Meta menardi",
+      "group": "Arachnid",
+      "family": "Tetragnathidae",
+      "tier": "regional",
+      "representationTier": 2,
+      "lifeStatus": "extant",
+      "timeUnitIds": [
+        "holocene"
+      ],
+      "sources": [
+        "game_authored",
+        "catalogue_of_life"
+      ],
+      "region": "subterranean_cave",
+      "isExtinct": false,
+      "isThreatened": false,
+      "isPlayable": true,
+      "programTier": "E_Encounter"
+    },
+    {
+      "id": "neaphaenops_tellkampfi",
+      "commonName": "Kentucky Cave Beetle",
+      "scientificName": "Neaphaenops tellkampfi",
+      "group": "Insect",
+      "family": "Carabidae",
+      "tier": "regional",
+      "representationTier": 2,
+      "lifeStatus": "extant",
+      "timeUnitIds": [
+        "holocene"
+      ],
+      "sources": [
+        "game_authored",
+        "catalogue_of_life"
+      ],
+      "region": "subterranean_cave",
+      "isExtinct": false,
+      "isThreatened": false,
+      "isPlayable": true,
+      "programTier": "E_Encounter"
+    },
+    {
+      "id": "typhlichthys_subterraneus",
+      "commonName": "Southern Cavefish",
+      "scientificName": "Typhlichthys subterraneus",
+      "group": "Fish",
+      "family": "Amblyopsidae",
+      "tier": "regional",
+      "representationTier": 3,
+      "lifeStatus": "extant",
+      "timeUnitIds": [
+        "holocene"
+      ],
+      "sources": [
+        "game_authored",
+        "catalogue_of_life"
+      ],
+      "region": "subterranean_cave",
+      "isExtinct": false,
+      "isThreatened": false,
+      "isPlayable": true,
+      "programTier": "E_Encounter"
+    },
+    {
+      "id": "plecotus_auritus",
+      "commonName": "Brown Long-eared Bat",
+      "scientificName": "Plecotus auritus",
+      "group": "Mammal",
+      "family": "Vespertilionidae",
+      "tier": "regional",
+      "representationTier": 3,
+      "lifeStatus": "extant",
+      "timeUnitIds": [
+        "holocene"
+      ],
+      "sources": [
+        "game_authored",
+        "gbif"
+      ],
+      "region": "subterranean_cave",
+      "isExtinct": false,
+      "isThreatened": false,
+      "isPlayable": true,
+      "programTier": "E_Encounter"
+    },
+    {
+      "id": "myotis_lucifugus",
+      "commonName": "Little Brown Bat",
+      "scientificName": "Myotis lucifugus",
+      "group": "Mammal",
+      "family": "Vespertilionidae",
+      "tier": "regional",
+      "representationTier": 3,
+      "lifeStatus": "extant",
+      "timeUnitIds": [
+        "holocene"
+      ],
+      "sources": [
+        "game_authored",
+        "gbif"
+      ],
+      "region": "subterranean_cave",
+      "isExtinct": false,
+      "isThreatened": false,
+      "isPlayable": true,
+      "programTier": "E_Encounter"
+    },
+    {
+      "id": "passer_domesticus",
+      "commonName": "House Sparrow",
+      "scientificName": "Passer domesticus",
+      "group": "Bird",
+      "family": "Passeridae",
+      "tier": "regional",
+      "representationTier": 3,
+      "lifeStatus": "extant",
+      "timeUnitIds": [
+        "holocene"
+      ],
+      "sources": [
+        "game_authored",
+        "gbif"
+      ],
+      "region": "urban_park",
+      "isExtinct": false,
+      "isThreatened": false,
+      "isPlayable": true,
+      "programTier": "E_Encounter"
+    },
+    {
+      "id": "columba_livia",
+      "commonName": "Rock Dove",
+      "scientificName": "Columba livia",
+      "group": "Bird",
+      "family": "Columbidae",
+      "tier": "regional",
+      "representationTier": 3,
+      "lifeStatus": "extant",
+      "timeUnitIds": [
+        "holocene"
+      ],
+      "sources": [
+        "game_authored",
+        "gbif"
+      ],
+      "region": "urban_park",
+      "isExtinct": false,
+      "isThreatened": false,
+      "isPlayable": true,
+      "programTier": "E_Encounter"
+    },
+    {
+      "id": "rattus_norvegicus",
+      "commonName": "Brown Rat",
+      "scientificName": "Rattus norvegicus",
+      "group": "Mammal",
+      "family": "Muridae",
+      "tier": "regional",
+      "representationTier": 3,
+      "lifeStatus": "extant",
+      "timeUnitIds": [
+        "holocene"
+      ],
+      "sources": [
+        "game_authored",
+        "gbif"
+      ],
+      "region": "urban_park",
+      "isExtinct": false,
+      "isThreatened": false,
+      "isPlayable": true,
+      "programTier": "E_Encounter"
+    },
+    {
+      "id": "felis_catus",
+      "commonName": "Domestic Cat",
+      "scientificName": "Felis catus",
+      "group": "Mammal",
+      "family": "Felidae",
+      "tier": "regional",
+      "representationTier": 2,
+      "lifeStatus": "extant",
+      "timeUnitIds": [
+        "holocene"
+      ],
+      "sources": [
+        "game_authored",
+        "gbif"
+      ],
+      "region": "urban_park",
+      "isExtinct": false,
+      "isThreatened": false,
+      "isPlayable": true,
+      "programTier": "E_Encounter"
+    },
+    {
+      "id": "sciurus_carolinensis",
+      "commonName": "Eastern Gray Squirrel",
+      "scientificName": "Sciurus carolinensis",
+      "group": "Mammal",
+      "family": "Sciuridae",
+      "tier": "regional",
+      "representationTier": 3,
+      "lifeStatus": "extant",
+      "timeUnitIds": [
+        "holocene"
+      ],
+      "sources": [
+        "game_authored",
+        "gbif"
+      ],
+      "region": "urban_park",
+      "isExtinct": false,
+      "isThreatened": false,
+      "isPlayable": true,
+      "programTier": "E_Encounter"
+    },
+    {
+      "id": "corvus_brachyrhynchos",
+      "commonName": "American Crow",
+      "scientificName": "Corvus brachyrhynchos",
+      "group": "Bird",
+      "family": "Corvidae",
+      "tier": "regional",
+      "representationTier": 3,
+      "lifeStatus": "extant",
+      "timeUnitIds": [
+        "holocene"
+      ],
+      "sources": [
+        "game_authored",
+        "gbif"
+      ],
+      "region": "urban_park",
+      "isExtinct": false,
+      "isThreatened": false,
+      "isPlayable": true,
+      "programTier": "E_Encounter"
+    },
+    {
+      "id": "turdus_migratorius",
+      "commonName": "American Robin",
+      "scientificName": "Turdus migratorius",
+      "group": "Bird",
+      "family": "Turdidae",
+      "tier": "regional",
+      "representationTier": 3,
+      "lifeStatus": "extant",
+      "timeUnitIds": [
+        "holocene"
+      ],
+      "sources": [
+        "game_authored",
+        "gbif"
+      ],
+      "region": "urban_park",
+      "isExtinct": false,
+      "isThreatened": false,
+      "isPlayable": true,
+      "programTier": "E_Encounter"
+    },
+    {
+      "id": "apis_mellifera_urban",
+      "commonName": "Western Honey Bee",
+      "scientificName": "Apis mellifera",
+      "group": "Insect",
+      "family": "Apidae",
+      "tier": "regional",
+      "representationTier": 3,
+      "lifeStatus": "extant",
+      "timeUnitIds": [
+        "holocene"
+      ],
+      "sources": [
+        "game_authored",
+        "gbif"
+      ],
+      "region": "urban_park",
+      "isExtinct": false,
+      "isThreatened": false,
+      "isPlayable": true,
+      "programTier": "E_Encounter"
+    },
+    {
+      "id": "pieris_rapae",
+      "commonName": "Cabbage White",
+      "scientificName": "Pieris rapae",
+      "group": "Insect",
+      "family": "Pieridae",
+      "tier": "regional",
+      "representationTier": 2,
+      "lifeStatus": "extant",
+      "timeUnitIds": [
+        "holocene"
+      ],
+      "sources": [
+        "game_authored",
+        "gbif"
+      ],
+      "region": "urban_park",
+      "isExtinct": false,
+      "isThreatened": false,
+      "isPlayable": true,
+      "programTier": "E_Encounter"
+    },
+    {
+      "id": "taraxacum_officinale",
+      "commonName": "Dandelion",
+      "scientificName": "Taraxacum officinale",
+      "group": "Plant",
+      "family": "Asteraceae",
+      "tier": "regional",
+      "representationTier": 2,
+      "lifeStatus": "extant",
+      "timeUnitIds": [
+        "holocene"
+      ],
+      "sources": [
+        "game_authored",
+        "gbif"
+      ],
+      "region": "urban_park",
+      "isExtinct": false,
+      "isThreatened": false,
+      "isPlayable": true,
+      "programTier": "E_Encounter"
+    },
+    {
+      "id": "hirundo_rustica",
+      "commonName": "Barn Swallow",
+      "scientificName": "Hirundo rustica",
+      "group": "Bird",
+      "family": "Hirundinidae",
+      "tier": "regional",
+      "representationTier": 3,
+      "lifeStatus": "extant",
+      "timeUnitIds": [
+        "holocene"
+      ],
+      "sources": [
+        "game_authored",
+        "gbif"
+      ],
+      "region": "atmospheric_corridor",
+      "isExtinct": false,
+      "isThreatened": false,
+      "isPlayable": true,
+      "programTier": "E_Encounter"
+    },
+    {
+      "id": "falco_peregrinus",
+      "commonName": "Peregrine Falcon",
+      "scientificName": "Falco peregrinus",
+      "group": "Bird",
+      "family": "Falconidae",
+      "tier": "regional",
+      "representationTier": 4,
+      "lifeStatus": "extant",
+      "timeUnitIds": [
+        "holocene"
+      ],
+      "sources": [
+        "game_authored",
+        "gbif"
+      ],
+      "region": "atmospheric_corridor",
+      "isExtinct": false,
+      "isThreatened": false,
+      "isPlayable": true,
+      "programTier": "E_Encounter"
+    },
+    {
+      "id": "anthus_trivialis",
+      "commonName": "Tree Pipit",
+      "scientificName": "Anthus trivialis",
+      "group": "Bird",
+      "family": "Motacillidae",
+      "tier": "regional",
+      "representationTier": 2,
+      "lifeStatus": "extant",
+      "timeUnitIds": [
+        "holocene"
+      ],
+      "sources": [
+        "game_authored",
+        "catalogue_of_life"
+      ],
+      "region": "atmospheric_corridor",
+      "isExtinct": false,
+      "isThreatened": false,
+      "isPlayable": true,
+      "programTier": "E_Encounter"
+    },
+    {
+      "id": "aedes_aegypti",
+      "commonName": "Yellow Fever Mosquito",
+      "scientificName": "Aedes aegypti",
+      "group": "Insect",
+      "family": "Culicidae",
+      "tier": "regional",
+      "representationTier": 3,
+      "lifeStatus": "extant",
+      "timeUnitIds": [
+        "holocene"
+      ],
+      "sources": [
+        "game_authored",
+        "gbif"
+      ],
+      "region": "atmospheric_corridor",
+      "isExtinct": false,
+      "isThreatened": false,
+      "isPlayable": true,
+      "programTier": "E_Encounter"
+    },
+    {
+      "id": "danaus_plexippus_mig",
+      "commonName": "Monarch Butterfly",
+      "scientificName": "Danaus plexippus",
+      "group": "Insect",
+      "family": "Nymphalidae",
+      "tier": "regional",
+      "representationTier": 4,
+      "lifeStatus": "extant",
+      "timeUnitIds": [
+        "holocene"
+      ],
+      "sources": [
+        "game_authored",
+        "gbif"
+      ],
+      "region": "atmospheric_corridor",
+      "isExtinct": false,
+      "isThreatened": false,
+      "isPlayable": true,
+      "programTier": "E_Encounter"
+    },
+    {
+      "id": "tachycineta_bicolor",
+      "commonName": "Tree Swallow",
+      "scientificName": "Tachycineta bicolor",
+      "group": "Bird",
+      "family": "Hirundinidae",
+      "tier": "regional",
+      "representationTier": 3,
+      "lifeStatus": "extant",
+      "timeUnitIds": [
+        "holocene"
+      ],
+      "sources": [
+        "game_authored",
+        "catalogue_of_life"
+      ],
+      "region": "atmospheric_corridor",
+      "isExtinct": false,
+      "isThreatened": false,
+      "isPlayable": true,
+      "programTier": "E_Encounter"
+    },
+    {
+      "id": "archilochus_colubris",
+      "commonName": "Ruby-throated Hummingbird",
+      "scientificName": "Archilochus colubris",
+      "group": "Bird",
+      "family": "Trochilidae",
+      "tier": "regional",
+      "representationTier": 3,
+      "lifeStatus": "extant",
+      "timeUnitIds": [
+        "holocene"
+      ],
+      "sources": [
+        "game_authored",
+        "gbif"
+      ],
+      "region": "atmospheric_corridor",
+      "isExtinct": false,
+      "isThreatened": false,
+      "isPlayable": true,
+      "programTier": "E_Encounter"
+    },
+    {
+      "id": "buteo_jamaicensis",
+      "commonName": "Red-tailed Hawk",
+      "scientificName": "Buteo jamaicensis",
+      "group": "Bird",
+      "family": "Accipitridae",
+      "tier": "regional",
+      "representationTier": 3,
+      "lifeStatus": "extant",
+      "timeUnitIds": [
+        "holocene"
+      ],
+      "sources": [
+        "game_authored",
+        "gbif"
+      ],
+      "region": "atmospheric_corridor",
+      "isExtinct": false,
+      "isThreatened": false,
+      "isPlayable": true,
+      "programTier": "E_Encounter"
+    },
+    {
+      "id": "physeter_macrocephalus",
+      "commonName": "Sperm Whale",
+      "scientificName": "Physeter macrocephalus",
+      "group": "Mammal",
+      "family": "Physeteridae",
+      "tier": "regional",
+      "representationTier": 4,
+      "lifeStatus": "extant",
+      "timeUnitIds": [
+        "holocene"
+      ],
+      "sources": [
+        "game_authored",
+        "gbif"
+      ],
+      "region": "deep_marine",
+      "isExtinct": false,
+      "isThreatened": false,
+      "isPlayable": true,
+      "programTier": "E_Encounter"
+    },
+    {
+      "id": "orcinus_orca",
+      "commonName": "Orca",
+      "scientificName": "Orcinus orca",
+      "group": "Mammal",
+      "family": "Delphinidae",
+      "tier": "regional",
+      "representationTier": 4,
+      "lifeStatus": "extant",
+      "timeUnitIds": [
+        "holocene"
+      ],
+      "sources": [
+        "game_authored",
+        "gbif"
+      ],
+      "region": "deep_marine",
+      "isExtinct": false,
+      "isThreatened": false,
+      "isPlayable": true,
+      "programTier": "E_Encounter"
+    },
+    {
+      "id": "mola_mola",
+      "commonName": "Ocean Sunfish",
+      "scientificName": "Mola mola",
+      "group": "Fish",
+      "family": "Molidae",
+      "tier": "regional",
+      "representationTier": 3,
+      "lifeStatus": "extant",
+      "timeUnitIds": [
+        "holocene"
+      ],
+      "sources": [
+        "game_authored",
+        "gbif"
+      ],
+      "region": "deep_marine",
+      "isExtinct": false,
+      "isThreatened": false,
+      "isPlayable": true,
+      "programTier": "E_Encounter"
+    },
+    {
+      "id": "dermochelys_coriacea",
+      "commonName": "Leatherback Sea Turtle",
+      "scientificName": "Dermochelys coriacea",
+      "group": "Reptile",
+      "family": "Dermochelyidae",
+      "tier": "regional",
+      "representationTier": 4,
+      "lifeStatus": "extant",
+      "timeUnitIds": [
+        "holocene"
+      ],
+      "sources": [
+        "game_authored",
+        "gbif"
+      ],
+      "region": "deep_marine",
+      "isExtinct": false,
+      "isThreatened": false,
+      "isPlayable": true,
+      "programTier": "E_Encounter"
+    },
+    {
+      "id": "chelonia_mydas",
+      "commonName": "Green Sea Turtle",
+      "scientificName": "Chelonia mydas",
+      "group": "Reptile",
+      "family": "Cheloniidae",
+      "tier": "regional",
+      "representationTier": 3,
+      "lifeStatus": "extant",
+      "timeUnitIds": [
+        "holocene"
+      ],
+      "sources": [
+        "game_authored",
+        "gbif"
+      ],
+      "region": "deep_marine",
+      "isExtinct": false,
+      "isThreatened": false,
+      "isPlayable": true,
+      "programTier": "E_Encounter"
+    },
+    {
+      "id": "carcharodon_carcharias",
+      "commonName": "Great White Shark",
+      "scientificName": "Carcharodon carcharias",
+      "group": "Fish",
+      "family": "Lamnidae",
+      "tier": "regional",
+      "representationTier": 4,
+      "lifeStatus": "extant",
+      "timeUnitIds": [
+        "holocene"
+      ],
+      "sources": [
+        "game_authored",
+        "gbif"
+      ],
+      "region": "deep_marine",
+      "isExtinct": false,
+      "isThreatened": false,
+      "isPlayable": true,
+      "programTier": "E_Encounter"
+    },
+    {
+      "id": "architeuthis_dux",
+      "commonName": "Giant Squid",
+      "scientificName": "Architeuthis dux",
+      "group": "Mollusk",
+      "family": "Architeuthidae",
+      "tier": "regional",
+      "representationTier": 3,
+      "lifeStatus": "extant",
+      "timeUnitIds": [
+        "holocene"
+      ],
+      "sources": [
+        "game_authored",
+        "gbif"
+      ],
+      "region": "deep_marine",
+      "isExtinct": false,
+      "isThreatened": false,
+      "isPlayable": true,
+      "programTier": "E_Encounter"
+    },
+    {
+      "id": "euphausia_superba",
+      "commonName": "Antarctic Krill",
+      "scientificName": "Euphausia superba",
+      "group": "Arthropod",
+      "family": "Euphausiidae",
+      "tier": "regional",
+      "representationTier": 3,
+      "lifeStatus": "extant",
+      "timeUnitIds": [
+        "holocene"
+      ],
+      "sources": [
+        "game_authored",
+        "gbif"
+      ],
+      "region": "deep_marine",
+      "isExtinct": false,
+      "isThreatened": false,
+      "isPlayable": true,
+      "programTier": "E_Encounter"
+    },
+    {
+      "id": "aurelia_aurita",
+      "commonName": "Moon Jelly",
+      "scientificName": "Aurelia aurita",
+      "group": "Cnidarian",
+      "family": "Ulmaridae",
+      "tier": "regional",
+      "representationTier": 2,
+      "lifeStatus": "extant",
+      "timeUnitIds": [
+        "holocene"
+      ],
+      "sources": [
+        "game_authored",
+        "gbif"
+      ],
+      "region": "deep_marine",
+      "isExtinct": false,
+      "isThreatened": false,
+      "isPlayable": true,
+      "programTier": "E_Encounter"
+    },
+    {
+      "id": "homarus_americanus",
+      "commonName": "American Lobster",
+      "scientificName": "Homarus americanus",
+      "group": "Arthropod",
+      "family": "Nephropidae",
+      "tier": "regional",
+      "representationTier": 3,
+      "lifeStatus": "extant",
+      "timeUnitIds": [
+        "holocene"
+      ],
+      "sources": [
+        "game_authored",
+        "gbif"
+      ],
+      "region": "deep_marine",
+      "isExtinct": false,
+      "isThreatened": false,
+      "isPlayable": true,
+      "programTier": "E_Encounter"
+    },
+    {
+      "id": "acinonyx_jubatus",
+      "commonName": "Cheetah",
+      "scientificName": "Acinonyx jubatus",
+      "group": "Mammal",
+      "family": "Felidae",
+      "tier": "regional",
+      "representationTier": 3,
+      "lifeStatus": "extant",
+      "timeUnitIds": [
+        "holocene"
+      ],
+      "sources": [
+        "game_authored",
+        "gbif"
+      ],
+      "region": "savanna",
+      "isExtinct": false,
+      "isThreatened": false,
+      "isPlayable": true,
+      "programTier": "E_Encounter"
+    },
+    {
+      "id": "giraffa_camelopardalis",
+      "commonName": "Giraffe",
+      "scientificName": "Giraffa camelopardalis",
+      "group": "Mammal",
+      "family": "Giraffidae",
+      "tier": "regional",
+      "representationTier": 3,
+      "lifeStatus": "extant",
+      "timeUnitIds": [
+        "holocene"
+      ],
+      "sources": [
+        "game_authored",
+        "gbif"
+      ],
+      "region": "savanna",
+      "isExtinct": false,
+      "isThreatened": false,
+      "isPlayable": true,
+      "programTier": "E_Encounter"
+    },
+    {
+      "id": "syncerus_caffer",
+      "commonName": "African Buffalo",
+      "scientificName": "Syncerus caffer",
+      "group": "Mammal",
+      "family": "Bovidae",
+      "tier": "regional",
+      "representationTier": 3,
+      "lifeStatus": "extant",
+      "timeUnitIds": [
+        "holocene"
+      ],
+      "sources": [
+        "game_authored",
+        "gbif"
+      ],
+      "region": "savanna",
+      "isExtinct": false,
+      "isThreatened": false,
+      "isPlayable": true,
+      "programTier": "E_Encounter"
+    },
+    {
+      "id": "crocuta_crocuta",
+      "commonName": "Spotted Hyena",
+      "scientificName": "Crocuta crocuta",
+      "group": "Mammal",
+      "family": "Hyaenidae",
+      "tier": "regional",
+      "representationTier": 3,
+      "lifeStatus": "extant",
+      "timeUnitIds": [
+        "holocene"
+      ],
+      "sources": [
+        "game_authored",
+        "gbif"
+      ],
+      "region": "savanna",
+      "isExtinct": false,
+      "isThreatened": false,
+      "isPlayable": true,
+      "programTier": "E_Encounter"
+    },
+    {
+      "id": "struthio_camelus",
+      "commonName": "Common Ostrich",
+      "scientificName": "Struthio camelus",
+      "group": "Bird",
+      "family": "Struthionidae",
+      "tier": "regional",
+      "representationTier": 3,
+      "lifeStatus": "extant",
+      "timeUnitIds": [
+        "holocene"
+      ],
+      "sources": [
+        "game_authored",
+        "gbif"
+      ],
+      "region": "savanna",
+      "isExtinct": false,
+      "isThreatened": false,
+      "isPlayable": true,
+      "programTier": "E_Encounter"
+    },
+    {
+      "id": "acrocephalus_baeticatus",
+      "commonName": "African Reed Warbler",
+      "scientificName": "Acrocephalus baeticatus",
+      "group": "Bird",
+      "family": "Acrocephalidae",
+      "tier": "regional",
+      "representationTier": 2,
+      "lifeStatus": "extant",
+      "timeUnitIds": [
+        "holocene"
+      ],
+      "sources": [
+        "game_authored",
+        "catalogue_of_life"
+      ],
+      "region": "savanna",
+      "isExtinct": false,
+      "isThreatened": false,
+      "isPlayable": true,
+      "programTier": "E_Encounter"
+    },
+    {
+      "id": "kobus_ellipsiprymnus",
+      "commonName": "Waterbuck",
+      "scientificName": "Kobus ellipsiprymnus",
+      "group": "Mammal",
+      "family": "Bovidae",
+      "tier": "regional",
+      "representationTier": 2,
+      "lifeStatus": "extant",
+      "timeUnitIds": [
+        "holocene"
+      ],
+      "sources": [
+        "game_authored",
+        "catalogue_of_life"
+      ],
+      "region": "savanna",
+      "isExtinct": false,
+      "isThreatened": false,
+      "isPlayable": true,
+      "programTier": "E_Encounter"
+    },
+    {
+      "id": "papio_anubis",
+      "commonName": "Olive Baboon",
+      "scientificName": "Papio anubis",
+      "group": "Mammal",
+      "family": "Cercopithecidae",
+      "tier": "regional",
+      "representationTier": 3,
+      "lifeStatus": "extant",
+      "timeUnitIds": [
+        "holocene"
+      ],
+      "sources": [
+        "game_authored",
+        "gbif"
+      ],
+      "region": "savanna",
+      "isExtinct": false,
+      "isThreatened": false,
+      "isPlayable": true,
+      "programTier": "E_Encounter"
+    },
+    {
+      "id": "equus_quagga",
+      "commonName": "Plains Zebra",
+      "scientificName": "Equus quagga",
+      "group": "Mammal",
+      "family": "Equidae",
+      "tier": "regional",
+      "representationTier": 3,
+      "lifeStatus": "extant",
+      "timeUnitIds": [
+        "holocene"
+      ],
+      "sources": [
+        "game_authored",
+        "gbif"
+      ],
+      "region": "savanna",
+      "isExtinct": false,
+      "isThreatened": false,
+      "isPlayable": true,
+      "programTier": "E_Encounter"
+    },
+    {
+      "id": "connochaetes_taurinus",
+      "commonName": "Blue Wildebeest",
+      "scientificName": "Connochaetes taurinus",
+      "group": "Mammal",
+      "family": "Bovidae",
+      "tier": "regional",
+      "representationTier": 3,
+      "lifeStatus": "extant",
+      "timeUnitIds": [
+        "holocene"
+      ],
+      "sources": [
+        "game_authored",
+        "gbif"
+      ],
+      "region": "savanna",
+      "isExtinct": false,
+      "isThreatened": false,
+      "isPlayable": true,
+      "programTier": "E_Encounter"
+    },
+    {
+      "id": "cervus_canadensis",
+      "commonName": "Elk",
+      "scientificName": "Cervus canadensis",
+      "group": "Mammal",
+      "family": "Cervidae",
+      "tier": "regional",
+      "representationTier": 3,
+      "lifeStatus": "extant",
+      "timeUnitIds": [
+        "holocene"
+      ],
+      "sources": [
+        "game_authored",
+        "gbif"
+      ],
+      "region": "forest",
+      "isExtinct": false,
+      "isThreatened": false,
+      "isPlayable": true,
+      "programTier": "E_Encounter"
+    },
+    {
+      "id": "lynx_rufus",
+      "commonName": "Bobcat",
+      "scientificName": "Lynx rufus",
+      "group": "Mammal",
+      "family": "Felidae",
+      "tier": "regional",
+      "representationTier": 3,
+      "lifeStatus": "extant",
+      "timeUnitIds": [
+        "holocene"
+      ],
+      "sources": [
+        "game_authored",
+        "gbif"
+      ],
+      "region": "forest",
+      "isExtinct": false,
+      "isThreatened": false,
+      "isPlayable": true,
+      "programTier": "E_Encounter"
+    },
+    {
+      "id": "procyon_lotor",
+      "commonName": "Raccoon",
+      "scientificName": "Procyon lotor",
+      "group": "Mammal",
+      "family": "Procyonidae",
+      "tier": "regional",
+      "representationTier": 3,
+      "lifeStatus": "extant",
+      "timeUnitIds": [
+        "holocene"
+      ],
+      "sources": [
+        "game_authored",
+        "gbif"
+      ],
+      "region": "forest",
+      "isExtinct": false,
+      "isThreatened": false,
+      "isPlayable": true,
+      "programTier": "E_Encounter"
+    },
+    {
+      "id": "mephitis_mephitis",
+      "commonName": "Striped Skunk",
+      "scientificName": "Mephitis mephitis",
+      "group": "Mammal",
+      "family": "Mephitidae",
+      "tier": "regional",
+      "representationTier": 2,
+      "lifeStatus": "extant",
+      "timeUnitIds": [
+        "holocene"
+      ],
+      "sources": [
+        "game_authored",
+        "gbif"
+      ],
+      "region": "forest",
+      "isExtinct": false,
+      "isThreatened": false,
+      "isPlayable": true,
+      "programTier": "E_Encounter"
+    },
+    {
+      "id": "tamias_striatus",
+      "commonName": "Eastern Chipmunk",
+      "scientificName": "Tamias striatus",
+      "group": "Mammal",
+      "family": "Sciuridae",
+      "tier": "regional",
+      "representationTier": 2,
+      "lifeStatus": "extant",
+      "timeUnitIds": [
+        "holocene"
+      ],
+      "sources": [
+        "game_authored",
+        "gbif"
+      ],
+      "region": "forest",
+      "isExtinct": false,
+      "isThreatened": false,
+      "isPlayable": true,
+      "programTier": "E_Encounter"
+    },
+    {
+      "id": "strix_varia",
+      "commonName": "Barred Owl",
+      "scientificName": "Strix varia",
+      "group": "Bird",
+      "family": "Strigidae",
+      "tier": "regional",
+      "representationTier": 3,
+      "lifeStatus": "extant",
+      "timeUnitIds": [
+        "holocene"
+      ],
+      "sources": [
+        "game_authored",
+        "gbif"
+      ],
+      "region": "forest",
+      "isExtinct": false,
+      "isThreatened": false,
+      "isPlayable": true,
+      "programTier": "E_Encounter"
+    },
+    {
+      "id": "dryocopus_pileatus",
+      "commonName": "Pileated Woodpecker",
+      "scientificName": "Dryocopus pileatus",
+      "group": "Bird",
+      "family": "Picidae",
+      "tier": "regional",
+      "representationTier": 3,
+      "lifeStatus": "extant",
+      "timeUnitIds": [
+        "holocene"
+      ],
+      "sources": [
+        "game_authored",
+        "gbif"
+      ],
+      "region": "forest",
+      "isExtinct": false,
+      "isThreatened": false,
+      "isPlayable": true,
+      "programTier": "E_Encounter"
+    },
+    {
+      "id": "cyanocitta_cristata",
+      "commonName": "Blue Jay",
+      "scientificName": "Cyanocitta cristata",
+      "group": "Bird",
+      "family": "Corvidae",
+      "tier": "regional",
+      "representationTier": 3,
+      "lifeStatus": "extant",
+      "timeUnitIds": [
+        "holocene"
+      ],
+      "sources": [
+        "game_authored",
+        "gbif"
+      ],
+      "region": "forest",
+      "isExtinct": false,
+      "isThreatened": false,
+      "isPlayable": true,
+      "programTier": "E_Encounter"
+    },
+    {
+      "id": "plethodon_cinereus",
+      "commonName": "Red-backed Salamander",
+      "scientificName": "Plethodon cinereus",
+      "group": "Amphibian",
+      "family": "Plethodontidae",
+      "tier": "regional",
+      "representationTier": 2,
+      "lifeStatus": "extant",
+      "timeUnitIds": [
+        "holocene"
+      ],
+      "sources": [
+        "game_authored",
+        "gbif"
+      ],
+      "region": "forest",
+      "isExtinct": false,
+      "isThreatened": false,
+      "isPlayable": true,
+      "programTier": "E_Encounter"
+    },
+    {
+      "id": "lithobates_catesbeianus",
+      "commonName": "American Bullfrog",
+      "scientificName": "Lithobates catesbeianus",
+      "group": "Amphibian",
+      "family": "Ranidae",
+      "tier": "regional",
+      "representationTier": 3,
+      "lifeStatus": "extant",
+      "timeUnitIds": [
+        "holocene"
+      ],
+      "sources": [
+        "game_authored",
+        "gbif"
+      ],
+      "region": "wetland",
+      "isExtinct": false,
+      "isThreatened": false,
+      "isPlayable": true,
+      "programTier": "E_Encounter"
+    },
+    {
+      "id": "alligator_mississippiensis",
+      "commonName": "American Alligator",
+      "scientificName": "Alligator mississippiensis",
+      "group": "Reptile",
+      "family": "Alligatoridae",
+      "tier": "regional",
+      "representationTier": 4,
+      "lifeStatus": "extant",
+      "timeUnitIds": [
+        "holocene"
+      ],
+      "sources": [
+        "game_authored",
+        "gbif"
+      ],
+      "region": "wetland",
+      "isExtinct": false,
+      "isThreatened": false,
+      "isPlayable": true,
+      "programTier": "E_Encounter"
+    },
+    {
+      "id": "ardea_herodias",
+      "commonName": "Great Blue Heron",
+      "scientificName": "Ardea herodias",
+      "group": "Bird",
+      "family": "Ardeidae",
+      "tier": "regional",
+      "representationTier": 3,
+      "lifeStatus": "extant",
+      "timeUnitIds": [
+        "holocene"
+      ],
+      "sources": [
+        "game_authored",
+        "gbif"
+      ],
+      "region": "wetland",
+      "isExtinct": false,
+      "isThreatened": false,
+      "isPlayable": true,
+      "programTier": "E_Encounter"
+    },
+    {
+      "id": "anas_platyrhynchos",
+      "commonName": "Mallard",
+      "scientificName": "Anas platyrhynchos",
+      "group": "Bird",
+      "family": "Anatidae",
+      "tier": "regional",
+      "representationTier": 3,
+      "lifeStatus": "extant",
+      "timeUnitIds": [
+        "holocene"
+      ],
+      "sources": [
+        "game_authored",
+        "gbif"
+      ],
+      "region": "wetland",
+      "isExtinct": false,
+      "isThreatened": false,
+      "isPlayable": true,
+      "programTier": "E_Encounter"
+    },
+    {
+      "id": "ondatra_zibethicus",
+      "commonName": "Muskrat",
+      "scientificName": "Ondatra zibethicus",
+      "group": "Mammal",
+      "family": "Cricetidae",
+      "tier": "regional",
+      "representationTier": 2,
+      "lifeStatus": "extant",
+      "timeUnitIds": [
+        "holocene"
+      ],
+      "sources": [
+        "game_authored",
+        "gbif"
+      ],
+      "region": "wetland",
+      "isExtinct": false,
+      "isThreatened": false,
+      "isPlayable": true,
+      "programTier": "E_Encounter"
+    },
+    {
+      "id": "chelydra_serpentina",
+      "commonName": "Snapping Turtle",
+      "scientificName": "Chelydra serpentina",
+      "group": "Reptile",
+      "family": "Chelydridae",
+      "tier": "regional",
+      "representationTier": 3,
+      "lifeStatus": "extant",
+      "timeUnitIds": [
+        "holocene"
+      ],
+      "sources": [
+        "game_authored",
+        "gbif"
+      ],
+      "region": "wetland",
+      "isExtinct": false,
+      "isThreatened": false,
+      "isPlayable": true,
+      "programTier": "E_Encounter"
+    },
+    {
+      "id": "notophthalmus_viridescens",
+      "commonName": "Eastern Newt",
+      "scientificName": "Notophthalmus viridescens",
+      "group": "Amphibian",
+      "family": "Salamandridae",
+      "tier": "regional",
+      "representationTier": 2,
+      "lifeStatus": "extant",
+      "timeUnitIds": [
+        "holocene"
+      ],
+      "sources": [
+        "game_authored",
+        "catalogue_of_life"
+      ],
+      "region": "wetland",
+      "isExtinct": false,
+      "isThreatened": false,
+      "isPlayable": true,
+      "programTier": "E_Encounter"
+    },
+    {
+      "id": "lemna_minor",
+      "commonName": "Common Duckweed",
+      "scientificName": "Lemna minor",
+      "group": "Plant",
+      "family": "Araceae",
+      "tier": "regional",
+      "representationTier": 2,
+      "lifeStatus": "extant",
+      "timeUnitIds": [
+        "holocene"
+      ],
+      "sources": [
+        "game_authored",
+        "gbif"
+      ],
+      "region": "wetland",
+      "isExtinct": false,
+      "isThreatened": false,
+      "isPlayable": true,
+      "programTier": "E_Encounter"
+    },
+    {
+      "id": "typha_latifolia",
+      "commonName": "Broadleaf Cattail",
+      "scientificName": "Typha latifolia",
+      "group": "Plant",
+      "family": "Typhaceae",
+      "tier": "regional",
+      "representationTier": 2,
+      "lifeStatus": "extant",
+      "timeUnitIds": [
+        "holocene"
+      ],
+      "sources": [
+        "game_authored",
+        "gbif"
+      ],
+      "region": "wetland",
+      "isExtinct": false,
+      "isThreatened": false,
+      "isPlayable": true,
+      "programTier": "E_Encounter"
+    },
+    {
+      "id": "enhydra_lutris",
+      "commonName": "Sea Otter",
+      "scientificName": "Enhydra lutris",
+      "group": "Mammal",
+      "family": "Mustelidae",
+      "tier": "regional",
+      "representationTier": 4,
+      "lifeStatus": "extant",
+      "timeUnitIds": [
+        "holocene"
+      ],
+      "sources": [
+        "game_authored",
+        "gbif"
+      ],
+      "region": "coastal",
+      "isExtinct": false,
+      "isThreatened": false,
+      "isPlayable": true,
+      "programTier": "E_Encounter"
+    },
+    {
+      "id": "zalophus_californianus",
+      "commonName": "California Sea Lion",
+      "scientificName": "Zalophus californianus",
+      "group": "Mammal",
+      "family": "Otariidae",
+      "tier": "regional",
+      "representationTier": 3,
+      "lifeStatus": "extant",
+      "timeUnitIds": [
+        "holocene"
+      ],
+      "sources": [
+        "game_authored",
+        "gbif"
+      ],
+      "region": "coastal",
+      "isExtinct": false,
+      "isThreatened": false,
+      "isPlayable": true,
+      "programTier": "E_Encounter"
+    },
+    {
+      "id": "haematopus_bachmani",
+      "commonName": "Black Oystercatcher",
+      "scientificName": "Haematopus bachmani",
+      "group": "Bird",
+      "family": "Haematopodidae",
+      "tier": "regional",
+      "representationTier": 2,
+      "lifeStatus": "extant",
+      "timeUnitIds": [
+        "holocene"
+      ],
+      "sources": [
+        "game_authored",
+        "catalogue_of_life"
+      ],
+      "region": "coastal",
+      "isExtinct": false,
+      "isThreatened": false,
+      "isPlayable": true,
+      "programTier": "E_Encounter"
+    },
+    {
+      "id": "strongylocentrotus_purpuratus",
+      "commonName": "Purple Sea Urchin",
+      "scientificName": "Strongylocentrotus purpuratus",
+      "group": "Echinoderm",
+      "family": "Strongylocentrotidae",
+      "tier": "regional",
+      "representationTier": 3,
+      "lifeStatus": "extant",
+      "timeUnitIds": [
+        "holocene"
+      ],
+      "sources": [
+        "game_authored",
+        "gbif"
+      ],
+      "region": "coastal",
+      "isExtinct": false,
+      "isThreatened": false,
+      "isPlayable": true,
+      "programTier": "E_Encounter"
+    },
+    {
+      "id": "mytilus_californianus",
+      "commonName": "California Mussel",
+      "scientificName": "Mytilus californianus",
+      "group": "Mollusk",
+      "family": "Mytilidae",
+      "tier": "regional",
+      "representationTier": 2,
+      "lifeStatus": "extant",
+      "timeUnitIds": [
+        "holocene"
+      ],
+      "sources": [
+        "game_authored",
+        "gbif"
+      ],
+      "region": "coastal",
+      "isExtinct": false,
+      "isThreatened": false,
+      "isPlayable": true,
+      "programTier": "E_Encounter"
+    },
+    {
+      "id": "macrocystis_pyrifera",
+      "commonName": "Giant Kelp",
+      "scientificName": "Macrocystis pyrifera",
+      "group": "Alga",
+      "family": "Laminariaceae",
+      "tier": "regional",
+      "representationTier": 3,
+      "lifeStatus": "extant",
+      "timeUnitIds": [
+        "holocene"
+      ],
+      "sources": [
+        "game_authored",
+        "gbif"
+      ],
+      "region": "coastal",
+      "isExtinct": false,
+      "isThreatened": false,
+      "isPlayable": true,
+      "programTier": "E_Encounter"
+    },
+    {
+      "id": "pisaster_ochraceus",
+      "commonName": "Ochre Sea Star",
+      "scientificName": "Pisaster ochraceus",
+      "group": "Echinoderm",
+      "family": "Asteriidae",
+      "tier": "regional",
+      "representationTier": 3,
+      "lifeStatus": "extant",
+      "timeUnitIds": [
+        "holocene"
+      ],
+      "sources": [
+        "game_authored",
+        "gbif"
+      ],
+      "region": "coastal",
+      "isExtinct": false,
+      "isThreatened": false,
+      "isPlayable": true,
+      "programTier": "E_Encounter"
+    },
+    {
+      "id": "phoca_vitulina_coast",
+      "commonName": "Harbor Seal",
+      "scientificName": "Phoca vitulina",
+      "group": "Mammal",
+      "family": "Phocidae",
+      "tier": "regional",
+      "representationTier": 3,
+      "lifeStatus": "extant",
+      "timeUnitIds": [
+        "holocene"
+      ],
+      "sources": [
+        "game_authored",
+        "gbif"
+      ],
+      "region": "coastal",
+      "isExtinct": false,
+      "isThreatened": false,
+      "isPlayable": true,
+      "programTier": "E_Encounter"
+    },
+    {
+      "id": "smilodon_fatalis",
+      "commonName": "Smilodon",
+      "scientificName": "Smilodon fatalis",
+      "group": "Mammal",
+      "family": "Felidae",
+      "tier": "regional",
+      "representationTier": 4,
+      "lifeStatus": "extinct",
+      "timeUnitIds": [
+        "phanerozoic"
+      ],
+      "sources": [
+        "game_authored",
+        "catalogue_of_life"
+      ],
+      "region": "fossil_site",
+      "isExtinct": true,
+      "isThreatened": false,
+      "isPlayable": true,
+      "programTier": "E_Encounter"
+    },
+    {
+      "id": "megacerops_coloradensis",
+      "commonName": "Brontothere",
+      "scientificName": "Megacerops coloradensis",
+      "group": "Mammal",
+      "family": "Brontotheriidae",
+      "tier": "regional",
+      "representationTier": 3,
+      "lifeStatus": "extinct",
+      "timeUnitIds": [
+        "phanerozoic"
+      ],
+      "sources": [
+        "game_authored",
+        "catalogue_of_life"
+      ],
+      "region": "fossil_site",
+      "isExtinct": true,
+      "isThreatened": false,
+      "isPlayable": true,
+      "programTier": "E_Encounter"
+    },
+    {
+      "id": "triceratops_horridus",
+      "commonName": "Triceratops",
+      "scientificName": "Triceratops horridus",
+      "group": "Reptile",
+      "family": "Ceratopsidae",
+      "tier": "regional",
+      "representationTier": 4,
+      "lifeStatus": "extinct",
+      "timeUnitIds": [
+        "phanerozoic"
+      ],
+      "sources": [
+        "game_authored",
+        "catalogue_of_life"
+      ],
+      "region": "fossil_site",
+      "isExtinct": true,
+      "isThreatened": false,
+      "isPlayable": true,
+      "programTier": "E_Encounter"
+    },
+    {
+      "id": "stegosaurus_stenops",
+      "commonName": "Stegosaurus",
+      "scientificName": "Stegosaurus stenops",
+      "group": "Reptile",
+      "family": "Stegosauridae",
+      "tier": "regional",
+      "representationTier": 3,
+      "lifeStatus": "extinct",
+      "timeUnitIds": [
+        "phanerozoic"
+      ],
+      "sources": [
+        "game_authored",
+        "catalogue_of_life"
+      ],
+      "region": "fossil_site",
+      "isExtinct": true,
+      "isThreatened": false,
+      "isPlayable": true,
+      "programTier": "E_Encounter"
+    },
+    {
+      "id": "diplodocus_carnegii",
+      "commonName": "Diplodocus",
+      "scientificName": "Diplodocus carnegii",
+      "group": "Reptile",
+      "family": "Diplodocidae",
+      "tier": "regional",
+      "representationTier": 3,
+      "lifeStatus": "extinct",
+      "timeUnitIds": [
+        "phanerozoic"
+      ],
+      "sources": [
+        "game_authored",
+        "catalogue_of_life"
+      ],
+      "region": "fossil_site",
+      "isExtinct": true,
+      "isThreatened": false,
+      "isPlayable": true,
+      "programTier": "E_Encounter"
+    },
+    {
+      "id": "archaeopteryx_lithographica",
+      "commonName": "Archaeopteryx",
+      "scientificName": "Archaeopteryx lithographica",
+      "group": "Bird",
+      "family": "Archaeopterygidae",
+      "tier": "regional",
+      "representationTier": 4,
+      "lifeStatus": "extinct",
+      "timeUnitIds": [
+        "phanerozoic"
+      ],
+      "sources": [
+        "game_authored",
+        "catalogue_of_life"
+      ],
+      "region": "fossil_site",
+      "isExtinct": true,
+      "isThreatened": false,
+      "isPlayable": true,
+      "programTier": "E_Encounter"
+    },
+    {
+      "id": "dunkleosteus_terrelli",
+      "commonName": "Dunkleosteus",
+      "scientificName": "Dunkleosteus terrelli",
+      "group": "Fish",
+      "family": "Dunkleosteidae",
+      "tier": "regional",
+      "representationTier": 3,
+      "lifeStatus": "extinct",
+      "timeUnitIds": [
+        "phanerozoic"
+      ],
+      "sources": [
+        "game_authored",
+        "catalogue_of_life"
+      ],
+      "region": "fossil_site",
+      "isExtinct": true,
+      "isThreatened": false,
+      "isPlayable": true,
+      "programTier": "E_Encounter"
+    },
+    {
+      "id": "tiktaalik_roseae",
+      "commonName": "Tiktaalik",
+      "scientificName": "Tiktaalik roseae",
+      "group": "Fish",
+      "family": "Elpistostegidae",
+      "tier": "regional",
+      "representationTier": 4,
+      "lifeStatus": "extinct",
+      "timeUnitIds": [
+        "phanerozoic"
+      ],
+      "sources": [
+        "game_authored",
+        "catalogue_of_life"
+      ],
+      "region": "fossil_site",
+      "isExtinct": true,
+      "isThreatened": false,
+      "isPlayable": true,
+      "programTier": "E_Encounter"
+    },
+    {
+      "id": "dimetrodon_limbatus",
+      "commonName": "Dimetrodon",
+      "scientificName": "Dimetrodon limbatus",
+      "group": "Synapsid",
+      "family": "Sphenacodontidae",
+      "tier": "regional",
+      "representationTier": 3,
+      "lifeStatus": "extinct",
+      "timeUnitIds": [
+        "phanerozoic"
+      ],
+      "sources": [
+        "game_authored",
+        "catalogue_of_life"
+      ],
+      "region": "fossil_site",
+      "isExtinct": true,
+      "isThreatened": false,
+      "isPlayable": true,
+      "programTier": "E_Encounter"
+    },
+    {
+      "id": "megaloceros_giganteus",
+      "commonName": "Irish Elk",
+      "scientificName": "Megaloceros giganteus",
+      "group": "Mammal",
+      "family": "Cervidae",
+      "tier": "regional",
+      "representationTier": 3,
+      "lifeStatus": "extinct",
+      "timeUnitIds": [
+        "phanerozoic"
+      ],
+      "sources": [
+        "game_authored",
+        "catalogue_of_life"
+      ],
+      "region": "fossil_site",
+      "isExtinct": true,
+      "isThreatened": false,
+      "isPlayable": true,
+      "programTier": "E_Encounter"
+    },
+    {
+      "id": "lepidodendron_aculeatum",
+      "commonName": "Scale Tree",
+      "scientificName": "Lepidodendron aculeatum",
+      "group": "Plant",
+      "family": "Lepidodendraceae",
+      "tier": "regional",
+      "representationTier": 3,
+      "lifeStatus": "extinct",
+      "timeUnitIds": [
+        "phanerozoic"
+      ],
+      "sources": [
+        "game_authored",
+        "catalogue_of_life"
+      ],
+      "region": "indiana_ancient_swamp",
+      "isExtinct": true,
+      "isThreatened": false,
+      "isPlayable": true,
+      "programTier": "E_Encounter"
+    },
+    {
+      "id": "calamites_suckowi",
+      "commonName": "Calamites",
+      "scientificName": "Calamites suckowi",
+      "group": "Plant",
+      "family": "Calamitaceae",
+      "tier": "regional",
+      "representationTier": 2,
+      "lifeStatus": "extinct",
+      "timeUnitIds": [
+        "phanerozoic"
+      ],
+      "sources": [
+        "game_authored",
+        "catalogue_of_life"
+      ],
+      "region": "indiana_ancient_swamp",
+      "isExtinct": true,
+      "isThreatened": false,
+      "isPlayable": true,
+      "programTier": "E_Encounter"
+    },
+    {
+      "id": "meganeura_monyi",
+      "commonName": "Meganeura",
+      "scientificName": "Meganeura monyi",
+      "group": "Insect",
+      "family": "Meganeuridae",
+      "tier": "regional",
+      "representationTier": 4,
+      "lifeStatus": "extinct",
+      "timeUnitIds": [
+        "phanerozoic"
+      ],
+      "sources": [
+        "game_authored",
+        "catalogue_of_life"
+      ],
+      "region": "indiana_ancient_swamp",
+      "isExtinct": true,
+      "isThreatened": false,
+      "isPlayable": true,
+      "programTier": "E_Encounter"
+    },
+    {
+      "id": "arthropleura_armata",
+      "commonName": "Arthropleura",
+      "scientificName": "Arthropleura armata",
+      "group": "Arthropod",
+      "family": "Arthropleuridae",
+      "tier": "regional",
+      "representationTier": 3,
+      "lifeStatus": "extinct",
+      "timeUnitIds": [
+        "phanerozoic"
+      ],
+      "sources": [
+        "game_authored",
+        "catalogue_of_life"
+      ],
+      "region": "indiana_ancient_swamp",
+      "isExtinct": true,
+      "isThreatened": false,
+      "isPlayable": true,
+      "programTier": "E_Encounter"
+    },
+    {
+      "id": "pulmonoscorpius_kirktonensis",
+      "commonName": "Pulmonoscorpius",
+      "scientificName": "Pulmonoscorpius kirktonensis",
+      "group": "Arachnid",
+      "family": "Centromachidae",
+      "tier": "regional",
+      "representationTier": 3,
+      "lifeStatus": "extinct",
+      "timeUnitIds": [
+        "phanerozoic"
+      ],
+      "sources": [
+        "game_authored",
+        "catalogue_of_life"
+      ],
+      "region": "indiana_ancient_swamp",
+      "isExtinct": true,
+      "isThreatened": false,
+      "isPlayable": true,
+      "programTier": "E_Encounter"
+    },
+    {
+      "id": "hylonomus_lyelli",
+      "commonName": "Hylonomus",
+      "scientificName": "Hylonomus lyelli",
+      "group": "Reptile",
+      "family": "Protorothyrididae",
+      "tier": "regional",
+      "representationTier": 3,
+      "lifeStatus": "extinct",
+      "timeUnitIds": [
+        "phanerozoic"
+      ],
+      "sources": [
+        "game_authored",
+        "catalogue_of_life"
+      ],
+      "region": "indiana_ancient_swamp",
+      "isExtinct": true,
+      "isThreatened": false,
+      "isPlayable": true,
+      "programTier": "E_Encounter"
+    },
+    {
+      "id": "pediculus_humanus",
+      "commonName": "Human Louse",
+      "scientificName": "Pediculus humanus",
+      "group": "Insect",
+      "family": "Pediculidae",
+      "tier": "regional",
+      "representationTier": 2,
+      "lifeStatus": "extant",
+      "timeUnitIds": [
+        "holocene"
+      ],
+      "sources": [
+        "game_authored",
+        "gbif"
+      ],
+      "region": "urban_park",
+      "isExtinct": false,
+      "isThreatened": false,
+      "isPlayable": true,
+      "programTier": "E_Encounter"
+    },
+    {
+      "id": "blattella_germanica",
+      "commonName": "German Cockroach",
+      "scientificName": "Blattella germanica",
+      "group": "Insect",
+      "family": "Ectobiidae",
+      "tier": "regional",
+      "representationTier": 2,
+      "lifeStatus": "extant",
+      "timeUnitIds": [
+        "holocene"
+      ],
+      "sources": [
+        "game_authored",
+        "gbif"
+      ],
+      "region": "urban_park",
+      "isExtinct": false,
+      "isThreatened": false,
+      "isPlayable": true,
+      "programTier": "E_Encounter"
+    },
+    {
+      "id": "mus_musculus",
+      "commonName": "House Mouse",
+      "scientificName": "Mus musculus",
+      "group": "Mammal",
+      "family": "Muridae",
+      "tier": "regional",
+      "representationTier": 3,
+      "lifeStatus": "extant",
+      "timeUnitIds": [
+        "holocene"
+      ],
+      "sources": [
+        "game_authored",
+        "gbif"
+      ],
+      "region": "urban_park",
+      "isExtinct": false,
+      "isThreatened": false,
+      "isPlayable": true,
+      "programTier": "E_Encounter"
+    },
+    {
+      "id": "canis_familiaris",
+      "commonName": "Domestic Dog",
+      "scientificName": "Canis lupus familiaris",
+      "group": "Mammal",
+      "family": "Canidae",
+      "tier": "regional",
+      "representationTier": 2,
+      "lifeStatus": "extant",
+      "timeUnitIds": [
+        "holocene"
+      ],
+      "sources": [
+        "game_authored",
+        "gbif"
+      ],
+      "region": "urban_park",
+      "isExtinct": false,
+      "isThreatened": false,
+      "isPlayable": true,
+      "programTier": "E_Encounter"
+    },
+    {
+      "id": "ginkgo_biloba",
+      "commonName": "Ginkgo",
+      "scientificName": "Ginkgo biloba",
+      "group": "Plant",
+      "family": "Ginkgoaceae",
+      "tier": "regional",
+      "representationTier": 3,
+      "lifeStatus": "extant",
+      "timeUnitIds": [
+        "holocene"
+      ],
+      "sources": [
+        "game_authored",
+        "gbif"
+      ],
+      "region": "urban_park",
+      "isExtinct": false,
+      "isThreatened": false,
+      "isPlayable": true,
+      "programTier": "E_Encounter"
+    },
+    {
+      "id": "quillaja_saponaria",
+      "commonName": "Soapbark Tree",
+      "scientificName": "Quillaja saponaria",
+      "group": "Plant",
+      "family": "Quillajaceae",
+      "tier": "regional",
+      "representationTier": 2,
+      "lifeStatus": "extant",
+      "timeUnitIds": [
+        "holocene"
+      ],
+      "sources": [
+        "game_authored",
+        "catalogue_of_life"
+      ],
+      "region": "urban_park",
+      "isExtinct": false,
+      "isThreatened": false,
+      "isPlayable": true,
+      "programTier": "E_Encounter"
+    },
+    {
+      "id": "vespula_vulgaris",
+      "commonName": "Common Wasp",
+      "scientificName": "Vespula vulgaris",
+      "group": "Insect",
+      "family": "Vespidae",
+      "tier": "regional",
+      "representationTier": 2,
+      "lifeStatus": "extant",
+      "timeUnitIds": [
+        "holocene"
+      ],
+      "sources": [
+        "game_authored",
+        "gbif"
+      ],
+      "region": "urban_park",
+      "isExtinct": false,
+      "isThreatened": false,
+      "isPlayable": true,
+      "programTier": "E_Encounter"
+    },
+    {
+      "id": "harmonia_axyridis",
+      "commonName": "Harlequin Ladybird",
+      "scientificName": "Harmonia axyridis",
+      "group": "Insect",
+      "family": "Coccinellidae",
+      "tier": "regional",
+      "representationTier": 2,
+      "lifeStatus": "extant",
+      "timeUnitIds": [
+        "holocene"
+      ],
+      "sources": [
+        "game_authored",
+        "gbif"
+      ],
+      "region": "urban_park",
+      "isExtinct": false,
+      "isThreatened": false,
+      "isPlayable": true,
+      "programTier": "E_Encounter"
+    },
+    {
+      "id": "ananas_comosus",
+      "commonName": "Pineapple",
+      "scientificName": "Ananas comosus",
+      "group": "Plant",
+      "family": "Bromeliaceae",
+      "tier": "regional",
+      "representationTier": 2,
+      "lifeStatus": "extant",
+      "timeUnitIds": [
+        "holocene"
+      ],
+      "sources": [
+        "game_authored",
+        "gbif"
+      ],
+      "region": "savanna",
+      "isExtinct": false,
+      "isThreatened": false,
+      "isPlayable": true,
+      "programTier": "E_Encounter"
+    },
+    {
+      "id": "acacia_senegal",
+      "commonName": "Gum Arabic Tree",
+      "scientificName": "Senegalia senegal",
+      "group": "Plant",
+      "family": "Fabaceae",
+      "tier": "regional",
+      "representationTier": 2,
+      "lifeStatus": "extant",
+      "timeUnitIds": [
+        "holocene"
+      ],
+      "sources": [
+        "game_authored",
+        "catalogue_of_life"
+      ],
+      "region": "savanna",
+      "isExtinct": false,
+      "isThreatened": false,
+      "isPlayable": true,
+      "programTier": "E_Encounter"
+    },
+    {
+      "id": "baobab_digitata",
+      "commonName": "African Baobab",
+      "scientificName": "Adansonia digitata",
+      "group": "Plant",
+      "family": "Malvaceae",
+      "tier": "regional",
+      "representationTier": 3,
+      "lifeStatus": "extant",
+      "timeUnitIds": [
+        "holocene"
+      ],
+      "sources": [
+        "game_authored",
+        "gbif"
+      ],
+      "region": "savanna",
+      "isExtinct": false,
+      "isThreatened": false,
+      "isPlayable": true,
+      "programTier": "E_Encounter"
+    },
+    {
+      "id": "quercus_alba",
+      "commonName": "White Oak",
+      "scientificName": "Quercus alba",
+      "group": "Plant",
+      "family": "Fagaceae",
+      "tier": "regional",
+      "representationTier": 3,
+      "lifeStatus": "extant",
+      "timeUnitIds": [
+        "holocene"
+      ],
+      "sources": [
+        "game_authored",
+        "gbif"
+      ],
+      "region": "forest",
+      "isExtinct": false,
+      "isThreatened": false,
+      "isPlayable": true,
+      "programTier": "E_Encounter"
+    },
+    {
+      "id": "acer_saccharum",
+      "commonName": "Sugar Maple",
+      "scientificName": "Acer saccharum",
+      "group": "Plant",
+      "family": "Sapindaceae",
+      "tier": "regional",
+      "representationTier": 3,
+      "lifeStatus": "extant",
+      "timeUnitIds": [
+        "holocene"
+      ],
+      "sources": [
+        "game_authored",
+        "gbif"
+      ],
+      "region": "forest",
+      "isExtinct": false,
+      "isThreatened": false,
+      "isPlayable": true,
+      "programTier": "E_Encounter"
+    },
+    {
+      "id": "tsuga_canadensis",
+      "commonName": "Eastern Hemlock",
+      "scientificName": "Tsuga canadensis",
+      "group": "Plant",
+      "family": "Pinaceae",
+      "tier": "regional",
+      "representationTier": 2,
+      "lifeStatus": "extant",
+      "timeUnitIds": [
+        "holocene"
+      ],
+      "sources": [
+        "game_authored",
+        "gbif"
+      ],
+      "region": "forest",
+      "isExtinct": false,
+      "isThreatened": false,
+      "isPlayable": true,
+      "programTier": "E_Encounter"
+    },
+    {
+      "id": "nyssa_sylvatica",
+      "commonName": "Black Gum",
+      "scientificName": "Nyssa sylvatica",
+      "group": "Plant",
+      "family": "Nyssaceae",
+      "tier": "regional",
+      "representationTier": 2,
+      "lifeStatus": "extant",
+      "timeUnitIds": [
+        "holocene"
+      ],
+      "sources": [
+        "game_authored",
+        "catalogue_of_life"
+      ],
+      "region": "wetland",
+      "isExtinct": false,
+      "isThreatened": false,
+      "isPlayable": true,
+      "programTier": "E_Encounter"
+    },
+    {
+      "id": "taxodium_distichum",
+      "commonName": "Bald Cypress",
+      "scientificName": "Taxodium distichum",
+      "group": "Plant",
+      "family": "Cupressaceae",
+      "tier": "regional",
+      "representationTier": 3,
+      "lifeStatus": "extant",
+      "timeUnitIds": [
+        "holocene"
+      ],
+      "sources": [
+        "game_authored",
+        "gbif"
+      ],
+      "region": "wetland",
+      "isExtinct": false,
+      "isThreatened": false,
+      "isPlayable": true,
+      "programTier": "E_Encounter"
+    },
+    {
+      "id": "zostera_marina",
+      "commonName": "Eelgrass",
+      "scientificName": "Zostera marina",
+      "group": "Plant",
+      "family": "Zosteraceae",
+      "tier": "regional",
+      "representationTier": 3,
+      "lifeStatus": "extant",
+      "timeUnitIds": [
+        "holocene"
+      ],
+      "sources": [
+        "game_authored",
+        "gbif"
+      ],
+      "region": "coastal",
+      "isExtinct": false,
+      "isThreatened": false,
+      "isPlayable": true,
+      "programTier": "E_Encounter"
+    },
+    {
+      "id": "fucus_vesiculosus",
+      "commonName": "Bladder Wrack",
+      "scientificName": "Fucus vesiculosus",
+      "group": "Alga",
+      "family": "Fucaceae",
+      "tier": "regional",
+      "representationTier": 2,
+      "lifeStatus": "extant",
+      "timeUnitIds": [
+        "holocene"
+      ],
+      "sources": [
+        "game_authored",
+        "gbif"
+      ],
+      "region": "coastal",
+      "isExtinct": false,
+      "isThreatened": false,
+      "isPlayable": true,
+      "programTier": "E_Encounter"
+    },
+    {
+      "id": "sphenodon_punctatus",
+      "commonName": "Tuatara",
+      "scientificName": "Sphenodon punctatus",
+      "group": "Reptile",
+      "family": "Sphenodontidae",
+      "tier": "regional",
+      "representationTier": 4,
+      "lifeStatus": "extant",
+      "timeUnitIds": [
+        "holocene"
+      ],
+      "sources": [
+        "game_authored",
+        "gbif"
+      ],
+      "region": "forest",
+      "isExtinct": false,
+      "isThreatened": false,
+      "isPlayable": true,
+      "programTier": "E_Encounter"
+    },
+    {
+      "id": "ornithorhynchus_anatinus",
+      "commonName": "Platypus",
+      "scientificName": "Ornithorhynchus anatinus",
+      "group": "Mammal",
+      "family": "Ornithorhynchidae",
+      "tier": "regional",
+      "representationTier": 4,
+      "lifeStatus": "extant",
+      "timeUnitIds": [
+        "holocene"
+      ],
+      "sources": [
+        "game_authored",
+        "gbif"
+      ],
+      "region": "wetland",
+      "isExtinct": false,
+      "isThreatened": false,
+      "isPlayable": true,
+      "programTier": "E_Encounter"
+    },
+    {
+      "id": "tachyglossus_aculeatus",
+      "commonName": "Short-beaked Echidna",
+      "scientificName": "Tachyglossus aculeatus",
+      "group": "Mammal",
+      "family": "Tachyglossidae",
+      "tier": "regional",
+      "representationTier": 3,
+      "lifeStatus": "extant",
+      "timeUnitIds": [
+        "holocene"
+      ],
+      "sources": [
+        "game_authored",
+        "gbif"
+      ],
+      "region": "forest",
+      "isExtinct": false,
+      "isThreatened": false,
+      "isPlayable": true,
+      "programTier": "E_Encounter"
+    },
+    {
+      "id": "axolotl_mexicanum",
+      "commonName": "Axolotl",
+      "scientificName": "Ambystoma mexicanum",
+      "group": "Amphibian",
+      "family": "Ambystomatidae",
+      "tier": "regional",
+      "representationTier": 4,
+      "lifeStatus": "extant",
+      "timeUnitIds": [
+        "holocene"
+      ],
+      "sources": [
+        "game_authored",
+        "gbif"
+      ],
+      "region": "wetland",
+      "isExtinct": false,
+      "isThreatened": false,
+      "isPlayable": true,
+      "programTier": "E_Encounter"
+    },
+    {
+      "id": "dendrobates_tinctorius",
+      "commonName": "Dyeing Poison Frog",
+      "scientificName": "Dendrobates tinctorius",
+      "group": "Amphibian",
+      "family": "Dendrobatidae",
+      "tier": "regional",
+      "representationTier": 3,
+      "lifeStatus": "extant",
+      "timeUnitIds": [
+        "holocene"
+      ],
+      "sources": [
+        "game_authored",
+        "catalogue_of_life"
+      ],
+      "region": "forest",
+      "isExtinct": false,
+      "isThreatened": false,
+      "isPlayable": true,
+      "programTier": "E_Encounter"
+    },
+    {
+      "id": "panthera_tigris",
+      "commonName": "Tiger",
+      "scientificName": "Panthera tigris",
+      "group": "Mammal",
+      "family": "Felidae",
+      "tier": "regional",
+      "representationTier": 4,
+      "lifeStatus": "extant",
+      "timeUnitIds": [
+        "holocene"
+      ],
+      "sources": [
+        "game_authored",
+        "gbif"
+      ],
+      "region": "forest",
+      "isExtinct": false,
+      "isThreatened": false,
+      "isPlayable": true,
+      "programTier": "E_Encounter"
+    },
+    {
+      "id": "panthera_onca",
+      "commonName": "Jaguar",
+      "scientificName": "Panthera onca",
+      "group": "Mammal",
+      "family": "Felidae",
+      "tier": "regional",
+      "representationTier": 4,
+      "lifeStatus": "extant",
+      "timeUnitIds": [
+        "holocene"
+      ],
+      "sources": [
+        "game_authored",
+        "gbif"
+      ],
+      "region": "forest",
+      "isExtinct": false,
+      "isThreatened": false,
+      "isPlayable": true,
+      "programTier": "E_Encounter"
+    },
+    {
+      "id": "ailuropoda_melanoleuca",
+      "commonName": "Giant Panda",
+      "scientificName": "Ailuropoda melanoleuca",
+      "group": "Mammal",
+      "family": "Ursidae",
+      "tier": "regional",
+      "representationTier": 4,
+      "lifeStatus": "extant",
+      "timeUnitIds": [
+        "holocene"
+      ],
+      "sources": [
+        "game_authored",
+        "gbif"
+      ],
+      "region": "forest",
+      "isExtinct": false,
+      "isThreatened": false,
+      "isPlayable": true,
+      "programTier": "E_Encounter"
+    },
+    {
+      "id": "gorilla_gorilla",
+      "commonName": "Western Gorilla",
+      "scientificName": "Gorilla gorilla",
+      "group": "Mammal",
+      "family": "Hominidae",
+      "tier": "regional",
+      "representationTier": 4,
+      "lifeStatus": "extant",
+      "timeUnitIds": [
+        "holocene"
+      ],
+      "sources": [
+        "game_authored",
+        "gbif"
+      ],
+      "region": "forest",
+      "isExtinct": false,
+      "isThreatened": false,
+      "isPlayable": true,
+      "programTier": "E_Encounter"
+    },
+    {
+      "id": "pan_troglodytes",
+      "commonName": "Chimpanzee",
+      "scientificName": "Pan troglodytes",
+      "group": "Mammal",
+      "family": "Hominidae",
+      "tier": "regional",
+      "representationTier": 4,
+      "lifeStatus": "extant",
+      "timeUnitIds": [
+        "holocene"
+      ],
+      "sources": [
+        "game_authored",
+        "gbif"
+      ],
+      "region": "forest",
+      "isExtinct": false,
+      "isThreatened": false,
+      "isPlayable": true,
+      "programTier": "E_Encounter"
+    },
+    {
+      "id": "elephas_maximus",
+      "commonName": "Asian Elephant",
+      "scientificName": "Elephas maximus",
+      "group": "Mammal",
+      "family": "Elephantidae",
+      "tier": "regional",
+      "representationTier": 4,
+      "lifeStatus": "extant",
+      "timeUnitIds": [
+        "holocene"
+      ],
+      "sources": [
+        "game_authored",
+        "gbif"
+      ],
+      "region": "savanna",
+      "isExtinct": false,
+      "isThreatened": false,
+      "isPlayable": true,
+      "programTier": "E_Encounter"
+    },
+    {
+      "id": "diceros_bicornis",
+      "commonName": "Black Rhinoceros",
+      "scientificName": "Diceros bicornis",
+      "group": "Mammal",
+      "family": "Rhinocerotidae",
+      "tier": "regional",
+      "representationTier": 4,
+      "lifeStatus": "extant",
+      "timeUnitIds": [
+        "holocene"
+      ],
+      "sources": [
+        "game_authored",
+        "gbif"
+      ],
+      "region": "savanna",
+      "isExtinct": false,
+      "isThreatened": false,
+      "isPlayable": true,
+      "programTier": "E_Encounter"
+    },
+    {
+      "id": "hippopotamus_amphibius",
+      "commonName": "Hippopotamus",
+      "scientificName": "Hippopotamus amphibius",
+      "group": "Mammal",
+      "family": "Hippopotamidae",
+      "tier": "regional",
+      "representationTier": 3,
+      "lifeStatus": "extant",
+      "timeUnitIds": [
+        "holocene"
+      ],
+      "sources": [
+        "game_authored",
+        "gbif"
+      ],
+      "region": "wetland",
+      "isExtinct": false,
+      "isThreatened": false,
+      "isPlayable": true,
+      "programTier": "E_Encounter"
+    },
+    {
+      "id": "phoenicopterus_roseus",
+      "commonName": "Greater Flamingo",
+      "scientificName": "Phoenicopterus roseus",
+      "group": "Bird",
+      "family": "Phoenicopteridae",
+      "tier": "regional",
+      "representationTier": 3,
+      "lifeStatus": "extant",
+      "timeUnitIds": [
+        "holocene"
+      ],
+      "sources": [
+        "game_authored",
+        "gbif"
+      ],
+      "region": "wetland",
+      "isExtinct": false,
+      "isThreatened": false,
+      "isPlayable": true,
+      "programTier": "E_Encounter"
+    },
+    {
+      "id": "aptendytes_patagonicus",
+      "commonName": "King Penguin",
+      "scientificName": "Aptenodytes patagonicus",
+      "group": "Bird",
+      "family": "Spheniscidae",
+      "tier": "regional",
+      "representationTier": 3,
+      "lifeStatus": "extant",
+      "timeUnitIds": [
+        "holocene"
+      ],
+      "sources": [
+        "game_authored",
+        "gbif"
+      ],
+      "region": "polar_ice",
+      "isExtinct": false,
+      "isThreatened": false,
+      "isPlayable": true,
+      "programTier": "E_Encounter"
+    },
+    {
+      "id": "lobodon_carcinophaga",
+      "commonName": "Crabeater Seal",
+      "scientificName": "Lobodon carcinophaga",
+      "group": "Mammal",
+      "family": "Phocidae",
+      "tier": "regional",
+      "representationTier": 3,
+      "lifeStatus": "extant",
+      "timeUnitIds": [
+        "holocene"
+      ],
+      "sources": [
+        "game_authored",
+        "catalogue_of_life"
+      ],
+      "region": "polar_ice",
+      "isExtinct": false,
+      "isThreatened": false,
+      "isPlayable": true,
+      "programTier": "E_Encounter"
+    },
+    {
+      "id": "leptonychotes_weddellii",
+      "commonName": "Weddell Seal",
+      "scientificName": "Leptonychotes weddellii",
+      "group": "Mammal",
+      "family": "Phocidae",
+      "tier": "regional",
+      "representationTier": 3,
+      "lifeStatus": "extant",
+      "timeUnitIds": [
+        "holocene"
+      ],
+      "sources": [
+        "game_authored",
+        "catalogue_of_life"
+      ],
+      "region": "polar_ice",
+      "isExtinct": false,
+      "isThreatened": false,
+      "isPlayable": true,
+      "programTier": "E_Encounter"
+    },
+    {
+      "id": "megaptera_novaeangliae",
+      "commonName": "Humpback Whale",
+      "scientificName": "Megaptera novaeangliae",
+      "group": "Mammal",
+      "family": "Balaenopteridae",
+      "tier": "regional",
+      "representationTier": 4,
+      "lifeStatus": "extant",
+      "timeUnitIds": [
+        "holocene"
+      ],
+      "sources": [
+        "game_authored",
+        "gbif"
+      ],
+      "region": "deep_marine",
+      "isExtinct": false,
+      "isThreatened": false,
+      "isPlayable": true,
+      "programTier": "E_Encounter"
+    },
+    {
+      "id": "balaenoptera_physalus",
+      "commonName": "Fin Whale",
+      "scientificName": "Balaenoptera physalus",
+      "group": "Mammal",
+      "family": "Balaenopteridae",
+      "tier": "regional",
+      "representationTier": 3,
+      "lifeStatus": "extant",
+      "timeUnitIds": [
+        "holocene"
+      ],
+      "sources": [
+        "game_authored",
+        "gbif"
+      ],
+      "region": "deep_marine",
+      "isExtinct": false,
+      "isThreatened": false,
+      "isPlayable": true,
+      "programTier": "E_Encounter"
+    },
+    {
+      "id": "delphinus_delphis",
+      "commonName": "Common Dolphin",
+      "scientificName": "Delphinus delphis",
+      "group": "Mammal",
+      "family": "Delphinidae",
+      "tier": "regional",
+      "representationTier": 3,
+      "lifeStatus": "extant",
+      "timeUnitIds": [
+        "holocene"
+      ],
+      "sources": [
+        "game_authored",
+        "gbif"
+      ],
+      "region": "deep_marine",
+      "isExtinct": false,
+      "isThreatened": false,
+      "isPlayable": true,
+      "programTier": "E_Encounter"
+    },
+    {
+      "id": "thunnus_albacares",
+      "commonName": "Yellowfin Tuna",
+      "scientificName": "Thunnus albacares",
+      "group": "Fish",
+      "family": "Scombridae",
+      "tier": "regional",
+      "representationTier": 3,
+      "lifeStatus": "extant",
+      "timeUnitIds": [
+        "holocene"
+      ],
+      "sources": [
+        "game_authored",
+        "gbif"
+      ],
+      "region": "deep_marine",
+      "isExtinct": false,
+      "isThreatened": false,
+      "isPlayable": true,
+      "programTier": "E_Encounter"
+    },
+    {
+      "id": "xiphias_gladius",
+      "commonName": "Swordfish",
+      "scientificName": "Xiphias gladius",
+      "group": "Fish",
+      "family": "Xiphiidae",
+      "tier": "regional",
+      "representationTier": 3,
+      "lifeStatus": "extant",
+      "timeUnitIds": [
+        "holocene"
+      ],
+      "sources": [
+        "game_authored",
+        "gbif"
+      ],
+      "region": "deep_marine",
+      "isExtinct": false,
+      "isThreatened": false,
+      "isPlayable": true,
+      "programTier": "E_Encounter"
+    },
+    {
+      "id": "septifer_bilocularis",
+      "commonName": "Box Mussel",
+      "scientificName": "Septifer bilocularis",
+      "group": "Mollusk",
+      "family": "Mytilidae",
+      "tier": "regional",
+      "representationTier": 2,
+      "lifeStatus": "extant",
+      "timeUnitIds": [
+        "holocene"
+      ],
+      "sources": [
+        "game_authored",
+        "catalogue_of_life"
+      ],
+      "region": "coastal",
+      "isExtinct": false,
+      "isThreatened": false,
+      "isPlayable": true,
+      "programTier": "E_Encounter"
+    },
+    {
+      "id": "nerita_peloronta",
+      "commonName": "Bleeding Tooth Nerite",
+      "scientificName": "Nerita peloronta",
+      "group": "Mollusk",
+      "family": "Neritidae",
+      "tier": "regional",
+      "representationTier": 2,
+      "lifeStatus": "extant",
+      "timeUnitIds": [
+        "holocene"
+      ],
+      "sources": [
+        "game_authored",
+        "catalogue_of_life"
+      ],
+      "region": "coastal",
+      "isExtinct": false,
+      "isThreatened": false,
+      "isPlayable": true,
+      "programTier": "E_Encounter"
+    },
+    {
+      "id": "callinectes_sapidus",
+      "commonName": "Blue Crab",
+      "scientificName": "Callinectes sapidus",
+      "group": "Arthropod",
+      "family": "Portunidae",
+      "tier": "regional",
+      "representationTier": 3,
+      "lifeStatus": "extant",
+      "timeUnitIds": [
+        "holocene"
+      ],
+      "sources": [
+        "game_authored",
+        "gbif"
+      ],
+      "region": "coastal",
+      "isExtinct": false,
+      "isThreatened": false,
+      "isPlayable": true,
+      "programTier": "E_Encounter"
+    },
+    {
+      "id": "carcinus_maenas",
+      "commonName": "Green Crab",
+      "scientificName": "Carcinus maenas",
+      "group": "Arthropod",
+      "family": "Portunidae",
+      "tier": "regional",
+      "representationTier": 2,
+      "lifeStatus": "extant",
+      "timeUnitIds": [
+        "holocene"
+      ],
+      "sources": [
+        "game_authored",
+        "gbif"
+      ],
+      "region": "coastal",
+      "isExtinct": false,
+      "isThreatened": false,
+      "isPlayable": true,
+      "programTier": "E_Encounter"
+    },
+    {
+      "id": "formica_polyctena",
+      "commonName": "European Red Wood Ant",
+      "scientificName": "Formica polyctena",
+      "group": "Insect",
+      "family": "Formicidae",
+      "tier": "regional",
+      "representationTier": 2,
+      "lifeStatus": "extant",
+      "timeUnitIds": [
+        "holocene"
+      ],
+      "sources": [
+        "game_authored",
+        "catalogue_of_life"
+      ],
+      "region": "forest",
+      "isExtinct": false,
+      "isThreatened": false,
+      "isPlayable": true,
+      "programTier": "E_Encounter"
+    },
+    {
+      "id": "bombus_impatiens",
+      "commonName": "Common Eastern Bumble Bee",
+      "scientificName": "Bombus impatiens",
+      "group": "Insect",
+      "family": "Apidae",
+      "tier": "regional",
+      "representationTier": 3,
+      "lifeStatus": "extant",
+      "timeUnitIds": [
+        "holocene"
+      ],
+      "sources": [
+        "game_authored",
+        "gbif"
+      ],
+      "region": "forest",
+      "isExtinct": false,
+      "isThreatened": false,
+      "isPlayable": true,
+      "programTier": "E_Encounter"
+    },
+    {
+      "id": "papilio_glaucus",
+      "commonName": "Eastern Tiger Swallowtail",
+      "scientificName": "Papilio glaucus",
+      "group": "Insect",
+      "family": "Papilionidae",
+      "tier": "regional",
+      "representationTier": 3,
+      "lifeStatus": "extant",
+      "timeUnitIds": [
+        "holocene"
+      ],
+      "sources": [
+        "game_authored",
+        "gbif"
+      ],
+      "region": "forest",
+      "isExtinct": false,
+      "isThreatened": false,
+      "isPlayable": true,
+      "programTier": "E_Encounter"
+    },
+    {
+      "id": "libellula_luctuosa",
+      "commonName": "Widow Skimmer",
+      "scientificName": "Libellula luctuosa",
+      "group": "Insect",
+      "family": "Libellulidae",
+      "tier": "regional",
+      "representationTier": 2,
+      "lifeStatus": "extant",
+      "timeUnitIds": [
+        "holocene"
+      ],
+      "sources": [
+        "game_authored",
+        "catalogue_of_life"
+      ],
+      "region": "wetland",
+      "isExtinct": false,
+      "isThreatened": false,
+      "isPlayable": true,
+      "programTier": "E_Encounter"
+    },
+    {
+      "id": "aeshnidae_aeshna_multicolor",
+      "commonName": "Blue-eyed Darner",
+      "scientificName": "Rhionaeschna multicolor",
+      "group": "Insect",
+      "family": "Aeshnidae",
+      "tier": "regional",
+      "representationTier": 2,
+      "lifeStatus": "extant",
+      "timeUnitIds": [
+        "holocene"
+      ],
+      "sources": [
+        "game_authored",
+        "catalogue_of_life"
+      ],
+      "region": "wetland",
+      "isExtinct": false,
+      "isThreatened": false,
+      "isPlayable": true,
+      "programTier": "E_Encounter"
+    },
+    {
+      "id": "lucanus_cervus",
+      "commonName": "Stag Beetle",
+      "scientificName": "Lucanus cervus",
+      "group": "Insect",
+      "family": "Lucanidae",
+      "tier": "regional",
+      "representationTier": 3,
+      "lifeStatus": "extant",
+      "timeUnitIds": [
+        "holocene"
+      ],
+      "sources": [
+        "game_authored",
+        "gbif"
+      ],
+      "region": "forest",
+      "isExtinct": false,
+      "isThreatened": false,
+      "isPlayable": true,
+      "programTier": "E_Encounter"
+    },
+    {
+      "id": "goliathus_goliatus",
+      "commonName": "Goliath Beetle",
+      "scientificName": "Goliathus goliatus",
+      "group": "Insect",
+      "family": "Scarabaeidae",
+      "tier": "regional",
+      "representationTier": 3,
+      "lifeStatus": "extant",
+      "timeUnitIds": [
+        "holocene"
+      ],
+      "sources": [
+        "game_authored",
+        "catalogue_of_life"
+      ],
+      "region": "savanna",
+      "isExtinct": false,
+      "isThreatened": false,
+      "isPlayable": true,
+      "programTier": "E_Encounter"
+    },
+    {
+      "id": "mantis_religiosa",
+      "commonName": "European Mantis",
+      "scientificName": "Mantis religiosa",
+      "group": "Insect",
+      "family": "Mantidae",
+      "tier": "regional",
+      "representationTier": 2,
+      "lifeStatus": "extant",
+      "timeUnitIds": [
+        "holocene"
+      ],
+      "sources": [
+        "game_authored",
+        "gbif"
+      ],
+      "region": "savanna",
+      "isExtinct": false,
+      "isThreatened": false,
+      "isPlayable": true,
+      "programTier": "E_Encounter"
+    },
+    {
+      "id": "schistocerca_gregaria",
+      "commonName": "Desert Locust",
+      "scientificName": "Schistocerca gregaria",
+      "group": "Insect",
+      "family": "Acrididae",
+      "tier": "regional",
+      "representationTier": 3,
+      "lifeStatus": "extant",
+      "timeUnitIds": [
+        "holocene"
+      ],
+      "sources": [
+        "game_authored",
+        "gbif"
+      ],
+      "region": "savanna",
+      "isExtinct": false,
+      "isThreatened": false,
+      "isPlayable": true,
+      "programTier": "E_Encounter"
+    },
+    {
+      "id": "naja_naja",
+      "commonName": "Indian Cobra",
+      "scientificName": "Naja naja",
+      "group": "Reptile",
+      "family": "Elapidae",
+      "tier": "regional",
+      "representationTier": 3,
+      "lifeStatus": "extant",
+      "timeUnitIds": [
+        "holocene"
+      ],
+      "sources": [
+        "game_authored",
+        "gbif"
+      ],
+      "region": "savanna",
+      "isExtinct": false,
+      "isThreatened": false,
+      "isPlayable": true,
+      "programTier": "E_Encounter"
+    },
+    {
+      "id": "varanus_komodoensis",
+      "commonName": "Komodo Dragon",
+      "scientificName": "Varanus komodoensis",
+      "group": "Reptile",
+      "family": "Varanidae",
+      "tier": "regional",
+      "representationTier": 4,
+      "lifeStatus": "extant",
+      "timeUnitIds": [
+        "holocene"
+      ],
+      "sources": [
+        "game_authored",
+        "gbif"
+      ],
+      "region": "savanna",
+      "isExtinct": false,
+      "isThreatened": false,
+      "isPlayable": true,
+      "programTier": "E_Encounter"
+    },
+    {
+      "id": "crotalus_horridus",
+      "commonName": "Timber Rattlesnake",
+      "scientificName": "Crotalus horridus",
+      "group": "Reptile",
+      "family": "Viperidae",
+      "tier": "regional",
+      "representationTier": 3,
+      "lifeStatus": "extant",
+      "timeUnitIds": [
+        "holocene"
+      ],
+      "sources": [
+        "game_authored",
+        "gbif"
+      ],
+      "region": "forest",
+      "isExtinct": false,
+      "isThreatened": false,
+      "isPlayable": true,
+      "programTier": "E_Encounter"
+    },
+    {
+      "id": "thamnophis_sirtalis",
+      "commonName": "Common Garter Snake",
+      "scientificName": "Thamnophis sirtalis",
+      "group": "Reptile",
+      "family": "Colubridae",
+      "tier": "regional",
+      "representationTier": 2,
+      "lifeStatus": "extant",
+      "timeUnitIds": [
+        "holocene"
+      ],
+      "sources": [
+        "game_authored",
+        "gbif"
+      ],
+      "region": "wetland",
+      "isExtinct": false,
+      "isThreatened": false,
+      "isPlayable": true,
+      "programTier": "E_Encounter"
+    },
+    {
+      "id": "chrysemys_picta",
+      "commonName": "Painted Turtle",
+      "scientificName": "Chrysemys picta",
+      "group": "Reptile",
+      "family": "Emydidae",
+      "tier": "regional",
+      "representationTier": 3,
+      "lifeStatus": "extant",
+      "timeUnitIds": [
+        "holocene"
+      ],
+      "sources": [
+        "game_authored",
+        "gbif"
+      ],
+      "region": "wetland",
+      "isExtinct": false,
+      "isThreatened": false,
+      "isPlayable": true,
+      "programTier": "E_Encounter"
     }
   ]
 }
