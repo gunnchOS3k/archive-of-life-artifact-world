@@ -67,6 +67,7 @@
     "rc:digital-suite": "tsx scripts/run-digital-rc-suite.ts",
     "report:claims": "tsx scripts/report-claim-ledger.ts",
     "audit:claim-firewall": "tsx scripts/validate_archive_claim_firewall.ts",
+    "audit:mock-firewall": "tsx scripts/validate_mock_release_firewall.ts",
     "report:beta-rc:legacy": "tsx scripts/report-beta-rc.ts"
   },
   "devDependencies": {

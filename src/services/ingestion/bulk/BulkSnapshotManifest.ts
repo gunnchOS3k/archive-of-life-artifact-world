@@ -6,7 +6,7 @@
 import { createHash } from 'crypto';
 import { createReadStream, existsSync, statSync } from 'fs';
 
-export type BulkSourceId = 'col' | 'gbif' | 'pbdb';
+export type BulkSourceId = 'col' | 'gbif' | 'pbdb' | 'iucn' | 'neotoma' | 'ics' | 'smithsonian';
 
 export interface BulkSnapshotSourceSpec {
   source: BulkSourceId;
@@ -26,17 +26,21 @@ export interface BulkSnapshotSourceSpec {
 }
 
 export interface BulkSnapshotManifest {
-  schemaVersion: '1.0.0';
+  schemaVersion: '1.1.0';
   snapshotId: string;
   snapshotVersion: string;
   generatedAt: string;
   globalCompleteClaim: false;
+  continuation: 'VII';
+  engineRcScope: 'launch_tier_engine_runtime';
   sources: BulkSnapshotSourceSpec[];
   commands: string[];
   honesty: {
     neverCommitHugeDatasets: true;
     liveClaimOnlyWhenQueried: true;
     noFabricatedGlobalComplete: true;
+    mockCannotSatisfyReleaseGates: true;
+    deepenBulkDoesNotEqualGlobalCatalog: true;
   };
 }
 
@@ -74,6 +78,50 @@ export const DEFAULT_BULK_SPECS: BulkSnapshotSourceSpec[] = [
     format: 'csv',
     notes: 'PBDB public API or dump; hash after download.',
   },
+  {
+    source: 'iucn',
+    product: 'IUCN Red List taxonomy / assessments (operator-licensed extract)',
+    acquisitionUrl: 'https://www.iucnredlist.org/',
+    license: 'IUCN terms — operator credential required',
+    localRelativePath: 'iucn/assessments_export.csv',
+    sha256: null,
+    bytes: null,
+    format: 'csv',
+    notes: 'Cont VII deepen: licensed extract only; never claim global complete from partial dumps.',
+  },
+  {
+    source: 'neotoma',
+    product: 'Neotoma Paleoecology Database occurrence export',
+    acquisitionUrl: 'https://www.neotomadb.org/',
+    license: 'Neotoma terms',
+    localRelativePath: 'neotoma/occurrences_export.json',
+    sha256: null,
+    bytes: null,
+    format: 'json',
+    notes: 'Cont VII deepen: paleoecology occurrences; hash locally after download.',
+  },
+  {
+    source: 'ics',
+    product: 'ICS International Chronostratigraphic Chart (time units)',
+    acquisitionUrl: 'https://stratigraphy.org/',
+    license: 'ICS chart license',
+    localRelativePath: 'ics/chronostrat_chart.json',
+    sha256: null,
+    bytes: null,
+    format: 'json',
+    notes: 'Cont VII deepen: time atlas units — not species catalog completeness.',
+  },
+  {
+    source: 'smithsonian',
+    product: 'Smithsonian open collections / NMNH taxonomic subset (approved freeze)',
+    acquisitionUrl: 'https://www.si.edu/',
+    license: 'Varies per collection — record in provenance',
+    localRelativePath: 'smithsonian/nmnh_subset.jsonl',
+    sha256: null,
+    bytes: null,
+    format: 'json',
+    notes: 'Cont VII deepen: approved subset only; MOCK samples remain non-release.',
+  },
 ];
 
 export function buildBulkSnapshotManifest(opts: {
@@ -82,11 +130,13 @@ export function buildBulkSnapshotManifest(opts: {
   sources?: BulkSnapshotSourceSpec[];
 }): BulkSnapshotManifest {
   return {
-    schemaVersion: '1.0.0',
+    schemaVersion: '1.1.0',
     snapshotId: opts.snapshotId,
     snapshotVersion: opts.snapshotVersion,
     generatedAt: new Date().toISOString(),
     globalCompleteClaim: false,
+    continuation: 'VII',
+    engineRcScope: 'launch_tier_engine_runtime',
     sources: opts.sources ?? DEFAULT_BULK_SPECS,
     commands: [
       'npm run ingest:batch',
@@ -99,6 +149,8 @@ export function buildBulkSnapshotManifest(opts: {
       neverCommitHugeDatasets: true,
       liveClaimOnlyWhenQueried: true,
       noFabricatedGlobalComplete: true,
+      mockCannotSatisfyReleaseGates: true,
+      deepenBulkDoesNotEqualGlobalCatalog: true,
     },
   };
 }

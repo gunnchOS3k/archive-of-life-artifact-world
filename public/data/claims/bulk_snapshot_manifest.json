@@ -1,9 +1,11 @@
 {
-  "schemaVersion": "1.0.0",
-  "snapshotId": "sample-2026-07",
-  "snapshotVersion": "2.0.0",
-  "generatedAt": "2026-08-08T21:11:07.098Z",
+  "schemaVersion": "1.1.0",
+  "snapshotId": "archive-bulk-manifest",
+  "snapshotVersion": "2.2.0-cont-vii",
+  "generatedAt": "2026-08-09T18:07:40.948Z",
   "globalCompleteClaim": false,
+  "continuation": "VII",
+  "engineRcScope": "launch_tier_engine_runtime",
   "sources": [
     {
       "source": "col",
@@ -37,6 +39,50 @@
       "bytes": null,
       "format": "csv",
       "notes": "PBDB public API or dump; hash after download."
+    },
+    {
+      "source": "iucn",
+      "product": "IUCN Red List taxonomy / assessments (operator-licensed extract)",
+      "acquisitionUrl": "https://www.iucnredlist.org/",
+      "license": "IUCN terms — operator credential required",
+      "localRelativePath": "iucn/assessments_export.csv",
+      "sha256": null,
+      "bytes": null,
+      "format": "csv",
+      "notes": "Cont VII deepen: licensed extract only; never claim global complete from partial dumps."
+    },
+    {
+      "source": "neotoma",
+      "product": "Neotoma Paleoecology Database occurrence export",
+      "acquisitionUrl": "https://www.neotomadb.org/",
+      "license": "Neotoma terms",
+      "localRelativePath": "neotoma/occurrences_export.json",
+      "sha256": null,
+      "bytes": null,
+      "format": "json",
+      "notes": "Cont VII deepen: paleoecology occurrences; hash locally after download."
+    },
+    {
+      "source": "ics",
+      "product": "ICS International Chronostratigraphic Chart (time units)",
+      "acquisitionUrl": "https://stratigraphy.org/",
+      "license": "ICS chart license",
+      "localRelativePath": "ics/chronostrat_chart.json",
+      "sha256": null,
+      "bytes": null,
+      "format": "json",
+      "notes": "Cont VII deepen: time atlas units — not species catalog completeness."
+    },
+    {
+      "source": "smithsonian",
+      "product": "Smithsonian open collections / NMNH taxonomic subset (approved freeze)",
+      "acquisitionUrl": "https://www.si.edu/",
+      "license": "Varies per collection — record in provenance",
+      "localRelativePath": "smithsonian/nmnh_subset.jsonl",
+      "sha256": null,
+      "bytes": null,
+      "format": "json",
+      "notes": "Cont VII deepen: approved subset only; MOCK samples remain non-release."
     }
   ],
   "commands": [
@@ -49,6 +95,8 @@
   "honesty": {
     "neverCommitHugeDatasets": true,
     "liveClaimOnlyWhenQueried": true,
-    "noFabricatedGlobalComplete": true
+    "noFabricatedGlobalComplete": true,
+    "mockCannotSatisfyReleaseGates": true,
+    "deepenBulkDoesNotEqualGlobalCatalog": true
   }
 }

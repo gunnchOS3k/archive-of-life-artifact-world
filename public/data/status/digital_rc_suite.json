@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-08T21:08:05.663Z",
+  "generatedAt": "2026-08-09T18:08:09.393Z",
   "checks": {
     "db_migration": {
       "ok": true,
@@ -11,7 +11,7 @@
     },
     "snapshot_corrupt_detect": {
       "ok": true,
-      "detail": "hash mismatch detected (good=2bd9a3be1a bad=6f7fd90003)"
+      "detail": "hash mismatch detected (good=a66785364c bad=5f84974e2d)"
     },
     "offline": {
       "ok": true,
@@ -48,6 +48,10 @@
     "unique_icon_title": {
       "ok": true,
       "detail": "title=\"Archive of Life — Artifact World\" icon=public/icons/archive-of-life-icon.svg"
+    },
+    "mock_release_firewall": {
+      "ok": true,
+      "detail": "ok=true mock=0/196 releaseEligible=196 globalCatalogComplete=false"
     }
   },
   "allOk": true

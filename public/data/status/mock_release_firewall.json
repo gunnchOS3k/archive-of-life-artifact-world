@@ -1,0 +1,15 @@
+{
+  "generatedAt": "2026-08-09T18:08:09.392Z",
+  "continuation": "VII",
+  "ok": true,
+  "releaseRuntimeAllowsMockClaims": false,
+  "mockIndexEntries": 0,
+  "totalIndexEntries": 196,
+  "releaseEligibleEntries": 196,
+  "violations": [],
+  "honesty": {
+    "engineDigitalRcScope": "launch_tier_engine_runtime",
+    "globalCatalogComplete": false,
+    "mockCannotSatisfyReleaseGates": true
+  }
+}

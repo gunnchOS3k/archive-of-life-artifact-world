@@ -1,25 +1,28 @@
-# Beta / Digital RC status (Cont VI)
+# Beta / Digital RC status (Cont VII)
 
-**Beta digital** = frozen launch Tier E/F + systems + world/runtime traversal.  
-Does **not** mean global scientific ingest.
+**Engine Digital RC** = frozen launch Tier E/F + systems + science-DB runtime + MOCK firewall.  
+Does **not** mean global scientific catalog complete.
 
-**Digital RC** = Beta + `PIPELINE_COMPLETE` + **runtime science-DB integration** + RC suite.
+| Token | Status | Scope |
+|-------|--------|-------|
+| `LAUNCH_TIER_E_COMPLETE` | E≥120 playable | engine launch floor |
+| `LAUNCH_TIER_F_COMPLETE` | F=24 | engine launch floor |
+| `PIPELINE_COMPLETE` | production ops path | engine |
+| `ARCHIVE_BETA_CONTENT_COMPLETE_DIGITAL` | earned | engine |
+| `ARCHIVE_DIGITAL_RC_READY` | earned with runtime DB + MOCK firewall | **engine RC only** |
+| `GLOBAL_DATA_COMPLETE` | always rejected | global catalog |
+| `ALL_SPECIES_INGESTED` | always rejected | global catalog |
 
-| Token | Status |
-|-------|--------|
-| `LAUNCH_TIER_E_COMPLETE` | E=156 playable (floor 120) |
-| `LAUNCH_TIER_F_COMPLETE` | F=24 gameplay+artifacts |
-| `PIPELINE_COMPLETE` | Cont VI multi-query live ops (see `production_ops_report.json`) |
-| `ARCHIVE_BETA_CONTENT_COMPLETE_DIGITAL` | earned |
-| `ARCHIVE_DIGITAL_RC_READY` | earned only with runtime DB integration |
-| `GLOBAL_DATA_COMPLETE` | always rejected |
-| `ALL_SPECIES_INGESTED` | always rejected |
+## Cont VII honesty
+
+- MOCK / sample provenance cannot satisfy release completeness.
+- Deepened bulk ingest (COL/GBIF/PBDB/IUCN/Neotoma/ICS/Smithsonian manifests) ≠ global catalog.
+- `encounterTaxa≥120` restored via frozen `search-index.json` in `restore:launch-floors`.
 
 ```bash
-npm run ingest:production-ops
-npm run build:science-db
-npm run qa:tier-ef-runtime
+npm run restore:launch-floors
+npm run ingest:bulk-manifest
+npm run audit:mock-firewall
 npm run rc:digital-suite
-npm run report:claims
 npm run audit:claim-firewall
 ```

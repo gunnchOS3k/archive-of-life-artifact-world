@@ -1,50 +1,50 @@
 {
-  "generatedAt": "2026-08-08T21:08:04.558Z",
+  "generatedAt": "2026-08-09T18:08:08.309Z",
   "sources": [
     {
       "id": "col",
       "state": "LIVE_PUBLIC",
-      "updatedAt": "2026-08-08T21:08:04.558Z"
+      "updatedAt": "2026-08-09T18:08:08.309Z"
     },
     {
       "id": "gbif",
       "state": "LIVE_PUBLIC",
-      "updatedAt": "2026-08-08T21:08:04.558Z"
+      "updatedAt": "2026-08-09T18:08:08.309Z"
     },
     {
       "id": "pbdb",
       "state": "LIVE_PUBLIC",
-      "updatedAt": "2026-08-08T21:08:04.558Z"
+      "updatedAt": "2026-08-09T18:08:08.309Z"
     },
     {
       "id": "iucn",
       "state": "AUTHORIZED_BULK",
-      "updatedAt": "2026-08-08T21:08:04.558Z"
+      "updatedAt": "2026-08-09T18:08:08.309Z"
     },
     {
       "id": "neotoma",
       "state": "SNAPSHOT",
-      "updatedAt": "2026-08-08T21:08:04.558Z"
+      "updatedAt": "2026-08-09T18:08:08.309Z"
     },
     {
       "id": "nasa",
       "state": "LIVE_PUBLIC",
-      "updatedAt": "2026-08-08T21:08:04.558Z"
+      "updatedAt": "2026-08-09T18:08:08.309Z"
     },
     {
       "id": "inaturalist",
       "state": "UNAVAILABLE",
-      "updatedAt": "2026-08-08T21:08:04.558Z"
+      "updatedAt": "2026-08-09T18:08:08.309Z"
     },
     {
       "id": "obis",
       "state": "UNAVAILABLE",
-      "updatedAt": "2026-08-08T21:08:04.558Z"
+      "updatedAt": "2026-08-09T18:08:08.309Z"
     },
     {
       "id": "worms",
       "state": "UNAVAILABLE",
-      "updatedAt": "2026-08-08T21:08:04.558Z"
+      "updatedAt": "2026-08-09T18:08:08.309Z"
     }
   ],
   "updatePath": "registry→status/source_states.json"
