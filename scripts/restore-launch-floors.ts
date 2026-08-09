@@ -26,6 +26,9 @@ const FILES = [
   'clues.json',
   'companion-modules.json',
   'expeditions.json',
+  // Cont VI CI: generate:bundles emits a sample search-index (~40 entries).
+  // Floor audits require the frozen launch index (E≥120 + F=24).
+  'search-index.json',
 ];
 
 function loadJson<T>(path: string): T {
@@ -69,10 +72,10 @@ function syncIndexAndManifest(): void {
       group: s.group ?? 'unknown',
       family: s.taxonomy?.family ?? 'unknown',
       tier: 'hero',
-      representationTier: 1,
+      representationTier: 5,
       lifeStatus: extinct ? 'extinct' : 'extant',
       timeUnitIds: s.timeUnitIds ?? [],
-      sources: ['mock_sample'],
+      sources: ['game_authored'],
       region: s.region,
       iucnCategory: iucn,
       isExtinct: extinct,
@@ -80,6 +83,47 @@ function syncIndexAndManifest(): void {
       isPlayable: true,
       programTier: 'F_Flagship',
     });
+  }
+
+  // Ensure encounter catalog taxa are indexed (TierCoverageReport counts E_Encounter).
+  const encounterPath = join(BUNDLES, 'encounter-taxa.json');
+  if (existsSync(encounterPath)) {
+    const enc = loadJson<{
+      species: Array<{
+        id: string;
+        commonName?: string;
+        scientificName: string;
+        group?: string;
+        taxonomy?: { family?: string };
+        programTier?: string;
+        region?: string;
+        timeUnitIds?: string[];
+        isExtinct?: boolean;
+        isPlayable?: boolean;
+        provenance?: Array<{ source?: string }>;
+      }>;
+    }>(encounterPath);
+    for (const s of enc.species) {
+      if (byId.has(s.id)) continue;
+      const tier = s.programTier === 'F_Flagship' ? 'hero' : 'regional';
+      byId.set(s.id, {
+        id: s.id,
+        commonName: s.commonName ?? s.scientificName,
+        scientificName: s.scientificName,
+        group: s.group ?? 'unknown',
+        family: s.taxonomy?.family ?? 'unknown',
+        tier,
+        representationTier: s.programTier === 'F_Flagship' ? 5 : 2,
+        lifeStatus: s.isExtinct ? 'extinct' : 'extant',
+        timeUnitIds: s.timeUnitIds ?? [],
+        sources: ['game_authored'],
+        region: s.region,
+        isExtinct: Boolean(s.isExtinct),
+        isThreatened: false,
+        isPlayable: s.isPlayable !== false,
+        programTier: s.programTier ?? 'E_Encounter',
+      });
+    }
   }
 
   const entries = [...byId.values()];

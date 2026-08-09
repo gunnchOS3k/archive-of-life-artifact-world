@@ -1,8 +1,8 @@
 {
   "path": "public/data/science/archive_science.sqlite",
-  "sha256": "fc2de070587c695d9dac12ba432305c7341adf3719412623272d428f2ebabf5d",
+  "sha256": "e96e812bf6b5f1cbbe3f7733c8d934ac0cdeb79926e3f51f3aa093ca57fe2553",
   "bytes": 1900544,
   "schemaVersion": 1,
-  "generatedAt": "2026-08-08T21:08:05.661Z",
+  "generatedAt": "2026-08-09T18:08:09.390Z",
   "globalCompleteClaim": false
 }

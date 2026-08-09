@@ -25,6 +25,7 @@ import {
 } from '@/systems/accessibility';
 import { DEFAULT_SOURCE_REGISTRY } from '@/services/ingestion/sourceRegistry';
 import type { IngestedTaxonRecord } from '@/services/ingestion/types';
+import { runMockReleaseFirewall } from '@/claims/mockReleaseFirewall';
 
 export interface DigitalRcSuiteResult {
   generatedAt: string;
@@ -266,6 +267,17 @@ export function runDigitalRcSuite(root = process.cwd()): DigitalRcSuiteResult {
   checks.unique_icon_title = {
     ok: existsSync(join(iconDir, 'archive-of-life-icon.svg')) && packageManifest.uniqueTitle.includes('Archive of Life'),
     detail: `title="${packageManifest.uniqueTitle}" icon=public/icons/archive-of-life-icon.svg`,
+  };
+
+  // Cont VII — MOCK firewall (release runtime never treats mock as complete)
+  const mockFw = runMockReleaseFirewall(root);
+  writeFileSync(
+    join(root, 'public/data/status/mock_release_firewall.json'),
+    JSON.stringify(mockFw, null, 2) + '\n',
+  );
+  checks.mock_release_firewall = {
+    ok: mockFw.ok && mockFw.releaseRuntimeAllowsMockClaims === false,
+    detail: `ok=${mockFw.ok} mock=${mockFw.mockIndexEntries}/${mockFw.totalIndexEntries} releaseEligible=${mockFw.releaseEligibleEntries} globalCatalogComplete=false`,
   };
 
   // Touch default save so suite does not leave empty

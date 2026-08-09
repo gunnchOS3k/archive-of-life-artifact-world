@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "snapshotId": "cont-vi-science-db-2026-08",
   "snapshotVersion": "science-1.0.0",
-  "generatedAt": "2026-08-08T21:08:05.660Z",
+  "generatedAt": "2026-08-09T18:08:09.388Z",
   "dbPath": "public/data/science/archive_science.sqlite",
   "contentHash": "dd5b73e9993523d515853ce40aa6844a864d873721d1432df3e1a7d6ccff7481",
   "stats": {
@@ -30,5 +30,5 @@
     "time_ranges.era_id"
   ],
   "globalCompleteClaim": false,
-  "elapsedMs": 1099
+  "elapsedMs": 1075
 }
