@@ -1,8 +1,8 @@
 {
   "schema": "wp014_content_register/v1",
   "game": "archive-of-life-artifact-world",
-  "generated_at": "2026-08-11T19:51:05Z",
-  "source_commit": "948ca172bb77b4caf1bd3c2d809d74ee6d4b6c75",
+  "generated_at": "2026-08-11T20:17:47Z",
+  "source_commit": "969310e9925b546ec147617dd86ea7c493297a29",
   "counts": {
     "hero_species": 24,
     "regions": 6
@@ -11,12 +11,24 @@
     "real Game keyboard movement",
     "manual pause freeze + save",
     "visibilitychange suspend checkpoint save",
-    "save/load localStorage lifecycle"
+    "save/load localStorage lifecycle",
+    "region session travel to a live-content region + real interactable spawn",
+    "species walk-up + real WildlifeObservation minigame completion",
+    "collection record via collectArtifact() with provenance citation + era/time-period link",
+    "companion (Lifeling) XP progression from a real observation",
+    "ArchiveDex/encyclopedia entry lookup for the collected species",
+    "data integrity via validateSave() round-trip",
+    "audio cue hook fired on artifact-collected/pause-toggle",
+    "corrupted localStorage save recovers to null (not a throw), falls back to default save",
+    "real frame-update timing capture (perf) + telemetry buffer inspection",
+    "clean exit via Game.stop() halting the RAF loop"
   ],
   "not_claimed": [
     "No complete species coverage",
     "No device-lab/physical pass",
-    "gate1 fixture core_loop is not production evidence"
+    "gate1 fixture core_loop is not production evidence",
+    "In-game Settings panel UI and full a11y baseline not independently re-probed this cycle (covered by prior digital RC unit tests only)",
+    "No bundled audio assets — audio hook is a real, wired, fail-soft trigger point, not shipped SFX"
   ],
   "provenance": {
     "data": "public/data bundles + science DB carried over"

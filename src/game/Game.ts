@@ -12,6 +12,7 @@ import {
 } from '@/systems/encounterSystem';
 import { ensureCompanionProgressFields } from '@/systems/companionProgression';
 import { track } from '@/systems/telemetry';
+import { playCue } from '@/systems/audioCueSystem';
 import {
   applyAccessibilitySettings,
   loadAccessibilitySettings,
@@ -591,11 +592,13 @@ export class Game {
         level: this.state.companion.level ?? 1,
         xp: this.state.companion.xp ?? 0,
       });
+      playCue('artifact_collected');
       if (result.progression?.leveledUp) {
         track('companion_level_up', {
           level: result.progression.level,
           from: result.progression.previousLevel,
         });
+        playCue('companion_level_up');
         this.showToast(`Lifeling grew to level ${result.progression.level}!`);
       }
       const entry = await this.dexService.getEntryById(species.id, this.state);
@@ -722,6 +725,7 @@ export class Game {
       this.save();
       this.showToast('Paused — press P or Escape to resume');
     }
+    playCue('pause_toggle');
     track('pause_toggle', { paused: this.manualPaused, source: 'manual' });
   }
 
@@ -763,6 +767,27 @@ export class Game {
     this.running = true;
     this.lastTime = performance.now();
     requestAnimationFrame((t) => this.loop(t));
+  }
+
+  /**
+   * Clean exit — stop the RAF loop, flush the current state to disk, and
+   * clear pending timers. Previously nothing ever set running=false, so a
+   * host app (Capacitor screen change, SPA route swap) that dropped its
+   * Game reference left the loop scheduling requestAnimationFrame forever.
+   */
+  stop() {
+    if (!this.running) return;
+    this.running = false;
+    this.save();
+    if (this.toastTimer) {
+      clearTimeout(this.toastTimer);
+      this.toastTimer = null;
+    }
+    track('clean_exit', { region: this.state.player.currentRegion });
+  }
+
+  isRunning(): boolean {
+    return this.running;
   }
 
   private loop(timestamp: number) {

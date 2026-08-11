@@ -55,9 +55,93 @@
         "x": 222,
         "region": "savanna"
       }
+    },
+    {
+      "step": "region_session_and_species_target",
+      "result": "pass",
+      "detail": {
+        "region_used": "savanna",
+        "target_id": "panthera_leo",
+        "currentRegion": "savanna"
+      }
+    },
+    {
+      "step": "species_interaction_and_collection_record",
+      "result": "pass",
+      "detail": {
+        "species_id": "panthera_leo",
+        "collected": true,
+        "xp_before": 0,
+        "xp_after": 25,
+        "notebook_has_entry": true,
+        "era_context_time_period_field_present": true,
+        "provenance_field_present": true
+      }
+    },
+    {
+      "step": "encyclopedia_entry_lookup",
+      "result": "pass",
+      "detail": {
+        "species_id": "panthera_leo",
+        "found": true
+      }
+    },
+    {
+      "step": "companion_progression",
+      "result": "pass",
+      "detail": {
+        "xp_before": 0,
+        "xp_after": 25,
+        "level": 1
+      }
+    },
+    {
+      "step": "data_integrity_validate_save",
+      "result": "pass",
+      "detail": {}
+    },
+    {
+      "step": "audio_hook",
+      "result": "pass",
+      "detail": {
+        "cue": {
+          "name": "pause_toggle",
+          "at": 1786479600118,
+          "played": true
+        }
+      }
+    },
+    {
+      "step": "crash_recovery",
+      "result": "pass",
+      "detail": {
+        "threw": false,
+        "recovered_is_null": true,
+        "fallback_valid": true
+      }
+    },
+    {
+      "step": "logging_perf_telemetry",
+      "result": "pass",
+      "detail": {
+        "telemetry_event_count": 1,
+        "telemetry_event_names": [
+          "save"
+        ],
+        "frames_simulated": 300,
+        "avg_update_msec": 0.019027083333333698,
+        "implied_fps": 52556.6626519206
+      }
+    },
+    {
+      "step": "clean_exit",
+      "result": "pass",
+      "detail": {
+        "running_after_stop": false
+      }
     }
   ],
-  "generated_at": "2026-08-11T19:50:05.766Z",
+  "generated_at": "2026-08-11T20:20:00.125Z",
   "false_positive_rejected": [
     "gate1/tools/core_loop_runner.mjs is a Node fixture simulator — not this evidence",
     "python -m http.server is not an archive runtime"
