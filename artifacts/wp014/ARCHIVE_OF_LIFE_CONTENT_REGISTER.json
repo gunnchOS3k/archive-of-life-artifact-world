@@ -1,0 +1,24 @@
+{
+  "schema": "wp014_content_register/v1",
+  "game": "archive-of-life-artifact-world",
+  "generated_at": "2026-08-11T19:51:05Z",
+  "source_commit": "948ca172bb77b4caf1bd3c2d809d74ee6d4b6c75",
+  "counts": {
+    "hero_species": 24,
+    "regions": 6
+  },
+  "systems_verified_this_cycle": [
+    "real Game keyboard movement",
+    "manual pause freeze + save",
+    "visibilitychange suspend checkpoint save",
+    "save/load localStorage lifecycle"
+  ],
+  "not_claimed": [
+    "No complete species coverage",
+    "No device-lab/physical pass",
+    "gate1 fixture core_loop is not production evidence"
+  ],
+  "provenance": {
+    "data": "public/data bundles + science DB carried over"
+  }
+}

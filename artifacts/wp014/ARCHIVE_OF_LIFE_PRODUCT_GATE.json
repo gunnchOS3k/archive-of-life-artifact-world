@@ -1,0 +1,76 @@
+{
+  "schema": "wp014_product_gate/v1",
+  "cycle": "operating-cycle-3b",
+  "work_package": "WP-014",
+  "game": "archive-of-life-artifact-world",
+  "branch": "operating-cycle-3b/wp-014-archive-of-life",
+  "base": "origin/main",
+  "base_commit": "948ca172bb77b4caf1bd3c2d809d74ee6d4b6c75",
+  "generated_at": "2026-08-11T19:51:05Z",
+  "evidence_file": "gate1/evidence/out/actual_production_runtime.json",
+  "priority_blocker_addressed": {
+    "claim": "Web production runtime needs real Game input + pause + suspend/save \u2014 not gate1 Node fixture",
+    "finding": "No visibilitychange/pagehide suspend-save existed; Escape only closed panels (no soft-pause); Game.update() was callable while paused if loop bypassed; held WASD survived pause and lurched on resume.",
+    "fix": "Added setupLifecycleSuspend + toggleManualPause (P/Escape), clearMovementKeys on pause/suspend, and paused early-return inside update(). WP-014 vitest boots real Game + saveSystem.",
+    "real_defect_found_and_fixed": "Backgrounding the web/Capacitor shell did not auto-save or freeze; pause did not clear held movement keys."
+  },
+  "gates": {
+    "ACTUAL_PRODUCTION_RUNTIME": "PASS",
+    "TITLE_MENU_PASS": "PASS",
+    "NEW_GAME_SESSION_PASS": "PASS",
+    "INPUT_PASS": "PASS",
+    "CORE_GAME_LOOP_PASS": "PARTIAL \u2014 movement+pause+save evidenced; full encounter/minigame not re-run this cycle",
+    "PAUSE_PASS": "PASS",
+    "SAVE_PASS": "PASS",
+    "LOAD_PASS": "PASS",
+    "SUSPEND_RESUME_OR_CHECKPOINT_PASS": "PASS",
+    "SETTINGS_PASS": "PARTIAL \u2014 not separately probed this cycle",
+    "AUDIO_HOOK_PASS": "PENDING",
+    "A11Y_BASELINE_PASS": "PARTIAL \u2014 prior digital RC only",
+    "CRASH_RECOVERY_PASS": "PENDING",
+    "LOGGING_PASS": "PARTIAL \u2014 track() events on pause/suspend",
+    "PERF_TELEMETRY_PASS": "PENDING",
+    "CLEAN_EXIT_PASS": "PARTIAL",
+    "DEVICE_LAB_PASS": "PARTIAL_PENDING_WP-011R_GUEST",
+    "PHYSICAL_HARDWARE_PLAYTEST": "PENDING"
+  },
+  "gate_evidence_detail": {
+    "title_menu_shell": {
+      "has_canvas": true,
+      "region": "museum"
+    },
+    "new_game_session": {
+      "catalog_ready": true
+    },
+    "real_input_movement": {
+      "x0": 120,
+      "x1": 255
+    },
+    "pause_pass": {
+      "paused": true,
+      "x0": 400,
+      "x1": 400,
+      "disk_x": 400
+    },
+    "suspend_resume_or_checkpoint": {
+      "paused": true,
+      "suspendPaused": true,
+      "disk_x": 333
+    },
+    "save_load_lifecycle": {
+      "version": 4,
+      "x": 222,
+      "region": "savanna"
+    }
+  },
+  "false_positive_rejected": [
+    "gate1/tools/core_loop_runner.mjs is a Node fixture simulator \u2014 not this evidence",
+    "python -m http.server is not an archive runtime"
+  ],
+  "defects": {
+    "S0_open": 0,
+    "S1_open": 0,
+    "S1_found_and_fixed_this_cycle": 2
+  },
+  "market_parity_claim": "None."
+}

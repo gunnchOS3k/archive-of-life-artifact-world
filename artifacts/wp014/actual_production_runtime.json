@@ -1,0 +1,65 @@
+{
+  "schema": "aol_actual_production_runtime/v1",
+  "game": "archive-of-life-artifact-world",
+  "engine": "web-canvas",
+  "run_mode": "vitest_jsdom_real_Game_class",
+  "all_steps_pass": true,
+  "steps": [
+    {
+      "step": "title_menu_shell",
+      "result": "pass",
+      "detail": {
+        "has_canvas": true,
+        "region": "museum"
+      }
+    },
+    {
+      "step": "new_game_session",
+      "result": "pass",
+      "detail": {
+        "catalog_ready": true
+      }
+    },
+    {
+      "step": "real_input_movement",
+      "result": "pass",
+      "detail": {
+        "x0": 120,
+        "x1": 255
+      }
+    },
+    {
+      "step": "pause_pass",
+      "result": "pass",
+      "detail": {
+        "paused": true,
+        "x0": 400,
+        "x1": 400,
+        "disk_x": 400
+      }
+    },
+    {
+      "step": "suspend_resume_or_checkpoint",
+      "result": "pass",
+      "detail": {
+        "paused": true,
+        "suspendPaused": true,
+        "disk_x": 333
+      }
+    },
+    {
+      "step": "save_load_lifecycle",
+      "result": "pass",
+      "detail": {
+        "version": 4,
+        "x": 222,
+        "region": "savanna"
+      }
+    }
+  ],
+  "generated_at": "2026-08-11T19:50:05.766Z",
+  "false_positive_rejected": [
+    "gate1/tools/core_loop_runner.mjs is a Node fixture simulator — not this evidence",
+    "python -m http.server is not an archive runtime"
+  ]
+}

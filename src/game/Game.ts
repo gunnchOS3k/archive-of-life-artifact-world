@@ -57,6 +57,9 @@ export class Game {
   private keys: Record<string, boolean> = {};
   private running = false;
   private paused = false;
+  /** True when pause came from visibility/pagehide auto-suspend (not a panel). */
+  private suspendPaused = false;
+  private manualPaused = false;
   private lastTime = 0;
   private nearestInteractable: ReturnType<World['getNearestInteractable']> = null;
   private activeMinigame: Minigame | null = null;
@@ -167,6 +170,7 @@ export class Game {
     this.mapUI.onTravel = (regionId) => void this.travelToRegion(regionId);
 
     this.setupInput();
+    this.setupLifecycleSuspend();
     void this.loadRegion(state.player.currentRegion);
     this.resize();
     window.addEventListener('resize', () => this.resize());
@@ -202,6 +206,11 @@ export class Game {
       if (e.key === '6') this.togglePanel('earth');
       if (e.key === '7') this.togglePanel('time');
       if (e.key === '8' || e.key === ',') this.togglePanel('settings');
+      if ((e.key === 'p' || e.key === 'P' || e.key === 'Escape') && !this.isPanelOpen() && !this.activeMinigame) {
+        e.preventDefault();
+        this.toggleManualPause();
+        return;
+      }
       if (this.devMode && (e.key === 'g' || e.key === 'G')) this.togglePanel('coverage');
       if (this.devMode && (e.key === 'i' || e.key === 'I')) this.togglePanel('implementation');
       if (e.key === 'Escape') this.closeAllPanels();
@@ -254,6 +263,16 @@ export class Game {
   private clearTouchKeys() {
     for (const k of ['w', 'a', 's', 'd', 'ArrowUp', 'ArrowDown', 'ArrowLeft', 'ArrowRight'] as const) {
       this.keys[k] = false;
+    }
+  }
+
+  /** Drop held movement keys on pause/suspend so resume does not lurch. */
+  private clearMovementKeys() {
+    this.clearTouchKeys();
+    for (const k of Object.keys(this.keys)) {
+      if (['w', 'a', 's', 'd', 'W', 'A', 'S', 'D', 'ArrowUp', 'ArrowDown', 'ArrowLeft', 'ArrowRight'].includes(k)) {
+        this.keys[k] = false;
+      }
     }
   }
 
@@ -370,13 +389,13 @@ export class Game {
       this.refreshUI();
       this.paused = true;
     } else {
-      this.paused = false;
+      this.paused = this.manualPaused || this.suspendPaused;
     }
   }
 
   closeAllPanels() {
     document.querySelectorAll('.panel').forEach((p) => p.classList.add('hidden'));
-    this.paused = false;
+    this.paused = this.manualPaused || this.suspendPaused;
   }
 
   refreshUI() {
@@ -689,6 +708,51 @@ export class Game {
     };
   }
 
+  /** Explicit pause (P / Escape) independent of panels — production soft-pause. */
+  toggleManualPause() {
+    if (this.activeMinigame) return;
+    if (this.isPanelOpen()) {
+      this.closeAllPanels();
+      return;
+    }
+    this.manualPaused = !this.manualPaused;
+    this.paused = this.manualPaused || this.suspendPaused || this.isPanelOpen();
+    if (this.manualPaused) {
+      this.clearMovementKeys();
+      this.save();
+      this.showToast('Paused — press P or Escape to resume');
+    }
+    track('pause_toggle', { paused: this.manualPaused, source: 'manual' });
+  }
+
+  /**
+   * Mobile / tab-switch / OS suspend: persist expedition and freeze the loop.
+   * Previously missing — backgrounding the Capacitor/web shell dropped unsaved
+   * position/journal until the next interact/travel save.
+   */
+  private setupLifecycleSuspend() {
+    if (typeof document === 'undefined' || typeof window === 'undefined') return;
+    const onHidden = () => {
+      if (document.visibilityState === 'hidden') {
+        this.suspendPaused = true;
+        this.paused = true;
+        this.clearMovementKeys();
+        this.save();
+        track('suspend', { region: this.state.player.currentRegion });
+      } else if (this.suspendPaused) {
+        this.suspendPaused = false;
+        this.paused = this.manualPaused || this.isPanelOpen();
+        track('resume', { region: this.state.player.currentRegion });
+      }
+    };
+    document.addEventListener('visibilitychange', onHidden);
+    window.addEventListener('pagehide', () => {
+      this.save();
+      track('pagehide_save', { region: this.state.player.currentRegion });
+    });
+  }
+
+
   save() {
     this.state.player.x = this.player.x;
     this.state.player.y = this.player.y;
@@ -729,6 +793,7 @@ export class Game {
   }
 
   private update(dt: number) {
+    if (this.paused) return;
     this.player.update(dt, this.keys, this.bounds, this.world.getSolidObstacles());
     this.lifeling.update(dt, this.player.x, this.player.y, this.state.companion);
 
