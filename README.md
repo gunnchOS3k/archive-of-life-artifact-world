@@ -1,127 +1,108 @@
-# Archive of Life: Artifact World
+# archive-of-life-artifact-world
 
-Educational open-world exploration game — discover life, collect ethical artifacts, and build the Archive of Life with your Lifeling companion.
+Educational open-world exploration — discover life, collect ethical artifacts, build the Archive with a Lifeling companion.
 
-## Data readiness
+> **Current release/state:** `INTEGRATED` playable game loop — scientific bundles are **sample/mock-labeled** until external sources verify.
 
-The game loop is playable, but the current scientific bundles are a labeled sample release. The strict production gate intentionally fails until external source snapshots, regional NASA measurements, and all full-Earth temporal maps are imported and verified.
+Ecosystem portal: [gunnchos-research-portal](https://github.com/gunnchOS3k/gunnchos-research-portal) · Product charter: [gunnchOS3k_PRODUCT_CHARTER.md](https://github.com/gunnchOS3k/gunnchos-7gc-ai-ran-field-kit/blob/main/program/charter/gunnchOS3k_PRODUCT_CHARTER.md)
 
-## Release status
+## What is this?
 
-| Area | Status |
-|------|--------|
-| **Game** | Fully playable — museum hub, 5 expedition regions, minigames, quests, Lifeling |
-| **ArchiveDex** | Fully implemented (17 tabs, provenance classes) — sample taxa only |
-| **Time Atlas** | Fully implemented (ICS sample, gates, uncertainty) — live ICS via import workflow |
-| **Full-Earth temporal maps** | 648-cell global coverage index + 17 gate requirements; 0/17 source-verified assets |
-| **Earth Layer Console** | Real metadata cache is separated from sample regional measurements |
-| **Coverage Dashboard** | Fully implemented (dev/admin) — mock vs verified labeled |
-| **Data pipeline** | Fully implemented — Python CLI, SQL validation, source import commands |
-| **External sources** | Blocked until snapshots configured — see [Source ingestion runbook](docs/SOURCE_INGESTION_RUNBOOK.md) |
+Web/game client + data pipeline for Archive of Life / Artifact World with provenance-aware science layers.
 
-Game-authored content uses `game_authored_verified` provenance. Scientific fields from mock/sample sources are labeled and **not counted** as source-verified coverage.
+## Why does it exist?
 
-## Quick start
+Learning-through-exploration game that respects scientific provenance and does not fake Earth coverage.
+
+## Where does it fit?
+
+Product Charter **layer 9**. Lab packaging optional; strict production science gates intentionally fail until imports verify.
+
+## What is real today?
+
+- Playable museum hub, regions, minigames, ArchiveDex/Time Atlas implementations
+- `npm run dev` + audit scripts
+- Provenance classes separating game-authored vs mock vs verified
+
+## What is simulated / modelled?
+
+- Sample taxa / ICS sample / mock regional measurements
+- Full-Earth temporal maps indexed but 0/17 source-verified until imports
+
+## What is physical / external pending?
+
+- External source snapshots (NASA/COL/etc.) and production science audits
+- Device Lab production-runtime earn where applicable
+
+## Try / inspect in 5 minutes
 
 ```bash
 npm install
-npm run generate:time-atlas
-npm run generate:bundles
-npm run generate:maps
-npm run dev                # http://localhost:5173
+npm run generate:time-atlas && npm run generate:bundles && npm run generate:maps
+npm run dev   # http://localhost:5173
 ```
-
-Dev/admin dashboards: append `?dev=1` — keys **G** (Coverage), **I** (Implementation Status).
-
-## Verify everything
-
-```bash
-npm run typecheck
-npm run audit:data
-npm run audit:coverage
-npm run audit:archivedex
-npm run audit:maps
-npm run audit:implementation
-npm run audit:release
-npm run source:validate
-npm run source:audit
-npm run build
-npm run pipeline:all
-```
-
-Strict scientific release checks (currently expected to report external-data blockers):
-
-```bash
-npm run audit:maps:production
-npm run audit:production
-```
-
-## Complete external data imports
-
-1. Copy `data-pipeline/.env.example` → `data-pipeline/.env`
-2. Configure snapshot paths / API tokens (see [External data requirements](docs/EXTERNAL_DATA_REQUIREMENTS.md))
-3. Run imports:
-
-```bash
-npm run source:import:nasa    # public APIs — no token required
-npm run source:import:col     # requires COL_SNAPSHOT_PATH
-npm run source:audit
-```
-
-Blocked sources fail with actionable messages and next commands.
-
-## Scripts
-
-| Command | Description |
-|---------|-------------|
-| `npm run dev` | Vite dev server |
-| `npm run build` | Production build |
-| `npm run typecheck` | TypeScript check |
-| `npm run generate:bundles` | Build `public/data/bundles/` |
-| `npm run generate:time-atlas` | Build Time Atlas bundles |
-| `npm run generate:maps` | Build full-Earth grid and synchronize 17 map requirements |
-| `npm run audit:data` | Data integrity + mock/verified counts |
-| `npm run audit:coverage` | Global coverage matrix (45 checks) |
-| `npm run audit:archivedex` | ArchiveDex integrity |
-| `npm run audit:maps` | Full-Earth grid, per-gate map, asset, checksum, and provenance integrity |
-| `npm run audit:production` | Strict non-mock scientific production readiness |
-| `npm run audit:implementation` | Implementation status JSON |
-| `npm run audit:release` | Release readiness gates |
-| `npm run source:list` | List external source import status |
-| `npm run source:validate` | Validate source env configuration |
-| `npm run source:audit` | Write source readiness JSON reports |
-| `npm run source:import:nasa` | Fetch/cache NASA public metadata |
-| `npm run source:import:col` | Import Catalogue of Life snapshot |
-| `npm run pipeline:all` | Python lint, test, SQL, audit |
 
 ## Architecture
 
+`src/` game/UI; `data-pipeline/` Python; `public/data/` bundles with mock-vs-verified labels.
+
+## Repo map
+
+| Path | Role |
+|---|---|
+| `src/` | Game client |
+| `data-pipeline/` | Import/audit CLI |
+| `public/data/` | Bundles + status JSON |
+| `docs/` | Ingestion runbooks |
+
+## Interfaces
+
+npm audit/import scripts; optional Lab packaging. No claim of full-Earth verified science today.
+
+## Tests
+
+```bash
+npm run typecheck
+npm run audit:data audit:coverage audit:release
+npm run build
 ```
-src/               Game, UI, services, coverage, schemas
-public/data/       Manifest, bundles, time, earth, coverage, status
-data-pipeline/     Python/uv ingestion validation (sample scope)
-scripts/           Generators and audits
-docs/              Architecture, provenance, release policies
-```
 
-## Controls
+## Evidence
 
-WASD/Arrows move · E interact · A/N/M/C/Q/T/Y menus · Escape close panels
+Coverage/implementation audit JSON under `public/data/status/` — read labels carefully.
 
-## Documentation
+## Known gaps
 
-- [Implementation status](docs/IMPLEMENTATION_STATUS.md)
-- [Real data completion plan](docs/REAL_DATA_COMPLETION_PLAN.md)
-- [Source ingestion runbook](docs/SOURCE_INGESTION_RUNBOOK.md)
-- [External data requirements](docs/EXTERNAL_DATA_REQUIREMENTS.md)
-- [Release readiness checklist](docs/RELEASE_READINESS_CHECKLIST.md)
-- [Mock/sample data policy](docs/MOCK_SAMPLE_DATA_POLICY.md)
-- [Global coverage matrix](docs/GLOBAL_COVERAGE_MATRIX.md)
-- [Data architecture](docs/DATA_ARCHITECTURE.md)
-- [ArchiveDex](docs/ARCHIVEDEX_SPECIES_ENTRY_SYSTEM.md)
-- [Time Atlas](docs/TIME_ATLAS_ARCHITECTURE.md)
-- [Full-Earth temporal maps](docs/TEMPORAL_EARTH_MAPS.md)
+External verified science imports; production audit green; Lab runtime tokens.
+
+## Beginner path
+
+Explore, collect, learn — treat science badges as labeled honesty, not magic completeness.
+
+## Intern path
+
+Run audits; explain one mock vs verified field.
+
+## Expert path
+
+Source ingestion runbook; keep production gates strict.
+
+## Contribution path
+
+Gameplay + honest data pipeline. Never strip mock labels to fake coverage.
+
+## Current release / state
+
+**INTEGRATED** gameplay · science **sample/external-pending**. `game_repo_not_lab_runtime_proof`.
+
+## Claim boundary
+
+No commercial 6G · mock science ≠ verified Earth · Cursor DRAFT-only.
 
 ---
 
-*Independent educational exploration game — not affiliated with any creature-collection franchise.*
+## Retained detail (post–Cycle 3A front door)
+
+Full prior README: [docs/history/README_PRE_WP012.md](docs/history/README_PRE_WP012.md).
+
+See [docs/SOURCE_INGESTION_RUNBOOK.md](docs/SOURCE_INGESTION_RUNBOOK.md) and [docs/EXTERNAL_DATA_REQUIREMENTS.md](docs/EXTERNAL_DATA_REQUIREMENTS.md).
