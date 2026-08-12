@@ -17,7 +17,12 @@ export type TelemetryEventName =
   | 'device_role_apply'
   | 'a11y_change'
   | 'time_period_filter'
-  | 'panel_open';
+  | 'panel_open'
+  | 'pause_toggle'
+  | 'suspend'
+  | 'resume'
+  | 'pagehide_save'
+  | 'clean_exit';
 
 export interface TelemetryEvent {
   name: TelemetryEventName;

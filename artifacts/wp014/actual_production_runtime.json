@@ -1,0 +1,178 @@
+{
+  "schema": "aol_actual_production_runtime/v1",
+  "game": "archive-of-life-artifact-world",
+  "engine": "web-canvas",
+  "run_mode": "vitest_jsdom_real_Game_class",
+  "all_steps_pass": true,
+  "steps": [
+    {
+      "step": "title_menu_shell",
+      "result": "pass",
+      "detail": {
+        "has_canvas": true,
+        "region": "museum"
+      }
+    },
+    {
+      "step": "new_game_session",
+      "result": "pass",
+      "detail": {
+        "catalog_ready": true
+      }
+    },
+    {
+      "step": "real_input_movement",
+      "result": "pass",
+      "detail": {
+        "x0": 120,
+        "x1": 255
+      }
+    },
+    {
+      "step": "pause_pass",
+      "result": "pass",
+      "detail": {
+        "paused": true,
+        "x0": 400,
+        "x1": 400,
+        "disk_x": 400
+      }
+    },
+    {
+      "step": "suspend_resume_or_checkpoint",
+      "result": "pass",
+      "detail": {
+        "paused": true,
+        "suspendPaused": true,
+        "disk_x": 333
+      }
+    },
+    {
+      "step": "save_load_lifecycle",
+      "result": "pass",
+      "detail": {
+        "version": 4,
+        "x": 222,
+        "region": "savanna"
+      }
+    },
+    {
+      "step": "region_session_and_species_target",
+      "result": "pass",
+      "detail": {
+        "region_used": "savanna",
+        "target_id": "panthera_leo",
+        "currentRegion": "savanna"
+      }
+    },
+    {
+      "step": "species_interaction_and_collection_record",
+      "result": "pass",
+      "detail": {
+        "species_id": "panthera_leo",
+        "collected": true,
+        "xp_before": 0,
+        "xp_after": 25,
+        "notebook_has_entry": true,
+        "era_context_time_period_field_present": true,
+        "provenance_field_present": true
+      }
+    },
+    {
+      "step": "encyclopedia_entry_lookup",
+      "result": "pass",
+      "detail": {
+        "species_id": "panthera_leo",
+        "found": true
+      }
+    },
+    {
+      "step": "companion_progression",
+      "result": "pass",
+      "detail": {
+        "xp_before": 0,
+        "xp_after": 25,
+        "level": 1
+      }
+    },
+    {
+      "step": "data_integrity_validate_save",
+      "result": "pass",
+      "detail": {}
+    },
+    {
+      "step": "audio_hook",
+      "result": "pass",
+      "detail": {
+        "cue": {
+          "name": "pause_toggle",
+          "at": 1786558428220,
+          "played": true
+        }
+      }
+    },
+    {
+      "step": "crash_recovery",
+      "result": "pass",
+      "detail": {
+        "threw": false,
+        "recovered_is_null": true,
+        "fallback_valid": true
+      }
+    },
+    {
+      "step": "logging_perf_telemetry",
+      "result": "pass",
+      "detail": {
+        "telemetry_event_count": 1,
+        "telemetry_event_names": [
+          "save"
+        ],
+        "frames_simulated": 300,
+        "avg_update_msec": 0.0318474999999997,
+        "implied_fps": 31399.638904152896
+      }
+    },
+    {
+      "step": "settings_ui_production",
+      "result": "pass",
+      "detail": {
+        "highContrast": true,
+        "largeText": true,
+        "reducedMotion": true,
+        "panel_open": true
+      }
+    },
+    {
+      "step": "a11y_baseline_ui_retained",
+      "result": "pass",
+      "detail": {
+        "checked": true
+      }
+    },
+    {
+      "step": "settings_defaults_restored",
+      "result": "pass",
+      "detail": {
+        "restored": {
+          "reducedMotion": false,
+          "highContrast": false,
+          "largeText": false,
+          "screenReaderHints": true
+        }
+      }
+    },
+    {
+      "step": "clean_exit",
+      "result": "pass",
+      "detail": {
+        "running_after_stop": false
+      }
+    }
+  ],
+  "generated_at": "2026-08-12T18:13:48.243Z",
+  "false_positive_rejected": [
+    "gate1/tools/core_loop_runner.mjs is a Node fixture simulator — not this evidence",
+    "python -m http.server is not an archive runtime"
+  ]
+}
