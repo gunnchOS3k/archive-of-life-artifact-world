@@ -8,7 +8,7 @@
   "classification": "ALPHA",
   "classification_rationale": [
     "Systems depth exists (exploration/regions/eras/encounters/artifacts/ArchiveDex/Lifeling/a11y/save/offline integrity) with digital evidence",
-    "Scientific coverage remains launch-scope / sample — not polished encyclopedic completeness",
+    "Scientific coverage remains launch-scope / sample \u2014 not polished encyclopedic completeness",
     "VISUAL_MODEL_REVIEW unavailable (no live pixel inspect this packet)",
     "HUMAN_POLISH and fun remain HUMAN_PENDING",
     "No invented Agar.io critique or invented pixel critique"
@@ -39,14 +39,14 @@
     {
       "severity": "S2",
       "id": "CRIT-S2-SCIENCE-SAMPLE-SCOPE",
-      "summary": "Scientific bundles are launch/sample scope with honest claim firewall — not every-species completeness.",
+      "summary": "Scientific bundles are launch/sample scope with honest claim firewall \u2014 not every-species completeness.",
       "evidence": "artifacts/archive_full/DATA_COVERAGE_HONESTY.json"
     },
     {
       "severity": "S3",
       "id": "CRIT-S3-HUMAN-POLISH",
       "status": "OPEN",
-      "summary": "HUMAN_POLISH pending — AI cannot earn human fun/polish."
+      "summary": "HUMAN_POLISH pending \u2014 AI cannot earn human fun/polish."
     }
   ],
   "scores_heuristic": {
@@ -56,7 +56,7 @@
     "scientific_honesty": 0.9,
     "ship_readiness": 0.5
   },
-  "verdict": "ALPHA — deep digital exploration/science systems packet; not polished beta/RC without human polish + broader verified scientific coverage.",
-  "tip_sha": "PENDING_COMMIT",
-  "tip_short": "PENDING"
+  "verdict": "ALPHA \u2014 deep digital exploration/science systems packet; not polished beta/RC without human polish + broader verified scientific coverage.",
+  "tip_sha": "0855f0e61c1bcaa4e42f1f4bf877dc7d2aeb4805",
+  "tip_short": "0855f0e"
 }

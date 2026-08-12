@@ -9,7 +9,7 @@
   "generated_at": "2026-08-12T22:34:53Z",
   "source_commit_base": "64fcf3a73d9a0db4e13523f762cf3fd651d7ddaa",
   "FULL_GAME_CONTENT_COMPLETE": false,
-  "claim": "ARCHIVE_FULL_PRODUCT_DEPTH_PARTIAL — digitally executable gaps closed (live companion-module wiring, offline pack integrity, map era context, polish instrumentation); HUMAN_POLISH pending; scientific coverage not globally complete",
+  "claim": "ARCHIVE_FULL_PRODUCT_DEPTH_PARTIAL \u2014 digitally executable gaps closed (live companion-module wiring, offline pack integrity, map era context, polish instrumentation); HUMAN_POLISH pending; scientific coverage not globally complete",
   "HUMAN_POLISH": "HUMAN_PENDING",
   "fun": "HUMAN_PENDING",
   "VISUAL_MODEL_REVIEW": "UNAVAILABLE",
@@ -30,7 +30,7 @@
   "features": {
     "exploration_loop": {
       "status": "PASS_RUNTIME",
-      "loop": "museum_hub → region_travel → soft/walk-up encounter → ethical observe/excavate → artifact → ArchiveDex → Lifeling XP",
+      "loop": "museum_hub \u2192 region_travel \u2192 soft/walk-up encounter \u2192 ethical observe/excavate \u2192 artifact \u2192 ArchiveDex \u2192 Lifeling XP",
       "not_agar_io": true,
       "evidence": "src/game/Game.ts + src/systems/encounterSystem.ts + qa:world-traversal class exploration_expedition_observation_research"
     },
@@ -42,18 +42,25 @@
     },
     "species_encounters": {
       "status": "PASS_RUNTIME",
-      "ethical_flows": ["observe_from_distance", "excavate"],
+      "ethical_flows": [
+        "observe_from_distance",
+        "excavate"
+      ],
       "evidence": "WildlifeObservation + FossilExcavation + encounterSystem + WP-014 production gate"
     },
     "artifacts_provenance": {
       "status": "PASS_RUNTIME",
-      "fields": ["provenanceCitations", "timePeriodId", "ethical"],
+      "fields": [
+        "provenanceCitations",
+        "timePeriodId",
+        "ethical"
+      ],
       "evidence": "src/systems/artifactSystem.ts notebook provenance citations"
     },
     "taxonomy": {
       "status": "PASS_DATA_RUNTIME",
       "evidence": "ArchiveDex taxonomy tab + schema/taxonomy + science DB taxa",
-      "note": "Launch snapshot taxonomy only — not Catalogue of Life complete"
+      "note": "Launch snapshot taxonomy only \u2014 not Catalogue of Life complete"
     },
     "archivedex": {
       "status": "PASS_RUNTIME",
@@ -75,7 +82,13 @@
     },
     "companion_customization": {
       "status": "PASS_RUNTIME",
-      "features": ["name", "bodyColor", "equip_traits", "emotes", "preview_canvas"],
+      "features": [
+        "name",
+        "bodyColor",
+        "equip_traits",
+        "emotes",
+        "preview_canvas"
+      ],
       "telemetry": "companion_customize",
       "evidence": "src/ui/companionUI.ts + Lifeling.drawPreview + save round-trip"
     },
@@ -88,12 +101,20 @@
     },
     "a11y": {
       "status": "PASS_RUNTIME",
-      "features": ["reducedMotion", "highContrast", "largeText", "screenReaderHints"],
+      "features": [
+        "reducedMotion",
+        "highContrast",
+        "largeText",
+        "screenReaderHints"
+      ],
       "evidence": "src/systems/accessibility.ts + SettingsUI + WP-014 A11Y_BASELINE_PASS"
     },
     "save": {
       "status": "PASS_RUNTIME",
-      "paths": ["localStorage aol_save", "visibilitychange suspend checkpoint"],
+      "paths": [
+        "localStorage aol_save",
+        "visibilitychange suspend checkpoint"
+      ],
       "evidence": "src/systems/saveSystem.ts + Game.setupLifecycleSuspend"
     },
     "performance": {
@@ -121,9 +142,9 @@
     "S0_open": 0,
     "S1_open": 0,
     "S1_found_and_fixed_this_cycle": 1,
-    "S1_fixed_detail": "companion affinity modules existed in bundles and QA/DB traversal but were not loaded or applied on the live Game collectArtifact / region-travel path — players never unlocked modular progression in production runtime"
+    "S1_fixed_detail": "companion affinity modules existed in bundles and QA/DB traversal but were not loaded or applied on the live Game collectArtifact / region-travel path \u2014 players never unlocked modular progression in production runtime"
   },
-  "tip_sha": "PENDING_COMMIT",
-  "tip_short": "PENDING",
-  "source_commit_tip": "PENDING_COMMIT"
+  "tip_sha": "0855f0e61c1bcaa4e42f1f4bf877dc7d2aeb4805",
+  "tip_short": "0855f0e",
+  "source_commit_tip": "0855f0e61c1bcaa4e42f1f4bf877dc7d2aeb4805"
 }
