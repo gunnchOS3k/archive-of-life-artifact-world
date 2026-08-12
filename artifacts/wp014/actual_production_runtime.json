@@ -106,7 +106,7 @@
       "detail": {
         "cue": {
           "name": "pause_toggle",
-          "at": 1786479600118,
+          "at": 1786558428220,
           "played": true
         }
       }
@@ -129,8 +129,37 @@
           "save"
         ],
         "frames_simulated": 300,
-        "avg_update_msec": 0.019027083333333698,
-        "implied_fps": 52556.6626519206
+        "avg_update_msec": 0.0318474999999997,
+        "implied_fps": 31399.638904152896
+      }
+    },
+    {
+      "step": "settings_ui_production",
+      "result": "pass",
+      "detail": {
+        "highContrast": true,
+        "largeText": true,
+        "reducedMotion": true,
+        "panel_open": true
+      }
+    },
+    {
+      "step": "a11y_baseline_ui_retained",
+      "result": "pass",
+      "detail": {
+        "checked": true
+      }
+    },
+    {
+      "step": "settings_defaults_restored",
+      "result": "pass",
+      "detail": {
+        "restored": {
+          "reducedMotion": false,
+          "highContrast": false,
+          "largeText": false,
+          "screenReaderHints": true
+        }
       }
     },
     {
@@ -141,7 +170,7 @@
       }
     }
   ],
-  "generated_at": "2026-08-11T20:20:00.125Z",
+  "generated_at": "2026-08-12T18:13:48.243Z",
   "false_positive_rejected": [
     "gate1/tools/core_loop_runner.mjs is a Node fixture simulator — not this evidence",
     "python -m http.server is not an archive runtime"

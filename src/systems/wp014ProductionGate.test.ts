@@ -21,6 +21,14 @@ import { ArchiveDexService } from '@/services/ArchiveDexService';
 import { getTelemetryBuffer, clearTelemetryBuffer } from '@/systems/telemetry';
 import { getLastCue, clearCueHistory } from '@/systems/audioCueSystem';
 import { validateSave } from '@/systems/saveSystem';
+import { SettingsUI } from '@/ui/settingsUI';
+import {
+  DEFAULT_A11Y,
+  loadAccessibilitySettings,
+  saveAccessibilitySettings,
+  applyAccessibilitySettings,
+} from '@/systems/accessibility';
+import { getDeviceRole } from '@/device/deviceRoles';
 
 const ROOT = process.cwd();
 const OUT_DIR = join(ROOT, 'gate1/evidence/out');
@@ -368,7 +376,57 @@ describe('WP-014 Archive ACTUAL_PRODUCTION_RUNTIME', () => {
     );
   });
 
-  it('clean exit: stop() halts the loop and flushes state without throwing', () => {
+  
+  it('settings + a11y via actual SettingsUI production panel', () => {
+    document.body.innerHTML = `
+      <div id="panel-settings" class="panel">
+        <div class="panel-body"></div>
+      </div>
+      <button id="btn-settings"></button>
+    `;
+    const panel = document.getElementById('panel-settings')!;
+    const role = getDeviceRole('handheld_hybrid');
+    const ui = new SettingsUI(panel, role);
+    ui.open();
+    const body = panel.querySelector('.panel-body')!;
+    expect(body.querySelector('#a11y-high-contrast')).toBeTruthy();
+    expect(body.querySelector('#a11y-large-text')).toBeTruthy();
+    expect(body.querySelector('#a11y-reduced-motion')).toBeTruthy();
+
+    const hc = body.querySelector('#a11y-high-contrast') as HTMLInputElement;
+    hc.checked = true;
+    hc.dispatchEvent(new Event('change', { bubbles: true }));
+    const lt = body.querySelector('#a11y-large-text') as HTMLInputElement;
+    lt.checked = true;
+    lt.dispatchEvent(new Event('change', { bubbles: true }));
+    const rm = body.querySelector('#a11y-reduced-motion') as HTMLInputElement;
+    rm.checked = true;
+    rm.dispatchEvent(new Event('change', { bubbles: true }));
+
+    const persisted = loadAccessibilitySettings();
+    emit('settings_ui_production', !!persisted.highContrast && !!persisted.largeText && !!persisted.reducedMotion, {
+      highContrast: persisted.highContrast,
+      largeText: persisted.largeText,
+      reducedMotion: persisted.reducedMotion,
+      panel_open: true,
+    });
+
+    // Reload/reopen must retain
+    const ui2 = new SettingsUI(panel, role);
+    ui2.open();
+    const hc2 = panel.querySelector('#a11y-high-contrast') as HTMLInputElement;
+    emit('a11y_baseline_ui_retained', !!hc2?.checked, { checked: !!hc2?.checked });
+
+    // Restore defaults
+    saveAccessibilitySettings({ ...DEFAULT_A11Y });
+    applyAccessibilitySettings(DEFAULT_A11Y);
+    const restored = loadAccessibilitySettings();
+    emit('settings_defaults_restored', restored.highContrast === DEFAULT_A11Y.highContrast, {
+      restored,
+    });
+  });
+
+it('clean exit: stop() halts the loop and flushes state without throwing', () => {
     const g = game as unknown as { isRunning: () => boolean };
     expect(g.isRunning()).toBe(true);
     expect(() => game.stop()).not.toThrow();
