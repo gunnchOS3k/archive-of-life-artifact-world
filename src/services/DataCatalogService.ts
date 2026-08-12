@@ -7,9 +7,11 @@ import type {
   SpeciesIndexEntry,
   SpeciesSearchIndex,
 } from '@/schema';
+import type { CompanionModuleDef } from '@/systems/companionModules';
 import { speciesCache } from './IndexedDBCache';
 
 const MANIFEST_PATH = '/data/manifest.json';
+const COMPANION_MODULES_PATH = 'bundles/companion-modules.json';
 
 export interface GameConfig {
   regions: RegionBundle[];
@@ -37,6 +39,7 @@ export class DataCatalogService {
   private manifest: DataManifest | null = null;
   private config: GameConfig | null = null;
   private searchIndex: SpeciesSearchIndex | null = null;
+  private companionModules: CompanionModuleDef[] = [];
   private loadedSpecies = new Map<string, ArchiveSpecies>();
   private activeRegionId: string | null = null;
 
@@ -66,7 +69,22 @@ export class DataCatalogService {
       this.manifest.bundles.searchIndex.path
     );
 
+    try {
+      const modBundle = await this.loadBundle<{ modules?: CompanionModuleDef[] }>(
+        'companion_modules',
+        COMPANION_MODULES_PATH,
+      );
+      this.companionModules = Array.isArray(modBundle.modules) ? modBundle.modules : [];
+    } catch {
+      // Modules are launch-authored content; missing bundle fails soft for older snapshots.
+      this.companionModules = [];
+    }
+
     return this.manifest;
+  }
+
+  getCompanionModules(): CompanionModuleDef[] {
+    return this.companionModules;
   }
 
   getManifest(): DataManifest {

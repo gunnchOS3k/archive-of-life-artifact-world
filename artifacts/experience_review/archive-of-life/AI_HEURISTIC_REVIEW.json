@@ -1,0 +1,68 @@
+{
+  "schema": "gunnchos.experience_review.v1",
+  "product": "archive-of-life",
+  "generated_utc": "2026-08-12T22:34:53Z",
+  "EXPERIENCE_REVIEW_COUNCIL": "ACTIVE",
+  "AI_HEURISTIC_REVIEW_ONLY": true,
+  "HUMAN_E6_NOT_EARNED_BY_AI_REVIEW": true,
+  "HUMAN_POLISH": "HUMAN_PENDING",
+  "VISUAL_MODEL_REVIEW": "UNAVAILABLE",
+  "visual_inspect": {
+    "status": "UNAVAILABLE",
+    "reason": "No live framebuffer / pixel inspect in this finite GAME successor packet; do not invent visual critique."
+  },
+  "roles": {
+    "ER1_senior_product_ux": {
+      "mode": "AI_HEURISTIC",
+      "visual_status": "UNAVAILABLE",
+      "findings": [
+        {
+          "id": "AOL-ER1-01",
+          "severity": "S1",
+          "status": "REMEDIATED_DIGITAL",
+          "finding": "Lifeling modular progression now unlocks on live observation/region visit, not only in offline QA harnesses."
+        },
+        {
+          "id": "AOL-ER1-02",
+          "severity": "S2",
+          "status": "REMEDIATED_DIGITAL",
+          "finding": "Map panel surfaces active Time Atlas era filter so regions/eras stay linked in exploration UX."
+        },
+        {
+          "id": "AOL-ER1-03",
+          "severity": "S3",
+          "status": "OPEN",
+          "finding": "Human polish of museum cadence / reward feel not claimed."
+        }
+      ]
+    },
+    "ER2_student_engagement": {
+      "mode": "AI_HEURISTIC",
+      "applicable": true,
+      "findings": [
+        {
+          "id": "AOL-ER2-01",
+          "severity": "S2",
+          "status": "REMEDIATED_DIGITAL",
+          "finding": "Ethical observation loop + provenance notebook citations remain the engagement spine (not Agar.io)."
+        },
+        {
+          "id": "AOL-ER2-02",
+          "severity": "S3",
+          "status": "OPEN",
+          "finding": "Student fun validation HUMAN_PENDING."
+        }
+      ]
+    },
+    "ER3_game_critic": {
+      "mode": "AI_HEURISTIC",
+      "applicable": true,
+      "classification": "ALPHA",
+      "VISUAL_MODEL_REVIEW": "UNAVAILABLE",
+      "pointer": "artifacts/experience_review/archive-of-life/GAME_CRITIC_REVIEW.json"
+    }
+  },
+  "summary": "Archive of Life full-product digital depth packet: companion modules/offline integrity/map era/polish hooks closed digitally. Critic class ALPHA. HUMAN_POLISH pending. VISUAL_MODEL_REVIEW unavailable. Scientific coverage honesty preserved.",
+  "tip_sha": "PENDING_COMMIT",
+  "tip_short": "PENDING"
+}

@@ -11,8 +11,10 @@ import {
   type EncounterTable,
 } from '@/systems/encounterSystem';
 import { ensureCompanionProgressFields } from '@/systems/companionProgression';
+import { evaluateCompanionModules } from '@/systems/companionModules';
 import { track } from '@/systems/telemetry';
 import { playCue } from '@/systems/audioCueSystem';
+import { capturePolishHook } from '@/systems/experiencePolish';
 import {
   applyAccessibilitySettings,
   loadAccessibilitySettings,
@@ -167,7 +169,15 @@ export class Game {
     };
 
     this.companionUI.setEmoteCallback((emote) => this.lifeling.triggerReaction(emote));
-    this.companionUI.onChange = () => this.save();
+    this.companionUI.onChange = () => {
+      track('companion_customize', {
+        name: this.state.companion.name,
+        color: this.state.companion.bodyColor,
+        equipped: this.state.companion.equippedTraits.length,
+      });
+      capturePolishHook('companion_customize');
+      this.save();
+    };
     this.mapUI.onTravel = (regionId) => void this.travelToRegion(regionId);
 
     this.setupInput();
@@ -445,6 +455,23 @@ export class Game {
       biome: region?.biome ?? '',
       encounters: this.encounterTable?.candidates.length ?? 0,
     });
+
+    const modules = this.catalog.getCompanionModules();
+    if (modules.length > 0) {
+      const unlocked = evaluateCompanionModules(this.state.companion, {
+        modules,
+        observedSpeciesIds: this.state.artifacts.map((a) => a.speciesId),
+        visitedRegions: this.state.player.visitedRegions,
+        completedExpeditions: this.state.expeditions?.completed ?? [],
+        discoveredClueIds: this.state.expeditions?.discoveredClueIds ?? [],
+        viewedTimeUnitIds: this.state.timeAtlas?.viewedTimeUnits ?? [],
+      });
+      for (const modId of unlocked) {
+        track('companion_module_unlock', { moduleId: modId, via: 'visit_region', region: regionId });
+        this.showToast(`Lifeling affinity unlocked: ${modId.replace(/^mod_/, '').replace(/_/g, ' ')}`);
+      }
+    }
+
     this.save();
   }
 
@@ -581,8 +608,10 @@ export class Game {
 
   private async onMinigameComplete(species: PlayableSpecies) {
     const traits = this.catalog.getConfig().traits;
+    const modules = this.catalog.getCompanionModules();
     const result = collectArtifact(this.state, species, traits, {
       timePeriodId: this.state.timeAtlas?.activeTimeUnitId ?? null,
+      modules,
     });
     if (result.success) {
       this.lifeling.triggerReaction('celebrate');
@@ -601,6 +630,15 @@ export class Game {
         playCue('companion_level_up');
         this.showToast(`Lifeling grew to level ${result.progression.level}!`);
       }
+      for (const modId of result.newlyUnlockedModules ?? []) {
+        track('companion_module_unlock', {
+          moduleId: modId,
+          via: 'observe',
+          speciesId: species.id,
+        });
+        this.showToast(`Lifeling affinity unlocked: ${modId.replace(/^mod_/, '').replace(/_/g, ' ')}`);
+      }
+      capturePolishHook('artifact_collected', { speciesId: species.id });
       const entry = await this.dexService.getEntryById(species.id, this.state);
       if (entry) {
         await this.archiveDexUI.showUnlockModal(entry, result.artifact);

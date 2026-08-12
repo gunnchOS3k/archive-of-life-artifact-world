@@ -1,0 +1,12 @@
+{
+  "schema": "archive_data_coverage_honesty/v1",
+  "GLOBAL_DATA_COMPLETE": false,
+  "ALL_SPECIES_INGESTED": false,
+  "liveClaim": false,
+  "notes": [
+    "Scientific data cannot be fabricated — ingestion pipelines are validated; coverage tracked honestly.",
+    "Launch Tier E/F floors are playable sample/authored content, not empirical completeness of every species.",
+    "Temporal map source-verified assets remain incomplete until external scientific imports are approved."
+  ],
+  "fixture_tier_r_unique_taxa_not_global": true
+}

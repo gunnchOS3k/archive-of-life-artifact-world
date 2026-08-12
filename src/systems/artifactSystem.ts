@@ -1,12 +1,20 @@
 import type { SaveState, LifelingTrait, NotebookProvenanceCite } from '@/schema';
 import type { PlayableSpecies } from '@/services/DataCatalogService';
 import { applyObservationProgress } from '@/systems/companionProgression';
+import {
+  evaluateCompanionModules,
+  type CompanionModuleDef,
+} from '@/systems/companionModules';
 
 export function collectArtifact(
   state: SaveState,
   species: PlayableSpecies,
   traits: LifelingTrait[],
-  opts: { timePeriodId?: string | null } = {},
+  opts: {
+    timePeriodId?: string | null;
+    /** Live companion affinity modules — wired into Game collection path. */
+    modules?: CompanionModuleDef[];
+  } = {},
 ) {
   if (state.artifacts.some((a) => a.speciesId === species.id)) {
     return { success: false as const, reason: 'already_collected' };
@@ -55,7 +63,19 @@ export function collectArtifact(
     traits,
   });
 
-  return { success: true as const, artifact, progression };
+  const newlyUnlockedModules =
+    opts.modules && opts.modules.length > 0
+      ? evaluateCompanionModules(state.companion, {
+          modules: opts.modules,
+          observedSpeciesIds: state.artifacts.map((a) => a.speciesId),
+          visitedRegions: state.player.visitedRegions,
+          completedExpeditions: state.expeditions?.completed ?? [],
+          discoveredClueIds: state.expeditions?.discoveredClueIds ?? [],
+          viewedTimeUnitIds: state.timeAtlas?.viewedTimeUnits ?? [],
+        })
+      : [];
+
+  return { success: true as const, artifact, progression, newlyUnlockedModules };
 }
 
 function provenanceFromSpecies(species: PlayableSpecies): NotebookProvenanceCite[] {
