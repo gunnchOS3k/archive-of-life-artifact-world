@@ -1,0 +1,114 @@
+{
+  "schema": "gunnchos.game_rc.achievements/v1",
+  "game": "archive-of-life-artifact-world",
+  "catalog_version": 1,
+  "save_version": 1,
+  "offline": true,
+  "duplicate_prevention": true,
+  "notes": "Unlocks fire from real Game travel/observe/collect/ArchiveDex/Lifeling/campaign paths. LAUNCH_CAMPAIGN_COMPLETION is finite and is not GLOBAL_SPECIES_KNOWLEDGE_BASE_COVERAGE. No test-only unlock type exists. No grind-all-species achievement.",
+  "achievements": [
+    {
+      "id": "aol.first_discovery",
+      "title": "First Discovery",
+      "description": "Complete your first ethical wildlife observation.",
+      "hidden": false,
+      "unlock": { "type": "event_count", "event": "observation_complete", "count": 1 }
+    },
+    {
+      "id": "aol.first_artifact",
+      "title": "Field Evidence",
+      "description": "Collect your first ethical artifact.",
+      "hidden": false,
+      "unlock": { "type": "event_count", "event": "artifact_collected", "count": 1 }
+    },
+    {
+      "id": "aol.region_hopper",
+      "title": "Region Hopper",
+      "description": "Visit three explore regions beyond the museum hub.",
+      "hidden": false,
+      "unlock": { "type": "stat_at_least", "stat": "regions_explored", "threshold": 3 }
+    },
+    {
+      "id": "aol.era_walker",
+      "title": "Era Walker",
+      "description": "View two distinct Time Atlas eras or periods.",
+      "hidden": false,
+      "unlock": { "type": "stat_at_least", "stat": "eras_viewed", "threshold": 2 }
+    },
+    {
+      "id": "aol.artifact_provenance",
+      "title": "Provenanced Record",
+      "description": "File a notebook entry that carries source, license, and citation.",
+      "hidden": false,
+      "unlock": { "type": "flag", "flag": "provenance_recorded" }
+    },
+    {
+      "id": "aol.archivedex",
+      "title": "ArchiveDex Open",
+      "description": "Open the ArchiveDex encyclopedia.",
+      "hidden": false,
+      "unlock": { "type": "flag", "flag": "archivedex_opened" }
+    },
+    {
+      "id": "aol.taxonomy_breadth",
+      "title": "Taxonomic Breadth",
+      "description": "Document species from two different taxonomic groups.",
+      "hidden": false,
+      "unlock": { "type": "stat_at_least", "stat": "taxonomic_groups", "threshold": 2 }
+    },
+    {
+      "id": "aol.lifeling_growth",
+      "title": "Lifeling Growth",
+      "description": "Grow your Lifeling (level 2 or first affinity module).",
+      "hidden": false,
+      "unlock": {
+        "type": "any",
+        "conditions": [
+          { "type": "stat_at_least", "stat": "companion_level", "threshold": 2 },
+          { "type": "flag", "flag": "companion_module_unlocked" }
+        ]
+      }
+    },
+    {
+      "id": "aol.lifeling_style",
+      "title": "Companion Style",
+      "description": "Customize your Lifeling name, color, or equipped trait.",
+      "hidden": false,
+      "unlock": { "type": "flag", "flag": "companion_customized" }
+    },
+    {
+      "id": "aol.scientific_curiosity",
+      "title": "Scientific Curiosity",
+      "description": "Record a documented group with source-aware field notes.",
+      "hidden": false,
+      "unlock": { "type": "flag", "flag": "scientific_curiosity" }
+    },
+    {
+      "id": "aol.launch_complete",
+      "title": "Launch Campaign Complete",
+      "description": "Finish the finite launch campaign (not global species coverage).",
+      "hidden": false,
+      "unlock": { "type": "flag", "flag": "launch_campaign_complete" }
+    },
+    {
+      "id": "aol.pause_and_breathe",
+      "title": "Pause and Breathe",
+      "description": "Pause a live expedition and resume it.",
+      "hidden": false,
+      "unlock": { "type": "event_count", "event": "pause_resume", "count": 1 }
+    },
+    {
+      "id": "aol.hidden_credits",
+      "title": "Archive Credits",
+      "description": "Open credits after acknowledging the launch finale.",
+      "hidden": true,
+      "unlock": {
+        "type": "all",
+        "conditions": [
+          { "type": "flag", "flag": "finale_acknowledged" },
+          { "type": "flag", "flag": "credits_opened" }
+        ]
+      }
+    }
+  ]
+}

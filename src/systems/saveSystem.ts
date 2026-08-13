@@ -2,12 +2,13 @@ import type { SaveState } from '@/schema';
 import { ensureCompanionProgressFields } from '@/systems/companionProgression';
 import { ensureCompanionModules } from '@/systems/companionModules';
 import { createEmptyExpeditionSlice, ensureExpeditionSlice } from '@/systems/expeditionSystem';
+import { createDefaultCampaign, ensureCampaign } from '@/systems/launchCampaign';
 import { speciesCache } from '@/services/IndexedDBCache';
 import { track } from '@/systems/telemetry';
 
 const SAVE_KEY = 'archive_of_life_save';
 const SAVE_BACKUP_KEY = 'save_state';
-export const SAVE_VERSION = 4;
+export const SAVE_VERSION = 5;
 
 export function createDefaultSave(): SaveState {
   return {
@@ -67,6 +68,7 @@ export function createDefaultSave(): SaveState {
       activeTimeUnitId: null,
     },
     expeditions: createEmptyExpeditionSlice(),
+    campaign: createDefaultCampaign(),
     timestamp: Date.now(),
   };
 }
@@ -98,11 +100,14 @@ function migrateSave(raw: Partial<SaveState>): SaveState {
       activeTimeUnitId: raw.timeAtlas?.activeTimeUnitId ?? null,
     },
     expeditions: raw.expeditions ?? defaults.expeditions,
+    campaign: { ...createDefaultCampaign(), ...(raw.campaign ?? {}) },
     artifacts: Array.isArray(raw.artifacts) ? raw.artifacts : [],
     notebook: Array.isArray(raw.notebook) ? raw.notebook : [],
     timestamp: typeof raw.timestamp === 'number' ? raw.timestamp : Date.now(),
   };
   ensureExpeditionSlice(merged);
+  ensureCampaign(merged);
+  merged.campaign!.globalCoverageClaimed = false;
   return merged;
 }
 
@@ -194,6 +199,7 @@ export function serializeSave(state: SaveState): SaveState {
       activeTimeUnitId: state.timeAtlas?.activeTimeUnitId ?? null,
     },
     expeditions: state.expeditions ?? createEmptyExpeditionSlice(),
+    campaign: ensureCampaign(state),
     timestamp: Date.now(),
   };
 }

@@ -86,6 +86,26 @@ async function init() {
         g.save();
         return g.acceptSnapshot();
       }
+      if (cmd === 'onboard') {
+        g.acceptCompleteOnboarding(arg || 'Archivist');
+        return g.acceptSnapshot();
+      }
+      if (cmd === 'era' && arg) {
+        g.acceptViewEra(arg);
+        return g.acceptSnapshot();
+      }
+      if (cmd === 'finale') {
+        g.acceptAcknowledgeFinale();
+        return g.acceptSnapshot();
+      }
+      if (cmd === 'credits') {
+        g.acceptOpenCredits();
+        return g.acceptSnapshot();
+      }
+      if (cmd === 'achievements') {
+        g.acceptOpenAchievements();
+        return g.acceptSnapshot();
+      }
       if (cmd === 'snapshot') return g.acceptSnapshot();
       return { ok: false, error: 'unknown_cmd' };
     };

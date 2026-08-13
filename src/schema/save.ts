@@ -98,6 +98,19 @@ export interface ExpeditionSaveState {
   discoveredClueIds: string[];
 }
 
+export interface CampaignSlice {
+  onboardingComplete: boolean;
+  explorerName: string;
+  archivedexOpened: boolean;
+  companionCustomized: boolean;
+  creditsOpened: boolean;
+  launchCampaignComplete: boolean;
+  finaleAcknowledged: boolean;
+  observedGroups: string[];
+  /** Always false — launch campaign ≠ global coverage. */
+  globalCoverageClaimed: false;
+}
+
 export interface SaveState {
   version: number;
   player: PlayerState;
@@ -110,5 +123,7 @@ export interface SaveState {
   timeAtlas: TimeAtlasProgress;
   /** Wave F expedition / clue progress */
   expeditions?: ExpeditionSaveState;
+  /** GAME-RC-002 finite launch campaign (not global coverage). */
+  campaign?: CampaignSlice;
   timestamp: number;
 }
