@@ -1,0 +1,147 @@
+{
+  "schema": "gunnchos.game_rc_002.independent_verifier_result.v1",
+  "work_item": "GAME-RC-002",
+  "game": "archive-of-life-artifact-world",
+  "verifier_role": "INDEPENDENT_VERIFIER_AGENT",
+  "did_not_implement": true,
+  "did_not_merge": true,
+  "HUMAN_PLAYTEST_VALIDATED": false,
+  "pr": {
+    "number": 29,
+    "url": "https://github.com/gunnchOS3k/archive-of-life-artifact-world/pull/29",
+    "draft": true,
+    "branch": "cursor/game-rc-002-playthrough-achievements",
+    "title": "GAME-RC-002: playthrough contracts + real achievement runtime",
+    "mergeable": "MERGEABLE",
+    "mergeStateStatus": "CLEAN"
+  },
+  "claimed_tip": "5e618d522fa7730a8d1465f45a51e811f8a30d4c",
+  "claimed_tip_live_confirmed": true,
+  "verified_content_tip": "5e618d522fa7730a8d1465f45a51e811f8a30d4c",
+  "verified_content_tip_short": "5e618d5",
+  "base_main_note": "PR base is main. Cursor does not merge.",
+  "generated_at_utc": "2026-08-13T20:56:08Z",
+  "VP_GAME_RC_002_INDEPENDENT_RESULT": "PASS",
+  "ARCHIVE_29_READY_FOR_EDMUND_MERGE": true,
+  "READY_FOR_EDMUND_MERGE": true,
+  "playthrough_reproduced": true,
+  "playthrough_json_narrative_only": false,
+  "achievements": "13/13",
+  "critic": "ALPHA",
+  "defects": { "S0_open": 0, "S1_open": 0, "S2_open": 4 },
+  "challenges": {
+    "live_tip_ci": {
+      "verdict": "PASS",
+      "head_sha": "5e618d522fa7730a8d1465f45a51e811f8a30d4c",
+      "checks": [
+        {
+          "name": "build-and-audit",
+          "conclusion": "success",
+          "workflow": "CI",
+          "url": "https://github.com/gunnchOS3k/archive-of-life-artifact-world/actions/runs/31742535909"
+        },
+        {
+          "name": "gate1-core-loop",
+          "conclusion": "success",
+          "workflow": "Gate 1 post-merge integrity",
+          "url": "https://github.com/gunnchOS3k/archive-of-life-artifact-world/actions/runs/31742535895"
+        }
+      ]
+    },
+    "rc_gate_honesty": {
+      "verdict": "PASS",
+      "POLISHED_RELEASE_CANDIDATE": false,
+      "FEATURE_COMPLETE_RC": false,
+      "HUMAN_PLAYTEST_VALIDATED": false,
+      "critic_class": "ALPHA",
+      "critic_honest_iff_S2_nonzero": true,
+      "S2_open": 4,
+      "VISUAL_MODEL_REVIEW": "UNAVAILABLE",
+      "pixels_invented": false
+    },
+    "clean_runtime_playthrough": {
+      "verdict": "PASS",
+      "not_json_narrative_only": true,
+      "new_save": true,
+      "campaign_path": true,
+      "real_discoveries": ["panthera_leo", "canis_lupus", "castor_canadensis", "lontra_canadensis", "anax_junius"],
+      "real_artifact_writes": 5,
+      "archivedex_mutation": "getCollectedIds(save) == artifact species ids after collectArtifact",
+      "lifeling_progression": {
+        "name": "Relic",
+        "level": 2,
+        "xp": 155,
+        "modules": ["mod_savanna_tracker", "mod_forest_listener", "mod_wetland_engineer"]
+      },
+      "launch_campaign_complete": true,
+      "globalCoverageClaimed": false,
+      "save_reload": "loadSave restored 5 artifacts + launchCampaignComplete; new Game AchievementRuntime restored 13/13 from localStorage",
+      "local_reproduce": [
+        "python3 scripts/validate_game_rc_contracts.py → GAME_RC_CONTRACTS_OK",
+        "vitest src/systems/gameRc002Playthrough.test.ts + achievementRuntime.test.ts — 4/4 PASS",
+        "vitest src/systems/gameRc002IndependentVerifier.test.ts — 2/2 PASS (independent Game path, not catalog setFlag-only)"
+      ],
+      "note": "First species in savanna/forest/wetland are all Mammal. Taxonomy breadth requires a second-group collect (wetland Insect anax_junius). Implementer playthrough includes that fallback. Independent run confirmed it is a real collectArtifact write, not a JSON flag."
+    },
+    "achievements_13_of_13": {
+      "verdict": "PASS",
+      "catalog_count": 13,
+      "unlocked_from_game_path": 13,
+      "cheat_unlock_by_id": false,
+      "forbidden_unlock_types": "none (no test/debug/cheat/always)",
+      "note": "TS private unlock(def) is emitted on the prototype; there is no unlockById/forceUnlock. Isolated catalog unit test drives flags/events directly; Game playthrough independently unlocked all 13 from travel/observe/collect/ArchiveDex/Lifeling/campaign/pause/credits."
+    },
+    "launch_vs_global_coverage": {
+      "verdict": "PASS",
+      "LAUNCH_CAMPAIGN_COMPLETION": true,
+      "GLOBAL_SPECIES_KNOWLEDGE_BASE_COVERAGE": false,
+      "evaluateLaunchCampaign.globalCoverage": false,
+      "campaign.globalCoverageClaimed_forced_false": true,
+      "content_manifest_global_mode": "OPEN"
+    },
+    "content_manifest_placeholders": {
+      "verdict": "PASS",
+      "required_placeholders_claimed_complete": false,
+      "open_items": ["audio_visual_categories", "painted_world_art", "global_species_knowledge_base"],
+      "regions_12_exist": true,
+      "companion_modules_10_exist": true,
+      "archivedex_tabs": 17,
+      "scientific_records_provenance": "CLOSED as launch records exposing source/license/citation fields; mock_sample remains behind claim firewall / live_col_gbif_completeness OPEN"
+    },
+    "critic_alpha": {
+      "verdict": "PASS",
+      "classification": "ALPHA",
+      "not_rc": true,
+      "S2_nonzero": true,
+      "VISUAL": "UNAVAILABLE — no invented pixels this packet"
+    }
+  },
+  "gaps": [
+    {
+      "id": "HUMAN_PLAYTEST_VALIDATED",
+      "severity": "S2",
+      "status": "OPEN_EXPECTED",
+      "summary": "No human playtest. Fun/discovery-vs-database remains HUMAN_PENDING."
+    },
+    {
+      "id": "VISUAL_MODEL_REVIEW",
+      "severity": "S2",
+      "status": "OPEN",
+      "summary": "UNAVAILABLE. Procedural canvas; verifier did not invent pixel critique."
+    },
+    {
+      "id": "GLOBAL_SPECIES_KNOWLEDGE_BASE_COVERAGE",
+      "severity": "S2",
+      "status": "OPEN_EXPECTED",
+      "summary": "Launch sample only. Honestly not claimed."
+    },
+    {
+      "id": "TAXONOMY_BREADTH_FIRST_THREE",
+      "severity": "S3",
+      "status": "NOTE",
+      "summary": "Default first interactable in savanna/forest/wetland is Mammal. Campaign completeness needs an extra Insect/other-group collect. Runtime supports it; not a JSON-only fake."
+    }
+  ],
+  "claim_boundary": "Digital independent verification of Archive of Life GAME-RC-002 DRAFT #29. Does not earn HUMAN_PLAYTEST_VALIDATED, painted art, or global species coverage. Cursor did not implement and must not merge.",
+  "verdict_summary": "PR #29 tip 5e618d5 live, CI green, RC_GATE honest (FEATURE_COMPLETE_RC/POLISHED_RC false, critic ALPHA with S2=4). Independent Game playthrough produced real artifacts, ArchiveDex collected-id mutation, Lifeling level 2 + modules, launch completion ≠ global coverage, 13/13 achievements, save/reload. Edmund-mergeable yes. Remaining OPEN: human playtest, visual, global coverage."
+}
