@@ -3,6 +3,10 @@
  * Does not claim live network access.
  */
 
+import { createHash } from 'node:crypto';
+import { existsSync, readFileSync } from 'node:fs';
+import { join } from 'node:path';
+
 export interface OfflinePackManifest {
   packId: string;
   snapshotId: string;
@@ -13,6 +17,8 @@ export interface OfflinePackManifest {
     path: string;
     recordCount: number;
     required: boolean;
+    sha256?: string;
+    bytes?: number;
   }>;
   tierRRecordCount: number;
   regionCount: number;
@@ -49,7 +55,6 @@ export function buildDigitalRcOfflinePack(
     packageVersion: input.packageVersion,
   };
 }
-
 
 export interface OfflinePackInput {
   packId: string;
@@ -124,5 +129,78 @@ export function offlinePackReady(manifest: OfflinePackManifest): {
       manifest.flagshipCount >= 24 &&
       manifest.liveClaim === false,
     missingRequired,
+  };
+}
+
+export interface OfflineIntegrityResult {
+  ok: boolean;
+  checked: number;
+  missing: string[];
+  mismatched: string[];
+  liveClaimHonest: boolean;
+  detail: string;
+}
+
+function sha256Buffer(buf: Buffer): string {
+  return createHash('sha256').update(buf).digest('hex');
+}
+
+/**
+ * Attach content hashes to every bundle that exists under dataRoot.
+ * Used for offline integrity — detects corrupt/missing required files.
+ */
+export function stampOfflinePackIntegrity(
+  manifest: OfflinePackManifest,
+  dataRoot: string,
+): OfflinePackManifest {
+  const bundles = manifest.bundles.map((b) => {
+    const abs = join(dataRoot, b.path);
+    if (!existsSync(abs)) return { ...b };
+    const buf = readFileSync(abs);
+    return { ...b, sha256: sha256Buffer(buf), bytes: buf.byteLength };
+  });
+  return { ...manifest, bundles };
+}
+
+/**
+ * Verify offline pack files against stamped sha256 / presence.
+ * Corrupting a stamped required file must fail. liveClaim must stay false.
+ */
+export function verifyOfflinePackIntegrity(
+  manifest: OfflinePackManifest,
+  dataRoot: string,
+): OfflineIntegrityResult {
+  const missing: string[] = [];
+  const mismatched: string[] = [];
+  let checked = 0;
+
+  for (const b of manifest.bundles) {
+    const abs = join(dataRoot, b.path);
+    if (!existsSync(abs)) {
+      if (b.required || b.sha256) missing.push(b.key);
+      continue;
+    }
+    if (!b.sha256) continue;
+    checked += 1;
+    const actual = sha256Buffer(readFileSync(abs));
+    if (actual !== b.sha256) mismatched.push(b.key);
+  }
+
+  const liveClaimHonest = manifest.liveClaim === false;
+  const ok =
+    liveClaimHonest &&
+    missing.length === 0 &&
+    mismatched.length === 0 &&
+    offlinePackReady(manifest).ready;
+
+  return {
+    ok,
+    checked,
+    missing,
+    mismatched,
+    liveClaimHonest,
+    detail: ok
+      ? `offline integrity ok (${checked} hashed bundles)`
+      : `offline integrity fail missing=[${missing.join(',')}] mismatched=[${mismatched.join(',')}] liveClaim=${manifest.liveClaim}`,
   };
 }

@@ -60,12 +60,8 @@ export function recordObservation(
   }
 
   const xpBefore = state.companion.xp ?? 0;
-  applyObservationProgress(state.companion, {
-    kind: 'observe',
-    speciesId: event.speciesId,
-    traits: [],
-  });
-
+  // Prefer modular path when modules are supplied — avoids double XP from
+  // applyObservationProgress + applyModularObservation both awarding OBSERVATION_XP.
   if (event.modules?.length) {
     applyModularObservation(state.companion, {
       kind: 'observe',
@@ -74,6 +70,14 @@ export function recordObservation(
       modules: event.modules,
       previouslyObserved: event.previouslyObserved ?? [],
       visitedRegions: state.player.visitedRegions,
+      completedExpeditions: state.expeditions?.completed ?? [],
+      discoveredClueIds: state.expeditions?.discoveredClueIds ?? [],
+    });
+  } else {
+    applyObservationProgress(state.companion, {
+      kind: 'observe',
+      speciesId: event.speciesId,
+      traits: event.traits ?? [],
     });
   }
 

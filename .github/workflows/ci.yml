@@ -98,6 +98,9 @@ jobs:
       - name: Unit tests
         run: npm test
 
+      - name: Archive full-product register honesty
+        run: npm run validate:archive-full
+
       - name: Claim firewall
         run: npm run audit:claim-firewall
 

@@ -1,0 +1,62 @@
+{
+  "schema": "experience_review_game_critic/v1",
+  "subject": "archive-of-life",
+  "work_item": "GAME-successor-archive-full",
+  "generated_at": "2026-08-12T22:34:53Z",
+  "VISUAL_MODEL_REVIEW": "UNAVAILABLE",
+  "live_framebuffer": "UNAVAILABLE",
+  "classification": "ALPHA",
+  "classification_rationale": [
+    "Systems depth exists (exploration/regions/eras/encounters/artifacts/ArchiveDex/Lifeling/a11y/save/offline integrity) with digital evidence",
+    "Scientific coverage remains launch-scope / sample \u2014 not polished encyclopedic completeness",
+    "VISUAL_MODEL_REVIEW unavailable (no live pixel inspect this packet)",
+    "HUMAN_POLISH and fun remain HUMAN_PENDING",
+    "No invented Agar.io critique or invented pixel critique"
+  ],
+  "not_rc": true,
+  "likely_not_beta_polished": true,
+  "evidence_based": true,
+  "no_invented_visual_critique": true,
+  "findings": [
+    {
+      "severity": "S0",
+      "id": "none",
+      "summary": "No S0 crash/blocker newly evidenced in this digital pass."
+    },
+    {
+      "severity": "S1",
+      "id": "CRIT-S1-COMPANION-MODULES-DATA-ONLY",
+      "status": "REMEDIATED_DIGITAL",
+      "summary": "Companion affinity modules existed in companion-modules.json and QA/DB traversal but were not applied on live Game collectArtifact/region travel; now wired via DataCatalogService + artifactSystem + Game.",
+      "evidence": "src/game/Game.ts + src/systems/artifactSystem.ts + src/services/DataCatalogService.ts"
+    },
+    {
+      "severity": "S2",
+      "id": "CRIT-S2-ART-ALPHA",
+      "summary": "Visual identity remains canvas/procedural ALPHA proxies; no pixel invent.",
+      "evidence": "VISUAL_MODEL_REVIEW=UNAVAILABLE"
+    },
+    {
+      "severity": "S2",
+      "id": "CRIT-S2-SCIENCE-SAMPLE-SCOPE",
+      "summary": "Scientific bundles are launch/sample scope with honest claim firewall \u2014 not every-species completeness.",
+      "evidence": "artifacts/archive_full/DATA_COVERAGE_HONESTY.json"
+    },
+    {
+      "severity": "S3",
+      "id": "CRIT-S3-HUMAN-POLISH",
+      "status": "OPEN",
+      "summary": "HUMAN_POLISH pending \u2014 AI cannot earn human fun/polish."
+    }
+  ],
+  "scores_heuristic": {
+    "systems_depth": 0.82,
+    "presentation": 0.36,
+    "content_completeness": 0.58,
+    "scientific_honesty": 0.9,
+    "ship_readiness": 0.5
+  },
+  "verdict": "ALPHA \u2014 deep digital exploration/science systems packet; not polished beta/RC without human polish + broader verified scientific coverage.",
+  "tip_sha": "0855f0e61c1bcaa4e42f1f4bf877dc7d2aeb4805",
+  "tip_short": "0855f0e"
+}
