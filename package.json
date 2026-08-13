@@ -69,6 +69,7 @@
     "audit:claim-firewall": "tsx scripts/validate_archive_claim_firewall.ts",
     "audit:mock-firewall": "tsx scripts/validate_mock_release_firewall.ts",
     "validate:archive-full": "node scripts/validate-archive-full-product.mjs",
+    "validate:game-rc": "python3 scripts/validate_game_rc_contracts.py",
     "report:beta-rc:legacy": "tsx scripts/report-beta-rc.ts"
   },
   "devDependencies": {

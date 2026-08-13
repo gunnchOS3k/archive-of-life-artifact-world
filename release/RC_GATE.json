@@ -1,0 +1,41 @@
+{
+  "schema": "gunnchos.game_rc.rc_gate/v1",
+  "game": "archive-of-life-artifact-world",
+  "packet": "GAME-RC-002",
+  "generated_at": "2026-08-13T20:20:00Z",
+  "claims": {
+    "POLISHED_RELEASE_CANDIDATE": false,
+    "FEATURE_COMPLETE_RC": false,
+    "HUMAN_PLAYTEST_VALIDATED": false,
+    "DIGITAL_PLAYTHROUGH_EXECUTABLE": true,
+    "ACHIEVEMENT_SUBSYSTEM": true
+  },
+  "critic_class": "ALPHA",
+  "critic_class_rationale": "Digital launch-campaign playthrough and achievement runtime are executable against Game + collectArtifact + Time Atlas + ArchiveDex. S0/S1 for this packet's digital scope are 0. S2 remains: visual identity is procedural (VISUAL UNAVAILABLE — no invented pixels), scientific coverage is launch-sample not encyclopedic, and human fun/discovery-vs-database critique is HUMAN_PENDING. Critic stays ALPHA. POLISHED_RELEASE_CANDIDATE and FEATURE_COMPLETE_RC are not claimed.",
+  "defects": {
+    "S0_open": 0,
+    "S1_open": 0,
+    "S2_open": 4,
+    "S2_items": [
+      "HUMAN_PLAYTEST_VALIDATED=false",
+      "VISUAL_MODEL_REVIEW=UNAVAILABLE (procedural canvas; no pixel invent)",
+      "GLOBAL_SPECIES_KNOWLEDGE_BASE_COVERAGE not claimed (launch sample)",
+      "Discovery/world/collection vs database-with-controls remains a human critic question"
+    ]
+  },
+  "visual": {
+    "VISUAL_MODEL_REVIEW": "UNAVAILABLE",
+    "reason": "This packet ran headless jsdom / contract validation. No pixel inspection of a displayed frame was performed. Do not invent visual critique."
+  },
+  "playthrough": {
+    "status": "DIGITAL_EXECUTABLE",
+    "contract": "release/PLAYTHROUGH_CONTRACT.json"
+  },
+  "achievements": {
+    "catalog": "release/ACHIEVEMENTS.json",
+    "count": 13,
+    "tested_count": 13,
+    "notes": "Isolated AchievementRuntime tests fire real catalog conditions. Game playthrough test maps contract steps to Game.accept* + collectArtifact. No cheat unlock API."
+  },
+  "notes": "Cursor does not merge. LAUNCH_CAMPAIGN_COMPLETION ≠ GLOBAL_SPECIES_KNOWLEDGE_BASE_COVERAGE. Critic may remain ALPHA while S2 remains."
+}

@@ -46,6 +46,18 @@ import { EarthLayerService } from '@/services/EarthLayerService';
 import { TemporalMapService } from '@/services/TemporalMapService';
 import { TimeAtlasService } from '@/time/TimeAtlasService';
 import type { SaveState } from '@/schema';
+import {
+  AchievementRuntime,
+  localStoragePersist,
+  type AchievementCatalog,
+} from '@/systems/achievementRuntime';
+import {
+  ensureCampaign,
+  evaluateLaunchCampaign,
+  syncAchievementsFromSave,
+} from '@/systems/launchCampaign';
+import { AchievementsUI } from '@/ui/achievementsUI';
+import catalogJson from '../../release/ACHIEVEMENTS.json';
 
 type Minigame = FossilExcavation | WildlifeObservation;
 
@@ -83,6 +95,8 @@ export class Game {
   private coverageDashboardUI: CoverageDashboardUI;
   private implementationStatusUI: ImplementationStatusUI;
   private settingsUI: SettingsUI;
+  private achievementsUI: AchievementsUI | null = null;
+  private achievementRuntime: AchievementRuntime;
   private devMode: boolean;
 
   private dexService: ArchiveDexService;
@@ -102,6 +116,11 @@ export class Game {
     this.dexService = dexService;
     this.state = state;
     ensureCompanionProgressFields(this.state.companion);
+    ensureCampaign(this.state);
+    this.achievementRuntime = new AchievementRuntime(
+      catalogJson as AchievementCatalog,
+      localStoragePersist(),
+    );
     if (!this.state.timeAtlas) {
       this.state.timeAtlas = {
         viewedTimeUnits: [],
@@ -146,6 +165,10 @@ export class Game {
       document.getElementById('panel-implementation')!
     );
     this.settingsUI = new SettingsUI(document.getElementById('panel-settings')!, this.deviceRole);
+    const achPanel = document.getElementById('panel-achievements');
+    if (achPanel) {
+      this.achievementsUI = new AchievementsUI(achPanel, this.achievementRuntime);
+    }
     this.settingsUI.onRoleChange = (role) => {
       this.deviceRole = role;
       this.resize();
@@ -158,8 +181,12 @@ export class Game {
 
     this.timeAtlasUI.onActivePeriodChange = (unitId) => {
       this.state.timeAtlas.activeTimeUnitId = unitId;
+      if (unitId && !this.state.timeAtlas.viewedTimeUnits.includes(unitId)) {
+        this.state.timeAtlas.viewedTimeUnits.push(unitId);
+      }
       track('time_period_filter', { unitId: unitId ?? 'none' });
       this.rebuildEncounterTable();
+      this.syncAchievements();
       this.save();
       this.showToast(
         unitId
@@ -170,18 +197,27 @@ export class Game {
 
     this.companionUI.setEmoteCallback((emote) => this.lifeling.triggerReaction(emote));
     this.companionUI.onChange = () => {
+      const campaign = ensureCampaign(this.state);
+      campaign.companionCustomized = true;
       track('companion_customize', {
         name: this.state.companion.name,
         color: this.state.companion.bodyColor,
         equipped: this.state.companion.equippedTraits.length,
       });
       capturePolishHook('companion_customize');
+      this.syncAchievements();
       this.save();
     };
     this.mapUI.onTravel = (regionId) => void this.travelToRegion(regionId);
 
     this.setupInput();
     this.setupLifecycleSuspend();
+    this.setupOnboardingAndCredits();
+    this.achievementRuntime.onUnlocked((note) => {
+      track('achievement_unlock', { id: note.id });
+      this.showToast(`Achievement: ${note.title}`);
+    });
+    this.syncAchievements();
     void this.loadRegion(state.player.currentRegion);
     this.resize();
     window.addEventListener('resize', () => this.resize());
@@ -217,6 +253,7 @@ export class Game {
       if (e.key === '6') this.togglePanel('earth');
       if (e.key === '7') this.togglePanel('time');
       if (e.key === '8' || e.key === ',') this.togglePanel('settings');
+      if (e.key === '9') this.togglePanel('achievements');
       if ((e.key === 'p' || e.key === 'P' || e.key === 'Escape') && !this.isPanelOpen() && !this.activeMinigame) {
         e.preventDefault();
         this.toggleManualPause();
@@ -246,6 +283,7 @@ export class Game {
     document.getElementById('btn-earth')!.addEventListener('click', () => this.togglePanel('earth'));
     document.getElementById('btn-time')!.addEventListener('click', () => this.togglePanel('time'));
     document.getElementById('btn-settings')?.addEventListener('click', () => this.togglePanel('settings'));
+    document.getElementById('btn-achievements')?.addEventListener('click', () => this.togglePanel('achievements'));
 
     document.getElementById('fossil-cancel')!.addEventListener('click', () => this.endMinigame());
     document.getElementById('observe-cancel')!.addEventListener('click', () => this.endMinigame());
@@ -397,6 +435,21 @@ export class Game {
       if (name === 'settings') {
         this.settingsUI.open();
       }
+      if (name === 'achievements') {
+        ensureCampaign(this.state);
+        this.achievementsUI?.open();
+      }
+      if (name === 'archive') {
+        const campaign = ensureCampaign(this.state);
+        campaign.archivedexOpened = true;
+        this.syncAchievements();
+      }
+      if (name === 'time') {
+        const unit = this.state.timeAtlas?.activeTimeUnitId;
+        if (unit && !this.state.timeAtlas.viewedTimeUnits.includes(unit)) {
+          this.state.timeAtlas.viewedTimeUnits.push(unit);
+        }
+      }
       this.refreshUI();
       this.paused = true;
     } else {
@@ -472,6 +525,7 @@ export class Game {
       }
     }
 
+    this.syncAchievements();
     this.save();
   }
 
@@ -639,6 +693,13 @@ export class Game {
         this.showToast(`Lifeling affinity unlocked: ${modId.replace(/^mod_/, '').replace(/_/g, ' ')}`);
       }
       capturePolishHook('artifact_collected', { speciesId: species.id });
+      const campaign = ensureCampaign(this.state);
+      if (species.group && !campaign.observedGroups.includes(species.group)) {
+        campaign.observedGroups.push(species.group);
+      }
+      this.achievementRuntime.reportEvent('observation_complete', 1);
+      this.achievementRuntime.reportEvent('artifact_collected', 1);
+      this.syncAchievements();
       const entry = await this.dexService.getEntryById(species.id, this.state);
       if (entry) {
         await this.archiveDexUI.showUnlockModal(entry, result.artifact);
@@ -654,6 +715,10 @@ export class Game {
       this.rebuildEncounterTable();
       this.save();
       this.refreshUI();
+      const evaled = evaluateLaunchCampaign(this.state);
+      if (evaled.complete && !ensureCampaign(this.state).creditsOpened) {
+        this.showToast('Launch campaign ready — open credits from Achievements when you return to the museum.');
+      }
     }
     setTimeout(() => this.endMinigame(), 500);
   }
@@ -724,6 +789,8 @@ export class Game {
     if (!this.state.companion.equippedTraits.includes(traitId)) {
       this.state.companion.equippedTraits.push(traitId);
     }
+    ensureCampaign(this.state).companionCustomized = true;
+    this.syncAchievements();
     this.save();
     this.refreshUI();
     return this.acceptSnapshot();
@@ -762,6 +829,9 @@ export class Game {
       this.clearMovementKeys();
       this.save();
       this.showToast('Paused — press P or Escape to resume');
+    } else {
+      this.achievementRuntime.reportEvent('pause_resume', 1);
+      this.syncAchievements();
     }
     playCue('pause_toggle');
     track('pause_toggle', { paused: this.manualPaused, source: 'manual' });
@@ -794,6 +864,78 @@ export class Game {
     });
   }
 
+
+  private syncAchievements(): void {
+    syncAchievementsFromSave(this.achievementRuntime, this.state);
+    this.achievementsUI?.render();
+  }
+
+  private setupOnboardingAndCredits(): void {
+    const campaign = ensureCampaign(this.state);
+    const overlay = document.getElementById('onboarding-overlay');
+    const completeBtn = document.getElementById('onboarding-complete');
+    completeBtn?.addEventListener('click', () => {
+      const input = document.getElementById('explorer-name') as HTMLInputElement | null;
+      this.acceptCompleteOnboarding(input?.value || 'Archivist');
+    });
+    document.getElementById('credits-close')?.addEventListener('click', () => {
+      document.getElementById('credits-overlay')?.classList.add('hidden');
+    });
+    if (!campaign.onboardingComplete && overlay) {
+      overlay.classList.remove('hidden');
+    }
+  }
+
+  acceptCompleteOnboarding(explorerName = 'Archivist'): void {
+    const campaign = ensureCampaign(this.state);
+    campaign.onboardingComplete = true;
+    campaign.explorerName = explorerName.trim() || 'Archivist';
+    document.getElementById('onboarding-overlay')?.classList.add('hidden');
+    track('onboarding_complete', { name: campaign.explorerName });
+    this.syncAchievements();
+    this.save();
+    this.showToast(`Expedition begins, ${campaign.explorerName}. Relic is with you.`);
+  }
+
+  acceptViewEra(unitId: string): void {
+    if (!this.state.timeAtlas.viewedTimeUnits.includes(unitId)) {
+      this.state.timeAtlas.viewedTimeUnits.push(unitId);
+    }
+    this.state.timeAtlas.activeTimeUnitId = unitId;
+    this.rebuildEncounterTable();
+    this.syncAchievements();
+    this.save();
+  }
+
+  acceptAcknowledgeFinale(): void {
+    const campaign = ensureCampaign(this.state);
+    campaign.finaleAcknowledged = true;
+    const evaled = evaluateLaunchCampaign(this.state);
+    if (evaled.complete) {
+      campaign.launchCampaignComplete = true;
+      track('launch_campaign_complete', { global: false });
+    }
+    track('finale_acknowledged', { complete: evaled.complete });
+    this.syncAchievements();
+    this.save();
+  }
+
+  acceptOpenCredits(): void {
+    const campaign = ensureCampaign(this.state);
+    campaign.creditsOpened = true;
+    document.getElementById('credits-overlay')?.classList.remove('hidden');
+    track('credits_opened', { launch: campaign.launchCampaignComplete });
+    this.syncAchievements();
+    this.save();
+  }
+
+  acceptOpenAchievements(): void {
+    this.togglePanel('achievements');
+  }
+
+  getAchievementRuntime(): AchievementRuntime {
+    return this.achievementRuntime;
+  }
 
   save() {
     this.state.player.x = this.player.x;

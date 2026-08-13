@@ -38,6 +38,7 @@
             <button class="hud-btn" id="btn-earth" title="Earth Layers (6)">🛰️ Earth</button>
             <button class="hud-btn" id="btn-time" title="Time Atlas (7)">⏳ Time</button>
             <button class="hud-btn" id="btn-settings" title="Settings (8)">⚙️ Settings</button>
+            <button class="hud-btn" id="btn-achievements" title="Achievements (9)">🏅 Achievements</button>
           </div>
         </div>
       </div>
@@ -272,6 +273,32 @@
         <button class="panel-close" data-panel="settings">✕</button>
       </div>
       <div class="panel-body"></div>
+    </div>
+
+    <div id="panel-achievements" class="panel hidden panel-achievements">
+      <div class="panel-header">
+        <h2>Achievements</h2>
+        <button class="panel-close" data-panel="achievements">✕</button>
+      </div>
+      <div class="panel-body"></div>
+    </div>
+
+    <div id="onboarding-overlay" class="minigame-overlay hidden">
+      <div class="minigame-container">
+        <h2>Welcome, Explorer-Archivist</h2>
+        <p>Name your field profile. Your Lifeling companion Relic will travel with you.</p>
+        <label>Explorer name: <input id="explorer-name" type="text" maxlength="24" value="Archivist" /></label>
+        <p id="onboarding-lifeling">Lifeling: Relic</p>
+        <button id="onboarding-complete" class="btn-primary">Begin expedition</button>
+      </div>
+    </div>
+
+    <div id="credits-overlay" class="minigame-overlay hidden">
+      <div class="minigame-container">
+        <h2>Launch Campaign Complete</h2>
+        <p id="credits-body">Finite launch expedition acknowledged.</p>
+        <button id="credits-close" class="btn-primary">Continue (postgame)</button>
+      </div>
     </div>
 
     <div id="minigame-fossil" class="minigame-overlay hidden">

@@ -1,0 +1,46 @@
+{
+  "schema": "gunnchos.game_rc.playthrough_contract/v1",
+  "game": "archive-of-life-artifact-world",
+  "contract_version": 1,
+  "playthrough_id": "aol.launch_campaign_to_credits.v1",
+  "digitally_executable": true,
+  "human_playtest_validated": false,
+  "notes": "First launch → profile/save → onboarding → initial Lifeling → first region → first species → first observation → first artifact → provenance → ArchiveDex → multiple regions/eras → companion progression/customization → major milestone → final launch expedition → completion acknowledgement/credits → postgame → achievement browser → continue/replay. LAUNCH_CAMPAIGN_COMPLETION is finite and distinct from GLOBAL_SPECIES_KNOWLEDGE_BASE_COVERAGE.",
+  "pause_resume": {
+    "required": true,
+    "status": "CLOSED",
+    "evidence": "Game.toggleManualPause (P/Escape) + visibility suspend; AchievementRuntime event pause_resume; GAME-RC-002 playthrough test."
+  },
+  "ending": {
+    "id": "launch_campaign_credits",
+    "status": "CLOSED",
+    "description": "Finite launch finale acknowledgement at the museum hub plus credits overlay. Does not claim global species knowledge-base coverage. Postgame continues the same save; New Expedition starts a fresh save."
+  },
+  "steps": [
+    { "id": "first_launch_title", "scene": "index.html#title-screen", "required": true, "status": "CLOSED", "notes": "New Expedition / Continue Expedition." },
+    { "id": "profile_save", "scene": "src/systems/saveSystem.ts", "required": true, "status": "CLOSED", "notes": "localStorage archive_of_life_save + campaign slice migration." },
+    { "id": "onboarding", "scene": "index.html#onboarding-overlay", "required": true, "status": "CLOSED", "notes": "Explorer name + Lifeling intro; Game.acceptCompleteOnboarding." },
+    { "id": "initial_lifeling", "scene": "src/game/companion.ts", "required": true, "status": "CLOSED", "notes": "Default companion Relic on new save." },
+    { "id": "first_region", "scene": "src/game/Game.ts#travelToRegion", "required": true, "status": "CLOSED" },
+    { "id": "first_species", "scene": "src/game/Game.ts#acceptMoveBesideTarget", "required": true, "status": "CLOSED" },
+    { "id": "first_observation", "scene": "src/minigames/wildlifeObservation.ts", "required": true, "status": "CLOSED" },
+    { "id": "first_artifact", "scene": "src/systems/artifactSystem.ts#collectArtifact", "required": true, "status": "CLOSED" },
+    { "id": "provenance", "scene": "src/systems/artifactSystem.ts#provenanceFromSpecies", "required": true, "status": "CLOSED", "notes": "Notebook provenanceCitations: source/license/citation." },
+    { "id": "archivedex", "scene": "src/ui/archiveDexUI.ts", "required": true, "status": "CLOSED" },
+    { "id": "multiple_regions_eras", "scene": "src/ui/mapUI.ts + src/ui/timeAtlasUI.ts", "required": true, "status": "CLOSED" },
+    { "id": "companion_progression_customization", "scene": "src/ui/companionUI.ts + companionProgression.ts", "required": true, "status": "CLOSED" },
+    { "id": "major_milestone", "scene": "src/systems/companionModules.ts", "required": true, "status": "CLOSED", "notes": "Affinity module unlock and/or Lifeling level 2." },
+    { "id": "final_launch_expedition", "scene": "src/systems/launchCampaign.ts", "required": true, "status": "CLOSED", "notes": "exp_launch_finale acknowledgement — not global coverage." },
+    { "id": "completion_credits", "scene": "index.html#credits-overlay", "required": true, "status": "CLOSED" },
+    { "id": "postgame", "scene": "src/game/Game.ts", "required": true, "status": "CLOSED", "notes": "Same save continues after credits; coverage remains launch-scope." },
+    { "id": "achievements_browser", "scene": "src/ui/achievementsUI.ts", "required": true, "status": "CLOSED" },
+    { "id": "continue_replay", "scene": "index.html#title-screen", "required": true, "status": "CLOSED", "notes": "Continue Expedition vs New Expedition." },
+    { "id": "pause_resume", "scene": "src/game/Game.ts#toggleManualPause", "required": true, "status": "CLOSED" }
+  ],
+  "open_placeholders": [
+    { "id": "HUMAN_PLAYTEST_VALIDATED", "severity": "S2", "summary": "No human playtest this packet." },
+    { "id": "GLOBAL_SPECIES_KNOWLEDGE_BASE_COVERAGE", "severity": "S2", "summary": "Launch campaign is finite. Global encyclopedic coverage is not claimed." },
+    { "id": "VISUAL_PIXEL_IDENTITY", "severity": "S2", "summary": "VISUAL_MODEL_REVIEW=UNAVAILABLE — canvas/procedural proxies; no invented pixel critique." },
+    { "id": "PAINTED_WORLD_ART", "severity": "S3", "summary": "World presentation is procedural canvas, not painted remasters." }
+  ]
+}

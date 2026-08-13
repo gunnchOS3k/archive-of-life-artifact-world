@@ -26,7 +26,12 @@ export type TelemetryEventName =
   | 'suspend'
   | 'resume'
   | 'pagehide_save'
-  | 'clean_exit';
+  | 'clean_exit'
+  | 'onboarding_complete'
+  | 'achievement_unlock'
+  | 'launch_campaign_complete'
+  | 'credits_opened'
+  | 'finale_acknowledged';
 
 export interface TelemetryEvent {
   name: TelemetryEventName;

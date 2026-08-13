@@ -25,7 +25,8 @@
   },
   "include": [
     "src/**/*",
-    "scripts/**/*"
+    "scripts/**/*",
+    "release/*.json"
   ],
   "exclude": [
     "node_modules",
