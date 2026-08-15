@@ -16,6 +16,7 @@ import {
   buildPacingProgress,
   estimatedLaunchMinutes,
   LAUNCH_PACING_BEATS,
+  LaunchPacingTracker,
   pacingCompletionPercent,
 } from '@/systems/launchPacing';
 import {
@@ -64,6 +65,17 @@ describe('GAME-RC-004 Archive launch density', () => {
     for (const surface of MENU_HUD_SURFACES) pulseHud(surface, surface);
     expect(getPresentationPulses().length).toBe(MENU_HUD_SURFACES.length);
     expect(presentationDensityScore()).toBe(100);
+  });
+
+  it('LaunchPacingTracker advances from marked expedition beats', () => {
+    const tracker = new LaunchPacingTracker();
+    expect(tracker.percent()).toBe(0);
+    expect(tracker.mark('title_to_onboarding')).toBe(true);
+    expect(tracker.mark('title_to_onboarding')).toBe(false);
+    tracker.mark('onboarding_to_first_region');
+    tracker.mark('first_sighting');
+    expect(tracker.percent()).toBe(30);
+    expect(tracker.has('first_sighting')).toBe(true);
   });
 
   it('expands fail-soft audio cues used by density path', () => {
@@ -126,5 +138,6 @@ describe('GAME-RC-004 Archive launch density', () => {
     ) as { counts: { launch_eras_playable_filters: number; launch_expeditions: number } };
     expect(content.counts.launch_eras_playable_filters).toBe(4);
     expect(content.counts.launch_expeditions).toBe(4);
+    expect(content.counts.launch_encounter_taxa).toBe(157);
   });
 });

@@ -30,7 +30,7 @@
     { "id": "provenance", "scene": "src/systems/artifactSystem.ts#provenanceFromSpecies", "required": true, "status": "CLOSED" },
     { "id": "archivedex", "scene": "src/ui/archiveDexUI.ts", "required": true, "status": "CLOSED" },
     { "id": "multiple_regions_eras", "scene": "src/ui/mapUI.ts + src/ui/timeAtlasUI.ts", "required": true, "status": "CLOSED", "notes": "Includes denser era filters (holocene/carboniferous/cretaceous/pleistocene)." },
-    { "id": "launch_pacing", "scene": "src/systems/launchPacing.ts", "required": true, "status": "CLOSED" },
+    { "id": "launch_pacing", "scene": "src/systems/launchPacing.ts + Game.markPacing / getLaunchPacing", "required": true, "status": "CLOSED", "notes": "LaunchPacingTracker wired into Game expedition events." },
     { "id": "world_presentation_hud", "scene": "src/systems/worldPresentation.ts", "required": true, "status": "CLOSED" },
     { "id": "companion_progression_customization", "scene": "src/ui/companionUI.ts + companionProgression.ts", "required": true, "status": "CLOSED" },
     { "id": "major_milestone", "scene": "src/systems/companionModules.ts", "required": true, "status": "CLOSED" },

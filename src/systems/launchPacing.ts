@@ -1,6 +1,7 @@
 /**
  * Launch-campaign pacing / tutorial density — finite LAUNCH_CAMPAIGN path.
  * Does not claim global species coverage.
+ * Wired into Game.ts — beats advance from real expedition events.
  */
 
 export type PacingBeatId =
@@ -47,4 +48,35 @@ export function pacingCompletionPercent(beats: PacingBeat[]): number {
 
 export function estimatedLaunchMinutes(): number {
   return Math.ceil(LAUNCH_PACING_BEATS.reduce((sum, b) => sum + b.suggestedSeconds, 0) / 60);
+}
+
+/** Live tracker used by Game — marks beats from real expedition events. */
+export class LaunchPacingTracker {
+  private readonly done = new Set<PacingBeatId>();
+
+  mark(id: PacingBeatId): boolean {
+    if (this.done.has(id)) return false;
+    this.done.add(id);
+    return true;
+  }
+
+  has(id: PacingBeatId): boolean {
+    return this.done.has(id);
+  }
+
+  progress(): PacingBeat[] {
+    return buildPacingProgress(this.done);
+  }
+
+  percent(): number {
+    return pacingCompletionPercent(this.progress());
+  }
+
+  doneIds(): PacingBeatId[] {
+    return [...this.done];
+  }
+
+  clear(): void {
+    this.done.clear();
+  }
 }

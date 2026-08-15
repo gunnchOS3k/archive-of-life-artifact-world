@@ -40,6 +40,14 @@
       "title": "Building ledge nests",
       "text": "Columbidae and Passeridae use human ledges as cliff analogs.",
       "unlocksJournal": true
+    },
+    {
+      "id": "clue_time_atlas_shift",
+      "expeditionId": "exp_launch_finale",
+      "regionId": "museum",
+      "title": "Time Atlas shift — launch eras",
+      "text": "Holocene, Carboniferous, Cretaceous, and Pleistocene filters reshape living encounters. Launch campaign density is finite — not global species coverage.",
+      "unlocksJournal": true
     }
   ]
 }

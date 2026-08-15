@@ -144,7 +144,7 @@ describe('INDEPENDENT VERIFIER GAME-RC-002 Archive', () => {
     for (const item of catalog.achievements) {
       expect(['test', 'debug', 'cheat', 'always']).not.toContain(item.unlock?.type);
     }
-    expect(catalog.achievements).toHaveLength(13);
+    expect(catalog.achievements).toHaveLength(16);
   });
 
   it('walks a new save through real Game collect/ArchiveDex/Lifeling/campaign + reload', async () => {
