@@ -11,7 +11,12 @@ export type PolishHookId =
   | 'map_era_context'
   | 'offline_integrity'
   | 'a11y_settings'
-  | 'manual_review_marker';
+  | 'manual_review_marker'
+  | 'discovery_feedback'
+  | 'launch_pacing'
+  | 'hud_presentation'
+  | 'achievement_presentation'
+  | 'postgame_continue';
 
 export interface PolishCapture {
   id: PolishHookId;

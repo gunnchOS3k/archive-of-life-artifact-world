@@ -95,6 +95,37 @@
         "clue_nest_ledge"
       ],
       "journalPrompt": "Note synanthropic traits and human-structure nesting."
+    },
+    {
+      "id": "exp_launch_finale",
+      "name": "Launch Finale — Return to the Archive",
+      "regionId": "museum",
+      "biome": "museum",
+      "description": "Return to the museum hub after documenting a launch-scope field set. Completing this acknowledges the finite launch campaign — not global species coverage.",
+      "objectives": [
+        {
+          "id": "obj_visit_three_explore",
+          "type": "visit_region",
+          "target": "savanna",
+          "label": "Document at least three explore regions"
+        },
+        {
+          "id": "obj_era_shift",
+          "type": "discover_clue",
+          "target": "clue_time_atlas_shift",
+          "label": "Shift Time Atlas across launch eras"
+        },
+        {
+          "id": "obj_return_hub",
+          "type": "visit_region",
+          "target": "museum",
+          "label": "Return to the Archive museum hub"
+        }
+      ],
+      "clueIds": [
+        "clue_time_atlas_shift"
+      ],
+      "journalPrompt": "Acknowledge launch campaign completion without claiming encyclopedic Earth coverage."
     }
   ]
 }

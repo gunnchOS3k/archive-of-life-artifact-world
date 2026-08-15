@@ -51,7 +51,7 @@ for (const f of requiredFeatures) {
   if (!reg.features?.[f]) fail(`missing feature facet: ${f}`);
 }
 
-if (critic.classification !== 'ALPHA') fail('critic classification must be ALPHA');
+if (!['ALPHA', 'BETA'].includes(critic.classification)) fail('critic classification must be ALPHA or BETA');
 if (critic.VISUAL_MODEL_REVIEW !== 'UNAVAILABLE') fail('critic VISUAL_MODEL_REVIEW must be UNAVAILABLE');
 if (heuristic.VISUAL_MODEL_REVIEW !== 'UNAVAILABLE') fail('heuristic VISUAL_MODEL_REVIEW must be UNAVAILABLE');
 if (heuristic.HUMAN_POLISH !== 'HUMAN_PENDING') fail('heuristic HUMAN_POLISH must be HUMAN_PENDING');

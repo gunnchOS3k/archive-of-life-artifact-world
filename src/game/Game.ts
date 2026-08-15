@@ -15,6 +15,9 @@ import { evaluateCompanionModules } from '@/systems/companionModules';
 import { track } from '@/systems/telemetry';
 import { playCue } from '@/systems/audioCueSystem';
 import { capturePolishHook } from '@/systems/experiencePolish';
+import { presentDiscovery } from '@/systems/discoveryFeedback';
+import { pulseHud } from '@/systems/worldPresentation';
+import { LaunchPacingTracker } from '@/systems/launchPacing';
 import {
   applyAccessibilitySettings,
   loadAccessibilitySettings,
@@ -97,6 +100,7 @@ export class Game {
   private settingsUI: SettingsUI;
   private achievementsUI: AchievementsUI | null = null;
   private achievementRuntime: AchievementRuntime;
+  private launchPacing = new LaunchPacingTracker();
   private devMode: boolean;
 
   private dexService: ArchiveDexService;
@@ -188,6 +192,15 @@ export class Game {
       this.rebuildEncounterTable();
       this.syncAchievements();
       this.save();
+      const eraLabel = unitId ?? 'cleared';
+      playCue('era_shift');
+      pulseHud('era_chip', eraLabel);
+      presentDiscovery(
+        'era_shift',
+        unitId ? `Deep time shifts to ${unitId}` : 'Time filter cleared',
+        'The field changes with provenanced taxa for this period — not a static database page.',
+      );
+      capturePolishHook('map_era_context', { unitId: unitId ?? 'none' });
       this.showToast(
         unitId
           ? `Time filter: ${unitId} — encounters use provenanced taxa for this period.`
@@ -215,6 +228,14 @@ export class Game {
     this.setupOnboardingAndCredits();
     this.achievementRuntime.onUnlocked((note) => {
       track('achievement_unlock', { id: note.id });
+      playCue('achievement_presented');
+      pulseHud('achievement_toast', note.title);
+      presentDiscovery(
+        'achievement_presented',
+        note.title,
+        'Launch campaign achievement — not global species coverage.',
+      );
+      capturePolishHook('achievement_presentation', { id: note.id });
       this.showToast(`Achievement: ${note.title}`);
     });
     this.syncAchievements();
@@ -438,10 +459,12 @@ export class Game {
       if (name === 'achievements') {
         ensureCampaign(this.state);
         this.achievementsUI?.open();
+        this.markPacing('achievement_browser');
       }
       if (name === 'archive') {
         const campaign = ensureCampaign(this.state);
         campaign.archivedexOpened = true;
+        this.markPacing('dex_and_companion');
         this.syncAchievements();
       }
       if (name === 'time') {
@@ -583,6 +606,7 @@ export class Game {
     }
     if (sp.conservationStatus === 'Extinct') this.startFossilMinigame(sp);
     else this.startObservationMinigame(sp);
+    this.markPacing('first_sighting');
   }
 
   private async travelToRegion(regionId: string) {
@@ -603,6 +627,22 @@ export class Game {
 
     this.closeAllPanels();
     await this.loadRegion(regionId);
+    playCue('region_travel');
+    pulseHud('region_banner', target.name);
+    presentDiscovery(
+      'region_arrive',
+      `Arrived: ${target.name}`,
+      target.description ?? 'A living field site on the launch campaign path.',
+    );
+    capturePolishHook('discovery_feedback', { regionId });
+    if (regionId !== 'museum') {
+      this.markPacing('onboarding_to_first_region');
+      const explore = (this.state.player.visitedRegions ?? []).filter((id) => id !== 'museum');
+      const eras = this.state.timeAtlas?.viewedTimeUnits ?? [];
+      if (explore.length >= 3 && eras.length >= 2) {
+        this.markPacing('multi_region_era');
+      }
+    }
     this.showToast(`Traveled to ${target.name}`);
   }
 
@@ -676,12 +716,30 @@ export class Game {
         xp: this.state.companion.xp ?? 0,
       });
       playCue('artifact_collected');
+      playCue('discovery_chime');
+      presentDiscovery(
+        'observation_complete',
+        `Documented ${species.commonName}`,
+        'Ethical observation filed as field evidence — expedition moment, not a table row.',
+      );
+      pulseHud('toast', species.commonName);
+      capturePolishHook('discovery_feedback', { speciesId: species.id });
+      this.markPacing('first_observation_loop');
+      const provenance = (this.state.notebook ?? []).some(
+        (n) => Array.isArray(n.provenanceCitations) && n.provenanceCitations.length > 0,
+      );
+      if (provenance) this.markPacing('provenance_notebook');
       if (result.progression?.leveledUp) {
         track('companion_level_up', {
           level: result.progression.level,
           from: result.progression.previousLevel,
         });
         playCue('companion_level_up');
+        presentDiscovery(
+          'lifeling_react',
+          `Lifeling grew to level ${result.progression.level}`,
+          'Companion reacts to the living world around you.',
+        );
         this.showToast(`Lifeling grew to level ${result.progression.level}!`);
       }
       for (const modId of result.newlyUnlockedModules ?? []) {
@@ -790,6 +848,7 @@ export class Game {
       this.state.companion.equippedTraits.push(traitId);
     }
     ensureCampaign(this.state).companionCustomized = true;
+    this.markPacing('dex_and_companion');
     this.syncAchievements();
     this.save();
     this.refreshUI();
@@ -865,6 +924,12 @@ export class Game {
   }
 
 
+  private markPacing(id: Parameters<LaunchPacingTracker['mark']>[0]): void {
+    if (!this.launchPacing.mark(id)) return;
+    capturePolishHook('launch_pacing', { beat: id, percent: this.launchPacing.percent() });
+    track('launch_pacing_beat', { beat: id, percent: this.launchPacing.percent() });
+  }
+
   private syncAchievements(): void {
     syncAchievementsFromSave(this.achievementRuntime, this.state);
     this.achievementsUI?.render();
@@ -892,6 +957,13 @@ export class Game {
     campaign.explorerName = explorerName.trim() || 'Archivist';
     document.getElementById('onboarding-overlay')?.classList.add('hidden');
     track('onboarding_complete', { name: campaign.explorerName });
+    this.markPacing('title_to_onboarding');
+    pulseHud('lifeling_hud', campaign.explorerName);
+    presentDiscovery(
+      'region_arrive',
+      `Expedition begins, ${campaign.explorerName}`,
+      'Relic joins you at the Archive hub — leave the museum to enter living field sites.',
+    );
     this.syncAchievements();
     this.save();
     this.showToast(`Expedition begins, ${campaign.explorerName}. Relic is with you.`);
@@ -903,6 +975,10 @@ export class Game {
     }
     this.state.timeAtlas.activeTimeUnitId = unitId;
     this.rebuildEncounterTable();
+    const explore = (this.state.player.visitedRegions ?? []).filter((id) => id !== 'museum');
+    if (explore.length >= 3 && this.state.timeAtlas.viewedTimeUnits.length >= 2) {
+      this.markPacing('multi_region_era');
+    }
     this.syncAchievements();
     this.save();
   }
@@ -913,8 +989,16 @@ export class Game {
     const evaled = evaluateLaunchCampaign(this.state);
     if (evaled.complete) {
       campaign.launchCampaignComplete = true;
-      track('launch_campaign_complete', { global: false });
+      track('launch_campaign_complete', { global: false, densityComplete: evaled.densityComplete });
     }
+    playCue('finale_return');
+    this.markPacing('finale_return');
+    presentDiscovery(
+      'finale_return',
+      'Launch finale acknowledged',
+      'Finite launch campaign — not GLOBAL_SPECIES_KNOWLEDGE_BASE_COVERAGE.',
+    );
+    pulseHud('menu_panel', 'finale');
     track('finale_acknowledged', { complete: evaled.complete });
     this.syncAchievements();
     this.save();
@@ -924,6 +1008,13 @@ export class Game {
     const campaign = ensureCampaign(this.state);
     campaign.creditsOpened = true;
     document.getElementById('credits-overlay')?.classList.remove('hidden');
+    this.markPacing('credits_postgame');
+    presentDiscovery(
+      'postgame_continue',
+      'Credits — postgame continues',
+      'Same save continues after credits. New Expedition starts a fresh save.',
+    );
+    capturePolishHook('postgame_continue', { launch: campaign.launchCampaignComplete });
     track('credits_opened', { launch: campaign.launchCampaignComplete });
     this.syncAchievements();
     this.save();
@@ -935,6 +1026,10 @@ export class Game {
 
   getAchievementRuntime(): AchievementRuntime {
     return this.achievementRuntime;
+  }
+
+  getLaunchPacing(): LaunchPacingTracker {
+    return this.launchPacing;
   }
 
   save() {

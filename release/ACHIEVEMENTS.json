@@ -109,6 +109,27 @@
           { "type": "flag", "flag": "credits_opened" }
         ]
       }
+    },
+    {
+      "id": "aol.era_density",
+      "title": "Deep Time Sampler",
+      "description": "View three distinct Time Atlas eras or periods on the launch path.",
+      "hidden": false,
+      "unlock": { "type": "flag", "flag": "era_density" }
+    },
+    {
+      "id": "aol.field_density",
+      "title": "Field Notebook Dense",
+      "description": "File three ethical artifacts during the launch campaign.",
+      "hidden": false,
+      "unlock": { "type": "flag", "flag": "artifact_density" }
+    },
+    {
+      "id": "aol.postgame_ready",
+      "title": "Postgame Continues",
+      "description": "Finish the launch campaign and open credits — same save continues.",
+      "hidden": false,
+      "unlock": { "type": "flag", "flag": "postgame_ready" }
     }
   ]
 }

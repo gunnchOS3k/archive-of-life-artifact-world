@@ -1,0 +1,25 @@
+{
+  "schema": "gunnchos.game_rc.visual_pack_harness/v1",
+  "game": "archive-of-life-artifact-world",
+  "packet": "GAME-RC-004",
+  "generated_at": "2026-08-15T00:00:00Z",
+  "status": "HARNESS_READY",
+  "VISUAL_MODEL_REVIEW": "UNAVAILABLE",
+  "label": "VISUAL",
+  "surfaces": [
+    { "id": "museum_hub", "kind": "world", "capture": "PROCEDURAL_PROXY" },
+    { "id": "region_field", "kind": "world", "capture": "PROCEDURAL_PROXY" },
+    { "id": "archivedex_modal", "kind": "ui", "capture": "DEFERRED" },
+    { "id": "lifeling_customize", "kind": "ui", "capture": "DEFERRED" },
+    { "id": "achievement_toast", "kind": "ui", "capture": "DEFERRED" },
+    { "id": "credits_overlay", "kind": "ui", "capture": "DEFERRED" },
+    { "id": "hud_menus", "kind": "ui", "capture": "DEFERRED" }
+  ],
+  "deferred_heavy_work": [
+    "repeated video capture",
+    "large Android/iOS export batches",
+    "painted remasters / large asset-gen",
+    "additional QEMU soaks"
+  ],
+  "notes": "Lightweight harness/manifest only. No invented pixel critique. Heavy capture deferred while Product-Use QEMU is active."
+}

@@ -30,6 +30,7 @@ export type TelemetryEventName =
   | 'onboarding_complete'
   | 'achievement_unlock'
   | 'launch_campaign_complete'
+  | 'launch_pacing_beat'
   | 'credits_opened'
   | 'finale_acknowledged';
 
