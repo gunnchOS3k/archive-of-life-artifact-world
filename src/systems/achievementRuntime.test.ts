@@ -11,11 +11,11 @@ const catalog = JSON.parse(
   readFileSync(join(process.cwd(), 'release/ACHIEVEMENTS.json'), 'utf8'),
 ) as AchievementCatalog;
 
-describe('GAME-RC-002 Archive AchievementRuntime', () => {
-  it('unlocks all 13 catalog entries from real flags/events/stats and persists', () => {
+describe('GAME-RC Archive AchievementRuntime', () => {
+  it('unlocks all 16 catalog entries from real flags/events/stats and persists', () => {
     const persist = memoryPersist();
     const rt = new AchievementRuntime(catalog, persist);
-    expect(rt.catalogCount()).toBe(13);
+    expect(rt.catalogCount()).toBe(16);
     expect(rt.completionPercent()).toBe(0);
     const hidden = rt.browserEntries().find((e) => e.id === 'aol.hidden_credits');
     expect(hidden?.title).toBe('???');
@@ -54,11 +54,17 @@ describe('GAME-RC-002 Archive AchievementRuntime', () => {
     rt.setFlag('finale_acknowledged');
     rt.setFlag('credits_opened');
     expect(rt.isUnlocked('aol.hidden_credits')).toBe(true);
+    rt.setFlag('era_density');
+    expect(rt.isUnlocked('aol.era_density')).toBe(true);
+    rt.setFlag('artifact_density');
+    expect(rt.isUnlocked('aol.field_density')).toBe(true);
+    rt.setFlag('postgame_ready');
+    expect(rt.isUnlocked('aol.postgame_ready')).toBe(true);
 
-    expect(rt.unlockedCount()).toBe(13);
+    expect(rt.unlockedCount()).toBe(16);
     expect(rt.completionPercent()).toBe(100);
     const notes = rt.drainNotifications();
-    expect(notes.length).toBeGreaterThanOrEqual(13);
+    expect(notes.length).toBeGreaterThanOrEqual(16);
     expect(rt.pendingNotificationCount()).toBe(0);
 
     const rt2 = new AchievementRuntime(catalog, persist);

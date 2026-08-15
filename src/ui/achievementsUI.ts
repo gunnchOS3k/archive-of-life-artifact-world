@@ -31,7 +31,8 @@ export class AchievementsUI {
       .join('');
     this.root.innerHTML = `
       <p class="ach-summary" aria-live="polite">Launch campaign achievements: ${unlocked}/${total} (${Math.round(percent)}%). Not global species coverage.</p>
-      <div class="ach-list">${rows}</div>
+      <p class="ach-presentation-hint" role="note">Densified presentation — unlock toasts fire in-world; hidden entries stay masked until earned.</p>
+      <div class="ach-list" role="list">${rows}</div>
     `;
   }
 }

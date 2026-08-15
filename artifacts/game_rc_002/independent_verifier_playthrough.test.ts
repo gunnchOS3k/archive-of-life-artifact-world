@@ -34,6 +34,9 @@ const CATALOG_IDS = [
   'aol.launch_complete',
   'aol.pause_and_breathe',
   'aol.hidden_credits',
+  'aol.era_density',
+  'aol.field_density',
+  'aol.postgame_ready',
 ];
 
 function installCanvasStub() {
@@ -187,6 +190,7 @@ describe('INDEPENDENT VERIFIER GAME-RC-002 Archive', () => {
 
     g.acceptViewEra('holocene');
     g.acceptViewEra('carboniferous');
+    g.acceptViewEra('cretaceous');
     g.togglePanel('archive');
     g.closeAllPanels();
     g.acceptEquipTrait('celebrate_emote');
@@ -230,9 +234,9 @@ describe('INDEPENDENT VERIFIER GAME-RC-002 Archive', () => {
     // eslint-disable-next-line no-console
     console.log('INDEPENDENT_ARCHIVE_EVIDENCE', JSON.stringify(evidence));
 
-    expect(rt.catalogCount()).toBe(13);
+    expect(rt.catalogCount()).toBe(16);
     expect(missing, `missing achievements: ${missing.join(',')}`).toEqual([]);
-    expect(rt.unlockedCount()).toBe(13);
+    expect(rt.unlockedCount()).toBe(16);
 
     const reloaded = loadSave();
     expect(reloaded).toBeTruthy();
@@ -243,7 +247,7 @@ describe('INDEPENDENT VERIFIER GAME-RC-002 Archive', () => {
 
     const { game: game2 } = await bootGame(reloaded!);
     const rt2 = (game2 as unknown as GameHarness).getAchievementRuntime();
-    expect(rt2.unlockedCount()).toBe(13);
+    expect(rt2.unlockedCount()).toBe(16);
     expect(rt2.isUnlocked('aol.launch_complete')).toBe(true);
     expect(rt2.isUnlocked('aol.hidden_credits')).toBe(true);
     expect((game2 as unknown as GameHarness).state.campaign?.globalCoverageClaimed).toBe(false);

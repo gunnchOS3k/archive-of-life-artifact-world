@@ -10,7 +10,11 @@ export type AudioCueName =
   | 'artifact_collected'
   | 'companion_level_up'
   | 'pause_toggle'
-  | 'region_travel';
+  | 'region_travel'
+  | 'discovery_chime'
+  | 'era_shift'
+  | 'achievement_presented'
+  | 'finale_return';
 
 export interface AudioCueEvent {
   name: AudioCueName;

@@ -1,17 +1,21 @@
 {
   "schema": "gunnchos.game_rc.content_manifest/v1",
   "game": "archive-of-life-artifact-world",
-  "manifest_version": 1,
-  "generated_at": "2026-08-13T20:20:00Z",
+  "manifest_version": 2,
+  "generated_at": "2026-08-15T00:00:00Z",
+  "packet": "GAME-RC-004",
   "counts": {
     "launch_regions": 12,
-    "launch_eras_playable_filters": 2,
+    "launch_eras_playable_filters": 4,
     "launch_flagship_species": 24,
     "launch_encounter_taxa": 156,
     "archivedex_tabs": 17,
     "companion_modules": 10,
-    "launch_expeditions": 3,
-    "achievements": 13
+    "launch_expeditions": 4,
+    "achievements": 16,
+    "discovery_feedback_kinds": 10,
+    "pacing_beats": 10,
+    "hud_surfaces": 8
   },
   "modes": [
     { "id": "museum_hub", "status": "CLOSED" },
@@ -21,8 +25,12 @@
     { "id": "archivedex", "status": "CLOSED" },
     { "id": "time_atlas", "status": "CLOSED" },
     { "id": "lifeling_customization", "status": "CLOSED" },
-    { "id": "launch_campaign", "status": "CLOSED", "notes": "Finite LAUNCH_CAMPAIGN_COMPLETION." },
+    { "id": "launch_campaign", "status": "CLOSED", "notes": "Finite LAUNCH_CAMPAIGN_COMPLETION with densified pacing/discovery." },
+    { "id": "discovery_feedback", "status": "CLOSED", "notes": "Living-world expedition framing hooks." },
+    { "id": "launch_pacing", "status": "CLOSED" },
+    { "id": "world_presentation_hud", "status": "CLOSED" },
     { "id": "achievements_browser", "status": "CLOSED" },
+    { "id": "postgame", "status": "CLOSED" },
     { "id": "global_species_knowledge_base", "status": "OPEN", "notes": "Not claimed. Launch snapshot ≠ Catalogue of Life complete." }
   ],
   "items": [
@@ -38,26 +46,35 @@
     { "id": "urban_park", "kind": "region", "status": "CLOSED" },
     { "id": "atmospheric_corridor", "kind": "region", "status": "CLOSED" },
     { "id": "deep_marine", "kind": "region", "status": "CLOSED" },
-    { "id": "holocene", "kind": "era", "status": "CLOSED", "notes": "Time Atlas filter + encounter table." },
-    { "id": "carboniferous", "kind": "era", "status": "CLOSED", "notes": "Indiana swamp / fossil path." },
-    { "id": "launch_species_subset", "kind": "species", "status": "CLOSED", "notes": "Hero/playable launch subset with provenance/taxonomy/confidence/license fields. Not all Earth species." },
-    { "id": "ethical_artifacts", "kind": "artifact", "status": "CLOSED", "notes": "Observation/excavation artifacts carry notebook provenance citations." },
+    { "id": "holocene", "kind": "era", "status": "CLOSED" },
+    { "id": "carboniferous", "kind": "era", "status": "CLOSED" },
+    { "id": "cretaceous", "kind": "era", "status": "CLOSED", "notes": "Launch playable Time Atlas filter (density)." },
+    { "id": "pleistocene", "kind": "era", "status": "CLOSED", "notes": "Launch playable Time Atlas filter (density)." },
+    { "id": "launch_species_subset", "kind": "species", "status": "CLOSED", "notes": "Hero/playable launch subset. Not all Earth species." },
+    { "id": "ethical_artifacts", "kind": "artifact", "status": "CLOSED" },
     { "id": "onboarding_tutorial", "kind": "tutorial", "status": "CLOSED" },
-    { "id": "archivedex_tabs", "kind": "archivedex", "status": "CLOSED", "notes": "17 tabs including taxonomy and sources." },
+    { "id": "launch_pacing_beats", "kind": "tutorial", "status": "CLOSED" },
+    { "id": "discovery_feedback", "kind": "feedback", "status": "CLOSED" },
+    { "id": "archivedex_tabs", "kind": "archivedex", "status": "CLOSED" },
     { "id": "lifeling_progression", "kind": "companion", "status": "CLOSED" },
     { "id": "lifeling_customization", "kind": "companion", "status": "CLOSED" },
-    { "id": "launch_milestones", "kind": "milestone", "status": "CLOSED" },
-    { "id": "exp_launch_finale", "kind": "expedition", "status": "CLOSED", "notes": "Finite launch finale; distinct from global coverage." },
+    { "id": "world_presentation_hud", "kind": "presentation", "status": "CLOSED" },
+    { "id": "menus_a11y_chrome", "kind": "a11y", "status": "CLOSED" },
+    { "id": "audio_cues_density", "kind": "audio_visual", "status": "CLOSED", "notes": "Fail-soft cue hooks incl. discovery/era/achievement/finale. No claimed authored soundtrack." },
+    { "id": "exp_launch_finale", "kind": "expedition", "status": "CLOSED" },
+    { "id": "postgame", "kind": "postgame", "status": "CLOSED" },
     { "id": "achievements", "kind": "achievements", "status": "CLOSED" },
-    { "id": "title_game_credits_screens", "kind": "screen", "status": "CLOSED" },
-    { "id": "audio_visual_categories", "kind": "audio_visual", "status": "OPEN", "notes": "Procedural canvas + fail-soft cues. VISUAL UNAVAILABLE this packet." },
-    { "id": "scientific_records_provenance", "kind": "science", "status": "CLOSED", "notes": "Launch records expose source/provenance/taxonomy/confidence/license. Many remain mock_sample — claim firewall holds." },
-    { "id": "painted_world_art", "kind": "art", "status": "OPEN", "notes": "No painted remaster claim." }
+    { "id": "platform_matrix", "kind": "platform", "status": "CLOSED", "notes": "Honest matrix; PLATFORM_PUBLISHED=false." },
+    { "id": "visual_pack_harness", "kind": "visual", "status": "CLOSED", "notes": "Harness only; capture DEFERRED." },
+    { "id": "audio_visual_pixel_review", "kind": "audio_visual", "status": "OPEN", "notes": "VISUAL UNAVAILABLE this packet." },
+    { "id": "painted_world_art", "kind": "art", "status": "OPEN", "notes": "No painted remaster claim." },
+    { "id": "scientific_records_provenance", "kind": "science", "status": "CLOSED" }
   ],
   "open_placeholders": [
     { "id": "GLOBAL_SPECIES_KNOWLEDGE_BASE_COVERAGE", "summary": "Not claimed. Launch campaign completion is a separate finite flag." },
-    { "id": "audio_visual_categories", "summary": "No pixel inspection; procedural presentation." },
+    { "id": "audio_visual_pixel_review", "summary": "Harness ready; no pixel inspection." },
     { "id": "painted_world_art", "summary": "No human-painted world art claim." },
+    { "id": "living_world_human_feel", "summary": "Engineered toward expedition framing; human critic still required." },
     { "id": "live_col_gbif_completeness", "summary": "Scientific bundles are launch/sample scope." }
   ],
   "not_claimed": [
@@ -66,6 +83,7 @@
     "Agar.io / arena combat",
     "POLISHED_RELEASE_CANDIDATE",
     "FEATURE_COMPLETE_RC",
-    "HUMAN_PLAYTEST_VALIDATED"
+    "HUMAN_PLAYTEST_VALIDATED",
+    "PLATFORM_PUBLISHED"
   ]
 }

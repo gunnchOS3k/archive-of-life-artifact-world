@@ -1,17 +1,17 @@
 {
   "schema": "experience_review_game_critic/v1",
   "subject": "archive-of-life",
-  "work_item": "GAME-successor-archive-full",
-  "generated_at": "2026-08-12T22:34:53Z",
+  "work_item": "GAME-RC-004",
+  "generated_at": "2026-08-15T00:00:00Z",
   "VISUAL_MODEL_REVIEW": "UNAVAILABLE",
   "live_framebuffer": "UNAVAILABLE",
-  "classification": "ALPHA",
+  "classification": "BETA",
   "classification_rationale": [
-    "Systems depth exists (exploration/regions/eras/encounters/artifacts/ArchiveDex/Lifeling/a11y/save/offline integrity) with digital evidence",
-    "Scientific coverage remains launch-scope / sample \u2014 not polished encyclopedic completeness",
-    "VISUAL_MODEL_REVIEW unavailable (no live pixel inspect this packet)",
-    "HUMAN_POLISH and fun remain HUMAN_PENDING",
-    "No invented Agar.io critique or invented pixel critique"
+    "GAME-RC-004 densifies launch campaign with discovery feedback, pacing, HUD presentation, denser era/artifact tracking, finale expedition, achievement presentation",
+    "Engineered toward living-world expedition framing (not raw educational database browse) — human world-feel still S2/HUMAN_PENDING",
+    "Scientific coverage remains launch-scope / sample — not encyclopedic completeness",
+    "VISUAL_MODEL_REVIEW unavailable (harness only; heavy capture deferred under Product-Use QEMU rule)",
+    "FEATURE_COMPLETE_RC / POLISHED_RELEASE_CANDIDATE / HUMAN_PLAYTEST_VALIDATED remain false"
   ],
   "not_rc": true,
   "likely_not_beta_polished": true,
@@ -25,38 +25,43 @@
     },
     {
       "severity": "S1",
-      "id": "CRIT-S1-COMPANION-MODULES-DATA-ONLY",
-      "status": "REMEDIATED_DIGITAL",
-      "summary": "Companion affinity modules existed in companion-modules.json and QA/DB traversal but were not applied on live Game collectArtifact/region travel; now wired via DataCatalogService + artifactSystem + Game.",
-      "evidence": "src/game/Game.ts + src/systems/artifactSystem.ts + src/services/DataCatalogService.ts"
+      "id": "none",
+      "summary": "No S1 digital blocker newly evidenced for launch-campaign density scope."
+    },
+    {
+      "severity": "S2",
+      "id": "CRIT-S2-LIVING-WORLD-VS-DATABASE",
+      "status": "OPEN",
+      "summary": "Digital framing engineered toward expedition/living-world moments. Human critic must still judge whether play feels like a living world vs an educational database with controls.",
+      "evidence": "src/systems/discoveryFeedback.ts + launchPacing.ts + worldPresentation.ts + RC_GATE S2"
     },
     {
       "severity": "S2",
       "id": "CRIT-S2-ART-ALPHA",
-      "summary": "Visual identity remains canvas/procedural ALPHA proxies; no pixel invent.",
-      "evidence": "VISUAL_MODEL_REVIEW=UNAVAILABLE"
+      "summary": "Visual identity remains canvas/procedural proxies; VISUAL harness only — no pixel invent.",
+      "evidence": "VISUAL_MODEL_REVIEW=UNAVAILABLE + release/VISUAL_PACK_HARNESS.json"
     },
     {
       "severity": "S2",
       "id": "CRIT-S2-SCIENCE-SAMPLE-SCOPE",
-      "summary": "Scientific bundles are launch/sample scope with honest claim firewall \u2014 not every-species completeness.",
-      "evidence": "artifacts/archive_full/DATA_COVERAGE_HONESTY.json"
+      "summary": "Scientific bundles are launch/sample scope with honest claim firewall — not every-species completeness.",
+      "evidence": "CONTENT_MANIFEST global_species_knowledge_base=OPEN"
     },
     {
       "severity": "S3",
       "id": "CRIT-S3-HUMAN-POLISH",
       "status": "OPEN",
-      "summary": "HUMAN_POLISH pending \u2014 AI cannot earn human fun/polish."
+      "summary": "HUMAN_POLISH pending — AI cannot earn human fun/polish."
     }
   ],
   "scores_heuristic": {
-    "systems_depth": 0.82,
-    "presentation": 0.36,
-    "content_completeness": 0.58,
+    "systems_depth": 0.86,
+    "presentation": 0.42,
+    "content_completeness": 0.64,
     "scientific_honesty": 0.9,
-    "ship_readiness": 0.5
+    "ship_readiness": 0.55
   },
-  "verdict": "ALPHA \u2014 deep digital exploration/science systems packet; not polished beta/RC without human polish + broader verified scientific coverage.",
-  "tip_sha": "0855f0e61c1bcaa4e42f1f4bf877dc7d2aeb4805",
-  "tip_short": "0855f0e"
+  "verdict": "BETA — densified digital launch campaign with living-world framing hooks; not polished RC without human world-feel + visual review + broader verified scientific coverage.",
+  "tip_sha": "PENDING_DRAFT",
+  "tip_short": "PENDING"
 }

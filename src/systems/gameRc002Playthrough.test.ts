@@ -199,6 +199,7 @@ describe('GAME-RC-002 Archive launch-campaign playthrough', () => {
     expect(g.state.player.visitedRegions.filter((r) => r !== 'museum').length).toBeGreaterThanOrEqual(3);
     g.acceptViewEra('holocene');
     g.acceptViewEra('carboniferous');
+    g.acceptViewEra('cretaceous');
     g.togglePanel('archive');
     g.closeAllPanels();
     g.acceptEquipTrait('celebrate_emote');
@@ -220,7 +221,7 @@ describe('GAME-RC-002 Archive launch-campaign playthrough', () => {
 
     g.acceptOpenAchievements();
     const rt = g.getAchievementRuntime();
-    expect(rt.catalogCount()).toBe(13);
+    expect(rt.catalogCount()).toBe(16);
     expect(rt.isUnlocked('aol.first_discovery')).toBe(true);
     expect(rt.isUnlocked('aol.launch_complete')).toBe(true);
     expect(rt.isUnlocked('aol.pause_and_breathe')).toBe(true);
@@ -240,7 +241,7 @@ describe('GAME-RC-002 Archive launch-campaign playthrough', () => {
     expect(gate.claims.POLISHED_RELEASE_CANDIDATE).toBe(false);
     expect(gate.claims.FEATURE_COMPLETE_RC).toBe(false);
     expect(gate.claims.HUMAN_PLAYTEST_VALIDATED).toBe(false);
-    expect(gate.critic_class).toBe('ALPHA');
+    expect(gate.critic_class).toBe('BETA');
     expect(gate.defects.S0_open).toBe(0);
     expect(gate.defects.S1_open).toBe(0);
     expect(gate.visual.VISUAL_MODEL_REVIEW).toBe('UNAVAILABLE');

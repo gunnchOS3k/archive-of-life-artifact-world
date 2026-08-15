@@ -15,6 +15,8 @@ import { evaluateCompanionModules } from '@/systems/companionModules';
 import { track } from '@/systems/telemetry';
 import { playCue } from '@/systems/audioCueSystem';
 import { capturePolishHook } from '@/systems/experiencePolish';
+import { presentDiscovery } from '@/systems/discoveryFeedback';
+import { pulseHud } from '@/systems/worldPresentation';
 import {
   applyAccessibilitySettings,
   loadAccessibilitySettings,
@@ -188,6 +190,15 @@ export class Game {
       this.rebuildEncounterTable();
       this.syncAchievements();
       this.save();
+      const eraLabel = unitId ?? 'cleared';
+      playCue('era_shift');
+      pulseHud('era_chip', eraLabel);
+      presentDiscovery(
+        'era_shift',
+        unitId ? `Deep time shifts to ${unitId}` : 'Time filter cleared',
+        'The field changes with provenanced taxa for this period — not a static database page.',
+      );
+      capturePolishHook('map_era_context', { unitId: unitId ?? 'none' });
       this.showToast(
         unitId
           ? `Time filter: ${unitId} — encounters use provenanced taxa for this period.`
@@ -215,6 +226,14 @@ export class Game {
     this.setupOnboardingAndCredits();
     this.achievementRuntime.onUnlocked((note) => {
       track('achievement_unlock', { id: note.id });
+      playCue('achievement_presented');
+      pulseHud('achievement_toast', note.title);
+      presentDiscovery(
+        'achievement_presented',
+        note.title,
+        'Launch campaign achievement — not global species coverage.',
+      );
+      capturePolishHook('achievement_presentation', { id: note.id });
       this.showToast(`Achievement: ${note.title}`);
     });
     this.syncAchievements();
@@ -603,6 +622,14 @@ export class Game {
 
     this.closeAllPanels();
     await this.loadRegion(regionId);
+    playCue('region_travel');
+    pulseHud('region_banner', target.name);
+    presentDiscovery(
+      'region_arrive',
+      `Arrived: ${target.name}`,
+      target.description ?? 'A living field site on the launch campaign path.',
+    );
+    capturePolishHook('discovery_feedback', { regionId });
     this.showToast(`Traveled to ${target.name}`);
   }
 
@@ -676,12 +703,25 @@ export class Game {
         xp: this.state.companion.xp ?? 0,
       });
       playCue('artifact_collected');
+      playCue('discovery_chime');
+      presentDiscovery(
+        'observation_complete',
+        `Documented ${species.commonName}`,
+        'Ethical observation filed as field evidence — expedition moment, not a table row.',
+      );
+      pulseHud('toast', species.commonName);
+      capturePolishHook('discovery_feedback', { speciesId: species.id });
       if (result.progression?.leveledUp) {
         track('companion_level_up', {
           level: result.progression.level,
           from: result.progression.previousLevel,
         });
         playCue('companion_level_up');
+        presentDiscovery(
+          'lifeling_react',
+          `Lifeling grew to level ${result.progression.level}`,
+          'Companion reacts to the living world around you.',
+        );
         this.showToast(`Lifeling grew to level ${result.progression.level}!`);
       }
       for (const modId of result.newlyUnlockedModules ?? []) {
@@ -892,6 +932,13 @@ export class Game {
     campaign.explorerName = explorerName.trim() || 'Archivist';
     document.getElementById('onboarding-overlay')?.classList.add('hidden');
     track('onboarding_complete', { name: campaign.explorerName });
+    capturePolishHook('launch_pacing', { beat: 'title_to_onboarding' });
+    pulseHud('lifeling_hud', campaign.explorerName);
+    presentDiscovery(
+      'region_arrive',
+      `Expedition begins, ${campaign.explorerName}`,
+      'Relic joins you at the Archive hub — leave the museum to enter living field sites.',
+    );
     this.syncAchievements();
     this.save();
     this.showToast(`Expedition begins, ${campaign.explorerName}. Relic is with you.`);
@@ -913,8 +960,15 @@ export class Game {
     const evaled = evaluateLaunchCampaign(this.state);
     if (evaled.complete) {
       campaign.launchCampaignComplete = true;
-      track('launch_campaign_complete', { global: false });
+      track('launch_campaign_complete', { global: false, densityComplete: evaled.densityComplete });
     }
+    playCue('finale_return');
+    presentDiscovery(
+      'finale_return',
+      'Launch finale acknowledged',
+      'Finite launch campaign — not GLOBAL_SPECIES_KNOWLEDGE_BASE_COVERAGE.',
+    );
+    pulseHud('menu_panel', 'finale');
     track('finale_acknowledged', { complete: evaled.complete });
     this.syncAchievements();
     this.save();
@@ -924,6 +978,12 @@ export class Game {
     const campaign = ensureCampaign(this.state);
     campaign.creditsOpened = true;
     document.getElementById('credits-overlay')?.classList.remove('hidden');
+    presentDiscovery(
+      'postgame_continue',
+      'Credits — postgame continues',
+      'Same save continues after credits. New Expedition starts a fresh save.',
+    );
+    capturePolishHook('postgame_continue', { launch: campaign.launchCampaignComplete });
     track('credits_opened', { launch: campaign.launchCampaignComplete });
     this.syncAchievements();
     this.save();

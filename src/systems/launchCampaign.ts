@@ -51,6 +51,8 @@ export function exploreRegionsVisited(state: SaveState): string[] {
 export function evaluateLaunchCampaign(state: SaveState): {
   complete: boolean;
   steps: LaunchStep[];
+  density: LaunchStep[];
+  densityComplete: boolean;
   globalCoverage: false;
 } {
   const campaign = ensureCampaign(state);
@@ -79,11 +81,25 @@ export function evaluateLaunchCampaign(state: SaveState): {
     { id: 'finale', done: campaign.finaleAcknowledged },
   ];
 
+  /** Density extras for GAME-RC-004 — tracked, not all required for finite complete. */
+  const density: LaunchStep[] = [
+    { id: 'era_density', done: eras.length >= 3 },
+    { id: 'artifact_density', done: state.artifacts.length >= 3 },
+    { id: 'region_density', done: explore.length >= 5 },
+    { id: 'credits', done: campaign.creditsOpened },
+  ];
+
   const complete = steps.every((s) => s.done);
   if (complete && !campaign.launchCampaignComplete) {
     campaign.launchCampaignComplete = true;
   }
-  return { complete, steps, globalCoverage: false };
+  return {
+    complete,
+    steps,
+    density,
+    densityComplete: density.every((s) => s.done),
+    globalCoverage: false,
+  };
 }
 
 /** Map save-derived campaign progress onto the achievement runtime. */
@@ -120,6 +136,11 @@ export function syncAchievementsFromSave(runtime: AchievementRuntime, state: Sav
   if (evaled.complete) runtime.setFlag('launch_campaign_complete');
   if (campaign.creditsOpened) runtime.setFlag('credits_opened');
   if (campaign.finaleAcknowledged) runtime.setFlag('finale_acknowledged');
+  if (state.artifacts.length >= 3) runtime.setFlag('artifact_density');
+  if (eras.size >= 3) runtime.setFlag('era_density');
+  if (campaign.launchCampaignComplete && campaign.creditsOpened) {
+    runtime.setFlag('postgame_ready');
+  }
 }
 
 export const LAUNCH_FINALE: {

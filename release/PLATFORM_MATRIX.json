@@ -1,0 +1,58 @@
+{
+  "schema": "gunnchos.game_rc.platform_matrix/v1",
+  "game": "archive-of-life-artifact-world",
+  "packet": "GAME-RC-004",
+  "generated_at": "2026-08-15T00:00:00Z",
+  "PLATFORM_PUBLISHED": false,
+  "CONSOLE_CERTIFIED": false,
+  "targets": [
+    {
+      "id": "web",
+      "status": "BUILDABLE",
+      "notes": "Vite web build + Capacitor webDir=dist."
+    },
+    {
+      "id": "android",
+      "status": "BUILDABLE",
+      "notes": "Capacitor Android project present (com.gunnchos.archiveoflife). Large export batches DEFERRED while Product-Use QEMU active."
+    },
+    {
+      "id": "ios",
+      "status": "NOT_STARTED",
+      "notes": "No iOS Capacitor project in-tree this packet."
+    },
+    {
+      "id": "linux_desktop",
+      "status": "NOT_STARTED",
+      "notes": "Web-first; no native desktop packaging claim."
+    },
+    {
+      "id": "windows_desktop",
+      "status": "NOT_STARTED",
+      "notes": "Web-first; no native desktop packaging claim."
+    },
+    {
+      "id": "macos_desktop",
+      "status": "NOT_STARTED",
+      "notes": "Web-first; no native desktop packaging claim."
+    },
+    {
+      "id": "steam",
+      "status": "EXTERNAL_ACCOUNT_PENDING",
+      "notes": "No Steamworks integration claimed."
+    },
+    {
+      "id": "consoles",
+      "status": "EXTERNAL_PENDING",
+      "notes": "No console certification path claimed."
+    }
+  ],
+  "deferred_heavy_work": [
+    "large Android/iOS export batches",
+    "repeated video capture of full playthrough",
+    "painted remasters / large asset-gen",
+    "additional QEMU device soaks",
+    "heavy simulations beyond headless jsdom"
+  ],
+  "notes": "Foundation matrix only. PLATFORM_PUBLISHED=false. Heavy capture DEFERRED per Product-Use QEMU resource rule."
+}
