@@ -1,0 +1,203 @@
+{
+  "schema": "aol.stream_b_pkt_003_state.v1",
+  "packet": "STREAM-B-PKT-003",
+  "scientific_ingest": {
+    "schema": "aol.scientific_ingest.v1",
+    "packet": "STREAM-B-PKT-003",
+    "liveClaim": false,
+    "recordsIn": 4,
+    "recordsAccepted": 3,
+    "provenance": [
+      {
+        "sourceId": "col",
+        "license": "CC0",
+        "citation": "Catalogue of Life fixture slice",
+        "retrievedAt": "2026-08-16T19:59:57.995Z"
+      },
+      {
+        "sourceId": "gbif",
+        "license": "CC BY 4.0",
+        "citation": "GBIF fixture synonym row",
+        "retrievedAt": "2026-08-16T19:59:57.995Z"
+      },
+      {
+        "sourceId": "col",
+        "license": "CC0",
+        "citation": "Catalogue of Life fixture slice",
+        "retrievedAt": "2026-08-16T19:59:57.995Z"
+      },
+      {
+        "sourceId": "pbdb",
+        "license": "CC0",
+        "citation": "PBDB fixture slice",
+        "retrievedAt": "2026-08-16T19:59:57.995Z"
+      }
+    ],
+    "conflicts": [
+      {
+        "taxonId": "taxon_panthera_leo",
+        "field": "scientificName",
+        "values": [
+          "Panthera leo",
+          "Felis leo"
+        ],
+        "resolution": "prefer_higher_authority",
+        "chosen": "Panthera leo"
+      }
+    ],
+    "synonymEdges": [
+      {
+        "from": "Felis leo",
+        "to": "Panthera leo",
+        "reason": "name_conflict"
+      }
+    ],
+    "GLOBAL_DATA_COMPLETE": false,
+    "ALL_SPECIES_INGESTED": false
+  },
+  "offline_scientific_pack": {
+    "schema": "aol.offline_scientific_pack.v1",
+    "packet": "STREAM-B-PKT-003",
+    "packId": "aol-scientific-bounded-b-pkt-003",
+    "bounded": true,
+    "globalComplete": false,
+    "liveClaim": false,
+    "taxaCount": 3,
+    "regionCount": 4,
+    "expeditionCount": 4,
+    "sha256": "ce5ca584775e30a8e0e0f407281f253472eb1ab45f1bc99a7e6d08b6b114253b",
+    "notes": "Bounded offline scientific slice for playtest — not a global species dump. GLOBAL_DATA_COMPLETE and ALL_SPECIES_INGESTED remain false."
+  },
+  "lifeling_progression": {
+    "schema": "aol.lifeling_progression.v1",
+    "packet": "STREAM-B-PKT-003",
+    "steps": [
+      {
+        "level": 1,
+        "xp": 10,
+        "unlockedModules": [
+          "observe"
+        ],
+        "traits": [
+          "curious"
+        ],
+        "affinity": "starter"
+      },
+      {
+        "level": 2,
+        "xp": 30,
+        "unlockedModules": [
+          "observe",
+          "scan"
+        ],
+        "traits": [
+          "curious",
+          "patient"
+        ],
+        "affinity": "field"
+      },
+      {
+        "level": 3,
+        "xp": 55,
+        "unlockedModules": [
+          "observe",
+          "scan",
+          "journal"
+        ],
+        "traits": [
+          "curious",
+          "patient",
+          "careful"
+        ],
+        "affinity": "field"
+      },
+      {
+        "level": 4,
+        "xp": 85,
+        "unlockedModules": [
+          "observe",
+          "scan",
+          "journal",
+          "deep_time"
+        ],
+        "traits": [
+          "curious",
+          "patient",
+          "careful",
+          "bold"
+        ],
+        "affinity": "science"
+      }
+    ],
+    "progressionOk": true,
+    "note": "Lifeling XP unlocks modules/traits; not a claim of human playtest validation."
+  },
+  "expedition_diversity": {
+    "schema": "aol.expedition_diversity.v1",
+    "packet": "STREAM-B-PKT-003",
+    "expeditionCount": 4,
+    "uniqueBiomes": [
+      "ancient_swamp",
+      "polar_ice",
+      "urban_human_modified",
+      "museum"
+    ],
+    "uniqueRegions": [
+      "indiana_ancient_swamp",
+      "polar_ice",
+      "urban_park",
+      "museum"
+    ],
+    "objectiveTypeCoverage": [
+      "visit_region",
+      "collect_artifact",
+      "discover_clue"
+    ],
+    "diversityScore": 4.3,
+    "diversityOk": true
+  },
+  "playtest_packet": {
+    "schema": "aol.playtest_packet.v1",
+    "packet": "STREAM-B-PKT-003",
+    "HUMAN_PLAYTEST_VALIDATED": false,
+    "GLOBAL_DATA_COMPLETE": false,
+    "ALL_SPECIES_INGESTED": false,
+    "scriptedBeats": [
+      {
+        "id": "start_expedition",
+        "label": "Start a field expedition in a distinct biome",
+        "done": false
+      },
+      {
+        "id": "collect_with_provenance",
+        "label": "Collect artifact with provenance citations",
+        "done": false
+      },
+      {
+        "id": "resolve_conflict_note",
+        "label": "Note a scientific name conflict / synonym edge",
+        "done": false
+      },
+      {
+        "id": "lifeling_progress",
+        "label": "Advance Lifeling XP and unlock a module",
+        "done": false
+      },
+      {
+        "id": "second_biome",
+        "label": "Visit a second biome for expedition diversity",
+        "done": false
+      }
+    ],
+    "instructions": [
+      "Use offline scientific pack only — no live global crawl.",
+      "Record honesty: HUMAN_PLAYTEST_VALIDATED stays false until a human signs the packet.",
+      "Do not set GLOBAL_DATA_COMPLETE or ALL_SPECIES_INGESTED."
+    ],
+    "claim_boundary": "Playtest packet is a scripted checklist for humans. Digital agent runs do not earn HUMAN_PLAYTEST_VALIDATED."
+  },
+  "HUMAN_PLAYTEST_VALIDATED": false,
+  "GLOBAL_DATA_COMPLETE": false,
+  "ALL_SPECIES_INGESTED": false,
+  "claim_boundary": "Bounded scientific ingest with provenance + conflict handling, Lifeling progression, expedition diversity, and a human playtest packet. No global completeness. Cursor NEVER merges."
+}

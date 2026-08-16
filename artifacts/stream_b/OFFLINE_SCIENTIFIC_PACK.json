@@ -1,0 +1,13 @@
+{
+  "schema": "aol.offline_scientific_pack.v1",
+  "packet": "STREAM-B-PKT-003",
+  "packId": "aol-scientific-bounded-b-pkt-003",
+  "bounded": true,
+  "globalComplete": false,
+  "liveClaim": false,
+  "taxaCount": 3,
+  "regionCount": 4,
+  "expeditionCount": 4,
+  "sha256": "ce5ca584775e30a8e0e0f407281f253472eb1ab45f1bc99a7e6d08b6b114253b",
+  "notes": "Bounded offline scientific slice for playtest — not a global species dump. GLOBAL_DATA_COMPLETE and ALL_SPECIES_INGESTED remain false."
+}

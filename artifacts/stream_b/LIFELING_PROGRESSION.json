@@ -1,0 +1,64 @@
+{
+  "schema": "aol.lifeling_progression.v1",
+  "packet": "STREAM-B-PKT-003",
+  "steps": [
+    {
+      "level": 1,
+      "xp": 10,
+      "unlockedModules": [
+        "observe"
+      ],
+      "traits": [
+        "curious"
+      ],
+      "affinity": "starter"
+    },
+    {
+      "level": 2,
+      "xp": 30,
+      "unlockedModules": [
+        "observe",
+        "scan"
+      ],
+      "traits": [
+        "curious",
+        "patient"
+      ],
+      "affinity": "field"
+    },
+    {
+      "level": 3,
+      "xp": 55,
+      "unlockedModules": [
+        "observe",
+        "scan",
+        "journal"
+      ],
+      "traits": [
+        "curious",
+        "patient",
+        "careful"
+      ],
+      "affinity": "field"
+    },
+    {
+      "level": 4,
+      "xp": 85,
+      "unlockedModules": [
+        "observe",
+        "scan",
+        "journal",
+        "deep_time"
+      ],
+      "traits": [
+        "curious",
+        "patient",
+        "careful",
+        "bold"
+      ],
+      "affinity": "science"
+    }
+  ],
+  "progressionOk": true,
+  "note": "Lifeling XP unlocks modules/traits; not a claim of human playtest validation."
+}
