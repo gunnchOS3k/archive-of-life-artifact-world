@@ -1,0 +1,40 @@
+{
+  "schema": "aol.playtest_packet.v1",
+  "packet": "STREAM-B-PKT-003",
+  "HUMAN_PLAYTEST_VALIDATED": false,
+  "GLOBAL_DATA_COMPLETE": false,
+  "ALL_SPECIES_INGESTED": false,
+  "scriptedBeats": [
+    {
+      "id": "start_expedition",
+      "label": "Start a field expedition in a distinct biome",
+      "done": false
+    },
+    {
+      "id": "collect_with_provenance",
+      "label": "Collect artifact with provenance citations",
+      "done": false
+    },
+    {
+      "id": "resolve_conflict_note",
+      "label": "Note a scientific name conflict / synonym edge",
+      "done": false
+    },
+    {
+      "id": "lifeling_progress",
+      "label": "Advance Lifeling XP and unlock a module",
+      "done": false
+    },
+    {
+      "id": "second_biome",
+      "label": "Visit a second biome for expedition diversity",
+      "done": false
+    }
+  ],
+  "instructions": [
+    "Use offline scientific pack only — no live global crawl.",
+    "Record honesty: HUMAN_PLAYTEST_VALIDATED stays false until a human signs the packet.",
+    "Do not set GLOBAL_DATA_COMPLETE or ALL_SPECIES_INGESTED."
+  ],
+  "claim_boundary": "Playtest packet is a scripted checklist for humans. Digital agent runs do not earn HUMAN_PLAYTEST_VALIDATED."
+}

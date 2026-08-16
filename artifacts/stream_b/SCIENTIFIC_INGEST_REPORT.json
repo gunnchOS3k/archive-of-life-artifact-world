@@ -1,0 +1,54 @@
+{
+  "schema": "aol.scientific_ingest.v1",
+  "packet": "STREAM-B-PKT-003",
+  "liveClaim": false,
+  "recordsIn": 4,
+  "recordsAccepted": 3,
+  "provenance": [
+    {
+      "sourceId": "col",
+      "license": "CC0",
+      "citation": "Catalogue of Life fixture slice",
+      "retrievedAt": "2026-08-16T19:59:57.995Z"
+    },
+    {
+      "sourceId": "gbif",
+      "license": "CC BY 4.0",
+      "citation": "GBIF fixture synonym row",
+      "retrievedAt": "2026-08-16T19:59:57.995Z"
+    },
+    {
+      "sourceId": "col",
+      "license": "CC0",
+      "citation": "Catalogue of Life fixture slice",
+      "retrievedAt": "2026-08-16T19:59:57.995Z"
+    },
+    {
+      "sourceId": "pbdb",
+      "license": "CC0",
+      "citation": "PBDB fixture slice",
+      "retrievedAt": "2026-08-16T19:59:57.995Z"
+    }
+  ],
+  "conflicts": [
+    {
+      "taxonId": "taxon_panthera_leo",
+      "field": "scientificName",
+      "values": [
+        "Panthera leo",
+        "Felis leo"
+      ],
+      "resolution": "prefer_higher_authority",
+      "chosen": "Panthera leo"
+    }
+  ],
+  "synonymEdges": [
+    {
+      "from": "Felis leo",
+      "to": "Panthera leo",
+      "reason": "name_conflict"
+    }
+  ],
+  "GLOBAL_DATA_COMPLETE": false,
+  "ALL_SPECIES_INGESTED": false
+}

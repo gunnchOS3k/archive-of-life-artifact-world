@@ -1,0 +1,24 @@
+{
+  "schema": "aol.expedition_diversity.v1",
+  "packet": "STREAM-B-PKT-003",
+  "expeditionCount": 4,
+  "uniqueBiomes": [
+    "ancient_swamp",
+    "polar_ice",
+    "urban_human_modified",
+    "museum"
+  ],
+  "uniqueRegions": [
+    "indiana_ancient_swamp",
+    "polar_ice",
+    "urban_park",
+    "museum"
+  ],
+  "objectiveTypeCoverage": [
+    "visit_region",
+    "collect_artifact",
+    "discover_clue"
+  ],
+  "diversityScore": 4.3,
+  "diversityOk": true
+}
