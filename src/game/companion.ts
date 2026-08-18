@@ -58,6 +58,13 @@ export class Lifeling {
     this.reactionTimer = 2;
   }
 
+  /** Presentation mode for UML / HUD — not a scientific classification. */
+  runtimeMode(playerX: number, playerY: number): 'idle' | 'follow' | 'emote' {
+    if (this.emoteTimer > 0 && this.emote) return 'emote';
+    const dist = Math.hypot(playerX - this.x, playerY - this.y);
+    return dist > this.followDistance ? 'follow' : 'idle';
+  }
+
   draw(ctx: CanvasRenderingContext2D, companionState: CompanionState, _traits?: unknown) {
     const bob = Math.sin(this.bobPhase) * 3;
     const hasHop = companionState.equippedTraits.includes('frog_hop');

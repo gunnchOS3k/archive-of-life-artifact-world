@@ -2,6 +2,15 @@
 
 Educational open-world exploration game — discover life, collect ethical artifacts, and build the Archive of Life with your Lifeling companion.
 
+Identity: [docs/PRODUCT_IDENTITY.md](docs/PRODUCT_IDENTITY.md) (`com.gunnchos.archiveoflife`).  
+UML: [docs/uml/README.md](docs/uml/README.md).  
+Pixel 6a: [docs/PIXEL_6A_ACCEPTANCE.md](docs/PIXEL_6A_ACCEPTANCE.md) — **BLOCKED / unauthorized**.  
+Human playtest: [docs/HUMAN_PLAYTEST_PACKET.md](docs/HUMAN_PLAYTEST_PACKET.md) — `HUMAN_QA_PENDING`.  
+License: [LICENSE](LICENSE).  
+Workload notes (not a telecom thesis claim): [docs/research/6G_WORKLOAD_RELEVANCE.md](docs/research/6G_WORKLOAD_RELEVANCE.md).
+
+**Playable without external datasets.** Bundled sample / game-authored biology is **not** verified science.
+
 ## Data readiness
 
 The game loop is playable, but the current scientific bundles are a labeled sample release. The strict production gate intentionally fails until external source snapshots, regional NASA measurements, and all full-Earth temporal maps are imported and verified.
