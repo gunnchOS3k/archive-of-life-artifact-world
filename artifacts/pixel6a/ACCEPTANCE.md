@@ -1,5 +1,9 @@
-# Pixel 6a session — 2026-08-18T21:15Z
+# Pixel 6a — archive-of-life
 
-**PIXEL_6A_READY = BLOCKED**
+PIXEL_6A_READY = PASS
 
-USB-C connected. `adb devices -l`: `27211JEGR06194 unauthorized`. Install/launch not run.
+- serial 27211JEGR06194 (Pixel 6a Android 17)
+- package `com.gunnchos.archiveoflife`
+- install PREEXISTING_ON_DEVICE
+- launch PASS
+- HUMAN_QA_PENDING for fun/usability
