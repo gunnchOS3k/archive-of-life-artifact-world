@@ -1,0 +1,15 @@
+  bash arg: -p
+  bash arg: com.gunnchos.archiveoflife
+  bash arg: -c
+  bash arg: android.intent.category.LAUNCHER
+  bash arg: 1
+Events injected: 1
+## Network stats: elapsed time=31ms (0ms mobile, 0ms wifi, 31ms not connected)
+args: [-p, com.gunnchos.archiveoflife, -c, android.intent.category.LAUNCHER, 1]
+ arg: "-p"
+ arg: "com.gunnchos.archiveoflife"
+ arg: "-c"
+ arg: "android.intent.category.LAUNCHER"
+ arg: "1"
+data="com.gunnchos.archiveoflife"
+data="android.intent.category.LAUNCHER"

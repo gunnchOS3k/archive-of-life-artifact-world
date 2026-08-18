@@ -1,0 +1,154 @@
+Activity Resolver Table:
+  Non-Data Actions:
+      android.intent.action.MAIN:
+        209a208 com.gunnchos.archiveoflife/.MainActivity filter 7a89da1
+          Action: "android.intent.action.MAIN"
+          Category: "android.intent.category.LAUNCHER"
+
+Receiver Resolver Table:
+  Non-Data Actions:
+      androidx.profileinstaller.action.SAVE_PROFILE:
+        c9ad6b4 com.gunnchos.archiveoflife/androidx.profileinstaller.ProfileInstallReceiver filter c0e2523
+          Action: "androidx.profileinstaller.action.SAVE_PROFILE"
+      androidx.profileinstaller.action.INSTALL_PROFILE:
+        c9ad6b4 com.gunnchos.archiveoflife/androidx.profileinstaller.ProfileInstallReceiver filter e9072dd
+          Action: "androidx.profileinstaller.action.INSTALL_PROFILE"
+      androidx.profileinstaller.action.SKIP_FILE:
+        c9ad6b4 com.gunnchos.archiveoflife/androidx.profileinstaller.ProfileInstallReceiver filter a6e6e52
+          Action: "androidx.profileinstaller.action.SKIP_FILE"
+      androidx.profileinstaller.action.BENCHMARK_OPERATION:
+        c9ad6b4 com.gunnchos.archiveoflife/androidx.profileinstaller.ProfileInstallReceiver filter d68aa20
+          Action: "androidx.profileinstaller.action.BENCHMARK_OPERATION"
+      com.gunnchos.archiveoflife.ACCEPT_NAV:
+        e585bc6 com.gunnchos.archiveoflife/.AcceptNavReceiver filter 8b99787
+          Action: "com.gunnchos.archiveoflife.ACCEPT_NAV"
+
+Domain verification status:
+
+Permissions:
+  Permission [com.gunnchos.archiveoflife.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION] (a4fa23e):
+    sourcePackage=com.gunnchos.archiveoflife
+    uid=10325 gids=[] type=0 prot=signature
+    perm=PermissionInfo{14b289f com.gunnchos.archiveoflife.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION}
+    flags=0x0
+
+Registered ContentProviders:
+  com.gunnchos.archiveoflife/androidx.startup.InitializationProvider:
+    Provider{d5aedec com.gunnchos.archiveoflife/androidx.startup.InitializationProvider}
+  com.gunnchos.archiveoflife/androidx.core.content.FileProvider:
+    Provider{4bd65b5 com.gunnchos.archiveoflife/androidx.core.content.FileProvider}
+
+ContentProvider Authorities:
+  [com.gunnchos.archiveoflife.fileprovider]:
+    Provider{4bd65b5 com.gunnchos.archiveoflife/androidx.core.content.FileProvider}
+      applicationInfo=ApplicationInfo{89fa44a com.gunnchos.archiveoflife}
+  [com.gunnchos.archiveoflife.androidx-startup]:
+    Provider{d5aedec com.gunnchos.archiveoflife/androidx.startup.InitializationProvider}
+      applicationInfo=ApplicationInfo{b43afbb com.gunnchos.archiveoflife}
+
+Key Set Manager:
+  [com.gunnchos.archiveoflife]
+      Signing KeySets: 193
+
+Packages:
+  Package [com.gunnchos.archiveoflife] (fefcd8):
+    appId=10325
+    pccId=-1
+    pkg=Package{4aba831 com.gunnchos.archiveoflife}
+    codePath=/data/app/~~M1QwJksk6K1EsxlFsvBQWg==/com.gunnchos.archiveoflife-CcfXpBlAgbFkpXcB-2NiDw==
+    resourcePath=/data/app/~~M1QwJksk6K1EsxlFsvBQWg==/com.gunnchos.archiveoflife-CcfXpBlAgbFkpXcB-2NiDw==
+    legacyNativeLibraryDir=/data/app/~~M1QwJksk6K1EsxlFsvBQWg==/com.gunnchos.archiveoflife-CcfXpBlAgbFkpXcB-2NiDw==/lib
+    extractNativeLibs=true
+    primaryCpuAbi=null
+    secondaryCpuAbi=null
+    cpuAbiOverride=null
+    versionCode=3 minSdk=22 targetSdk=34
+    minExtensionVersions=[]
+    versionName=1.1.1
+    hiddenApiEnforcementPolicy=2
+    usesNonSdkApi=false
+    splits=[base]
+    apkSigningVersion=2
+    flags=[ HAS_CODE ALLOW_CLEAR_USER_DATA ALLOW_BACKUP KILL_AFTER_RESTORE ]
+    privateFlags=[ PRIVATE_FLAG_ACTIVITIES_RESIZE_MODE_RESIZEABLE_VIA_SDK_VERSION ALLOW_AUDIO_PLAYBACK_CAPTURE PRIVATE_FLAG_ALLOW_NATIVE_HEAP_POINTER_TAGGING ]
+    forceQueryable=false
+    pageSizeCompat=0
+    scannedAsStoppedSystemApp=false
+    supportsScreens=[small, medium, large, xlarge, resizeable, anyDensity]
+    timeStamp=2026-07-14 16:28:19
+    lastUpdateTime=2026-07-14 16:28:23
+    installerPackageName=null
+    installerPackageUid=-1
+    initiatingPackageName=com.android.shell
+    originatingPackageName=null
+    packageSource=1
+    appMetadataFilePath=null
+    appMetadataSource=0
+    signatures=PackageSignatures{13bbb16 version:2, signatures:[cf8b1f85], past signatures:[]}
+    installPermissionsFixed=false
+    pkgFlags=[ HAS_CODE ALLOW_CLEAR_USER_DATA ALLOW_BACKUP KILL_AFTER_RESTORE ]
+    privatePkgFlags=[ PRIVATE_FLAG_ACTIVITIES_RESIZE_MODE_RESIZEABLE_VIA_SDK_VERSION ALLOW_AUDIO_PLAYBACK_CAPTURE PRIVATE_FLAG_ALLOW_NATIVE_HEAP_POINTER_TAGGING ]
+    apexModuleName=null
+    declared permissions:
+      com.gunnchos.archiveoflife.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION: prot=signature
+    requested permissions:
+      android.permission.ACCESS_LOCAL_NETWORK
+      android.permission.INTERNET
+      com.gunnchos.archiveoflife.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION
+    install permissions:
+      android.permission.INTERNET: granted=true
+      com.gunnchos.archiveoflife.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION: granted=true
+    User 0: ceDataInode=184854 deDataInode=177363 pccCeDataInode=0 pccDeDataInode=0 installed=true hidden=false suspended=false appLockEnabled=false distractionFlags=0 stopped=false notLaunched=false enabled=0 instant=false virtual=false quarantined=false
+      installReason=0
+      dataDir=/data/user/0/com.gunnchos.archiveoflife
+      firstInstallTime=2026-07-13 22:07:22
+      uninstallReason=0
+      overlay paths:
+        /product/overlay/NavigationBarModeGestural/NavigationBarModeGesturalOverlay.apk
+        /data/resource-cache/com.android.systemui-neutral-bGrZ.frro
+        /data/resource-cache/com.android.systemui-accent-kzmJ.frro
+        /data/resource-cache/com.android.systemui-dynamic-8OiR.frro
+      legacy overlay paths:
+        /product/overlay/NavigationBarModeGestural/NavigationBarModeGesturalOverlay.apk
+      gids=[3003]
+      runtime permissions:
+        android.permission.ACCESS_LOCAL_NETWORK: granted=true, flags=[ REVOKE_WHEN_REQUESTED|USER_SENSITIVE_WHEN_GRANTED|USER_SENSITIVE_WHEN_DENIED]
+
+Queries:
+  system apps queryable: false
+  queries via forceQueryable:
+  queries via package name:
+  queries via component:
+    com.google.android.settings.intelligence:
+      com.gunnchos.archiveoflife
+    com.google.android.as.oss:
+      com.gunnchos.archiveoflife
+    com.xfinitymobile.myaccount:
+      com.gunnchos.archiveoflife
+    com.google.android.apps.diagnosticstool:
+      com.gunnchos.archiveoflife
+    com.google.android.apps.camera.services:
+      com.gunnchos.archiveoflife
+    com.snapchat.android:
+      com.gunnchos.archiveoflife
+    com.instagram.android:
+      com.gunnchos.archiveoflife
+  queryable via interaction:
+    User 0:
+      [com.google.android.iwlan,com.android.localtransport,com.android.dynsystem,com.google.SSRestartDetector,com.android.inputdevices,android,com.android.keychain,com.android.location.fused,com.android.server.telecom,com.google.android.repairmode,com.android.providers.settings,com.android.settings,com.google.pixel.camera.services,com.android.DeviceAsWebcam]:
+        com.gunnchos.archiveoflife
+      [com.google.android.gsf,com.google.android.gms]:
+        com.gunnchos.archiveoflife
+      com.google.android.webview:
+        com.gunnchos.archiveoflife
+      com.google.android.inputmethod.latin:
+        com.gunnchos.archiveoflife
+      com.gunnchos.archiveoflife:
+        com.google.android.webview
+  queryable via uses-library:
+
+Dexopt state:
+  [com.gunnchos.archiveoflife]
+    path: /data/app/~~M1QwJksk6K1EsxlFsvBQWg==/com.gunnchos.archiveoflife-CcfXpBlAgbFkpXcB-2NiDw==/base.apk
+      arm64: [status=speed-profile] [reason=bg-dexopt] [primary-abi]
+        [location is /data/app/~~M1QwJksk6K1EsxlFsvBQWg==/com.gunnchos.archiveoflife-CcfXpBlAgbFkpXcB-2NiDw==/oat/arm64/base.odex]
