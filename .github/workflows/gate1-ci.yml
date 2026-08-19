@@ -45,6 +45,23 @@ jobs:
       - name: Gate1 core-loop (provenance + save/reload)
         run: node gate1/tools/core_loop_test.mjs
 
+      - name: Wave001 cross-device contract (runtime adapter)
+        run: |
+          set -euo pipefail
+          pip install 'jsonschema>=4.20'
+          npm test -- src/crossDevice/contractProvider.test.ts
+          npx tsx gate1/tools/export_cross_device_contract.ts
+          python3 - <<'PY'
+          import json
+          from jsonschema import Draft202012Validator
+          from pathlib import Path
+          doc = json.loads(Path("gate1/evidence/out/cross_device_contract.json").read_text())
+          schema = json.loads(Path("gate1/contracts/cross_device_game_contract.v1.schema.json").read_text())
+          Draft202012Validator(schema).validate(doc)
+          assert doc["game_id"] == "archive-of-life-artifact-world"
+          print("WAVE001_CROSS_DEVICE_CONTRACT_OK")
+          PY
+
       - name: Upload synthetic Gate1 summary
         if: always()
         uses: actions/upload-artifact@v4
