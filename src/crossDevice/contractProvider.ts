@@ -18,6 +18,9 @@ import {
   saveAccessibilitySettings,
   type AccessibilitySettings,
 } from '@/systems/accessibility';
+import {
+  probeInputRemappingPersistence,
+} from '@/systems/inputBindings';
 
 export const CONTRACT_VERSION = '1.0.0';
 export const GAME_ID = 'archive-of-life-artifact-world';
@@ -161,6 +164,7 @@ export function buildCrossDeviceContract(options?: {
   const platform = options?.platform ?? 'node';
   const roleId = options?.roleId ?? 'handheld_hybrid';
   const a11y = options?.a11y ?? DEFAULT_A11Y;
+  const remapProbe = probeInputRemappingPersistence();
   const rulesCanonical = {
     save_version: SAVE_VERSION,
     progression: 'expedition_companion',
@@ -191,8 +195,8 @@ export function buildCrossDeviceContract(options?: {
     },
     input_profile: {
       schema: 'gunnchos.normalized_actions.v1',
-      layout_id: 'pointer_keyboard',
-      remapping_persisted: false,
+      layout_id: 'pointer_touch_primary',
+      remapping_persisted: remapProbe.ok,
       normalized_actions: [...NORMALIZED_ACTIONS],
     },
     accessibility_profile: {
@@ -233,8 +237,11 @@ export function buildCrossDeviceContract(options?: {
       save_roundtrip: probeSaveRoundtrip(),
       score: probeScore(),
       input: {
-        status: 'pass',
-        detail: { normalized_actions: NORMALIZED_ACTIONS },
+        status: remapProbe.ok ? 'pass' : 'fail',
+        detail: {
+          normalized_actions: NORMALIZED_ACTIONS,
+          remapping_persistence: remapProbe.detail,
+        },
       },
       accessibility: {
         status: 'pass',

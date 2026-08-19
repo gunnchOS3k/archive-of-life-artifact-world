@@ -16,6 +16,12 @@ describe('Wave001 cross-device contract (archive)', () => {
     expect(doc.capability_model.required_features.length).toBeGreaterThan(0);
   });
 
+  it('input remapping persistence probe passes', () => {
+    const doc = buildCrossDeviceContract({ platform: 'node' });
+    expect(doc.input_profile.remapping_persisted).toBe(true);
+    expect(doc.probes.input.status).toBe('pass');
+  });
+
   it('rules surface is stable for parity', () => {
     const a = buildCrossDeviceContract();
     const b = buildCrossDeviceContract({ roleId: 'student_14_5' });
