@@ -1,0 +1,14 @@
+{
+  "ok": true,
+  "independent_runs": 2,
+  "run_a_hash": "f7078724c293378b240851ea9ae7be52f555dcc00a255081067d60734d9effaf",
+  "run_b_hash": "f7078724c293378b240851ea9ae7be52f555dcc00a255081067d60734d9effaf",
+  "hashes_equal": true,
+  "bundle_checksum_count": 28,
+  "pipeline": "data-pipeline archive-pipeline build-snapshot",
+  "deterministic_fields": [
+    "dataSnapshotId",
+    "bundleChecksums",
+    "gameVersion"
+  ]
+}

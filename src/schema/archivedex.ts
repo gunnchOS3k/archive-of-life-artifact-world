@@ -1,5 +1,6 @@
 import type { DataSourceProvenance } from './provenance';
 import type { RepresentationTier, TaxonLifeStatus } from '@/time/schema';
+import type { ScientificRecordSnapshot } from './scientificRecord';
 
 export type ArchiveDexEntryStatus = 'undocumented' | 'discovered' | 'studied';
 export type ArchiveDexTabId =
@@ -263,6 +264,8 @@ export interface ArchiveDexEntry {
   media?: MediaProfile;
   sources: DataSourceProvenance[];
   uncertainty?: UncertaintyProfile;
+  /** Wave008 canonical scientific record layer (optional for legacy bundles). */
+  scientificRecord?: ScientificRecordSnapshot;
 }
 
 export interface ArchiveDexProfileOverlay {

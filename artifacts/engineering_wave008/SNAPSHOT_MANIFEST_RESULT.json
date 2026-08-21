@@ -1,0 +1,8 @@
+{
+  "ok": true,
+  "MANIFEST_HASH_OK": true,
+  "TAMPER_CHANGES_HASH": true,
+  "VALIDATE_SNAPSHOT_MANIFEST": true,
+  "integration_status": "FIXTURE_ONLY",
+  "snapshot_id": "wave008-scientific-fixture-v1"
+}

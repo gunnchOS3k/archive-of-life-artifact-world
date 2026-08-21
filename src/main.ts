@@ -17,12 +17,18 @@ let game: Game | null = null;
 const archiveDexService = new ArchiveDexService(dataCatalog, timeAtlasService);
 
 async function init() {
-  const role = resolveDeviceRole(
-    null,
-    typeof window !== 'undefined' ? new URLSearchParams(window.location.search) : null,
-  );
+  const params =
+    typeof window !== 'undefined' ? new URLSearchParams(window.location.search) : null;
+  const role = resolveDeviceRole(null, params);
   applyDeviceRole(role);
   applyAccessibilitySettings(loadAccessibilitySettings());
+
+  // Wave008 integrity: real Vite ArchiveDex product surface (not static harness).
+  if (params?.get('wave008_scientific') === '1') {
+    const { bootWave008ScientificArchiveDex } = await import('@/ui/wave008ScientificDemo');
+    await bootWave008ScientificArchiveDex();
+    return;
+  }
 
   const continueBtn = document.getElementById('btn-continue')!;
   // Prefer sync hasSave; async backup may rehydrate continue after IDB check.

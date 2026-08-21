@@ -1,0 +1,7 @@
+{
+  "ok": true,
+  "TYPED_GEOGRAPHY": true,
+  "FOSSIL_DISTINCT": true,
+  "UNKNOWN_SAFE": true,
+  "FAKE_PRECISE_COORDS_REJECTED": true
+}

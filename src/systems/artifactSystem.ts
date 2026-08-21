@@ -86,7 +86,7 @@ function provenanceFromSpecies(species: PlayableSpecies): NotebookProvenanceCite
     citation: p.citation,
     sourceRecordId: p.sourceRecordId ?? p.catalogueOfLifeId ?? (p.gbifTaxonKey != null ? String(p.gbifTaxonKey) : undefined),
     sourceUrl: undefined,
-    cacheStatus: p.verificationStatus ?? (p.isMockData ? 'mock_sample' : 'source'),
+    cacheStatus: p.verificationStatus ?? (p.isMockData ? 'mock_sample' : 'needs_source_verification'),
   }));
 }
 

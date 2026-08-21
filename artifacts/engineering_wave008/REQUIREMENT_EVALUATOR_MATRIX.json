@@ -1,0 +1,215 @@
+{
+  "TARGET_REQUIREMENTS": 15,
+  "TARGET_IDS_UNIQUE": true,
+  "evaluators": [
+    {
+      "requirement_id": "GAME-AOL-001",
+      "evaluator_name": "evaluate_game_aol_001",
+      "classification": "IMPLEMENTED_AND_VALIDATED",
+      "evidence_keys": [
+        "COVERAGE_SCOPE",
+        "DENOMINATOR_EXPLICIT",
+        "SCOPE_TOTAL_GT_DOCUMENTED",
+        "ADDING_UNDOCUMENTED_DECREASES_PERCENT",
+        "COMPLETENESS_OVERCLAIM_SABOTAGE_FAILS",
+        "denominator_label"
+      ],
+      "source_hash": "635d727f87812d2ed21e96832d68a13b75df5b58474cd2173cf90635d01f5714"
+    },
+    {
+      "requirement_id": "GAME-AOL-002",
+      "evaluator_name": "evaluate_game_aol_002",
+      "classification": "IMPLEMENTED_AND_VALIDATED",
+      "evidence_keys": [
+        "CANONICAL_ID",
+        "ok",
+        "STABLE_ACROSS_REIMPORT",
+        "DISTINCT_TAXA",
+        "RETAIN_ACROSS_RENAME",
+        "COLLISION_DETECTOR",
+        "ALIAS_REDIRECT",
+        "sample_canonical_id"
+      ],
+      "source_hash": "b6ef03f625afa4bf5cc80b075b34247cba21cb10277434607ac4b4cc0ba3036e"
+    },
+    {
+      "requirement_id": "GAME-AOL-003",
+      "evaluator_name": "evaluate_game_aol_003",
+      "classification": "IMPLEMENTED_AND_VALIDATED",
+      "evidence_keys": [
+        "SCIENTIFIC_NAME",
+        "ok",
+        "SOURCE_LINKED",
+        "NONEMPTY_WHEN_IDENTIFIED",
+        "SAFE_FOR_UI"
+      ],
+      "source_hash": "f75fa2a1fb02bc22c421930d38ed82a6d5feb00ed0b4c4da9989521e8df610e0"
+    },
+    {
+      "requirement_id": "GAME-AOL-004",
+      "evaluator_name": "evaluate_game_aol_004",
+      "classification": "IMPLEMENTED_AND_VALIDATED",
+      "evidence_keys": [
+        "TAXONOMIC_AUTHORITY",
+        "ok",
+        "AUTHORITY_EXPLICIT",
+        "DISTINCT_FROM_SOURCE_ORG",
+        "UNKNOWN_ALLOWED"
+      ],
+      "source_hash": "d5524ec91ae465027f1627f53d6dd5ef88f99a3fbc9ef35b5eaa599827305200"
+    },
+    {
+      "requirement_id": "GAME-AOL-005",
+      "evaluator_name": "evaluate_game_aol_005",
+      "classification": "IMPLEMENTED_AND_VALIDATED",
+      "evidence_keys": [
+        "SOURCE_ORGANIZATION",
+        "ok",
+        "REGISTRY_EXECUTABLE",
+        "INTEGRATION_STATUS_EXPLICIT",
+        "ENUM_IS_NOT_LIVE",
+        "EOL_NOT_IMPLEMENTED",
+        "NO_GUESSED_PROVIDER_LICENSE"
+      ],
+      "source_hash": "d8076b6a68a0ba676c13bc7194ff57f65f593043bc45332474068d0ff06d5f9f"
+    },
+    {
+      "requirement_id": "GAME-AOL-006",
+      "evaluator_name": "evaluate_game_aol_006",
+      "classification": "IMPLEMENTED_AND_VALIDATED",
+      "evidence_keys": [
+        "SOURCE_RECORD_ID",
+        "ok",
+        "SOURCE_NATIVE_PRESERVED",
+        "DISTINCT_FROM_CANONICAL",
+        "PLACEHOLDER_REJECTED_FROM_SOURCE_VERIFIED"
+      ],
+      "source_hash": "b122c95e3268cb5ed98b66a5dd34ad710d8c0d7ae2d05f3b942006fefeeec029"
+    },
+    {
+      "requirement_id": "GAME-AOL-007",
+      "evaluator_name": "evaluate_game_aol_007",
+      "classification": "IMPLEMENTED_AND_VALIDATED",
+      "evidence_keys": [
+        "LICENSE_TERMS",
+        "license_visible",
+        "ok",
+        "STRUCTURED_LICENSE",
+        "IUCN_NOT_ASSUMED_CCBY",
+        "HONEST_FIXTURE_LICENSE",
+        "MISSING_BLOCKS_SOURCE_VERIFIED"
+      ],
+      "source_hash": "6bf35a84999f550c0811736131f31356a7ac63b74a36759b911fb0cefa0a00b5"
+    },
+    {
+      "requirement_id": "GAME-AOL-008",
+      "evaluator_name": "evaluate_game_aol_008",
+      "classification": "IMPLEMENTED_AND_VALIDATED",
+      "evidence_keys": [
+        "RETRIEVAL_DATE",
+        "ok",
+        "FROM_SNAPSHOT_PROVENANCE",
+        "MISSING_BLOCKS_SOURCE_VERIFIED",
+        "FUTURE_REJECTED"
+      ],
+      "source_hash": "3eac3df30e5af32f829f7ffac1c0d7ca35720d7a4dbceb1d31e1b4f2ce888f5d"
+    },
+    {
+      "requirement_id": "GAME-AOL-009",
+      "evaluator_name": "evaluate_game_aol_009",
+      "classification": "IMPLEMENTED_AND_VALIDATED",
+      "evidence_keys": [
+        "SOURCE_VERSION",
+        "ok",
+        "SNAPSHOT_BOUND",
+        "UPSTREAM_VERSION",
+        "TRANSFORM_VERSION",
+        "MANIFEST_HASH_OK",
+        "TAMPER_REJECTED"
+      ],
+      "source_hash": "10446dd04482dddfe50175943c768735441131b6c411971cb265898851f5ba78"
+    },
+    {
+      "requirement_id": "GAME-AOL-010",
+      "evaluator_name": "evaluate_game_aol_010",
+      "classification": "IMPLEMENTED_AND_VALIDATED",
+      "evidence_keys": [
+        "GEOGRAPHIC_PROVENANCE",
+        "ok",
+        "TYPED_GEOGRAPHY",
+        "FOSSIL_DISTINCT",
+        "UNKNOWN_SAFE",
+        "FAKE_PRECISE_COORDS_REJECTED"
+      ],
+      "source_hash": "28077cddc47b5b4e2aab6f09045c9ab1fae5282b961d762242d31b8f2d417abb"
+    },
+    {
+      "requirement_id": "GAME-AOL-011",
+      "evaluator_name": "evaluate_game_aol_011",
+      "classification": "IMPLEMENTED_AND_VALIDATED",
+      "evidence_keys": [
+        "TIME_RANGE",
+        "ok",
+        "TYPED_TIME",
+        "FOSSIL_EXTANT_SEMANTICS",
+        "MA_DIRECTION"
+      ],
+      "source_hash": "88b333ff83621d1197766df99bfbebbf2bf9b6b83c0fc382f72684522b469a03"
+    },
+    {
+      "requirement_id": "GAME-AOL-012",
+      "evaluator_name": "evaluate_game_aol_012",
+      "classification": "IMPLEMENTED_AND_VALIDATED",
+      "evidence_keys": [
+        "UNCERTAINTY",
+        "uncertainty_visible",
+        "ok",
+        "NORMALIZED_CONFIDENCE",
+        "DISPUTED_VISIBLE",
+        "CONFLICTING_SOURCES_PRESERVED"
+      ],
+      "source_hash": "f2e0ec514c5f6ecc9de1fd8eb4ea6d8bbc8f1046c9145921095f65f7edc3e0ee"
+    },
+    {
+      "requirement_id": "GAME-AOL-013",
+      "evaluator_name": "evaluate_game_aol_013",
+      "classification": "IMPLEMENTED_AND_VALIDATED",
+      "evidence_keys": [
+        "EDITORIAL_STATUS",
+        "ok",
+        "LIFECYCLE_DISTINCT",
+        "MOCK_CANNOT_DEFAULT_CURATED",
+        "GAME_AUTHORED",
+        "BLOCKED"
+      ],
+      "source_hash": "c1bc5eb3b3a1943250bba06873f13a218a8ea19298ade3f2dfbabe597bd5f9f8"
+    },
+    {
+      "requirement_id": "GAME-AOL-014",
+      "evaluator_name": "evaluate_game_aol_014",
+      "classification": "IMPLEMENTED_AND_VALIDATED",
+      "evidence_keys": [
+        "CITATION_UI",
+        "citation_visible",
+        "game_authored_no_external_badge"
+      ],
+      "source_hash": "f6d5799c66df154c6d4a48de225212e127bae4995e2812038496a4a14b5c472c"
+    },
+    {
+      "requirement_id": "GAME-AOL-015",
+      "evaluator_name": "evaluate_game_aol_015",
+      "classification": "IMPLEMENTED_AND_VALIDATED",
+      "evidence_keys": [
+        "SOURCE_INTEGRATION_TRUTH",
+        "ok",
+        "NO_FAKE_LIVE",
+        "MISSING_DEFAULTS_TO_NEEDS_VERIFICATION",
+        "FIXTURE_NOT_LIVE",
+        "HTTP_STUB_NOT_LIVE",
+        "BLOCKED_NOT_SOURCE_VERIFIED",
+        "FIXTURE_ONLY_SOURCE_VERIFIED_COUNT"
+      ],
+      "source_hash": "b84efd948cad06fc5c6dddf114cfce85910d4b462ab6f327a9941083112d2b22"
+    }
+  ]
+}

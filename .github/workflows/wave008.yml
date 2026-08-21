@@ -1,0 +1,84 @@
+name: Wave008 Scientific Records
+
+on:
+  pull_request:
+    branches: [main]
+  push:
+    branches: [main, eng/wave008-archive-scientific-records]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: wave008-${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  wave008:
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: npm
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Install uv
+        run: curl -LsSf https://astral.sh/uv/install.sh | sh
+
+      - name: Add uv to PATH
+        run: echo "$HOME/.local/bin" >> $GITHUB_PATH
+
+      - name: Install Node dependencies
+        run: npm ci
+
+      - name: Install Playwright Chromium
+        run: npx playwright install --with-deps chromium
+
+      - name: Typecheck
+        run: npm run typecheck
+
+      - name: Unit tests (non-wave008)
+        run: npx vitest run --exclude 'tests/engineering_wave008/**'
+
+      - name: Wave008 gate (Node + Python A/B + Vite Playwright)
+        run: make wave008
+
+      - name: Integrity hard fails
+        run: |
+          python3 - <<'PY'
+          import json, sys
+          from pathlib import Path
+          art = Path('artifacts/engineering_wave008')
+          browser = json.loads((art/'ARCHIVEDEX_BROWSER_E2E_RESULT.json').read_text())
+          assert browser.get('playwright_ran') is True
+          assert browser.get('playwright_skipped') is False
+          assert browser.get('runtime') == 'vite_preview'
+          wave = json.loads((art/'WAVE008_RESULT.json').read_text())
+          assert wave.get('FIXTURE_ONLY_SOURCE_VERIFIED_COUNT') == 0
+          assert wave.get('BEHAVIORAL_NEGATIVE_CONTROL_COUNT', 0) >= 22
+          assert wave.get('PLAYWRIGHT_SKIPPED') is False
+          cov = json.loads((art/'COVERAGE_SCOPE_RESULT.json').read_text())
+          assert cov.get('DENOMINATOR_EXPLICIT') is True
+          snap = json.loads((art/'SNAPSHOT_REPRODUCTION_RESULT.json').read_text())
+          assert snap.get('TAMPER_REJECTED') is True
+          gate = json.loads((art/'COMPLETION_GATE_NEGATIVE_CONTROL_RESULT.json').read_text())
+          assert gate.get('DUPLICATE_ID_REJECTED') is True
+          assert gate.get('WRONG_SOURCE_HASH_REJECTED') is True
+          assert gate.get('STALE_EVIDENCE_REJECTED') is True
+          print('WAVE008_CI_INTEGRITY_ASSERTIONS_PASS')
+          PY
+
+      - name: Upload Wave008 evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: engineering-wave008
+          path: artifacts/engineering_wave008/

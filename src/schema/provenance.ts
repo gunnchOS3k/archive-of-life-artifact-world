@@ -17,7 +17,8 @@ export type LicenseLabel =
   | 'CC0-1.0'
   | 'IUCN-TOS'
   | 'GAME-ORIGINAL'
-  | 'MOCK-SAMPLE';
+  | 'MOCK-SAMPLE'
+  | 'UNVERIFIED-FIXTURE';
 
 /** How a record's data was verified for release reporting. */
 export type VerificationStatus =
@@ -44,4 +45,17 @@ export interface DataSourceProvenance {
   /** @deprecated Prefer verificationStatus — kept for bundle compatibility */
   isMockData?: boolean;
   verificationStatus?: VerificationStatus;
+}
+
+/**
+ * Conservative verification resolution (GAME-AOL-015).
+ * Missing status must NOT default to source_verified.
+ */
+export function resolveVerificationStatus(
+  p: Pick<DataSourceProvenance, 'verificationStatus' | 'isMockData' | 'source'>,
+): VerificationStatus {
+  if (p.verificationStatus) return p.verificationStatus;
+  if (p.isMockData || p.source === 'mock_sample') return 'mock_sample';
+  if (p.source === 'game_authored') return 'game_authored_verified';
+  return 'needs_source_verification';
 }

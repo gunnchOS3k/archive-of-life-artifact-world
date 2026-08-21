@@ -1,5 +1,11 @@
 import type { ArchiveDexEntry, ArchiveDexTabId } from '@/schema/archivedex';
 import { getVisibleTabs, getEntryRevealLevel } from '@/services/archivedexMapper';
+import { escapeHtml } from '@/schema/htmlSafety';
+import { resolveVerificationStatus } from '@/schema/provenance';
+import {
+  renderScientificIdentityBlock,
+  renderScientificSourcesPanel,
+} from '@/services/scientific/renderScientificUI';
 
 type EmptyLabel = string;
 
@@ -10,20 +16,21 @@ function field(label: string, value: unknown, emptyLabel: EmptyLabel = 'Not avai
     value !== '' &&
     !(Array.isArray(value) && value.length === 0);
   if (hasValue) {
-    const display = Array.isArray(value) ? value.join(', ') : String(value);
-    return `<div class="dex-field"><span class="detail-label">${label}:</span> <span class="field-verified">${display}</span></div>`;
+    const display = Array.isArray(value) ? value.map((v) => escapeHtml(v)).join(', ') : escapeHtml(value);
+    return `<div class="dex-field"><span class="detail-label">${escapeHtml(label)}:</span> <span class="field-verified">${display}</span></div>`;
   }
-  return `<div class="dex-field dex-field-empty"><span class="detail-label">${label}:</span> <em class="field-state">${emptyLabel}</em></div>`;
+  return `<div class="dex-field dex-field-empty"><span class="detail-label">${escapeHtml(label)}:</span> <em class="field-state">${escapeHtml(emptyLabel)}</em></div>`;
 }
 
 function listField(label: string, items?: string[], emptyLabel: EmptyLabel = 'Not available in current snapshot'): string {
   if (!items?.length) return field(label, undefined, emptyLabel);
-  return `<div class="dex-field"><span class="detail-label">${label}:</span><ul class="dex-list">${items.map((i) => `<li>${i}</li>`).join('')}</ul></div>`;
+  return `<div class="dex-field"><span class="detail-label">${escapeHtml(label)}:</span><ul class="dex-list">${items.map((i) => `<li>${escapeHtml(i)}</li>`).join('')}</ul></div>`;
 }
 
 function provenanceBanner(entry: ArchiveDexEntry): string {
-  const hasMock = entry.sources.some((p) => p.isMockData || p.verificationStatus === 'mock_sample');
-  const hasGame = entry.sources.some((p) => p.verificationStatus === 'game_authored_verified' || p.source === 'game_authored');
+  const statuses = entry.sources.map((p) => resolveVerificationStatus(p));
+  const hasMock = statuses.some((s) => s === 'mock_sample') || entry.sources.some((p) => p.isMockData);
+  const hasGame = statuses.some((s) => s === 'game_authored_verified') || entry.sources.some((p) => p.source === 'game_authored');
   if (hasMock && hasGame) {
     return '<p class="dex-sample-banner"><span class="mock-badge">SAMPLE SCIENTIFIC DATA</span> Game mechanics are authored; external scientific fields require source snapshot import.</p>';
   }
@@ -45,43 +52,28 @@ function taxonomyLadder(entry: ArchiveDexEntry): string {
     ['Species', t.species ?? entry.scientificName],
   ].filter(([, v]) => v);
   if (!ranks.length) return field('Taxonomy', undefined, 'Blocked by external source');
-  return `<div class="taxonomy-ladder">${ranks.map(([r, v], i) => `<div class="taxonomy-rank" style="padding-left:${i * 12}px">${r}: <strong>${v}</strong></div>`).join('')}</div>`;
+  return `<div class="taxonomy-ladder">${ranks
+    .map(
+      ([r, v], i) =>
+        `<div class="taxonomy-rank" style="padding-left:${i * 12}px">${escapeHtml(r)}: <strong>${escapeHtml(v)}</strong></div>`,
+    )
+    .join('')}</div>`;
 }
 
 function renderSources(entry: ArchiveDexEntry): string {
-  const prov = entry.sources
-    .map((p) => {
-      const status = p.verificationStatus ?? (p.isMockData ? 'mock_sample' : 'source_verified');
-      const badge =
-        status === 'mock_sample'
-          ? '<span class="mock-badge">MOCK SAMPLE</span>'
-          : status === 'game_authored_verified'
-            ? '<span class="verified-badge">GAME AUTHORED</span>'
-            : status === 'blocked_external'
-              ? '<span class="blocked-badge">BLOCKED</span>'
-              : '';
-      return `
-      <div class="provenance-item ${p.isMockData ? 'mock' : ''}">
-        <strong>${p.source.replace(/_/g, ' ')}</strong> ${badge}
-        <div>Version: ${p.sourceVersion} | License: ${p.license} | Status: ${status.replace(/_/g, ' ')}</div>
-        <div class="citation">${p.citationRequired ? 'Citation required: ' : ''}${p.citation}</div>
-        <div class="provenance-dates">Retrieved: ${p.retrievedAt} | Updated: ${p.lastUpdated}</div>
-      </div>`;
-    })
-    .join('');
   const unc = entry.uncertainty;
   return `
     ${provenanceBanner(entry)}
     <p class="provenance-warning">Science changes. Taxonomy, conservation status, fossil interpretation, and species ranges may be updated as new evidence appears.</p>
-    ${prov || '<p><em>No provenance records — blocked by external source.</em></p>'}
+    ${renderScientificSourcesPanel(entry)}
     <section class="federated-evidence-section">
       <h4>Live / fixture federated evidence</h4>
-      <div id="federated-evidence-mount" class="evidence-panel" data-species-id="${entry.id}" data-scientific-name="${entry.scientificName}"></div>
+      <div id="federated-evidence-mount" class="evidence-panel" data-species-id="${escapeHtml(entry.id)}" data-scientific-name="${escapeHtml(entry.scientificName)}"></div>
     </section>
-    ${unc?.taxonomicUncertainty ? `<p><strong>Taxonomic uncertainty:</strong> ${unc.taxonomicUncertainty}</p>` : ''}
-    ${unc?.fossilUncertainty ? `<p><strong>Fossil uncertainty:</strong> ${unc.fossilUncertainty}</p>` : ''}
+    ${unc?.taxonomicUncertainty ? `<p><strong>Taxonomic uncertainty:</strong> ${escapeHtml(unc.taxonomicUncertainty)}</p>` : ''}
+    ${unc?.fossilUncertainty ? `<p><strong>Fossil uncertainty:</strong> ${escapeHtml(unc.fossilUncertainty)}</p>` : ''}
     ${unc?.unknownToScience?.length ? listField('What scientists still do not know', unc.unknownToScience, 'Unknown') : field('What scientists still do not know', undefined, 'Unknown')}
-    ${unc?.notes ? `<p class="uncertainty-note">${unc.notes}</p>` : ''}
+    ${unc?.notes ? `<p class="uncertainty-note">${escapeHtml(unc.notes)}</p>` : ''}
   `;
 }
 
@@ -115,6 +107,7 @@ export function renderArchiveDexTab(entry: ArchiveDexEntry, tab: ArchiveDexTabId
       break;
     case 'identity':
       body = `
+        ${entry.scientificRecord ? renderScientificIdentityBlock(entry.scientificRecord) : ''}
         ${field('Pronunciation', entry.pronunciation, 'Unknown')}
         ${field('Name meaning', entry.nameMeaning, 'Unknown')}
         ${listField('How to identify', entry.identity?.identificationTips)}
@@ -123,7 +116,7 @@ export function renderArchiveDexTab(entry: ArchiveDexEntry, tab: ArchiveDexTabId
         ${listField('Common misidentifications', entry.identity?.misidentifications)}
         ${field('Identification confidence', entry.identity?.identificationConfidence, 'Scientifically uncertain')}
         ${listField('Fossil identification traits', entry.identity?.fossilIdentification)}
-        ${entry.identity?.debatedClassification ? `<p class="uncertainty-note">${entry.identity.debatedClassification}</p>` : field('Classification debates', undefined, 'None noted')}
+        ${entry.identity?.debatedClassification ? `<p class="uncertainty-note">${escapeHtml(entry.identity.debatedClassification)}</p>` : field('Classification debates', undefined, 'None noted')}
       `;
       break;
     case 'taxonomy':

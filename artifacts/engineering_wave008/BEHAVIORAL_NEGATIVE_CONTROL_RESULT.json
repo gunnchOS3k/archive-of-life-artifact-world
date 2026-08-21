@@ -1,0 +1,30 @@
+{
+  "BEHAVIORAL_NEGATIVE_CONTROL_COUNT": 23,
+  "BEHAVIORAL_NEGATIVE_CONTROLS_PASS": true,
+  "controls": {
+    "remove_canonical_id": true,
+    "duplicate_canonical_id": true,
+    "empty_scientific_name": true,
+    "source_verified_without_record_id": true,
+    "source_verified_without_license": true,
+    "source_verified_without_retrieval": true,
+    "source_verified_without_citation": true,
+    "unknown_status_defaults_verified": true,
+    "fixture_claims_live_verified": true,
+    "game_authored_inherits_external": true,
+    "tampered_snapshot_hash": true,
+    "field_hash_mismatch": true,
+    "fake_precise_coordinates": true,
+    "uncertainty_removed_from_disputed": true,
+    "citation_xss_inert": true,
+    "coverage_100_without_denominator": true,
+    "fixture_only_cannot_be_source_verified": true,
+    "unknown_field_path_rejected": true,
+    "field_level_fixture_source_verified_rejected": true,
+    "adding_undocumented_decreases_percent": true,
+    "unverified_fixture_license_blocks_source_verified": true,
+    "fixture_only_source_verified_count_zero": true,
+    "raw_hash_changes_on_tamper": true
+  },
+  "ok": true
+}

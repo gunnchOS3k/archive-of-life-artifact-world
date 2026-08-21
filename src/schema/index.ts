@@ -12,3 +12,6 @@ export * from './species';
 export * from './manifest';
 export * from './quest';
 export * from './save';
+export * from './scientificRecord';
+export * from './sourceRegistry';
+export * from './htmlSafety';

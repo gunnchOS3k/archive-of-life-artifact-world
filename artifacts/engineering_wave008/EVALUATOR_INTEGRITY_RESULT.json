@@ -1,0 +1,129 @@
+{
+  "UNCONDITIONAL_TRUE_CLASSIFIERS": 0,
+  "UNCONDITIONAL_TRUE_CLASSIFIERS_COMPUTED": true,
+  "evaluators_inspected": 15,
+  "ok": true,
+  "requirements": [
+    {
+      "evaluator_name": "evaluate_game_aol_001",
+      "requirement_id": "GAME-AOL-001",
+      "unconditional": false,
+      "literal_success_findings": [],
+      "integrity_ok": true,
+      "source_hash": "635d727f87812d2ed21e96832d68a13b75df5b58474cd2173cf90635d01f5714"
+    },
+    {
+      "evaluator_name": "evaluate_game_aol_002",
+      "requirement_id": "GAME-AOL-002",
+      "unconditional": false,
+      "literal_success_findings": [],
+      "integrity_ok": true,
+      "source_hash": "b6ef03f625afa4bf5cc80b075b34247cba21cb10277434607ac4b4cc0ba3036e"
+    },
+    {
+      "evaluator_name": "evaluate_game_aol_003",
+      "requirement_id": "GAME-AOL-003",
+      "unconditional": false,
+      "literal_success_findings": [],
+      "integrity_ok": true,
+      "source_hash": "f75fa2a1fb02bc22c421930d38ed82a6d5feb00ed0b4c4da9989521e8df610e0"
+    },
+    {
+      "evaluator_name": "evaluate_game_aol_004",
+      "requirement_id": "GAME-AOL-004",
+      "unconditional": false,
+      "literal_success_findings": [],
+      "integrity_ok": true,
+      "source_hash": "d5524ec91ae465027f1627f53d6dd5ef88f99a3fbc9ef35b5eaa599827305200"
+    },
+    {
+      "evaluator_name": "evaluate_game_aol_005",
+      "requirement_id": "GAME-AOL-005",
+      "unconditional": false,
+      "literal_success_findings": [],
+      "integrity_ok": true,
+      "source_hash": "d8076b6a68a0ba676c13bc7194ff57f65f593043bc45332474068d0ff06d5f9f"
+    },
+    {
+      "evaluator_name": "evaluate_game_aol_006",
+      "requirement_id": "GAME-AOL-006",
+      "unconditional": false,
+      "literal_success_findings": [],
+      "integrity_ok": true,
+      "source_hash": "b122c95e3268cb5ed98b66a5dd34ad710d8c0d7ae2d05f3b942006fefeeec029"
+    },
+    {
+      "evaluator_name": "evaluate_game_aol_007",
+      "requirement_id": "GAME-AOL-007",
+      "unconditional": false,
+      "literal_success_findings": [],
+      "integrity_ok": true,
+      "source_hash": "6bf35a84999f550c0811736131f31356a7ac63b74a36759b911fb0cefa0a00b5"
+    },
+    {
+      "evaluator_name": "evaluate_game_aol_008",
+      "requirement_id": "GAME-AOL-008",
+      "unconditional": false,
+      "literal_success_findings": [],
+      "integrity_ok": true,
+      "source_hash": "3eac3df30e5af32f829f7ffac1c0d7ca35720d7a4dbceb1d31e1b4f2ce888f5d"
+    },
+    {
+      "evaluator_name": "evaluate_game_aol_009",
+      "requirement_id": "GAME-AOL-009",
+      "unconditional": false,
+      "literal_success_findings": [],
+      "integrity_ok": true,
+      "source_hash": "10446dd04482dddfe50175943c768735441131b6c411971cb265898851f5ba78"
+    },
+    {
+      "evaluator_name": "evaluate_game_aol_010",
+      "requirement_id": "GAME-AOL-010",
+      "unconditional": false,
+      "literal_success_findings": [],
+      "integrity_ok": true,
+      "source_hash": "28077cddc47b5b4e2aab6f09045c9ab1fae5282b961d762242d31b8f2d417abb"
+    },
+    {
+      "evaluator_name": "evaluate_game_aol_011",
+      "requirement_id": "GAME-AOL-011",
+      "unconditional": false,
+      "literal_success_findings": [],
+      "integrity_ok": true,
+      "source_hash": "88b333ff83621d1197766df99bfbebbf2bf9b6b83c0fc382f72684522b469a03"
+    },
+    {
+      "evaluator_name": "evaluate_game_aol_012",
+      "requirement_id": "GAME-AOL-012",
+      "unconditional": false,
+      "literal_success_findings": [],
+      "integrity_ok": true,
+      "source_hash": "f2e0ec514c5f6ecc9de1fd8eb4ea6d8bbc8f1046c9145921095f65f7edc3e0ee"
+    },
+    {
+      "evaluator_name": "evaluate_game_aol_013",
+      "requirement_id": "GAME-AOL-013",
+      "unconditional": false,
+      "literal_success_findings": [],
+      "integrity_ok": true,
+      "source_hash": "c1bc5eb3b3a1943250bba06873f13a218a8ea19298ade3f2dfbabe597bd5f9f8"
+    },
+    {
+      "evaluator_name": "evaluate_game_aol_014",
+      "requirement_id": "GAME-AOL-014",
+      "unconditional": false,
+      "literal_success_findings": [],
+      "integrity_ok": true,
+      "source_hash": "f6d5799c66df154c6d4a48de225212e127bae4995e2812038496a4a14b5c472c"
+    },
+    {
+      "evaluator_name": "evaluate_game_aol_015",
+      "requirement_id": "GAME-AOL-015",
+      "unconditional": false,
+      "literal_success_findings": [],
+      "integrity_ok": true,
+      "source_hash": "b84efd948cad06fc5c6dddf114cfce85910d4b462ab6f327a9941083112d2b22"
+    }
+  ],
+  "scanner": "typescript-ast+source-body"
+}

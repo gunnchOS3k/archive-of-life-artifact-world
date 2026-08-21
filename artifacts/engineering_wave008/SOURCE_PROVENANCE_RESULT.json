@@ -1,0 +1,51 @@
+{
+  "ok": true,
+  "fixture_snapshot": "wave008-scientific-fixture-v1",
+  "FIXTURE_ONLY_SOURCE_VERIFIED_COUNT": 0,
+  "SOURCE_VERIFIED_EXTERNAL_RECORD_COUNT": 0,
+  "AUTHENTIC_EXTERNAL_SOURCE_SNAPSHOTS_PRESENT": false,
+  "records": [
+    {
+      "canonical_id": "aol:taxon:panthera-leo-col",
+      "fixture_role": "extant_source_snapshot",
+      "verification_status": "needs_source_verification",
+      "integration_status": "FIXTURE_ONLY",
+      "license": "UNVERIFIED-FIXTURE"
+    },
+    {
+      "canonical_id": "aol:taxon:tyrannosaurus-rex-pbdb",
+      "fixture_role": "fossil_uncertain",
+      "verification_status": "needs_source_verification",
+      "integration_status": "FIXTURE_ONLY",
+      "license": "UNVERIFIED-FIXTURE"
+    },
+    {
+      "canonical_id": "aol:taxon:canis-lupus-conflict",
+      "fixture_role": "conflicted_taxonomy",
+      "verification_status": "needs_source_verification",
+      "integration_status": "FIXTURE_ONLY",
+      "license": "UNVERIFIED-FIXTURE"
+    },
+    {
+      "canonical_id": "aol:taxon:teaching-lifeling-companion",
+      "fixture_role": "game_authored",
+      "verification_status": "game_authored_verified",
+      "integration_status": "FIXTURE_ONLY",
+      "license": "GAME-ORIGINAL"
+    },
+    {
+      "canonical_id": "aol:taxon:mock-sample-alpha",
+      "fixture_role": "mock_sample",
+      "verification_status": "mock_sample",
+      "integration_status": "FIXTURE_ONLY",
+      "license": "MOCK-SAMPLE"
+    },
+    {
+      "canonical_id": "aol:taxon:blocked-incomplete-iucn",
+      "fixture_role": "blocked_incomplete",
+      "verification_status": "blocked_external",
+      "integration_status": "CONTRACT_ONLY",
+      "license": "UNVERIFIED-FIXTURE"
+    }
+  ]
+}
