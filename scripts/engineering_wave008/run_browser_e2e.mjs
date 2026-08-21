@@ -132,10 +132,11 @@ async function main() {
     child.on('exit', (code) => (code === 0 ? resolve() : reject(new Error(`build exit ${code}`))));
   });
 
-  const preview = spawn('npx', ['vite', 'preview', '--host', '127.0.0.1', '--port', '4173'], {
+  const preview = spawn('npx', ['vite', 'preview', '--host', '127.0.0.1', '--port', '4173', '--strictPort'], {
     cwd: ROOT,
     stdio: ['ignore', 'pipe', 'pipe'],
     env: process.env,
+    detached: true,
   });
 
   let previewLog = '';
@@ -147,18 +148,30 @@ async function main() {
   });
 
   const url = 'http://127.0.0.1:4173/?wave008_scientific=1';
+  const killPreview = () => {
+    try {
+      if (preview.pid) process.kill(-preview.pid, 'SIGKILL');
+    } catch {
+      try {
+        preview.kill('SIGKILL');
+      } catch {
+        /* ignore */
+      }
+    }
+  };
+
   try {
-    await waitForUrl('http://127.0.0.1:4173/');
+    await waitForUrl('http://127.0.0.1:4173/', 90_000);
     const browser = await chromium.launch({ headless: true });
 
     // Desktop 1366x768
     const desktop = await browser.newPage({ viewport: { width: 1366, height: 768 } });
-    await desktop.goto(url, { waitUntil: 'networkidle' });
+    await desktop.goto(url, { waitUntil: 'domcontentloaded', timeout: 60_000 });
     const desktopSteps = await runCampaign(desktop);
 
     // Mobile 390x844
     const mobile = await browser.newPage({ viewport: { width: 390, height: 844 } });
-    await mobile.goto(url, { waitUntil: 'networkidle' });
+    await mobile.goto(url, { waitUntil: 'domcontentloaded', timeout: 60_000 });
     const mobileSteps = await runCampaign(mobile);
     const mobile_viewport_ok =
       mobileSteps.scientific_name_visible && mobileSteps.source_organization_visible;
@@ -210,7 +223,7 @@ async function main() {
     }
     console.log('Wave008 Vite ArchiveDex browser E2E OK');
   } finally {
-    preview.kill('SIGTERM');
+    killPreview();
   }
 }
 
