@@ -1,0 +1,11 @@
+{
+  "ok": true,
+  "COVERAGE_DENOMINATOR_EXECUTABLE": true,
+  "COMPLETENESS_OVERCLAIM_SABOTAGE_FAILS": true,
+  "documented_record_count": 6,
+  "denominator_label": "current Archive scientific fixture snapshot",
+  "user_facing_summary": "6 records documented in the current Archive snapshot. Coverage is not a claim of all species known to science.",
+  "percent_changes_when_adding": false,
+  "snapshot_id": "wave008-scientific-fixture-v1",
+  "completeness_claim_forbidden": true
+}

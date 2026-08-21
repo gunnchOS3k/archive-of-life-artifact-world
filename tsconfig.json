@@ -26,6 +26,7 @@
   "include": [
     "src/**/*",
     "scripts/**/*",
+    "tests/engineering_wave008/**/*",
     "release/*.json"
   ],
   "exclude": [

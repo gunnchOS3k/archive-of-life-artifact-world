@@ -1,0 +1,193 @@
+{
+  "results": [
+    {
+      "requirement_id": "GAME-AOL-001",
+      "evaluator_name": "evaluate_game_aol_001",
+      "classification": "IMPLEMENTED_AND_VALIDATED",
+      "evidence": {
+        "COVERAGE_SCOPE": true,
+        "denominator_label": "current Archive scientific fixture snapshot",
+        "COMPLETENESS_OVERCLAIM_SABOTAGE_FAILS": true
+      }
+    },
+    {
+      "requirement_id": "GAME-AOL-002",
+      "evaluator_name": "evaluate_game_aol_002",
+      "classification": "IMPLEMENTED_AND_VALIDATED",
+      "evidence": {
+        "CANONICAL_ID": true,
+        "ok": true,
+        "STABLE_ACROSS_REIMPORT": true,
+        "DISTINCT_TAXA": true,
+        "RETAIN_ACROSS_RENAME": true,
+        "COLLISION_DETECTOR": true,
+        "ALIAS_REDIRECT": true,
+        "sample_canonical_id": "aol:taxon:panthera-leo-col"
+      }
+    },
+    {
+      "requirement_id": "GAME-AOL-003",
+      "evaluator_name": "evaluate_game_aol_003",
+      "classification": "IMPLEMENTED_AND_VALIDATED",
+      "evidence": {
+        "SCIENTIFIC_NAME": true,
+        "ok": true,
+        "SOURCE_LINKED": true,
+        "NONEMPTY_WHEN_IDENTIFIED": true,
+        "SAFE_FOR_UI": true
+      }
+    },
+    {
+      "requirement_id": "GAME-AOL-004",
+      "evaluator_name": "evaluate_game_aol_004",
+      "classification": "IMPLEMENTED_AND_VALIDATED",
+      "evidence": {
+        "TAXONOMIC_AUTHORITY": true,
+        "ok": true,
+        "AUTHORITY_EXPLICIT": true,
+        "DISTINCT_FROM_SOURCE_ORG": true,
+        "UNKNOWN_ALLOWED": true
+      }
+    },
+    {
+      "requirement_id": "GAME-AOL-005",
+      "evaluator_name": "evaluate_game_aol_005",
+      "classification": "IMPLEMENTED_AND_VALIDATED",
+      "evidence": {
+        "SOURCE_ORGANIZATION": true,
+        "ok": true,
+        "REGISTRY_EXECUTABLE": true,
+        "INTEGRATION_STATUS_EXPLICIT": true,
+        "ENUM_IS_NOT_LIVE": true,
+        "EOL_NOT_IMPLEMENTED": true
+      }
+    },
+    {
+      "requirement_id": "GAME-AOL-006",
+      "evaluator_name": "evaluate_game_aol_006",
+      "classification": "IMPLEMENTED_AND_VALIDATED",
+      "evidence": {
+        "SOURCE_RECORD_ID": true,
+        "ok": true,
+        "SOURCE_NATIVE_PRESERVED": true,
+        "DISTINCT_FROM_CANONICAL": true,
+        "PLACEHOLDER_REJECTED_FROM_SOURCE_VERIFIED": true
+      }
+    },
+    {
+      "requirement_id": "GAME-AOL-007",
+      "evaluator_name": "evaluate_game_aol_007",
+      "classification": "IMPLEMENTED_AND_VALIDATED",
+      "evidence": {
+        "LICENSE_TERMS": true,
+        "license_visible": true,
+        "ok": true,
+        "STRUCTURED_LICENSE": true,
+        "IUCN_NOT_ASSUMED_CCBY": true,
+        "MISSING_BLOCKS_SOURCE_VERIFIED": true
+      }
+    },
+    {
+      "requirement_id": "GAME-AOL-008",
+      "evaluator_name": "evaluate_game_aol_008",
+      "classification": "IMPLEMENTED_AND_VALIDATED",
+      "evidence": {
+        "RETRIEVAL_DATE": true,
+        "ok": true,
+        "FROM_SNAPSHOT_PROVENANCE": true,
+        "MISSING_BLOCKS_SOURCE_VERIFIED": true,
+        "FUTURE_REJECTED": true
+      }
+    },
+    {
+      "requirement_id": "GAME-AOL-009",
+      "evaluator_name": "evaluate_game_aol_009",
+      "classification": "IMPLEMENTED_AND_VALIDATED",
+      "evidence": {
+        "SOURCE_VERSION": true,
+        "ok": true,
+        "SNAPSHOT_BOUND": true,
+        "UPSTREAM_VERSION": true,
+        "TRANSFORM_VERSION": true,
+        "MANIFEST_HASH_OK": true
+      }
+    },
+    {
+      "requirement_id": "GAME-AOL-010",
+      "evaluator_name": "evaluate_game_aol_010",
+      "classification": "IMPLEMENTED_AND_VALIDATED",
+      "evidence": {
+        "GEOGRAPHIC_PROVENANCE": true,
+        "ok": true,
+        "TYPED_GEOGRAPHY": true,
+        "FOSSIL_DISTINCT": true,
+        "UNKNOWN_SAFE": true,
+        "FAKE_PRECISE_COORDS_REJECTED": true
+      }
+    },
+    {
+      "requirement_id": "GAME-AOL-011",
+      "evaluator_name": "evaluate_game_aol_011",
+      "classification": "IMPLEMENTED_AND_VALIDATED",
+      "evidence": {
+        "TIME_RANGE": true,
+        "ok": true,
+        "TYPED_TIME": true,
+        "FOSSIL_EXTANT_SEMANTICS": true,
+        "MA_DIRECTION": true
+      }
+    },
+    {
+      "requirement_id": "GAME-AOL-012",
+      "evaluator_name": "evaluate_game_aol_012",
+      "classification": "IMPLEMENTED_AND_VALIDATED",
+      "evidence": {
+        "UNCERTAINTY": true,
+        "uncertainty_visible": true,
+        "ok": true,
+        "NORMALIZED_CONFIDENCE": true,
+        "DISPUTED_VISIBLE": true,
+        "CONFLICTING_SOURCES_PRESERVED": true
+      }
+    },
+    {
+      "requirement_id": "GAME-AOL-013",
+      "evaluator_name": "evaluate_game_aol_013",
+      "classification": "IMPLEMENTED_AND_VALIDATED",
+      "evidence": {
+        "EDITORIAL_STATUS": true,
+        "ok": true,
+        "LIFECYCLE_DISTINCT": true,
+        "MOCK_CANNOT_DEFAULT_CURATED": true,
+        "GAME_AUTHORED": true,
+        "BLOCKED": true
+      }
+    },
+    {
+      "requirement_id": "GAME-AOL-014",
+      "evaluator_name": "evaluate_game_aol_014",
+      "classification": "IMPLEMENTED_AND_VALIDATED",
+      "evidence": {
+        "CITATION_UI": true,
+        "citation_visible": true,
+        "game_authored_no_external_badge": true
+      }
+    },
+    {
+      "requirement_id": "GAME-AOL-015",
+      "evaluator_name": "evaluate_game_aol_015",
+      "classification": "IMPLEMENTED_AND_VALIDATED",
+      "evidence": {
+        "SOURCE_INTEGRATION_TRUTH": true,
+        "ok": true,
+        "NO_FAKE_LIVE": true,
+        "MISSING_DEFAULTS_TO_NEEDS_VERIFICATION": true,
+        "FIXTURE_NOT_LIVE": true,
+        "HTTP_STUB_NOT_LIVE": true,
+        "BLOCKED_NOT_SOURCE_VERIFIED": true
+      }
+    }
+  ],
+  "IMPLEMENTED_AND_VALIDATED": 15,
+  "TARGET_REQUIREMENTS": 15
+}

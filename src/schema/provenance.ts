@@ -45,3 +45,16 @@ export interface DataSourceProvenance {
   isMockData?: boolean;
   verificationStatus?: VerificationStatus;
 }
+
+/**
+ * Conservative verification resolution (GAME-AOL-015).
+ * Missing status must NOT default to source_verified.
+ */
+export function resolveVerificationStatus(
+  p: Pick<DataSourceProvenance, 'verificationStatus' | 'isMockData' | 'source'>,
+): VerificationStatus {
+  if (p.verificationStatus) return p.verificationStatus;
+  if (p.isMockData || p.source === 'mock_sample') return 'mock_sample';
+  if (p.source === 'game_authored') return 'game_authored_verified';
+  return 'needs_source_verification';
+}

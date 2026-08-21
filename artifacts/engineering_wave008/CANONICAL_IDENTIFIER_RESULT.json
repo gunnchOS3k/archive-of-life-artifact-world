@@ -1,0 +1,9 @@
+{
+  "ok": true,
+  "STABLE_ACROSS_REIMPORT": true,
+  "DISTINCT_TAXA": true,
+  "RETAIN_ACROSS_RENAME": true,
+  "COLLISION_DETECTOR": true,
+  "ALIAS_REDIRECT": true,
+  "sample_canonical_id": "aol:taxon:panthera-leo-col"
+}

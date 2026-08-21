@@ -1,0 +1,49 @@
+name: Wave008 Scientific Records
+
+on:
+  pull_request:
+    branches: [main]
+  push:
+    branches: [main, eng/wave008-archive-scientific-records]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: wave008-${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  wave008:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: npm
+
+      - name: Install Node dependencies
+        run: npm ci
+
+      - name: Install Playwright Chromium
+        run: npx playwright install --with-deps chromium
+
+      - name: Typecheck
+        run: npm run typecheck
+
+      - name: Unit tests (non-wave008)
+        run: npx vitest run --exclude 'tests/engineering_wave008/**'
+
+      - name: Wave008 gate
+        run: make wave008
+
+      - name: Upload Wave008 evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: engineering-wave008
+          path: artifacts/engineering_wave008/

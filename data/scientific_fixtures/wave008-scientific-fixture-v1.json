@@ -1,0 +1,905 @@
+{
+  "snapshot_id": "wave008-scientific-fixture-v1",
+  "retrieved_at": "2024-06-01T12:00:00.000Z",
+  "records": [
+    {
+      "identity": {
+        "canonical_id": "aol:taxon:panthera-leo-col",
+        "aliases": []
+      },
+      "scientific_name": {
+        "accepted_scientific_name": "Panthera leo",
+        "normalized_name": "panthera leo",
+        "synonyms": [
+          "Felis leo"
+        ],
+        "rank": "species"
+      },
+      "taxonomic_authority": {
+        "authority_text": "Linnaeus",
+        "authority_year": 1758,
+        "authority_source": "catalogue_of_life"
+      },
+      "source_organization": "Catalogue of Life",
+      "source_organization_id": "catalogue_of_life",
+      "source_record_id": "COL:taxon:PL001",
+      "license": {
+        "license_spdx_or_label": "CC-BY-4.0",
+        "license_url": "https://creativecommons.org/licenses/by/4.0/",
+        "attribution_required": true,
+        "redistribution_allowed": true,
+        "terms_status": "open_license"
+      },
+      "retrieved_at": "2024-06-01T12:00:00.000Z",
+      "source_version": "COL-2024.06",
+      "snapshot_ref": {
+        "source": "catalogue_of_life",
+        "snapshot_id": "wave008-scientific-fixture-v1",
+        "retrieved_at": "2024-06-01T12:00:00.000Z",
+        "raw_manifest_hash": "32b917bb7be37592d3d57d3f3f0ced6fbf69e2c3251719cde494342c829aed7e",
+        "transform_version": "aol-scientific-transform-v1",
+        "integration_status": "FIXTURE_ONLY",
+        "upstream_version": "COL-2024.06"
+      },
+      "geographic_provenance": {
+        "locality_text": "Sub-Saharan Africa (range summary)",
+        "country_codes": [
+          "KE",
+          "TZ",
+          "ZA"
+        ],
+        "region": "Afrotropical",
+        "source_basis": "range",
+        "sensitive_location_redacted": false
+      },
+      "time_range": {
+        "kind": "extant_current",
+        "approximate": false,
+        "source_basis": "catalogue_of_life",
+        "units": "year"
+      },
+      "confidence_or_uncertainty": {
+        "confidence": "HIGH",
+        "confidence_basis": "accepted name in COL snapshot"
+      },
+      "editorial": {
+        "editorial_status": "VALIDATED"
+      },
+      "citation": "Catalogue of Life (2024). Panthera leo. Snapshot wave008-scientific-fixture-v1.",
+      "verification_status": "source_verified",
+      "life_status": "extant",
+      "common_name": "Lion",
+      "fixture_role": "extant_source_snapshot",
+      "field_evidence": [
+        {
+          "field_path": "scientific_name",
+          "value_hash": "fnv1a:fb74ddaa",
+          "citation_required": true,
+          "confidence": "HIGH",
+          "integration_status": "FIXTURE_ONLY",
+          "source": "catalogue_of_life",
+          "source_organization": "Catalogue of Life",
+          "source_record_id": "COL:taxon:PL001",
+          "retrieved_at": "2024-06-01T12:00:00.000Z",
+          "citation": "Catalogue of Life (2024). Panthera leo. Snapshot wave008-scientific-fixture-v1.",
+          "verification_status": "source_verified"
+        },
+        {
+          "field_path": "taxonomic_authority",
+          "value_hash": "fnv1a:f916660",
+          "citation_required": false,
+          "confidence": "HIGH",
+          "integration_status": "FIXTURE_ONLY",
+          "source": "catalogue_of_life",
+          "source_organization": "Catalogue of Life",
+          "source_record_id": "COL:taxon:PL001",
+          "retrieved_at": "2024-06-01T12:00:00.000Z",
+          "citation": "Catalogue of Life (2024). Panthera leo. Snapshot wave008-scientific-fixture-v1.",
+          "verification_status": "source_verified"
+        },
+        {
+          "field_path": "source_record_id",
+          "value_hash": "fnv1a:36bbc1fe",
+          "citation_required": false,
+          "confidence": "HIGH",
+          "integration_status": "FIXTURE_ONLY",
+          "source": "catalogue_of_life",
+          "source_organization": "Catalogue of Life",
+          "source_record_id": "COL:taxon:PL001",
+          "retrieved_at": "2024-06-01T12:00:00.000Z",
+          "citation": "Catalogue of Life (2024). Panthera leo. Snapshot wave008-scientific-fixture-v1.",
+          "verification_status": "source_verified"
+        },
+        {
+          "field_path": "license",
+          "value_hash": "fnv1a:9e53a2f4",
+          "citation_required": true,
+          "confidence": "HIGH",
+          "integration_status": "FIXTURE_ONLY",
+          "source": "catalogue_of_life",
+          "source_organization": "Catalogue of Life",
+          "source_record_id": "COL:taxon:PL001",
+          "retrieved_at": "2024-06-01T12:00:00.000Z",
+          "citation": "Catalogue of Life (2024). Panthera leo. Snapshot wave008-scientific-fixture-v1.",
+          "verification_status": "source_verified"
+        },
+        {
+          "field_path": "citation",
+          "value_hash": "fnv1a:9cd33e54",
+          "citation_required": true,
+          "confidence": "HIGH",
+          "integration_status": "FIXTURE_ONLY",
+          "source": "catalogue_of_life",
+          "source_organization": "Catalogue of Life",
+          "source_record_id": "COL:taxon:PL001",
+          "retrieved_at": "2024-06-01T12:00:00.000Z",
+          "citation": "Catalogue of Life (2024). Panthera leo. Snapshot wave008-scientific-fixture-v1.",
+          "verification_status": "source_verified"
+        },
+        {
+          "field_path": "geographic_provenance",
+          "value_hash": "fnv1a:aac63c70",
+          "citation_required": false,
+          "confidence": "HIGH",
+          "integration_status": "FIXTURE_ONLY",
+          "source": "catalogue_of_life",
+          "source_organization": "Catalogue of Life",
+          "source_record_id": "COL:taxon:PL001",
+          "retrieved_at": "2024-06-01T12:00:00.000Z",
+          "citation": "Catalogue of Life (2024). Panthera leo. Snapshot wave008-scientific-fixture-v1.",
+          "verification_status": "source_verified",
+          "geography": {
+            "locality_text": "Sub-Saharan Africa (range summary)",
+            "country_codes": [
+              "KE",
+              "TZ",
+              "ZA"
+            ],
+            "region": "Afrotropical",
+            "source_basis": "range",
+            "sensitive_location_redacted": false
+          }
+        },
+        {
+          "field_path": "time_range",
+          "value_hash": "fnv1a:cd5f7bf4",
+          "citation_required": false,
+          "confidence": "HIGH",
+          "integration_status": "FIXTURE_ONLY",
+          "source": "catalogue_of_life",
+          "source_organization": "Catalogue of Life",
+          "source_record_id": "COL:taxon:PL001",
+          "retrieved_at": "2024-06-01T12:00:00.000Z",
+          "citation": "Catalogue of Life (2024). Panthera leo. Snapshot wave008-scientific-fixture-v1.",
+          "verification_status": "source_verified",
+          "time_range": {
+            "kind": "extant_current",
+            "approximate": false,
+            "source_basis": "catalogue_of_life",
+            "units": "year"
+          }
+        }
+      ]
+    },
+    {
+      "identity": {
+        "canonical_id": "aol:taxon:tyrannosaurus-rex-pbdb"
+      },
+      "scientific_name": {
+        "accepted_scientific_name": "Tyrannosaurus rex",
+        "normalized_name": "tyrannosaurus rex",
+        "rank": "species"
+      },
+      "taxonomic_authority": {
+        "authority_text": "Osborn",
+        "authority_year": 1905,
+        "authority_source": "paleobiodb"
+      },
+      "source_organization": "Paleobiology Database",
+      "source_organization_id": "paleobiodb",
+      "source_record_id": "PBDB:taxon:54833",
+      "license": {
+        "license_spdx_or_label": "CC-BY-4.0",
+        "attribution_required": true,
+        "redistribution_allowed": true,
+        "terms_status": "open_license"
+      },
+      "retrieved_at": "2024-06-01T12:00:00.000Z",
+      "source_version": "PBDB-fixture-2024",
+      "snapshot_ref": {
+        "source": "paleobiodb",
+        "snapshot_id": "wave008-scientific-fixture-v1",
+        "retrieved_at": "2024-06-01T12:00:00.000Z",
+        "raw_manifest_hash": "32b917bb7be37592d3d57d3f3f0ced6fbf69e2c3251719cde494342c829aed7e",
+        "transform_version": "aol-scientific-transform-v1",
+        "integration_status": "FIXTURE_ONLY"
+      },
+      "geographic_provenance": {
+        "locality_text": "Western North America (formation-level)",
+        "region": "Late Cretaceous North America",
+        "source_basis": "fossil_locality",
+        "sensitive_location_redacted": false
+      },
+      "time_range": {
+        "kind": "fossil_geologic_interval",
+        "start": 68,
+        "end": 66,
+        "units": "Ma",
+        "geologic_units": [
+          "Maastrichtian"
+        ],
+        "approximate": true,
+        "uncertainty": "Interval approximate; not a single occurrence point.",
+        "source_basis": "paleobiodb"
+      },
+      "confidence_or_uncertainty": {
+        "confidence": "MEDIUM",
+        "confidence_basis": "fossil interval",
+        "uncertainty_note": "Geologic range is approximate."
+      },
+      "editorial": {
+        "editorial_status": "VALIDATED"
+      },
+      "citation": "Paleobiology Database fixture. Tyrannosaurus rex. Snapshot wave008-scientific-fixture-v1.",
+      "verification_status": "source_verified",
+      "life_status": "fossil",
+      "common_name": "Tyrant lizard king",
+      "fixture_role": "fossil_uncertain",
+      "field_evidence": [
+        {
+          "field_path": "scientific_name",
+          "value_hash": "fnv1a:d00d3c90",
+          "citation_required": true,
+          "confidence": "HIGH",
+          "integration_status": "FIXTURE_ONLY",
+          "source": "paleobiodb",
+          "source_organization": "Paleobiology Database",
+          "source_record_id": "PBDB:taxon:54833",
+          "retrieved_at": "2024-06-01T12:00:00.000Z",
+          "citation": "Paleobiology Database fixture. Tyrannosaurus rex. Snapshot wave008-scientific-fixture-v1.",
+          "verification_status": "source_verified"
+        },
+        {
+          "field_path": "taxonomic_authority",
+          "value_hash": "fnv1a:a18793a8",
+          "citation_required": false,
+          "confidence": "HIGH",
+          "integration_status": "FIXTURE_ONLY",
+          "source": "paleobiodb",
+          "source_organization": "Paleobiology Database",
+          "source_record_id": "PBDB:taxon:54833",
+          "retrieved_at": "2024-06-01T12:00:00.000Z",
+          "citation": "Paleobiology Database fixture. Tyrannosaurus rex. Snapshot wave008-scientific-fixture-v1.",
+          "verification_status": "source_verified"
+        },
+        {
+          "field_path": "source_record_id",
+          "value_hash": "fnv1a:8b546640",
+          "citation_required": false,
+          "confidence": "HIGH",
+          "integration_status": "FIXTURE_ONLY",
+          "source": "paleobiodb",
+          "source_organization": "Paleobiology Database",
+          "source_record_id": "PBDB:taxon:54833",
+          "retrieved_at": "2024-06-01T12:00:00.000Z",
+          "citation": "Paleobiology Database fixture. Tyrannosaurus rex. Snapshot wave008-scientific-fixture-v1.",
+          "verification_status": "source_verified"
+        },
+        {
+          "field_path": "license",
+          "value_hash": "fnv1a:9e53a2f4",
+          "citation_required": true,
+          "confidence": "HIGH",
+          "integration_status": "FIXTURE_ONLY",
+          "source": "paleobiodb",
+          "source_organization": "Paleobiology Database",
+          "source_record_id": "PBDB:taxon:54833",
+          "retrieved_at": "2024-06-01T12:00:00.000Z",
+          "citation": "Paleobiology Database fixture. Tyrannosaurus rex. Snapshot wave008-scientific-fixture-v1.",
+          "verification_status": "source_verified"
+        },
+        {
+          "field_path": "citation",
+          "value_hash": "fnv1a:b78ee035",
+          "citation_required": true,
+          "confidence": "HIGH",
+          "integration_status": "FIXTURE_ONLY",
+          "source": "paleobiodb",
+          "source_organization": "Paleobiology Database",
+          "source_record_id": "PBDB:taxon:54833",
+          "retrieved_at": "2024-06-01T12:00:00.000Z",
+          "citation": "Paleobiology Database fixture. Tyrannosaurus rex. Snapshot wave008-scientific-fixture-v1.",
+          "verification_status": "source_verified"
+        },
+        {
+          "field_path": "geographic_provenance",
+          "value_hash": "fnv1a:a159c8c5",
+          "citation_required": false,
+          "confidence": "HIGH",
+          "integration_status": "FIXTURE_ONLY",
+          "source": "paleobiodb",
+          "source_organization": "Paleobiology Database",
+          "source_record_id": "PBDB:taxon:54833",
+          "retrieved_at": "2024-06-01T12:00:00.000Z",
+          "citation": "Paleobiology Database fixture. Tyrannosaurus rex. Snapshot wave008-scientific-fixture-v1.",
+          "verification_status": "source_verified",
+          "geography": {
+            "locality_text": "Western North America (formation-level)",
+            "region": "Late Cretaceous North America",
+            "source_basis": "fossil_locality",
+            "sensitive_location_redacted": false
+          }
+        },
+        {
+          "field_path": "time_range",
+          "value_hash": "fnv1a:97848928",
+          "citation_required": false,
+          "confidence": "HIGH",
+          "integration_status": "FIXTURE_ONLY",
+          "source": "paleobiodb",
+          "source_organization": "Paleobiology Database",
+          "source_record_id": "PBDB:taxon:54833",
+          "retrieved_at": "2024-06-01T12:00:00.000Z",
+          "citation": "Paleobiology Database fixture. Tyrannosaurus rex. Snapshot wave008-scientific-fixture-v1.",
+          "verification_status": "source_verified",
+          "time_range": {
+            "kind": "fossil_geologic_interval",
+            "start": 68,
+            "end": 66,
+            "units": "Ma",
+            "geologic_units": [
+              "Maastrichtian"
+            ],
+            "approximate": true,
+            "uncertainty": "Interval approximate; not a single occurrence point.",
+            "source_basis": "paleobiodb"
+          }
+        }
+      ]
+    },
+    {
+      "identity": {
+        "canonical_id": "aol:taxon:canis-lupus-conflict"
+      },
+      "scientific_name": {
+        "accepted_scientific_name": "Canis lupus",
+        "synonyms": [
+          "Canis familiaris"
+        ],
+        "rank": "species"
+      },
+      "taxonomic_authority": {
+        "authority_text": "Linnaeus",
+        "authority_year": 1758
+      },
+      "source_organization": "GBIF",
+      "source_organization_id": "gbif",
+      "source_record_id": "GBIF:taxon:5219173",
+      "license": {
+        "license_spdx_or_label": "CC-BY-4.0",
+        "attribution_required": true,
+        "redistribution_allowed": true,
+        "terms_status": "open_license"
+      },
+      "retrieved_at": "2024-06-01T12:00:00.000Z",
+      "source_version": "GBIF-fixture",
+      "snapshot_ref": {
+        "source": "gbif",
+        "snapshot_id": "wave008-scientific-fixture-v1",
+        "retrieved_at": "2024-06-01T12:00:00.000Z",
+        "raw_manifest_hash": "32b917bb7be37592d3d57d3f3f0ced6fbf69e2c3251719cde494342c829aed7e",
+        "transform_version": "aol-scientific-transform-v1",
+        "integration_status": "FIXTURE_ONLY"
+      },
+      "geographic_provenance": {
+        "source_basis": "unknown",
+        "sensitive_location_redacted": false
+      },
+      "time_range": {
+        "kind": "extant_current",
+        "approximate": false,
+        "source_basis": "gbif"
+      },
+      "confidence_or_uncertainty": {
+        "confidence": "DISPUTED",
+        "confidence_basis": "conflicting species/subspecies treatments",
+        "uncertainty_note": "Sources disagree on domestic dog treatment relative to wolf.",
+        "conflicting_sources": [
+          "gbif",
+          "catalogue_of_life"
+        ]
+      },
+      "editorial": {
+        "editorial_status": "CONFLICTED",
+        "conflicting_sources": [
+          "gbif",
+          "catalogue_of_life"
+        ],
+        "notes": "Taxonomic conflict preserved; not silently resolved."
+      },
+      "citation": "GBIF fixture with preserved taxonomic conflict. Canis lupus.",
+      "verification_status": "needs_source_verification",
+      "life_status": "extant",
+      "common_name": "Gray wolf",
+      "fixture_role": "conflicted_taxonomy",
+      "field_evidence": [
+        {
+          "field_path": "scientific_name",
+          "value_hash": "fnv1a:b999da08",
+          "citation_required": false,
+          "confidence": "HIGH",
+          "integration_status": "FIXTURE_ONLY",
+          "source": "gbif",
+          "source_organization": "GBIF",
+          "source_record_id": "GBIF:taxon:5219173",
+          "retrieved_at": "2024-06-01T12:00:00.000Z",
+          "citation": "GBIF fixture with preserved taxonomic conflict. Canis lupus.",
+          "verification_status": "needs_source_verification"
+        },
+        {
+          "field_path": "taxonomic_authority",
+          "value_hash": "fnv1a:f916660",
+          "citation_required": false,
+          "confidence": "HIGH",
+          "integration_status": "FIXTURE_ONLY",
+          "source": "gbif",
+          "source_organization": "GBIF",
+          "source_record_id": "GBIF:taxon:5219173",
+          "retrieved_at": "2024-06-01T12:00:00.000Z",
+          "citation": "GBIF fixture with preserved taxonomic conflict. Canis lupus.",
+          "verification_status": "needs_source_verification"
+        },
+        {
+          "field_path": "source_record_id",
+          "value_hash": "fnv1a:70cfeb29",
+          "citation_required": false,
+          "confidence": "HIGH",
+          "integration_status": "FIXTURE_ONLY",
+          "source": "gbif",
+          "source_organization": "GBIF",
+          "source_record_id": "GBIF:taxon:5219173",
+          "retrieved_at": "2024-06-01T12:00:00.000Z",
+          "citation": "GBIF fixture with preserved taxonomic conflict. Canis lupus.",
+          "verification_status": "needs_source_verification"
+        },
+        {
+          "field_path": "license",
+          "value_hash": "fnv1a:9e53a2f4",
+          "citation_required": true,
+          "confidence": "HIGH",
+          "integration_status": "FIXTURE_ONLY",
+          "source": "gbif",
+          "source_organization": "GBIF",
+          "source_record_id": "GBIF:taxon:5219173",
+          "retrieved_at": "2024-06-01T12:00:00.000Z",
+          "citation": "GBIF fixture with preserved taxonomic conflict. Canis lupus.",
+          "verification_status": "needs_source_verification"
+        },
+        {
+          "field_path": "citation",
+          "value_hash": "fnv1a:c3f71a91",
+          "citation_required": true,
+          "confidence": "HIGH",
+          "integration_status": "FIXTURE_ONLY",
+          "source": "gbif",
+          "source_organization": "GBIF",
+          "source_record_id": "GBIF:taxon:5219173",
+          "retrieved_at": "2024-06-01T12:00:00.000Z",
+          "citation": "GBIF fixture with preserved taxonomic conflict. Canis lupus.",
+          "verification_status": "needs_source_verification"
+        },
+        {
+          "field_path": "geographic_provenance",
+          "value_hash": "fnv1a:ee268501",
+          "citation_required": false,
+          "confidence": "HIGH",
+          "integration_status": "FIXTURE_ONLY",
+          "source": "gbif",
+          "source_organization": "GBIF",
+          "source_record_id": "GBIF:taxon:5219173",
+          "retrieved_at": "2024-06-01T12:00:00.000Z",
+          "citation": "GBIF fixture with preserved taxonomic conflict. Canis lupus.",
+          "verification_status": "needs_source_verification",
+          "geography": {
+            "source_basis": "unknown",
+            "sensitive_location_redacted": false
+          }
+        },
+        {
+          "field_path": "time_range",
+          "value_hash": "fnv1a:c6dcfdce",
+          "citation_required": false,
+          "confidence": "HIGH",
+          "integration_status": "FIXTURE_ONLY",
+          "source": "gbif",
+          "source_organization": "GBIF",
+          "source_record_id": "GBIF:taxon:5219173",
+          "retrieved_at": "2024-06-01T12:00:00.000Z",
+          "citation": "GBIF fixture with preserved taxonomic conflict. Canis lupus.",
+          "verification_status": "needs_source_verification",
+          "time_range": {
+            "kind": "extant_current",
+            "approximate": false,
+            "source_basis": "gbif"
+          }
+        }
+      ]
+    },
+    {
+      "identity": {
+        "canonical_id": "aol:taxon:teaching-lifeling-companion"
+      },
+      "scientific_name": {
+        "accepted_scientific_name": "Ludus archivalis",
+        "rank": "species",
+        "nomenclatural_status": "game_authored_teaching_taxon"
+      },
+      "taxonomic_authority": {
+        "authority_text": "Archive of Life editorial"
+      },
+      "source_organization": "Archive of Life editorial/game-authored",
+      "source_organization_id": "game_authored",
+      "source_record_id": "GAME:taxon:teaching-001",
+      "license": {
+        "license_spdx_or_label": "GAME-ORIGINAL",
+        "attribution_required": false,
+        "redistribution_allowed": true,
+        "terms_status": "game_original"
+      },
+      "retrieved_at": "2024-06-01T12:00:00.000Z",
+      "source_version": "game-v1",
+      "geographic_provenance": {
+        "source_basis": "unknown",
+        "sensitive_location_redacted": false
+      },
+      "time_range": {
+        "kind": "unknown",
+        "approximate": true,
+        "source_basis": "game_authored",
+        "uncertainty": "Not a real organism."
+      },
+      "confidence_or_uncertainty": {
+        "confidence": "UNKNOWN",
+        "confidence_basis": "game-authored teaching fixture",
+        "uncertainty_note": "Fictional teaching taxon — not a real organism."
+      },
+      "editorial": {
+        "editorial_status": "GAME_AUTHORED"
+      },
+      "citation": "Archive of Life game-authored teaching fixture (not an external scientific source).",
+      "verification_status": "game_authored_verified",
+      "life_status": "unknown",
+      "common_name": "Archive Companion (teaching)",
+      "fixture_role": "game_authored",
+      "field_evidence": [
+        {
+          "field_path": "scientific_name",
+          "value_hash": "fnv1a:986ba9bc",
+          "citation_required": false,
+          "confidence": "HIGH",
+          "integration_status": "FIXTURE_ONLY",
+          "source": "game_authored",
+          "source_organization": "Archive of Life editorial/game-authored",
+          "source_record_id": "GAME:taxon:teaching-001",
+          "retrieved_at": "2024-06-01T12:00:00.000Z",
+          "citation": "Archive of Life game-authored teaching fixture (not an external scientific source).",
+          "verification_status": "game_authored_verified"
+        },
+        {
+          "field_path": "taxonomic_authority",
+          "value_hash": "fnv1a:c5573b89",
+          "citation_required": false,
+          "confidence": "HIGH",
+          "integration_status": "FIXTURE_ONLY",
+          "source": "game_authored",
+          "source_organization": "Archive of Life editorial/game-authored",
+          "source_record_id": "GAME:taxon:teaching-001",
+          "retrieved_at": "2024-06-01T12:00:00.000Z",
+          "citation": "Archive of Life game-authored teaching fixture (not an external scientific source).",
+          "verification_status": "game_authored_verified"
+        },
+        {
+          "field_path": "source_record_id",
+          "value_hash": "fnv1a:1f6fd89c",
+          "citation_required": false,
+          "confidence": "HIGH",
+          "integration_status": "FIXTURE_ONLY",
+          "source": "game_authored",
+          "source_organization": "Archive of Life editorial/game-authored",
+          "source_record_id": "GAME:taxon:teaching-001",
+          "retrieved_at": "2024-06-01T12:00:00.000Z",
+          "citation": "Archive of Life game-authored teaching fixture (not an external scientific source).",
+          "verification_status": "game_authored_verified"
+        },
+        {
+          "field_path": "license",
+          "value_hash": "fnv1a:f6dec4c5",
+          "citation_required": false,
+          "confidence": "HIGH",
+          "integration_status": "FIXTURE_ONLY",
+          "source": "game_authored",
+          "source_organization": "Archive of Life editorial/game-authored",
+          "source_record_id": "GAME:taxon:teaching-001",
+          "retrieved_at": "2024-06-01T12:00:00.000Z",
+          "citation": "Archive of Life game-authored teaching fixture (not an external scientific source).",
+          "verification_status": "game_authored_verified"
+        },
+        {
+          "field_path": "citation",
+          "value_hash": "fnv1a:d8456823",
+          "citation_required": true,
+          "confidence": "HIGH",
+          "integration_status": "FIXTURE_ONLY",
+          "source": "game_authored",
+          "source_organization": "Archive of Life editorial/game-authored",
+          "source_record_id": "GAME:taxon:teaching-001",
+          "retrieved_at": "2024-06-01T12:00:00.000Z",
+          "citation": "Archive of Life game-authored teaching fixture (not an external scientific source).",
+          "verification_status": "game_authored_verified"
+        },
+        {
+          "field_path": "geographic_provenance",
+          "value_hash": "fnv1a:ee268501",
+          "citation_required": false,
+          "confidence": "HIGH",
+          "integration_status": "FIXTURE_ONLY",
+          "source": "game_authored",
+          "source_organization": "Archive of Life editorial/game-authored",
+          "source_record_id": "GAME:taxon:teaching-001",
+          "retrieved_at": "2024-06-01T12:00:00.000Z",
+          "citation": "Archive of Life game-authored teaching fixture (not an external scientific source).",
+          "verification_status": "game_authored_verified",
+          "geography": {
+            "source_basis": "unknown",
+            "sensitive_location_redacted": false
+          }
+        },
+        {
+          "field_path": "time_range",
+          "value_hash": "fnv1a:e6987760",
+          "citation_required": false,
+          "confidence": "HIGH",
+          "integration_status": "FIXTURE_ONLY",
+          "source": "game_authored",
+          "source_organization": "Archive of Life editorial/game-authored",
+          "source_record_id": "GAME:taxon:teaching-001",
+          "retrieved_at": "2024-06-01T12:00:00.000Z",
+          "citation": "Archive of Life game-authored teaching fixture (not an external scientific source).",
+          "verification_status": "game_authored_verified",
+          "time_range": {
+            "kind": "unknown",
+            "approximate": true,
+            "source_basis": "game_authored",
+            "uncertainty": "Not a real organism."
+          }
+        }
+      ]
+    },
+    {
+      "identity": {
+        "canonical_id": "aol:taxon:mock-sample-alpha"
+      },
+      "scientific_name": {
+        "accepted_scientific_name": "Mockus exemplaris",
+        "rank": "species"
+      },
+      "taxonomic_authority": {},
+      "source_organization": "Archive of Life mock/sample fixtures",
+      "source_organization_id": "mock_sample",
+      "source_record_id": "MOCK:taxon:alpha",
+      "license": {
+        "license_spdx_or_label": "MOCK-SAMPLE",
+        "attribution_required": false,
+        "redistribution_allowed": true,
+        "terms_status": "mock_sample"
+      },
+      "retrieved_at": "2024-06-01T12:00:00.000Z",
+      "source_version": "mock-v1",
+      "geographic_provenance": {
+        "source_basis": "unknown",
+        "sensitive_location_redacted": false
+      },
+      "time_range": {
+        "kind": "unknown",
+        "approximate": true,
+        "source_basis": "mock_sample"
+      },
+      "confidence_or_uncertainty": {
+        "confidence": "UNKNOWN",
+        "uncertainty_note": "Mock/sample only."
+      },
+      "editorial": {
+        "editorial_status": "MOCK_SAMPLE"
+      },
+      "citation": "Mock sample fixture — digital validation only.",
+      "verification_status": "mock_sample",
+      "life_status": "unknown",
+      "common_name": "Mock Sample Alpha",
+      "fixture_role": "mock_sample",
+      "field_evidence": [
+        {
+          "field_path": "scientific_name",
+          "value_hash": "fnv1a:191e758d",
+          "citation_required": false,
+          "confidence": "HIGH",
+          "integration_status": "FIXTURE_ONLY",
+          "source": "mock_sample",
+          "source_organization": "Archive of Life mock/sample fixtures",
+          "source_record_id": "MOCK:taxon:alpha",
+          "retrieved_at": "2024-06-01T12:00:00.000Z",
+          "citation": "Mock sample fixture — digital validation only.",
+          "verification_status": "mock_sample"
+        },
+        {
+          "field_path": "source_record_id",
+          "value_hash": "fnv1a:f6a2fcb3",
+          "citation_required": false,
+          "confidence": "HIGH",
+          "integration_status": "FIXTURE_ONLY",
+          "source": "mock_sample",
+          "source_organization": "Archive of Life mock/sample fixtures",
+          "source_record_id": "MOCK:taxon:alpha",
+          "retrieved_at": "2024-06-01T12:00:00.000Z",
+          "citation": "Mock sample fixture — digital validation only.",
+          "verification_status": "mock_sample"
+        },
+        {
+          "field_path": "license",
+          "value_hash": "fnv1a:8f515868",
+          "citation_required": false,
+          "confidence": "HIGH",
+          "integration_status": "FIXTURE_ONLY",
+          "source": "mock_sample",
+          "source_organization": "Archive of Life mock/sample fixtures",
+          "source_record_id": "MOCK:taxon:alpha",
+          "retrieved_at": "2024-06-01T12:00:00.000Z",
+          "citation": "Mock sample fixture — digital validation only.",
+          "verification_status": "mock_sample"
+        },
+        {
+          "field_path": "citation",
+          "value_hash": "fnv1a:33517f11",
+          "citation_required": true,
+          "confidence": "HIGH",
+          "integration_status": "FIXTURE_ONLY",
+          "source": "mock_sample",
+          "source_organization": "Archive of Life mock/sample fixtures",
+          "source_record_id": "MOCK:taxon:alpha",
+          "retrieved_at": "2024-06-01T12:00:00.000Z",
+          "citation": "Mock sample fixture — digital validation only.",
+          "verification_status": "mock_sample"
+        },
+        {
+          "field_path": "geographic_provenance",
+          "value_hash": "fnv1a:ee268501",
+          "citation_required": false,
+          "confidence": "HIGH",
+          "integration_status": "FIXTURE_ONLY",
+          "source": "mock_sample",
+          "source_organization": "Archive of Life mock/sample fixtures",
+          "source_record_id": "MOCK:taxon:alpha",
+          "retrieved_at": "2024-06-01T12:00:00.000Z",
+          "citation": "Mock sample fixture — digital validation only.",
+          "verification_status": "mock_sample",
+          "geography": {
+            "source_basis": "unknown",
+            "sensitive_location_redacted": false
+          }
+        },
+        {
+          "field_path": "time_range",
+          "value_hash": "fnv1a:4f2747c",
+          "citation_required": false,
+          "confidence": "HIGH",
+          "integration_status": "FIXTURE_ONLY",
+          "source": "mock_sample",
+          "source_organization": "Archive of Life mock/sample fixtures",
+          "source_record_id": "MOCK:taxon:alpha",
+          "retrieved_at": "2024-06-01T12:00:00.000Z",
+          "citation": "Mock sample fixture — digital validation only.",
+          "verification_status": "mock_sample",
+          "time_range": {
+            "kind": "unknown",
+            "approximate": true,
+            "source_basis": "mock_sample"
+          }
+        }
+      ]
+    },
+    {
+      "identity": {
+        "canonical_id": "aol:taxon:blocked-incomplete-iucn"
+      },
+      "scientific_name": {
+        "accepted_scientific_name": "Incertae sedis blocked",
+        "rank": "species",
+        "open_nomenclature": "indet"
+      },
+      "taxonomic_authority": {},
+      "source_organization": "IUCN",
+      "source_organization_id": "iucn",
+      "license": {
+        "license_spdx_or_label": "IUCN-TOS",
+        "attribution_required": true,
+        "redistribution_allowed": false,
+        "terms_status": "missing"
+      },
+      "source_version": "unavailable",
+      "geographic_provenance": {
+        "source_basis": "unknown",
+        "sensitive_location_redacted": true
+      },
+      "time_range": {
+        "kind": "unknown",
+        "approximate": true,
+        "source_basis": "blocked_external"
+      },
+      "confidence_or_uncertainty": {
+        "confidence": "UNKNOWN",
+        "uncertainty_note": "External source blocked or incomplete."
+      },
+      "editorial": {
+        "editorial_status": "BLOCKED_EXTERNAL"
+      },
+      "verification_status": "blocked_external",
+      "life_status": "unknown",
+      "common_name": "Blocked incomplete",
+      "fixture_role": "blocked_incomplete",
+      "field_evidence": [
+        {
+          "field_path": "scientific_name",
+          "value_hash": "fnv1a:c69e653a",
+          "citation_required": false,
+          "confidence": "HIGH",
+          "integration_status": "FIXTURE_ONLY",
+          "source": "iucn",
+          "source_organization": "IUCN",
+          "citation": "",
+          "verification_status": "blocked_external"
+        },
+        {
+          "field_path": "license",
+          "value_hash": "fnv1a:ebcbb655",
+          "citation_required": true,
+          "confidence": "HIGH",
+          "integration_status": "FIXTURE_ONLY",
+          "source": "iucn",
+          "source_organization": "IUCN",
+          "citation": "",
+          "verification_status": "blocked_external"
+        },
+        {
+          "field_path": "geographic_provenance",
+          "value_hash": "fnv1a:9a588372",
+          "citation_required": false,
+          "confidence": "HIGH",
+          "integration_status": "FIXTURE_ONLY",
+          "source": "iucn",
+          "source_organization": "IUCN",
+          "citation": "",
+          "verification_status": "blocked_external",
+          "geography": {
+            "source_basis": "unknown",
+            "sensitive_location_redacted": true
+          }
+        },
+        {
+          "field_path": "time_range",
+          "value_hash": "fnv1a:776476b7",
+          "citation_required": false,
+          "confidence": "HIGH",
+          "integration_status": "FIXTURE_ONLY",
+          "source": "iucn",
+          "source_organization": "IUCN",
+          "citation": "",
+          "verification_status": "blocked_external",
+          "time_range": {
+            "kind": "unknown",
+            "approximate": true,
+            "source_basis": "blocked_external"
+          }
+        }
+      ]
+    }
+  ]
+}
