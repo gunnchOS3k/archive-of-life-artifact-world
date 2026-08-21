@@ -17,7 +17,8 @@ export type LicenseLabel =
   | 'CC0-1.0'
   | 'IUCN-TOS'
   | 'GAME-ORIGINAL'
-  | 'MOCK-SAMPLE';
+  | 'MOCK-SAMPLE'
+  | 'UNVERIFIED-FIXTURE';
 
 /** How a record's data was verified for release reporting. */
 export type VerificationStatus =

@@ -8,10 +8,13 @@
       "classification": "IMPLEMENTED_AND_VALIDATED",
       "evidence_keys": [
         "COVERAGE_SCOPE",
-        "denominator_label",
-        "COMPLETENESS_OVERCLAIM_SABOTAGE_FAILS"
+        "DENOMINATOR_EXPLICIT",
+        "SCOPE_TOTAL_GT_DOCUMENTED",
+        "ADDING_UNDOCUMENTED_DECREASES_PERCENT",
+        "COMPLETENESS_OVERCLAIM_SABOTAGE_FAILS",
+        "denominator_label"
       ],
-      "source_hash": "5e32c0406af0d2cc7043d8a48f0e3d2b328bd103e13b888ca97074e9a266f450"
+      "source_hash": "635d727f87812d2ed21e96832d68a13b75df5b58474cd2173cf90635d01f5714"
     },
     {
       "requirement_id": "GAME-AOL-002",
@@ -65,7 +68,8 @@
         "REGISTRY_EXECUTABLE",
         "INTEGRATION_STATUS_EXPLICIT",
         "ENUM_IS_NOT_LIVE",
-        "EOL_NOT_IMPLEMENTED"
+        "EOL_NOT_IMPLEMENTED",
+        "NO_GUESSED_PROVIDER_LICENSE"
       ],
       "source_hash": "d8076b6a68a0ba676c13bc7194ff57f65f593043bc45332474068d0ff06d5f9f"
     },
@@ -92,6 +96,7 @@
         "ok",
         "STRUCTURED_LICENSE",
         "IUCN_NOT_ASSUMED_CCBY",
+        "HONEST_FIXTURE_LICENSE",
         "MISSING_BLOCKS_SOURCE_VERIFIED"
       ],
       "source_hash": "6bf35a84999f550c0811736131f31356a7ac63b74a36759b911fb0cefa0a00b5"
@@ -119,9 +124,10 @@
         "SNAPSHOT_BOUND",
         "UPSTREAM_VERSION",
         "TRANSFORM_VERSION",
-        "MANIFEST_HASH_OK"
+        "MANIFEST_HASH_OK",
+        "TAMPER_REJECTED"
       ],
-      "source_hash": "51c780cd0257fce38b60c905fefdfeacfe77ac42d166fc58ee3d8cea46fa509f"
+      "source_hash": "10446dd04482dddfe50175943c768735441131b6c411971cb265898851f5ba78"
     },
     {
       "requirement_id": "GAME-AOL-010",
@@ -200,7 +206,8 @@
         "MISSING_DEFAULTS_TO_NEEDS_VERIFICATION",
         "FIXTURE_NOT_LIVE",
         "HTTP_STUB_NOT_LIVE",
-        "BLOCKED_NOT_SOURCE_VERIFIED"
+        "BLOCKED_NOT_SOURCE_VERIFIED",
+        "FIXTURE_ONLY_SOURCE_VERIFIED_COUNT"
       ],
       "source_hash": "b84efd948cad06fc5c6dddf114cfce85910d4b462ab6f327a9941083112d2b22"
     }

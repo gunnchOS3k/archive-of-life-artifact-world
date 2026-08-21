@@ -15,30 +15,28 @@ export interface ValidationResult {
 
 const PLACEHOLDER_IDS = new Set(['', 'unknown', 'n/a', 'na', 'null', 'undefined', '0', 'TODO', 'tbd']);
 
+/** Paths that field evidence may bind to on a ScientificRecordSnapshot. */
+export const KNOWN_FIELD_EVIDENCE_PATHS = new Set([
+  'scientific_name',
+  'taxonomic_authority',
+  'source_record_id',
+  'license',
+  'citation',
+  'geographic_provenance',
+  'time_range',
+  'confidence_or_uncertainty',
+  'editorial',
+  'retrieved_at',
+  'source_version',
+]);
+
 export function isPlaceholderSourceId(id: unknown): boolean {
   if (id == null) return true;
   const s = String(id).trim();
   return PLACEHOLDER_IDS.has(s.toLowerCase()) || /^x+$/i.test(s);
 }
 
-export function validateFieldEvidenceHashes(record: ScientificRecordSnapshot): ValidationIssue[] {
-  const issues: ValidationIssue[] = [];
-  for (const fe of record.field_evidence) {
-    const live = liveValueForField(record, fe.field_path);
-    if (live === undefined) continue;
-    const expected = hashFieldValue(live);
-    if (fe.value_hash !== expected) {
-      issues.push({
-        code: 'FIELD_HASH_MISMATCH',
-        message: `Field ${fe.field_path} value changed without evidence hash update`,
-        field_path: fe.field_path,
-      });
-    }
-  }
-  return issues;
-}
-
-function liveValueForField(record: ScientificRecordSnapshot, path: string): unknown {
+export function liveValueForField(record: ScientificRecordSnapshot, path: string): unknown {
   switch (path) {
     case 'scientific_name':
       return record.scientific_name.accepted_scientific_name;
@@ -54,9 +52,57 @@ function liveValueForField(record: ScientificRecordSnapshot, path: string): unkn
       return record.geographic_provenance;
     case 'time_range':
       return record.time_range;
+    case 'confidence_or_uncertainty':
+      return record.confidence_or_uncertainty;
+    case 'editorial':
+      return record.editorial;
+    case 'retrieved_at':
+      return record.retrieved_at;
+    case 'source_version':
+      return record.source_version;
     default:
       return undefined;
   }
+}
+
+export function validateFieldEvidenceHashes(record: ScientificRecordSnapshot): ValidationIssue[] {
+  const issues: ValidationIssue[] = [];
+  for (const fe of record.field_evidence) {
+    if (!KNOWN_FIELD_EVIDENCE_PATHS.has(fe.field_path)) {
+      issues.push({
+        code: 'UNKNOWN_FIELD_PATH',
+        message: `Unknown field_evidence path rejected: ${fe.field_path}`,
+        field_path: fe.field_path,
+      });
+      continue;
+    }
+    const live = liveValueForField(record, fe.field_path);
+    if (live === undefined) {
+      issues.push({
+        code: 'FIELD_PATH_UNRESOLVED',
+        message: `Field ${fe.field_path} could not be resolved on record`,
+        field_path: fe.field_path,
+      });
+      continue;
+    }
+    const expected = hashFieldValue(live);
+    if (fe.value_hash !== expected) {
+      issues.push({
+        code: 'FIELD_HASH_MISMATCH',
+        message: `Field ${fe.field_path} value changed without evidence hash update`,
+        field_path: fe.field_path,
+      });
+    }
+  }
+  return issues;
+}
+
+/**
+ * source_verified is only admissible when integration is SNAPSHOT_VERIFIED or LIVE_VERIFIED.
+ * FIXTURE_ONLY / CONTRACT_ONLY / etc. cannot claim source_verified.
+ */
+export function integrationAllowsSourceVerified(integration?: string): boolean {
+  return integration === 'SNAPSHOT_VERIFIED' || integration === 'LIVE_VERIFIED';
 }
 
 export function validateScientificRecord(record: ScientificRecordSnapshot): ValidationResult {
@@ -72,13 +118,33 @@ export function validateScientificRecord(record: ScientificRecordSnapshot): Vali
     issues.push({ code: 'MISSING_SOURCE_ORG', message: 'source organization required' });
   }
 
+  const integration =
+    record.snapshot_ref?.integration_status ??
+    record.field_evidence.find((f) => f.integration_status)?.integration_status;
+
   const wantsVerified = record.verification_status === 'source_verified';
   if (wantsVerified) {
+    if (!integrationAllowsSourceVerified(integration)) {
+      issues.push({
+        code: 'FIXTURE_ONLY_CANNOT_BE_SOURCE_VERIFIED',
+        message: 'source_verified requires SNAPSHOT_VERIFIED or LIVE_VERIFIED integration_status',
+      });
+    }
     if (isPlaceholderSourceId(record.source_record_id)) {
       issues.push({ code: 'SOURCE_VERIFIED_WITHOUT_RECORD_ID', message: 'source_verified requires source_record_id' });
     }
     if (!record.license?.license_spdx_or_label || record.license.terms_status === 'missing') {
       issues.push({ code: 'SOURCE_VERIFIED_WITHOUT_LICENSE', message: 'source_verified requires license/terms' });
+    }
+    if (
+      record.license?.license_spdx_or_label === 'UNVERIFIED-FIXTURE' ||
+      record.license?.license_spdx_or_label === 'MOCK-SAMPLE' ||
+      record.license?.license_spdx_or_label === 'GAME-ORIGINAL'
+    ) {
+      issues.push({
+        code: 'SOURCE_VERIFIED_WITH_NON_PROVIDER_LICENSE',
+        message: 'source_verified cannot use UNVERIFIED-FIXTURE / MOCK-SAMPLE / GAME-ORIGINAL licenses',
+      });
     }
     if (!record.retrieved_at) {
       issues.push({ code: 'SOURCE_VERIFIED_WITHOUT_RETRIEVAL', message: 'source_verified requires retrieved_at' });
@@ -97,12 +163,22 @@ export function validateScientificRecord(record: ScientificRecordSnapshot): Vali
     }
   }
 
+  // Field-level independence: a field marked source_verified must also satisfy integration rules
+  for (const fe of record.field_evidence) {
+    if (fe.verification_status === 'source_verified' && !integrationAllowsSourceVerified(fe.integration_status)) {
+      issues.push({
+        code: 'FIELD_FIXTURE_ONLY_SOURCE_VERIFIED',
+        message: `Field ${fe.field_path} cannot be source_verified under ${fe.integration_status}`,
+        field_path: fe.field_path,
+      });
+    }
+  }
+
   if (record.retrieved_at) {
     const t = Date.parse(record.retrieved_at);
     if (Number.isNaN(t)) {
       issues.push({ code: 'INVALID_RETRIEVAL_DATE', message: 'retrieved_at must be parseable UTC' });
     } else if (t > Date.now() + 60_000 && record.fixture_role !== 'mock_sample') {
-      // allow explicit mock fixtures only for simulated future dates
       issues.push({ code: 'FUTURE_RETRIEVAL_DATE', message: 'future retrieval date rejected' });
     }
   }
@@ -155,8 +231,13 @@ export function validateScientificRecord(record: ScientificRecordSnapshot): Vali
       'SOURCE_VERIFIED_WITHOUT_RETRIEVAL',
       'SOURCE_VERIFIED_WITHOUT_CITATION',
       'SOURCE_VERIFIED_WITHOUT_SNAPSHOT',
+      'SOURCE_VERIFIED_WITH_NON_PROVIDER_LICENSE',
+      'FIXTURE_ONLY_CANNOT_BE_SOURCE_VERIFIED',
+      'FIELD_FIXTURE_ONLY_SOURCE_VERIFIED',
       'FIXTURE_CLAIMS_LIVE',
       'FIELD_HASH_MISMATCH',
+      'UNKNOWN_FIELD_PATH',
+      'FIELD_PATH_UNRESOLVED',
       'FAKE_PRECISE_COORDINATES',
       'MOCK_CANNOT_BE_SOURCE_VERIFIED',
       'GAME_AUTHORED_INHERITS_EXTERNAL',
@@ -168,10 +249,20 @@ export function validateScientificRecord(record: ScientificRecordSnapshot): Vali
   return {
     ok: blocking.length === 0,
     issues,
-    can_claim_source_verified: wantsVerified && blocking.length === 0,
+    can_claim_source_verified:
+      wantsVerified && blocking.length === 0 && integrationAllowsSourceVerified(integration),
   };
 }
 
 export function assertEvidenceHashForValue(fe: ScientificFieldEvidence, value: unknown): boolean {
   return fe.value_hash === hashFieldValue(value);
+}
+
+export function countFixtureOnlySourceVerified(records: ScientificRecordSnapshot[]): number {
+  return records.filter(
+    (r) =>
+      r.verification_status === 'source_verified' &&
+      (r.snapshot_ref?.integration_status === 'FIXTURE_ONLY' ||
+        (!r.snapshot_ref && r.fixture_role != null)),
+  ).length;
 }

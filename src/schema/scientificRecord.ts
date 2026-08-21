@@ -44,6 +44,7 @@ export type LicenseTermsStatus =
   | 'restricted_terms'
   | 'game_original'
   | 'mock_sample'
+  | 'unverified_fixture'
   | 'unknown'
   | 'missing';
 

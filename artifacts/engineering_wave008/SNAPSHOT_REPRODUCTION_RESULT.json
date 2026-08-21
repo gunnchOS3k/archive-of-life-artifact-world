@@ -1,5 +1,9 @@
 {
   "ok": true,
   "REPRODUCIBLE": true,
+  "INDEPENDENT_AB": true,
+  "TAMPER_REJECTED": true,
+  "run_a_hash": "e93f5b7ce1cfab2baaac608521ce74cc11d67c8d553b23ec417b5795642c00dc",
+  "run_b_hash": "e93f5b7ce1cfab2baaac608521ce74cc11d67c8d553b23ec417b5795642c00dc",
   "record_count": 6
 }

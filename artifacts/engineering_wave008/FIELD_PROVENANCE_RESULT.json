@@ -2,5 +2,6 @@
   "ok": true,
   "FIELD_LEVEL_EVIDENCE": true,
   "HASH_BINDINGS": true,
+  "UNKNOWN_PATH_REJECTED": true,
   "MULTI_SOURCE_CAPABLE": true
 }

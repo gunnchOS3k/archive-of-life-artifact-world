@@ -6,8 +6,11 @@
       "classification": "IMPLEMENTED_AND_VALIDATED",
       "evidence": {
         "COVERAGE_SCOPE": true,
-        "denominator_label": "current Archive scientific fixture snapshot",
-        "COMPLETENESS_OVERCLAIM_SABOTAGE_FAILS": true
+        "DENOMINATOR_EXPLICIT": true,
+        "SCOPE_TOTAL_GT_DOCUMENTED": true,
+        "ADDING_UNDOCUMENTED_DECREASES_PERCENT": true,
+        "COMPLETENESS_OVERCLAIM_SABOTAGE_FAILS": true,
+        "denominator_label": "current Archive scientific fixture snapshot scope"
       }
     },
     {
@@ -59,7 +62,8 @@
         "REGISTRY_EXECUTABLE": true,
         "INTEGRATION_STATUS_EXPLICIT": true,
         "ENUM_IS_NOT_LIVE": true,
-        "EOL_NOT_IMPLEMENTED": true
+        "EOL_NOT_IMPLEMENTED": true,
+        "NO_GUESSED_PROVIDER_LICENSE": true
       }
     },
     {
@@ -84,6 +88,7 @@
         "ok": true,
         "STRUCTURED_LICENSE": true,
         "IUCN_NOT_ASSUMED_CCBY": true,
+        "HONEST_FIXTURE_LICENSE": true,
         "MISSING_BLOCKS_SOURCE_VERIFIED": true
       }
     },
@@ -109,7 +114,8 @@
         "SNAPSHOT_BOUND": true,
         "UPSTREAM_VERSION": true,
         "TRANSFORM_VERSION": true,
-        "MANIFEST_HASH_OK": true
+        "MANIFEST_HASH_OK": true,
+        "TAMPER_REJECTED": true
       }
     },
     {
@@ -184,10 +190,13 @@
         "MISSING_DEFAULTS_TO_NEEDS_VERIFICATION": true,
         "FIXTURE_NOT_LIVE": true,
         "HTTP_STUB_NOT_LIVE": true,
-        "BLOCKED_NOT_SOURCE_VERIFIED": true
+        "BLOCKED_NOT_SOURCE_VERIFIED": true,
+        "FIXTURE_ONLY_SOURCE_VERIFIED_COUNT": 0
       }
     }
   ],
   "IMPLEMENTED_AND_VALIDATED": 15,
+  "IMPLEMENTED_VALIDATION_OPEN": 0,
+  "IMPLEMENTATION_OPEN": 0,
   "TARGET_REQUIREMENTS": 15
 }

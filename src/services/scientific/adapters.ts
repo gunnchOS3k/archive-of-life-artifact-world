@@ -51,10 +51,11 @@ export function buildSnapshotManifest(opts: {
     integration_status: integration,
     generator_commit: opts.generator_commit,
     license: {
-      license_spdx_or_label: 'FIXTURE',
+      license_spdx_or_label: 'UNVERIFIED-FIXTURE',
       attribution_required: true,
-      redistribution_allowed: true,
-      terms_status: 'mock_sample',
+      redistribution_allowed: false,
+      terms_status: 'unknown',
+      derivative_use_note: 'Synthetic fixture manifest — not an authentic provider license',
     },
   };
 }

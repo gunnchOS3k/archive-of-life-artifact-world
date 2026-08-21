@@ -1,17 +1,8 @@
-import { readFileSync } from 'node:fs';
-import { join } from 'node:path';
 import type { ScientificRecordSnapshot } from '@/schema/scientificRecord';
 import type { ArchiveDexEntry } from '@/schema/archivedex';
 import type { DataSourceProvenance } from '@/schema/provenance';
 
 export const WAVE008_FIXTURE_SNAPSHOT_ID = 'wave008-scientific-fixture-v1';
-
-export function loadWave008ScientificFixtures(
-  root = process.cwd(),
-): { snapshot_id: string; retrieved_at: string; records: ScientificRecordSnapshot[] } {
-  const path = join(root, 'data/scientific_fixtures', `${WAVE008_FIXTURE_SNAPSHOT_ID}.json`);
-  return JSON.parse(readFileSync(path, 'utf8'));
-}
 
 export function scientificRecordToArchiveDexEntry(rec: ScientificRecordSnapshot): ArchiveDexEntry {
   const source: DataSourceProvenance = {

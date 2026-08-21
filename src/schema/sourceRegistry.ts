@@ -8,32 +8,36 @@ export const SOURCE_REGISTRY: Record<SourceName, SourceRegistryEntry> = {
     organization_name: 'Catalogue of Life',
     homepage: 'https://www.catalogueoflife.org/',
     integration_status: 'FIXTURE_ONLY',
-    terms_or_license_notes: 'Follow Catalogue of Life terms for redistribution of bulk data.',
-    citation_policy: 'Attribute Catalogue of Life when using taxonomic facts from COL snapshots.',
+    terms_or_license_notes:
+      'UNVERIFIED-FIXTURE until an authentic COL snapshot is imported. Do not guess CC-BY.',
+    citation_policy: 'Attribute Catalogue of Life only when using verified COL snapshot facts.',
   },
   gbif: {
     source_id: 'gbif',
     organization_name: 'GBIF',
     homepage: 'https://www.gbif.org/',
     integration_status: 'FIXTURE_ONLY',
-    terms_or_license_notes: 'GBIF occurrence/taxon data carries per-dataset licenses.',
-    citation_policy: 'Cite GBIF and the contributing dataset when required.',
+    terms_or_license_notes:
+      'UNVERIFIED-FIXTURE until an authentic GBIF snapshot is imported. Per-dataset licenses vary.',
+    citation_policy: 'Cite GBIF and the contributing dataset only when snapshot-verified.',
   },
   iucn: {
     source_id: 'iucn',
     organization_name: 'IUCN',
     homepage: 'https://www.iucnredlist.org/',
     integration_status: 'CONTRACT_ONLY',
-    terms_or_license_notes: 'IUCN Red List terms are distinct from open CC licenses.',
-    citation_policy: 'Do not treat IUCN as CC-BY; follow IUCN terms.',
+    terms_or_license_notes:
+      'IUCN Red List terms are distinct from open CC licenses — do not assume CC-BY.',
+    citation_policy: 'Do not treat IUCN as CC-BY; follow IUCN terms when integration is verified.',
   },
   paleobiodb: {
     source_id: 'paleobiodb',
     organization_name: 'Paleobiology Database',
     homepage: 'https://paleobiodb.org/',
     integration_status: 'FIXTURE_ONLY',
-    terms_or_license_notes: 'Paleobiology Database citation and reuse terms apply.',
-    citation_policy: 'Cite Paleobiology Database for fossil occurrence/time facts.',
+    terms_or_license_notes:
+      'UNVERIFIED-FIXTURE until an authentic PBDB snapshot is imported. Do not guess license.',
+    citation_policy: 'Cite Paleobiology Database only for snapshot-verified fossil facts.',
   },
   neotoma: {
     source_id: 'neotoma',

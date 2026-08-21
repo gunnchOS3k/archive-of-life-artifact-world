@@ -45,14 +45,19 @@ export function renderScientificSourcesPanel(entry: ArchiveDexEntry): string {
       status === 'source_verified' &&
       rec.source_organization_id !== 'game_authored' &&
       rec.source_organization_id !== 'mock_sample';
-    const citeBlock =
-      rec.citation && showExternalBadge
-        ? `<div class="citation" data-citation="1"><button type="button" class="citation-copy" data-copy-citation="1">Copy citation</button> ${escapeHtml(rec.citation)}</div>`
-        : rec.fixture_role === 'game_authored'
-          ? `<div class="citation game-authored">Game-authored — no external source citation badge.</div>`
-          : rec.fixture_role === 'mock_sample'
-            ? `<div class="citation mock-warning"><span class="mock-badge">MOCK/SAMPLE</span> Not an externally verified source.</div>`
-            : `<div class="citation">Citation unavailable / needs verification.</div>`;
+    let citeBlock: string;
+    if (rec.fixture_role === 'game_authored') {
+      citeBlock = `<div class="citation game-authored">Game-authored — no external source citation badge.</div>`;
+    } else if (rec.fixture_role === 'mock_sample') {
+      citeBlock = `<div class="citation mock-warning"><span class="mock-badge">MOCK/SAMPLE</span> Not an externally verified source.</div>`;
+    } else if (rec.citation?.trim()) {
+      const badgeNote = showExternalBadge
+        ? ''
+        : ' <em>(fixture / needs verification — not source_verified)</em>';
+      citeBlock = `<div class="citation" data-citation="1"><button type="button" class="citation-copy" data-copy-citation="1">Copy citation</button> ${escapeHtml(rec.citation)}${badgeNote}</div>`;
+    } else {
+      citeBlock = `<div class="citation">Citation unavailable / needs verification.</div>`;
+    }
 
     return `
       <div class="scientific-sources" data-fixture-role="${escapeHtml(rec.fixture_role ?? '')}">

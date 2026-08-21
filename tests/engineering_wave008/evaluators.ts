@@ -38,6 +38,9 @@ export function evaluate_game_aol_001(): EvalResult {
   const controls = (neg.controls as Record<string, unknown> | undefined) ?? {};
   const ok =
     cov.COVERAGE_DENOMINATOR_EXECUTABLE === true &&
+    cov.DENOMINATOR_EXPLICIT === true &&
+    cov.SCOPE_TOTAL_GT_DOCUMENTED === true &&
+    cov.ADDING_UNDOCUMENTED_DECREASES_PERCENT === true &&
     cov.COMPLETENESS_OVERCLAIM_SABOTAGE_FAILS === true &&
     cov.ok === true &&
     controls.coverage_100_without_denominator === true;
@@ -47,8 +50,11 @@ export function evaluate_game_aol_001(): EvalResult {
     classification: ok ? 'IMPLEMENTED_AND_VALIDATED' : 'IMPLEMENTED_VALIDATION_OPEN',
     evidence: {
       COVERAGE_SCOPE: ok,
-      denominator_label: cov.denominator_label ?? null,
+      DENOMINATOR_EXPLICIT: cov.DENOMINATOR_EXPLICIT === true,
+      SCOPE_TOTAL_GT_DOCUMENTED: cov.SCOPE_TOTAL_GT_DOCUMENTED === true,
+      ADDING_UNDOCUMENTED_DECREASES_PERCENT: cov.ADDING_UNDOCUMENTED_DECREASES_PERCENT === true,
       COMPLETENESS_OVERCLAIM_SABOTAGE_FAILS: cov.COMPLETENESS_OVERCLAIM_SABOTAGE_FAILS === true,
+      denominator_label: cov.denominator_label ?? null,
     },
   };
 }
@@ -163,13 +169,21 @@ export function evaluate_game_aol_009(): EvalResult {
   const ok =
     ver.SNAPSHOT_BOUND === true &&
     snap.MANIFEST_HASH_OK === true &&
+    snap.VALIDATE_SNAPSHOT_MANIFEST === true &&
     repro.REPRODUCIBLE === true &&
+    repro.INDEPENDENT_AB === true &&
+    repro.TAMPER_REJECTED === true &&
     ver.ok === true;
   return {
     requirement_id: 'GAME-AOL-009',
     evaluator_name: 'evaluate_game_aol_009',
     classification: ok ? 'IMPLEMENTED_AND_VALIDATED' : 'IMPLEMENTED_VALIDATION_OPEN',
-    evidence: { SOURCE_VERSION: ok, ...ver, MANIFEST_HASH_OK: snap.MANIFEST_HASH_OK === true },
+    evidence: {
+      SOURCE_VERSION: ok,
+      ...ver,
+      MANIFEST_HASH_OK: snap.MANIFEST_HASH_OK === true,
+      TAMPER_REJECTED: repro.TAMPER_REJECTED === true,
+    },
   };
 }
 
