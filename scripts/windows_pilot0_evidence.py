@@ -43,6 +43,19 @@ def head_sha() -> str:
     return subprocess.check_output(["git", "rev-parse", "HEAD"], cwd=ROOT, text=True).strip()
 
 
+def win_cmd(name: str) -> str:
+    """Resolve npm/pnpm/corepack on Windows where shims are *.cmd."""
+    if platform.system() != "Windows":
+        return name
+    for cand in (f"{name}.cmd", name):
+        from shutil import which
+
+        found = which(cand)
+        if found:
+            return found
+    return f"{name}.cmd"
+
+
 def main() -> int:
     if platform.system() != "Windows":
         print("REFUSE: must run on Windows", file=sys.stderr)
@@ -62,10 +75,10 @@ def main() -> int:
     checks["fresh_windows_vm"] = {"status": "PASS", "detail": meta}
     checks["full_vp_promotion"] = {"status": "NOT_CLAIMED"}
 
-    install = subprocess.run(["npm", "ci"], cwd=ROOT, text=True, capture_output=True)
+    install = subprocess.run([win_cmd("npm"), "ci"], cwd=ROOT, text=True, capture_output=True)
     if install.returncode != 0:
-        install = subprocess.run(["npm", "install"], cwd=ROOT, text=True, capture_output=True)
-    build = subprocess.run(["npm", "run", "build"], cwd=ROOT, text=True, capture_output=True)
+        install = subprocess.run([win_cmd("npm"), "install"], cwd=ROOT, text=True, capture_output=True)
+    build = subprocess.run([win_cmd("npm"), "run", "build"], cwd=ROOT, text=True, capture_output=True)
     index = DIST / "index.html"
     checks["compile_package"] = {
         "status": "PASS" if index.is_file() and build.returncode == 0 else "FAIL",
