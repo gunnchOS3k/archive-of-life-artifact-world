@@ -1,0 +1,1883 @@
+{
+  "asset_count": 136,
+  "game_id": "archive-of-life-artifact-world",
+  "inventory_count": 136,
+  "inventory_path": "RIGHTS_INVENTORY_FULL.json",
+  "inventory_sample": [
+    {
+      "bytes": 272125,
+      "ext": ".png",
+      "license": null,
+      "path": "android/app/src/main/res/drawable-land-hdpi/splash.png",
+      "quarantine_mode": "ledger_only",
+      "reason": "no provenance entry for binary asset path",
+      "sha256": "8c0a53b455685a6cbe93475574c4de3f179c195966c714edc951b1eb76096b07",
+      "status": "UNPROVENANCED"
+    },
+    {
+      "bytes": 115328,
+      "ext": ".png",
+      "license": null,
+      "path": "android/app/src/main/res/drawable-land-mdpi/splash.png",
+      "quarantine_mode": "ledger_only",
+      "reason": "no provenance entry for binary asset path",
+      "sha256": "6637bd8f9ca2a583f17c93ea84826ca2f22599548ecb9cc0ce415a3112778568",
+      "status": "UNPROVENANCED"
+    },
+    {
+      "bytes": 672459,
+      "ext": ".png",
+      "license": null,
+      "path": "android/app/src/main/res/drawable-land-xhdpi/splash.png",
+      "quarantine_mode": "ledger_only",
+      "reason": "no provenance entry for binary asset path",
+      "sha256": "b934e7e12b4a1cdbdc3e5e040a1a8e541c778b45ecdab4960db79f0c12b4291c",
+      "status": "UNPROVENANCED"
+    },
+    {
+      "bytes": 1551117,
+      "ext": ".png",
+      "license": null,
+      "path": "android/app/src/main/res/drawable-land-xxhdpi/splash.png",
+      "quarantine_mode": "ledger_only",
+      "reason": "no provenance entry for binary asset path",
+      "sha256": "4747bc4942f001edef0b0b3e6cfecb799af89f8ecf4a480fc84747652046eadb",
+      "status": "UNPROVENANCED"
+    },
+    {
+      "bytes": 3143299,
+      "ext": ".png",
+      "license": null,
+      "path": "android/app/src/main/res/drawable-land-xxxhdpi/splash.png",
+      "quarantine_mode": "ledger_only",
+      "reason": "no provenance entry for binary asset path",
+      "sha256": "545d616c7925b1c87159dc3c2ddc162bf9f6c00a2627fc2a470563a1411440e7",
+      "status": "UNPROVENANCED"
+    },
+    {
+      "bytes": 276732,
+      "ext": ".png",
+      "license": null,
+      "path": "android/app/src/main/res/drawable-port-hdpi/splash.png",
+      "quarantine_mode": "ledger_only",
+      "reason": "no provenance entry for binary asset path",
+      "sha256": "164cca219a6427eb219f6aefdc4256e3e6551cf3eae7dc5d9f8307d948127602",
+      "status": "UNPROVENANCED"
+    },
+    {
+      "bytes": 117629,
+      "ext": ".png",
+      "license": null,
+      "path": "android/app/src/main/res/drawable-port-mdpi/splash.png",
+      "quarantine_mode": "ledger_only",
+      "reason": "no provenance entry for binary asset path",
+      "sha256": "72083581801770f253f19256aeb45ac99c90c94402f1a22fd0616a65dcbb493a",
+      "status": "UNPROVENANCED"
+    },
+    {
+      "bytes": 690324,
+      "ext": ".png",
+      "license": null,
+      "path": "android/app/src/main/res/drawable-port-xhdpi/splash.png",
+      "quarantine_mode": "ledger_only",
+      "reason": "no provenance entry for binary asset path",
+      "sha256": "34e7b853d85137f38efb0e7073599593c555707de9c24af58e073025ea53d847",
+      "status": "UNPROVENANCED"
+    },
+    {
+      "bytes": 1575354,
+      "ext": ".png",
+      "license": null,
+      "path": "android/app/src/main/res/drawable-port-xxhdpi/splash.png",
+      "quarantine_mode": "ledger_only",
+      "reason": "no provenance entry for binary asset path",
+      "sha256": "5a0d11068fbd6f022783e0ec12f54212869346ded78e972594334182c6d1c709",
+      "status": "UNPROVENANCED"
+    },
+    {
+      "bytes": 3128568,
+      "ext": ".png",
+      "license": null,
+      "path": "android/app/src/main/res/drawable-port-xxxhdpi/splash.png",
+      "quarantine_mode": "ledger_only",
+      "reason": "no provenance entry for binary asset path",
+      "sha256": "e85065508465f4ab7f63c42d834f337bbc2c75231b44a95b673ad84882941a6b",
+      "status": "UNPROVENANCED"
+    },
+    {
+      "bytes": 276732,
+      "ext": ".png",
+      "license": null,
+      "path": "android/app/src/main/res/drawable/splash.png",
+      "quarantine_mode": "ledger_only",
+      "reason": "no provenance entry for binary asset path",
+      "sha256": "164cca219a6427eb219f6aefdc4256e3e6551cf3eae7dc5d9f8307d948127602",
+      "status": "UNPROVENANCED"
+    },
+    {
+      "bytes": 10819,
+      "ext": ".png",
+      "license": null,
+      "path": "android/app/src/main/res/mipmap-hdpi/ic_launcher.png",
+      "quarantine_mode": "ledger_only",
+      "reason": "no provenance entry for binary asset path",
+      "sha256": "0f55064283bbab03406f5f9043bffc4dcd3dd08d6f7870519afbd36c6bb88a3f",
+      "status": "UNPROVENANCED"
+    },
+    {
+      "bytes": 10819,
+      "ext": ".png",
+      "license": null,
+      "path": "android/app/src/main/res/mipmap-hdpi/ic_launcher_foreground.png",
+      "quarantine_mode": "ledger_only",
+      "reason": "no provenance entry for binary asset path",
+      "sha256": "0f55064283bbab03406f5f9043bffc4dcd3dd08d6f7870519afbd36c6bb88a3f",
+      "status": "UNPROVENANCED"
+    },
+    {
+      "bytes": 10819,
+      "ext": ".png",
+      "license": null,
+      "path": "android/app/src/main/res/mipmap-hdpi/ic_launcher_round.png",
+      "quarantine_mode": "ledger_only",
+      "reason": "no provenance entry for binary asset path",
+      "sha256": "0f55064283bbab03406f5f9043bffc4dcd3dd08d6f7870519afbd36c6bb88a3f",
+      "status": "UNPROVENANCED"
+    },
+    {
+      "bytes": 5190,
+      "ext": ".png",
+      "license": null,
+      "path": "android/app/src/main/res/mipmap-mdpi/ic_launcher.png",
+      "quarantine_mode": "ledger_only",
+      "reason": "no provenance entry for binary asset path",
+      "sha256": "1d9181a14bdcdba32538b1b498b974050426af2694b59617be951e36d1404301",
+      "status": "UNPROVENANCED"
+    },
+    {
+      "bytes": 5190,
+      "ext": ".png",
+      "license": null,
+      "path": "android/app/src/main/res/mipmap-mdpi/ic_launcher_foreground.png",
+      "quarantine_mode": "ledger_only",
+      "reason": "no provenance entry for binary asset path",
+      "sha256": "1d9181a14bdcdba32538b1b498b974050426af2694b59617be951e36d1404301",
+      "status": "UNPROVENANCED"
+    },
+    {
+      "bytes": 5190,
+      "ext": ".png",
+      "license": null,
+      "path": "android/app/src/main/res/mipmap-mdpi/ic_launcher_round.png",
+      "quarantine_mode": "ledger_only",
+      "reason": "no provenance entry for binary asset path",
+      "sha256": "1d9181a14bdcdba32538b1b498b974050426af2694b59617be951e36d1404301",
+      "status": "UNPROVENANCED"
+    },
+    {
+      "bytes": 18459,
+      "ext": ".png",
+      "license": null,
+      "path": "android/app/src/main/res/mipmap-xhdpi/ic_launcher.png",
+      "quarantine_mode": "ledger_only",
+      "reason": "no provenance entry for binary asset path",
+      "sha256": "ef4f2de1164efb54ddaa1b76913a1cce61da621d2f665e987afd1836d2ece0f2",
+      "status": "UNPROVENANCED"
+    },
+    {
+      "bytes": 18459,
+      "ext": ".png",
+      "license": null,
+      "path": "android/app/src/main/res/mipmap-xhdpi/ic_launcher_foreground.png",
+      "quarantine_mode": "ledger_only",
+      "reason": "no provenance entry for binary asset path",
+      "sha256": "ef4f2de1164efb54ddaa1b76913a1cce61da621d2f665e987afd1836d2ece0f2",
+      "status": "UNPROVENANCED"
+    },
+    {
+      "bytes": 18459,
+      "ext": ".png",
+      "license": null,
+      "path": "android/app/src/main/res/mipmap-xhdpi/ic_launcher_round.png",
+      "quarantine_mode": "ledger_only",
+      "reason": "no provenance entry for binary asset path",
+      "sha256": "ef4f2de1164efb54ddaa1b76913a1cce61da621d2f665e987afd1836d2ece0f2",
+      "status": "UNPROVENANCED"
+    },
+    {
+      "bytes": 39838,
+      "ext": ".png",
+      "license": null,
+      "path": "android/app/src/main/res/mipmap-xxhdpi/ic_launcher.png",
+      "quarantine_mode": "ledger_only",
+      "reason": "no provenance entry for binary asset path",
+      "sha256": "a0219325b27f231aaf3e07137e671e88826871f70c011681ed9e7780a8094fff",
+      "status": "UNPROVENANCED"
+    },
+    {
+      "bytes": 39838,
+      "ext": ".png",
+      "license": null,
+      "path": "android/app/src/main/res/mipmap-xxhdpi/ic_launcher_foreground.png",
+      "quarantine_mode": "ledger_only",
+      "reason": "no provenance entry for binary asset path",
+      "sha256": "a0219325b27f231aaf3e07137e671e88826871f70c011681ed9e7780a8094fff",
+      "status": "UNPROVENANCED"
+    },
+    {
+      "bytes": 39838,
+      "ext": ".png",
+      "license": null,
+      "path": "android/app/src/main/res/mipmap-xxhdpi/ic_launcher_round.png",
+      "quarantine_mode": "ledger_only",
+      "reason": "no provenance entry for binary asset path",
+      "sha256": "a0219325b27f231aaf3e07137e671e88826871f70c011681ed9e7780a8094fff",
+      "status": "UNPROVENANCED"
+    },
+    {
+      "bytes": 69123,
+      "ext": ".png",
+      "license": null,
+      "path": "android/app/src/main/res/mipmap-xxxhdpi/ic_launcher.png",
+      "quarantine_mode": "ledger_only",
+      "reason": "no provenance entry for binary asset path",
+      "sha256": "9f4501397b015522da4e7b6aed5c66ce57e879bf3ca1caa987f1b9d859e21a0b",
+      "status": "UNPROVENANCED"
+    },
+    {
+      "bytes": 69123,
+      "ext": ".png",
+      "license": null,
+      "path": "android/app/src/main/res/mipmap-xxxhdpi/ic_launcher_foreground.png",
+      "quarantine_mode": "ledger_only",
+      "reason": "no provenance entry for binary asset path",
+      "sha256": "9f4501397b015522da4e7b6aed5c66ce57e879bf3ca1caa987f1b9d859e21a0b",
+      "status": "UNPROVENANCED"
+    },
+    {
+      "bytes": 69123,
+      "ext": ".png",
+      "license": null,
+      "path": "android/app/src/main/res/mipmap-xxxhdpi/ic_launcher_round.png",
+      "quarantine_mode": "ledger_only",
+      "reason": "no provenance entry for binary asset path",
+      "sha256": "9f4501397b015522da4e7b6aed5c66ce57e879bf3ca1caa987f1b9d859e21a0b",
+      "status": "UNPROVENANCED"
+    },
+    {
+      "bytes": 185101,
+      "ext": ".png",
+      "license": null,
+      "path": "docs/product-quality/evidence/aol-01-startup.png",
+      "quarantine_mode": "ledger_only",
+      "reason": "no provenance entry for binary asset path",
+      "sha256": "efcd96513a3fa8548d973a6d3eff55980022327adb1988681216461334c4c762",
+      "status": "UNPROVENANCED"
+    },
+    {
+      "bytes": 147474,
+      "ext": ".png",
+      "license": null,
+      "path": "docs/product-quality/evidence/aol-02-savanna-evidence.png",
+      "quarantine_mode": "ledger_only",
+      "reason": "no provenance entry for binary asset path",
+      "sha256": "6d52302f406dff435991d296a22e891d34f5015c0921a57d0f5a6cd81d3377cb",
+      "status": "UNPROVENANCED"
+    },
+    {
+      "bytes": 418157,
+      "ext": ".png",
+      "license": null,
+      "path": "docs/product-quality/evidence/aol-03-notebook-evidence.png",
+      "quarantine_mode": "ledger_only",
+      "reason": "no provenance entry for binary asset path",
+      "sha256": "47b9f4fa5239623127e0abe431d297eb8c4aa91309e32434159904d23612571f",
+      "status": "UNPROVENANCED"
+    },
+    {
+      "bytes": 143522,
+      "ext": ".png",
+      "license": null,
+      "path": "docs/product-quality/evidence/archive-expedition-wetland.png",
+      "quarantine_mode": "ledger_only",
+      "reason": "no provenance entry for binary asset path",
+      "sha256": "a17e3b1e8800ae0a2a2d225969a5db48e4e5420324390abf8483280868268c56",
+      "status": "UNPROVENANCED"
+    },
+    {
+      "bytes": 427591,
+      "ext": ".png",
+      "license": null,
+      "path": "docs/product-quality/evidence/archive-unlock-evidence.png",
+      "quarantine_mode": "ledger_only",
+      "reason": "no provenance entry for binary asset path",
+      "sha256": "a7073e03a5b30a0a1f9b7f74ce26a0c1993111ca2f0ed8479cdaaefe60eabdc1",
+      "status": "UNPROVENANCED"
+    },
+    {
+      "bytes": 0,
+      "ext": ".png",
+      "license": null,
+      "path": "docs/product-quality/evidence/pixel-archive/00-current-open.png",
+      "quarantine_mode": "ledger_only",
+      "reason": "no provenance entry for binary asset path",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "status": "UNPROVENANCED"
+    },
+    {
+      "bytes": 253155,
+      "ext": ".png",
+      "license": null,
+      "path": "docs/product-quality/evidence/pixel-archive/00-current.png",
+      "quarantine_mode": "ledger_only",
+      "reason": "no provenance entry for binary asset path",
+      "sha256": "e8aab7278dbfa573c5f2f5146499e85057a9bad261df62dae7bcfcfeca5c7aea",
+      "status": "UNPROVENANCED"
+    },
+    {
+      "bytes": 252536,
+      "ext": ".png",
+      "license": null,
+      "path": "docs/product-quality/evidence/pixel-archive/00b-after-snap.png",
+      "quarantine_mode": "ledger_only",
+      "reason": "no provenance entry for binary asset path",
+      "sha256": "8c758ff6e107c99eddeff19325fd1464454feec0c8777695bfd7f65898ca4ae1",
+      "status": "UNPROVENANCED"
+    },
+    {
+      "bytes": 1289287,
+      "ext": ".png",
+      "license": null,
+      "path": "docs/product-quality/evidence/pixel-archive/01-app-drawer.png",
+      "quarantine_mode": "ledger_only",
+      "reason": "no provenance entry for binary asset path",
+      "sha256": "00a6b05ff28284dcc300e96d24b91e042a00961001da5dcb0ce0154fadcd8ddc",
+      "status": "UNPROVENANCED"
+    },
+    {
+      "bytes": 57490,
+      "ext": ".png",
+      "license": null,
+      "path": "docs/product-quality/evidence/pixel-archive/02-after-resume-or-splash.png",
+      "quarantine_mode": "ledger_only",
+      "reason": "no provenance entry for binary asset path",
+      "sha256": "1eabf6f166806ab7e56041362f8c819154364b4cfe3f46bd3d38d47e6cdd490a",
+      "status": "UNPROVENANCED"
+    },
+    {
+      "bytes": 471947,
+      "ext": ".png",
+      "license": null,
+      "path": "docs/product-quality/evidence/pixel-archive/02-splash.png",
+      "quarantine_mode": "ledger_only",
+      "reason": "no provenance entry for binary asset path",
+      "sha256": "1e79f3924373677f27575e9a665502bd110ac5251ce62cff008a13cfac0e299d",
+      "status": "UNPROVENANCED"
+    },
+    {
+      "bytes": 252090,
+      "ext": ".png",
+      "license": null,
+      "path": "docs/product-quality/evidence/pixel-archive/03-savanna-expedition.png",
+      "quarantine_mode": "ledger_only",
+      "reason": "no provenance entry for binary asset path",
+      "sha256": "21466788a03de8deb7600bc8047e1246b694411d44e64901d4aa064ca133adc4",
+      "status": "UNPROVENANCED"
+    },
+    {
+      "bytes": 207254,
+      "ext": ".png",
+      "license": null,
+      "path": "docs/product-quality/evidence/pixel-archive/03-savanna.png",
+      "quarantine_mode": "ledger_only",
+      "reason": "no provenance entry for binary asset path",
+      "sha256": "9e25750506fae1c7a9eb0caf9432a3b183e8b9e2050bba5fec3584d7277a6590",
+      "status": "UNPROVENANCED"
+    },
+    {
+      "bytes": 291426,
+      "ext": ".png",
+      "license": null,
+      "path": "docs/product-quality/evidence/pixel-archive/03b-held-movement.png",
+      "quarantine_mode": "ledger_only",
+      "reason": "no provenance entry for binary asset path",
+      "sha256": "c159e65fe043b1d151655d89ef781a764a1e10cb410c6ea7d41afee1a76c0bd0",
+      "status": "UNPROVENANCED"
+    },
+    {
+      "bytes": 228441,
+      "ext": ".png",
+      "license": null,
+      "path": "docs/product-quality/evidence/pixel-archive/04-observation.png",
+      "quarantine_mode": "ledger_only",
+      "reason": "no provenance entry for binary asset path",
+      "sha256": "1371ad9c11c066140c29b109f8e79daca30c25964c2f7d9c0dccd0d419160f76",
+      "status": "UNPROVENANCED"
+    },
+    {
+      "bytes": 244534,
+      "ext": ".png",
+      "license": null,
+      "path": "docs/product-quality/evidence/pixel-archive/05-artifact.png",
+      "quarantine_mode": "ledger_only",
+      "reason": "no provenance entry for binary asset path",
+      "sha256": "c6ab1ffa419d094968a4cdabf1b53c3ec65bb3e9eec4bdc5fae7dddb641b686c",
+      "status": "UNPROVENANCED"
+    },
+    {
+      "bytes": 339314,
+      "ext": ".png",
+      "license": null,
+      "path": "docs/product-quality/evidence/pixel-archive/06-notebook.png",
+      "quarantine_mode": "ledger_only",
+      "reason": "no provenance entry for binary asset path",
+      "sha256": "7e28ce615a38ce1e55646b2b408c305fa2111dd09f48526fe3ad0d99d304f8f6",
+      "status": "UNPROVENANCED"
+    },
+    {
+      "bytes": 328384,
+      "ext": ".png",
+      "license": null,
+      "path": "docs/product-quality/evidence/pixel-archive/07-sources-evidence-loaded.png",
+      "quarantine_mode": "ledger_only",
+      "reason": "no provenance entry for binary asset path",
+      "sha256": "836ada02c36fa44826d1262298e5916cda61e6963b49486bd60c2f7869bf2b0e",
+      "status": "UNPROVENANCED"
+    },
+    {
+      "bytes": 561507,
+      "ext": ".png",
+      "license": null,
+      "path": "docs/product-quality/evidence/pixel-archive/07-sources-evidence.png",
+      "quarantine_mode": "ledger_only",
+      "reason": "no provenance entry for binary asset path",
+      "sha256": "b65c6285e1c14a7eb0d558bec4578d4eec8354064cea0365d8dc3725169d16d5",
+      "status": "UNPROVENANCED"
+    },
+    {
+      "bytes": 393845,
+      "ext": ".png",
+      "license": null,
+      "path": "docs/product-quality/evidence/pixel-archive/07b-notebook-sources.png",
+      "quarantine_mode": "ledger_only",
+      "reason": "no provenance entry for binary asset path",
+      "sha256": "293b17d726450911a551b43c11bd57a55858a1af9b5f486289bbd44e6862161c",
+      "status": "UNPROVENANCED"
+    },
+    {
+      "bytes": 337705,
+      "ext": ".png",
+      "license": null,
+      "path": "docs/product-quality/evidence/pixel-archive/07c-sources-scrolled.png",
+      "quarantine_mode": "ledger_only",
+      "reason": "no provenance entry for binary asset path",
+      "sha256": "b397649c10e2f30e56a19d65b7381f532dd7b60f0217fee34210137588ed32ff",
+      "status": "UNPROVENANCED"
+    },
+    {
+      "bytes": 274549,
+      "ext": ".png",
+      "license": null,
+      "path": "docs/product-quality/evidence/pixel-archive/07d-archivedex-sources.png",
+      "quarantine_mode": "ledger_only",
+      "reason": "no provenance entry for binary asset path",
+      "sha256": "2e73993e499f12778c5f50da2b8f569e56f7e420663471771b45476b5bbb3b78",
+      "status": "UNPROVENANCED"
+    },
+    {
+      "bytes": 311516,
+      "ext": ".png",
+      "license": null,
+      "path": "docs/product-quality/evidence/pixel-archive/07e-sources-late.png",
+      "quarantine_mode": "ledger_only",
+      "reason": "no provenance entry for binary asset path",
+      "sha256": "0f11be9c1da24dee42c1e98db9516784157ab43e9356dfbabf5a2f01d4e0fe95",
+      "status": "UNPROVENANCED"
+    },
+    {
+      "bytes": 314238,
+      "ext": ".png",
+      "license": null,
+      "path": "docs/product-quality/evidence/pixel-archive/07f-sources-fields.png",
+      "quarantine_mode": "ledger_only",
+      "reason": "no provenance entry for binary asset path",
+      "sha256": "f89220b2038e20a010e8f0aa484921659d559def00de3296864ff3e36b08a600",
+      "status": "UNPROVENANCED"
+    }
+  ],
+  "policy": {
+    "commercial_music_licensed_claim": false,
+    "human_fun_balance_claim": false,
+    "no_fake_rights_clearance": true,
+    "unclear_assets_quarantined": true
+  },
+  "provenance_paths": [
+    "docs/SOURCE_PROVENANCE_POLICY.md",
+    "artifacts/engineering_wave008/LICENSE_TERMS_RESULT.json",
+    "LICENSE"
+  ],
+  "quarantine": [
+    {
+      "bytes": 272125,
+      "ext": ".png",
+      "license": null,
+      "path": "android/app/src/main/res/drawable-land-hdpi/splash.png",
+      "quarantine_mode": "ledger_only",
+      "reason": "no provenance entry for binary asset path",
+      "sha256": "8c0a53b455685a6cbe93475574c4de3f179c195966c714edc951b1eb76096b07",
+      "status": "UNPROVENANCED"
+    },
+    {
+      "bytes": 115328,
+      "ext": ".png",
+      "license": null,
+      "path": "android/app/src/main/res/drawable-land-mdpi/splash.png",
+      "quarantine_mode": "ledger_only",
+      "reason": "no provenance entry for binary asset path",
+      "sha256": "6637bd8f9ca2a583f17c93ea84826ca2f22599548ecb9cc0ce415a3112778568",
+      "status": "UNPROVENANCED"
+    },
+    {
+      "bytes": 672459,
+      "ext": ".png",
+      "license": null,
+      "path": "android/app/src/main/res/drawable-land-xhdpi/splash.png",
+      "quarantine_mode": "ledger_only",
+      "reason": "no provenance entry for binary asset path",
+      "sha256": "b934e7e12b4a1cdbdc3e5e040a1a8e541c778b45ecdab4960db79f0c12b4291c",
+      "status": "UNPROVENANCED"
+    },
+    {
+      "bytes": 1551117,
+      "ext": ".png",
+      "license": null,
+      "path": "android/app/src/main/res/drawable-land-xxhdpi/splash.png",
+      "quarantine_mode": "ledger_only",
+      "reason": "no provenance entry for binary asset path",
+      "sha256": "4747bc4942f001edef0b0b3e6cfecb799af89f8ecf4a480fc84747652046eadb",
+      "status": "UNPROVENANCED"
+    },
+    {
+      "bytes": 3143299,
+      "ext": ".png",
+      "license": null,
+      "path": "android/app/src/main/res/drawable-land-xxxhdpi/splash.png",
+      "quarantine_mode": "ledger_only",
+      "reason": "no provenance entry for binary asset path",
+      "sha256": "545d616c7925b1c87159dc3c2ddc162bf9f6c00a2627fc2a470563a1411440e7",
+      "status": "UNPROVENANCED"
+    },
+    {
+      "bytes": 276732,
+      "ext": ".png",
+      "license": null,
+      "path": "android/app/src/main/res/drawable-port-hdpi/splash.png",
+      "quarantine_mode": "ledger_only",
+      "reason": "no provenance entry for binary asset path",
+      "sha256": "164cca219a6427eb219f6aefdc4256e3e6551cf3eae7dc5d9f8307d948127602",
+      "status": "UNPROVENANCED"
+    },
+    {
+      "bytes": 117629,
+      "ext": ".png",
+      "license": null,
+      "path": "android/app/src/main/res/drawable-port-mdpi/splash.png",
+      "quarantine_mode": "ledger_only",
+      "reason": "no provenance entry for binary asset path",
+      "sha256": "72083581801770f253f19256aeb45ac99c90c94402f1a22fd0616a65dcbb493a",
+      "status": "UNPROVENANCED"
+    },
+    {
+      "bytes": 690324,
+      "ext": ".png",
+      "license": null,
+      "path": "android/app/src/main/res/drawable-port-xhdpi/splash.png",
+      "quarantine_mode": "ledger_only",
+      "reason": "no provenance entry for binary asset path",
+      "sha256": "34e7b853d85137f38efb0e7073599593c555707de9c24af58e073025ea53d847",
+      "status": "UNPROVENANCED"
+    },
+    {
+      "bytes": 1575354,
+      "ext": ".png",
+      "license": null,
+      "path": "android/app/src/main/res/drawable-port-xxhdpi/splash.png",
+      "quarantine_mode": "ledger_only",
+      "reason": "no provenance entry for binary asset path",
+      "sha256": "5a0d11068fbd6f022783e0ec12f54212869346ded78e972594334182c6d1c709",
+      "status": "UNPROVENANCED"
+    },
+    {
+      "bytes": 3128568,
+      "ext": ".png",
+      "license": null,
+      "path": "android/app/src/main/res/drawable-port-xxxhdpi/splash.png",
+      "quarantine_mode": "ledger_only",
+      "reason": "no provenance entry for binary asset path",
+      "sha256": "e85065508465f4ab7f63c42d834f337bbc2c75231b44a95b673ad84882941a6b",
+      "status": "UNPROVENANCED"
+    },
+    {
+      "bytes": 276732,
+      "ext": ".png",
+      "license": null,
+      "path": "android/app/src/main/res/drawable/splash.png",
+      "quarantine_mode": "ledger_only",
+      "reason": "no provenance entry for binary asset path",
+      "sha256": "164cca219a6427eb219f6aefdc4256e3e6551cf3eae7dc5d9f8307d948127602",
+      "status": "UNPROVENANCED"
+    },
+    {
+      "bytes": 10819,
+      "ext": ".png",
+      "license": null,
+      "path": "android/app/src/main/res/mipmap-hdpi/ic_launcher.png",
+      "quarantine_mode": "ledger_only",
+      "reason": "no provenance entry for binary asset path",
+      "sha256": "0f55064283bbab03406f5f9043bffc4dcd3dd08d6f7870519afbd36c6bb88a3f",
+      "status": "UNPROVENANCED"
+    },
+    {
+      "bytes": 10819,
+      "ext": ".png",
+      "license": null,
+      "path": "android/app/src/main/res/mipmap-hdpi/ic_launcher_foreground.png",
+      "quarantine_mode": "ledger_only",
+      "reason": "no provenance entry for binary asset path",
+      "sha256": "0f55064283bbab03406f5f9043bffc4dcd3dd08d6f7870519afbd36c6bb88a3f",
+      "status": "UNPROVENANCED"
+    },
+    {
+      "bytes": 10819,
+      "ext": ".png",
+      "license": null,
+      "path": "android/app/src/main/res/mipmap-hdpi/ic_launcher_round.png",
+      "quarantine_mode": "ledger_only",
+      "reason": "no provenance entry for binary asset path",
+      "sha256": "0f55064283bbab03406f5f9043bffc4dcd3dd08d6f7870519afbd36c6bb88a3f",
+      "status": "UNPROVENANCED"
+    },
+    {
+      "bytes": 5190,
+      "ext": ".png",
+      "license": null,
+      "path": "android/app/src/main/res/mipmap-mdpi/ic_launcher.png",
+      "quarantine_mode": "ledger_only",
+      "reason": "no provenance entry for binary asset path",
+      "sha256": "1d9181a14bdcdba32538b1b498b974050426af2694b59617be951e36d1404301",
+      "status": "UNPROVENANCED"
+    },
+    {
+      "bytes": 5190,
+      "ext": ".png",
+      "license": null,
+      "path": "android/app/src/main/res/mipmap-mdpi/ic_launcher_foreground.png",
+      "quarantine_mode": "ledger_only",
+      "reason": "no provenance entry for binary asset path",
+      "sha256": "1d9181a14bdcdba32538b1b498b974050426af2694b59617be951e36d1404301",
+      "status": "UNPROVENANCED"
+    },
+    {
+      "bytes": 5190,
+      "ext": ".png",
+      "license": null,
+      "path": "android/app/src/main/res/mipmap-mdpi/ic_launcher_round.png",
+      "quarantine_mode": "ledger_only",
+      "reason": "no provenance entry for binary asset path",
+      "sha256": "1d9181a14bdcdba32538b1b498b974050426af2694b59617be951e36d1404301",
+      "status": "UNPROVENANCED"
+    },
+    {
+      "bytes": 18459,
+      "ext": ".png",
+      "license": null,
+      "path": "android/app/src/main/res/mipmap-xhdpi/ic_launcher.png",
+      "quarantine_mode": "ledger_only",
+      "reason": "no provenance entry for binary asset path",
+      "sha256": "ef4f2de1164efb54ddaa1b76913a1cce61da621d2f665e987afd1836d2ece0f2",
+      "status": "UNPROVENANCED"
+    },
+    {
+      "bytes": 18459,
+      "ext": ".png",
+      "license": null,
+      "path": "android/app/src/main/res/mipmap-xhdpi/ic_launcher_foreground.png",
+      "quarantine_mode": "ledger_only",
+      "reason": "no provenance entry for binary asset path",
+      "sha256": "ef4f2de1164efb54ddaa1b76913a1cce61da621d2f665e987afd1836d2ece0f2",
+      "status": "UNPROVENANCED"
+    },
+    {
+      "bytes": 18459,
+      "ext": ".png",
+      "license": null,
+      "path": "android/app/src/main/res/mipmap-xhdpi/ic_launcher_round.png",
+      "quarantine_mode": "ledger_only",
+      "reason": "no provenance entry for binary asset path",
+      "sha256": "ef4f2de1164efb54ddaa1b76913a1cce61da621d2f665e987afd1836d2ece0f2",
+      "status": "UNPROVENANCED"
+    },
+    {
+      "bytes": 39838,
+      "ext": ".png",
+      "license": null,
+      "path": "android/app/src/main/res/mipmap-xxhdpi/ic_launcher.png",
+      "quarantine_mode": "ledger_only",
+      "reason": "no provenance entry for binary asset path",
+      "sha256": "a0219325b27f231aaf3e07137e671e88826871f70c011681ed9e7780a8094fff",
+      "status": "UNPROVENANCED"
+    },
+    {
+      "bytes": 39838,
+      "ext": ".png",
+      "license": null,
+      "path": "android/app/src/main/res/mipmap-xxhdpi/ic_launcher_foreground.png",
+      "quarantine_mode": "ledger_only",
+      "reason": "no provenance entry for binary asset path",
+      "sha256": "a0219325b27f231aaf3e07137e671e88826871f70c011681ed9e7780a8094fff",
+      "status": "UNPROVENANCED"
+    },
+    {
+      "bytes": 39838,
+      "ext": ".png",
+      "license": null,
+      "path": "android/app/src/main/res/mipmap-xxhdpi/ic_launcher_round.png",
+      "quarantine_mode": "ledger_only",
+      "reason": "no provenance entry for binary asset path",
+      "sha256": "a0219325b27f231aaf3e07137e671e88826871f70c011681ed9e7780a8094fff",
+      "status": "UNPROVENANCED"
+    },
+    {
+      "bytes": 69123,
+      "ext": ".png",
+      "license": null,
+      "path": "android/app/src/main/res/mipmap-xxxhdpi/ic_launcher.png",
+      "quarantine_mode": "ledger_only",
+      "reason": "no provenance entry for binary asset path",
+      "sha256": "9f4501397b015522da4e7b6aed5c66ce57e879bf3ca1caa987f1b9d859e21a0b",
+      "status": "UNPROVENANCED"
+    },
+    {
+      "bytes": 69123,
+      "ext": ".png",
+      "license": null,
+      "path": "android/app/src/main/res/mipmap-xxxhdpi/ic_launcher_foreground.png",
+      "quarantine_mode": "ledger_only",
+      "reason": "no provenance entry for binary asset path",
+      "sha256": "9f4501397b015522da4e7b6aed5c66ce57e879bf3ca1caa987f1b9d859e21a0b",
+      "status": "UNPROVENANCED"
+    },
+    {
+      "bytes": 69123,
+      "ext": ".png",
+      "license": null,
+      "path": "android/app/src/main/res/mipmap-xxxhdpi/ic_launcher_round.png",
+      "quarantine_mode": "ledger_only",
+      "reason": "no provenance entry for binary asset path",
+      "sha256": "9f4501397b015522da4e7b6aed5c66ce57e879bf3ca1caa987f1b9d859e21a0b",
+      "status": "UNPROVENANCED"
+    },
+    {
+      "bytes": 185101,
+      "ext": ".png",
+      "license": null,
+      "path": "docs/product-quality/evidence/aol-01-startup.png",
+      "quarantine_mode": "ledger_only",
+      "reason": "no provenance entry for binary asset path",
+      "sha256": "efcd96513a3fa8548d973a6d3eff55980022327adb1988681216461334c4c762",
+      "status": "UNPROVENANCED"
+    },
+    {
+      "bytes": 147474,
+      "ext": ".png",
+      "license": null,
+      "path": "docs/product-quality/evidence/aol-02-savanna-evidence.png",
+      "quarantine_mode": "ledger_only",
+      "reason": "no provenance entry for binary asset path",
+      "sha256": "6d52302f406dff435991d296a22e891d34f5015c0921a57d0f5a6cd81d3377cb",
+      "status": "UNPROVENANCED"
+    },
+    {
+      "bytes": 418157,
+      "ext": ".png",
+      "license": null,
+      "path": "docs/product-quality/evidence/aol-03-notebook-evidence.png",
+      "quarantine_mode": "ledger_only",
+      "reason": "no provenance entry for binary asset path",
+      "sha256": "47b9f4fa5239623127e0abe431d297eb8c4aa91309e32434159904d23612571f",
+      "status": "UNPROVENANCED"
+    },
+    {
+      "bytes": 143522,
+      "ext": ".png",
+      "license": null,
+      "path": "docs/product-quality/evidence/archive-expedition-wetland.png",
+      "quarantine_mode": "ledger_only",
+      "reason": "no provenance entry for binary asset path",
+      "sha256": "a17e3b1e8800ae0a2a2d225969a5db48e4e5420324390abf8483280868268c56",
+      "status": "UNPROVENANCED"
+    },
+    {
+      "bytes": 427591,
+      "ext": ".png",
+      "license": null,
+      "path": "docs/product-quality/evidence/archive-unlock-evidence.png",
+      "quarantine_mode": "ledger_only",
+      "reason": "no provenance entry for binary asset path",
+      "sha256": "a7073e03a5b30a0a1f9b7f74ce26a0c1993111ca2f0ed8479cdaaefe60eabdc1",
+      "status": "UNPROVENANCED"
+    },
+    {
+      "bytes": 0,
+      "ext": ".png",
+      "license": null,
+      "path": "docs/product-quality/evidence/pixel-archive/00-current-open.png",
+      "quarantine_mode": "ledger_only",
+      "reason": "no provenance entry for binary asset path",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "status": "UNPROVENANCED"
+    },
+    {
+      "bytes": 253155,
+      "ext": ".png",
+      "license": null,
+      "path": "docs/product-quality/evidence/pixel-archive/00-current.png",
+      "quarantine_mode": "ledger_only",
+      "reason": "no provenance entry for binary asset path",
+      "sha256": "e8aab7278dbfa573c5f2f5146499e85057a9bad261df62dae7bcfcfeca5c7aea",
+      "status": "UNPROVENANCED"
+    },
+    {
+      "bytes": 252536,
+      "ext": ".png",
+      "license": null,
+      "path": "docs/product-quality/evidence/pixel-archive/00b-after-snap.png",
+      "quarantine_mode": "ledger_only",
+      "reason": "no provenance entry for binary asset path",
+      "sha256": "8c758ff6e107c99eddeff19325fd1464454feec0c8777695bfd7f65898ca4ae1",
+      "status": "UNPROVENANCED"
+    },
+    {
+      "bytes": 1289287,
+      "ext": ".png",
+      "license": null,
+      "path": "docs/product-quality/evidence/pixel-archive/01-app-drawer.png",
+      "quarantine_mode": "ledger_only",
+      "reason": "no provenance entry for binary asset path",
+      "sha256": "00a6b05ff28284dcc300e96d24b91e042a00961001da5dcb0ce0154fadcd8ddc",
+      "status": "UNPROVENANCED"
+    },
+    {
+      "bytes": 57490,
+      "ext": ".png",
+      "license": null,
+      "path": "docs/product-quality/evidence/pixel-archive/02-after-resume-or-splash.png",
+      "quarantine_mode": "ledger_only",
+      "reason": "no provenance entry for binary asset path",
+      "sha256": "1eabf6f166806ab7e56041362f8c819154364b4cfe3f46bd3d38d47e6cdd490a",
+      "status": "UNPROVENANCED"
+    },
+    {
+      "bytes": 471947,
+      "ext": ".png",
+      "license": null,
+      "path": "docs/product-quality/evidence/pixel-archive/02-splash.png",
+      "quarantine_mode": "ledger_only",
+      "reason": "no provenance entry for binary asset path",
+      "sha256": "1e79f3924373677f27575e9a665502bd110ac5251ce62cff008a13cfac0e299d",
+      "status": "UNPROVENANCED"
+    },
+    {
+      "bytes": 252090,
+      "ext": ".png",
+      "license": null,
+      "path": "docs/product-quality/evidence/pixel-archive/03-savanna-expedition.png",
+      "quarantine_mode": "ledger_only",
+      "reason": "no provenance entry for binary asset path",
+      "sha256": "21466788a03de8deb7600bc8047e1246b694411d44e64901d4aa064ca133adc4",
+      "status": "UNPROVENANCED"
+    },
+    {
+      "bytes": 207254,
+      "ext": ".png",
+      "license": null,
+      "path": "docs/product-quality/evidence/pixel-archive/03-savanna.png",
+      "quarantine_mode": "ledger_only",
+      "reason": "no provenance entry for binary asset path",
+      "sha256": "9e25750506fae1c7a9eb0caf9432a3b183e8b9e2050bba5fec3584d7277a6590",
+      "status": "UNPROVENANCED"
+    },
+    {
+      "bytes": 291426,
+      "ext": ".png",
+      "license": null,
+      "path": "docs/product-quality/evidence/pixel-archive/03b-held-movement.png",
+      "quarantine_mode": "ledger_only",
+      "reason": "no provenance entry for binary asset path",
+      "sha256": "c159e65fe043b1d151655d89ef781a764a1e10cb410c6ea7d41afee1a76c0bd0",
+      "status": "UNPROVENANCED"
+    },
+    {
+      "bytes": 228441,
+      "ext": ".png",
+      "license": null,
+      "path": "docs/product-quality/evidence/pixel-archive/04-observation.png",
+      "quarantine_mode": "ledger_only",
+      "reason": "no provenance entry for binary asset path",
+      "sha256": "1371ad9c11c066140c29b109f8e79daca30c25964c2f7d9c0dccd0d419160f76",
+      "status": "UNPROVENANCED"
+    },
+    {
+      "bytes": 244534,
+      "ext": ".png",
+      "license": null,
+      "path": "docs/product-quality/evidence/pixel-archive/05-artifact.png",
+      "quarantine_mode": "ledger_only",
+      "reason": "no provenance entry for binary asset path",
+      "sha256": "c6ab1ffa419d094968a4cdabf1b53c3ec65bb3e9eec4bdc5fae7dddb641b686c",
+      "status": "UNPROVENANCED"
+    },
+    {
+      "bytes": 339314,
+      "ext": ".png",
+      "license": null,
+      "path": "docs/product-quality/evidence/pixel-archive/06-notebook.png",
+      "quarantine_mode": "ledger_only",
+      "reason": "no provenance entry for binary asset path",
+      "sha256": "7e28ce615a38ce1e55646b2b408c305fa2111dd09f48526fe3ad0d99d304f8f6",
+      "status": "UNPROVENANCED"
+    },
+    {
+      "bytes": 328384,
+      "ext": ".png",
+      "license": null,
+      "path": "docs/product-quality/evidence/pixel-archive/07-sources-evidence-loaded.png",
+      "quarantine_mode": "ledger_only",
+      "reason": "no provenance entry for binary asset path",
+      "sha256": "836ada02c36fa44826d1262298e5916cda61e6963b49486bd60c2f7869bf2b0e",
+      "status": "UNPROVENANCED"
+    },
+    {
+      "bytes": 561507,
+      "ext": ".png",
+      "license": null,
+      "path": "docs/product-quality/evidence/pixel-archive/07-sources-evidence.png",
+      "quarantine_mode": "ledger_only",
+      "reason": "no provenance entry for binary asset path",
+      "sha256": "b65c6285e1c14a7eb0d558bec4578d4eec8354064cea0365d8dc3725169d16d5",
+      "status": "UNPROVENANCED"
+    },
+    {
+      "bytes": 393845,
+      "ext": ".png",
+      "license": null,
+      "path": "docs/product-quality/evidence/pixel-archive/07b-notebook-sources.png",
+      "quarantine_mode": "ledger_only",
+      "reason": "no provenance entry for binary asset path",
+      "sha256": "293b17d726450911a551b43c11bd57a55858a1af9b5f486289bbd44e6862161c",
+      "status": "UNPROVENANCED"
+    },
+    {
+      "bytes": 337705,
+      "ext": ".png",
+      "license": null,
+      "path": "docs/product-quality/evidence/pixel-archive/07c-sources-scrolled.png",
+      "quarantine_mode": "ledger_only",
+      "reason": "no provenance entry for binary asset path",
+      "sha256": "b397649c10e2f30e56a19d65b7381f532dd7b60f0217fee34210137588ed32ff",
+      "status": "UNPROVENANCED"
+    },
+    {
+      "bytes": 274549,
+      "ext": ".png",
+      "license": null,
+      "path": "docs/product-quality/evidence/pixel-archive/07d-archivedex-sources.png",
+      "quarantine_mode": "ledger_only",
+      "reason": "no provenance entry for binary asset path",
+      "sha256": "2e73993e499f12778c5f50da2b8f569e56f7e420663471771b45476b5bbb3b78",
+      "status": "UNPROVENANCED"
+    },
+    {
+      "bytes": 311516,
+      "ext": ".png",
+      "license": null,
+      "path": "docs/product-quality/evidence/pixel-archive/07e-sources-late.png",
+      "quarantine_mode": "ledger_only",
+      "reason": "no provenance entry for binary asset path",
+      "sha256": "0f11be9c1da24dee42c1e98db9516784157ab43e9356dfbabf5a2f01d4e0fe95",
+      "status": "UNPROVENANCED"
+    },
+    {
+      "bytes": 314238,
+      "ext": ".png",
+      "license": null,
+      "path": "docs/product-quality/evidence/pixel-archive/07f-sources-fields.png",
+      "quarantine_mode": "ledger_only",
+      "reason": "no provenance entry for binary asset path",
+      "sha256": "f89220b2038e20a010e8f0aa484921659d559def00de3296864ff3e36b08a600",
+      "status": "UNPROVENANCED"
+    },
+    {
+      "bytes": 312458,
+      "ext": ".png",
+      "license": null,
+      "path": "docs/product-quality/evidence/pixel-archive/07g-dex-sources-tab.png",
+      "quarantine_mode": "ledger_only",
+      "reason": "no provenance entry for binary asset path",
+      "sha256": "2eeab03014e140c5160dba73705243af67f3771f2ef421321be5157a4d663844",
+      "status": "UNPROVENANCED"
+    },
+    {
+      "bytes": 263101,
+      "ext": ".png",
+      "license": null,
+      "path": "docs/product-quality/evidence/pixel-archive/08-lifeling.png",
+      "quarantine_mode": "ledger_only",
+      "reason": "no provenance entry for binary asset path",
+      "sha256": "e755a1b9195baf4dcf2b78ab98304b157c4369faa6da266698e6a95a269314cf",
+      "status": "UNPROVENANCED"
+    },
+    {
+      "bytes": 365227,
+      "ext": ".png",
+      "license": null,
+      "path": "docs/product-quality/evidence/pixel-archive/08-source-status-and-license.png",
+      "quarantine_mode": "ledger_only",
+      "reason": "no provenance entry for binary asset path",
+      "sha256": "1e6c54e2ed0a81c04cf47a5d7efa6dc49b4a45e07082b8127025cc2bb0e80141",
+      "status": "UNPROVENANCED"
+    },
+    {
+      "bytes": 401916,
+      "ext": ".png",
+      "license": null,
+      "path": "docs/product-quality/evidence/pixel-archive/08b-lifeling-equipped.png",
+      "quarantine_mode": "ledger_only",
+      "reason": "no provenance entry for binary asset path",
+      "sha256": "c113d67dcfc0b31f0245bf296704f76b89487db474d1e7005a732c5c99cb6362",
+      "status": "UNPROVENANCED"
+    },
+    {
+      "bytes": 334779,
+      "ext": ".png",
+      "license": null,
+      "path": "docs/product-quality/evidence/pixel-archive/09-ancient-swamp.png",
+      "quarantine_mode": "ledger_only",
+      "reason": "no provenance entry for binary asset path",
+      "sha256": "5ccfe81c820ce07b71eef18c3f20e77ef874e6cb81fd5d56e3316bbd8a8871bd",
+      "status": "UNPROVENANCED"
+    },
+    {
+      "bytes": 262102,
+      "ext": ".png",
+      "license": null,
+      "path": "docs/product-quality/evidence/pixel-archive/09-lifeling.png",
+      "quarantine_mode": "ledger_only",
+      "reason": "no provenance entry for binary asset path",
+      "sha256": "059999aaf8376f20c034503e91b005fa9bc327bf349df43b11a88995201cea30",
+      "status": "UNPROVENANCED"
+    },
+    {
+      "bytes": 228632,
+      "ext": ".png",
+      "license": null,
+      "path": "docs/product-quality/evidence/pixel-archive/09b-fossil-artifact.png",
+      "quarantine_mode": "ledger_only",
+      "reason": "no provenance entry for binary asset path",
+      "sha256": "21c712727617f8fd60cd6cde53290df3723cb3e8cf91b4be7a3db915100ef41a",
+      "status": "UNPROVENANCED"
+    },
+    {
+      "bytes": 346963,
+      "ext": ".png",
+      "license": null,
+      "path": "docs/product-quality/evidence/pixel-archive/09c-archivedex.png",
+      "quarantine_mode": "ledger_only",
+      "reason": "no provenance entry for binary asset path",
+      "sha256": "3c9882b92cdc74484ab30d911e1a0587ade74224a6162f5e19cfdd143cf45be1",
+      "status": "UNPROVENANCED"
+    },
+    {
+      "bytes": 296793,
+      "ext": ".png",
+      "license": null,
+      "path": "docs/product-quality/evidence/pixel-archive/10-ancient-swamp.png",
+      "quarantine_mode": "ledger_only",
+      "reason": "no provenance entry for binary asset path",
+      "sha256": "62085d918bfed3c911e5a8a5417881f46870d89eae9b79cf2ecf253e3084de6f",
+      "status": "UNPROVENANCED"
+    },
+    {
+      "bytes": 331711,
+      "ext": ".png",
+      "license": null,
+      "path": "docs/product-quality/evidence/pixel-archive/10-persistence.png",
+      "quarantine_mode": "ledger_only",
+      "reason": "no provenance entry for binary asset path",
+      "sha256": "fe9daa7564444d93671035d6480dcd4d70e45570e48a668172544e4ffe57805b",
+      "status": "UNPROVENANCED"
+    },
+    {
+      "bytes": 386870,
+      "ext": ".png",
+      "license": null,
+      "path": "docs/product-quality/evidence/pixel-archive/10a-resume.png",
+      "quarantine_mode": "ledger_only",
+      "reason": "no provenance entry for binary asset path",
+      "sha256": "b1fa9507552e5520fd5d5f29ea53d40478b12ccfdaa4822f91ade7b88896c64d",
+      "status": "UNPROVENANCED"
+    },
+    {
+      "bytes": 344129,
+      "ext": ".png",
+      "license": null,
+      "path": "docs/product-quality/evidence/pixel-archive/10b-notebook-persist.png",
+      "quarantine_mode": "ledger_only",
+      "reason": "no provenance entry for binary asset path",
+      "sha256": "fe0a2036c28f4be04023d8c200e44b3dff1a06643d59f0a0e39c33b7c6341774",
+      "status": "UNPROVENANCED"
+    },
+    {
+      "bytes": 265569,
+      "ext": ".png",
+      "license": null,
+      "path": "docs/product-quality/evidence/pixel-archive/10c-lifeling-persist.png",
+      "quarantine_mode": "ledger_only",
+      "reason": "no provenance entry for binary asset path",
+      "sha256": "0185a8f993a78c73b5ae2d4918985a46c4b0dcad4f4ce295926f71046bf32004",
+      "status": "UNPROVENANCED"
+    },
+    {
+      "bytes": 267961,
+      "ext": ".png",
+      "license": null,
+      "path": "docs/product-quality/evidence/pixel-archive/11-after-back.png",
+      "quarantine_mode": "ledger_only",
+      "reason": "no provenance entry for binary asset path",
+      "sha256": "55310b21efc846dde930e51677518f22e7765bb339a439039979306efc586785",
+      "status": "UNPROVENANCED"
+    },
+    {
+      "bytes": 366744,
+      "ext": ".png",
+      "license": null,
+      "path": "docs/product-quality/evidence/pixel-archive/11-historical-evidence.png",
+      "quarantine_mode": "ledger_only",
+      "reason": "no provenance entry for binary asset path",
+      "sha256": "61478a3b780902124c2ab254fc87f5544a1a686a5fc7522ce7c74f9085eba2d7",
+      "status": "UNPROVENANCED"
+    },
+    {
+      "bytes": 339472,
+      "ext": ".png",
+      "license": null,
+      "path": "docs/product-quality/evidence/pixel-archive/12-persistence.png",
+      "quarantine_mode": "ledger_only",
+      "reason": "no provenance entry for binary asset path",
+      "sha256": "dcd722235b0abbd858e75255ed6213d3304605fd6f013bc7754f70d4bc112f1b",
+      "status": "UNPROVENANCED"
+    },
+    {
+      "bytes": 377280,
+      "ext": ".png",
+      "license": null,
+      "path": "docs/product-quality/evidence/pixel-archive/13-evidence-after-relaunch.png",
+      "quarantine_mode": "ledger_only",
+      "reason": "no provenance entry for binary asset path",
+      "sha256": "35b45d391ddf1fb7047923a4e90e4d06d35e99ace10d571322d4a0c70bb28816",
+      "status": "UNPROVENANCED"
+    },
+    {
+      "bytes": 942913,
+      "ext": ".png",
+      "license": null,
+      "path": "docs/product-quality/evidence/pixel-archive/14-four-apps-drawer.png",
+      "quarantine_mode": "ledger_only",
+      "reason": "no provenance entry for binary asset path",
+      "sha256": "7f64dad9fe25574cc20d9fcc8cdde0354d37c50949f3177ea093c52b94c53f1e",
+      "status": "UNPROVENANCED"
+    },
+    {
+      "bytes": 83670203,
+      "ext": ".mp4",
+      "license": null,
+      "path": "docs/product-quality/evidence/pixel-archive/archive-pixel-acceptance.mp4",
+      "quarantine_mode": "ledger_only",
+      "reason": "no provenance entry for binary asset path",
+      "sha256": null,
+      "status": "UNPROVENANCED"
+    },
+    {
+      "bytes": 561507,
+      "ext": ".png",
+      "license": null,
+      "path": "docs/product-quality/evidence/pixel-archive/rec-frame-40s.png",
+      "quarantine_mode": "ledger_only",
+      "reason": "no provenance entry for binary asset path",
+      "sha256": "b65c6285e1c14a7eb0d558bec4578d4eec8354064cea0365d8dc3725169d16d5",
+      "status": "UNPROVENANCED"
+    },
+    {
+      "bytes": 528477,
+      "ext": ".png",
+      "license": null,
+      "path": "docs/product-quality/evidence/pixel-archive/rec-frame-55s.png",
+      "quarantine_mode": "ledger_only",
+      "reason": "no provenance entry for binary asset path",
+      "sha256": "8c36c0c83150ce7e545e5028aeefb50a958c42040782f78c3d55b5232d1ed369",
+      "status": "UNPROVENANCED"
+    },
+    {
+      "bytes": 335956,
+      "ext": ".png",
+      "license": null,
+      "path": "docs/product-quality/evidence/pixel-archive/rec-frame-70s.png",
+      "quarantine_mode": "ledger_only",
+      "reason": "no provenance entry for binary asset path",
+      "sha256": "c5535d08e25a2afb769eb4f85c2d85a3a5f2a23f5b122a9d58f8c8a47a3ab14d",
+      "status": "UNPROVENANCED"
+    },
+    {
+      "bytes": 322594,
+      "ext": ".png",
+      "license": null,
+      "path": "docs/product-quality/evidence/pixel-archive/sources-loading-failure-after-25s.png",
+      "quarantine_mode": "ledger_only",
+      "reason": "no provenance entry for binary asset path",
+      "sha256": "da4d96c6a2049ab8ef9faf9b05ef8d66fc18ddfe9166229eb4b7d08b25d0173f",
+      "status": "UNPROVENANCED"
+    },
+    {
+      "bytes": 325317,
+      "ext": ".png",
+      "license": null,
+      "path": "docs/product-quality/evidence/pixel-archive/sources-loading-failure.png",
+      "quarantine_mode": "ledger_only",
+      "reason": "no provenance entry for binary asset path",
+      "sha256": "6611c2159a86f85362accd6eb16c948c0453b499c5f9275cba7bec51bdd59254",
+      "status": "UNPROVENANCED"
+    },
+    {
+      "bytes": 336072,
+      "ext": ".png",
+      "license": null,
+      "path": "docs/product-quality/evidence/pixel-archive/sources-loading-state-before.png",
+      "quarantine_mode": "ledger_only",
+      "reason": "no provenance entry for binary asset path",
+      "sha256": "89fc0420c2eed6fd794b15cb33a3f6c98ee6ccdfb20d730b8c5be069ef3da09e",
+      "status": "UNPROVENANCED"
+    },
+    {
+      "bytes": 471553,
+      "ext": ".png",
+      "license": null,
+      "path": "docs/product-quality/evidence/pixel-final/01-cold-launch.png",
+      "quarantine_mode": "ledger_only",
+      "reason": "no provenance entry for binary asset path",
+      "sha256": "fae9942eeb83b9e4c784c2673a238c466ac18754da0e026717bd68718e26c520",
+      "status": "UNPROVENANCED"
+    },
+    {
+      "bytes": 471678,
+      "ext": ".png",
+      "license": null,
+      "path": "docs/product-quality/evidence/pixel-final/02-after-expedition.png",
+      "quarantine_mode": "ledger_only",
+      "reason": "no provenance entry for binary asset path",
+      "sha256": "5d64d44db806082052a6ad7adbe55f4af1512cca2136120f3b24cd16473a22a7",
+      "status": "UNPROVENANCED"
+    },
+    {
+      "bytes": 471502,
+      "ext": ".png",
+      "license": null,
+      "path": "docs/product-quality/evidence/pixel-final/02b-expedition.png",
+      "quarantine_mode": "ledger_only",
+      "reason": "no provenance entry for binary asset path",
+      "sha256": "299e57a7a8bce04f2c549878947c425c03419ba86bd047b2354fc35f819debc6",
+      "status": "UNPROVENANCED"
+    },
+    {
+      "bytes": 248137,
+      "ext": ".png",
+      "license": null,
+      "path": "docs/product-quality/evidence/pixel-final/02c-multi-tap.png",
+      "quarantine_mode": "ledger_only",
+      "reason": "no provenance entry for binary asset path",
+      "sha256": "ff7a43852dc28babf4794f13c83cfe22b8b7792fd5ad7c105d33a9960fb04db3",
+      "status": "UNPROVENANCED"
+    },
+    {
+      "bytes": 220035,
+      "ext": ".png",
+      "license": null,
+      "path": "docs/product-quality/evidence/pixel-final/02d-refocus.png",
+      "quarantine_mode": "ledger_only",
+      "reason": "no provenance entry for binary asset path",
+      "sha256": "3d027e3012f1f6c3cd6e3797bc8362790df07afb9034b29b899a5c0f617a6e2f",
+      "status": "UNPROVENANCED"
+    },
+    {
+      "bytes": 220055,
+      "ext": ".png",
+      "license": null,
+      "path": "docs/product-quality/evidence/pixel-final/03-after-tap.png",
+      "quarantine_mode": "ledger_only",
+      "reason": "no provenance entry for binary asset path",
+      "sha256": "992403461e5d772fe3d13128eb63847bad95fe2e77caba36f38e4a6c43b00391",
+      "status": "UNPROVENANCED"
+    },
+    {
+      "bytes": 220365,
+      "ext": ".png",
+      "license": null,
+      "path": "docs/product-quality/evidence/pixel-final/04-swamp-tap.png",
+      "quarantine_mode": "ledger_only",
+      "reason": "no provenance entry for binary asset path",
+      "sha256": "c918d5b2d14d11ee8e41d72a14de9b65a68f31fd3703af9c8fd778dd96faee05",
+      "status": "UNPROVENANCED"
+    },
+    {
+      "bytes": 167496,
+      "ext": ".png",
+      "license": null,
+      "path": "docs/product-quality/evidence/pixel-final/05-after-move.png",
+      "quarantine_mode": "ledger_only",
+      "reason": "no provenance entry for binary asset path",
+      "sha256": "a45909453f699d17e599f92f4d2f00a6a3e1b2c3e5ae594321b6761192512240",
+      "status": "UNPROVENANCED"
+    },
+    {
+      "bytes": 167523,
+      "ext": ".png",
+      "license": null,
+      "path": "docs/product-quality/evidence/pixel-final/06-notebook.png",
+      "quarantine_mode": "ledger_only",
+      "reason": "no provenance entry for binary asset path",
+      "sha256": "16ab4d27a67210186eaf00060eac3babb9656fb39ad9af1bca446b0da6cbc9d4",
+      "status": "UNPROVENANCED"
+    },
+    {
+      "bytes": 168149,
+      "ext": ".png",
+      "license": null,
+      "path": "docs/product-quality/evidence/pixel-final/10-focus-hub.png",
+      "quarantine_mode": "ledger_only",
+      "reason": "no provenance entry for binary asset path",
+      "sha256": "42aa22efd298e477a23d160ff369c10c9fe1d237c248ec42b79f664dbdea5001",
+      "status": "UNPROVENANCED"
+    },
+    {
+      "bytes": 168060,
+      "ext": ".png",
+      "license": null,
+      "path": "docs/product-quality/evidence/pixel-final/11-swamp-attempt.png",
+      "quarantine_mode": "ledger_only",
+      "reason": "no provenance entry for binary asset path",
+      "sha256": "b736a0f0f70b2f68feadad7221f79c06cea6eb169d82ecde6ccae1e500cb8fbf",
+      "status": "UNPROVENANCED"
+    },
+    {
+      "bytes": 168124,
+      "ext": ".png",
+      "license": null,
+      "path": "docs/product-quality/evidence/pixel-final/12-map-panel.png",
+      "quarantine_mode": "ledger_only",
+      "reason": "no provenance entry for binary asset path",
+      "sha256": "42abb98e4db39e1491c431f9faa41969c0424ae6c283cfc82c3516e1af98478a",
+      "status": "UNPROVENANCED"
+    },
+    {
+      "bytes": 148247,
+      "ext": ".png",
+      "license": null,
+      "path": "docs/product-quality/evidence/pixel-final/13-after-swamp-move.png",
+      "quarantine_mode": "ledger_only",
+      "reason": "no provenance entry for binary asset path",
+      "sha256": "511c2e6f6e48ea65236e64d2620e83ef5b5936a214e293bfdeeca50ab1fe6c47",
+      "status": "UNPROVENANCED"
+    },
+    {
+      "bytes": 148204,
+      "ext": ".png",
+      "license": null,
+      "path": "docs/product-quality/evidence/pixel-final/14-savanna-tap.png",
+      "quarantine_mode": "ledger_only",
+      "reason": "no provenance entry for binary asset path",
+      "sha256": "c5d86d2ab413895838998d4643879663ba416db7c3b0cb80bf247c29c5e6e04a",
+      "status": "UNPROVENANCED"
+    },
+    {
+      "bytes": 148228,
+      "ext": ".png",
+      "license": null,
+      "path": "docs/product-quality/evidence/pixel-final/15-interact.png",
+      "quarantine_mode": "ledger_only",
+      "reason": "no provenance entry for binary asset path",
+      "sha256": "92cc16def5546f308be909c3c88e3c52f070fead4cf3ab6821fe79be9a98a8fc",
+      "status": "UNPROVENANCED"
+    },
+    {
+      "bytes": 502052,
+      "ext": ".png",
+      "license": null,
+      "path": "docs/product-quality/evidence/pixel-final/20-cold.png",
+      "quarantine_mode": "ledger_only",
+      "reason": "no provenance entry for binary asset path",
+      "sha256": "1505b25aca17693cd1fd837ffe2465bd65c9e0d3722700658ae499b340377c2a",
+      "status": "UNPROVENANCED"
+    },
+    {
+      "bytes": 502052,
+      "ext": ".png",
+      "license": null,
+      "path": "docs/product-quality/evidence/pixel-final/21-hub.png",
+      "quarantine_mode": "ledger_only",
+      "reason": "no provenance entry for binary asset path",
+      "sha256": "1505b25aca17693cd1fd837ffe2465bd65c9e0d3722700658ae499b340377c2a",
+      "status": "UNPROVENANCED"
+    },
+    {
+      "bytes": 502052,
+      "ext": ".png",
+      "license": null,
+      "path": "docs/product-quality/evidence/pixel-final/22-swamp.png",
+      "quarantine_mode": "ledger_only",
+      "reason": "no provenance entry for binary asset path",
+      "sha256": "1505b25aca17693cd1fd837ffe2465bd65c9e0d3722700658ae499b340377c2a",
+      "status": "UNPROVENANCED"
+    },
+    {
+      "bytes": 502052,
+      "ext": ".png",
+      "license": null,
+      "path": "docs/product-quality/evidence/pixel-final/23-map.png",
+      "quarantine_mode": "ledger_only",
+      "reason": "no provenance entry for binary asset path",
+      "sha256": "1505b25aca17693cd1fd837ffe2465bd65c9e0d3722700658ae499b340377c2a",
+      "status": "UNPROVENANCED"
+    },
+    {
+      "bytes": 502052,
+      "ext": ".png",
+      "license": null,
+      "path": "docs/product-quality/evidence/pixel-final/24-after-map-tap.png",
+      "quarantine_mode": "ledger_only",
+      "reason": "no provenance entry for binary asset path",
+      "sha256": "1505b25aca17693cd1fd837ffe2465bd65c9e0d3722700658ae499b340377c2a",
+      "status": "UNPROVENANCED"
+    },
+    {
+      "bytes": 502052,
+      "ext": ".png",
+      "license": null,
+      "path": "docs/product-quality/evidence/pixel-final/25-notebook.png",
+      "quarantine_mode": "ledger_only",
+      "reason": "no provenance entry for binary asset path",
+      "sha256": "1505b25aca17693cd1fd837ffe2465bd65c9e0d3722700658ae499b340377c2a",
+      "status": "UNPROVENANCED"
+    },
+    {
+      "bytes": 502052,
+      "ext": ".png",
+      "license": null,
+      "path": "docs/product-quality/evidence/pixel-final/26-lifeling.png",
+      "quarantine_mode": "ledger_only",
+      "reason": "no provenance entry for binary asset path",
+      "sha256": "1505b25aca17693cd1fd837ffe2465bd65c9e0d3722700658ae499b340377c2a",
+      "status": "UNPROVENANCED"
+    },
+    {
+      "bytes": 502052,
+      "ext": ".png",
+      "license": null,
+      "path": "docs/product-quality/evidence/pixel-final/27-explore.png",
+      "quarantine_mode": "ledger_only",
+      "reason": "no provenance entry for binary asset path",
+      "sha256": "1505b25aca17693cd1fd837ffe2465bd65c9e0d3722700658ae499b340377c2a",
+      "status": "UNPROVENANCED"
+    },
+    {
+      "bytes": 502052,
+      "ext": ".png",
+      "license": null,
+      "path": "docs/product-quality/evidence/pixel-final/28-resume.png",
+      "quarantine_mode": "ledger_only",
+      "reason": "no provenance entry for binary asset path",
+      "sha256": "1505b25aca17693cd1fd837ffe2465bd65c9e0d3722700658ae499b340377c2a",
+      "status": "UNPROVENANCED"
+    },
+    {
+      "bytes": 502052,
+      "ext": ".png",
+      "license": null,
+      "path": "docs/product-quality/evidence/pixel-final/29-back.png",
+      "quarantine_mode": "ledger_only",
+      "reason": "no provenance entry for binary asset path",
+      "sha256": "1505b25aca17693cd1fd837ffe2465bd65c9e0d3722700658ae499b340377c2a",
+      "status": "UNPROVENANCED"
+    },
+    {
+      "bytes": 501926,
+      "ext": ".png",
+      "license": null,
+      "path": "docs/product-quality/evidence/pixel-final/30-title.png",
+      "quarantine_mode": "ledger_only",
+      "reason": "no provenance entry for binary asset path",
+      "sha256": "22b844f8a6cc91076087b56de34e651a2e77e032bc62deb90b7fd12365bc6043",
+      "status": "UNPROVENANCED"
+    },
+    {
+      "bytes": 501926,
+      "ext": ".png",
+      "license": null,
+      "path": "docs/product-quality/evidence/pixel-final/31-after-new.png",
+      "quarantine_mode": "ledger_only",
+      "reason": "no provenance entry for binary asset path",
+      "sha256": "22b844f8a6cc91076087b56de34e651a2e77e032bc62deb90b7fd12365bc6043",
+      "status": "UNPROVENANCED"
+    },
+    {
+      "bytes": 501926,
+      "ext": ".png",
+      "license": null,
+      "path": "docs/product-quality/evidence/pixel-final/32-hub-or-title.png",
+      "quarantine_mode": "ledger_only",
+      "reason": "no provenance entry for binary asset path",
+      "sha256": "22b844f8a6cc91076087b56de34e651a2e77e032bc62deb90b7fd12365bc6043",
+      "status": "UNPROVENANCED"
+    },
+    {
+      "bytes": 501926,
+      "ext": ".png",
+      "license": null,
+      "path": "docs/product-quality/evidence/pixel-final/33-after-swamp.png",
+      "quarantine_mode": "ledger_only",
+      "reason": "no provenance entry for binary asset path",
+      "sha256": "22b844f8a6cc91076087b56de34e651a2e77e032bc62deb90b7fd12365bc6043",
+      "status": "UNPROVENANCED"
+    },
+    {
+      "bytes": 501926,
+      "ext": ".png",
+      "license": null,
+      "path": "docs/product-quality/evidence/pixel-final/34-savanna.png",
+      "quarantine_mode": "ledger_only",
+      "reason": "no provenance entry for binary asset path",
+      "sha256": "22b844f8a6cc91076087b56de34e651a2e77e032bc62deb90b7fd12365bc6043",
+      "status": "UNPROVENANCED"
+    },
+    {
+      "bytes": 501926,
+      "ext": ".png",
+      "license": null,
+      "path": "docs/product-quality/evidence/pixel-final/35-map.png",
+      "quarantine_mode": "ledger_only",
+      "reason": "no provenance entry for binary asset path",
+      "sha256": "22b844f8a6cc91076087b56de34e651a2e77e032bc62deb90b7fd12365bc6043",
+      "status": "UNPROVENANCED"
+    },
+    {
+      "bytes": 501926,
+      "ext": ".png",
+      "license": null,
+      "path": "docs/product-quality/evidence/pixel-final/36-notebook.png",
+      "quarantine_mode": "ledger_only",
+      "reason": "no provenance entry for binary asset path",
+      "sha256": "22b844f8a6cc91076087b56de34e651a2e77e032bc62deb90b7fd12365bc6043",
+      "status": "UNPROVENANCED"
+    },
+    {
+      "bytes": 501926,
+      "ext": ".png",
+      "license": null,
+      "path": "docs/product-quality/evidence/pixel-final/37-lifeling.png",
+      "quarantine_mode": "ledger_only",
+      "reason": "no provenance entry for binary asset path",
+      "sha256": "22b844f8a6cc91076087b56de34e651a2e77e032bc62deb90b7fd12365bc6043",
+      "status": "UNPROVENANCED"
+    },
+    {
+      "bytes": 501926,
+      "ext": ".png",
+      "license": null,
+      "path": "docs/product-quality/evidence/pixel-final/40-ready.png",
+      "quarantine_mode": "ledger_only",
+      "reason": "no provenance entry for binary asset path",
+      "sha256": "22b844f8a6cc91076087b56de34e651a2e77e032bc62deb90b7fd12365bc6043",
+      "status": "UNPROVENANCED"
+    },
+    {
+      "bytes": 502104,
+      "ext": ".png",
+      "license": null,
+      "path": "docs/product-quality/evidence/pixel-final/41-multitap.png",
+      "quarantine_mode": "ledger_only",
+      "reason": "no provenance entry for binary asset path",
+      "sha256": "74af0521fd75bfa2acafd7d70277ef7270316fdee76127320ae8a1864891f5eb",
+      "status": "UNPROVENANCED"
+    },
+    {
+      "bytes": 502104,
+      "ext": ".png",
+      "license": null,
+      "path": "docs/product-quality/evidence/pixel-final/42-current.png",
+      "quarantine_mode": "ledger_only",
+      "reason": "no provenance entry for binary asset path",
+      "sha256": "74af0521fd75bfa2acafd7d70277ef7270316fdee76127320ae8a1864891f5eb",
+      "status": "UNPROVENANCED"
+    },
+    {
+      "bytes": 502104,
+      "ext": ".png",
+      "license": null,
+      "path": "docs/product-quality/evidence/pixel-final/43-portal.png",
+      "quarantine_mode": "ledger_only",
+      "reason": "no provenance entry for binary asset path",
+      "sha256": "74af0521fd75bfa2acafd7d70277ef7270316fdee76127320ae8a1864891f5eb",
+      "status": "UNPROVENANCED"
+    },
+    {
+      "bytes": 502104,
+      "ext": ".png",
+      "license": null,
+      "path": "docs/product-quality/evidence/pixel-final/44-hud-120.png",
+      "quarantine_mode": "ledger_only",
+      "reason": "no provenance entry for binary asset path",
+      "sha256": "74af0521fd75bfa2acafd7d70277ef7270316fdee76127320ae8a1864891f5eb",
+      "status": "UNPROVENANCED"
+    },
+    {
+      "bytes": 502104,
+      "ext": ".png",
+      "license": null,
+      "path": "docs/product-quality/evidence/pixel-final/44-hud-280.png",
+      "quarantine_mode": "ledger_only",
+      "reason": "no provenance entry for binary asset path",
+      "sha256": "74af0521fd75bfa2acafd7d70277ef7270316fdee76127320ae8a1864891f5eb",
+      "status": "UNPROVENANCED"
+    },
+    {
+      "bytes": 502104,
+      "ext": ".png",
+      "license": null,
+      "path": "docs/product-quality/evidence/pixel-final/44-hud-440.png",
+      "quarantine_mode": "ledger_only",
+      "reason": "no provenance entry for binary asset path",
+      "sha256": "74af0521fd75bfa2acafd7d70277ef7270316fdee76127320ae8a1864891f5eb",
+      "status": "UNPROVENANCED"
+    },
+    {
+      "bytes": 502104,
+      "ext": ".png",
+      "license": null,
+      "path": "docs/product-quality/evidence/pixel-final/44-hud-600.png",
+      "quarantine_mode": "ledger_only",
+      "reason": "no provenance entry for binary asset path",
+      "sha256": "74af0521fd75bfa2acafd7d70277ef7270316fdee76127320ae8a1864891f5eb",
+      "status": "UNPROVENANCED"
+    },
+    {
+      "bytes": 502104,
+      "ext": ".png",
+      "license": null,
+      "path": "docs/product-quality/evidence/pixel-final/44-hud-760.png",
+      "quarantine_mode": "ledger_only",
+      "reason": "no provenance entry for binary asset path",
+      "sha256": "74af0521fd75bfa2acafd7d70277ef7270316fdee76127320ae8a1864891f5eb",
+      "status": "UNPROVENANCED"
+    },
+    {
+      "bytes": 502105,
+      "ext": ".png",
+      "license": null,
+      "path": "docs/product-quality/evidence/pixel-final/45-motion.png",
+      "quarantine_mode": "ledger_only",
+      "reason": "no provenance entry for binary asset path",
+      "sha256": "34469b5f0aaa14e1d031bef7c4175c7f97e8802c40f9cb779bf6a6fd6176fa5d",
+      "status": "UNPROVENANCED"
+    },
+    {
+      "bytes": 502105,
+      "ext": ".png",
+      "license": null,
+      "path": "docs/product-quality/evidence/pixel-final/46-continue.png",
+      "quarantine_mode": "ledger_only",
+      "reason": "no provenance entry for binary asset path",
+      "sha256": "34469b5f0aaa14e1d031bef7c4175c7f97e8802c40f9cb779bf6a6fd6176fa5d",
+      "status": "UNPROVENANCED"
+    },
+    {
+      "bytes": 219989,
+      "ext": ".png",
+      "license": null,
+      "path": "docs/product-quality/evidence/pixel-final/50-after-accept-start.png",
+      "quarantine_mode": "ledger_only",
+      "reason": "no provenance entry for binary asset path",
+      "sha256": "266cd9b39e7e7a358b053bd4e4293bb85d34c44dab63135283b410ea2c3b3836",
+      "status": "UNPROVENANCED"
+    },
+    {
+      "bytes": 204251,
+      "ext": ".png",
+      "license": null,
+      "path": "docs/product-quality/evidence/pixel-final/51-savanna.png",
+      "quarantine_mode": "ledger_only",
+      "reason": "no provenance entry for binary asset path",
+      "sha256": "2db2e204e6310c6ffd27688f1f894a58dfe7c271de64f7ef671fd125b8524a3e",
+      "status": "UNPROVENANCED"
+    },
+    {
+      "bytes": 242050,
+      "ext": ".png",
+      "license": null,
+      "path": "docs/product-quality/evidence/pixel-final/52-interact.png",
+      "quarantine_mode": "ledger_only",
+      "reason": "no provenance entry for binary asset path",
+      "sha256": "6a1d3027a91dc768a098dda4a2a783ca4d52def77d10f26b64d20ccba025ec24",
+      "status": "UNPROVENANCED"
+    },
+    {
+      "bytes": 211771,
+      "ext": ".png",
+      "license": null,
+      "path": "docs/product-quality/evidence/pixel-final/53-swamp.png",
+      "quarantine_mode": "ledger_only",
+      "reason": "no provenance entry for binary asset path",
+      "sha256": "98c5e34eeb68a39c36c8878943a9379c0bb3c8c85fa6abab4dd035caae82517d",
+      "status": "UNPROVENANCED"
+    },
+    {
+      "bytes": 241786,
+      "ext": ".png",
+      "license": null,
+      "path": "docs/product-quality/evidence/pixel-final/54-notebook.png",
+      "quarantine_mode": "ledger_only",
+      "reason": "no provenance entry for binary asset path",
+      "sha256": "f2d7d6435eabe1f9d25a31ba0148213ad05b32f190b708f67ef73befb5af5999",
+      "status": "UNPROVENANCED"
+    },
+    {
+      "bytes": 242124,
+      "ext": ".png",
+      "license": null,
+      "path": "docs/product-quality/evidence/pixel-final/55-lifeling.png",
+      "quarantine_mode": "ledger_only",
+      "reason": "no provenance entry for binary asset path",
+      "sha256": "93e93e18ffd59b13ac52bd975342e4250c0f4cb28b5c63ba27745d3783ebb5fd",
+      "status": "UNPROVENANCED"
+    },
+    {
+      "bytes": 242019,
+      "ext": ".png",
+      "license": null,
+      "path": "docs/product-quality/evidence/pixel-final/56-observe.png",
+      "quarantine_mode": "ledger_only",
+      "reason": "no provenance entry for binary asset path",
+      "sha256": "e8ccc4a65f8aa7a90f9afb4e4a9f7ed85dbc7d0ed55e9d26e791dcf7f09bf42d",
+      "status": "UNPROVENANCED"
+    },
+    {
+      "bytes": 241128,
+      "ext": ".png",
+      "license": null,
+      "path": "docs/product-quality/evidence/pixel-final/57-observe-hold.png",
+      "quarantine_mode": "ledger_only",
+      "reason": "no provenance entry for binary asset path",
+      "sha256": "55e2f95502888f87578ef77ac5f15ed2906d28abd400524a728e6fc18f9f2c12",
+      "status": "UNPROVENANCED"
+    },
+    {
+      "bytes": 253461,
+      "ext": ".png",
+      "license": null,
+      "path": "docs/product-quality/evidence/pixel-final/58-swamp2.png",
+      "quarantine_mode": "ledger_only",
+      "reason": "no provenance entry for binary asset path",
+      "sha256": "d46183c21d0ece8bc8ec85f497e60ec9952d07d1b9248ab51981ec74e61fda3a",
+      "status": "UNPROVENANCED"
+    },
+    {
+      "bytes": 257554,
+      "ext": ".png",
+      "license": null,
+      "path": "docs/product-quality/evidence/pixel-final/59-notebook.png",
+      "quarantine_mode": "ledger_only",
+      "reason": "no provenance entry for binary asset path",
+      "sha256": "c97c517c80ae84b93be335db978ae2e7121a5e0ce3c842e5c2ca761ec521474a",
+      "status": "UNPROVENANCED"
+    },
+    {
+      "bytes": 258101,
+      "ext": ".png",
+      "license": null,
+      "path": "docs/product-quality/evidence/pixel-final/60-lifeling.png",
+      "quarantine_mode": "ledger_only",
+      "reason": "no provenance entry for binary asset path",
+      "sha256": "ed1a062b3a66ea66276ce1ffb99a8666ac7075889b6bec290e43db1b6313230b",
+      "status": "UNPROVENANCED"
+    },
+    {
+      "bytes": 256665,
+      "ext": ".png",
+      "license": null,
+      "path": "docs/product-quality/evidence/pixel-final/61-resume.png",
+      "quarantine_mode": "ledger_only",
+      "reason": "no provenance entry for binary asset path",
+      "sha256": "995442a01abf3a8ca711941c7e42411caf38071f24af87b170f756c77a9b9ef7",
+      "status": "UNPROVENANCED"
+    },
+    {
+      "bytes": 4746455,
+      "ext": ".mp4",
+      "license": null,
+      "path": "docs/product-quality/evidence/pixel-final/archive-pixel-final.mp4",
+      "quarantine_mode": "ledger_only",
+      "reason": "no provenance entry for binary asset path",
+      "sha256": "3018c90153ae23ea39c64db5ee61cbec1407f64aab05d2ff128e641cb4329727",
+      "status": "UNPROVENANCED"
+    },
+    {
+      "bytes": 158,
+      "ext": ".png",
+      "license": null,
+      "path": "public/favicon-32.png",
+      "quarantine_mode": "ledger_only",
+      "reason": "no provenance entry for binary asset path",
+      "sha256": "b605573db5a637450c4d7e47dc9f658dac2a8d414d3f16ba028430f012cc2ef5",
+      "status": "UNPROVENANCED"
+    },
+    {
+      "bytes": 314,
+      "ext": ".svg",
+      "license": null,
+      "path": "public/favicon.svg",
+      "quarantine_mode": "ledger_only",
+      "reason": "no provenance entry for binary asset path",
+      "sha256": "bc46afee86bc65f0688accc1020b4cafa20657291a6f7eb4f824636ead80e537",
+      "status": "UNPROVENANCED"
+    },
+    {
+      "bytes": 388,
+      "ext": ".svg",
+      "license": null,
+      "path": "public/icons/archive-of-life-icon.svg",
+      "quarantine_mode": "ledger_only",
+      "reason": "no provenance entry for binary asset path",
+      "sha256": "34332174ae88733b3f16abdaebcbe39ce015742ca112cbf9a50a9c3be06ec3be",
+      "status": "UNPROVENANCED"
+    },
+    {
+      "bytes": 763,
+      "ext": ".png",
+      "license": null,
+      "path": "public/icons/icon-192.png",
+      "quarantine_mode": "ledger_only",
+      "reason": "no provenance entry for binary asset path",
+      "sha256": "43db817d85ed070dbc80f973f991e3ab906386c7de021e79997c0a0f6dc63cb0",
+      "status": "UNPROVENANCED"
+    }
+  ],
+  "quarantine_count": 136,
+  "scanned_at": "2026-09-18T18:55:57.346852+00:00"
+}
