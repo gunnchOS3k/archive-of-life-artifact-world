@@ -1,0 +1,31 @@
+{
+  "label": "HOST_DIGITAL",
+  "not_device_lab": true,
+  "rows": [
+    {
+      "name": "typecheck",
+      "ok": true,
+      "seconds": 3.182
+    },
+    {
+      "name": "test",
+      "ok": true,
+      "seconds": 10.876
+    },
+    {
+      "name": "audit_provenance",
+      "ok": true,
+      "seconds": 0.374
+    },
+    {
+      "name": "build",
+      "ok": true,
+      "seconds": 2.52
+    },
+    {
+      "name": "rebuild_soak",
+      "ok": true,
+      "seconds": 2.341
+    }
+  ]
+}

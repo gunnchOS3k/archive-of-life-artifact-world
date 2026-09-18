@@ -1,0 +1,66 @@
+{
+  "audit_provenance": {
+    "cmd": [
+      "npm",
+      "run",
+      "audit:provenance"
+    ],
+    "cwd": "/Users/gunnchos/Downloads/gunnchos-7gc-research-product-spine/repos/archive-of-life-artifact-world/.worktrees/stream-c-pre-human-playtest",
+    "exit_code": 0,
+    "ok": true,
+    "seconds": 0.374,
+    "stderr_tail": "npm warn Unknown env config \"devdir\". This will stop working in the next major version of npm.\n",
+    "stdout_tail": "\n> archive-of-life-artifact-world@2.0.0 audit:provenance\n> tsx scripts/audit-provenance.ts\n\n\n=== Provenance Audit ===\n\n\u2713 hero_species_have_provenance: All hero species have source provenance\n\u2713 mock_snapshots_not_approved_for_use: Mock source snapshots not approved for production use\n\u2713 taxon_ranges_have_provenance: All taxon time ranges have source provenance\n\u2713 source_snapshots_metadata_complete: Source snapshot registry metadata complete\n\u2713 approved_snapshots_have_sha256: Every approved source snapshot has a valid SHA-256\n\n5/5 checks passed\n\n"
+  },
+  "build": {
+    "cmd": [
+      "npm",
+      "run",
+      "build"
+    ],
+    "cwd": "/Users/gunnchos/Downloads/gunnchos-7gc-research-product-spine/repos/archive-of-life-artifact-world/.worktrees/stream-c-pre-human-playtest",
+    "exit_code": 0,
+    "ok": true,
+    "seconds": 2.52,
+    "stderr_tail": "npm warn Unknown env config \"devdir\". This will stop working in the next major version of npm.\n",
+    "stdout_tail": "\n> archive-of-life-artifact-world@2.0.0 build\n> tsc --noEmit && vite build\n\nvite v5.4.21 building for production...\ntransforming...\n\u2713 64 modules transformed.\nrendering chunks...\ncomputing gzip size...\ndist/index.html                                 16.88 kB \u2502 gzip:  3.79 kB\ndist/assets/index-CihMcAKE.css                  22.78 kB \u2502 gzip:  5.02 kB\ndist/assets/wave008ScientificDemo-DxyrmKZT.js    7.87 kB \u2502 gzip:  2.90 kB \u2502 map:  20.46 kB\ndist/assets/index-2kkG6QTy.js                  205.89 kB \u2502 gzip: 58.14 kB \u2502 map: 558.43 kB\n\u2713 built in 591ms\n"
+  },
+  "rebuild_soak": {
+    "cmd": [
+      "npm",
+      "run",
+      "build"
+    ],
+    "cwd": "/Users/gunnchos/Downloads/gunnchos-7gc-research-product-spine/repos/archive-of-life-artifact-world/.worktrees/stream-c-pre-human-playtest",
+    "exit_code": 0,
+    "ok": true,
+    "seconds": 2.341,
+    "stderr_tail": "npm warn Unknown env config \"devdir\". This will stop working in the next major version of npm.\n",
+    "stdout_tail": "\n> archive-of-life-artifact-world@2.0.0 build\n> tsc --noEmit && vite build\n\nvite v5.4.21 building for production...\ntransforming...\n\u2713 64 modules transformed.\nrendering chunks...\ncomputing gzip size...\ndist/index.html                                 16.88 kB \u2502 gzip:  3.79 kB\ndist/assets/index-CihMcAKE.css                  22.78 kB \u2502 gzip:  5.02 kB\ndist/assets/wave008ScientificDemo-DxyrmKZT.js    7.87 kB \u2502 gzip:  2.90 kB \u2502 map:  20.46 kB\ndist/assets/index-2kkG6QTy.js                  205.89 kB \u2502 gzip: 58.14 kB \u2502 map: 558.43 kB\n\u2713 built in 534ms\n"
+  },
+  "test": {
+    "cmd": [
+      "npm",
+      "test"
+    ],
+    "cwd": "/Users/gunnchos/Downloads/gunnchos-7gc-research-product-spine/repos/archive-of-life-artifact-world/.worktrees/stream-c-pre-human-playtest",
+    "exit_code": 0,
+    "ok": true,
+    "seconds": 10.876,
+    "stderr_tail": "pl.play (/Users/gunnchos/Downloads/gunnchos-7gc-research-product-spine/repos/archive-of-life-artifact-world/.worktrees/stream-c-pre-human-playtest/node_modules/jsdom/lib/jsdom/living/nodes/HTMLMediaElement-impl.js:118:5)\n    at HTMLAudioElement.play (/Users/gunnchos/Downloads/gunnchos-7gc-research-product-spine/repos/archive-of-life-artifact-world/.worktrees/stream-c-pre-human-playtest/node_modules/jsdom/lib/jsdom/living/generated/HTMLMediaElement.js:148:60)\n    at Module.playCue (/Users/gunnchos/Downloads/gunnchos-7gc-research-product-spine/repos/archive-of-life-artifact-world/.worktrees/stream-c-pre-human-playtest/src/systems/audioCueSystem.ts:46:20)\n    at /Users/gunnchos/Downloads/gunnchos-7gc-research-product-spine/repos/archive-of-life-artifact-world/.worktrees/stream-c-pre-human-playtest/src/systems/gameRc004Density.test.ts:85:5\n    at file:///Users/gunnchos/Downloads/gunnchos-7gc-research-product-spine/repos/archive-of-life-artifact-world/.worktrees/stream-c-pre-human-playtest/node_modules/@vitest/runner/dist/index.js:146:14\n    at file:///Users/gunnchos/Downloads/gunnchos-7gc-research-product-spine/repos/archive-of-life-artifact-world/.worktrees/stream-c-pre-human-playtest/node_modules/@vitest/runner/dist/index.js:533:11\n    at runWithTimeout (file:///Users/gunnchos/Downloads/gunnchos-7gc-research-product-spine/repos/archive-of-life-artifact-world/.worktrees/stream-c-pre-human-playtest/node_modules/@vitest/runner/dist/index.js:39:7)\n    at runTest (file:///Users/gunnchos/Downloads/gunnchos-7gc-research-product-spine/repos/archive-of-life-artifact-world/.worktrees/stream-c-pre-human-playtest/node_modules/@vitest/runner/dist/index.js:1056:17)\n    at processTicksAndRejections (node:internal/process/task_queues:105:5) undefined\nError: Not implemented: HTMLMediaElement.prototype.play\n    at module.exports (/Users/gunnchos/Downloads/gunnchos-7gc-research-product-spine/repos/archive-of-life-artifact-world/.worktrees/stream-c-pre-human-playtest/node_modules/jsdom/lib/jsdom/browser/not-implemented.js:9:17)\n    at HTMLAudioElementImpl.play (/Users/gunnchos/Downloads/gunnchos-7gc-research-product-spine/repos/archive-of-life-artifact-world/.worktrees/stream-c-pre-human-playtest/node_modules/jsdom/lib/jsdom/living/nodes/HTMLMediaElement-impl.js:118:5)\n    at HTMLAudioElement.play (/Users/gunnchos/Downloads/gunnchos-7gc-research-product-spine/repos/archive-of-life-artifact-world/.worktrees/stream-c-pre-human-playtest/node_modules/jsdom/lib/jsdom/living/generated/HTMLMediaElement.js:148:60)\n    at Module.playCue (/Users/gunnchos/Downloads/gunnchos-7gc-research-product-spine/repos/archive-of-life-artifact-world/.worktrees/stream-c-pre-human-playtest/src/systems/audioCueSystem.ts:46:20)\n    at /Users/gunnchos/Downloads/gunnchos-7gc-research-product-spine/repos/archive-of-life-artifact-world/.worktrees/stream-c-pre-human-playtest/src/systems/gameRc004Density.test.ts:86:5\n    at file:///Users/gunnchos/Downloads/gunnchos-7gc-research-product-spine/repos/archive-of-life-artifact-world/.worktrees/stream-c-pre-human-playtest/node_modules/@vitest/runner/dist/index.js:146:14\n    at file:///Users/gunnchos/Downloads/gunnchos-7gc-research-product-spine/repos/archive-of-life-artifact-world/.worktrees/stream-c-pre-human-playtest/node_modules/@vitest/runner/dist/index.js:533:11\n    at runWithTimeout (file:///Users/gunnchos/Downloads/gunnchos-7gc-research-product-spine/repos/archive-of-life-artifact-world/.worktrees/stream-c-pre-human-playtest/node_modules/@vitest/runner/dist/index.js:39:7)\n    at runTest (file:///Users/gunnchos/Downloads/gunnchos-7gc-research-product-spine/repos/archive-of-life-artifact-world/.worktrees/stream-c-pre-human-playtest/node_modules/@vitest/runner/dist/index.js:1056:17)\n    at processTicksAndRejections (node:internal/process/task_queues:105:5) undefined\n\n(node:32086) ExperimentalWarning: SQLite is an experimental feature and might change at any time\n(Use `node --trace-warnings ...` to show where the warning was created)\n",
+    "stdout_tail": "st.ts (2 tests) 7ms\nstdout | src/systems/gameRc002IndependentVerifier.test.ts > INDEPENDENT VERIFIER GAME-RC-002 Archive > walks a new save through real Game collect/ArchiveDex/Lifeling/campaign + reload\n[federation] scientific name conflicts across providers (both retained) [\n  {\n    field: 'scientificName',\n    assertions: [ [Object], [Object], [Object], [Object], [Object] ],\n    selectionReason: 'Unresolved \u2014 both values retained in federated evidence'\n  }\n]\n\n \u2713 src/systems/companionProgression.test.ts (3 tests) 11ms\nstdout | src/systems/gameRc002Playthrough.test.ts > GAME-RC-002 Archive launch-campaign playthrough > executes first-launch onboarding through credits and achievement browser\n[federation] scientific name conflicts across providers (both retained) [\n  {\n    field: 'scientificName',\n    assertions: [ [Object], [Object], [Object], [Object], [Object] ],\n    selectionReason: 'Unresolved \u2014 both values retained in federated evidence'\n  }\n]\n\n \u2713 src/systems/inputBindings.test.ts (6 tests) 3ms\n \u2713 src/systems/gameRc002Playthrough.test.ts (3 tests) 3481ms\n   \u2713 GAME-RC-002 Archive launch-campaign playthrough > executes first-launch onboarding through credits and achievement browser 3213ms\n \u2713 src/systems/gameRc002IndependentVerifier.test.ts (2 tests) 3489ms\n   \u2713 INDEPENDENT VERIFIER GAME-RC-002 Archive > walks a new save through real Game collect/ArchiveDex/Lifeling/campaign + reload 3465ms\nstdout | src/systems/gameRc002IndependentVerifier.test.ts > INDEPENDENT VERIFIER GAME-RC-002 Archive > walks a new save through real Game collect/ArchiveDex/Lifeling/campaign + reload\nINDEPENDENT_ARCHIVE_CAMPAIGN_STEPS {\"complete\":true,\"steps\":[{\"id\":\"onboarding\",\"done\":true},{\"id\":\"first_region\",\"done\":true},{\"id\":\"first_observation\",\"done\":true},{\"id\":\"first_artifact\",\"done\":true},{\"id\":\"provenance\",\"done\":true},{\"id\":\"archivedex\",\"done\":true},{\"id\":\"multiple_regions\",\"done\":true},{\"id\":\"multiple_eras\",\"done\":true},{\"id\":\"companion_customized\",\"done\":true},{\"id\":\"major_milestone\",\"done\":true},{\"id\":\"taxonomy_breadth\",\"done\":true},{\"id\":\"finale\",\"done\":true}],\"density\":[{\"id\":\"era_density\",\"done\":true},{\"id\":\"artifact_density\",\"done\":true},{\"id\":\"region_density\",\"done\":false},{\"id\":\"credits\",\"done\":false}],\"groups\":[\"Mammal\",\"Insect\"],\"modules\":[\"mod_savanna_tracker\",\"mod_forest_listener\",\"mod_wetland_engineer\"],\"level\":2}\nINDEPENDENT_ARCHIVE_EVIDENCE {\"artifacts\":[\"panthera_leo\",\"canis_lupus\",\"castor_canadensis\",\"lontra_canadensis\",\"anax_junius\"],\"notebook_provenance\":2,\"archivedex_collected\":[\"panthera_leo\",\"canis_lupus\",\"castor_canadensis\",\"lontra_canadensis\",\"anax_junius\"],\"companion\":{\"name\":\"Relic\",\"level\":2,\"xp\":155,\"modules\":[\"mod_savanna_tracker\",\"mod_forest_listener\",\"mod_wetland_engineer\"]},\"observedGroups\":[\"Mammal\",\"Insect\"],\"launchComplete\":true,\"globalCoverageClaimed\":false,\"unlocked\":[\"aol.first_discovery\",\"aol.first_artifact\",\"aol.region_hopper\",\"aol.era_walker\",\"aol.artifact_provenance\",\"aol.archivedex\",\"aol.taxonomy_breadth\",\"aol.lifeling_growth\",\"aol.lifeling_style\",\"aol.scientific_curiosity\",\"aol.launch_complete\",\"aol.pause_and_breathe\",\"aol.hidden_credits\",\"aol.era_density\",\"aol.field_density\",\"aol.postgame_ready\"],\"missing\":[],\"unlockedCount\":16,\"catalogCount\":16}\n\n \u2713 src/systems/continuationVii.release.test.ts (2 tests) 5ms\n \u2713 src/systems/accessibility.test.ts (1 test) 13ms\n \u2713 src/services/providers/boundedPromise.test.ts (3 tests) 4ms\n \u2713 src/crossDevice/contractProvider.test.ts (3 tests) 8ms\n \u2713 src/systems/telemetry.test.ts (1 test) 2ms\n \u2713 src/game/companion.runtime.test.ts (1 test) 2ms\n \u2713 src/db/scienceDb.test.ts (4 tests) 4071ms\n   \u2713 ScientificDb durable store > migrates, indexes taxa, and supports taxonomic/region/era lookups 579ms\n   \u2713 Digital RC suite + claim ledger runtime gate > runs Cont VI RC suite checks 3472ms\n\n Test Files  28 passed (28)\n      Tests  129 passed (129)\n   Start at  13:56:01\n   Duration  10.19s (transform 2.02s, setup 0ms, collect 6.42s, tests 13.21s, environment 18.25s, prepare 2.27s)\n\n"
+  },
+  "typecheck": {
+    "cmd": [
+      "npm",
+      "run",
+      "typecheck"
+    ],
+    "cwd": "/Users/gunnchos/Downloads/gunnchos-7gc-research-product-spine/repos/archive-of-life-artifact-world/.worktrees/stream-c-pre-human-playtest",
+    "exit_code": 0,
+    "ok": true,
+    "seconds": 3.182,
+    "stderr_tail": "npm warn Unknown env config \"devdir\". This will stop working in the next major version of npm.\n",
+    "stdout_tail": "\n> archive-of-life-artifact-world@2.0.0 typecheck\n> tsc --noEmit\n\n"
+  }
+}

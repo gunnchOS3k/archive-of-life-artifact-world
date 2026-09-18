@@ -1,0 +1,114 @@
+{
+  "a11y": {
+    "blocker_class": "HUMAN_VALIDATION_REQUIRED",
+    "evidence": "axe/automation incomplete vs disabled users",
+    "notes": "",
+    "status": "HUMAN_VALIDATION_REQUIRED"
+  },
+  "android": {
+    "blocker_class": "PHYSICAL_HARDWARE_REQUIRED",
+    "evidence": "Capacitor/native-run tooling may exist; device required",
+    "notes": "",
+    "status": "PARTIAL"
+  },
+  "asset_validation": {
+    "evidence": "npm run audit:provenance",
+    "notes": "",
+    "status": "PASS"
+  },
+  "audio": {
+    "evidence": "no commercial audio loop claim",
+    "notes": "",
+    "status": "NOT_APPLICABLE"
+  },
+  "build": {
+    "evidence": "npm run typecheck + build",
+    "notes": "",
+    "status": "PASS"
+  },
+  "crash_recovery": {
+    "blocker_class": "HUMAN_VALIDATION_REQUIRED",
+    "evidence": "reload + snapshot reproduction fixtures",
+    "notes": "",
+    "status": "PARTIAL"
+  },
+  "frame_pacing": {
+    "blocker_class": "PHYSICAL_HARDWARE_REQUIRED",
+    "evidence": "browser perf needs device/lab",
+    "notes": "",
+    "status": "BLOCKED"
+  },
+  "input": {
+    "blocker_class": "HUMAN_VALIDATION_REQUIRED",
+    "evidence": "web pointer/keyboard",
+    "notes": "",
+    "status": "PARTIAL"
+  },
+  "install_update": {
+    "blocker_class": "HUMAN_VALIDATION_REQUIRED",
+    "evidence": "web deploy / PWA paths if present",
+    "notes": "",
+    "status": "PARTIAL"
+  },
+  "launch": {
+    "evidence": "vite build artifact",
+    "notes": "",
+    "status": "PASS"
+  },
+  "leaks": {
+    "blocker_class": "PHYSICAL_HARDWARE_REQUIRED",
+    "evidence": "heap soak needs longer browser session",
+    "notes": "",
+    "status": "BLOCKED"
+  },
+  "loading": {
+    "evidence": "vite build artifact",
+    "notes": "",
+    "status": "PASS"
+  },
+  "local_multiplayer": {
+    "evidence": "single-user archive explorer",
+    "notes": "",
+    "status": "NOT_APPLICABLE"
+  },
+  "menus": {
+    "blocker_class": "HUMAN_VALIDATION_REQUIRED",
+    "evidence": "UI routes covered by vitest/playwright when run",
+    "notes": "wave008 browser e2e is optional heavy path",
+    "status": "PARTIAL"
+  },
+  "networking": {
+    "blocker_class": "HUMAN_VALIDATION_REQUIRED",
+    "evidence": "offline-first + optional live ingest blocked by claim firewall",
+    "notes": "GBIF live remains false",
+    "status": "PARTIAL"
+  },
+  "offline": {
+    "evidence": "fixture/offline scientific pack doctrine",
+    "notes": "",
+    "status": "PASS"
+  },
+  "pause_resume": {
+    "evidence": "not a pause-combat game loop",
+    "notes": "",
+    "status": "NOT_APPLICABLE"
+  },
+  "persistence": {
+    "blocker_class": "HUMAN_VALIDATION_REQUIRED",
+    "evidence": "local persistence / snapshot fixtures",
+    "notes": "",
+    "status": "PARTIAL"
+  },
+  "resolution": {
+    "blocker_class": "HUMAN_VALIDATION_REQUIRED",
+    "evidence": "responsive web",
+    "notes": "",
+    "status": "PARTIAL"
+  },
+  "save_load": {
+    "blocker_class": "HUMAN_VALIDATION_REQUIRED",
+    "evidence": "local persistence / snapshot fixtures",
+    "notes": "",
+    "status": "PARTIAL"
+  }
+}

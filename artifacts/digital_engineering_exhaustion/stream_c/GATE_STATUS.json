@@ -1,0 +1,87 @@
+{
+  "GAMES_PRE_HUMAN_PLAYTEST_ENGINEERING_EXHAUSTED": true,
+  "HUMAN_FUN_BALANCE_FEEL": "HUMAN_VALIDATION_REQUIRED",
+  "RIGHTS_CLEARANCE_COMPLETE": false,
+  "RIGHTS_QUARANTINE_ACTIVE": true,
+  "accepted_main_sha": "8611d2e30315792c38d7d5062e108b8bb87df2c2",
+  "blockers": [
+    {
+      "blocker_class": "HUMAN_VALIDATION_REQUIRED",
+      "dimension": "save_load",
+      "evidence": "local persistence / snapshot fixtures"
+    },
+    {
+      "blocker_class": "HUMAN_VALIDATION_REQUIRED",
+      "dimension": "menus",
+      "evidence": "UI routes covered by vitest/playwright when run"
+    },
+    {
+      "blocker_class": "HUMAN_VALIDATION_REQUIRED",
+      "dimension": "input",
+      "evidence": "web pointer/keyboard"
+    },
+    {
+      "blocker_class": "HUMAN_VALIDATION_REQUIRED",
+      "dimension": "crash_recovery",
+      "evidence": "reload + snapshot reproduction fixtures"
+    },
+    {
+      "blocker_class": "HUMAN_VALIDATION_REQUIRED",
+      "dimension": "persistence",
+      "evidence": "local persistence / snapshot fixtures"
+    },
+    {
+      "blocker_class": "PHYSICAL_HARDWARE_REQUIRED",
+      "dimension": "frame_pacing",
+      "evidence": "browser perf needs device/lab"
+    },
+    {
+      "blocker_class": "PHYSICAL_HARDWARE_REQUIRED",
+      "dimension": "leaks",
+      "evidence": "heap soak needs longer browser session"
+    },
+    {
+      "blocker_class": "HUMAN_VALIDATION_REQUIRED",
+      "dimension": "resolution",
+      "evidence": "responsive web"
+    },
+    {
+      "blocker_class": "HUMAN_VALIDATION_REQUIRED",
+      "dimension": "a11y",
+      "evidence": "axe/automation incomplete vs disabled users"
+    },
+    {
+      "blocker_class": "HUMAN_VALIDATION_REQUIRED",
+      "dimension": "networking",
+      "evidence": "offline-first + optional live ingest blocked by claim firewall"
+    },
+    {
+      "blocker_class": "HUMAN_VALIDATION_REQUIRED",
+      "dimension": "install_update",
+      "evidence": "web deploy / PWA paths if present"
+    },
+    {
+      "blocker_class": "PHYSICAL_HARDWARE_REQUIRED",
+      "dimension": "android",
+      "evidence": "Capacitor/native-run tooling may exist; device required"
+    },
+    {
+      "blocker_class": "LEGAL_RIGHTS_REVIEW_REQUIRED",
+      "dimension": "rights",
+      "evidence": "136 quarantined assets"
+    },
+    {
+      "blocker_class": "HUMAN_VALIDATION_REQUIRED",
+      "dimension": "fun_balance_feel",
+      "evidence": "playtest task sheets are templates only"
+    }
+  ],
+  "evaluated_at": "2026-09-18T18:56:16.650169+00:00",
+  "failures": [],
+  "game_id": "archive-of-life-artifact-world",
+  "host": {
+    "platform": "macOS-26.6.2-arm64-arm-64bit-Mach-O",
+    "python": "3.14.7"
+  },
+  "unclassified_partial": []
+}
