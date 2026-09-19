@@ -1,0 +1,84 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" style="display:none" aria-hidden="true">
+  <!-- Living Archive original iconography  Archive of Life VXP-4 (gunnchOS). Not emoji. -->
+  <symbol id="vxp-explore" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
+    <circle cx="12" cy="12" r="9"/><path d="M12 3v3M12 18v3M3 12h3M18 12h3"/><circle cx="12" cy="12" r="2.5"/>
+  </symbol>
+  <symbol id="vxp-observe" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
+    <circle cx="12" cy="12" r="3.5"/><path d="M2.5 12s3.5-7 9.5-7 9.5 7 9.5 7-3.5 7-9.5 7-9.5-7-9.5-7z"/>
+  </symbol>
+  <symbol id="vxp-collect" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M4 8h16l-1.5 11H5.5L4 8z"/><path d="M8 8V6a4 4 0 0 1 8 0v2"/>
+  </symbol>
+  <symbol id="vxp-archive" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
+    <rect x="4" y="3" width="16" height="5" rx="1"/><path d="M6 8v11a1 1 0 0 0 1 1h10a1 1 0 0 0 1-1V8"/><path d="M9 13h6"/>
+  </symbol>
+  <symbol id="vxp-lifeling" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
+    <circle cx="12" cy="10" r="5"/><path d="M8 15c-2 1.5-3 3.5-3 5.5h14c0-2-1-4-3-5.5"/><circle cx="10" cy="9.5" r="0.8" fill="currentColor"/><circle cx="14" cy="9.5" r="0.8" fill="currentColor"/>
+  </symbol>
+  <symbol id="vxp-time" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
+    <circle cx="12" cy="12" r="9"/><path d="M12 7v5l3.5 2"/><path d="M7 3.5 9 5M17 3.5 15 5"/>
+  </symbol>
+  <symbol id="vxp-map" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M3 6.5 9 4l6 2.5L21 4v15.5L15 22l-6-2.5L3 22V6.5z"/><path d="M9 4v15.5M15 6.5V22"/>
+  </symbol>
+  <symbol id="vxp-evidence" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M8 3h6l4 4v14H8V3z"/><path d="M14 3v4h4"/><path d="M10 12h6M10 16h4"/>
+  </symbol>
+  <symbol id="vxp-journal" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M6 3h11a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1z"/><path d="M9 8h7M9 12h7M9 16h4"/>
+  </symbol>
+  <symbol id="vxp-quest" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M8 4h10v6a4 4 0 0 1-4 4H8V4z"/><path d="M8 4H6a1 1 0 0 0-1 1v14"/><circle cx="12" cy="20" r="1.2" fill="currentColor"/>
+  </symbol>
+  <symbol id="vxp-region" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M12 21s-7-5.5-7-11a7 7 0 1 1 14 0c0 5.5-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/>
+  </symbol>
+  <symbol id="vxp-biome" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M12 21c-4-3-7-7-7-11a7 7 0 0 1 14 0c0 1-.3 2.2-.8 3.4"/><path d="M8 14c1.5-1 3-1.5 4-1.5s2.5.5 4 1.5"/><path d="M12 3v3"/>
+  </symbol>
+  <symbol id="vxp-species" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M12 20c-3-4-6-6.5-6-10a6 6 0 1 1 12 0c0 1.2-.4 2.5-1.1 3.8"/><path d="M9 9.5c.8-.6 1.8-1 3-1s2.2.4 3 1"/>
+  </symbol>
+  <symbol id="vxp-artifact" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M12 3 4.5 7v5c0 5 3.2 8.2 7.5 9 4.3-.8 7.5-4 7.5-9V7L12 3z"/><path d="M12 8v8M9 12h6"/>
+  </symbol>
+  <symbol id="vxp-provenance" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
+    <circle cx="12" cy="12" r="9"/><path d="M8 12h8M12 8v8"/><path d="M9.5 9.5 14.5 14.5M14.5 9.5 9.5 14.5"/>
+  </symbol>
+  <symbol id="vxp-uncertainty" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
+    <circle cx="12" cy="12" r="9"/><path d="M9.5 9.5a2.8 2.8 0 1 1 3.8 2.6c-.7.4-1.3 1-1.3 2"/><circle cx="12" cy="17" r="0.9" fill="currentColor"/>
+  </symbol>
+  <symbol id="vxp-settings" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
+    <circle cx="12" cy="12" r="3"/><path d="M12 3.5v2M12 18.5v2M4.9 6.5l1.5 1.5M17.6 16l1.5 1.5M3.5 12h2M18.5 12h2M4.9 17.5l1.5-1.5M17.6 8l1.5-1.5"/>
+  </symbol>
+  <symbol id="vxp-accessibility" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
+    <circle cx="12" cy="5" r="2"/><path d="M6 10h12M12 10v9M8 22l4-6 4 6"/>
+  </symbol>
+  <symbol id="vxp-pause" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
+    <rect x="6" y="5" width="4" height="14" rx="1"/><rect x="14" y="5" width="4" height="14" rx="1"/>
+  </symbol>
+  <symbol id="vxp-back" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M15 5 8 12l7 7"/><path d="M8 12h12"/>
+  </symbol>
+  <symbol id="vxp-camera" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M4 8h3l1.5-2h7L17 8h3v11H4V8z"/><circle cx="12" cy="13.5" r="3.5"/>
+  </symbol>
+  <symbol id="vxp-audio" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
+    <rect x="9" y="3" width="6" height="11" rx="3"/><path d="M6 11a6 6 0 0 0 12 0M12 17v4"/>
+  </symbol>
+  <symbol id="vxp-binoculars" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
+    <circle cx="7" cy="14" r="4"/><circle cx="17" cy="14" r="4"/><path d="M11 14h2M8 6h2l1 4M14 6h2l1 4"/>
+  </symbol>
+  <symbol id="vxp-brush" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M14 3 21 10l-8 8H6v-7l8-8z"/><path d="M6 18c0 2-1 3-3 3 0-2 1-3 3-3z"/>
+  </symbol>
+  <symbol id="vxp-scanner" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M4 8V5a1 1 0 0 1 1-1h3M16 4h3a1 1 0 0 1 1 1v3M20 16v3a1 1 0 0 1-1 1h-3M8 20H5a1 1 0 0 1-1-1v-3"/><path d="M7 12h10"/>
+  </symbol>
+  <symbol id="vxp-earth" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
+    <circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.5 2.8 4 6 4 9s-1.5 6.2-4 9c-2.5-2.8-4-6-4-9s1.5-6.2 4-9z"/>
+  </symbol>
+  <symbol id="vxp-achievements" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
+    <circle cx="12" cy="9" r="5"/><path d="M8.5 13.5 7 21l5-2 5 2-1.5-7.5"/><path d="M9 7.5h6"/>
+  </symbol>
+</svg>

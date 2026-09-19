@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Archive of Life" data-vxp4-brand="living-archive-seal">
+  <defs>
+    <linearGradient id="la-strata" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1F6B5A"/>
+      <stop offset="55%" stop-color="#C9842A"/>
+      <stop offset="100%" stop-color="#2A3A4A"/>
+    </linearGradient>
+  </defs>
+  <circle cx="32" cy="32" r="30" fill="#F4F0E6" stroke="#1A2430" stroke-width="2"/>
+  <path d="M14 40c6-10 12-16 18-16s12 6 18 16" fill="url(#la-strata)" opacity=".9"/>
+  <path d="M20 40h24" stroke="#1A2430" stroke-width="1.5"/>
+  <path d="M24 34h16M26 28h12" stroke="#F4F0E6" stroke-width="1.25" opacity=".7"/>
+  <circle cx="32" cy="22" r="5" fill="#5EC8C0" stroke="#1A2430" stroke-width="1.5"/>
+  <path d="M32 17c2-4 6-5 8-4-2 3-4 5-8 4z" fill="#1F6B5A"/>
+</svg>

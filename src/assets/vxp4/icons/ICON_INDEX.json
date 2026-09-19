@@ -1,0 +1,29 @@
+{
+  "system": "Living Archive",
+  "count": 21,
+  "icons": [
+    "accessibility",
+    "archive",
+    "artifact",
+    "back",
+    "biome",
+    "brand-seal",
+    "collect",
+    "evidence",
+    "explore",
+    "journal",
+    "lifeling",
+    "map",
+    "observe",
+    "pause",
+    "provenance",
+    "quest",
+    "region",
+    "settings",
+    "species",
+    "time",
+    "uncertainty"
+  ],
+  "license": "Original artwork \u00a9 gunnchOS3k / Archive of Life \u2014 created for VXP-4; free to redistribute with the game",
+  "note": "Stroke icons use currentColor; no emoji; not derived from Pok\u00e9mon/NatGeo/museum trade dress"
+}
