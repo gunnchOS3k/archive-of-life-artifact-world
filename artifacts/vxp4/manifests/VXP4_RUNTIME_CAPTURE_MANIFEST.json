@@ -1,0 +1,307 @@
+{
+  "program": "VXP-4",
+  "title": "Archive of Life Living Archive runtime capture",
+  "capture_class": "playwright_vite_runtime",
+  "pixel_physical": false,
+  "human_visual_validation": false,
+  "human_fun_validation": false,
+  "url": "http://127.0.0.1:5194/",
+  "living_archive_checks": {
+    "bodyClass": true,
+    "brand": true,
+    "cta": true,
+    "adminAttr": true,
+    "emojiHud": false
+  },
+  "shot_count": 41,
+  "shots": [
+    {
+      "name": "home_desktop-1440x900",
+      "file": "after_home_desktop-1440x900.png",
+      "ok": true,
+      "surface": "museum-hub",
+      "viewport": "desktop-1440x900"
+    },
+    {
+      "name": "explore_hud_desktop-1440x900",
+      "file": "after_explore_hud_desktop-1440x900.png",
+      "ok": true,
+      "surface": "explore",
+      "viewport": "desktop-1440x900"
+    },
+    {
+      "name": "onboarding_desktop-1440x900",
+      "file": "after_onboarding_desktop-1440x900.png",
+      "ok": true,
+      "surface": "onboarding",
+      "viewport": "desktop-1440x900"
+    },
+    {
+      "name": "expedition_map_desktop-1440x900",
+      "file": "after_expedition_map_desktop-1440x900.png",
+      "ok": true,
+      "surface": "choose-expedition",
+      "viewport": "desktop-1440x900"
+    },
+    {
+      "name": "archivedex_desktop-1440x900",
+      "file": "after_archivedex_desktop-1440x900.png",
+      "ok": true,
+      "surface": "remember",
+      "viewport": "desktop-1440x900"
+    },
+    {
+      "name": "time_atlas_desktop-1440x900",
+      "file": "after_time_atlas_desktop-1440x900.png",
+      "ok": true,
+      "surface": "understand",
+      "viewport": "desktop-1440x900"
+    },
+    {
+      "name": "lifeling_desktop-1440x900",
+      "file": "after_lifeling_desktop-1440x900.png",
+      "ok": true,
+      "surface": "discover",
+      "viewport": "desktop-1440x900"
+    },
+    {
+      "name": "journal_desktop-1440x900",
+      "file": "after_journal_desktop-1440x900.png",
+      "ok": true,
+      "surface": "remember",
+      "viewport": "desktop-1440x900"
+    },
+    {
+      "name": "home_laptop-1366x768",
+      "file": "after_home_laptop-1366x768.png",
+      "ok": true,
+      "surface": "museum-hub",
+      "viewport": "laptop-1366x768"
+    },
+    {
+      "name": "explore_hud_laptop-1366x768",
+      "file": "after_explore_hud_laptop-1366x768.png",
+      "ok": true,
+      "surface": "explore",
+      "viewport": "laptop-1366x768"
+    },
+    {
+      "name": "onboarding_laptop-1366x768",
+      "file": "after_onboarding_laptop-1366x768.png",
+      "ok": true,
+      "surface": "onboarding",
+      "viewport": "laptop-1366x768"
+    },
+    {
+      "name": "expedition_map_laptop-1366x768",
+      "file": "after_expedition_map_laptop-1366x768.png",
+      "ok": true,
+      "surface": "choose-expedition",
+      "viewport": "laptop-1366x768"
+    },
+    {
+      "name": "archivedex_laptop-1366x768",
+      "file": "after_archivedex_laptop-1366x768.png",
+      "ok": true,
+      "surface": "remember",
+      "viewport": "laptop-1366x768"
+    },
+    {
+      "name": "time_atlas_laptop-1366x768",
+      "file": "after_time_atlas_laptop-1366x768.png",
+      "ok": true,
+      "surface": "understand",
+      "viewport": "laptop-1366x768"
+    },
+    {
+      "name": "lifeling_laptop-1366x768",
+      "file": "after_lifeling_laptop-1366x768.png",
+      "ok": true,
+      "surface": "discover",
+      "viewport": "laptop-1366x768"
+    },
+    {
+      "name": "journal_laptop-1366x768",
+      "file": "after_journal_laptop-1366x768.png",
+      "ok": true,
+      "surface": "remember",
+      "viewport": "laptop-1366x768"
+    },
+    {
+      "name": "home_tablet-768x1024",
+      "file": "after_home_tablet-768x1024.png",
+      "ok": true,
+      "surface": "museum-hub",
+      "viewport": "tablet-768x1024"
+    },
+    {
+      "name": "explore_hud_tablet-768x1024",
+      "file": "after_explore_hud_tablet-768x1024.png",
+      "ok": true,
+      "surface": "explore",
+      "viewport": "tablet-768x1024"
+    },
+    {
+      "name": "onboarding_tablet-768x1024",
+      "file": "after_onboarding_tablet-768x1024.png",
+      "ok": true,
+      "surface": "onboarding",
+      "viewport": "tablet-768x1024"
+    },
+    {
+      "name": "expedition_map_tablet-768x1024",
+      "file": "after_expedition_map_tablet-768x1024.png",
+      "ok": true,
+      "surface": "choose-expedition",
+      "viewport": "tablet-768x1024"
+    },
+    {
+      "name": "archivedex_tablet-768x1024",
+      "file": "after_archivedex_tablet-768x1024.png",
+      "ok": true,
+      "surface": "remember",
+      "viewport": "tablet-768x1024"
+    },
+    {
+      "name": "time_atlas_tablet-768x1024",
+      "file": "after_time_atlas_tablet-768x1024.png",
+      "ok": true,
+      "surface": "understand",
+      "viewport": "tablet-768x1024"
+    },
+    {
+      "name": "lifeling_tablet-768x1024",
+      "file": "after_lifeling_tablet-768x1024.png",
+      "ok": true,
+      "surface": "discover",
+      "viewport": "tablet-768x1024"
+    },
+    {
+      "name": "journal_tablet-768x1024",
+      "file": "after_journal_tablet-768x1024.png",
+      "ok": true,
+      "surface": "remember",
+      "viewport": "tablet-768x1024"
+    },
+    {
+      "name": "home_phone-390x844",
+      "file": "after_home_phone-390x844.png",
+      "ok": true,
+      "surface": "museum-hub",
+      "viewport": "phone-390x844"
+    },
+    {
+      "name": "explore_hud_phone-390x844",
+      "file": "after_explore_hud_phone-390x844.png",
+      "ok": true,
+      "surface": "explore",
+      "viewport": "phone-390x844"
+    },
+    {
+      "name": "onboarding_phone-390x844",
+      "file": "after_onboarding_phone-390x844.png",
+      "ok": true,
+      "surface": "onboarding",
+      "viewport": "phone-390x844"
+    },
+    {
+      "name": "expedition_map_phone-390x844",
+      "file": "after_expedition_map_phone-390x844.png",
+      "ok": true,
+      "surface": "choose-expedition",
+      "viewport": "phone-390x844"
+    },
+    {
+      "name": "archivedex_phone-390x844",
+      "file": "after_archivedex_phone-390x844.png",
+      "ok": true,
+      "surface": "remember",
+      "viewport": "phone-390x844"
+    },
+    {
+      "name": "time_atlas_phone-390x844",
+      "file": "after_time_atlas_phone-390x844.png",
+      "ok": true,
+      "surface": "understand",
+      "viewport": "phone-390x844"
+    },
+    {
+      "name": "lifeling_phone-390x844",
+      "file": "after_lifeling_phone-390x844.png",
+      "ok": true,
+      "surface": "discover",
+      "viewport": "phone-390x844"
+    },
+    {
+      "name": "journal_phone-390x844",
+      "file": "after_journal_phone-390x844.png",
+      "ok": true,
+      "surface": "remember",
+      "viewport": "phone-390x844"
+    },
+    {
+      "name": "home_a11y_default",
+      "file": "after_home_a11y_default.png",
+      "ok": true,
+      "surface": "museum-hub",
+      "a11y": "default"
+    },
+    {
+      "name": "explore_a11y_default",
+      "file": "after_explore_a11y_default.png",
+      "ok": true,
+      "surface": "explore",
+      "a11y": "default"
+    },
+    {
+      "name": "home_a11y_high-contrast",
+      "file": "after_home_a11y_high-contrast.png",
+      "ok": true,
+      "surface": "museum-hub",
+      "a11y": "high-contrast"
+    },
+    {
+      "name": "explore_a11y_high-contrast",
+      "file": "after_explore_a11y_high-contrast.png",
+      "ok": true,
+      "surface": "explore",
+      "a11y": "high-contrast"
+    },
+    {
+      "name": "home_a11y_reduce-motion",
+      "file": "after_home_a11y_reduce-motion.png",
+      "ok": true,
+      "surface": "museum-hub",
+      "a11y": "reduce-motion"
+    },
+    {
+      "name": "explore_a11y_reduce-motion",
+      "file": "after_explore_a11y_reduce-motion.png",
+      "ok": true,
+      "surface": "explore",
+      "a11y": "reduce-motion"
+    },
+    {
+      "name": "home_a11y_large-text",
+      "file": "after_home_a11y_large-text.png",
+      "ok": true,
+      "surface": "museum-hub",
+      "a11y": "large-text"
+    },
+    {
+      "name": "explore_a11y_large-text",
+      "file": "after_explore_a11y_large-text.png",
+      "ok": true,
+      "surface": "explore",
+      "a11y": "large-text"
+    },
+    {
+      "name": "admin_coverage_dev",
+      "file": "after_admin_coverage_dev.png",
+      "ok": true,
+      "surface": "admin",
+      "viewport": "desktop-1440x900"
+    }
+  ],
+  "captured_at": "2026-09-19T18:59:32.023Z"
+}

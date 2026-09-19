@@ -1,4 +1,5 @@
 import '../css/styles.css';
+import '../css/living-archive.css';
 import { dataCatalog } from '@/services/DataCatalogService';
 import { earthLayerService } from '@/services/EarthLayerService';
 import { ArchiveDexService } from '@/services/ArchiveDexService';
@@ -12,11 +13,19 @@ import {
 import { applyDeviceRole, resolveDeviceRole } from '@/device/deviceRoles';
 import { track } from '@/systems/telemetry';
 import { Game } from '@/game/Game';
+import {
+  hydrateLivingArchiveIcons,
+  setEmotionalMode,
+} from '@/ui/livingArchive';
 
 let game: Game | null = null;
 const archiveDexService = new ArchiveDexService(dataCatalog, timeAtlasService);
 
 async function init() {
+  document.body.classList.add('vxp4-living-archive');
+  setEmotionalMode('home');
+  void hydrateLivingArchiveIcons();
+
   const params =
     typeof window !== 'undefined' ? new URLSearchParams(window.location.search) : null;
   const role = resolveDeviceRole(null, params);
@@ -143,6 +152,8 @@ async function startGame(continuing: boolean) {
 
   document.getElementById('title-screen')!.classList.remove('active');
   document.getElementById('game-screen')!.classList.add('active');
+  setEmotionalMode('explore');
+  void hydrateLivingArchiveIcons();
 
   const canvas = document.getElementById('game-canvas') as HTMLCanvasElement;
   game = new Game(

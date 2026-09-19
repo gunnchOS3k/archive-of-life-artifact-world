@@ -1,0 +1,750 @@
+/**
+ * Living Archive — VXP-4 visual system
+ * Internal design label only. Player-facing title remains "Archive of Life".
+ * Does not alter scientific claim semantics.
+ */
+
+@font-face {
+  font-family: "Source Serif 4";
+  src: url("/assets/vxp4/fonts/SourceSerif4-Regular.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Source Serif 4";
+  src: url("/assets/vxp4/fonts/SourceSerif4-SemiBold.woff2") format("woff2");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Source Sans 3";
+  src: url("/assets/vxp4/fonts/SourceSans3-Regular.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Source Sans 3";
+  src: url("/assets/vxp4/fonts/SourceSans3-SemiBold.woff2") format("woff2");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Source Sans 3";
+  src: url("/assets/vxp4/fonts/SourceSans3-Bold.woff2") format("woff2");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+:root {
+  /* Living Archive palette */
+  --archive-ink: #1a2430;
+  --fossil-ivory: #f4f0e6;
+  --mineral-jade: #1f6b5a;
+  --mineral-jade-soft: #2f8f78;
+  --amber-strata: #c9842a;
+  --glacial-cyan: #5ec8c0;
+  --volcanic-coral: #c45a4a;
+  --deep-violet: #4a3a62;
+  --mist-field: #e7efe9;
+  --strata-shadow: rgba(26, 36, 48, 0.18);
+
+  /* Mapped legacy tokens → Living Archive (player experience) */
+  --bg-dark: #142018;
+  --bg-panel: rgba(244, 240, 230, 0.96);
+  --bg-card: #ebe4d4;
+  --accent-green: var(--mineral-jade-soft);
+  --accent-gold: var(--amber-strata);
+  --accent-blue: #3d7ea6;
+  --text-primary: var(--archive-ink);
+  --text-secondary: #4d5a55;
+  --danger: var(--volcanic-coral);
+  --success: var(--mineral-jade);
+  --border: rgba(26, 36, 48, 0.14);
+  --font-main: "Source Sans 3", "Segoe UI", system-ui, sans-serif;
+  --font-display: "Source Serif 4", Georgia, "Times New Roman", serif;
+
+  --la-radius: 18px;
+  --la-radius-sm: 12px;
+  --la-ease: cubic-bezier(0.22, 1, 0.36, 1);
+  --la-hud-glass: rgba(20, 32, 24, 0.42);
+}
+
+/* Emotional modes — set on #app or documentElement */
+[data-emotional-mode="home"] {
+  --mode-wash: radial-gradient(ellipse at 30% 20%, rgba(94, 200, 192, 0.18), transparent 50%),
+    radial-gradient(ellipse at 80% 80%, rgba(201, 132, 42, 0.12), transparent 45%),
+    linear-gradient(160deg, #1a2e24 0%, #0f1a16 55%, #1a2430 100%);
+}
+[data-emotional-mode="choose"] {
+  --mode-wash: linear-gradient(180deg, #1c2c26 0%, #152018 100%);
+}
+[data-emotional-mode="explore"] {
+  --mode-wash: transparent;
+}
+[data-emotional-mode="discover"] {
+  --mode-glow: rgba(94, 200, 192, 0.35);
+}
+[data-emotional-mode="understand"] {
+  --mode-glow: rgba(201, 132, 42, 0.28);
+}
+[data-emotional-mode="remember"] {
+  --mode-glow: rgba(74, 58, 98, 0.22);
+}
+
+body.vxp4-living-archive {
+  font-family: var(--font-main);
+  background: var(--bg-dark);
+  color: var(--fossil-ivory);
+  letter-spacing: 0.01em;
+}
+
+body.vxp4-living-archive #app {
+  background: var(--mode-wash, transparent);
+}
+
+/* ——— Title / Museum Hub ——— */
+body.vxp4-living-archive #title-screen {
+  background:
+    radial-gradient(ellipse at 20% 15%, rgba(94, 200, 192, 0.22), transparent 42%),
+    radial-gradient(ellipse at 85% 75%, rgba(201, 132, 42, 0.16), transparent 40%),
+    linear-gradient(165deg, #163028 0%, #101820 48%, #1a2430 100%);
+  align-items: stretch;
+  justify-content: center;
+}
+
+body.vxp4-living-archive .title-content {
+  max-width: 720px;
+  width: min(92vw, 720px);
+  margin: auto;
+  padding: 2.5rem 1.5rem 3rem;
+  text-align: left;
+  position: relative;
+}
+
+body.vxp4-living-archive .la-brand-row {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1.25rem;
+}
+
+body.vxp4-living-archive .la-brand-seal {
+  width: 72px;
+  height: 72px;
+  flex-shrink: 0;
+  filter: drop-shadow(0 8px 24px rgba(0, 0, 0, 0.35));
+  animation: la-seal-breathe 5.5s var(--la-ease) infinite;
+}
+
+body.vxp4-living-archive .title-content h1 {
+  font-family: var(--font-display);
+  font-size: clamp(2.4rem, 6vw, 3.6rem);
+  font-weight: 600;
+  color: var(--fossil-ivory);
+  letter-spacing: 0.02em;
+  line-height: 1.05;
+  margin: 0;
+}
+
+body.vxp4-living-archive .title-content h2 {
+  display: none; /* demote engineering subtitle */
+}
+
+body.vxp4-living-archive .la-brand-kicker {
+  font-size: 0.78rem;
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+  color: var(--glacial-cyan);
+  margin: 0 0 0.35rem;
+}
+
+body.vxp4-living-archive .subtitle {
+  color: rgba(244, 240, 230, 0.78);
+  font-size: 1.05rem;
+  max-width: 34ch;
+  margin: 0.75rem 0 1.75rem;
+}
+
+body.vxp4-living-archive .la-cta-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-bottom: 1.5rem;
+}
+
+body.vxp4-living-archive .btn-primary {
+  background: linear-gradient(135deg, var(--mineral-jade-soft), var(--mineral-jade));
+  color: var(--fossil-ivory);
+  border-radius: 999px;
+  padding: 0.9rem 1.75rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  font-size: 0.92rem;
+  box-shadow: 0 10px 28px rgba(31, 107, 90, 0.35);
+  border: none;
+}
+
+body.vxp4-living-archive .btn-secondary {
+  background: transparent;
+  color: var(--fossil-ivory);
+  border: 1.5px solid rgba(244, 240, 230, 0.45);
+  border-radius: 999px;
+  padding: 0.85rem 1.5rem;
+  font-weight: 600;
+}
+
+body.vxp4-living-archive .btn-primary:hover,
+body.vxp4-living-archive .btn-secondary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 28px rgba(94, 200, 192, 0.22);
+}
+
+body.vxp4-living-archive .credits {
+  color: rgba(244, 240, 230, 0.55);
+  font-size: 0.78rem;
+  max-width: 52ch;
+  line-height: 1.55;
+  border-top: 1px solid rgba(244, 240, 230, 0.12);
+  padding-top: 1rem;
+}
+
+body.vxp4-living-archive .la-atmosphere {
+  pointer-events: none;
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  z-index: 0;
+}
+
+body.vxp4-living-archive .la-atmosphere::before,
+body.vxp4-living-archive .la-atmosphere::after {
+  content: "";
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(40px);
+  opacity: 0.35;
+  animation: la-drift 14s var(--la-ease) infinite alternate;
+}
+
+body.vxp4-living-archive .la-atmosphere::before {
+  width: 42vw;
+  height: 42vw;
+  background: var(--glacial-cyan);
+  top: -10%;
+  right: -8%;
+}
+
+body.vxp4-living-archive .la-atmosphere::after {
+  width: 36vw;
+  height: 36vw;
+  background: var(--amber-strata);
+  bottom: -12%;
+  left: -6%;
+  animation-delay: -4s;
+}
+
+body.vxp4-living-archive .title-content > * {
+  position: relative;
+  z-index: 1;
+}
+
+@keyframes la-seal-breathe {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.03); }
+}
+
+@keyframes la-drift {
+  from { transform: translate(0, 0); }
+  to { transform: translate(-3%, 4%); }
+}
+
+@keyframes la-reveal-up {
+  from { opacity: 0; transform: translateY(12px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes la-strata-in {
+  from { opacity: 0; clip-path: inset(0 0 100% 0); }
+  to { opacity: 1; clip-path: inset(0 0 0 0); }
+}
+
+/* ——— Quiet exploration HUD ——— */
+body.vxp4-living-archive #hud-top {
+  background: linear-gradient(to bottom, rgba(10, 16, 14, 0.55), transparent);
+  padding: 0.85rem 1.25rem;
+}
+
+body.vxp4-living-archive #region-name {
+  font-family: var(--font-display);
+  font-size: 1.15rem;
+  color: var(--fossil-ivory);
+  text-shadow: 0 2px 12px rgba(0, 0, 0, 0.45);
+}
+
+body.vxp4-living-archive .tool-badge {
+  background: var(--la-hud-glass);
+  border: 1px solid rgba(244, 240, 230, 0.18);
+  border-radius: 10px;
+  width: 2.1rem;
+  height: 2.1rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--fossil-ivory);
+  padding: 0;
+}
+
+body.vxp4-living-archive .tool-badge .la-icon {
+  width: 1.15rem;
+  height: 1.15rem;
+}
+
+body.vxp4-living-archive #hud-bottom {
+  background: linear-gradient(to top, rgba(10, 16, 14, 0.72), transparent);
+  padding: 0.65rem 0.65rem calc(0.65rem + env(safe-area-inset-bottom, 0px));
+}
+
+body.vxp4-living-archive .hud-btn {
+  background: rgba(244, 240, 230, 0.1);
+  border: 1px solid rgba(244, 240, 230, 0.22);
+  color: var(--fossil-ivory);
+  border-radius: 999px;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.5rem 0.85rem;
+  backdrop-filter: blur(8px);
+}
+
+body.vxp4-living-archive .hud-btn .la-icon {
+  width: 1rem;
+  height: 1rem;
+  flex-shrink: 0;
+}
+
+body.vxp4-living-archive .hud-btn:hover {
+  background: rgba(94, 200, 192, 0.22);
+  border-color: rgba(94, 200, 192, 0.55);
+}
+
+body.vxp4-living-archive #interaction-prompt {
+  background: rgba(244, 240, 230, 0.92);
+  color: var(--archive-ink);
+  border: 1px solid rgba(31, 107, 90, 0.35);
+  border-radius: 999px;
+  font-weight: 600;
+}
+
+/* ——— Player panels (atlas plates) ——— */
+body.vxp4-living-archive .panel {
+  background: var(--bg-panel);
+  color: var(--archive-ink);
+  border: 1px solid var(--border);
+  border-radius: var(--la-radius);
+  box-shadow:
+    0 24px 64px rgba(0, 0, 0, 0.45),
+    0 0 0 1px rgba(244, 240, 230, 0.06) inset;
+  animation: la-reveal-up 0.35s var(--la-ease);
+}
+
+body.vxp4-living-archive .panel-header {
+  border-bottom: 1px solid var(--border);
+  background:
+    linear-gradient(90deg, rgba(31, 107, 90, 0.08), transparent 60%);
+}
+
+body.vxp4-living-archive .panel-header h2 {
+  color: var(--mineral-jade);
+  font-family: var(--font-display);
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+body.vxp4-living-archive .panel-close {
+  color: var(--text-secondary);
+  border-radius: 8px;
+}
+
+body.vxp4-living-archive .panel-close:hover {
+  color: var(--archive-ink);
+  background: rgba(26, 36, 48, 0.06);
+}
+
+body.vxp4-living-archive .tab.active,
+body.vxp4-living-archive .tab:hover {
+  background: rgba(31, 107, 90, 0.1);
+  color: var(--archive-ink);
+  border-color: rgba(31, 107, 90, 0.25);
+}
+
+/* ——— Admin / developer surfaces (visually demoted) ——— */
+body.vxp4-living-archive .panel-coverage,
+body.vxp4-living-archive .panel-implementation {
+  background: #1c2220;
+  color: #d7ddd8;
+  border: 1px dashed rgba(201, 132, 42, 0.55);
+  border-radius: 8px;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5);
+  animation: none;
+}
+
+body.vxp4-living-archive .panel-coverage .panel-header,
+body.vxp4-living-archive .panel-implementation .panel-header {
+  background: #141816;
+  border-bottom: 1px solid rgba(201, 132, 42, 0.35);
+}
+
+body.vxp4-living-archive .panel-coverage .panel-header h2,
+body.vxp4-living-archive .panel-implementation .panel-header h2 {
+  color: var(--amber-strata);
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  font-size: 0.95rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+body.vxp4-living-archive .panel-coverage .panel-header h2::before,
+body.vxp4-living-archive .panel-implementation .panel-header h2::before {
+  content: "DEV";
+  display: inline-block;
+  font-size: 0.65rem;
+  padding: 0.15rem 0.4rem;
+  margin-right: 0.45rem;
+  border: 1px solid var(--amber-strata);
+  border-radius: 3px;
+  vertical-align: middle;
+}
+
+body.vxp4-living-archive .dev-only-banner {
+  border-left: 3px solid var(--amber-strata);
+  background: rgba(201, 132, 42, 0.12);
+  color: #e8d9b5;
+  padding: 0.65rem 0.85rem;
+  border-radius: 0 8px 8px 0;
+  font-size: 0.8rem;
+}
+
+/* ——— Expedition / map plates ——— */
+body.vxp4-living-archive #map-container {
+  gap: 1rem;
+}
+
+body.vxp4-living-archive .map-region {
+  background:
+    linear-gradient(165deg, rgba(31, 107, 90, 0.12), transparent 55%),
+    var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--la-radius-sm);
+  text-align: left;
+  padding: 1.1rem 1.15rem;
+  min-height: 7.5rem;
+  position: relative;
+  overflow: hidden;
+}
+
+body.vxp4-living-archive .map-region::after {
+  content: "";
+  position: absolute;
+  inset: auto 0 0 0;
+  height: 4px;
+  background: linear-gradient(90deg, var(--mineral-jade), var(--glacial-cyan), var(--amber-strata));
+  opacity: 0.55;
+}
+
+body.vxp4-living-archive .map-region:hover {
+  border-color: var(--mineral-jade);
+  transform: translateY(-3px);
+}
+
+body.vxp4-living-archive .map-region.current {
+  border-color: var(--amber-strata);
+  box-shadow: 0 0 0 2px rgba(201, 132, 42, 0.25);
+}
+
+body.vxp4-living-archive .map-region.hub {
+  background:
+    linear-gradient(120deg, rgba(94, 200, 192, 0.18), transparent 50%),
+    var(--bg-card);
+}
+
+body.vxp4-living-archive .map-era-banner {
+  background: rgba(74, 58, 98, 0.1);
+  border: 1px solid rgba(74, 58, 98, 0.25);
+  color: var(--deep-violet);
+  border-radius: var(--la-radius-sm);
+  padding: 0.65rem 0.85rem;
+  margin-bottom: 0.85rem;
+  font-size: 0.88rem;
+}
+
+/* ——— Time Atlas geological bands ——— */
+body.vxp4-living-archive .panel-time .panel-header {
+  background: linear-gradient(90deg, rgba(74, 58, 98, 0.12), rgba(201, 132, 42, 0.08));
+}
+
+body.vxp4-living-archive .time-atlas-tree .time-unit,
+body.vxp4-living-archive .time-unit-row,
+body.vxp4-living-archive .time-gate-card {
+  border-left: 4px solid var(--amber-strata);
+  background: linear-gradient(90deg, rgba(201, 132, 42, 0.08), transparent 55%);
+  border-radius: 0 var(--la-radius-sm) var(--la-radius-sm) 0;
+}
+
+body.vxp4-living-archive .time-atlas-detail {
+  animation: la-strata-in 0.4s var(--la-ease);
+}
+
+/* ——— ArchiveDex museum labels ——— */
+body.vxp4-living-archive .archive-card {
+  background: var(--fossil-ivory);
+  border: 1px solid var(--border);
+  border-radius: var(--la-radius-sm);
+  box-shadow: 0 6px 16px var(--strata-shadow);
+  text-align: left;
+}
+
+body.vxp4-living-archive .archive-card .species-name {
+  font-family: var(--font-display);
+  color: var(--archive-ink);
+}
+
+body.vxp4-living-archive .species-detail {
+  background: var(--fossil-ivory);
+  border: 1px solid var(--border);
+  border-radius: var(--la-radius-sm);
+  box-shadow: 0 8px 24px var(--strata-shadow);
+}
+
+body.vxp4-living-archive .species-detail h3 {
+  color: var(--mineral-jade);
+}
+
+body.vxp4-living-archive .why-matters {
+  background: rgba(31, 107, 90, 0.08);
+  border-left: 3px solid var(--mineral-jade);
+}
+
+/* ——— Truth badges (beautiful + exact) ——— */
+body.vxp4-living-archive .truth-chip,
+body.vxp4-living-archive .mock-badge,
+body.vxp4-living-archive .verified-badge,
+body.vxp4-living-archive .sample-badge,
+body.vxp4-living-archive .game-authored-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  border-radius: 999px;
+  padding: 0.2rem 0.55rem;
+  border: 1px solid transparent;
+}
+
+body.vxp4-living-archive .mock-badge,
+body.vxp4-living-archive .truth-chip[data-truth="mock_sample"] {
+  background: rgba(201, 132, 42, 0.15);
+  color: #8a5a12;
+  border-color: rgba(201, 132, 42, 0.45);
+}
+
+body.vxp4-living-archive .sample-badge,
+body.vxp4-living-archive .truth-chip[data-truth="game_authored_verified"],
+body.vxp4-living-archive .game-authored-badge {
+  background: rgba(61, 126, 166, 0.12);
+  color: #2a5674;
+  border-color: rgba(61, 126, 166, 0.4);
+}
+
+body.vxp4-living-archive .verified-badge,
+body.vxp4-living-archive .truth-chip[data-truth="source_verified"] {
+  background: rgba(31, 107, 90, 0.12);
+  color: var(--mineral-jade);
+  border-color: rgba(31, 107, 90, 0.4);
+}
+
+body.vxp4-living-archive .truth-chip[data-truth="uncertain"],
+body.vxp4-living-archive .uncertainty-chip {
+  background: rgba(74, 58, 98, 0.1);
+  color: var(--deep-violet);
+  border-color: rgba(74, 58, 98, 0.35);
+  border-style: dashed;
+}
+
+body.vxp4-living-archive .provenance-section {
+  background: rgba(244, 240, 230, 0.65);
+  border: 1px solid var(--border);
+  border-radius: var(--la-radius-sm);
+  padding: 0.85rem;
+}
+
+body.vxp4-living-archive .provenance-item.mock {
+  border-color: var(--amber-strata);
+}
+
+/* ——— Companion / Lifeling ——— */
+body.vxp4-living-archive .companion-body {
+  background:
+    radial-gradient(circle at 30% 20%, rgba(94, 200, 192, 0.18), transparent 45%),
+    transparent;
+}
+
+body.vxp4-living-archive .companion-preview-area {
+  border-radius: var(--la-radius);
+  border: 1px solid var(--border);
+  background: var(--fossil-ivory);
+  padding: 1rem;
+}
+
+/* ——— Quests / journal hierarchy ——— */
+body.vxp4-living-archive .notebook-entry {
+  background: var(--fossil-ivory);
+  border-left: 3px solid var(--amber-strata);
+  box-shadow: 0 4px 12px var(--strata-shadow);
+}
+
+body.vxp4-living-archive .quest-card,
+body.vxp4-living-archive #quest-list > * {
+  border-radius: var(--la-radius-sm);
+}
+
+/* ——— Onboarding (player-first) ——— */
+body.vxp4-living-archive #onboarding-overlay .minigame-container {
+  background: var(--fossil-ivory);
+  color: var(--archive-ink);
+  border-radius: var(--la-radius);
+  border: 1px solid var(--border);
+  max-width: 28rem;
+  text-align: left;
+  animation: la-reveal-up 0.45s var(--la-ease);
+}
+
+body.vxp4-living-archive #onboarding-overlay h2 {
+  font-family: var(--font-display);
+  color: var(--mineral-jade);
+}
+
+/* ——— Discover / artifact reveal ——— */
+body.vxp4-living-archive .unlock-animation,
+body.vxp4-living-archive .artifact-reveal {
+  font-family: var(--font-display);
+  color: var(--mineral-jade);
+  animation: la-reveal-up 0.55s var(--la-ease);
+}
+
+body.vxp4-living-archive #toast {
+  background: rgba(244, 240, 230, 0.95);
+  color: var(--archive-ink);
+  border: 1px solid rgba(31, 107, 90, 0.35);
+  border-radius: 999px;
+}
+
+/* ——— Earth panel: science layer second ——— */
+body.vxp4-living-archive .panel-earth .panel-header h2 {
+  color: var(--accent-blue);
+}
+
+body.vxp4-living-archive .earth-mock-banner,
+body.vxp4-living-archive .time-mock-banner {
+  border-radius: var(--la-radius-sm);
+}
+
+/* ——— Icons ——— */
+.la-icon {
+  display: inline-block;
+  width: 1.25rem;
+  height: 1.25rem;
+  vertical-align: -0.2em;
+  color: inherit;
+}
+
+.la-icon svg {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+.la-icon-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* ——— Accessibility modes ——— */
+.a11y-high-contrast body.vxp4-living-archive,
+body.vxp4-living-archive.a11y-high-contrast,
+html.a11y-high-contrast body.vxp4-living-archive {
+  --border: #000;
+  --text-secondary: #1a2430;
+}
+
+html.a11y-high-contrast body.vxp4-living-archive .panel,
+html.a11y-high-contrast body.vxp4-living-archive .hud-btn,
+html.a11y-high-contrast body.vxp4-living-archive .map-region {
+  border-width: 2px;
+  border-color: #000;
+}
+
+html.a11y-high-contrast body.vxp4-living-archive #title-screen {
+  background: #000;
+}
+
+html.a11y-large-text body.vxp4-living-archive {
+  font-size: 112%;
+}
+
+html.a11y-reduced-motion body.vxp4-living-archive *,
+html.a11y-reduced-motion body.vxp4-living-archive *::before,
+html.a11y-reduced-motion body.vxp4-living-archive *::after {
+  animation: none !important;
+  transition: none !important;
+}
+
+/* ——— Responsive ——— */
+@media (max-width: 720px) {
+  body.vxp4-living-archive .title-content {
+    text-align: center;
+  }
+  body.vxp4-living-archive .la-brand-row {
+    flex-direction: column;
+  }
+  body.vxp4-living-archive .subtitle {
+    max-width: none;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  body.vxp4-living-archive .la-cta-group {
+    justify-content: center;
+  }
+  body.vxp4-living-archive .credits {
+    text-align: left;
+  }
+  body.vxp4-living-archive #map-container {
+    grid-template-columns: 1fr;
+  }
+  body.vxp4-living-archive .map-region.hub {
+    grid-column: span 1;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  body.vxp4-living-archive .la-brand-seal,
+  body.vxp4-living-archive .la-atmosphere::before,
+  body.vxp4-living-archive .la-atmosphere::after {
+    animation: none;
+  }
+}

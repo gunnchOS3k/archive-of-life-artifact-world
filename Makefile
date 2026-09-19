@@ -1,5 +1,20 @@
 # Archive of Life — Wave008 scientific record evidence gate (integrity-repaired)
-.PHONY: wave008 wave008-prepare wave008-browser wave008-python wave008-python-ab verify test
+.PHONY: wave008 wave008-prepare wave008-browser wave008-python wave008-python-ab verify test vxp4 vxp4-structural vxp4-capture vxp4-gates
+
+vxp4-structural:
+	node scripts/vxp4/run_structural.mjs
+
+vxp4-capture:
+	node scripts/vxp4/run_runtime_capture.mjs
+
+vxp4-gates:
+	python3 scripts/vxp4/emit_gates.py
+
+vxp4: vxp4-structural vxp4-capture vxp4-gates
+	@test -f artifacts/vxp4/capture/STRUCTURAL_RESULT.json
+	@test -f artifacts/vxp4/manifests/VXP4_RUNTIME_CAPTURE_MANIFEST.json
+	@test -f artifacts/vxp4/reports/VXP4_GATES.json
+	@python3 -c "import json; g=json.load(open('artifacts/vxp4/reports/VXP4_GATES.json')); assert g.get('VXP4_STRUCTURAL_ASSERTS_PASS') is True; assert g.get('VXP4_RUNTIME_CAPTURE_PASS') is True; assert g.get('VXP4_PIXEL_PHYSICAL_CAPTURE_PASS') is False; assert g.get('VXP4_HUMAN_VISUAL_VALIDATION_PASS') is False; assert g.get('VXP4_MERGE_AUTHORIZED') is False; assert g.get('VXP4_GLOBAL_DATA_COMPLETE') is False; assert g.get('VXP4_ALL_SPECIES_INGESTED') is False"
 
 wave008-prepare:
 	@mkdir -p public/data/scientific_fixtures artifacts/engineering_wave008

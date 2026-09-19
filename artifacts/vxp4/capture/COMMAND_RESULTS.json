@@ -1,0 +1,14 @@
+{
+  "ok": true,
+  "playwright_ran": true,
+  "vite_runtime": true,
+  "shot_ok": 41,
+  "shot_total": 41,
+  "living": {
+    "bodyClass": true,
+    "brand": true,
+    "cta": true,
+    "adminAttr": true,
+    "emojiHud": false
+  }
+}
