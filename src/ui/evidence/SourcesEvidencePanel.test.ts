@@ -82,9 +82,11 @@ describe('SourcesEvidencePanel', () => {
       }),
     );
     await renderSourcesEvidencePanel(mount, 'african_lion', 'Panthera leo').done;
-    expect(mount.textContent).toMatch(/Fixture sample \(not live\)/);
+    expect(mount.textContent).toMatch(/Fixture sample/);
     expect(mount.textContent).toMatch(/fixture-backed sample evidence \(not live\)/i);
     expect(mount.textContent).not.toMatch(/Live sources loaded/);
+    expect(mount.querySelector('.evidence-card-details')?.hasAttribute('hidden')).toBe(true);
+    expect(mount.querySelector('.evidence-expand-btn')).toBeTruthy();
   });
 
   it('shows cached banner when live unavailable', async () => {
@@ -284,12 +286,12 @@ describe('SourcesEvidencePanel', () => {
       }),
     );
     await renderSourcesEvidencePanel(mount, 'african_lion', 'Panthera leo').done;
-    const firstId = mount.querySelector('.evidence-card dd')?.textContent;
+    const firstId = mount.querySelector('[data-field="record-id"]')?.textContent;
     mount.remove();
     mount = document.createElement('div');
     document.body.appendChild(mount);
     await renderSourcesEvidencePanel(mount, 'african_lion', 'Panthera leo').done;
-    expect(mount.querySelector('.evidence-card dd')?.textContent).toBe(firstId);
+    expect(mount.querySelector('[data-field="record-id"]')?.textContent).toBe(firstId);
   });
 
   it('background-style abort mid-retrieval does not leave a stuck spinner on the next open', async () => {
@@ -326,5 +328,71 @@ describe('SourcesEvidencePanel', () => {
     await renderSourcesEvidencePanel(mount, 'african_lion', 'Panthera leo').done;
     expect(mount.querySelector('.evidence-loading')).toBeNull();
     expect(mount.dataset.evidenceState).toBe('fixture');
+  });
+
+  it('keeps technical fields collapsed by default and reveals exact values on expand', async () => {
+    getSpeciesEvidenceResult.mockResolvedValue(
+      baseResult({
+        status: 'live',
+        records: [
+          {
+            providerId: 'pbdb',
+            sourceRecordId: 'taxon:123',
+            sourceUrl: 'https://paleobiodb.org/data1.2/taxa/single.json?id=123',
+            retrievedAt: '2026-07-14T00:00:00.000Z',
+            license: 'CC BY 4.0',
+            attribution: 'PBDB',
+            scientificName: 'Tyrannosaurus rex',
+            acceptedName: 'Tyrannosaurus rex',
+            taxonomicRank: 'species',
+            eventDate: 'Late Cretaceous',
+            latitude: 45.1,
+            longitude: -104.2,
+            geographicPrecision: 'formation',
+            temporalPrecision: 'stage',
+            qualityFlag: 'research_grade',
+            confidence: 'reconstructed',
+            interpretation: 'reconstructed',
+            cacheStatus: 'live',
+            payload: {},
+          },
+        ],
+      }),
+    );
+    await renderSourcesEvidencePanel(mount, 't_rex', 'Tyrannosaurus rex').done;
+    const card = mount.querySelector('.evidence-card') as HTMLElement;
+    const details = mount.querySelector('.evidence-card-details') as HTMLElement;
+    const expand = mount.querySelector('.evidence-expand-btn') as HTMLButtonElement;
+    expect(card.dataset.expanded).toBe('false');
+    expect(details.hidden).toBe(true);
+    expect(mount.querySelector('.evidence-source-link')?.getAttribute('href')).toBe(
+      'https://paleobiodb.org/data1.2/taxa/single.json?id=123',
+    );
+    expect(mount.textContent).toMatch(/Live service/);
+    expect(mount.textContent).toMatch(/Reconstructed evidence/);
+    expand.click();
+    expect(card.dataset.expanded).toBe('true');
+    expect(details.hidden).toBe(false);
+    for (const field of [
+      'record-id',
+      'scientific-name',
+      'accepted-name',
+      'rank',
+      'date',
+      'coordinates',
+      'geo-precision',
+      'time-precision',
+      'retrieved',
+      'license',
+      'quality',
+      'classification',
+      'notes',
+      'source-url',
+    ]) {
+      expect(details.querySelector(`[data-field="${field}"]`)).toBeTruthy();
+    }
+    expect(details.querySelector('[data-field="quality"]')?.textContent).toBe('research_grade');
+    expect(details.querySelector('[data-field="classification"]')?.textContent).toBe('reconstructed');
+    expect(mount.textContent).not.toMatch(/Live sources loaded[\s\S]*Fixture sample/);
   });
 });

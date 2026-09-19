@@ -1,0 +1,1 @@
+ffcd91c193fa8b90193caa8b266b8d51ccd41666850fc9af5f7cd9e0f8aaa615  ../build/android/archive-of-life-debug.apk

@@ -646,6 +646,67 @@ body.vxp4-living-archive .artifact-reveal {
   animation: la-reveal-up 0.55s var(--la-ease);
 }
 
+body.vxp4-living-archive .archivedex-unlock-card {
+  background: var(--fossil-ivory);
+  color: var(--archive-ink);
+  border-color: rgba(31, 107, 90, 0.35);
+}
+
+body.vxp4-living-archive .archivedex-unlock-header,
+body.vxp4-living-archive .archivedex-unlock-actions {
+  background: rgba(244, 240, 230, 0.98);
+  border-color: rgba(26, 36, 48, 0.14);
+}
+
+body.vxp4-living-archive .archivedex-unlock-title {
+  font-family: var(--font-display);
+  color: var(--mineral-jade);
+}
+
+body.vxp4-living-archive .evidence-source-link {
+  color: var(--mineral-jade);
+  text-decoration: underline;
+  text-underline-offset: 0.18em;
+  font-weight: 700;
+}
+
+body.vxp4-living-archive .evidence-source-link:focus-visible {
+  outline: 2px solid var(--mineral-jade);
+  outline-offset: 2px;
+  color: #145244;
+}
+
+body.vxp4-living-archive .evidence-chip {
+  font-family: var(--font-main);
+}
+
+body.vxp4-living-archive .fossil-cancel-btn {
+  color: #1a2430 !important;
+  background: #ffe8b0 !important;
+  border: 3px solid #8a5a12 !important;
+  font-weight: 800;
+  letter-spacing: 0.02em;
+}
+
+body.vxp4-living-archive #fossil-progress-bar.fossil-progress-track {
+  background: #d9d0be;
+  border: 3px solid #8a5a12;
+  height: 18px;
+}
+
+body.vxp4-living-archive .fossil-progress-text {
+  color: #1a2430;
+  font-size: 1.15rem;
+  font-weight: 800;
+}
+
+body.vxp4-living-archive .archivedex-unlock-actions .btn-secondary {
+  color: var(--archive-ink) !important;
+  background: #e7efe9 !important;
+  border: 2px solid var(--mineral-jade) !important;
+  font-weight: 700;
+}
+
 body.vxp4-living-archive #toast {
   background: rgba(244, 240, 230, 0.95);
   color: var(--archive-ink);
