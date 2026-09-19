@@ -2,7 +2,7 @@
   "program": "VXP-4",
   "title": "Archive of Life Living Archive visual experience",
   "base_sha": "a2145ca61cc3b67749c961010bd0129970f4ca4b",
-  "head_sha": "25ed1cf7b101eaab0dff3bc365d8f18ceabaae55",
+  "head_sha": "d173dadc8883dcecec4db7ff4c5b6f1bf6cc38a0",
   "merge_base_with_origin_main": "a2145ca61cc3b67749c961010bd0129970f4ca4b",
   "branch": "vxp/vxp-4-archive-of-life-living-archive",
   "main_discrepancy": {
