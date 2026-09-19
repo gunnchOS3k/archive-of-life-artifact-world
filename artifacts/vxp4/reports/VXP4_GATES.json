@@ -2,7 +2,7 @@
   "program": "VXP-4",
   "title": "Archive of Life Living Archive visual experience",
   "base_sha": "a2145ca61cc3b67749c961010bd0129970f4ca4b",
-  "head_sha": "1fad301194620c2dd0dcd8877d65dfd62e3dd59f",
+  "head_sha": "782240ba95de2856a8ac7eba5f7fb1c023e27029",
   "merge_base_with_origin_main": "a2145ca61cc3b67749c961010bd0129970f4ca4b",
   "branch": "vxp/vxp-4-archive-of-life-living-archive",
   "main_discrepancy": {
@@ -40,5 +40,6 @@
     "HUMAN_VISUAL_VALIDATION_PASS": false,
     "HUMAN_FUN_VALIDATION_PASS": false,
     "MERGE_AUTHORIZED": false
-  }
+  },
+  "gates_stamp_note": "head_sha equals tip at emit; a subsequent commit of this file may advance tip by one without re-stamp"
 }
