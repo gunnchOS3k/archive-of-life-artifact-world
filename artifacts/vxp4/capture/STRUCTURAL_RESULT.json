@@ -1,0 +1,219 @@
+{
+  "program": "VXP-4",
+  "pass": true,
+  "checked": 42,
+  "failed": [],
+  "checks": [
+    {
+      "id": "living_archive_css",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "id": "living_archive_module",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "id": "body_class_in_html",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "id": "emotional_mode_attr",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "id": "primary_cta_begin",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "id": "css_imported",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "id": "legacy_styles_preserved",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "id": "admin_surfaces_marked",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "id": "no_game_rename",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "id": "icon_explore",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "id": "icon_observe",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "id": "icon_collect",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "id": "icon_archive",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "id": "icon_lifeling",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "id": "icon_time",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "id": "icon_map",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "id": "icon_evidence",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "id": "icon_journal",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "id": "icon_quest",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "id": "icon_region",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "id": "icon_biome",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "id": "icon_species",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "id": "icon_artifact",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "id": "icon_provenance",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "id": "icon_uncertainty",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "id": "icon_settings",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "id": "icon_accessibility",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "id": "icon_pause",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "id": "icon_back",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "id": "icon_brand-seal",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "id": "font_SourceSerif4-Regular.woff2",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "id": "font_SourceSerif4-SemiBold.woff2",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "id": "font_SourceSans3-Regular.woff2",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "id": "font_SourceSans3-SemiBold.woff2",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "id": "font_SourceSans3-Bold.woff2",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "id": "font_OFL-SourceFonts.txt",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "id": "brand_provenance_doc",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "id": "before_after_doc",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "id": "human_packet_doc",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "id": "truth_chip_helper",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "id": "icon_hydrate",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "id": "hud_no_emoji",
+      "pass": true,
+      "detail": ""
+    }
+  ],
+  "icon_count": 22
+}

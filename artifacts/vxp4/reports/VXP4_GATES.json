@@ -1,0 +1,44 @@
+{
+  "program": "VXP-4",
+  "title": "Archive of Life Living Archive visual experience",
+  "base_sha": "a2145ca61cc3b67749c961010bd0129970f4ca4b",
+  "head_sha": "5be9c93870a4a18ed99298bcffe0af7775cdf293",
+  "merge_base_with_origin_main": "a2145ca61cc3b67749c961010bd0129970f4ca4b",
+  "branch": "vxp/vxp-4-archive-of-life-living-archive",
+  "main_discrepancy": {
+    "prompt_expected_main": "a2145ca61cc3b67749c961010bd0129970f4ca4b",
+    "live_origin_main": "a2145ca61cc3b67749c961010bd0129970f4ca4b",
+    "decision": "matches expected accepted main at prompt creation"
+  },
+  "assets": {
+    "living_archive_css": true,
+    "legacy_styles_preserved": true,
+    "brand_provenance_doc": true,
+    "icon_count": 22,
+    "fonts_present": true
+  },
+  "VXP4_BRAND_ASSETS_PRESENT": true,
+  "VXP4_LEGACY_STYLES_PRESERVED": true,
+  "VXP4_STRUCTURAL_ASSERTS_PASS": true,
+  "VXP4_RUNTIME_CAPTURE_PASS": true,
+  "VXP4_SCREENSHOT_CAPTURE_CLASS": "playwright_vite_runtime",
+  "VXP4_SCREENSHOT_COUNT": 41,
+  "VXP4_VISUAL_DEFECT_LEDGER_PRESENT": true,
+  "VXP4_PLAYER_ADMIN_SEPARATION": true,
+  "VXP4_TRUTH_BOUNDARIES_INTACT": true,
+  "VXP4_PIXEL_PHYSICAL_CAPTURE_PASS": false,
+  "VXP4_HUMAN_VISUAL_VALIDATION_PASS": false,
+  "VXP4_HUMAN_FUN_VALIDATION_PASS": false,
+  "VXP4_GLOBAL_DATA_COMPLETE": false,
+  "VXP4_ALL_SPECIES_INGESTED": false,
+  "VXP4_MERGE_AUTHORIZED": false,
+  "VXP4_READY_FOR_DRAFT_PR": true,
+  "claim_flags_forced_false": {
+    "GLOBAL_DATA_COMPLETE": false,
+    "ALL_SPECIES_INGESTED": false,
+    "PIXEL_PHYSICAL_CAPTURE_PASS": false,
+    "HUMAN_VISUAL_VALIDATION_PASS": false,
+    "HUMAN_FUN_VALIDATION_PASS": false,
+    "MERGE_AUTHORIZED": false
+  }
+}

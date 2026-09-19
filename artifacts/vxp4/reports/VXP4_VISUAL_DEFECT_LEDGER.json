@@ -1,0 +1,67 @@
+{
+  "program": "VXP-4",
+  "title": "Living Archive visual defect ledger",
+  "policy": "Log presentation defects only. Do not convert mock/sample content into source-verified to clear defects.",
+  "defects": [
+    {
+      "id": "VXP4-D001",
+      "severity": "title-hub",
+      "severity": "pre",
+      "summary": "Dark olive console title with engineering dual-heading hierarchy",
+      "status": "resolved",
+      "resolution": "Living Archive seal + Begin/Continue Expedition CTAs"
+    },
+    {
+      "id": "VXP4-D002",
+      "severity": "hud",
+      "severity": "pre",
+      "summary": "Emoji tool badges and emoji-labeled HUD buttons",
+      "status": "resolved",
+      "resolution": "Original SVG icon marks; quiet pill HUD"
+    },
+    {
+      "id": "VXP4-D003",
+      "severity": "map",
+      "severity": "pre",
+      "summary": "Region tiles read as database rows with pin emoji",
+      "status": "resolved",
+      "resolution": "Ecosystem plates + where-first copy"
+    },
+    {
+      "id": "VXP4-D004",
+      "severity": "admin",
+      "severity": "pre",
+      "summary": "Coverage/Implementation panels shared player visual language",
+      "status": "resolved",
+      "resolution": "DEV dashed amber monospace chrome + data-admin-surface"
+    },
+    {
+      "id": "VXP4-D005",
+      "severity": "fonts",
+      "severity": "pre",
+      "summary": "System/default stacks (Segoe + Georgia)",
+      "status": "resolved",
+      "resolution": "Self-hosted OFL Source Serif 4 + Source Sans 3"
+    },
+    {
+      "id": "VXP4-D006",
+      "severity": "human-validation",
+      "severity": "open",
+      "summary": "Human visual/fun validation not yet performed",
+      "status": "open",
+      "resolution": null,
+      "blocks_merge": true
+    },
+    {
+      "id": "VXP4-D007",
+      "severity": "pixel-physical",
+      "severity": "open",
+      "summary": "No Pixel/physical capture authorized in this lane",
+      "status": "open",
+      "resolution": null,
+      "blocks_merge": true
+    }
+  ],
+  "open_count": 2,
+  "resolved_count": 5
+}
