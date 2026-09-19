@@ -11,7 +11,7 @@
   },
   "worktree": ".worktrees/vxp-4-2-archive-human-feedback-evidence-polish",
   "branch": "vxp/vxp-4-2-archive-human-feedback-evidence-polish",
-  "head_sha_at_gates_write": "efe1067a804132e43ee4a41dd3ac0795b0a60811",
+  "head_sha_at_gates_write": "dc825af5460dec6b45a1c0f498875a43dabe9ff0",
   "VXP42_EVIDENCE_PROGRESSIVE_DISCLOSURE_PASS": true,
   "VXP42_ALL_SOURCE_FIELDS_RETAINED_PASS": true,
   "VXP42_SOURCE_STATUS_TRUTH_PASS": true,
