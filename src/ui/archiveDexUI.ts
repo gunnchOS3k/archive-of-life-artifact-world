@@ -133,7 +133,7 @@ export class ArchiveDexUI {
     this.unlockModal.dataset.entryId = entry.id;
     const body = this.unlockModal.querySelector('#archivedex-unlock-body')!;
     body.innerHTML = `
-      <div class="unlock-animation">✨ New ArchiveDex Entry!</div>
+      <div class="unlock-animation artifact-reveal">New life recorded in your Archive</div>
       <h3>${entry.commonName}</h3>
       <p class="sci-name">${entry.scientificName}</p>
       <p><strong>Artifact:</strong> ${formatArtifactType(artifact.artifactType)}</p>
@@ -143,6 +143,7 @@ export class ArchiveDexUI {
       ${entry.lifeling?.unlocks?.length ? `<p><strong>Your Lifeling learned:</strong> ${entry.lifeling.unlocks.map((u) => u.traitName).join(', ')}</p>` : ''}
       <section class="unlock-evidence">
         <h4>Sources and Evidence</h4>
+        <p class="unlock-evidence-note">Identity first — evidence stays exact and optional to expand.</p>
         <div id="unlock-evidence-mount" class="evidence-panel"></div>
       </section>
     `;

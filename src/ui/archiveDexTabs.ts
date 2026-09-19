@@ -6,6 +6,7 @@ import {
   renderScientificIdentityBlock,
   renderScientificSourcesPanel,
 } from '@/services/scientific/renderScientificUI';
+import { truthChipHtml } from '@/ui/livingArchive';
 
 type EmptyLabel = string;
 
@@ -32,10 +33,13 @@ function provenanceBanner(entry: ArchiveDexEntry): string {
   const hasMock = statuses.some((s) => s === 'mock_sample') || entry.sources.some((p) => p.isMockData);
   const hasGame = statuses.some((s) => s === 'game_authored_verified') || entry.sources.some((p) => p.source === 'game_authored');
   if (hasMock && hasGame) {
-    return '<p class="dex-sample-banner"><span class="mock-badge">SAMPLE SCIENTIFIC DATA</span> Game mechanics are authored; external scientific fields require source snapshot import.</p>';
+    return `<p class="dex-sample-banner">${truthChipHtml('mock_sample')} ${truthChipHtml('game_authored_verified')} Game mechanics are authored; external scientific fields require source snapshot import.</p>`;
   }
   if (hasMock) {
-    return '<p class="dex-sample-banner"><span class="mock-badge">MOCK/SAMPLE</span> Not counted as source-verified coverage.</p>';
+    return `<p class="dex-sample-banner">${truthChipHtml('mock_sample')} Not counted as source-verified coverage.</p>`;
+  }
+  if (statuses.every((s) => s === 'source_verified') && statuses.length) {
+    return `<p class="dex-sample-banner">${truthChipHtml('source_verified')} Evidence details remain exact — open Sources for citations.</p>`;
   }
   return '';
 }

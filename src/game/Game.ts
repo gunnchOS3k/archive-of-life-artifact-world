@@ -27,6 +27,7 @@ import {
   resolveDeviceRole,
   type DeviceRoleProfile,
 } from '@/device/deviceRoles';
+import { hydrateLivingArchiveIcons, setEmotionalMode } from '@/ui/livingArchive';
 import { FossilExcavation } from '@/minigames/fossilExcavation';
 import { WildlifeObservation } from '@/minigames/wildlifeObservation';
 import { ArchiveDexUI } from '@/ui/archiveDexUI';
@@ -441,6 +442,21 @@ export class Game {
     if (!isOpen) {
       panel.classList.remove('hidden');
       track('panel_open', { panel: name });
+      const modeByPanel: Record<string, 'home' | 'choose' | 'explore' | 'discover' | 'understand' | 'remember'> = {
+        map: 'choose',
+        archive: 'remember',
+        notebook: 'remember',
+        quests: 'remember',
+        achievements: 'remember',
+        companion: 'discover',
+        earth: 'understand',
+        time: 'understand',
+        settings: 'home',
+        coverage: 'home',
+        implementation: 'home',
+      };
+      setEmotionalMode(modeByPanel[name] ?? 'explore');
+      void hydrateLivingArchiveIcons(panel);
       if (name === 'earth') {
         this.earthLayerUI.open(this.state.player.currentRegion);
       }
@@ -483,6 +499,7 @@ export class Game {
   closeAllPanels() {
     document.querySelectorAll('.panel').forEach((p) => p.classList.add('hidden'));
     this.paused = this.manualPaused || this.suspendPaused;
+    setEmotionalMode('explore');
   }
 
   refreshUI() {

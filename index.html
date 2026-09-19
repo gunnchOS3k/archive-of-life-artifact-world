@@ -3,35 +3,44 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Archive of Life: Artifact World</title>
+  <title>Archive of Life</title>
   <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
   <link rel="apple-touch-icon" href="/icons/icon-192.png" />
 </head>
-<body>
-  <div id="app">
-    <div id="title-screen" class="screen active">
+<body class="vxp4-living-archive">
+  <div id="app" data-emotional-mode="home" data-vxp4="living-archive">
+    <div id="title-screen" class="screen active" data-surface="museum-hub">
+      <div class="la-atmosphere" aria-hidden="true"></div>
       <div class="title-content">
-        <h1>Archive of Life</h1>
+        <div class="la-brand-row">
+          <img class="la-brand-seal" src="/assets/vxp4/icons/brand-seal.svg" width="72" height="72" alt="" />
+          <div>
+            <p class="la-brand-kicker">Living field atlas</p>
+            <h1>Archive of Life</h1>
+          </div>
+        </div>
         <h2>Artifact World</h2>
-        <p class="subtitle">Explore Earth. Document Life. Preserve Discovery.</p>
-        <button id="btn-new-game" class="btn-primary">New Expedition</button>
-        <button id="btn-continue" class="btn-secondary">Continue Expedition</button>
+        <p class="subtitle">Step into living ecosystems across time. Discover evidence. Build your Archive.</p>
+        <div class="la-cta-group">
+          <button id="btn-new-game" class="btn-primary" data-cta="begin-expedition">Begin Expedition</button>
+          <button id="btn-continue" class="btn-secondary" data-cta="continue-expedition">Continue Expedition</button>
+        </div>
         <p class="credits">Educational exploration — ethical artifact collection, evidence labeled separately from reconstruction. Bundled biology is playable sample / game-authored content, not verified science. Playable offline without external datasets.</p>
       </div>
     </div>
 
-    <div id="game-screen" class="screen">
+    <div id="game-screen" class="screen" data-surface="explore">
       <canvas id="game-canvas"></canvas>
-      <div id="hud">
+      <div id="hud" data-hud="quiet">
         <div id="hud-top">
           <div id="region-name">Archive Museum</div>
-          <div id="hud-tools">
-            <span class="tool-badge" title="Camera">📷</span>
-            <span class="tool-badge" title="Audio Recorder">🎙️</span>
-            <span class="tool-badge" title="Field Notebook">📓</span>
-            <span class="tool-badge" title="Binoculars">🔭</span>
-            <span class="tool-badge" title="Fossil Brush">🪥</span>
-            <span class="tool-badge" title="Scanner">📡</span>
+          <div id="hud-tools" aria-label="Field tools">
+            <span class="tool-badge" title="Observe"><span class="la-icon" data-la-icon="observe"></span></span>
+            <span class="tool-badge" title="Collect"><span class="la-icon" data-la-icon="collect"></span></span>
+            <span class="tool-badge" title="Journal"><span class="la-icon" data-la-icon="journal"></span></span>
+            <span class="tool-badge" title="Evidence"><span class="la-icon" data-la-icon="evidence"></span></span>
+            <span class="tool-badge" title="Artifact"><span class="la-icon" data-la-icon="artifact"></span></span>
+            <span class="tool-badge" title="Species"><span class="la-icon" data-la-icon="species"></span></span>
           </div>
         </div>
         <div id="hud-bottom">
@@ -39,15 +48,15 @@
             <span id="prompt-text">Press E to interact</span>
           </div>
           <div id="hud-buttons">
-            <button class="hud-btn" id="btn-archive" title="ArchiveDex (1)">📖 ArchiveDex</button>
-            <button class="hud-btn" id="btn-notebook" title="Notebook (2)">📓 Notebook</button>
-            <button class="hud-btn" id="btn-map" title="Map (3)">🗺️ Map</button>
-            <button class="hud-btn" id="btn-companion" title="Lifeling (4)">✨ Lifeling</button>
-            <button class="hud-btn" id="btn-quests" title="Quests (5)">📋 Quests</button>
-            <button class="hud-btn" id="btn-earth" title="Earth Layers (6)">🛰️ Earth</button>
-            <button class="hud-btn" id="btn-time" title="Time Atlas (7)">⏳ Time</button>
-            <button class="hud-btn" id="btn-settings" title="Settings (8)">⚙️ Settings</button>
-            <button class="hud-btn" id="btn-achievements" title="Achievements (9)">🏅 Achievements</button>
+            <button class="hud-btn" id="btn-archive" title="ArchiveDex (1)"><span class="la-icon" data-la-icon="archive"></span> ArchiveDex</button>
+            <button class="hud-btn" id="btn-notebook" title="Notebook (2)"><span class="la-icon" data-la-icon="journal"></span> Journal</button>
+            <button class="hud-btn" id="btn-map" title="Map (3)"><span class="la-icon" data-la-icon="map"></span> Explore</button>
+            <button class="hud-btn" id="btn-companion" title="Lifeling (4)"><span class="la-icon" data-la-icon="lifeling"></span> Lifeling</button>
+            <button class="hud-btn" id="btn-quests" title="Quests (5)"><span class="la-icon" data-la-icon="quest"></span> Quests</button>
+            <button class="hud-btn" id="btn-earth" title="Earth Layers (6)"><span class="la-icon" data-la-icon="region"></span> Earth</button>
+            <button class="hud-btn" id="btn-time" title="Time Atlas (7)"><span class="la-icon" data-la-icon="time"></span> Time</button>
+            <button class="hud-btn" id="btn-settings" title="Settings (8)"><span class="la-icon" data-la-icon="settings"></span> Settings</button>
+            <button class="hud-btn" id="btn-achievements" title="Achievements (9)"><span class="la-icon" data-la-icon="collect"></span> Remembers</button>
           </div>
         </div>
       </div>
@@ -56,8 +65,8 @@
 
     <div id="panel-archive" class="panel hidden">
       <div class="panel-header">
-        <h2>ArchiveDex</h2>
-        <button class="panel-close" data-panel="archive">✕</button>
+        <h2><span class="la-icon" data-la-icon="archive"></span> ArchiveDex</h2>
+        <button class="panel-close" data-panel="archive" aria-label="Back"><span class="la-icon" data-la-icon="back"></span></button>
       </div>
       <div class="panel-body archive-panel-body">
         <div id="archive-coverage" class="archive-coverage"></div>
@@ -173,29 +182,29 @@
       </div>
     </div>
 
-    <div id="panel-notebook" class="panel hidden">
+    <div id="panel-notebook" class="panel hidden" data-surface="remember">
       <div class="panel-header">
-        <h2>Field Notebook</h2>
-        <button class="panel-close" data-panel="notebook">✕</button>
+        <h2><span class="la-icon" data-la-icon="journal"></span> Field Journal</h2>
+        <button class="panel-close" data-panel="notebook" aria-label="Back"><span class="la-icon" data-la-icon="back"></span></button>
       </div>
       <div class="panel-body"><div id="notebook-entries"></div></div>
     </div>
 
-    <div id="panel-map" class="panel hidden">
+    <div id="panel-map" class="panel hidden" data-surface="choose">
       <div class="panel-header">
-        <h2>World Map</h2>
-        <button class="panel-close" data-panel="map">✕</button>
+        <h2><span class="la-icon" data-la-icon="map"></span> Choose Expedition</h2>
+        <button class="panel-close" data-panel="map" aria-label="Back"><span class="la-icon" data-la-icon="back"></span></button>
       </div>
       <div class="panel-body">
         <div id="map-container"></div>
-        <p class="map-hint">Click a region to travel (when at museum hub or connected region).</p>
+        <p class="map-hint">Select an ecosystem plate to travel. Provenance and map-source rules are unchanged.</p>
       </div>
     </div>
 
-    <div id="panel-companion" class="panel hidden">
+    <div id="panel-companion" class="panel hidden" data-surface="discover">
       <div class="panel-header">
-        <h2>Lifeling Companion</h2>
-        <button class="panel-close" data-panel="companion">✕</button>
+        <h2><span class="la-icon" data-la-icon="lifeling"></span> Lifeling</h2>
+        <button class="panel-close" data-panel="companion" aria-label="Back"><span class="la-icon" data-la-icon="back"></span></button>
       </div>
       <div class="panel-body companion-body">
         <div class="companion-preview-area">
@@ -212,18 +221,18 @@
       </div>
     </div>
 
-    <div id="panel-quests" class="panel hidden">
+    <div id="panel-quests" class="panel hidden" data-surface="remember">
       <div class="panel-header">
-        <h2>Active Quests</h2>
-        <button class="panel-close" data-panel="quests">✕</button>
+        <h2><span class="la-icon" data-la-icon="quest"></span> Expedition Quests</h2>
+        <button class="panel-close" data-panel="quests" aria-label="Back"><span class="la-icon" data-la-icon="back"></span></button>
       </div>
       <div class="panel-body"><div id="quest-list"></div></div>
     </div>
 
-    <div id="panel-earth" class="panel hidden panel-earth">
+    <div id="panel-earth" class="panel hidden panel-earth" data-surface="understand">
       <div class="panel-header">
-        <h2>Earth Layer Console</h2>
-        <button class="panel-close" data-panel="earth">✕</button>
+        <h2><span class="la-icon" data-la-icon="region"></span> Earth Context</h2>
+        <button class="panel-close" data-panel="earth" aria-label="Back"><span class="la-icon" data-la-icon="back"></span></button>
       </div>
       <div class="panel-body earth-panel-body">
         <div id="earth-mock-banner" class="earth-mock-banner"></div>
@@ -235,26 +244,26 @@
       </div>
     </div>
 
-    <div id="panel-coverage" class="panel hidden panel-coverage">
+    <div id="panel-coverage" class="panel hidden panel-coverage" data-admin-surface="true" data-dev-only="true">
       <div class="panel-header">
-        <h2>Coverage Dashboard</h2>
+        <h2>Coverage Dashboard (admin)</h2>
         <button class="panel-close" data-panel="coverage">✕</button>
       </div>
       <div class="panel-body"></div>
     </div>
 
-    <div id="panel-implementation" class="panel hidden panel-implementation">
+    <div id="panel-implementation" class="panel hidden panel-implementation" data-admin-surface="true" data-dev-only="true">
       <div class="panel-header">
-        <h2>Implementation Status</h2>
+        <h2>Implementation Status (admin)</h2>
         <button class="panel-close" data-panel="implementation">✕</button>
       </div>
       <div class="panel-body"></div>
     </div>
 
-    <div id="panel-time" class="panel hidden panel-time">
+    <div id="panel-time" class="panel hidden panel-time" data-surface="understand">
       <div class="panel-header">
-        <h2>Time Atlas</h2>
-        <button class="panel-close" data-panel="time">✕</button>
+        <h2><span class="la-icon" data-la-icon="time"></span> Time Atlas</h2>
+        <button class="panel-close" data-panel="time" aria-label="Back"><span class="la-icon" data-la-icon="back"></span></button>
       </div>
       <div class="panel-body time-panel-body">
         <div id="time-mock-banner" class="time-mock-banner"></div>
@@ -292,13 +301,13 @@
       <div class="panel-body"></div>
     </div>
 
-    <div id="onboarding-overlay" class="minigame-overlay hidden">
+    <div id="onboarding-overlay" class="minigame-overlay hidden" data-surface="home">
       <div class="minigame-container">
-        <h2>Welcome, Explorer-Archivist</h2>
-        <p>Name your field profile. Your Lifeling companion Relic will travel with you. This is a launch campaign — not a complete catalogue of Earth life.</p>
+        <h2>Your expedition begins</h2>
+        <p>Name your field profile. Relic, your Lifeling companion, will travel with you through living ecosystems. This launch campaign does not claim a complete catalogue of Earth life.</p>
         <label>Explorer name: <input id="explorer-name" type="text" maxlength="24" value="Archivist" /></label>
-        <p id="onboarding-lifeling">Lifeling: Relic — ready to document ethical observations.</p>
-        <button id="onboarding-complete" class="btn-primary">Begin expedition</button>
+        <p id="onboarding-lifeling"><span class="la-icon" data-la-icon="lifeling"></span> Lifeling: Relic — ready to document ethical observations.</p>
+        <button id="onboarding-complete" class="btn-primary">Begin Expedition</button>
       </div>
     </div>
 
