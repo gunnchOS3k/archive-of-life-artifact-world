@@ -134,3 +134,11 @@ WASD/Arrows move · E interact · A/N/M/C/Q/T/Y menus · Escape close panels
 ---
 
 *Independent educational exploration game — not affiliated with any creature-collection franchise.*
+
+## Feedback & Suggestions
+
+Tried this project? File public feedback via the ecosystem hub:
+
+https://github.com/gunnchOS3k/gunnchos-research-portal/blob/main/FEEDBACK.md
+
+Security vulnerabilities: private only — https://github.com/gunnchOS3k/gunnchos-research-portal/blob/main/SECURITY.md

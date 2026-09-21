@@ -65,6 +65,12 @@ export class SettingsUI {
         <p class="settings-hint">Local event buffer only — no remote ship by default.</p>
         <label class="settings-check"><input type="checkbox" id="telemetry-enabled" ${isTelemetryEnabled() ? 'checked' : ''}/> Enable local telemetry hooks</label>
       </section>
+      <section class="settings-section" data-testid="feedback-suggestions">
+        <h3>Help / About — Feedback &amp; Suggestions</h3>
+        <p class="settings-hint">Opens the public gunnchOS feedback hub. Do not include secrets or personal logs.</p>
+        <p><a href="https://github.com/gunnchOS3k/gunnchos-research-portal/blob/main/FEEDBACK.md?component=Archive%20of%20Life" target="_blank" rel="noopener noreferrer">Feedback &amp; Suggestions</a></p>
+        <p><a href="https://github.com/gunnchOS3k/gunnchos-research-portal/blob/main/SECURITY.md" target="_blank" rel="noopener noreferrer">Security (private)</a></p>
+      </section>
     `;
 
     const roleSelect = this.root.querySelector('#settings-device-role') as HTMLSelectElement;
