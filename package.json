@@ -77,7 +77,8 @@
     "vxp4": "make vxp4",
     "vxp4:structural": "node scripts/vxp4/run_structural.mjs",
     "vxp4:capture": "node scripts/vxp4/run_runtime_capture.mjs",
-    "vxp4:gates": "python3 scripts/vxp4/emit_gates.py"
+    "vxp4:gates": "python3 scripts/vxp4/emit_gates.py",
+    "vxp4:validate-ledger": "node scripts/vxp4/validate_defect_ledger.mjs"
   },
   "devDependencies": {
     "@types/node": "^22.0.0",

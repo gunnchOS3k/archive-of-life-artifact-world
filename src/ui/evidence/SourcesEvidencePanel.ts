@@ -18,6 +18,20 @@ type RenderOptions = {
 
 const activeControllers = new WeakMap<HTMLElement, AbortController>();
 
+const PROVIDER_LABELS: Record<string, string> = {
+  col: 'Catalogue of Life',
+  gbif: 'GBIF',
+  inat: 'iNaturalist',
+  inaturalist: 'iNaturalist',
+  pbdb: 'Paleobiology Database',
+  paleobiodb: 'Paleobiology Database',
+  neotoma: 'Neotoma',
+  nasa: 'NASA Earthdata',
+  nasa_earthdata: 'NASA Earthdata',
+  worms: 'WoRMS',
+  iucn: 'IUCN',
+};
+
 /**
  * Infinite-loading regression guard: loading markup must always be cleared in finally,
  * even when federation throws or the panel is closed mid-request.
@@ -56,7 +70,7 @@ export function renderSourcesEvidencePanel(
   };
 
   container.innerHTML =
-    '<p class="evidence-loading" data-evidence-state="loading">Loading sources and evidence…</p>';
+    '<p class="evidence-loading" data-evidence-state="loading">Looking up sources quietly…</p>';
   container.dataset.evidenceState = 'loading';
 
   void (async () => {
@@ -193,7 +207,7 @@ function paintResult(
     banner +
     conflictHtml +
     failureHtml +
-    result.records.map((r) => evidenceCard(r)).join('') +
+    `<div class="evidence-card-list">${result.records.map((r) => evidenceCard(r)).join('')}</div>` +
     '<p class="evidence-learner-note">Live cards come from public scientific services today. Cached cards were retrieved earlier. Fixture cards are sample data — never described as live. Conflicts and uncertainty are retained.</p>';
 
   if (!result.failures.length && (status === 'fixture' || status === 'cached' || status === 'partial')) {
@@ -203,6 +217,7 @@ function paintResult(
     container.appendChild(actions);
   }
   bindRetry(container, retry);
+  bindExpand(container);
 }
 
 function emptyMessage(result: SpeciesEvidenceResult): string {
@@ -249,30 +264,95 @@ function bindRetry(container: HTMLElement, retry: () => void): void {
   });
 }
 
+function bindExpand(container: HTMLElement): void {
+  container.querySelectorAll('.evidence-expand-btn').forEach((btn) => {
+    btn.addEventListener('click', (ev) => {
+      ev.preventDefault();
+      const card = (btn as HTMLElement).closest('.evidence-card');
+      if (!card) return;
+      const details = card.querySelector('.evidence-card-details') as HTMLElement | null;
+      const open = !card.classList.contains('is-expanded');
+      card.classList.toggle('is-expanded', open);
+      card.setAttribute('data-expanded', open ? 'true' : 'false');
+      if (details) details.hidden = !open;
+      (btn as HTMLElement).textContent = open ? 'Hide details' : 'Expand details';
+      (btn as HTMLElement).setAttribute('aria-expanded', open ? 'true' : 'false');
+    });
+  });
+}
+
+function providerLabel(providerId: string): string {
+  return PROVIDER_LABELS[providerId] ?? providerId.toUpperCase();
+}
+
+function playerCacheLabel(cacheStatus: FederatedRecord['cacheStatus']): string {
+  switch (cacheStatus) {
+    case 'live':
+      return 'Live service';
+    case 'fixture':
+      return 'Fixture sample';
+    case 'cached':
+      return 'Cached record';
+    default:
+      return 'Unavailable';
+  }
+}
+
+function playerClassLabel(interpretation: FederatedRecord['interpretation']): string {
+  switch (interpretation) {
+    case 'observed':
+      return 'Observed';
+    case 'reconstructed':
+      return 'Reconstructed evidence';
+    case 'inferred':
+      return 'Inferred context';
+    case 'artistic':
+      return 'Artistic presentation';
+    default:
+      return 'Unknown classification';
+  }
+}
+
+function relevanceLine(record: FederatedRecord): string {
+  if (record.scientificName) {
+    return `Linked as ${record.scientificName}${record.acceptedName && record.acceptedName !== record.scientificName ? ` (accepted: ${record.acceptedName})` : ''}.`;
+  }
+  if (record.eventDate) {
+    return `Dated record from ${record.eventDate}.`;
+  }
+  if (record.attribution) {
+    return record.attribution;
+  }
+  return `Provider record ${record.sourceRecordId}.`;
+}
+
+function reconstructionNotes(record: FederatedRecord): string {
+  switch (record.interpretation) {
+    case 'reconstructed':
+      return 'Reconstruction — not a verified exact modern distribution.';
+    case 'inferred':
+      return 'Inferred context — not a direct species observation.';
+    case 'artistic':
+      return 'Artistic presentation — labeled separately from evidence.';
+    case 'observed':
+      return 'Observed evidence from the linked source record.';
+    default:
+      return 'Classification uncertain; treat as unlabeled context.';
+  }
+}
+
 function evidenceCard(record: FederatedRecord): string {
-  const statusLabel =
-    record.cacheStatus === 'live'
-      ? 'Live service'
-      : record.cacheStatus === 'fixture'
-        ? 'Fixture sample (not live)'
-        : record.cacheStatus === 'cached'
-          ? 'Cached (previously verified)'
-          : 'Unavailable';
-  const interpretation =
-    record.interpretation === 'reconstructed'
-      ? '<p class="evidence-reconstruction">Reconstruction — not a verified exact modern distribution.</p>'
-      : record.interpretation === 'inferred'
-        ? '<p class="evidence-reconstruction">Inferred context — not a direct species observation.</p>'
-        : record.interpretation === 'artistic'
-          ? '<p class="evidence-reconstruction">Artistic presentation — labeled separately from evidence.</p>'
-          : '';
+  const statusLabel = playerCacheLabel(record.cacheStatus);
+  const classLabel = playerClassLabel(record.interpretation);
+  const notes = reconstructionNotes(record);
   const link = record.sourceUrl
-    ? `<p><a href="${escapeHtml(record.sourceUrl)}" target="_blank" rel="noopener noreferrer">Open source record</a></p>`
-    : '';
+    ? `<a class="evidence-source-link" href="${escapeHtml(record.sourceUrl)}" target="_blank" rel="noopener noreferrer">Open source record</a>`
+    : '<span class="evidence-source-missing">No source URL on this record</span>';
   const coords =
     record.latitude != null && record.longitude != null
       ? `${record.latitude.toFixed(4)}, ${record.longitude.toFixed(4)}`
       : 'Not available';
+  const qualityExact = String(record.qualityFlag ?? record.confidence);
   const colGbifCite =
     record.providerId === 'col' || record.providerId === 'gbif'
       ? `<p class="evidence-provenance-cite" data-provenance="col-gbif">${escapeHtml(
@@ -281,26 +361,47 @@ function evidenceCard(record: FederatedRecord): string {
           } (${record.cacheStatus})`,
         )}</p>`
       : '';
-  return `<article class="evidence-card" data-provider="${escapeHtml(record.providerId)}" data-cache="${escapeHtml(record.cacheStatus)}">
-    <header><strong>${escapeHtml(record.providerId.toUpperCase())}</strong> · ${statusLabel}</header>
-    <p>${escapeHtml(record.attribution)}</p>
-    ${colGbifCite}
-    <dl>
-      <dt>Record ID</dt><dd>${escapeHtml(record.sourceRecordId)}</dd>
-      <dt>Scientific name</dt><dd>${escapeHtml(record.scientificName ?? '—')}</dd>
-      <dt>Accepted name</dt><dd>${escapeHtml(record.acceptedName ?? '—')}</dd>
-      <dt>Rank</dt><dd>${escapeHtml(record.taxonomicRank ?? '—')}</dd>
-      <dt>Date</dt><dd>${escapeHtml(record.eventDate ?? '—')}</dd>
-      <dt>Coordinates</dt><dd>${escapeHtml(coords)}</dd>
-      <dt>Geo precision</dt><dd>${escapeHtml(record.geographicPrecision ?? '—')}</dd>
-      <dt>Time precision</dt><dd>${escapeHtml(record.temporalPrecision ?? '—')}</dd>
-      <dt>Retrieved</dt><dd>${escapeHtml(record.retrievedAt)}</dd>
-      <dt>License</dt><dd>${escapeHtml(record.license)}</dd>
-      <dt>Quality</dt><dd>${escapeHtml(String(record.qualityFlag ?? record.confidence))}</dd>
-      <dt>Classification</dt><dd>${escapeHtml(record.interpretation)}</dd>
-    </dl>
-    ${link}
-    ${interpretation}
+
+  return `<article class="evidence-card" data-provider="${escapeHtml(record.providerId)}" data-cache="${escapeHtml(record.cacheStatus)}" data-expanded="false">
+    <header class="evidence-card-summary">
+      <div class="evidence-card-title-row">
+        <strong class="evidence-provider">${escapeHtml(providerLabel(record.providerId))}</strong>
+        <span class="evidence-chip" data-cache="${escapeHtml(record.cacheStatus)}">${escapeHtml(statusLabel)}</span>
+        <span class="evidence-chip" data-class="${escapeHtml(record.interpretation)}">${escapeHtml(classLabel)}</span>
+      </div>
+      <p class="evidence-relevance">${escapeHtml(relevanceLine(record))}</p>
+      <p class="evidence-license-line"><span class="evidence-meta-label">License</span> ${escapeHtml(record.license)}</p>
+      <p class="evidence-link-row">${link}</p>
+      <button type="button" class="btn-secondary evidence-expand-btn" aria-expanded="false">Expand details</button>
+    </header>
+    <div class="evidence-card-details" hidden>
+      ${colGbifCite}
+      <dl class="evidence-tech-dl">
+        <dt>Record ID</dt><dd data-field="record-id">${escapeHtml(record.sourceRecordId)}</dd>
+        <dt>Scientific name</dt><dd data-field="scientific-name">${escapeHtml(record.scientificName ?? '—')}</dd>
+        <dt>Accepted name</dt><dd data-field="accepted-name">${escapeHtml(record.acceptedName ?? '—')}</dd>
+        <dt>Rank</dt><dd data-field="rank">${escapeHtml(record.taxonomicRank ?? '—')}</dd>
+        <dt>Date</dt><dd data-field="date">${escapeHtml(record.eventDate ?? '—')}</dd>
+        <dt>Coordinates</dt><dd data-field="coordinates">${escapeHtml(coords)}</dd>
+        <dt>Geo precision</dt><dd data-field="geo-precision">${escapeHtml(record.geographicPrecision ?? '—')}</dd>
+        <dt>Time precision</dt><dd data-field="time-precision">${escapeHtml(record.temporalPrecision ?? '—')}</dd>
+        <dt>Retrieved</dt><dd data-field="retrieved">${escapeHtml(record.retrievedAt)}</dd>
+        <dt>License</dt><dd data-field="license">${escapeHtml(record.license)}</dd>
+        <dt>Quality</dt><dd data-field="quality">${escapeHtml(qualityExact)}</dd>
+        <dt>Classification</dt><dd data-field="classification">${escapeHtml(record.interpretation)}</dd>
+        <dt>Reconstruction/inference notes</dt><dd data-field="notes">${escapeHtml(notes)}</dd>
+        <dt>Exact source URL</dt><dd data-field="source-url">${
+          record.sourceUrl
+            ? `<a class="evidence-source-link" href="${escapeHtml(record.sourceUrl)}" target="_blank" rel="noopener noreferrer">${escapeHtml(record.sourceUrl)}</a>`
+            : '—'
+        }</dd>
+      </dl>
+      ${
+        record.interpretation === 'reconstructed' || record.interpretation === 'inferred' || record.interpretation === 'artistic'
+          ? `<p class="evidence-reconstruction">${escapeHtml(notes)}</p>`
+          : ''
+      }
+    </div>
   </article>`;
 }
 

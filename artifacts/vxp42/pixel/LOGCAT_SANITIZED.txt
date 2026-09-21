@@ -1,0 +1,2 @@
+09-19 16:17:18.343 17774 17774 I adbd    : adbd service requested 'shell,v2,TERM=dumb,raw:dumpsys package com.gunnchos.archiveoflife'
+09-19 16:17:18.493 19589 19589 I artd    : GetBestInfo: /data/app/~~chBuLmAYkhp661TJla4F0Q==/com.gunnchos.archiveoflife-Sq23qv9uvi0VaTB3BPZvPg==/base.apk has no usable artifacts

@@ -1098,6 +1098,8 @@ export class Game {
         const { progress } = this.activeMinigame.getProgress();
         (document.getElementById('fossil-progress-fill') as HTMLElement).style.width = `${progress}%`;
         document.getElementById('fossil-progress-text')!.textContent = `${Math.round(progress)}%`;
+        const bar = document.getElementById('fossil-progress-bar');
+        if (bar) bar.setAttribute('aria-valuenow', String(Math.round(progress)));
       }
       if (this.activeMinigame instanceof WildlifeObservation) {
         const p = this.activeMinigame.getPatience();
