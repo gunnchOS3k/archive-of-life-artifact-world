@@ -1,0 +1,31 @@
+{
+  "schema": "accepted_main_recovery.v1",
+  "generated_at_utc": "2026-09-21T14:36:59Z",
+  "repo": "archive-of-life-artifact-world",
+  "original_pr": 39,
+  "recovery_branch": "recovery/pr39-accepted-main-convergence",
+  "merge_authorized": false,
+  "method": "git merge --no-ff <exact-missing-child-tip> onto current origin/main",
+  "history_rewrite": false,
+  "force_push": false,
+  "main_sha": "bc55768ed2ecace908bfece642da57a5eb8ae456",
+  "missing_child_sha": "a095d90aa339d42914d12c6102aad8a276d53f08",
+  "merge_base": "efe1067a804132e43ee4a41dd3ac0795b0a60811",
+  "commits_missing_before": 2,
+  "recovery_branch_sha": "b91a9456e93060b6392eecdbf035a0a3bcdedb3c",
+  "child_tip_is_ancestor_of_recovery": true,
+  
+  "diff_summary": {
+    "files_changed": 37,
+    "insertions": 914,
+    "deletions": 169,
+    "shortstat": "37 files changed, 914 insertions(+), 169 deletions(-)"
+  },
+  "duplicate_work_check": "child_tip_not_ancestor_of_main_before_recovery; recovery_tree_equals_tip_tree; main_unique_content_preserved",
+  "conflicts": "none",
+  "ci": {
+    "status": "pending_local_then_github",
+    "notes": "Local required tests run in recovery worktree; GitHub CI will run on draft PR."
+  },
+  "owner_landing_note": "DO NOT MERGE until owner approval. Prefer normal merge commit (no squash/rebase)."
+}
