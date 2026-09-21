@@ -72,94 +72,102 @@
         <div id="archive-coverage" class="archive-coverage"></div>
         <div id="archivedex-completion" class="archivedex-completion"></div>
         <div id="archive-stats" class="archive-stats"></div>
-        <div class="archive-filters">
-          <input type="search" id="archive-search" placeholder="Search species..." class="archive-search">
-          <select id="filter-group" class="filter-select">
-            <option value="all">All groups</option>
-            <option value="Mammal">Mammals</option>
-            <option value="Insect">Insects</option>
-            <option value="Arachnid">Arachnids</option>
-            <option value="Reptile">Reptiles</option>
-            <option value="Microbe">Microbes</option>
-            <option value="Ediacaran">Ediacaran</option>
-            <option value="Mollusk">Mollusks</option>
-          </select>
-          <select id="filter-region" class="filter-select">
-            <option value="all">All regions</option>
-            <option value="savanna">Savanna</option>
-            <option value="forest">Forest</option>
-            <option value="wetland">Wetland</option>
-            <option value="coastal">Coastal</option>
-            <option value="fossil_site">Fossil Site</option>
-          </select>
-          <select id="filter-status" class="filter-select">
-            <option value="all">All statuses</option>
-            <option value="Least Concern">Least Concern</option>
-            <option value="Vulnerable">Vulnerable</option>
-            <option value="Endangered">Endangered</option>
-            <option value="Extinct">Extinct</option>
-            <option value="Data Deficient">Data Deficient</option>
-          </select>
-          <select id="filter-tier" class="filter-select">
-            <option value="all">All gameplay tiers</option>
-            <option value="hero">Hero</option>
-            <option value="regional">Regional</option>
-            <option value="database">Database</option>
-          </select>
-          <select id="filter-representation-tier" class="filter-select">
-            <option value="all">All rep. tiers</option>
-            <option value="0">T0 — Archive record</option>
-            <option value="1">T1 — Searchable</option>
-            <option value="2">T2 — Region mapped</option>
-            <option value="3">T3 — Time mapped</option>
-            <option value="4">T4 — Artifact-ready</option>
-            <option value="5">T5 — Questable</option>
-            <option value="6">T6 — Hero taxon</option>
-          </select>
-          <select id="filter-time-period" class="filter-select">
-            <option value="all">All time periods</option>
-            <option value="holocene">Holocene</option>
-            <option value="pleistocene">Pleistocene</option>
-            <option value="cretaceous">Cretaceous</option>
-            <option value="jurassic">Jurassic</option>
-            <option value="triassic">Triassic</option>
-            <option value="permian">Permian</option>
-            <option value="carboniferous">Carboniferous</option>
-            <option value="devonian">Devonian</option>
-            <option value="cambrian">Cambrian</option>
-            <option value="ediacaran">Ediacaran</option>
-            <option value="archean">Archean</option>
-            <option value="hadean">Hadean</option>
-          </select>
-          <select id="filter-life-status" class="filter-select">
-            <option value="all">All life statuses</option>
-            <option value="extant">Extant</option>
-            <option value="extinct">Extinct</option>
-            <option value="fossil_only">Fossil only</option>
-            <option value="uncertain">Uncertain</option>
-            <option value="microbial_or_pre_animal">Microbial / pre-animal</option>
-            <option value="representative_group">Representative group</option>
-          </select>
-          <select id="filter-source" class="filter-select">
-            <option value="all">All sources</option>
-            <option value="catalogue_of_life">Catalogue of Life</option>
-            <option value="gbif">GBIF</option>
-            <option value="iucn">IUCN</option>
-            <option value="paleobiodb">Paleobiology Database</option>
-            <option value="neotoma">Neotoma</option>
-            <option value="nasa_earthdata">NASA Earthdata</option>
-            <option value="ics_chronostratigraphic">ICS Time Scale</option>
-          </select>
-          <select id="filter-collected" class="filter-select">
-            <option value="all">All collection</option>
-            <option value="collected">Collected</option>
-            <option value="uncollected">Uncollected</option>
-          </select>
-          <label class="filter-check"><input type="checkbox" id="filter-threatened"> Threatened only</label>
-          <label class="filter-check"><input type="checkbox" id="filter-extinct"> Extinct/fossil only</label>
-          <label class="filter-check"><input type="checkbox" id="filter-extant"> Extant only</label>
-          <label class="filter-check"><input type="checkbox" id="filter-hero-only"> Hero species only</label>
-          <label class="filter-check"><input type="checkbox" id="filter-questable-only"> Questable only</label>
+        <div class="archive-filters" data-filter-density="mobile-collapsed">
+          <div class="archive-filters-primary">
+            <input type="search" id="archive-search" placeholder="Search species..." class="archive-search" aria-label="Search ArchiveDex">
+            <select id="filter-group" class="filter-select">
+              <option value="all">All groups</option>
+              <option value="Mammal">Mammals</option>
+              <option value="Insect">Insects</option>
+              <option value="Arachnid">Arachnids</option>
+              <option value="Reptile">Reptiles</option>
+              <option value="Microbe">Microbes</option>
+              <option value="Ediacaran">Ediacaran</option>
+              <option value="Mollusk">Mollusks</option>
+            </select>
+            <select id="filter-region" class="filter-select">
+              <option value="all">All regions</option>
+              <option value="savanna">Savanna</option>
+              <option value="forest">Forest</option>
+              <option value="wetland">Wetland</option>
+              <option value="coastal">Coastal</option>
+              <option value="fossil_site">Fossil Site</option>
+            </select>
+            <select id="filter-collected" class="filter-select">
+              <option value="all">All collection</option>
+              <option value="collected">Collected</option>
+              <option value="uncollected">Uncollected</option>
+            </select>
+            <button type="button" id="archive-filters-toggle" class="btn-secondary archive-filters-toggle" aria-expanded="false" aria-controls="archive-filters-advanced">Filters</button>
+            <button type="button" id="archive-filters-clear" class="btn-secondary archive-filters-clear">Clear filters</button>
+          </div>
+          <div id="archive-active-filters" class="archive-active-filters" aria-live="polite"></div>
+          <div id="archive-filters-advanced" class="archive-filters-advanced" hidden>
+            <p class="archive-filters-advanced-label">Advanced Filters</p>
+            <select id="filter-status" class="filter-select">
+              <option value="all">All statuses</option>
+              <option value="Least Concern">Least Concern</option>
+              <option value="Vulnerable">Vulnerable</option>
+              <option value="Endangered">Endangered</option>
+              <option value="Extinct">Extinct</option>
+              <option value="Data Deficient">Data Deficient</option>
+            </select>
+            <select id="filter-tier" class="filter-select">
+              <option value="all">All gameplay tiers</option>
+              <option value="hero">Hero</option>
+              <option value="regional">Regional</option>
+              <option value="database">Database</option>
+            </select>
+            <select id="filter-representation-tier" class="filter-select">
+              <option value="all">All rep. tiers</option>
+              <option value="0">T0 — Archive record</option>
+              <option value="1">T1 — Searchable</option>
+              <option value="2">T2 — Region mapped</option>
+              <option value="3">T3 — Time mapped</option>
+              <option value="4">T4 — Artifact-ready</option>
+              <option value="5">T5 — Questable</option>
+              <option value="6">T6 — Hero taxon</option>
+            </select>
+            <select id="filter-time-period" class="filter-select">
+              <option value="all">All time periods</option>
+              <option value="holocene">Holocene</option>
+              <option value="pleistocene">Pleistocene</option>
+              <option value="cretaceous">Cretaceous</option>
+              <option value="jurassic">Jurassic</option>
+              <option value="triassic">Triassic</option>
+              <option value="permian">Permian</option>
+              <option value="carboniferous">Carboniferous</option>
+              <option value="devonian">Devonian</option>
+              <option value="cambrian">Cambrian</option>
+              <option value="ediacaran">Ediacaran</option>
+              <option value="archean">Archean</option>
+              <option value="hadean">Hadean</option>
+            </select>
+            <select id="filter-life-status" class="filter-select">
+              <option value="all">All life statuses</option>
+              <option value="extant">Extant</option>
+              <option value="extinct">Extinct</option>
+              <option value="fossil_only">Fossil only</option>
+              <option value="uncertain">Uncertain</option>
+              <option value="microbial_or_pre_animal">Microbial / pre-animal</option>
+              <option value="representative_group">Representative group</option>
+            </select>
+            <select id="filter-source" class="filter-select">
+              <option value="all">All sources</option>
+              <option value="catalogue_of_life">Catalogue of Life</option>
+              <option value="gbif">GBIF</option>
+              <option value="iucn">IUCN</option>
+              <option value="paleobiodb">Paleobiology Database</option>
+              <option value="neotoma">Neotoma</option>
+              <option value="nasa_earthdata">NASA Earthdata</option>
+              <option value="ics_chronostratigraphic">ICS Time Scale</option>
+            </select>
+            <label class="filter-check"><input type="checkbox" id="filter-threatened"> Threatened only</label>
+            <label class="filter-check"><input type="checkbox" id="filter-extinct"> Extinct/fossil only</label>
+            <label class="filter-check"><input type="checkbox" id="filter-extant"> Extant only</label>
+            <label class="filter-check"><input type="checkbox" id="filter-hero-only"> Hero species only</label>
+            <label class="filter-check"><input type="checkbox" id="filter-questable-only"> Questable only</label>
+          </div>
         </div>
         <div id="archive-grid" class="archive-grid"></div>
         <div id="archive-pagination" class="archive-pagination"></div>
@@ -172,9 +180,15 @@
       </div>
     </div>
 
-    <div id="archivedex-unlock-modal" class="archivedex-unlock-modal hidden" role="dialog" aria-labelledby="archivedex-unlock-title">
+    <div id="archivedex-unlock-modal" class="archivedex-unlock-modal hidden" role="dialog" aria-labelledby="archivedex-unlock-title" aria-modal="true">
       <div class="archivedex-unlock-card">
-        <div id="archivedex-unlock-body"></div>
+        <header class="archivedex-unlock-header">
+          <h2 id="archivedex-unlock-title" class="archivedex-unlock-title">New Life Recorded</h2>
+          <button type="button" id="archivedex-unlock-dismiss" class="archivedex-unlock-dismiss" aria-label="Close">Close</button>
+        </header>
+        <div class="archivedex-unlock-scroll">
+          <div id="archivedex-unlock-body"></div>
+        </div>
         <div class="archivedex-unlock-actions">
           <button type="button" id="archivedex-unlock-open" class="btn-primary">Open Entry</button>
           <button type="button" id="archivedex-unlock-close" class="btn-secondary">Continue</button>
@@ -320,15 +334,15 @@
     </div>
 
     <div id="minigame-fossil" class="minigame-overlay hidden">
-      <div class="minigame-container">
+      <div class="minigame-container fossil-excavation-panel">
         <h2>Fossil Excavation</h2>
         <p>Brush away sediment carefully to reveal the fossil. Don't damage it!</p>
         <canvas id="fossil-canvas" width="400" height="300"></canvas>
-        <div class="minigame-progress">
-          <div id="fossil-progress-bar"><div id="fossil-progress-fill"></div></div>
-          <span id="fossil-progress-text">0%</span>
+        <div class="minigame-progress fossil-progress">
+          <div id="fossil-progress-bar" class="fossil-progress-track" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0"><div id="fossil-progress-fill"></div></div>
+          <span id="fossil-progress-text" class="fossil-progress-text">0%</span>
         </div>
-        <button id="fossil-cancel" class="btn-secondary">Cancel</button>
+        <button id="fossil-cancel" class="btn-secondary fossil-cancel-btn" type="button">Cancel</button>
       </div>
     </div>
 

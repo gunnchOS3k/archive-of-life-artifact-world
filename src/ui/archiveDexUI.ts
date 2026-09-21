@@ -64,6 +64,7 @@ export class ArchiveDexUI {
 
     this.bindFilters();
     this.unlockModal?.querySelector('#archivedex-unlock-close')?.addEventListener('click', () => this.hideUnlockModal());
+    this.unlockModal?.querySelector('#archivedex-unlock-dismiss')?.addEventListener('click', () => this.hideUnlockModal());
     this.unlockModal?.querySelector('#archivedex-unlock-open')?.addEventListener('click', () => {
       const id = this.unlockModal.dataset.entryId;
       this.hideUnlockModal();
@@ -103,14 +104,31 @@ export class ArchiveDexUI {
     this.container.querySelector('#filter-extinct')?.addEventListener('change', (e) => {
       this.filters.extinctOnly = (e.target as HTMLInputElement).checked;
       if (this.filters.extinctOnly) this.filters.extantOnly = false;
+      const extant = this.container.querySelector('#filter-extant') as HTMLInputElement | null;
+      if (extant && this.filters.extinctOnly) extant.checked = false;
       this.page = 1;
       this.render();
     });
     this.container.querySelector('#filter-extant')?.addEventListener('change', (e) => {
       this.filters.extantOnly = (e.target as HTMLInputElement).checked;
       if (this.filters.extantOnly) this.filters.extinctOnly = false;
+      const extinct = this.container.querySelector('#filter-extinct') as HTMLInputElement | null;
+      if (extinct && this.filters.extantOnly) extinct.checked = false;
       this.page = 1;
       this.render();
+    });
+    this.container.querySelector('#archive-filters-toggle')?.addEventListener('click', () => {
+      const advanced = this.container.querySelector('#archive-filters-advanced') as HTMLElement | null;
+      const toggle = this.container.querySelector('#archive-filters-toggle') as HTMLButtonElement | null;
+      if (!advanced || !toggle) return;
+      const open = advanced.hasAttribute('hidden');
+      if (open) advanced.removeAttribute('hidden');
+      else advanced.setAttribute('hidden', '');
+      toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+      toggle.textContent = open ? 'Hide filters' : 'Filters';
+    });
+    this.container.querySelector('#archive-filters-clear')?.addEventListener('click', () => {
+      this.clearFilters();
     });
     this.pagination?.addEventListener('click', (e) => {
       const btn = (e.target as HTMLElement).closest('[data-page]') as HTMLElement | null;
@@ -124,6 +142,76 @@ export class ArchiveDexUI {
     });
   }
 
+  private clearFilters() {
+    this.filters = {
+      query: '',
+      group: 'all',
+      region: 'all',
+      conservationStatus: 'all',
+      threatenedOnly: false,
+      extinctOnly: false,
+      extantOnly: false,
+      heroOnly: false,
+      questableOnly: false,
+      collectedFilter: 'all',
+      tier: 'all',
+      representationTier: 'all',
+      timePeriod: 'all',
+      lifeStatus: 'all',
+      source: 'all',
+    };
+    if (this.searchInput) this.searchInput.value = '';
+    const setSelect = (id: string, value: string) => {
+      const el = this.container.querySelector(id) as HTMLSelectElement | null;
+      if (el) el.value = value;
+    };
+    setSelect('#filter-group', 'all');
+    setSelect('#filter-region', 'all');
+    setSelect('#filter-status', 'all');
+    setSelect('#filter-tier', 'all');
+    setSelect('#filter-collected', 'all');
+    setSelect('#filter-representation-tier', 'all');
+    setSelect('#filter-time-period', 'all');
+    setSelect('#filter-life-status', 'all');
+    setSelect('#filter-source', 'all');
+    for (const id of [
+      '#filter-threatened',
+      '#filter-extinct',
+      '#filter-extant',
+      '#filter-hero-only',
+      '#filter-questable-only',
+    ]) {
+      const el = this.container.querySelector(id) as HTMLInputElement | null;
+      if (el) el.checked = false;
+    }
+    this.page = 1;
+    this.render();
+  }
+
+  private renderActiveFilterChips() {
+    const host = this.container.querySelector('#archive-active-filters') as HTMLElement | null;
+    if (!host) return;
+    const chips: string[] = [];
+    if (this.filters.query.trim()) chips.push(`Search: ${this.filters.query.trim()}`);
+    if (this.filters.group !== 'all') chips.push(`Group: ${this.filters.group}`);
+    if (this.filters.region !== 'all') chips.push(`Region: ${this.filters.region}`);
+    if (this.filters.conservationStatus !== 'all') chips.push(`Status: ${this.filters.conservationStatus}`);
+    if (this.filters.tier !== 'all') chips.push(`Tier: ${this.filters.tier}`);
+    if (this.filters.representationTier !== 'all') chips.push(`Rep: T${this.filters.representationTier}`);
+    if (this.filters.timePeriod !== 'all') chips.push(`Time: ${this.filters.timePeriod}`);
+    if (this.filters.lifeStatus !== 'all') chips.push(`Life: ${this.filters.lifeStatus}`);
+    if (this.filters.source !== 'all') chips.push(`Source: ${this.filters.source}`);
+    if (this.filters.collectedFilter !== 'all') chips.push(this.filters.collectedFilter);
+    if (this.filters.threatenedOnly) chips.push('Threatened');
+    if (this.filters.extinctOnly) chips.push('Extinct/fossil');
+    if (this.filters.extantOnly) chips.push('Extant');
+    if (this.filters.heroOnly) chips.push('Hero');
+    if (this.filters.questableOnly) chips.push('Questable');
+    host.innerHTML = chips.length
+      ? chips.map((c) => `<span class="archive-filter-chip">${c}</span>`).join('')
+      : '<span class="archive-filter-chip-empty">No advanced filters active</span>';
+  }
+
   setData(state: SaveState) {
     this.state = state;
     this.render();
@@ -133,24 +221,27 @@ export class ArchiveDexUI {
     this.unlockModal.dataset.entryId = entry.id;
     const body = this.unlockModal.querySelector('#archivedex-unlock-body')!;
     body.innerHTML = `
-      <div class="unlock-animation artifact-reveal">New life recorded in your Archive</div>
-      <h3>${entry.commonName}</h3>
-      <p class="sci-name">${entry.scientificName}</p>
-      <p><strong>Artifact:</strong> ${formatArtifactType(artifact.artifactType)}</p>
-      <p><strong>Time:</strong> ${entry.time?.timeRangeLabel ?? entry.time?.timeUnitIds?.join(' – ') ?? 'Unknown'}</p>
-      <p><strong>Status:</strong> ${entry.conservation?.iucnCategory ?? entry.lifeStatus}</p>
-      <p class="dex-description">${entry.overview?.shortDescription ?? ''}</p>
-      ${entry.lifeling?.unlocks?.length ? `<p><strong>Your Lifeling learned:</strong> ${entry.lifeling.unlocks.map((u) => u.traitName).join(', ')}</p>` : ''}
+      <div class="unlock-celebration">
+        <div class="unlock-animation artifact-reveal">New life recorded in your Archive</div>
+        <h3>${entry.commonName}</h3>
+        <p class="sci-name">${entry.scientificName}</p>
+        <p><strong>Artifact:</strong> ${formatArtifactType(artifact.artifactType)}</p>
+        <p><strong>Time:</strong> ${entry.time?.timeRangeLabel ?? entry.time?.timeUnitIds?.join(' – ') ?? 'Unknown'}</p>
+        <p><strong>Status:</strong> ${entry.conservation?.iucnCategory ?? entry.lifeStatus}</p>
+        <p class="dex-description">${entry.overview?.shortDescription ?? ''}</p>
+        ${entry.lifeling?.unlocks?.length ? `<p><strong>Your Lifeling learned:</strong> ${entry.lifeling.unlocks.map((u) => u.traitName).join(', ')}</p>` : ''}
+      </div>
       <section class="unlock-evidence">
         <h4>Sources and Evidence</h4>
         <p class="unlock-evidence-note">Identity first — evidence stays exact and optional to expand.</p>
-        <div id="unlock-evidence-mount" class="evidence-panel"></div>
+        <div id="unlock-evidence-mount" class="evidence-panel unlock-evidence-quiet"></div>
       </section>
     `;
     this.unlockModal.classList.remove('hidden');
     const mount = body.querySelector('#unlock-evidence-mount') as HTMLElement | null;
+    // Do not await: celebration + Open Entry / Continue stay reachable while evidence loads.
     if (mount) {
-      await renderSourcesEvidencePanel(mount, entry.id, entry.scientificName).done;
+      void renderSourcesEvidencePanel(mount, entry.id, entry.scientificName).done;
     }
   }
 
@@ -248,6 +339,8 @@ export class ArchiveDexUI {
         <span>${heroStats.label}: ${heroStats.documented}/${heroStats.total} (${heroStats.percent}%)</span>
         <span>${regionStats.label}: ${regionStats.documented}/${regionStats.total} (${regionStats.percent}%)</span>
       </div>`;
+
+    this.renderActiveFilterChips();
 
     const result = this.dexService.searchEntries({ ...this.filters, page: this.page, pageSize: this.pageSize }, this.state);
 

@@ -1,0 +1,54 @@
+{
+  "program": "VXP-4.2",
+  "title": "Post-human-playtest evidence hierarchy and mobile density polish",
+  "parent": {
+    "choice": "PR #38 / observed live head (VXP-4.1 tip identical)",
+    "pr": 38,
+    "branch": "vxp/vxp-4-archive-of-life-living-archive",
+    "sha": "efe1067a804132e43ee4a41dd3ac0795b0a60811",
+    "vxp41_branch": "vxp/vxp-4-1-archive-pixel-deploy",
+    "vxp41_sha_same": true
+  },
+  "worktree": ".worktrees/vxp-4-2-archive-human-feedback-evidence-polish",
+  "branch": "vxp/vxp-4-2-archive-human-feedback-evidence-polish",
+  "head_sha_at_gates_write": "dc825af5460dec6b45a1c0f498875a43dabe9ff0",
+  "VXP42_EVIDENCE_PROGRESSIVE_DISCLOSURE_PASS": true,
+  "VXP42_ALL_SOURCE_FIELDS_RETAINED_PASS": true,
+  "VXP42_SOURCE_STATUS_TRUTH_PASS": true,
+  "VXP42_SOURCE_LINK_STYLE_PASS": true,
+  "VXP42_STICKY_MODAL_NAV_PASS": true,
+  "VXP42_ARCHIVEDEX_MOBILE_FILTER_PASS": true,
+  "VXP42_EXCAVATION_CONTRAST_PASS": true,
+  "VXP42_LEDGER_SCHEMA_PASS": true,
+  "VXP42_CLAIM_FIREWALL_PASS": true,
+  "VXP42_PIXEL_EVIDENCE_UI_PASS": true,
+  "VXP42_HUMAN_VISUAL_PASS": false,
+  "VXP42_HUMAN_FUN_PASS": false,
+  "VXP42_MERGE_AUTHORIZED": false,
+  "truth_boundaries": {
+    "GLOBAL_DATA_COMPLETE": false,
+    "ALL_SPECIES_INGESTED": false
+  },
+  "digital_checks": {
+    "typecheck": true,
+    "test": true,
+    "test_count": 134,
+    "audit_claim_firewall": true,
+    "validate_ledger": true,
+    "validate_archive_full": true,
+    "validate_game_rc": true,
+    "vite_build": true,
+    "android_assemble_debug": true
+  },
+  "pixel": {
+    "device_alias": "PIXEL_USB_DEVICE_1",
+    "install": "adb install -r success",
+    "signer_match": true,
+    "screenshots": "artifacts/vxp42/pixel/screenshots/"
+  },
+  "notes": [
+    "Human visual/fun/merge remain false until Edmund re-tests on Pixel.",
+    "Scientific honesty preserved: live/fixture/cached and inferred/reconstructed labels unchanged in meaning.",
+    "PR #38 branch commits were not rewritten."
+  ]
+}

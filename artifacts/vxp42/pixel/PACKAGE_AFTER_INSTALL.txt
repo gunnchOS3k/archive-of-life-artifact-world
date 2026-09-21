@@ -1,0 +1,5 @@
+    versionCode=3 minSdk=22 targetSdk=34
+    versionName=1.1.1
+    lastUpdateTime=2026-09-19 16:14:50
+    signatures=PackageSignatures{2d0e1e1 version:2, signatures:[4c1db0e8], past signatures:[]}
+      firstInstallTime=2026-09-18 18:32:54

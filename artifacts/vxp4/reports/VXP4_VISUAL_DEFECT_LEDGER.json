@@ -2,51 +2,55 @@
   "program": "VXP-4",
   "title": "Living Archive visual defect ledger",
   "policy": "Log presentation defects only. Do not convert mock/sample content into source-verified to clear defects.",
+  "schema": {
+    "required_defect_fields": ["id", "category", "phase", "summary", "status"],
+    "note": "Duplicate JSON object keys are invalid. Use category + phase as distinct fields."
+  },
   "defects": [
     {
       "id": "VXP4-D001",
-      "severity": "title-hub",
-      "severity": "pre",
+      "category": "title-hub",
+      "phase": "pre",
       "summary": "Dark olive console title with engineering dual-heading hierarchy",
       "status": "resolved",
       "resolution": "Living Archive seal + Begin/Continue Expedition CTAs"
     },
     {
       "id": "VXP4-D002",
-      "severity": "hud",
-      "severity": "pre",
+      "category": "hud",
+      "phase": "pre",
       "summary": "Emoji tool badges and emoji-labeled HUD buttons",
       "status": "resolved",
       "resolution": "Original SVG icon marks; quiet pill HUD"
     },
     {
       "id": "VXP4-D003",
-      "severity": "map",
-      "severity": "pre",
+      "category": "map",
+      "phase": "pre",
       "summary": "Region tiles read as database rows with pin emoji",
       "status": "resolved",
       "resolution": "Ecosystem plates + where-first copy"
     },
     {
       "id": "VXP4-D004",
-      "severity": "admin",
-      "severity": "pre",
+      "category": "admin",
+      "phase": "pre",
       "summary": "Coverage/Implementation panels shared player visual language",
       "status": "resolved",
       "resolution": "DEV dashed amber monospace chrome + data-admin-surface"
     },
     {
       "id": "VXP4-D005",
-      "severity": "fonts",
-      "severity": "pre",
+      "category": "fonts",
+      "phase": "pre",
       "summary": "System/default stacks (Segoe + Georgia)",
       "status": "resolved",
       "resolution": "Self-hosted OFL Source Serif 4 + Source Sans 3"
     },
     {
       "id": "VXP4-D006",
-      "severity": "human-validation",
-      "severity": "open",
+      "category": "human-validation",
+      "phase": "open",
       "summary": "Human visual/fun validation not yet performed",
       "status": "open",
       "resolution": null,
@@ -54,14 +58,22 @@
     },
     {
       "id": "VXP4-D007",
-      "severity": "pixel-physical",
-      "severity": "open",
+      "category": "pixel-physical",
+      "phase": "open",
       "summary": "No Pixel/physical capture authorized in this lane",
       "status": "open",
       "resolution": null,
       "blocks_merge": true
+    },
+    {
+      "id": "VXP4-D008",
+      "category": "evidence-density",
+      "phase": "post-human-playtest",
+      "summary": "Sources & Evidence modal cluttered on Pixel — technical fields expanded by default",
+      "status": "resolved",
+      "resolution": "Progressive disclosure summary cards + Expand details technical section"
     }
   ],
   "open_count": 2,
-  "resolved_count": 5
+  "resolved_count": 6
 }

@@ -1,0 +1,28 @@
+{
+  "program": "VXP-4.2",
+  "package": "com.gunnchos.archiveoflife",
+  "install": "success_adb_install_r",
+  "signer_match": true,
+  "version_downgrade": false,
+  "cold_launch": true,
+  "process_alive": true,
+  "main_activity": "com.gunnchos.archiveoflife/.MainActivity",
+  "device_alias": "PIXEL_USB_DEVICE_1",
+  "surfaces_reached": {
+    "fossil_excavation": true,
+    "new_life_recorded": true,
+    "evidence_collapsed": true,
+    "evidence_expanded_partial": true,
+    "source_link_styled": true,
+    "unlock_footer_actions": true,
+    "archivedex_filters_collapsed": true,
+    "archivedex_filters_advanced": true,
+    "archivedex_sources": "partial_panel_open_attempted"
+  },
+  "screenshots_dir": "artifacts/vxp42/pixel/screenshots",
+  "notes": [
+    "App-only screencaps under artifacts/vxp42/pixel/screenshots/",
+    "Raw serial redacted as PIXEL_USB_DEVICE_1",
+    "No uninstall/clear; firstInstallTime preserved"
+  ]
+}

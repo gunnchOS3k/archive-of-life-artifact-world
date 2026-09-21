@@ -1,0 +1,10 @@
+{
+  "device_alias": "PIXEL_USB_DEVICE_1",
+  "model": "Pixel 6a",
+  "android_release": "17",
+  "sdk": "37",
+  "display": "Physical size: 1080x2400",
+  "density": "Physical density: 420",
+  "product": "bluejay",
+  "note": "Raw serial redacted as PIXEL_USB_DEVICE_1"
+}

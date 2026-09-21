@@ -1,0 +1,12 @@
+{
+  "apk_path": "build/android/archive-of-life-debug.apk",
+  "sha256": "9f4ccec9bb4042f9428f3686f7186c84ad64cb7c2f1045e077694dbd65f0221f",
+  "package": "com.gunnchos.archiveoflife",
+  "versionName": "1.1.1",
+  "versionCode": 3,
+  "signer_cert_sha256": "b637ea5f982aa1d3027e346fbfe9f672fdc5dee95407b1608b50b6f1631bd59a",
+  "installed_signer_sha256": "b637ea5f982aa1d3027e346fbfe9f672fdc5dee95407b1608b50b6f1631bd59a",
+  "signer_match": true,
+  "install_mode": "adb install -r",
+  "parent_sha": "efe1067a804132e43ee4a41dd3ac0795b0a60811"
+}
