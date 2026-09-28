@@ -1,0 +1,582 @@
+{
+  "canonical_count": 2500,
+  "by_status": {
+    "DISPUTED": 1,
+    "MULTI_SOURCE_CORROBORATED": 1,
+    "INSUFFICIENT_EVIDENCE": 2498
+  },
+  "unresolved_count": 1,
+  "fabricated_resolutions": 0,
+  "pass_gate": true,
+  "notes": "Disputed fields left unresolved; no fabricated consensus values.",
+  "sample": [
+    {
+      "archive_taxon_id": "aol:taxon:5efc275989777320a00e",
+      "accepted_name": "Synthgenus7dca synthspeciesb91e",
+      "rank": null,
+      "authorship": "Synthetic, 2026",
+      "lineage": [],
+      "life_status": "extinct",
+      "source_ids": [
+        "col:syn-0",
+        "gbif:gbif-conflict-1"
+      ],
+      "synonyms": [
+        "Synthgenus7dca oldname0"
+      ],
+      "temporal_range": null,
+      "place_summary": null,
+      "provenance": [
+        {
+          "source_name": "col",
+          "source_record_id": "syn-0",
+          "source_snapshot_id": "eng-fixture",
+          "source_version": "synthetic-1",
+          "license": "synthetic-fixture",
+          "citation": "GKIP synthetic scale fixture \u2014 NOT real science",
+          "input_checksum": "4a3ed79f24e52ac623fecceff72fab055a1f6c937c0a5c19574c5a0413a25074"
+        },
+        {
+          "source_name": "gbif",
+          "source_record_id": "gbif-conflict-1",
+          "source_snapshot_id": "eng-fixture",
+          "source_version": "synthetic-1",
+          "license": "synthetic-fixture",
+          "citation": "GKIP synthetic scale fixture \u2014 NOT real science",
+          "input_checksum": "4a3ed79f24e52ac623fecceff72fab055a1f6c937c0a5c19574c5a0413a25074"
+        }
+      ],
+      "confidence": 0.4,
+      "reconciliation_status": "DISPUTED"
+    },
+    {
+      "archive_taxon_id": "aol:taxon:0e16f7850f63fb917068",
+      "accepted_name": "Synthgenusb455 synthspecies23a5",
+      "rank": "species",
+      "authorship": "Synthetic, 2026",
+      "lineage": [],
+      "life_status": "extant",
+      "source_ids": [
+        "col:syn-1",
+        "col:syn-1-syn"
+      ],
+      "synonyms": [
+        "Oldname conflictus"
+      ],
+      "temporal_range": null,
+      "place_summary": null,
+      "provenance": [
+        {
+          "source_name": "col",
+          "source_record_id": "syn-1",
+          "source_snapshot_id": "eng-fixture",
+          "source_version": "synthetic-1",
+          "license": "synthetic-fixture",
+          "citation": "GKIP synthetic scale fixture \u2014 NOT real science",
+          "input_checksum": "4a3ed79f24e52ac623fecceff72fab055a1f6c937c0a5c19574c5a0413a25074"
+        },
+        {
+          "source_name": "col",
+          "source_record_id": "syn-1-syn",
+          "source_snapshot_id": "eng-fixture",
+          "source_version": "synthetic-1",
+          "license": "synthetic-fixture",
+          "citation": "GKIP synthetic scale fixture \u2014 NOT real science",
+          "input_checksum": "4a3ed79f24e52ac623fecceff72fab055a1f6c937c0a5c19574c5a0413a25074"
+        }
+      ],
+      "confidence": 0.9,
+      "reconciliation_status": "MULTI_SOURCE_CORROBORATED"
+    },
+    {
+      "archive_taxon_id": "aol:taxon:c3c907669ade24190c13",
+      "accepted_name": "Synthgenus204a synthspecies7a39",
+      "rank": "species",
+      "authorship": "Synthetic, 2026",
+      "lineage": [],
+      "life_status": "extant",
+      "source_ids": [
+        "col:syn-2"
+      ],
+      "synonyms": [],
+      "temporal_range": null,
+      "place_summary": null,
+      "provenance": [
+        {
+          "source_name": "col",
+          "source_record_id": "syn-2",
+          "source_snapshot_id": "eng-fixture",
+          "source_version": "synthetic-1",
+          "license": "synthetic-fixture",
+          "citation": "GKIP synthetic scale fixture \u2014 NOT real science",
+          "input_checksum": "4a3ed79f24e52ac623fecceff72fab055a1f6c937c0a5c19574c5a0413a25074"
+        }
+      ],
+      "confidence": 0.2,
+      "reconciliation_status": "INSUFFICIENT_EVIDENCE"
+    },
+    {
+      "archive_taxon_id": "aol:taxon:76cf10f3cbacc3184699",
+      "accepted_name": "Synthgenusb8da synthspeciesfb80",
+      "rank": "species",
+      "authorship": "Synthetic, 2026",
+      "lineage": [],
+      "life_status": "extant",
+      "source_ids": [
+        "col:syn-3"
+      ],
+      "synonyms": [],
+      "temporal_range": null,
+      "place_summary": null,
+      "provenance": [
+        {
+          "source_name": "col",
+          "source_record_id": "syn-3",
+          "source_snapshot_id": "eng-fixture",
+          "source_version": "synthetic-1",
+          "license": "synthetic-fixture",
+          "citation": "GKIP synthetic scale fixture \u2014 NOT real science",
+          "input_checksum": "4a3ed79f24e52ac623fecceff72fab055a1f6c937c0a5c19574c5a0413a25074"
+        }
+      ],
+      "confidence": 0.2,
+      "reconciliation_status": "INSUFFICIENT_EVIDENCE"
+    },
+    {
+      "archive_taxon_id": "aol:taxon:ef87ff9e1f3e3ee6cf51",
+      "accepted_name": "Synthgenus8426 synthspeciesaf0e",
+      "rank": "species",
+      "authorship": "Synthetic, 2026",
+      "lineage": [],
+      "life_status": "extant",
+      "source_ids": [
+        "col:syn-4"
+      ],
+      "synonyms": [],
+      "temporal_range": null,
+      "place_summary": null,
+      "provenance": [
+        {
+          "source_name": "col",
+          "source_record_id": "syn-4",
+          "source_snapshot_id": "eng-fixture",
+          "source_version": "synthetic-1",
+          "license": "synthetic-fixture",
+          "citation": "GKIP synthetic scale fixture \u2014 NOT real science",
+          "input_checksum": "4a3ed79f24e52ac623fecceff72fab055a1f6c937c0a5c19574c5a0413a25074"
+        }
+      ],
+      "confidence": 0.2,
+      "reconciliation_status": "INSUFFICIENT_EVIDENCE"
+    },
+    {
+      "archive_taxon_id": "aol:taxon:3006978a47548e2c374e",
+      "accepted_name": "Synthgenus0a32 synthspecies863f",
+      "rank": "species",
+      "authorship": "Synthetic, 2026",
+      "lineage": [],
+      "life_status": "extant",
+      "source_ids": [
+        "col:syn-5"
+      ],
+      "synonyms": [],
+      "temporal_range": null,
+      "place_summary": null,
+      "provenance": [
+        {
+          "source_name": "col",
+          "source_record_id": "syn-5",
+          "source_snapshot_id": "eng-fixture",
+          "source_version": "synthetic-1",
+          "license": "synthetic-fixture",
+          "citation": "GKIP synthetic scale fixture \u2014 NOT real science",
+          "input_checksum": "4a3ed79f24e52ac623fecceff72fab055a1f6c937c0a5c19574c5a0413a25074"
+        }
+      ],
+      "confidence": 0.2,
+      "reconciliation_status": "INSUFFICIENT_EVIDENCE"
+    },
+    {
+      "archive_taxon_id": "aol:taxon:5e14be6c2cae2a7aa977",
+      "accepted_name": "Synthgenusfe87 synthspeciesbfb7",
+      "rank": "species",
+      "authorship": "Synthetic, 2026",
+      "lineage": [],
+      "life_status": "extant",
+      "source_ids": [
+        "col:syn-6"
+      ],
+      "synonyms": [],
+      "temporal_range": null,
+      "place_summary": null,
+      "provenance": [
+        {
+          "source_name": "col",
+          "source_record_id": "syn-6",
+          "source_snapshot_id": "eng-fixture",
+          "source_version": "synthetic-1",
+          "license": "synthetic-fixture",
+          "citation": "GKIP synthetic scale fixture \u2014 NOT real science",
+          "input_checksum": "4a3ed79f24e52ac623fecceff72fab055a1f6c937c0a5c19574c5a0413a25074"
+        }
+      ],
+      "confidence": 0.2,
+      "reconciliation_status": "INSUFFICIENT_EVIDENCE"
+    },
+    {
+      "archive_taxon_id": "aol:taxon:c2dc219e7e5b3fae38a8",
+      "accepted_name": "Synthgenus6e0d synthspecies83b6",
+      "rank": "species",
+      "authorship": "Synthetic, 2026",
+      "lineage": [],
+      "life_status": "extant",
+      "source_ids": [
+        "col:syn-7"
+      ],
+      "synonyms": [],
+      "temporal_range": null,
+      "place_summary": null,
+      "provenance": [
+        {
+          "source_name": "col",
+          "source_record_id": "syn-7",
+          "source_snapshot_id": "eng-fixture",
+          "source_version": "synthetic-1",
+          "license": "synthetic-fixture",
+          "citation": "GKIP synthetic scale fixture \u2014 NOT real science",
+          "input_checksum": "4a3ed79f24e52ac623fecceff72fab055a1f6c937c0a5c19574c5a0413a25074"
+        }
+      ],
+      "confidence": 0.2,
+      "reconciliation_status": "INSUFFICIENT_EVIDENCE"
+    },
+    {
+      "archive_taxon_id": "aol:taxon:21a45c383c32c7ce942d",
+      "accepted_name": "Synthgenus2b62 synthspecies6709",
+      "rank": "species",
+      "authorship": "Synthetic, 2026",
+      "lineage": [],
+      "life_status": "extant",
+      "source_ids": [
+        "col:syn-8"
+      ],
+      "synonyms": [],
+      "temporal_range": null,
+      "place_summary": null,
+      "provenance": [
+        {
+          "source_name": "col",
+          "source_record_id": "syn-8",
+          "source_snapshot_id": "eng-fixture",
+          "source_version": "synthetic-1",
+          "license": "synthetic-fixture",
+          "citation": "GKIP synthetic scale fixture \u2014 NOT real science",
+          "input_checksum": "4a3ed79f24e52ac623fecceff72fab055a1f6c937c0a5c19574c5a0413a25074"
+        }
+      ],
+      "confidence": 0.2,
+      "reconciliation_status": "INSUFFICIENT_EVIDENCE"
+    },
+    {
+      "archive_taxon_id": "aol:taxon:fb98158afcd4d69225ce",
+      "accepted_name": "Synthgenus6e16 synthspeciesd4bc",
+      "rank": "species",
+      "authorship": "Synthetic, 2026",
+      "lineage": [],
+      "life_status": "extant",
+      "source_ids": [
+        "col:syn-9"
+      ],
+      "synonyms": [],
+      "temporal_range": null,
+      "place_summary": null,
+      "provenance": [
+        {
+          "source_name": "col",
+          "source_record_id": "syn-9",
+          "source_snapshot_id": "eng-fixture",
+          "source_version": "synthetic-1",
+          "license": "synthetic-fixture",
+          "citation": "GKIP synthetic scale fixture \u2014 NOT real science",
+          "input_checksum": "4a3ed79f24e52ac623fecceff72fab055a1f6c937c0a5c19574c5a0413a25074"
+        }
+      ],
+      "confidence": 0.2,
+      "reconciliation_status": "INSUFFICIENT_EVIDENCE"
+    },
+    {
+      "archive_taxon_id": "aol:taxon:e2163bec215a9b8a3b70",
+      "accepted_name": "Synthgenuscb44 synthspecies04d4",
+      "rank": "species",
+      "authorship": "Synthetic, 2026",
+      "lineage": [],
+      "life_status": "extant",
+      "source_ids": [
+        "col:syn-10"
+      ],
+      "synonyms": [],
+      "temporal_range": null,
+      "place_summary": null,
+      "provenance": [
+        {
+          "source_name": "col",
+          "source_record_id": "syn-10",
+          "source_snapshot_id": "eng-fixture",
+          "source_version": "synthetic-1",
+          "license": "synthetic-fixture",
+          "citation": "GKIP synthetic scale fixture \u2014 NOT real science",
+          "input_checksum": "4a3ed79f24e52ac623fecceff72fab055a1f6c937c0a5c19574c5a0413a25074"
+        }
+      ],
+      "confidence": 0.2,
+      "reconciliation_status": "INSUFFICIENT_EVIDENCE"
+    },
+    {
+      "archive_taxon_id": "aol:taxon:154eac4e6fde9e16ee8d",
+      "accepted_name": "Synthgenus0760 synthspeciesf48c",
+      "rank": "species",
+      "authorship": "Synthetic, 2026",
+      "lineage": [],
+      "life_status": "extant",
+      "source_ids": [
+        "col:syn-11"
+      ],
+      "synonyms": [
+        "Synthgenus0760 oldname11"
+      ],
+      "temporal_range": null,
+      "place_summary": null,
+      "provenance": [
+        {
+          "source_name": "col",
+          "source_record_id": "syn-11",
+          "source_snapshot_id": "eng-fixture",
+          "source_version": "synthetic-1",
+          "license": "synthetic-fixture",
+          "citation": "GKIP synthetic scale fixture \u2014 NOT real science",
+          "input_checksum": "4a3ed79f24e52ac623fecceff72fab055a1f6c937c0a5c19574c5a0413a25074"
+        }
+      ],
+      "confidence": 0.2,
+      "reconciliation_status": "INSUFFICIENT_EVIDENCE"
+    },
+    {
+      "archive_taxon_id": "aol:taxon:3e15cb4d3fce46e60e68",
+      "accepted_name": "Synthgenusff93 synthspecies61b4",
+      "rank": "species",
+      "authorship": "Synthetic, 2026",
+      "lineage": [],
+      "life_status": "extant",
+      "source_ids": [
+        "col:syn-12"
+      ],
+      "synonyms": [],
+      "temporal_range": null,
+      "place_summary": null,
+      "provenance": [
+        {
+          "source_name": "col",
+          "source_record_id": "syn-12",
+          "source_snapshot_id": "eng-fixture",
+          "source_version": "synthetic-1",
+          "license": "synthetic-fixture",
+          "citation": "GKIP synthetic scale fixture \u2014 NOT real science",
+          "input_checksum": "4a3ed79f24e52ac623fecceff72fab055a1f6c937c0a5c19574c5a0413a25074"
+        }
+      ],
+      "confidence": 0.2,
+      "reconciliation_status": "INSUFFICIENT_EVIDENCE"
+    },
+    {
+      "archive_taxon_id": "aol:taxon:7899888d2388e2708ce7",
+      "accepted_name": "Synthgenus39ea synthspeciesb89d",
+      "rank": "species",
+      "authorship": "Synthetic, 2026",
+      "lineage": [],
+      "life_status": "extant",
+      "source_ids": [
+        "col:syn-13"
+      ],
+      "synonyms": [],
+      "temporal_range": null,
+      "place_summary": null,
+      "provenance": [
+        {
+          "source_name": "col",
+          "source_record_id": "syn-13",
+          "source_snapshot_id": "eng-fixture",
+          "source_version": "synthetic-1",
+          "license": "synthetic-fixture",
+          "citation": "GKIP synthetic scale fixture \u2014 NOT real science",
+          "input_checksum": "4a3ed79f24e52ac623fecceff72fab055a1f6c937c0a5c19574c5a0413a25074"
+        }
+      ],
+      "confidence": 0.2,
+      "reconciliation_status": "INSUFFICIENT_EVIDENCE"
+    },
+    {
+      "archive_taxon_id": "aol:taxon:d9f7d676a191ac66913f",
+      "accepted_name": "Synthgenusb7b9 synthspeciesad8d",
+      "rank": "species",
+      "authorship": "Synthetic, 2026",
+      "lineage": [],
+      "life_status": "extant",
+      "source_ids": [
+        "col:syn-14"
+      ],
+      "synonyms": [],
+      "temporal_range": null,
+      "place_summary": null,
+      "provenance": [
+        {
+          "source_name": "col",
+          "source_record_id": "syn-14",
+          "source_snapshot_id": "eng-fixture",
+          "source_version": "synthetic-1",
+          "license": "synthetic-fixture",
+          "citation": "GKIP synthetic scale fixture \u2014 NOT real science",
+          "input_checksum": "4a3ed79f24e52ac623fecceff72fab055a1f6c937c0a5c19574c5a0413a25074"
+        }
+      ],
+      "confidence": 0.2,
+      "reconciliation_status": "INSUFFICIENT_EVIDENCE"
+    },
+    {
+      "archive_taxon_id": "aol:taxon:2c8957d0e90269fbcf45",
+      "accepted_name": "Synthgenusda33 synthspeciesfc04",
+      "rank": "species",
+      "authorship": "Synthetic, 2026",
+      "lineage": [],
+      "life_status": "extant",
+      "source_ids": [
+        "col:syn-15"
+      ],
+      "synonyms": [],
+      "temporal_range": null,
+      "place_summary": null,
+      "provenance": [
+        {
+          "source_name": "col",
+          "source_record_id": "syn-15",
+          "source_snapshot_id": "eng-fixture",
+          "source_version": "synthetic-1",
+          "license": "synthetic-fixture",
+          "citation": "GKIP synthetic scale fixture \u2014 NOT real science",
+          "input_checksum": "4a3ed79f24e52ac623fecceff72fab055a1f6c937c0a5c19574c5a0413a25074"
+        }
+      ],
+      "confidence": 0.2,
+      "reconciliation_status": "INSUFFICIENT_EVIDENCE"
+    },
+    {
+      "archive_taxon_id": "aol:taxon:7b0f68353c56fb6bc499",
+      "accepted_name": "Synthgenusd842 synthspecies7e5b",
+      "rank": "species",
+      "authorship": "Synthetic, 2026",
+      "lineage": [],
+      "life_status": "extant",
+      "source_ids": [
+        "col:syn-16"
+      ],
+      "synonyms": [],
+      "temporal_range": null,
+      "place_summary": null,
+      "provenance": [
+        {
+          "source_name": "col",
+          "source_record_id": "syn-16",
+          "source_snapshot_id": "eng-fixture",
+          "source_version": "synthetic-1",
+          "license": "synthetic-fixture",
+          "citation": "GKIP synthetic scale fixture \u2014 NOT real science",
+          "input_checksum": "4a3ed79f24e52ac623fecceff72fab055a1f6c937c0a5c19574c5a0413a25074"
+        }
+      ],
+      "confidence": 0.2,
+      "reconciliation_status": "INSUFFICIENT_EVIDENCE"
+    },
+    {
+      "archive_taxon_id": "aol:taxon:21420611098b5a53da3a",
+      "accepted_name": "Synthgenusc3e9 synthspecies346c",
+      "rank": "species",
+      "authorship": "Synthetic, 2026",
+      "lineage": [],
+      "life_status": "extinct",
+      "source_ids": [
+        "col:syn-17"
+      ],
+      "synonyms": [],
+      "temporal_range": null,
+      "place_summary": null,
+      "provenance": [
+        {
+          "source_name": "col",
+          "source_record_id": "syn-17",
+          "source_snapshot_id": "eng-fixture",
+          "source_version": "synthetic-1",
+          "license": "synthetic-fixture",
+          "citation": "GKIP synthetic scale fixture \u2014 NOT real science",
+          "input_checksum": "4a3ed79f24e52ac623fecceff72fab055a1f6c937c0a5c19574c5a0413a25074"
+        }
+      ],
+      "confidence": 0.2,
+      "reconciliation_status": "INSUFFICIENT_EVIDENCE"
+    },
+    {
+      "archive_taxon_id": "aol:taxon:012a4f4ab53c7f494fb4",
+      "accepted_name": "Synthgenus12f0 synthspeciesa580",
+      "rank": "species",
+      "authorship": "Synthetic, 2026",
+      "lineage": [],
+      "life_status": "extant",
+      "source_ids": [
+        "col:syn-18"
+      ],
+      "synonyms": [],
+      "temporal_range": null,
+      "place_summary": null,
+      "provenance": [
+        {
+          "source_name": "col",
+          "source_record_id": "syn-18",
+          "source_snapshot_id": "eng-fixture",
+          "source_version": "synthetic-1",
+          "license": "synthetic-fixture",
+          "citation": "GKIP synthetic scale fixture \u2014 NOT real science",
+          "input_checksum": "4a3ed79f24e52ac623fecceff72fab055a1f6c937c0a5c19574c5a0413a25074"
+        }
+      ],
+      "confidence": 0.2,
+      "reconciliation_status": "INSUFFICIENT_EVIDENCE"
+    },
+    {
+      "archive_taxon_id": "aol:taxon:45185604c2101c26668d",
+      "accepted_name": "Synthgenusd12c synthspeciescc78",
+      "rank": "species",
+      "authorship": "Synthetic, 2026",
+      "lineage": [],
+      "life_status": "extant",
+      "source_ids": [
+        "col:syn-19"
+      ],
+      "synonyms": [],
+      "temporal_range": null,
+      "place_summary": null,
+      "provenance": [
+        {
+          "source_name": "col",
+          "source_record_id": "syn-19",
+          "source_snapshot_id": "eng-fixture",
+          "source_version": "synthetic-1",
+          "license": "synthetic-fixture",
+          "citation": "GKIP synthetic scale fixture \u2014 NOT real science",
+          "input_checksum": "4a3ed79f24e52ac623fecceff72fab055a1f6c937c0a5c19574c5a0413a25074"
+        }
+      ],
+      "confidence": 0.2,
+      "reconciliation_status": "INSUFFICIENT_EVIDENCE"
+    }
+  ],
+  "gate": "TAXON_RECONCILIATION_PASS",
+  "pass": true
+}

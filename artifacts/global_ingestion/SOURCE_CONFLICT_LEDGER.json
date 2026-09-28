@@ -1,0 +1,59 @@
+{
+  "conflicts": [
+    {
+      "archive_taxon_id": null,
+      "field": "rank",
+      "source_assertions": [
+        {
+          "source": "col",
+          "source_record_id": "syn-0",
+          "source_version": "synthetic-1",
+          "value": "species"
+        },
+        {
+          "source": "gbif",
+          "source_record_id": "gbif-conflict-1",
+          "source_version": "synthetic-1",
+          "value": "genus"
+        }
+      ],
+      "source_versions": [
+        "synthetic-1"
+      ],
+      "authority_policy": "do_not_fabricate_consensus",
+      "chosen_value": null,
+      "resolution_reason": null,
+      "confidence": 0.0,
+      "human_review_required": true
+    },
+    {
+      "archive_taxon_id": "aol:taxon:5efc275989777320a00e",
+      "field": "rank",
+      "source_assertions": [
+        {
+          "source": "col",
+          "source_version": "synthetic-1",
+          "value": "species"
+        },
+        {
+          "source": "gbif",
+          "source_version": "synthetic-1",
+          "value": "genus"
+        }
+      ],
+      "source_versions": [
+        "synthetic-1"
+      ],
+      "authority_policy": "do_not_fabricate_consensus",
+      "chosen_value": null,
+      "resolution_reason": null,
+      "confidence": 0.0,
+      "human_review_required": true
+    }
+  ],
+  "count": 2,
+  "pass_gate": true,
+  "notes": "Conflicts retained as evidence; chosen_value left null when unresolved.",
+  "gate": "SOURCE_CONFLICT_LEDGER_PASS",
+  "pass": true
+}

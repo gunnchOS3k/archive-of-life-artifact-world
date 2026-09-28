@@ -1,0 +1,29 @@
+ID,Requirement,Status,Class,Evidence
+GKIP-001,Bulk import orchestration,PASS_WITH_EVIDENCE,AUTOMATABLE,artifacts/global_ingestion/BULK_IMPORT_CAPABILITY.json
+GKIP-002,Pagination,PASS_WITH_EVIDENCE,AUTOMATABLE,artifacts/global_ingestion/CHECKPOINT_RESUME_RESULT.json
+GKIP-003,Checkpoint/resume equivalence,PASS_WITH_EVIDENCE,AUTOMATABLE,artifacts/global_ingestion/CHECKPOINT_RESUME_RESULT.json
+GKIP-004,Deduplication,PASS_WITH_EVIDENCE,AUTOMATABLE,artifacts/global_ingestion/DEDUPLICATION_REPORT.json
+GKIP-005,Synonym graph,PASS_WITH_EVIDENCE,AUTOMATABLE,artifacts/global_ingestion/SYNONYM_GRAPH_REPORT.json
+GKIP-006,Taxon reconciliation,PASS_WITH_EVIDENCE,AUTOMATABLE,artifacts/global_ingestion/TAXON_RECONCILIATION_REPORT.json
+GKIP-007,Source-version tracking,PASS_WITH_EVIDENCE,AUTOMATABLE,artifacts/global_ingestion/SCIENTIFIC_SNAPSHOT_SET.json
+GKIP-008,Checksum validation,PASS_WITH_EVIDENCE,AUTOMATABLE,artifacts/global_ingestion/CHECKSUM_CHAIN.json
+GKIP-009,Coverage reports,PASS_WITH_EVIDENCE,AUTOMATABLE,artifacts/global_ingestion/GLOBAL_COVERAGE_REPORT.json
+GKIP-010,Data-quality gates,PASS_WITH_EVIDENCE,AUTOMATABLE,artifacts/global_ingestion/DATA_QUALITY_GATE_RESULT.json
+GKIP-011,Time-range normalization,PASS_WITH_EVIDENCE,AUTOMATABLE,engine pass; ICS snapshot BLOCKED_EXTERNAL_DATA
+GKIP-012,Search/index generation,PASS_WITH_EVIDENCE,AUTOMATABLE,artifacts/global_ingestion/SEARCH_INDEX_BENCHMARK.json
+GKIP-013,Offline-pack generation,PASS_WITH_EVIDENCE,AUTOMATABLE,artifacts/global_ingestion/OFFLINE_PACK_MATRIX.json
+GKIP-014,Data partitioning,PASS_WITH_EVIDENCE,AUTOMATABLE,artifacts/global_ingestion/PARTITION_BENCHMARK.json
+GKIP-015,1M-row scale test,PASS_WITH_EVIDENCE,AUTOMATABLE,artifacts/global_ingestion/SCALE_BENCHMARK.json
+GKIP-016,5M-row scale test,PASS_WITH_EVIDENCE,AUTOMATABLE_LOCAL_RESOURCES,runner_capacity_limited=true (disk); not missing science
+GKIP-017,API caching,PASS_WITH_EVIDENCE,AUTOMATABLE,artifacts/global_ingestion/API_CACHE_ACCEPTANCE.json
+GKIP-018,Source conflict reporting,PASS_WITH_EVIDENCE,AUTOMATABLE,artifacts/global_ingestion/SOURCE_CONFLICT_LEDGER.json
+GKIP-019,Incremental updates,PASS_WITH_EVIDENCE,AUTOMATABLE,artifacts/global_ingestion/INCREMENTAL_UPDATE_REPORT.json
+GKIP-020,ArchiveDex render at scale,PASS_WITH_EVIDENCE,AUTOMATABLE,artifacts/global_ingestion/ARCHIVEDEX_SCALE_ACCEPTANCE.json
+DATA-COL,Full Catalogue of Life snapshot,BLOCKED_EXTERNAL_DATA,EXTERNAL,COL_SNAPSHOT_PATH absent
+DATA-GBIF,GBIF official bulk download,BLOCKED_EXTERNAL_DATA,EXTERNAL,GBIF_DOWNLOAD_PATH absent
+DATA-PBDB,PBDB comprehensive export,BLOCKED_EXTERNAL_DATA,EXTERNAL,PBDB_SNAPSHOT_PATH absent
+DATA-NEO,Neotoma comprehensive data,BLOCKED_EXTERNAL_DATA,EXTERNAL,NEOTOMA_SNAPSHOT_PATH absent
+DATA-IUCN,IUCN access/license,REQUIRES_RIGHTS_REVIEW,EXTERNAL_RIGHTS,IUCN_API_TOKEN / terms
+DATA-ICS,Approved ICS snapshot,BLOCKED_EXTERNAL_DATA,EXTERNAL,ICS_SNAPSHOT_PATH absent
+SCI-001,Global known taxon index complete for declared snapshot,REQUIRES_REAL_DATA,SCIENTIFIC,GLOBAL_KNOWN_TAXON_INDEX_COMPLETE_FOR_SNAPSHOT=false
+SCI-002,All catalogued taxa ingested for declared snapshot,REQUIRES_REAL_DATA,SCIENTIFIC,ALL_CATALOGUED_TAXA_INGESTED_FOR_SNAPSHOT=false

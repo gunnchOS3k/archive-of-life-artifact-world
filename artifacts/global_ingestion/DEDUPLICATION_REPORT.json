@@ -1,0 +1,5014 @@
+{
+  "input_count": 2502,
+  "kept": 2502,
+  "merged": 0,
+  "linked_as_synonym": 0,
+  "conflicts": 0,
+  "rejected": 0,
+  "decisions": [
+    {
+      "decision": "KEEP",
+      "reason": "first_unique_source_record",
+      "evidence": {
+        "source_record_identity": "col:syn-0",
+        "canonical_taxon_identity": "taxon:61b3ff8ada1bcdaf"
+      },
+      "record_id": "col:syn-0",
+      "matched_record_id": null
+    },
+    {
+      "decision": "KEEP",
+      "reason": "first_unique_source_record",
+      "evidence": {
+        "source_record_identity": "col:syn-1",
+        "canonical_taxon_identity": "taxon:ac5f951b332fff81"
+      },
+      "record_id": "col:syn-1",
+      "matched_record_id": null
+    },
+    {
+      "decision": "KEEP",
+      "reason": "first_unique_source_record",
+      "evidence": {
+        "source_record_identity": "col:syn-2",
+        "canonical_taxon_identity": "taxon:fe14cb06795f97f6"
+      },
+      "record_id": "col:syn-2",
+      "matched_record_id": null
+    },
+    {
+      "decision": "KEEP",
+      "reason": "first_unique_source_record",
+      "evidence": {
+        "source_record_identity": "col:syn-3",
+        "canonical_taxon_identity": "taxon:b60392b3146a518d"
+      },
+      "record_id": "col:syn-3",
+      "matched_record_id": null
+    },
+    {
+      "decision": "KEEP",
+      "reason": "first_unique_source_record",
+      "evidence": {
+        "source_record_identity": "col:syn-4",
+        "canonical_taxon_identity": "taxon:46665cb441678902"
+      },
+      "record_id": "col:syn-4",
+      "matched_record_id": null
+    },
+    {
+      "decision": "KEEP",
+      "reason": "first_unique_source_record",
+      "evidence": {
+        "source_record_identity": "col:syn-5",
+        "canonical_taxon_identity": "taxon:ef94262718e7ed18"
+      },
+      "record_id": "col:syn-5",
+      "matched_record_id": null
+    },
+    {
+      "decision": "KEEP",
+      "reason": "first_unique_source_record",
+      "evidence": {
+        "source_record_identity": "col:syn-6",
+        "canonical_taxon_identity": "taxon:d15c3208f0e753e0"
+      },
+      "record_id": "col:syn-6",
+      "matched_record_id": null
+    },
+    {
+      "decision": "KEEP",
+      "reason": "first_unique_source_record",
+      "evidence": {
+        "source_record_identity": "col:syn-7",
+        "canonical_taxon_identity": "taxon:34aebac659e37315"
+      },
+      "record_id": "col:syn-7",
+      "matched_record_id": null
+    },
+    {
+      "decision": "KEEP",
+      "reason": "first_unique_source_record",
+      "evidence": {
+        "source_record_identity": "col:syn-8",
+        "canonical_taxon_identity": "taxon:2a833940c66d5e3e"
+      },
+      "record_id": "col:syn-8",
+      "matched_record_id": null
+    },
+    {
+      "decision": "KEEP",
+      "reason": "first_unique_source_record",
+      "evidence": {
+        "source_record_identity": "col:syn-9",
+        "canonical_taxon_identity": "taxon:f557d7d314e916c3"
+      },
+      "record_id": "col:syn-9",
+      "matched_record_id": null
+    },
+    {
+      "decision": "KEEP",
+      "reason": "first_unique_source_record",
+      "evidence": {
+        "source_record_identity": "col:syn-10",
+        "canonical_taxon_identity": "taxon:2c3b5b61b62adf39"
+      },
+      "record_id": "col:syn-10",
+      "matched_record_id": null
+    },
+    {
+      "decision": "KEEP",
+      "reason": "first_unique_source_record",
+      "evidence": {
+        "source_record_identity": "col:syn-11",
+        "canonical_taxon_identity": "taxon:820d46c0b4db0670"
+      },
+      "record_id": "col:syn-11",
+      "matched_record_id": null
+    },
+    {
+      "decision": "KEEP",
+      "reason": "first_unique_source_record",
+      "evidence": {
+        "source_record_identity": "col:syn-12",
+        "canonical_taxon_identity": "taxon:a72dc42271a80132"
+      },
+      "record_id": "col:syn-12",
+      "matched_record_id": null
+    },
+    {
+      "decision": "KEEP",
+      "reason": "first_unique_source_record",
+      "evidence": {
+        "source_record_identity": "col:syn-13",
+        "canonical_taxon_identity": "taxon:004b729fe56683f7"
+      },
+      "record_id": "col:syn-13",
+      "matched_record_id": null
+    },
+    {
+      "decision": "KEEP",
+      "reason": "first_unique_source_record",
+      "evidence": {
+        "source_record_identity": "col:syn-14",
+        "canonical_taxon_identity": "taxon:8e97b6fb8e94c9a6"
+      },
+      "record_id": "col:syn-14",
+      "matched_record_id": null
+    },
+    {
+      "decision": "KEEP",
+      "reason": "first_unique_source_record",
+      "evidence": {
+        "source_record_identity": "col:syn-15",
+        "canonical_taxon_identity": "taxon:d7fcd011572a3aed"
+      },
+      "record_id": "col:syn-15",
+      "matched_record_id": null
+    },
+    {
+      "decision": "KEEP",
+      "reason": "first_unique_source_record",
+      "evidence": {
+        "source_record_identity": "col:syn-16",
+        "canonical_taxon_identity": "taxon:466d2a7851b073c9"
+      },
+      "record_id": "col:syn-16",
+      "matched_record_id": null
+    },
+    {
+      "decision": "KEEP",
+      "reason": "first_unique_source_record",
+      "evidence": {
+        "source_record_identity": "col:syn-17",
+        "canonical_taxon_identity": "taxon:9b77e9139ae648c5"
+      },
+      "record_id": "col:syn-17",
+      "matched_record_id": null
+    },
+    {
+      "decision": "KEEP",
+      "reason": "first_unique_source_record",
+      "evidence": {
+        "source_record_identity": "col:syn-18",
+        "canonical_taxon_identity": "taxon:bde2770b8702bf79"
+      },
+      "record_id": "col:syn-18",
+      "matched_record_id": null
+    },
+    {
+      "decision": "KEEP",
+      "reason": "first_unique_source_record",
+      "evidence": {
+        "source_record_identity": "col:syn-19",
+        "canonical_taxon_identity": "taxon:638d13003053a1d5"
+      },
+      "record_id": "col:syn-19",
+      "matched_record_id": null
+    },
+    {
+      "decision": "KEEP",
+      "reason": "first_unique_source_record",
+      "evidence": {
+        "source_record_identity": "col:syn-20",
+        "canonical_taxon_identity": "taxon:cb4d0d5cd36a5588"
+      },
+      "record_id": "col:syn-20",
+      "matched_record_id": null
+    },
+    {
+      "decision": "KEEP",
+      "reason": "first_unique_source_record",
+      "evidence": {
+        "source_record_identity": "col:syn-21",
+        "canonical_taxon_identity": "taxon:f7657fb39d8fb920"
+      },
+      "record_id": "col:syn-21",
+      "matched_record_id": null
+    },
+    {
+      "decision": "KEEP",
+      "reason": "first_unique_source_record",
+      "evidence": {
+        "source_record_identity": "col:syn-22",
+        "canonical_taxon_identity": "taxon:34244a3ed55c9db8"
+      },
+      "record_id": "col:syn-22",
+      "matched_record_id": null
+    },
+    {
+      "decision": "KEEP",
+      "reason": "first_unique_source_record",
+      "evidence": {
+        "source_record_identity": "col:syn-23",
+        "canonical_taxon_identity": "taxon:714b192698a66284"
+      },
+      "record_id": "col:syn-23",
+      "matched_record_id": null
+    },
+    {
+      "decision": "KEEP",
+      "reason": "first_unique_source_record",
+      "evidence": {
+        "source_record_identity": "col:syn-24",
+        "canonical_taxon_identity": "taxon:a171924dc5a76ec8"
+      },
+      "record_id": "col:syn-24",
+      "matched_record_id": null
+    },
+    {
+      "decision": "KEEP",
+      "reason": "first_unique_source_record",
+      "evidence": {
+        "source_record_identity": "col:syn-25",
+        "canonical_taxon_identity": "taxon:2a829c101f3428e2"
+      },
+      "record_id": "col:syn-25",
+      "matched_record_id": null
+    },
+    {
+      "decision": "KEEP",
+      "reason": "first_unique_source_record",
+      "evidence": {
+        "source_record_identity": "col:syn-26",
+        "canonical_taxon_identity": "taxon:160f2c0f9e45e373"
+      },
+      "record_id": "col:syn-26",
+      "matched_record_id": null
+    },
+    {
+      "decision": "KEEP",
+      "reason": "first_unique_source_record",
+      "evidence": {
+        "source_record_identity": "col:syn-27",
+        "canonical_taxon_identity": "taxon:3b058bfe39ac2a0d"
+      },
+      "record_id": "col:syn-27",
+      "matched_record_id": null
+    },
+    {
+      "decision": "KEEP",
+      "reason": "first_unique_source_record",
+      "evidence": {
+        "source_record_identity": "col:syn-28",
+        "canonical_taxon_identity": "taxon:1d11e091f8b19154"
+      },
+      "record_id": "col:syn-28",
+      "matched_record_id": null
+    },
+    {
+      "decision": "KEEP",
+      "reason": "first_unique_source_record",
+      "evidence": {
+        "source_record_identity": "col:syn-29",
+        "canonical_taxon_identity": "taxon:e8d5c67a9f799737"
+      },
+      "record_id": "col:syn-29",
+      "matched_record_id": null
+    },
+    {
+      "decision": "KEEP",
+      "reason": "first_unique_source_record",
+      "evidence": {
+        "source_record_identity": "col:syn-30",
+        "canonical_taxon_identity": "taxon:aba14b7f84c35e50"
+      },
+      "record_id": "col:syn-30",
+      "matched_record_id": null
+    },
+    {
+      "decision": "KEEP",
+      "reason": "first_unique_source_record",
+      "evidence": {
+        "source_record_identity": "col:syn-31",
+        "canonical_taxon_identity": "taxon:88beb029e14dc9cb"
+      },
+      "record_id": "col:syn-31",
+      "matched_record_id": null
+    },
+    {
+      "decision": "KEEP",
+      "reason": "first_unique_source_record",
+      "evidence": {
+        "source_record_identity": "col:syn-32",
+        "canonical_taxon_identity": "taxon:d83482d0e7709baf"
+      },
+      "record_id": "col:syn-32",
+      "matched_record_id": null
+    },
+    {
+      "decision": "KEEP",
+      "reason": "first_unique_source_record",
+      "evidence": {
+        "source_record_identity": "col:syn-33",
+        "canonical_taxon_identity": "taxon:63c85f6b3492494e"
+      },
+      "record_id": "col:syn-33",
+      "matched_record_id": null
+    },
+    {
+      "decision": "KEEP",
+      "reason": "first_unique_source_record",
+      "evidence": {
+        "source_record_identity": "col:syn-34",
+        "canonical_taxon_identity": "taxon:b0e0b41b132e3e21"
+      },
+      "record_id": "col:syn-34",
+      "matched_record_id": null
+    },
+    {
+      "decision": "KEEP",
+      "reason": "first_unique_source_record",
+      "evidence": {
+        "source_record_identity": "col:syn-35",
+        "canonical_taxon_identity": "taxon:89309f9d8782fa85"
+      },
+      "record_id": "col:syn-35",
+      "matched_record_id": null
+    },
+    {
+      "decision": "KEEP",
+      "reason": "first_unique_source_record",
+      "evidence": {
+        "source_record_identity": "col:syn-36",
+        "canonical_taxon_identity": "taxon:29645f125de0cdeb"
+      },
+      "record_id": "col:syn-36",
+      "matched_record_id": null
+    },
+    {
+      "decision": "KEEP",
+      "reason": "first_unique_source_record",
+      "evidence": {
+        "source_record_identity": "col:syn-37",
+        "canonical_taxon_identity": "taxon:8d41543df523f50c"
+      },
+      "record_id": "col:syn-37",
+      "matched_record_id": null
+    },
+    {
+      "decision": "KEEP",
+      "reason": "first_unique_source_record",
+      "evidence": {
+        "source_record_identity": "col:syn-38",
+        "canonical_taxon_identity": "taxon:941a83a750623d61"
+      },
+      "record_id": "col:syn-38",
+      "matched_record_id": null
+    },
+    {
+      "decision": "KEEP",
+      "reason": "first_unique_source_record",
+      "evidence": {
+        "source_record_identity": "col:syn-39",
+        "canonical_taxon_identity": "taxon:939f1e5fa23ffff3"
+      },
+      "record_id": "col:syn-39",
+      "matched_record_id": null
+    },
+    {
+      "decision": "KEEP",
+      "reason": "first_unique_source_record",
+      "evidence": {
+        "source_record_identity": "col:syn-40",
+        "canonical_taxon_identity": "taxon:ef41882cd1acfc42"
+      },
+      "record_id": "col:syn-40",
+      "matched_record_id": null
+    },
+    {
+      "decision": "KEEP",
+      "reason": "first_unique_source_record",
+      "evidence": {
+        "source_record_identity": "col:syn-41",
+        "canonical_taxon_identity": "taxon:7b04359c5f8eec2f"
+      },
+      "record_id": "col:syn-41",
+      "matched_record_id": null
+    },
+    {
+      "decision": "KEEP",
+      "reason": "first_unique_source_record",
+      "evidence": {
+        "source_record_identity": "col:syn-42",
+        "canonical_taxon_identity": "taxon:ff720310570877da"
+      },
+      "record_id": "col:syn-42",
+      "matched_record_id": null
+    },
+    {
+      "decision": "KEEP",
+      "reason": "first_unique_source_record",
+      "evidence": {
+        "source_record_identity": "col:syn-43",
+        "canonical_taxon_identity": "taxon:29d9ce395e5a30ca"
+      },
+      "record_id": "col:syn-43",
+      "matched_record_id": null
+    },
+    {
+      "decision": "KEEP",
+      "reason": "first_unique_source_record",
+      "evidence": {
+        "source_record_identity": "col:syn-44",
+        "canonical_taxon_identity": "taxon:01dfd7e4ab340a52"
+      },
+      "record_id": "col:syn-44",
+      "matched_record_id": null
+    },
+    {
+      "decision": "KEEP",
+      "reason": "first_unique_source_record",
+      "evidence": {
+        "source_record_identity": "col:syn-45",
+        "canonical_taxon_identity": "taxon:ead90b1aab0f2367"
+      },
+      "record_id": "col:syn-45",
+      "matched_record_id": null
+    },
+    {
+      "decision": "KEEP",
+      "reason": "first_unique_source_record",
+      "evidence": {
+        "source_record_identity": "col:syn-46",
+        "canonical_taxon_identity": "taxon:4aea12c520b1f390"
+      },
+      "record_id": "col:syn-46",
+      "matched_record_id": null
+    },
+    {
+      "decision": "KEEP",
+      "reason": "first_unique_source_record",
+      "evidence": {
+        "source_record_identity": "col:syn-47",
+        "canonical_taxon_identity": "taxon:7abac57ae76aa601"
+      },
+      "record_id": "col:syn-47",
+      "matched_record_id": null
+    },
+    {
+      "decision": "KEEP",
+      "reason": "first_unique_source_record",
+      "evidence": {
+        "source_record_identity": "col:syn-48",
+        "canonical_taxon_identity": "taxon:a32ce1becbe74091"
+      },
+      "record_id": "col:syn-48",
+      "matched_record_id": null
+    },
+    {
+      "decision": "KEEP",
+      "reason": "first_unique_source_record",
+      "evidence": {
+        "source_record_identity": "col:syn-49",
+        "canonical_taxon_identity": "taxon:403e9dcd90522f9e"
+      },
+      "record_id": "col:syn-49",
+      "matched_record_id": null
+    },
+    {
+      "decision": "KEEP",
+      "reason": "first_unique_source_record",
+      "evidence": {
+        "source_record_identity": "col:syn-50",
+        "canonical_taxon_identity": "taxon:f0098f9786ee4436"
+      },
+      "record_id": "col:syn-50",
+      "matched_record_id": null
+    },
+    {
+      "decision": "KEEP",
+      "reason": "first_unique_source_record",
+      "evidence": {
+        "source_record_identity": "col:syn-51",
+        "canonical_taxon_identity": "taxon:436a62885228ca1c"
+      },
+      "record_id": "col:syn-51",
+      "matched_record_id": null
+    },
+    {
+      "decision": "KEEP",
+      "reason": "first_unique_source_record",
+      "evidence": {
+        "source_record_identity": "col:syn-52",
+        "canonical_taxon_identity": "taxon:df00e7eb76fb2c43"
+      },
+      "record_id": "col:syn-52",
+      "matched_record_id": null
+    },
+    {
+      "decision": "KEEP",
+      "reason": "first_unique_source_record",
+      "evidence": {
+        "source_record_identity": "col:syn-53",
+        "canonical_taxon_identity": "taxon:b3de2f38b61295fd"
+      },
+      "record_id": "col:syn-53",
+      "matched_record_id": null
+    },
+    {
+      "decision": "KEEP",
+      "reason": "first_unique_source_record",
+      "evidence": {
+        "source_record_identity": "col:syn-54",
+        "canonical_taxon_identity": "taxon:eeed534f011c1dcc"
+      },
+      "record_id": "col:syn-54",
+      "matched_record_id": null
+    },
+    {
+      "decision": "KEEP",
+      "reason": "first_unique_source_record",
+      "evidence": {
+        "source_record_identity": "col:syn-55",
+        "canonical_taxon_identity": "taxon:2dc7c9740fed98ac"
+      },
+      "record_id": "col:syn-55",
+      "matched_record_id": null
+    },
+    {
+      "decision": "KEEP",
+      "reason": "first_unique_source_record",
+      "evidence": {
+        "source_record_identity": "col:syn-56",
+        "canonical_taxon_identity": "taxon:10cbfee526c05093"
+      },
+      "record_id": "col:syn-56",
+      "matched_record_id": null
+    },
+    {
+      "decision": "KEEP",
+      "reason": "first_unique_source_record",
+      "evidence": {
+        "source_record_identity": "col:syn-57",
+        "canonical_taxon_identity": "taxon:52af7fed27acfbd1"
+      },
+      "record_id": "col:syn-57",
+      "matched_record_id": null
+    },
+    {
+      "decision": "KEEP",
+      "reason": "first_unique_source_record",
+      "evidence": {
+        "source_record_identity": "col:syn-58",
+        "canonical_taxon_identity": "taxon:27607aac0de13874"
+      },
+      "record_id": "col:syn-58",
+      "matched_record_id": null
+    },
+    {
+      "decision": "KEEP",
+      "reason": "first_unique_source_record",
+      "evidence": {
+        "source_record_identity": "col:syn-59",
+        "canonical_taxon_identity": "taxon:67d874273f269fa2"
+      },
+      "record_id": "col:syn-59",
+      "matched_record_id": null
+    },
+    {
+      "decision": "KEEP",
+      "reason": "first_unique_source_record",
+      "evidence": {
+        "source_record_identity": "col:syn-60",
+        "canonical_taxon_identity": "taxon:02bc1febaaf482ee"
+      },
+      "record_id": "col:syn-60",
+      "matched_record_id": null
+    },
+    {
+      "decision": "KEEP",
+      "reason": "first_unique_source_record",
+      "evidence": {
+        "source_record_identity": "col:syn-61",
+        "canonical_taxon_identity": "taxon:10916c702f08ae9d"
+      },
+      "record_id": "col:syn-61",
+      "matched_record_id": null
+    },
+    {
+      "decision": "KEEP",
+      "reason": "first_unique_source_record",
+      "evidence": {
+        "source_record_identity": "col:syn-62",
+        "canonical_taxon_identity": "taxon:3b433eafcc45e9db"
+      },
+      "record_id": "col:syn-62",
+      "matched_record_id": null
+    },
+    {
+      "decision": "KEEP",
+      "reason": "first_unique_source_record",
+      "evidence": {
+        "source_record_identity": "col:syn-63",
+        "canonical_taxon_identity": "taxon:d32238deb99e3e55"
+      },
+      "record_id": "col:syn-63",
+      "matched_record_id": null
+    },
+    {
+      "decision": "KEEP",
+      "reason": "first_unique_source_record",
+      "evidence": {
+        "source_record_identity": "col:syn-64",
+        "canonical_taxon_identity": "taxon:de9b24f7eeb0d97c"
+      },
+      "record_id": "col:syn-64",
+      "matched_record_id": null
+    },
+    {
+      "decision": "KEEP",
+      "reason": "first_unique_source_record",
+      "evidence": {
+        "source_record_identity": "col:syn-65",
+        "canonical_taxon_identity": "taxon:a709c0ef302db3a6"
+      },
+      "record_id": "col:syn-65",
+      "matched_record_id": null
+    },
+    {
+      "decision": "KEEP",
+      "reason": "first_unique_source_record",
+      "evidence": {
+        "source_record_identity": "col:syn-66",
+        "canonical_taxon_identity": "taxon:9b84b0b93a29c929"
+      },
+      "record_id": "col:syn-66",
+      "matched_record_id": null
+    },
+    {
+      "decision": "KEEP",
+      "reason": "first_unique_source_record",
+      "evidence": {
+        "source_record_identity": "col:syn-67",
+        "canonical_taxon_identity": "taxon:bf6dd7f566d421e0"
+      },
+      "record_id": "col:syn-67",
+      "matched_record_id": null
+    },
+    {
+      "decision": "KEEP",
+      "reason": "first_unique_source_record",
+      "evidence": {
+        "source_record_identity": "col:syn-68",
+        "canonical_taxon_identity": "taxon:aa4c3f70bf37af6d"
+      },
+      "record_id": "col:syn-68",
+      "matched_record_id": null
+    },
+    {
+      "decision": "KEEP",
+      "reason": "first_unique_source_record",
+      "evidence": {
+        "source_record_identity": "col:syn-69",
+        "canonical_taxon_identity": "taxon:daee3f02c66b0b3f"
+      },
+      "record_id": "col:syn-69",
+      "matched_record_id": null
+    },
+    {
+      "decision": "KEEP",
+      "reason": "first_unique_source_record",
+      "evidence": {
+        "source_record_identity": "col:syn-70",
+        "canonical_taxon_identity": "taxon:23e88afa882210df"
+      },
+      "record_id": "col:syn-70",
+      "matched_record_id": null
+    },
+    {
+      "decision": "KEEP",
+      "reason": "first_unique_source_record",
+      "evidence": {
+        "source_record_identity": "col:syn-71",
+        "canonical_taxon_identity": "taxon:db7edc13d896d751"
+      },
+      "record_id": "col:syn-71",
+      "matched_record_id": null
+    },
+    {
+      "decision": "KEEP",
+      "reason": "first_unique_source_record",
+      "evidence": {
+        "source_record_identity": "col:syn-72",
+        "canonical_taxon_identity": "taxon:d7264cc972eb580f"
+      },
+      "record_id": "col:syn-72",
+      "matched_record_id": null
+    },
+    {
+      "decision": "KEEP",
+      "reason": "first_unique_source_record",
+      "evidence": {
+        "source_record_identity": "col:syn-73",
+        "canonical_taxon_identity": "taxon:5aabac0f8d9fc1f4"
+      },
+      "record_id": "col:syn-73",
+      "matched_record_id": null
+    },
+    {
+      "decision": "KEEP",
+      "reason": "first_unique_source_record",
+      "evidence": {
+        "source_record_identity": "col:syn-74",
+        "canonical_taxon_identity": "taxon:6f5e9da9a996a8d9"
+      },
+      "record_id": "col:syn-74",
+      "matched_record_id": null
+    },
+    {
+      "decision": "KEEP",
+      "reason": "first_unique_source_record",
+      "evidence": {
+        "source_record_identity": "col:syn-75",
+        "canonical_taxon_identity": "taxon:b4303409e640d742"
+      },
+      "record_id": "col:syn-75",
+      "matched_record_id": null
+    },
+    {
+      "decision": "KEEP",
+      "reason": "first_unique_source_record",
+      "evidence": {
+        "source_record_identity": "col:syn-76",
+        "canonical_taxon_identity": "taxon:5a4d87fe407e1bbc"
+      },
+      "record_id": "col:syn-76",
+      "matched_record_id": null
+    },
+    {
+      "decision": "KEEP",
+      "reason": "first_unique_source_record",
+      "evidence": {
+        "source_record_identity": "col:syn-77",
+        "canonical_taxon_identity": "taxon:969cc219c52f93ad"
+      },
+      "record_id": "col:syn-77",
+      "matched_record_id": null
+    },
+    {
+      "decision": "KEEP",
+      "reason": "first_unique_source_record",
+      "evidence": {
+        "source_record_identity": "col:syn-78",
+        "canonical_taxon_identity": "taxon:cd5b882188ca9d38"
+      },
+      "record_id": "col:syn-78",
+      "matched_record_id": null
+    },
+    {
+      "decision": "KEEP",
+      "reason": "first_unique_source_record",
+      "evidence": {
+        "source_record_identity": "col:syn-79",
+        "canonical_taxon_identity": "taxon:eeb73a15498a54fc"
+      },
+      "record_id": "col:syn-79",
+      "matched_record_id": null
+    },
+    {
+      "decision": "KEEP",
+      "reason": "first_unique_source_record",
+      "evidence": {
+        "source_record_identity": "col:syn-80",
+        "canonical_taxon_identity": "taxon:314b8989d3ee22ce"
+      },
+      "record_id": "col:syn-80",
+      "matched_record_id": null
+    },
+    {
+      "decision": "KEEP",
+      "reason": "first_unique_source_record",
+      "evidence": {
+        "source_record_identity": "col:syn-81",
+        "canonical_taxon_identity": "taxon:d8f85f4a4fd12eab"
+      },
+      "record_id": "col:syn-81",
+      "matched_record_id": null
+    },
+    {
+      "decision": "KEEP",
+      "reason": "first_unique_source_record",
+      "evidence": {
+        "source_record_identity": "col:syn-82",
+        "canonical_taxon_identity": "taxon:2e7041f2dad17dc9"
+      },
+      "record_id": "col:syn-82",
+      "matched_record_id": null
+    },
+    {
+      "decision": "KEEP",
+      "reason": "first_unique_source_record",
+      "evidence": {
+        "source_record_identity": "col:syn-83",
+        "canonical_taxon_identity": "taxon:99daa166eceddeed"
+      },
+      "record_id": "col:syn-83",
+      "matched_record_id": null
+    },
+    {
+      "decision": "KEEP",
+      "reason": "first_unique_source_record",
+      "evidence": {
+        "source_record_identity": "col:syn-84",
+        "canonical_taxon_identity": "taxon:4a208f8fa37d1fda"
+      },
+      "record_id": "col:syn-84",
+      "matched_record_id": null
+    },
+    {
+      "decision": "KEEP",
+      "reason": "first_unique_source_record",
+      "evidence": {
+        "source_record_identity": "col:syn-85",
+        "canonical_taxon_identity": "taxon:956c0a65879b8bae"
+      },
+      "record_id": "col:syn-85",
+      "matched_record_id": null
+    },
+    {
+      "decision": "KEEP",
+      "reason": "first_unique_source_record",
+      "evidence": {
+        "source_record_identity": "col:syn-86",
+        "canonical_taxon_identity": "taxon:b919c3db1c9249d2"
+      },
+      "record_id": "col:syn-86",
+      "matched_record_id": null
+    },
+    {
+      "decision": "KEEP",
+      "reason": "first_unique_source_record",
+      "evidence": {
+        "source_record_identity": "col:syn-87",
+        "canonical_taxon_identity": "taxon:29e0cd5acc2c4dc4"
+      },
+      "record_id": "col:syn-87",
+      "matched_record_id": null
+    },
+    {
+      "decision": "KEEP",
+      "reason": "first_unique_source_record",
+      "evidence": {
+        "source_record_identity": "col:syn-88",
+        "canonical_taxon_identity": "taxon:c92578be5d53bd1f"
+      },
+      "record_id": "col:syn-88",
+      "matched_record_id": null
+    },
+    {
+      "decision": "KEEP",
+      "reason": "first_unique_source_record",
+      "evidence": {
+        "source_record_identity": "col:syn-89",
+        "canonical_taxon_identity": "taxon:5ba767e8cae929d0"
+      },
+      "record_id": "col:syn-89",
+      "matched_record_id": null
+    },
+    {
+      "decision": "KEEP",
+      "reason": "first_unique_source_record",
+      "evidence": {
+        "source_record_identity": "col:syn-90",
+        "canonical_taxon_identity": "taxon:938c4896a75caa4c"
+      },
+      "record_id": "col:syn-90",
+      "matched_record_id": null
+    },
+    {
+      "decision": "KEEP",
+      "reason": "first_unique_source_record",
+      "evidence": {
+        "source_record_identity": "col:syn-91",
+        "canonical_taxon_identity": "taxon:aab4354f0fa30d13"
+      },
+      "record_id": "col:syn-91",
+      "matched_record_id": null
+    },
+    {
+      "decision": "KEEP",
+      "reason": "first_unique_source_record",
+      "evidence": {
+        "source_record_identity": "col:syn-92",
+        "canonical_taxon_identity": "taxon:bcb12b5662e8486d"
+      },
+      "record_id": "col:syn-92",
+      "matched_record_id": null
+    },
+    {
+      "decision": "KEEP",
+      "reason": "first_unique_source_record",
+      "evidence": {
+        "source_record_identity": "col:syn-93",
+        "canonical_taxon_identity": "taxon:a94eaa8b3a07ed06"
+      },
+      "record_id": "col:syn-93",
+      "matched_record_id": null
+    },
+    {
+      "decision": "KEEP",
+      "reason": "first_unique_source_record",
+      "evidence": {
+        "source_record_identity": "col:syn-94",
+        "canonical_taxon_identity": "taxon:da291b277d7747f8"
+      },
+      "record_id": "col:syn-94",
+      "matched_record_id": null
+    },
+    {
+      "decision": "KEEP",
+      "reason": "first_unique_source_record",
+      "evidence": {
+        "source_record_identity": "col:syn-95",
+        "canonical_taxon_identity": "taxon:c2a30977aa25c9bc"
+      },
+      "record_id": "col:syn-95",
+      "matched_record_id": null
+    },
+    {
+      "decision": "KEEP",
+      "reason": "first_unique_source_record",
+      "evidence": {
+        "source_record_identity": "col:syn-96",
+        "canonical_taxon_identity": "taxon:6c76b43ffd07485c"
+      },
+      "record_id": "col:syn-96",
+      "matched_record_id": null
+    },
+    {
+      "decision": "KEEP",
+      "reason": "first_unique_source_record",
+      "evidence": {
+        "source_record_identity": "col:syn-97",
+        "canonical_taxon_identity": "taxon:ed1b309894ece148"
+      },
+      "record_id": "col:syn-97",
+      "matched_record_id": null
+    },
+    {
+      "decision": "KEEP",
+      "reason": "first_unique_source_record",
+      "evidence": {
+        "source_record_identity": "col:syn-98",
+        "canonical_taxon_identity": "taxon:7ab6f8db4eda5c46"
+      },
+      "record_id": "col:syn-98",
+      "matched_record_id": null
+    },
+    {
+      "decision": "KEEP",
+      "reason": "first_unique_source_record",
+      "evidence": {
+        "source_record_identity": "col:syn-99",
+        "canonical_taxon_identity": "taxon:57423e8c8e220423"
+      },
+      "record_id": "col:syn-99",
+      "matched_record_id": null
+    },
+    {
+      "decision": "KEEP",
+      "reason": "first_unique_source_record",
+      "evidence": {
+        "source_record_identity": "col:syn-100",
+        "canonical_taxon_identity": "taxon:4d6006b12da8a6a6"
+      },
+      "record_id": "col:syn-100",
+      "matched_record_id": null
+    },
+    {
+      "decision": "KEEP",
+      "reason": "first_unique_source_record",
+      "evidence": {
+        "source_record_identity": "col:syn-101",
+        "canonical_taxon_identity": "taxon:ab196927699f70e3"
+      },
+      "record_id": "col:syn-101",
+      "matched_record_id": null
+    },
+    {
+      "decision": "KEEP",
+      "reason": "first_unique_source_record",
+      "evidence": {
+        "source_record_identity": "col:syn-102",
+        "canonical_taxon_identity": "taxon:476e6c58563a9e45"
+      },
+      "record_id": "col:syn-102",
+      "matched_record_id": null
+    },
+    {
+      "decision": "KEEP",
+      "reason": "first_unique_source_record",
+      "evidence": {
+        "source_record_identity": "col:syn-103",
+        "canonical_taxon_identity": "taxon:c5eab9c4cb0ca6f6"
+      },
+      "record_id": "col:syn-103",
+      "matched_record_id": null
+    },
+    {
+      "decision": "KEEP",
+      "reason": "first_unique_source_record",
+      "evidence": {
+        "source_record_identity": "col:syn-104",
+        "canonical_taxon_identity": "taxon:aa8846ef5b353a10"
+      },
+      "record_id": "col:syn-104",
+      "matched_record_id": null
+    },
+    {
+      "decision": "KEEP",
+      "reason": "first_unique_source_record",
+      "evidence": {
+        "source_record_identity": "col:syn-105",
+        "canonical_taxon_identity": "taxon:9189e519a6f276b0"
+      },
+      "record_id": "col:syn-105",
+      "matched_record_id": null
+    },
+    {
+      "decision": "KEEP",
+      "reason": "first_unique_source_record",
+      "evidence": {
+        "source_record_identity": "col:syn-106",
+        "canonical_taxon_identity": "taxon:d72b9ce270bf30c4"
+      },
+      "record_id": "col:syn-106",
+      "matched_record_id": null
+    },
+    {
+      "decision": "KEEP",
+      "reason": "first_unique_source_record",
+      "evidence": {
+        "source_record_identity": "col:syn-107",
+        "canonical_taxon_identity": "taxon:645a7385e138b3c7"
+      },
+      "record_id": "col:syn-107",
+      "matched_record_id": null
+    },
+    {
+      "decision": "KEEP",
+      "reason": "first_unique_source_record",
+      "evidence": {
+        "source_record_identity": "col:syn-108",
+        "canonical_taxon_identity": "taxon:143877942b10febb"
+      },
+      "record_id": "col:syn-108",
+      "matched_record_id": null
+    },
+    {
+      "decision": "KEEP",
+      "reason": "first_unique_source_record",
+      "evidence": {
+        "source_record_identity": "col:syn-109",
+        "canonical_taxon_identity": "taxon:720ced2b599cbd42"
+      },
+      "record_id": "col:syn-109",
+      "matched_record_id": null
+    },
+    {
+      "decision": "KEEP",
+      "reason": "first_unique_source_record",
+      "evidence": {
+        "source_record_identity": "col:syn-110",
+        "canonical_taxon_identity": "taxon:4220bf385e934e7c"
+      },
+      "record_id": "col:syn-110",
+      "matched_record_id": null
+    },
+    {
+      "decision": "KEEP",
+      "reason": "first_unique_source_record",
+      "evidence": {
+        "source_record_identity": "col:syn-111",
+        "canonical_taxon_identity": "taxon:dbc6e41955c40fc9"
+      },
+      "record_id": "col:syn-111",
+      "matched_record_id": null
+    },
+    {
+      "decision": "KEEP",
+      "reason": "first_unique_source_record",
+      "evidence": {
+        "source_record_identity": "col:syn-112",
+        "canonical_taxon_identity": "taxon:1ffed8b544ea840c"
+      },
+      "record_id": "col:syn-112",
+      "matched_record_id": null
+    },
+    {
+      "decision": "KEEP",
+      "reason": "first_unique_source_record",
+      "evidence": {
+        "source_record_identity": "col:syn-113",
+        "canonical_taxon_identity": "taxon:67cd507fa9a24d12"
+      },
+      "record_id": "col:syn-113",
+      "matched_record_id": null
+    },
+    {
+      "decision": "KEEP",
+      "reason": "first_unique_source_record",
+      "evidence": {
+        "source_record_identity": "col:syn-114",
+        "canonical_taxon_identity": "taxon:99485367f7e61af2"
+      },
+      "record_id": "col:syn-114",
+      "matched_record_id": null
+    },
+    {
+      "decision": "KEEP",
+      "reason": "first_unique_source_record",
+      "evidence": {
+        "source_record_identity": "col:syn-115",
+        "canonical_taxon_identity": "taxon:041b6a0b5d76bcf9"
+      },
+      "record_id": "col:syn-115",
+      "matched_record_id": null
+    },
+    {
+      "decision": "KEEP",
+      "reason": "first_unique_source_record",
+      "evidence": {
+        "source_record_identity": "col:syn-116",
+        "canonical_taxon_identity": "taxon:e86486cb1bee96da"
+      },
+      "record_id": "col:syn-116",
+      "matched_record_id": null
+    },
+    {
+      "decision": "KEEP",
+      "reason": "first_unique_source_record",
+      "evidence": {
+        "source_record_identity": "col:syn-117",
+        "canonical_taxon_identity": "taxon:a0b1b5410113859e"
+      },
+      "record_id": "col:syn-117",
+      "matched_record_id": null
+    },
+    {
+      "decision": "KEEP",
+      "reason": "first_unique_source_record",
+      "evidence": {
+        "source_record_identity": "col:syn-118",
+        "canonical_taxon_identity": "taxon:0f3c08cba5d376e3"
+      },
+      "record_id": "col:syn-118",
+      "matched_record_id": null
+    },
+    {
+      "decision": "KEEP",
+      "reason": "first_unique_source_record",
+      "evidence": {
+        "source_record_identity": "col:syn-119",
+        "canonical_taxon_identity": "taxon:41448a9670d54d61"
+      },
+      "record_id": "col:syn-119",
+      "matched_record_id": null
+    },
+    {
+      "decision": "KEEP",
+      "reason": "first_unique_source_record",
+      "evidence": {
+        "source_record_identity": "col:syn-120",
+        "canonical_taxon_identity": "taxon:2f15711f6b608858"
+      },
+      "record_id": "col:syn-120",
+      "matched_record_id": null
+    },
+    {
+      "decision": "KEEP",
+      "reason": "first_unique_source_record",
+      "evidence": {
+        "source_record_identity": "col:syn-121",
+        "canonical_taxon_identity": "taxon:d54173ad40280315"
+      },
+      "record_id": "col:syn-121",
+      "matched_record_id": null
+    },
+    {
+      "decision": "KEEP",
+      "reason": "first_unique_source_record",
+      "evidence": {
+        "source_record_identity": "col:syn-122",
+        "canonical_taxon_identity": "taxon:4aeb5572481c36f9"
+      },
+      "record_id": "col:syn-122",
+      "matched_record_id": null
+    },
+    {
+      "decision": "KEEP",
+      "reason": "first_unique_source_record",
+      "evidence": {
+        "source_record_identity": "col:syn-123",
+        "canonical_taxon_identity": "taxon:58fb7b7164800bcf"
+      },
+      "record_id": "col:syn-123",
+      "matched_record_id": null
+    },
+    {
+      "decision": "KEEP",
+      "reason": "first_unique_source_record",
+      "evidence": {
+        "source_record_identity": "col:syn-124",
+        "canonical_taxon_identity": "taxon:9c0352551600287b"
+      },
+      "record_id": "col:syn-124",
+      "matched_record_id": null
+    },
+    {
+      "decision": "KEEP",
+      "reason": "first_unique_source_record",
+      "evidence": {
+        "source_record_identity": "col:syn-125",
+        "canonical_taxon_identity": "taxon:d714a4364c98ed4f"
+      },
+      "record_id": "col:syn-125",
+      "matched_record_id": null
+    },
+    {
+      "decision": "KEEP",
+      "reason": "first_unique_source_record",
+      "evidence": {
+        "source_record_identity": "col:syn-126",
+        "canonical_taxon_identity": "taxon:6ec3a500fb3a905b"
+      },
+      "record_id": "col:syn-126",
+      "matched_record_id": null
+    },
+    {
+      "decision": "KEEP",
+      "reason": "first_unique_source_record",
+      "evidence": {
+        "source_record_identity": "col:syn-127",
+        "canonical_taxon_identity": "taxon:96fb9f2e88acbdf4"
+      },
+      "record_id": "col:syn-127",
+      "matched_record_id": null
+    },
+    {
+      "decision": "KEEP",
+      "reason": "first_unique_source_record",
+      "evidence": {
+        "source_record_identity": "col:syn-128",
+        "canonical_taxon_identity": "taxon:b2a442e3d33e322a"
+      },
+      "record_id": "col:syn-128",
+      "matched_record_id": null
+    },
+    {
+      "decision": "KEEP",
+      "reason": "first_unique_source_record",
+      "evidence": {
+        "source_record_identity": "col:syn-129",
+        "canonical_taxon_identity": "taxon:5f2fe9905c90145f"
+      },
+      "record_id": "col:syn-129",
+      "matched_record_id": null
+    },
+    {
+      "decision": "KEEP",
+      "reason": "first_unique_source_record",
+      "evidence": {
+        "source_record_identity": "col:syn-130",
+        "canonical_taxon_identity": "taxon:0f04e6a096d48b7f"
+      },
+      "record_id": "col:syn-130",
+      "matched_record_id": null
+    },
+    {
+      "decision": "KEEP",
+      "reason": "first_unique_source_record",
+      "evidence": {
+        "source_record_identity": "col:syn-131",
+        "canonical_taxon_identity": "taxon:d93da3bca181f124"
+      },
+      "record_id": "col:syn-131",
+      "matched_record_id": null
+    },
+    {
+      "decision": "KEEP",
+      "reason": "first_unique_source_record",
+      "evidence": {
+        "source_record_identity": "col:syn-132",
+        "canonical_taxon_identity": "taxon:869c090db57909a4"
+      },
+      "record_id": "col:syn-132",
+      "matched_record_id": null
+    },
+    {
+      "decision": "KEEP",
+      "reason": "first_unique_source_record",
+      "evidence": {
+        "source_record_identity": "col:syn-133",
+        "canonical_taxon_identity": "taxon:af0684c3da30ef29"
+      },
+      "record_id": "col:syn-133",
+      "matched_record_id": null
+    },
+    {
+      "decision": "KEEP",
+      "reason": "first_unique_source_record",
+      "evidence": {
+        "source_record_identity": "col:syn-134",
+        "canonical_taxon_identity": "taxon:31a8ff6a9ecc337d"
+      },
+      "record_id": "col:syn-134",
+      "matched_record_id": null
+    },
+    {
+      "decision": "KEEP",
+      "reason": "first_unique_source_record",
+      "evidence": {
+        "source_record_identity": "col:syn-135",
+        "canonical_taxon_identity": "taxon:23cfa0e37576eb8b"
+      },
+      "record_id": "col:syn-135",
+      "matched_record_id": null
+    },
+    {
+      "decision": "KEEP",
+      "reason": "first_unique_source_record",
+      "evidence": {
+        "source_record_identity": "col:syn-136",
+        "canonical_taxon_identity": "taxon:39c75b6fb1079fec"
+      },
+      "record_id": "col:syn-136",
+      "matched_record_id": null
+    },
+    {
+      "decision": "KEEP",
+      "reason": "first_unique_source_record",
+      "evidence": {
+        "source_record_identity": "col:syn-137",
+        "canonical_taxon_identity": "taxon:d13f5f3aa369d808"
+      },
+      "record_id": "col:syn-137",
+      "matched_record_id": null
+    },
+    {
+      "decision": "KEEP",
+      "reason": "first_unique_source_record",
+      "evidence": {
+        "source_record_identity": "col:syn-138",
+        "canonical_taxon_identity": "taxon:24e60a1555d1c174"
+      },
+      "record_id": "col:syn-138",
+      "matched_record_id": null
+    },
+    {
+      "decision": "KEEP",
+      "reason": "first_unique_source_record",
+      "evidence": {
+        "source_record_identity": "col:syn-139",
+        "canonical_taxon_identity": "taxon:215bf69feb07b9ed"
+      },
+      "record_id": "col:syn-139",
+      "matched_record_id": null
+    },
+    {
+      "decision": "KEEP",
+      "reason": "first_unique_source_record",
+      "evidence": {
+        "source_record_identity": "col:syn-140",
+        "canonical_taxon_identity": "taxon:c5a8896e3d5c7e8f"
+      },
+      "record_id": "col:syn-140",
+      "matched_record_id": null
+    },
+    {
+      "decision": "KEEP",
+      "reason": "first_unique_source_record",
+      "evidence": {
+        "source_record_identity": "col:syn-141",
+        "canonical_taxon_identity": "taxon:7a3c989b2537dd3d"
+      },
+      "record_id": "col:syn-141",
+      "matched_record_id": null
+    },
+    {
+      "decision": "KEEP",
+      "reason": "first_unique_source_record",
+      "evidence": {
+        "source_record_identity": "col:syn-142",
+        "canonical_taxon_identity": "taxon:fe0265d5f7488795"
+      },
+      "record_id": "col:syn-142",
+      "matched_record_id": null
+    },
+    {
+      "decision": "KEEP",
+      "reason": "first_unique_source_record",
+      "evidence": {
+        "source_record_identity": "col:syn-143",
+        "canonical_taxon_identity": "taxon:aa6b0dafaf0e88f5"
+      },
+      "record_id": "col:syn-143",
+      "matched_record_id": null
+    },
+    {
+      "decision": "KEEP",
+      "reason": "first_unique_source_record",
+      "evidence": {
+        "source_record_identity": "col:syn-144",
+        "canonical_taxon_identity": "taxon:6b533209527a26f2"
+      },
+      "record_id": "col:syn-144",
+      "matched_record_id": null
+    },
+    {
+      "decision": "KEEP",
+      "reason": "first_unique_source_record",
+      "evidence": {
+        "source_record_identity": "col:syn-145",
+        "canonical_taxon_identity": "taxon:a31c2ea01f7b30d8"
+      },
+      "record_id": "col:syn-145",
+      "matched_record_id": null
+    },
+    {
+      "decision": "KEEP",
+      "reason": "first_unique_source_record",
+      "evidence": {
+        "source_record_identity": "col:syn-146",
+        "canonical_taxon_identity": "taxon:304b8e2366d223c9"
+      },
+      "record_id": "col:syn-146",
+      "matched_record_id": null
+    },
+    {
+      "decision": "KEEP",
+      "reason": "first_unique_source_record",
+      "evidence": {
+        "source_record_identity": "col:syn-147",
+        "canonical_taxon_identity": "taxon:40fee75037818c27"
+      },
+      "record_id": "col:syn-147",
+      "matched_record_id": null
+    },
+    {
+      "decision": "KEEP",
+      "reason": "first_unique_source_record",
+      "evidence": {
+        "source_record_identity": "col:syn-148",
+        "canonical_taxon_identity": "taxon:40a9c0b38261a497"
+      },
+      "record_id": "col:syn-148",
+      "matched_record_id": null
+    },
+    {
+      "decision": "KEEP",
+      "reason": "first_unique_source_record",
+      "evidence": {
+        "source_record_identity": "col:syn-149",
+        "canonical_taxon_identity": "taxon:682b6a1789868afe"
+      },
+      "record_id": "col:syn-149",
+      "matched_record_id": null
+    },
+    {
+      "decision": "KEEP",
+      "reason": "first_unique_source_record",
+      "evidence": {
+        "source_record_identity": "col:syn-150",
+        "canonical_taxon_identity": "taxon:1d819c9d036df606"
+      },
+      "record_id": "col:syn-150",
+      "matched_record_id": null
+    },
+    {
+      "decision": "KEEP",
+      "reason": "first_unique_source_record",
+      "evidence": {
+        "source_record_identity": "col:syn-151",
+        "canonical_taxon_identity": "taxon:594d8feef04a2ffd"
+      },
+      "record_id": "col:syn-151",
+      "matched_record_id": null
+    },
+    {
+      "decision": "KEEP",
+      "reason": "first_unique_source_record",
+      "evidence": {
+        "source_record_identity": "col:syn-152",
+        "canonical_taxon_identity": "taxon:c6cab0ce1c9dc09a"
+      },
+      "record_id": "col:syn-152",
+      "matched_record_id": null
+    },
+    {
+      "decision": "KEEP",
+      "reason": "first_unique_source_record",
+      "evidence": {
+        "source_record_identity": "col:syn-153",
+        "canonical_taxon_identity": "taxon:dd59353bc01c468f"
+      },
+      "record_id": "col:syn-153",
+      "matched_record_id": null
+    },
+    {
+      "decision": "KEEP",
+      "reason": "first_unique_source_record",
+      "evidence": {
+        "source_record_identity": "col:syn-154",
+        "canonical_taxon_identity": "taxon:f1ffd322c811839b"
+      },
+      "record_id": "col:syn-154",
+      "matched_record_id": null
+    },
+    {
+      "decision": "KEEP",
+      "reason": "first_unique_source_record",
+      "evidence": {
+        "source_record_identity": "col:syn-155",
+        "canonical_taxon_identity": "taxon:b1332c032be12b6e"
+      },
+      "record_id": "col:syn-155",
+      "matched_record_id": null
+    },
+    {
+      "decision": "KEEP",
+      "reason": "first_unique_source_record",
+      "evidence": {
+        "source_record_identity": "col:syn-156",
+        "canonical_taxon_identity": "taxon:1233f0e3f515789f"
+      },
+      "record_id": "col:syn-156",
+      "matched_record_id": null
+    },
+    {
+      "decision": "KEEP",
+      "reason": "first_unique_source_record",
+      "evidence": {
+        "source_record_identity": "col:syn-157",
+        "canonical_taxon_identity": "taxon:1ce6c5dc1e04a58a"
+      },
+      "record_id": "col:syn-157",
+      "matched_record_id": null
+    },
+    {
+      "decision": "KEEP",
+      "reason": "first_unique_source_record",
+      "evidence": {
+        "source_record_identity": "col:syn-158",
+        "canonical_taxon_identity": "taxon:5ecb25e88987a352"
+      },
+      "record_id": "col:syn-158",
+      "matched_record_id": null
+    },
+    {
+      "decision": "KEEP",
+      "reason": "first_unique_source_record",
+      "evidence": {
+        "source_record_identity": "col:syn-159",
+        "canonical_taxon_identity": "taxon:57fba0c98098000e"
+      },
+      "record_id": "col:syn-159",
+      "matched_record_id": null
+    },
+    {
+      "decision": "KEEP",
+      "reason": "first_unique_source_record",
+      "evidence": {
+        "source_record_identity": "col:syn-160",
+        "canonical_taxon_identity": "taxon:2ab098ebb414d65b"
+      },
+      "record_id": "col:syn-160",
+      "matched_record_id": null
+    },
+    {
+      "decision": "KEEP",
+      "reason": "first_unique_source_record",
+      "evidence": {
+        "source_record_identity": "col:syn-161",
+        "canonical_taxon_identity": "taxon:352c0ed0e21a0ac2"
+      },
+      "record_id": "col:syn-161",
+      "matched_record_id": null
+    },
+    {
+      "decision": "KEEP",
+      "reason": "first_unique_source_record",
+      "evidence": {
+        "source_record_identity": "col:syn-162",
+        "canonical_taxon_identity": "taxon:7345e8f5dacd3a4a"
+      },
+      "record_id": "col:syn-162",
+      "matched_record_id": null
+    },
+    {
+      "decision": "KEEP",
+      "reason": "first_unique_source_record",
+      "evidence": {
+        "source_record_identity": "col:syn-163",
+        "canonical_taxon_identity": "taxon:c77068f4ea62e6a5"
+      },
+      "record_id": "col:syn-163",
+      "matched_record_id": null
+    },
+    {
+      "decision": "KEEP",
+      "reason": "first_unique_source_record",
+      "evidence": {
+        "source_record_identity": "col:syn-164",
+        "canonical_taxon_identity": "taxon:5e47099f1a2f601b"
+      },
+      "record_id": "col:syn-164",
+      "matched_record_id": null
+    },
+    {
+      "decision": "KEEP",
+      "reason": "first_unique_source_record",
+      "evidence": {
+        "source_record_identity": "col:syn-165",
+        "canonical_taxon_identity": "taxon:5cd1567ecc66604d"
+      },
+      "record_id": "col:syn-165",
+      "matched_record_id": null
+    },
+    {
+      "decision": "KEEP",
+      "reason": "first_unique_source_record",
+      "evidence": {
+        "source_record_identity": "col:syn-166",
+        "canonical_taxon_identity": "taxon:aad4117b72530cf2"
+      },
+      "record_id": "col:syn-166",
+      "matched_record_id": null
+    },
+    {
+      "decision": "KEEP",
+      "reason": "first_unique_source_record",
+      "evidence": {
+        "source_record_identity": "col:syn-167",
+        "canonical_taxon_identity": "taxon:86b9e4f772b8bdef"
+      },
+      "record_id": "col:syn-167",
+      "matched_record_id": null
+    },
+    {
+      "decision": "KEEP",
+      "reason": "first_unique_source_record",
+      "evidence": {
+        "source_record_identity": "col:syn-168",
+        "canonical_taxon_identity": "taxon:b94f3d5b4ff24466"
+      },
+      "record_id": "col:syn-168",
+      "matched_record_id": null
+    },
+    {
+      "decision": "KEEP",
+      "reason": "first_unique_source_record",
+      "evidence": {
+        "source_record_identity": "col:syn-169",
+        "canonical_taxon_identity": "taxon:9abd16dd08dcc3d0"
+      },
+      "record_id": "col:syn-169",
+      "matched_record_id": null
+    },
+    {
+      "decision": "KEEP",
+      "reason": "first_unique_source_record",
+      "evidence": {
+        "source_record_identity": "col:syn-170",
+        "canonical_taxon_identity": "taxon:369fc62f2129cdbb"
+      },
+      "record_id": "col:syn-170",
+      "matched_record_id": null
+    },
+    {
+      "decision": "KEEP",
+      "reason": "first_unique_source_record",
+      "evidence": {
+        "source_record_identity": "col:syn-171",
+        "canonical_taxon_identity": "taxon:101b6cfb4a4a1aa1"
+      },
+      "record_id": "col:syn-171",
+      "matched_record_id": null
+    },
+    {
+      "decision": "KEEP",
+      "reason": "first_unique_source_record",
+      "evidence": {
+        "source_record_identity": "col:syn-172",
+        "canonical_taxon_identity": "taxon:f378905d422f5c0d"
+      },
+      "record_id": "col:syn-172",
+      "matched_record_id": null
+    },
+    {
+      "decision": "KEEP",
+      "reason": "first_unique_source_record",
+      "evidence": {
+        "source_record_identity": "col:syn-173",
+        "canonical_taxon_identity": "taxon:567444c1f3a0519a"
+      },
+      "record_id": "col:syn-173",
+      "matched_record_id": null
+    },
+    {
+      "decision": "KEEP",
+      "reason": "first_unique_source_record",
+      "evidence": {
+        "source_record_identity": "col:syn-174",
+        "canonical_taxon_identity": "taxon:1883fa77b18bbc4d"
+      },
+      "record_id": "col:syn-174",
+      "matched_record_id": null
+    },
+    {
+      "decision": "KEEP",
+      "reason": "first_unique_source_record",
+      "evidence": {
+        "source_record_identity": "col:syn-175",
+        "canonical_taxon_identity": "taxon:847fdb52a6bc1e5c"
+      },
+      "record_id": "col:syn-175",
+      "matched_record_id": null
+    },
+    {
+      "decision": "KEEP",
+      "reason": "first_unique_source_record",
+      "evidence": {
+        "source_record_identity": "col:syn-176",
+        "canonical_taxon_identity": "taxon:1c674d6c26d57062"
+      },
+      "record_id": "col:syn-176",
+      "matched_record_id": null
+    },
+    {
+      "decision": "KEEP",
+      "reason": "first_unique_source_record",
+      "evidence": {
+        "source_record_identity": "col:syn-177",
+        "canonical_taxon_identity": "taxon:96683e1cd3798c56"
+      },
+      "record_id": "col:syn-177",
+      "matched_record_id": null
+    },
+    {
+      "decision": "KEEP",
+      "reason": "first_unique_source_record",
+      "evidence": {
+        "source_record_identity": "col:syn-178",
+        "canonical_taxon_identity": "taxon:c5e8fb51c966c393"
+      },
+      "record_id": "col:syn-178",
+      "matched_record_id": null
+    },
+    {
+      "decision": "KEEP",
+      "reason": "first_unique_source_record",
+      "evidence": {
+        "source_record_identity": "col:syn-179",
+        "canonical_taxon_identity": "taxon:b8396c595fd1828a"
+      },
+      "record_id": "col:syn-179",
+      "matched_record_id": null
+    },
+    {
+      "decision": "KEEP",
+      "reason": "first_unique_source_record",
+      "evidence": {
+        "source_record_identity": "col:syn-180",
+        "canonical_taxon_identity": "taxon:6fdce1757c44333e"
+      },
+      "record_id": "col:syn-180",
+      "matched_record_id": null
+    },
+    {
+      "decision": "KEEP",
+      "reason": "first_unique_source_record",
+      "evidence": {
+        "source_record_identity": "col:syn-181",
+        "canonical_taxon_identity": "taxon:b61473756abb5e2a"
+      },
+      "record_id": "col:syn-181",
+      "matched_record_id": null
+    },
+    {
+      "decision": "KEEP",
+      "reason": "first_unique_source_record",
+      "evidence": {
+        "source_record_identity": "col:syn-182",
+        "canonical_taxon_identity": "taxon:2f51591cb6284ccf"
+      },
+      "record_id": "col:syn-182",
+      "matched_record_id": null
+    },
+    {
+      "decision": "KEEP",
+      "reason": "first_unique_source_record",
+      "evidence": {
+        "source_record_identity": "col:syn-183",
+        "canonical_taxon_identity": "taxon:e4b637229bc13017"
+      },
+      "record_id": "col:syn-183",
+      "matched_record_id": null
+    },
+    {
+      "decision": "KEEP",
+      "reason": "first_unique_source_record",
+      "evidence": {
+        "source_record_identity": "col:syn-184",
+        "canonical_taxon_identity": "taxon:6e2b1a9ed0a6608f"
+      },
+      "record_id": "col:syn-184",
+      "matched_record_id": null
+    },
+    {
+      "decision": "KEEP",
+      "reason": "first_unique_source_record",
+      "evidence": {
+        "source_record_identity": "col:syn-185",
+        "canonical_taxon_identity": "taxon:bfb32b1eafcfa14c"
+      },
+      "record_id": "col:syn-185",
+      "matched_record_id": null
+    },
+    {
+      "decision": "KEEP",
+      "reason": "first_unique_source_record",
+      "evidence": {
+        "source_record_identity": "col:syn-186",
+        "canonical_taxon_identity": "taxon:a270d2a7596b367f"
+      },
+      "record_id": "col:syn-186",
+      "matched_record_id": null
+    },
+    {
+      "decision": "KEEP",
+      "reason": "first_unique_source_record",
+      "evidence": {
+        "source_record_identity": "col:syn-187",
+        "canonical_taxon_identity": "taxon:3da13018cb2fe592"
+      },
+      "record_id": "col:syn-187",
+      "matched_record_id": null
+    },
+    {
+      "decision": "KEEP",
+      "reason": "first_unique_source_record",
+      "evidence": {
+        "source_record_identity": "col:syn-188",
+        "canonical_taxon_identity": "taxon:cfd8360ba8ecbbdf"
+      },
+      "record_id": "col:syn-188",
+      "matched_record_id": null
+    },
+    {
+      "decision": "KEEP",
+      "reason": "first_unique_source_record",
+      "evidence": {
+        "source_record_identity": "col:syn-189",
+        "canonical_taxon_identity": "taxon:be3c92e9c78f122b"
+      },
+      "record_id": "col:syn-189",
+      "matched_record_id": null
+    },
+    {
+      "decision": "KEEP",
+      "reason": "first_unique_source_record",
+      "evidence": {
+        "source_record_identity": "col:syn-190",
+        "canonical_taxon_identity": "taxon:7b7bc19d51c905bd"
+      },
+      "record_id": "col:syn-190",
+      "matched_record_id": null
+    },
+    {
+      "decision": "KEEP",
+      "reason": "first_unique_source_record",
+      "evidence": {
+        "source_record_identity": "col:syn-191",
+        "canonical_taxon_identity": "taxon:b830d80183c32cc2"
+      },
+      "record_id": "col:syn-191",
+      "matched_record_id": null
+    },
+    {
+      "decision": "KEEP",
+      "reason": "first_unique_source_record",
+      "evidence": {
+        "source_record_identity": "col:syn-192",
+        "canonical_taxon_identity": "taxon:832562a70f6e6258"
+      },
+      "record_id": "col:syn-192",
+      "matched_record_id": null
+    },
+    {
+      "decision": "KEEP",
+      "reason": "first_unique_source_record",
+      "evidence": {
+        "source_record_identity": "col:syn-193",
+        "canonical_taxon_identity": "taxon:e451e3ea9d56729e"
+      },
+      "record_id": "col:syn-193",
+      "matched_record_id": null
+    },
+    {
+      "decision": "KEEP",
+      "reason": "first_unique_source_record",
+      "evidence": {
+        "source_record_identity": "col:syn-194",
+        "canonical_taxon_identity": "taxon:7d620bd067030ca4"
+      },
+      "record_id": "col:syn-194",
+      "matched_record_id": null
+    },
+    {
+      "decision": "KEEP",
+      "reason": "first_unique_source_record",
+      "evidence": {
+        "source_record_identity": "col:syn-195",
+        "canonical_taxon_identity": "taxon:56d46c3453ea93dc"
+      },
+      "record_id": "col:syn-195",
+      "matched_record_id": null
+    },
+    {
+      "decision": "KEEP",
+      "reason": "first_unique_source_record",
+      "evidence": {
+        "source_record_identity": "col:syn-196",
+        "canonical_taxon_identity": "taxon:6d7f62816d63909a"
+      },
+      "record_id": "col:syn-196",
+      "matched_record_id": null
+    },
+    {
+      "decision": "KEEP",
+      "reason": "first_unique_source_record",
+      "evidence": {
+        "source_record_identity": "col:syn-197",
+        "canonical_taxon_identity": "taxon:97c785ed8aef0907"
+      },
+      "record_id": "col:syn-197",
+      "matched_record_id": null
+    },
+    {
+      "decision": "KEEP",
+      "reason": "first_unique_source_record",
+      "evidence": {
+        "source_record_identity": "col:syn-198",
+        "canonical_taxon_identity": "taxon:5527c76f8c6fdb50"
+      },
+      "record_id": "col:syn-198",
+      "matched_record_id": null
+    },
+    {
+      "decision": "KEEP",
+      "reason": "first_unique_source_record",
+      "evidence": {
+        "source_record_identity": "col:syn-199",
+        "canonical_taxon_identity": "taxon:ffe05ce46ed2ef55"
+      },
+      "record_id": "col:syn-199",
+      "matched_record_id": null
+    },
+    {
+      "decision": "KEEP",
+      "reason": "first_unique_source_record",
+      "evidence": {
+        "source_record_identity": "col:syn-200",
+        "canonical_taxon_identity": "taxon:bb769b3ee2f779b6"
+      },
+      "record_id": "col:syn-200",
+      "matched_record_id": null
+    },
+    {
+      "decision": "KEEP",
+      "reason": "first_unique_source_record",
+      "evidence": {
+        "source_record_identity": "col:syn-201",
+        "canonical_taxon_identity": "taxon:59a17eb334a80a10"
+      },
+      "record_id": "col:syn-201",
+      "matched_record_id": null
+    },
+    {
+      "decision": "KEEP",
+      "reason": "first_unique_source_record",
+      "evidence": {
+        "source_record_identity": "col:syn-202",
+        "canonical_taxon_identity": "taxon:ad6bf2e2a1fd033c"
+      },
+      "record_id": "col:syn-202",
+      "matched_record_id": null
+    },
+    {
+      "decision": "KEEP",
+      "reason": "first_unique_source_record",
+      "evidence": {
+        "source_record_identity": "col:syn-203",
+        "canonical_taxon_identity": "taxon:f9612de7879341d5"
+      },
+      "record_id": "col:syn-203",
+      "matched_record_id": null
+    },
+    {
+      "decision": "KEEP",
+      "reason": "first_unique_source_record",
+      "evidence": {
+        "source_record_identity": "col:syn-204",
+        "canonical_taxon_identity": "taxon:1035f41cecf6a88e"
+      },
+      "record_id": "col:syn-204",
+      "matched_record_id": null
+    },
+    {
+      "decision": "KEEP",
+      "reason": "first_unique_source_record",
+      "evidence": {
+        "source_record_identity": "col:syn-205",
+        "canonical_taxon_identity": "taxon:6644aba8993ecc0e"
+      },
+      "record_id": "col:syn-205",
+      "matched_record_id": null
+    },
+    {
+      "decision": "KEEP",
+      "reason": "first_unique_source_record",
+      "evidence": {
+        "source_record_identity": "col:syn-206",
+        "canonical_taxon_identity": "taxon:1324084e74b9ae50"
+      },
+      "record_id": "col:syn-206",
+      "matched_record_id": null
+    },
+    {
+      "decision": "KEEP",
+      "reason": "first_unique_source_record",
+      "evidence": {
+        "source_record_identity": "col:syn-207",
+        "canonical_taxon_identity": "taxon:732db276db49a92a"
+      },
+      "record_id": "col:syn-207",
+      "matched_record_id": null
+    },
+    {
+      "decision": "KEEP",
+      "reason": "first_unique_source_record",
+      "evidence": {
+        "source_record_identity": "col:syn-208",
+        "canonical_taxon_identity": "taxon:9b7d8ff9e1da9fa2"
+      },
+      "record_id": "col:syn-208",
+      "matched_record_id": null
+    },
+    {
+      "decision": "KEEP",
+      "reason": "first_unique_source_record",
+      "evidence": {
+        "source_record_identity": "col:syn-209",
+        "canonical_taxon_identity": "taxon:d55548783168bccf"
+      },
+      "record_id": "col:syn-209",
+      "matched_record_id": null
+    },
+    {
+      "decision": "KEEP",
+      "reason": "first_unique_source_record",
+      "evidence": {
+        "source_record_identity": "col:syn-210",
+        "canonical_taxon_identity": "taxon:8633c55d5d6705da"
+      },
+      "record_id": "col:syn-210",
+      "matched_record_id": null
+    },
+    {
+      "decision": "KEEP",
+      "reason": "first_unique_source_record",
+      "evidence": {
+        "source_record_identity": "col:syn-211",
+        "canonical_taxon_identity": "taxon:7c4db3f9197b631e"
+      },
+      "record_id": "col:syn-211",
+      "matched_record_id": null
+    },
+    {
+      "decision": "KEEP",
+      "reason": "first_unique_source_record",
+      "evidence": {
+        "source_record_identity": "col:syn-212",
+        "canonical_taxon_identity": "taxon:40b3d1911cd27bb2"
+      },
+      "record_id": "col:syn-212",
+      "matched_record_id": null
+    },
+    {
+      "decision": "KEEP",
+      "reason": "first_unique_source_record",
+      "evidence": {
+        "source_record_identity": "col:syn-213",
+        "canonical_taxon_identity": "taxon:90e493da300249ff"
+      },
+      "record_id": "col:syn-213",
+      "matched_record_id": null
+    },
+    {
+      "decision": "KEEP",
+      "reason": "first_unique_source_record",
+      "evidence": {
+        "source_record_identity": "col:syn-214",
+        "canonical_taxon_identity": "taxon:df55fc6f1a8fe26a"
+      },
+      "record_id": "col:syn-214",
+      "matched_record_id": null
+    },
+    {
+      "decision": "KEEP",
+      "reason": "first_unique_source_record",
+      "evidence": {
+        "source_record_identity": "col:syn-215",
+        "canonical_taxon_identity": "taxon:86e243f2f08e243e"
+      },
+      "record_id": "col:syn-215",
+      "matched_record_id": null
+    },
+    {
+      "decision": "KEEP",
+      "reason": "first_unique_source_record",
+      "evidence": {
+        "source_record_identity": "col:syn-216",
+        "canonical_taxon_identity": "taxon:2f6abed8a5cbdaaa"
+      },
+      "record_id": "col:syn-216",
+      "matched_record_id": null
+    },
+    {
+      "decision": "KEEP",
+      "reason": "first_unique_source_record",
+      "evidence": {
+        "source_record_identity": "col:syn-217",
+        "canonical_taxon_identity": "taxon:3aa1ba9e21a2e028"
+      },
+      "record_id": "col:syn-217",
+      "matched_record_id": null
+    },
+    {
+      "decision": "KEEP",
+      "reason": "first_unique_source_record",
+      "evidence": {
+        "source_record_identity": "col:syn-218",
+        "canonical_taxon_identity": "taxon:c5adf997fc29a9a6"
+      },
+      "record_id": "col:syn-218",
+      "matched_record_id": null
+    },
+    {
+      "decision": "KEEP",
+      "reason": "first_unique_source_record",
+      "evidence": {
+        "source_record_identity": "col:syn-219",
+        "canonical_taxon_identity": "taxon:b8576e2862729f0b"
+      },
+      "record_id": "col:syn-219",
+      "matched_record_id": null
+    },
+    {
+      "decision": "KEEP",
+      "reason": "first_unique_source_record",
+      "evidence": {
+        "source_record_identity": "col:syn-220",
+        "canonical_taxon_identity": "taxon:423132ea60ba1f30"
+      },
+      "record_id": "col:syn-220",
+      "matched_record_id": null
+    },
+    {
+      "decision": "KEEP",
+      "reason": "first_unique_source_record",
+      "evidence": {
+        "source_record_identity": "col:syn-221",
+        "canonical_taxon_identity": "taxon:18b355a3cb646d53"
+      },
+      "record_id": "col:syn-221",
+      "matched_record_id": null
+    },
+    {
+      "decision": "KEEP",
+      "reason": "first_unique_source_record",
+      "evidence": {
+        "source_record_identity": "col:syn-222",
+        "canonical_taxon_identity": "taxon:e91ca98c24752a9f"
+      },
+      "record_id": "col:syn-222",
+      "matched_record_id": null
+    },
+    {
+      "decision": "KEEP",
+      "reason": "first_unique_source_record",
+      "evidence": {
+        "source_record_identity": "col:syn-223",
+        "canonical_taxon_identity": "taxon:69c8dff8e3dea29b"
+      },
+      "record_id": "col:syn-223",
+      "matched_record_id": null
+    },
+    {
+      "decision": "KEEP",
+      "reason": "first_unique_source_record",
+      "evidence": {
+        "source_record_identity": "col:syn-224",
+        "canonical_taxon_identity": "taxon:de2602df2e300fb5"
+      },
+      "record_id": "col:syn-224",
+      "matched_record_id": null
+    },
+    {
+      "decision": "KEEP",
+      "reason": "first_unique_source_record",
+      "evidence": {
+        "source_record_identity": "col:syn-225",
+        "canonical_taxon_identity": "taxon:0a0b7d7c12814555"
+      },
+      "record_id": "col:syn-225",
+      "matched_record_id": null
+    },
+    {
+      "decision": "KEEP",
+      "reason": "first_unique_source_record",
+      "evidence": {
+        "source_record_identity": "col:syn-226",
+        "canonical_taxon_identity": "taxon:9ac4d8e2c5f5c5f3"
+      },
+      "record_id": "col:syn-226",
+      "matched_record_id": null
+    },
+    {
+      "decision": "KEEP",
+      "reason": "first_unique_source_record",
+      "evidence": {
+        "source_record_identity": "col:syn-227",
+        "canonical_taxon_identity": "taxon:e95fce4ee3032e71"
+      },
+      "record_id": "col:syn-227",
+      "matched_record_id": null
+    },
+    {
+      "decision": "KEEP",
+      "reason": "first_unique_source_record",
+      "evidence": {
+        "source_record_identity": "col:syn-228",
+        "canonical_taxon_identity": "taxon:16b4e080963d61d7"
+      },
+      "record_id": "col:syn-228",
+      "matched_record_id": null
+    },
+    {
+      "decision": "KEEP",
+      "reason": "first_unique_source_record",
+      "evidence": {
+        "source_record_identity": "col:syn-229",
+        "canonical_taxon_identity": "taxon:97346f6258af91dd"
+      },
+      "record_id": "col:syn-229",
+      "matched_record_id": null
+    },
+    {
+      "decision": "KEEP",
+      "reason": "first_unique_source_record",
+      "evidence": {
+        "source_record_identity": "col:syn-230",
+        "canonical_taxon_identity": "taxon:bb63af969b89653b"
+      },
+      "record_id": "col:syn-230",
+      "matched_record_id": null
+    },
+    {
+      "decision": "KEEP",
+      "reason": "first_unique_source_record",
+      "evidence": {
+        "source_record_identity": "col:syn-231",
+        "canonical_taxon_identity": "taxon:d2af9de10022b6d8"
+      },
+      "record_id": "col:syn-231",
+      "matched_record_id": null
+    },
+    {
+      "decision": "KEEP",
+      "reason": "first_unique_source_record",
+      "evidence": {
+        "source_record_identity": "col:syn-232",
+        "canonical_taxon_identity": "taxon:8fc488eab610eddd"
+      },
+      "record_id": "col:syn-232",
+      "matched_record_id": null
+    },
+    {
+      "decision": "KEEP",
+      "reason": "first_unique_source_record",
+      "evidence": {
+        "source_record_identity": "col:syn-233",
+        "canonical_taxon_identity": "taxon:19e4f85150793f89"
+      },
+      "record_id": "col:syn-233",
+      "matched_record_id": null
+    },
+    {
+      "decision": "KEEP",
+      "reason": "first_unique_source_record",
+      "evidence": {
+        "source_record_identity": "col:syn-234",
+        "canonical_taxon_identity": "taxon:0f03f155a7cbd1a6"
+      },
+      "record_id": "col:syn-234",
+      "matched_record_id": null
+    },
+    {
+      "decision": "KEEP",
+      "reason": "first_unique_source_record",
+      "evidence": {
+        "source_record_identity": "col:syn-235",
+        "canonical_taxon_identity": "taxon:d6d39cca98b74621"
+      },
+      "record_id": "col:syn-235",
+      "matched_record_id": null
+    },
+    {
+      "decision": "KEEP",
+      "reason": "first_unique_source_record",
+      "evidence": {
+        "source_record_identity": "col:syn-236",
+        "canonical_taxon_identity": "taxon:f214ea7269a2d845"
+      },
+      "record_id": "col:syn-236",
+      "matched_record_id": null
+    },
+    {
+      "decision": "KEEP",
+      "reason": "first_unique_source_record",
+      "evidence": {
+        "source_record_identity": "col:syn-237",
+        "canonical_taxon_identity": "taxon:d730f53f949fa400"
+      },
+      "record_id": "col:syn-237",
+      "matched_record_id": null
+    },
+    {
+      "decision": "KEEP",
+      "reason": "first_unique_source_record",
+      "evidence": {
+        "source_record_identity": "col:syn-238",
+        "canonical_taxon_identity": "taxon:bd5732b874ed7526"
+      },
+      "record_id": "col:syn-238",
+      "matched_record_id": null
+    },
+    {
+      "decision": "KEEP",
+      "reason": "first_unique_source_record",
+      "evidence": {
+        "source_record_identity": "col:syn-239",
+        "canonical_taxon_identity": "taxon:65f5c89fa9d0a132"
+      },
+      "record_id": "col:syn-239",
+      "matched_record_id": null
+    },
+    {
+      "decision": "KEEP",
+      "reason": "first_unique_source_record",
+      "evidence": {
+        "source_record_identity": "col:syn-240",
+        "canonical_taxon_identity": "taxon:bf853a45bd4ab534"
+      },
+      "record_id": "col:syn-240",
+      "matched_record_id": null
+    },
+    {
+      "decision": "KEEP",
+      "reason": "first_unique_source_record",
+      "evidence": {
+        "source_record_identity": "col:syn-241",
+        "canonical_taxon_identity": "taxon:dc1d645822637e4f"
+      },
+      "record_id": "col:syn-241",
+      "matched_record_id": null
+    },
+    {
+      "decision": "KEEP",
+      "reason": "first_unique_source_record",
+      "evidence": {
+        "source_record_identity": "col:syn-242",
+        "canonical_taxon_identity": "taxon:01b55edc5b204002"
+      },
+      "record_id": "col:syn-242",
+      "matched_record_id": null
+    },
+    {
+      "decision": "KEEP",
+      "reason": "first_unique_source_record",
+      "evidence": {
+        "source_record_identity": "col:syn-243",
+        "canonical_taxon_identity": "taxon:a0b45af311a90585"
+      },
+      "record_id": "col:syn-243",
+      "matched_record_id": null
+    },
+    {
+      "decision": "KEEP",
+      "reason": "first_unique_source_record",
+      "evidence": {
+        "source_record_identity": "col:syn-244",
+        "canonical_taxon_identity": "taxon:bf425a240bc9cad9"
+      },
+      "record_id": "col:syn-244",
+      "matched_record_id": null
+    },
+    {
+      "decision": "KEEP",
+      "reason": "first_unique_source_record",
+      "evidence": {
+        "source_record_identity": "col:syn-245",
+        "canonical_taxon_identity": "taxon:0b6334742d74dc9c"
+      },
+      "record_id": "col:syn-245",
+      "matched_record_id": null
+    },
+    {
+      "decision": "KEEP",
+      "reason": "first_unique_source_record",
+      "evidence": {
+        "source_record_identity": "col:syn-246",
+        "canonical_taxon_identity": "taxon:797cdfa2d1858630"
+      },
+      "record_id": "col:syn-246",
+      "matched_record_id": null
+    },
+    {
+      "decision": "KEEP",
+      "reason": "first_unique_source_record",
+      "evidence": {
+        "source_record_identity": "col:syn-247",
+        "canonical_taxon_identity": "taxon:51ea3c7e39560818"
+      },
+      "record_id": "col:syn-247",
+      "matched_record_id": null
+    },
+    {
+      "decision": "KEEP",
+      "reason": "first_unique_source_record",
+      "evidence": {
+        "source_record_identity": "col:syn-248",
+        "canonical_taxon_identity": "taxon:8ba1e3d7b06f3d8b"
+      },
+      "record_id": "col:syn-248",
+      "matched_record_id": null
+    },
+    {
+      "decision": "KEEP",
+      "reason": "first_unique_source_record",
+      "evidence": {
+        "source_record_identity": "col:syn-249",
+        "canonical_taxon_identity": "taxon:6900614464c16fc4"
+      },
+      "record_id": "col:syn-249",
+      "matched_record_id": null
+    },
+    {
+      "decision": "KEEP",
+      "reason": "first_unique_source_record",
+      "evidence": {
+        "source_record_identity": "col:syn-250",
+        "canonical_taxon_identity": "taxon:04ea29633751996b"
+      },
+      "record_id": "col:syn-250",
+      "matched_record_id": null
+    },
+    {
+      "decision": "KEEP",
+      "reason": "first_unique_source_record",
+      "evidence": {
+        "source_record_identity": "col:syn-251",
+        "canonical_taxon_identity": "taxon:c3c1fad8cf9ee059"
+      },
+      "record_id": "col:syn-251",
+      "matched_record_id": null
+    },
+    {
+      "decision": "KEEP",
+      "reason": "first_unique_source_record",
+      "evidence": {
+        "source_record_identity": "col:syn-252",
+        "canonical_taxon_identity": "taxon:21aa4d61a1bf088e"
+      },
+      "record_id": "col:syn-252",
+      "matched_record_id": null
+    },
+    {
+      "decision": "KEEP",
+      "reason": "first_unique_source_record",
+      "evidence": {
+        "source_record_identity": "col:syn-253",
+        "canonical_taxon_identity": "taxon:e2f56cfea3d6b373"
+      },
+      "record_id": "col:syn-253",
+      "matched_record_id": null
+    },
+    {
+      "decision": "KEEP",
+      "reason": "first_unique_source_record",
+      "evidence": {
+        "source_record_identity": "col:syn-254",
+        "canonical_taxon_identity": "taxon:0dbd84bcab783d21"
+      },
+      "record_id": "col:syn-254",
+      "matched_record_id": null
+    },
+    {
+      "decision": "KEEP",
+      "reason": "first_unique_source_record",
+      "evidence": {
+        "source_record_identity": "col:syn-255",
+        "canonical_taxon_identity": "taxon:3fbd37ca80ba863c"
+      },
+      "record_id": "col:syn-255",
+      "matched_record_id": null
+    },
+    {
+      "decision": "KEEP",
+      "reason": "first_unique_source_record",
+      "evidence": {
+        "source_record_identity": "col:syn-256",
+        "canonical_taxon_identity": "taxon:cfdd6323dc165f23"
+      },
+      "record_id": "col:syn-256",
+      "matched_record_id": null
+    },
+    {
+      "decision": "KEEP",
+      "reason": "first_unique_source_record",
+      "evidence": {
+        "source_record_identity": "col:syn-257",
+        "canonical_taxon_identity": "taxon:4a2e2afd95733c1b"
+      },
+      "record_id": "col:syn-257",
+      "matched_record_id": null
+    },
+    {
+      "decision": "KEEP",
+      "reason": "first_unique_source_record",
+      "evidence": {
+        "source_record_identity": "col:syn-258",
+        "canonical_taxon_identity": "taxon:200d969b32df89d9"
+      },
+      "record_id": "col:syn-258",
+      "matched_record_id": null
+    },
+    {
+      "decision": "KEEP",
+      "reason": "first_unique_source_record",
+      "evidence": {
+        "source_record_identity": "col:syn-259",
+        "canonical_taxon_identity": "taxon:e86d0174b5a7ab22"
+      },
+      "record_id": "col:syn-259",
+      "matched_record_id": null
+    },
+    {
+      "decision": "KEEP",
+      "reason": "first_unique_source_record",
+      "evidence": {
+        "source_record_identity": "col:syn-260",
+        "canonical_taxon_identity": "taxon:69fe59fa93b2de95"
+      },
+      "record_id": "col:syn-260",
+      "matched_record_id": null
+    },
+    {
+      "decision": "KEEP",
+      "reason": "first_unique_source_record",
+      "evidence": {
+        "source_record_identity": "col:syn-261",
+        "canonical_taxon_identity": "taxon:d0247857e8f2a433"
+      },
+      "record_id": "col:syn-261",
+      "matched_record_id": null
+    },
+    {
+      "decision": "KEEP",
+      "reason": "first_unique_source_record",
+      "evidence": {
+        "source_record_identity": "col:syn-262",
+        "canonical_taxon_identity": "taxon:cdfc82388e65b26c"
+      },
+      "record_id": "col:syn-262",
+      "matched_record_id": null
+    },
+    {
+      "decision": "KEEP",
+      "reason": "first_unique_source_record",
+      "evidence": {
+        "source_record_identity": "col:syn-263",
+        "canonical_taxon_identity": "taxon:0c9426c6fbcd9f32"
+      },
+      "record_id": "col:syn-263",
+      "matched_record_id": null
+    },
+    {
+      "decision": "KEEP",
+      "reason": "first_unique_source_record",
+      "evidence": {
+        "source_record_identity": "col:syn-264",
+        "canonical_taxon_identity": "taxon:0d3a8a75981f00e2"
+      },
+      "record_id": "col:syn-264",
+      "matched_record_id": null
+    },
+    {
+      "decision": "KEEP",
+      "reason": "first_unique_source_record",
+      "evidence": {
+        "source_record_identity": "col:syn-265",
+        "canonical_taxon_identity": "taxon:c74cad097041f2d1"
+      },
+      "record_id": "col:syn-265",
+      "matched_record_id": null
+    },
+    {
+      "decision": "KEEP",
+      "reason": "first_unique_source_record",
+      "evidence": {
+        "source_record_identity": "col:syn-266",
+        "canonical_taxon_identity": "taxon:927f9ed1adffc4c4"
+      },
+      "record_id": "col:syn-266",
+      "matched_record_id": null
+    },
+    {
+      "decision": "KEEP",
+      "reason": "first_unique_source_record",
+      "evidence": {
+        "source_record_identity": "col:syn-267",
+        "canonical_taxon_identity": "taxon:d4da6d83eaf69af7"
+      },
+      "record_id": "col:syn-267",
+      "matched_record_id": null
+    },
+    {
+      "decision": "KEEP",
+      "reason": "first_unique_source_record",
+      "evidence": {
+        "source_record_identity": "col:syn-268",
+        "canonical_taxon_identity": "taxon:a395761219a64da6"
+      },
+      "record_id": "col:syn-268",
+      "matched_record_id": null
+    },
+    {
+      "decision": "KEEP",
+      "reason": "first_unique_source_record",
+      "evidence": {
+        "source_record_identity": "col:syn-269",
+        "canonical_taxon_identity": "taxon:5c0da1561b499cd4"
+      },
+      "record_id": "col:syn-269",
+      "matched_record_id": null
+    },
+    {
+      "decision": "KEEP",
+      "reason": "first_unique_source_record",
+      "evidence": {
+        "source_record_identity": "col:syn-270",
+        "canonical_taxon_identity": "taxon:99a8808622dae8e0"
+      },
+      "record_id": "col:syn-270",
+      "matched_record_id": null
+    },
+    {
+      "decision": "KEEP",
+      "reason": "first_unique_source_record",
+      "evidence": {
+        "source_record_identity": "col:syn-271",
+        "canonical_taxon_identity": "taxon:bbbb6081bac0ce57"
+      },
+      "record_id": "col:syn-271",
+      "matched_record_id": null
+    },
+    {
+      "decision": "KEEP",
+      "reason": "first_unique_source_record",
+      "evidence": {
+        "source_record_identity": "col:syn-272",
+        "canonical_taxon_identity": "taxon:eb6094809b329bd0"
+      },
+      "record_id": "col:syn-272",
+      "matched_record_id": null
+    },
+    {
+      "decision": "KEEP",
+      "reason": "first_unique_source_record",
+      "evidence": {
+        "source_record_identity": "col:syn-273",
+        "canonical_taxon_identity": "taxon:ca3f7da84cd84842"
+      },
+      "record_id": "col:syn-273",
+      "matched_record_id": null
+    },
+    {
+      "decision": "KEEP",
+      "reason": "first_unique_source_record",
+      "evidence": {
+        "source_record_identity": "col:syn-274",
+        "canonical_taxon_identity": "taxon:34ed132f283d261b"
+      },
+      "record_id": "col:syn-274",
+      "matched_record_id": null
+    },
+    {
+      "decision": "KEEP",
+      "reason": "first_unique_source_record",
+      "evidence": {
+        "source_record_identity": "col:syn-275",
+        "canonical_taxon_identity": "taxon:701845b556da6408"
+      },
+      "record_id": "col:syn-275",
+      "matched_record_id": null
+    },
+    {
+      "decision": "KEEP",
+      "reason": "first_unique_source_record",
+      "evidence": {
+        "source_record_identity": "col:syn-276",
+        "canonical_taxon_identity": "taxon:145feb30e41af030"
+      },
+      "record_id": "col:syn-276",
+      "matched_record_id": null
+    },
+    {
+      "decision": "KEEP",
+      "reason": "first_unique_source_record",
+      "evidence": {
+        "source_record_identity": "col:syn-277",
+        "canonical_taxon_identity": "taxon:8d4e1fe1ac47eb02"
+      },
+      "record_id": "col:syn-277",
+      "matched_record_id": null
+    },
+    {
+      "decision": "KEEP",
+      "reason": "first_unique_source_record",
+      "evidence": {
+        "source_record_identity": "col:syn-278",
+        "canonical_taxon_identity": "taxon:1529eb3ffa779d47"
+      },
+      "record_id": "col:syn-278",
+      "matched_record_id": null
+    },
+    {
+      "decision": "KEEP",
+      "reason": "first_unique_source_record",
+      "evidence": {
+        "source_record_identity": "col:syn-279",
+        "canonical_taxon_identity": "taxon:fff5b8debf7f7bfd"
+      },
+      "record_id": "col:syn-279",
+      "matched_record_id": null
+    },
+    {
+      "decision": "KEEP",
+      "reason": "first_unique_source_record",
+      "evidence": {
+        "source_record_identity": "col:syn-280",
+        "canonical_taxon_identity": "taxon:8031f13d6035af30"
+      },
+      "record_id": "col:syn-280",
+      "matched_record_id": null
+    },
+    {
+      "decision": "KEEP",
+      "reason": "first_unique_source_record",
+      "evidence": {
+        "source_record_identity": "col:syn-281",
+        "canonical_taxon_identity": "taxon:d0dae8ad2ebdf4b8"
+      },
+      "record_id": "col:syn-281",
+      "matched_record_id": null
+    },
+    {
+      "decision": "KEEP",
+      "reason": "first_unique_source_record",
+      "evidence": {
+        "source_record_identity": "col:syn-282",
+        "canonical_taxon_identity": "taxon:c7bd9c233881b339"
+      },
+      "record_id": "col:syn-282",
+      "matched_record_id": null
+    },
+    {
+      "decision": "KEEP",
+      "reason": "first_unique_source_record",
+      "evidence": {
+        "source_record_identity": "col:syn-283",
+        "canonical_taxon_identity": "taxon:b29d8785a5a32328"
+      },
+      "record_id": "col:syn-283",
+      "matched_record_id": null
+    },
+    {
+      "decision": "KEEP",
+      "reason": "first_unique_source_record",
+      "evidence": {
+        "source_record_identity": "col:syn-284",
+        "canonical_taxon_identity": "taxon:847ac70f742868a2"
+      },
+      "record_id": "col:syn-284",
+      "matched_record_id": null
+    },
+    {
+      "decision": "KEEP",
+      "reason": "first_unique_source_record",
+      "evidence": {
+        "source_record_identity": "col:syn-285",
+        "canonical_taxon_identity": "taxon:72a56b82cb90b731"
+      },
+      "record_id": "col:syn-285",
+      "matched_record_id": null
+    },
+    {
+      "decision": "KEEP",
+      "reason": "first_unique_source_record",
+      "evidence": {
+        "source_record_identity": "col:syn-286",
+        "canonical_taxon_identity": "taxon:e0e4d8ce555737b7"
+      },
+      "record_id": "col:syn-286",
+      "matched_record_id": null
+    },
+    {
+      "decision": "KEEP",
+      "reason": "first_unique_source_record",
+      "evidence": {
+        "source_record_identity": "col:syn-287",
+        "canonical_taxon_identity": "taxon:1d1fb6a651584173"
+      },
+      "record_id": "col:syn-287",
+      "matched_record_id": null
+    },
+    {
+      "decision": "KEEP",
+      "reason": "first_unique_source_record",
+      "evidence": {
+        "source_record_identity": "col:syn-288",
+        "canonical_taxon_identity": "taxon:3e18f2c114bc2450"
+      },
+      "record_id": "col:syn-288",
+      "matched_record_id": null
+    },
+    {
+      "decision": "KEEP",
+      "reason": "first_unique_source_record",
+      "evidence": {
+        "source_record_identity": "col:syn-289",
+        "canonical_taxon_identity": "taxon:251ff7fa40ce6753"
+      },
+      "record_id": "col:syn-289",
+      "matched_record_id": null
+    },
+    {
+      "decision": "KEEP",
+      "reason": "first_unique_source_record",
+      "evidence": {
+        "source_record_identity": "col:syn-290",
+        "canonical_taxon_identity": "taxon:c14978ec2e5afaa1"
+      },
+      "record_id": "col:syn-290",
+      "matched_record_id": null
+    },
+    {
+      "decision": "KEEP",
+      "reason": "first_unique_source_record",
+      "evidence": {
+        "source_record_identity": "col:syn-291",
+        "canonical_taxon_identity": "taxon:4b6727b0332d0808"
+      },
+      "record_id": "col:syn-291",
+      "matched_record_id": null
+    },
+    {
+      "decision": "KEEP",
+      "reason": "first_unique_source_record",
+      "evidence": {
+        "source_record_identity": "col:syn-292",
+        "canonical_taxon_identity": "taxon:4d5ecf04982ff4bd"
+      },
+      "record_id": "col:syn-292",
+      "matched_record_id": null
+    },
+    {
+      "decision": "KEEP",
+      "reason": "first_unique_source_record",
+      "evidence": {
+        "source_record_identity": "col:syn-293",
+        "canonical_taxon_identity": "taxon:710efebbc5cb86a3"
+      },
+      "record_id": "col:syn-293",
+      "matched_record_id": null
+    },
+    {
+      "decision": "KEEP",
+      "reason": "first_unique_source_record",
+      "evidence": {
+        "source_record_identity": "col:syn-294",
+        "canonical_taxon_identity": "taxon:01651802fbd0bf28"
+      },
+      "record_id": "col:syn-294",
+      "matched_record_id": null
+    },
+    {
+      "decision": "KEEP",
+      "reason": "first_unique_source_record",
+      "evidence": {
+        "source_record_identity": "col:syn-295",
+        "canonical_taxon_identity": "taxon:c88904bfec2ab2e2"
+      },
+      "record_id": "col:syn-295",
+      "matched_record_id": null
+    },
+    {
+      "decision": "KEEP",
+      "reason": "first_unique_source_record",
+      "evidence": {
+        "source_record_identity": "col:syn-296",
+        "canonical_taxon_identity": "taxon:ea6160467e5ded27"
+      },
+      "record_id": "col:syn-296",
+      "matched_record_id": null
+    },
+    {
+      "decision": "KEEP",
+      "reason": "first_unique_source_record",
+      "evidence": {
+        "source_record_identity": "col:syn-297",
+        "canonical_taxon_identity": "taxon:861bc370fa2bf5b7"
+      },
+      "record_id": "col:syn-297",
+      "matched_record_id": null
+    },
+    {
+      "decision": "KEEP",
+      "reason": "first_unique_source_record",
+      "evidence": {
+        "source_record_identity": "col:syn-298",
+        "canonical_taxon_identity": "taxon:ff9eade8daf671ab"
+      },
+      "record_id": "col:syn-298",
+      "matched_record_id": null
+    },
+    {
+      "decision": "KEEP",
+      "reason": "first_unique_source_record",
+      "evidence": {
+        "source_record_identity": "col:syn-299",
+        "canonical_taxon_identity": "taxon:b553000c9d256c0e"
+      },
+      "record_id": "col:syn-299",
+      "matched_record_id": null
+    },
+    {
+      "decision": "KEEP",
+      "reason": "first_unique_source_record",
+      "evidence": {
+        "source_record_identity": "col:syn-300",
+        "canonical_taxon_identity": "taxon:a31d913dfba89deb"
+      },
+      "record_id": "col:syn-300",
+      "matched_record_id": null
+    },
+    {
+      "decision": "KEEP",
+      "reason": "first_unique_source_record",
+      "evidence": {
+        "source_record_identity": "col:syn-301",
+        "canonical_taxon_identity": "taxon:29269116df67c15c"
+      },
+      "record_id": "col:syn-301",
+      "matched_record_id": null
+    },
+    {
+      "decision": "KEEP",
+      "reason": "first_unique_source_record",
+      "evidence": {
+        "source_record_identity": "col:syn-302",
+        "canonical_taxon_identity": "taxon:4d454e667da9503f"
+      },
+      "record_id": "col:syn-302",
+      "matched_record_id": null
+    },
+    {
+      "decision": "KEEP",
+      "reason": "first_unique_source_record",
+      "evidence": {
+        "source_record_identity": "col:syn-303",
+        "canonical_taxon_identity": "taxon:1007b9f62e50008c"
+      },
+      "record_id": "col:syn-303",
+      "matched_record_id": null
+    },
+    {
+      "decision": "KEEP",
+      "reason": "first_unique_source_record",
+      "evidence": {
+        "source_record_identity": "col:syn-304",
+        "canonical_taxon_identity": "taxon:9cbd0d5c9ec7d39f"
+      },
+      "record_id": "col:syn-304",
+      "matched_record_id": null
+    },
+    {
+      "decision": "KEEP",
+      "reason": "first_unique_source_record",
+      "evidence": {
+        "source_record_identity": "col:syn-305",
+        "canonical_taxon_identity": "taxon:ae20d940d4681feb"
+      },
+      "record_id": "col:syn-305",
+      "matched_record_id": null
+    },
+    {
+      "decision": "KEEP",
+      "reason": "first_unique_source_record",
+      "evidence": {
+        "source_record_identity": "col:syn-306",
+        "canonical_taxon_identity": "taxon:68fd51caa8ca5bd1"
+      },
+      "record_id": "col:syn-306",
+      "matched_record_id": null
+    },
+    {
+      "decision": "KEEP",
+      "reason": "first_unique_source_record",
+      "evidence": {
+        "source_record_identity": "col:syn-307",
+        "canonical_taxon_identity": "taxon:f525cb986c4cc061"
+      },
+      "record_id": "col:syn-307",
+      "matched_record_id": null
+    },
+    {
+      "decision": "KEEP",
+      "reason": "first_unique_source_record",
+      "evidence": {
+        "source_record_identity": "col:syn-308",
+        "canonical_taxon_identity": "taxon:f17f0275cfef4d7a"
+      },
+      "record_id": "col:syn-308",
+      "matched_record_id": null
+    },
+    {
+      "decision": "KEEP",
+      "reason": "first_unique_source_record",
+      "evidence": {
+        "source_record_identity": "col:syn-309",
+        "canonical_taxon_identity": "taxon:47e3d70f03c81c39"
+      },
+      "record_id": "col:syn-309",
+      "matched_record_id": null
+    },
+    {
+      "decision": "KEEP",
+      "reason": "first_unique_source_record",
+      "evidence": {
+        "source_record_identity": "col:syn-310",
+        "canonical_taxon_identity": "taxon:607f5bb3f945ab85"
+      },
+      "record_id": "col:syn-310",
+      "matched_record_id": null
+    },
+    {
+      "decision": "KEEP",
+      "reason": "first_unique_source_record",
+      "evidence": {
+        "source_record_identity": "col:syn-311",
+        "canonical_taxon_identity": "taxon:c9ed9bdf6a402e65"
+      },
+      "record_id": "col:syn-311",
+      "matched_record_id": null
+    },
+    {
+      "decision": "KEEP",
+      "reason": "first_unique_source_record",
+      "evidence": {
+        "source_record_identity": "col:syn-312",
+        "canonical_taxon_identity": "taxon:302fd6bb677d6953"
+      },
+      "record_id": "col:syn-312",
+      "matched_record_id": null
+    },
+    {
+      "decision": "KEEP",
+      "reason": "first_unique_source_record",
+      "evidence": {
+        "source_record_identity": "col:syn-313",
+        "canonical_taxon_identity": "taxon:c22c3ce703461b0a"
+      },
+      "record_id": "col:syn-313",
+      "matched_record_id": null
+    },
+    {
+      "decision": "KEEP",
+      "reason": "first_unique_source_record",
+      "evidence": {
+        "source_record_identity": "col:syn-314",
+        "canonical_taxon_identity": "taxon:2b6f63fe1d483499"
+      },
+      "record_id": "col:syn-314",
+      "matched_record_id": null
+    },
+    {
+      "decision": "KEEP",
+      "reason": "first_unique_source_record",
+      "evidence": {
+        "source_record_identity": "col:syn-315",
+        "canonical_taxon_identity": "taxon:dcbf1aaa89c7ac3c"
+      },
+      "record_id": "col:syn-315",
+      "matched_record_id": null
+    },
+    {
+      "decision": "KEEP",
+      "reason": "first_unique_source_record",
+      "evidence": {
+        "source_record_identity": "col:syn-316",
+        "canonical_taxon_identity": "taxon:bb433e50d833bbae"
+      },
+      "record_id": "col:syn-316",
+      "matched_record_id": null
+    },
+    {
+      "decision": "KEEP",
+      "reason": "first_unique_source_record",
+      "evidence": {
+        "source_record_identity": "col:syn-317",
+        "canonical_taxon_identity": "taxon:c938ef4fea278093"
+      },
+      "record_id": "col:syn-317",
+      "matched_record_id": null
+    },
+    {
+      "decision": "KEEP",
+      "reason": "first_unique_source_record",
+      "evidence": {
+        "source_record_identity": "col:syn-318",
+        "canonical_taxon_identity": "taxon:a9c52f21346a1451"
+      },
+      "record_id": "col:syn-318",
+      "matched_record_id": null
+    },
+    {
+      "decision": "KEEP",
+      "reason": "first_unique_source_record",
+      "evidence": {
+        "source_record_identity": "col:syn-319",
+        "canonical_taxon_identity": "taxon:7d5ffaf98a31218f"
+      },
+      "record_id": "col:syn-319",
+      "matched_record_id": null
+    },
+    {
+      "decision": "KEEP",
+      "reason": "first_unique_source_record",
+      "evidence": {
+        "source_record_identity": "col:syn-320",
+        "canonical_taxon_identity": "taxon:9b8fb3f1820b966d"
+      },
+      "record_id": "col:syn-320",
+      "matched_record_id": null
+    },
+    {
+      "decision": "KEEP",
+      "reason": "first_unique_source_record",
+      "evidence": {
+        "source_record_identity": "col:syn-321",
+        "canonical_taxon_identity": "taxon:a8bbfdc2dc8c20c2"
+      },
+      "record_id": "col:syn-321",
+      "matched_record_id": null
+    },
+    {
+      "decision": "KEEP",
+      "reason": "first_unique_source_record",
+      "evidence": {
+        "source_record_identity": "col:syn-322",
+        "canonical_taxon_identity": "taxon:c94227f84783b5b8"
+      },
+      "record_id": "col:syn-322",
+      "matched_record_id": null
+    },
+    {
+      "decision": "KEEP",
+      "reason": "first_unique_source_record",
+      "evidence": {
+        "source_record_identity": "col:syn-323",
+        "canonical_taxon_identity": "taxon:412a5a2e52173819"
+      },
+      "record_id": "col:syn-323",
+      "matched_record_id": null
+    },
+    {
+      "decision": "KEEP",
+      "reason": "first_unique_source_record",
+      "evidence": {
+        "source_record_identity": "col:syn-324",
+        "canonical_taxon_identity": "taxon:1ac3c8089a935ce7"
+      },
+      "record_id": "col:syn-324",
+      "matched_record_id": null
+    },
+    {
+      "decision": "KEEP",
+      "reason": "first_unique_source_record",
+      "evidence": {
+        "source_record_identity": "col:syn-325",
+        "canonical_taxon_identity": "taxon:43980feae9de0a26"
+      },
+      "record_id": "col:syn-325",
+      "matched_record_id": null
+    },
+    {
+      "decision": "KEEP",
+      "reason": "first_unique_source_record",
+      "evidence": {
+        "source_record_identity": "col:syn-326",
+        "canonical_taxon_identity": "taxon:d89d68ad27ae1cbc"
+      },
+      "record_id": "col:syn-326",
+      "matched_record_id": null
+    },
+    {
+      "decision": "KEEP",
+      "reason": "first_unique_source_record",
+      "evidence": {
+        "source_record_identity": "col:syn-327",
+        "canonical_taxon_identity": "taxon:e4159a58eb4ba3e9"
+      },
+      "record_id": "col:syn-327",
+      "matched_record_id": null
+    },
+    {
+      "decision": "KEEP",
+      "reason": "first_unique_source_record",
+      "evidence": {
+        "source_record_identity": "col:syn-328",
+        "canonical_taxon_identity": "taxon:bc5686c1e4954622"
+      },
+      "record_id": "col:syn-328",
+      "matched_record_id": null
+    },
+    {
+      "decision": "KEEP",
+      "reason": "first_unique_source_record",
+      "evidence": {
+        "source_record_identity": "col:syn-329",
+        "canonical_taxon_identity": "taxon:338f0a6527d1576c"
+      },
+      "record_id": "col:syn-329",
+      "matched_record_id": null
+    },
+    {
+      "decision": "KEEP",
+      "reason": "first_unique_source_record",
+      "evidence": {
+        "source_record_identity": "col:syn-330",
+        "canonical_taxon_identity": "taxon:00d2635544f5babd"
+      },
+      "record_id": "col:syn-330",
+      "matched_record_id": null
+    },
+    {
+      "decision": "KEEP",
+      "reason": "first_unique_source_record",
+      "evidence": {
+        "source_record_identity": "col:syn-331",
+        "canonical_taxon_identity": "taxon:c1ae99bca2071ab9"
+      },
+      "record_id": "col:syn-331",
+      "matched_record_id": null
+    },
+    {
+      "decision": "KEEP",
+      "reason": "first_unique_source_record",
+      "evidence": {
+        "source_record_identity": "col:syn-332",
+        "canonical_taxon_identity": "taxon:e2d456204a89cf53"
+      },
+      "record_id": "col:syn-332",
+      "matched_record_id": null
+    },
+    {
+      "decision": "KEEP",
+      "reason": "first_unique_source_record",
+      "evidence": {
+        "source_record_identity": "col:syn-333",
+        "canonical_taxon_identity": "taxon:820a527116e475aa"
+      },
+      "record_id": "col:syn-333",
+      "matched_record_id": null
+    },
+    {
+      "decision": "KEEP",
+      "reason": "first_unique_source_record",
+      "evidence": {
+        "source_record_identity": "col:syn-334",
+        "canonical_taxon_identity": "taxon:be9c80805af3fde0"
+      },
+      "record_id": "col:syn-334",
+      "matched_record_id": null
+    },
+    {
+      "decision": "KEEP",
+      "reason": "first_unique_source_record",
+      "evidence": {
+        "source_record_identity": "col:syn-335",
+        "canonical_taxon_identity": "taxon:3756f5d568a81af3"
+      },
+      "record_id": "col:syn-335",
+      "matched_record_id": null
+    },
+    {
+      "decision": "KEEP",
+      "reason": "first_unique_source_record",
+      "evidence": {
+        "source_record_identity": "col:syn-336",
+        "canonical_taxon_identity": "taxon:97580e0488f7e2a1"
+      },
+      "record_id": "col:syn-336",
+      "matched_record_id": null
+    },
+    {
+      "decision": "KEEP",
+      "reason": "first_unique_source_record",
+      "evidence": {
+        "source_record_identity": "col:syn-337",
+        "canonical_taxon_identity": "taxon:a97868e2bf54917a"
+      },
+      "record_id": "col:syn-337",
+      "matched_record_id": null
+    },
+    {
+      "decision": "KEEP",
+      "reason": "first_unique_source_record",
+      "evidence": {
+        "source_record_identity": "col:syn-338",
+        "canonical_taxon_identity": "taxon:f63f8a7044289441"
+      },
+      "record_id": "col:syn-338",
+      "matched_record_id": null
+    },
+    {
+      "decision": "KEEP",
+      "reason": "first_unique_source_record",
+      "evidence": {
+        "source_record_identity": "col:syn-339",
+        "canonical_taxon_identity": "taxon:f38402ed1e783a06"
+      },
+      "record_id": "col:syn-339",
+      "matched_record_id": null
+    },
+    {
+      "decision": "KEEP",
+      "reason": "first_unique_source_record",
+      "evidence": {
+        "source_record_identity": "col:syn-340",
+        "canonical_taxon_identity": "taxon:affed3931dc8852f"
+      },
+      "record_id": "col:syn-340",
+      "matched_record_id": null
+    },
+    {
+      "decision": "KEEP",
+      "reason": "first_unique_source_record",
+      "evidence": {
+        "source_record_identity": "col:syn-341",
+        "canonical_taxon_identity": "taxon:68823fcb4d16338c"
+      },
+      "record_id": "col:syn-341",
+      "matched_record_id": null
+    },
+    {
+      "decision": "KEEP",
+      "reason": "first_unique_source_record",
+      "evidence": {
+        "source_record_identity": "col:syn-342",
+        "canonical_taxon_identity": "taxon:2a4153cb1875d131"
+      },
+      "record_id": "col:syn-342",
+      "matched_record_id": null
+    },
+    {
+      "decision": "KEEP",
+      "reason": "first_unique_source_record",
+      "evidence": {
+        "source_record_identity": "col:syn-343",
+        "canonical_taxon_identity": "taxon:f43ddd4804f6057c"
+      },
+      "record_id": "col:syn-343",
+      "matched_record_id": null
+    },
+    {
+      "decision": "KEEP",
+      "reason": "first_unique_source_record",
+      "evidence": {
+        "source_record_identity": "col:syn-344",
+        "canonical_taxon_identity": "taxon:037495b856ad9ce7"
+      },
+      "record_id": "col:syn-344",
+      "matched_record_id": null
+    },
+    {
+      "decision": "KEEP",
+      "reason": "first_unique_source_record",
+      "evidence": {
+        "source_record_identity": "col:syn-345",
+        "canonical_taxon_identity": "taxon:e0b517389176797a"
+      },
+      "record_id": "col:syn-345",
+      "matched_record_id": null
+    },
+    {
+      "decision": "KEEP",
+      "reason": "first_unique_source_record",
+      "evidence": {
+        "source_record_identity": "col:syn-346",
+        "canonical_taxon_identity": "taxon:4484d0ef0089da0c"
+      },
+      "record_id": "col:syn-346",
+      "matched_record_id": null
+    },
+    {
+      "decision": "KEEP",
+      "reason": "first_unique_source_record",
+      "evidence": {
+        "source_record_identity": "col:syn-347",
+        "canonical_taxon_identity": "taxon:26a3c2c6df939cf1"
+      },
+      "record_id": "col:syn-347",
+      "matched_record_id": null
+    },
+    {
+      "decision": "KEEP",
+      "reason": "first_unique_source_record",
+      "evidence": {
+        "source_record_identity": "col:syn-348",
+        "canonical_taxon_identity": "taxon:c790926a31c030ae"
+      },
+      "record_id": "col:syn-348",
+      "matched_record_id": null
+    },
+    {
+      "decision": "KEEP",
+      "reason": "first_unique_source_record",
+      "evidence": {
+        "source_record_identity": "col:syn-349",
+        "canonical_taxon_identity": "taxon:cbd01ad8d1196e67"
+      },
+      "record_id": "col:syn-349",
+      "matched_record_id": null
+    },
+    {
+      "decision": "KEEP",
+      "reason": "first_unique_source_record",
+      "evidence": {
+        "source_record_identity": "col:syn-350",
+        "canonical_taxon_identity": "taxon:4797767b7c532ee7"
+      },
+      "record_id": "col:syn-350",
+      "matched_record_id": null
+    },
+    {
+      "decision": "KEEP",
+      "reason": "first_unique_source_record",
+      "evidence": {
+        "source_record_identity": "col:syn-351",
+        "canonical_taxon_identity": "taxon:897945b84786f6db"
+      },
+      "record_id": "col:syn-351",
+      "matched_record_id": null
+    },
+    {
+      "decision": "KEEP",
+      "reason": "first_unique_source_record",
+      "evidence": {
+        "source_record_identity": "col:syn-352",
+        "canonical_taxon_identity": "taxon:494c8a263bfb89ee"
+      },
+      "record_id": "col:syn-352",
+      "matched_record_id": null
+    },
+    {
+      "decision": "KEEP",
+      "reason": "first_unique_source_record",
+      "evidence": {
+        "source_record_identity": "col:syn-353",
+        "canonical_taxon_identity": "taxon:fccb1de74c8e98fc"
+      },
+      "record_id": "col:syn-353",
+      "matched_record_id": null
+    },
+    {
+      "decision": "KEEP",
+      "reason": "first_unique_source_record",
+      "evidence": {
+        "source_record_identity": "col:syn-354",
+        "canonical_taxon_identity": "taxon:39aeac2a9f54eb51"
+      },
+      "record_id": "col:syn-354",
+      "matched_record_id": null
+    },
+    {
+      "decision": "KEEP",
+      "reason": "first_unique_source_record",
+      "evidence": {
+        "source_record_identity": "col:syn-355",
+        "canonical_taxon_identity": "taxon:51124e4604a07d06"
+      },
+      "record_id": "col:syn-355",
+      "matched_record_id": null
+    },
+    {
+      "decision": "KEEP",
+      "reason": "first_unique_source_record",
+      "evidence": {
+        "source_record_identity": "col:syn-356",
+        "canonical_taxon_identity": "taxon:8e5a3e690366ba03"
+      },
+      "record_id": "col:syn-356",
+      "matched_record_id": null
+    },
+    {
+      "decision": "KEEP",
+      "reason": "first_unique_source_record",
+      "evidence": {
+        "source_record_identity": "col:syn-357",
+        "canonical_taxon_identity": "taxon:8f8ee995c3f9edbf"
+      },
+      "record_id": "col:syn-357",
+      "matched_record_id": null
+    },
+    {
+      "decision": "KEEP",
+      "reason": "first_unique_source_record",
+      "evidence": {
+        "source_record_identity": "col:syn-358",
+        "canonical_taxon_identity": "taxon:b213cefd59ba61c4"
+      },
+      "record_id": "col:syn-358",
+      "matched_record_id": null
+    },
+    {
+      "decision": "KEEP",
+      "reason": "first_unique_source_record",
+      "evidence": {
+        "source_record_identity": "col:syn-359",
+        "canonical_taxon_identity": "taxon:48fc53dfe7572382"
+      },
+      "record_id": "col:syn-359",
+      "matched_record_id": null
+    },
+    {
+      "decision": "KEEP",
+      "reason": "first_unique_source_record",
+      "evidence": {
+        "source_record_identity": "col:syn-360",
+        "canonical_taxon_identity": "taxon:98578f0b6ed4cfe8"
+      },
+      "record_id": "col:syn-360",
+      "matched_record_id": null
+    },
+    {
+      "decision": "KEEP",
+      "reason": "first_unique_source_record",
+      "evidence": {
+        "source_record_identity": "col:syn-361",
+        "canonical_taxon_identity": "taxon:3c52289d0961783b"
+      },
+      "record_id": "col:syn-361",
+      "matched_record_id": null
+    },
+    {
+      "decision": "KEEP",
+      "reason": "first_unique_source_record",
+      "evidence": {
+        "source_record_identity": "col:syn-362",
+        "canonical_taxon_identity": "taxon:71c9be47fd1c37cf"
+      },
+      "record_id": "col:syn-362",
+      "matched_record_id": null
+    },
+    {
+      "decision": "KEEP",
+      "reason": "first_unique_source_record",
+      "evidence": {
+        "source_record_identity": "col:syn-363",
+        "canonical_taxon_identity": "taxon:0857fa6c3c34c8a2"
+      },
+      "record_id": "col:syn-363",
+      "matched_record_id": null
+    },
+    {
+      "decision": "KEEP",
+      "reason": "first_unique_source_record",
+      "evidence": {
+        "source_record_identity": "col:syn-364",
+        "canonical_taxon_identity": "taxon:04c42505567e7638"
+      },
+      "record_id": "col:syn-364",
+      "matched_record_id": null
+    },
+    {
+      "decision": "KEEP",
+      "reason": "first_unique_source_record",
+      "evidence": {
+        "source_record_identity": "col:syn-365",
+        "canonical_taxon_identity": "taxon:7dde729c14b2107a"
+      },
+      "record_id": "col:syn-365",
+      "matched_record_id": null
+    },
+    {
+      "decision": "KEEP",
+      "reason": "first_unique_source_record",
+      "evidence": {
+        "source_record_identity": "col:syn-366",
+        "canonical_taxon_identity": "taxon:9d58a149a0657110"
+      },
+      "record_id": "col:syn-366",
+      "matched_record_id": null
+    },
+    {
+      "decision": "KEEP",
+      "reason": "first_unique_source_record",
+      "evidence": {
+        "source_record_identity": "col:syn-367",
+        "canonical_taxon_identity": "taxon:cb6736381885c4eb"
+      },
+      "record_id": "col:syn-367",
+      "matched_record_id": null
+    },
+    {
+      "decision": "KEEP",
+      "reason": "first_unique_source_record",
+      "evidence": {
+        "source_record_identity": "col:syn-368",
+        "canonical_taxon_identity": "taxon:69b435b7f07944fa"
+      },
+      "record_id": "col:syn-368",
+      "matched_record_id": null
+    },
+    {
+      "decision": "KEEP",
+      "reason": "first_unique_source_record",
+      "evidence": {
+        "source_record_identity": "col:syn-369",
+        "canonical_taxon_identity": "taxon:595c154862afe41f"
+      },
+      "record_id": "col:syn-369",
+      "matched_record_id": null
+    },
+    {
+      "decision": "KEEP",
+      "reason": "first_unique_source_record",
+      "evidence": {
+        "source_record_identity": "col:syn-370",
+        "canonical_taxon_identity": "taxon:edbab24d04c223cd"
+      },
+      "record_id": "col:syn-370",
+      "matched_record_id": null
+    },
+    {
+      "decision": "KEEP",
+      "reason": "first_unique_source_record",
+      "evidence": {
+        "source_record_identity": "col:syn-371",
+        "canonical_taxon_identity": "taxon:c924005826031bf4"
+      },
+      "record_id": "col:syn-371",
+      "matched_record_id": null
+    },
+    {
+      "decision": "KEEP",
+      "reason": "first_unique_source_record",
+      "evidence": {
+        "source_record_identity": "col:syn-372",
+        "canonical_taxon_identity": "taxon:c19a657070d4f274"
+      },
+      "record_id": "col:syn-372",
+      "matched_record_id": null
+    },
+    {
+      "decision": "KEEP",
+      "reason": "first_unique_source_record",
+      "evidence": {
+        "source_record_identity": "col:syn-373",
+        "canonical_taxon_identity": "taxon:666ba8501b7be244"
+      },
+      "record_id": "col:syn-373",
+      "matched_record_id": null
+    },
+    {
+      "decision": "KEEP",
+      "reason": "first_unique_source_record",
+      "evidence": {
+        "source_record_identity": "col:syn-374",
+        "canonical_taxon_identity": "taxon:51a45d9e6ea61040"
+      },
+      "record_id": "col:syn-374",
+      "matched_record_id": null
+    },
+    {
+      "decision": "KEEP",
+      "reason": "first_unique_source_record",
+      "evidence": {
+        "source_record_identity": "col:syn-375",
+        "canonical_taxon_identity": "taxon:6d54664bd55da8b8"
+      },
+      "record_id": "col:syn-375",
+      "matched_record_id": null
+    },
+    {
+      "decision": "KEEP",
+      "reason": "first_unique_source_record",
+      "evidence": {
+        "source_record_identity": "col:syn-376",
+        "canonical_taxon_identity": "taxon:4ccc3d310c379833"
+      },
+      "record_id": "col:syn-376",
+      "matched_record_id": null
+    },
+    {
+      "decision": "KEEP",
+      "reason": "first_unique_source_record",
+      "evidence": {
+        "source_record_identity": "col:syn-377",
+        "canonical_taxon_identity": "taxon:b255e4b1a84b2259"
+      },
+      "record_id": "col:syn-377",
+      "matched_record_id": null
+    },
+    {
+      "decision": "KEEP",
+      "reason": "first_unique_source_record",
+      "evidence": {
+        "source_record_identity": "col:syn-378",
+        "canonical_taxon_identity": "taxon:9c2aadd88f5c105f"
+      },
+      "record_id": "col:syn-378",
+      "matched_record_id": null
+    },
+    {
+      "decision": "KEEP",
+      "reason": "first_unique_source_record",
+      "evidence": {
+        "source_record_identity": "col:syn-379",
+        "canonical_taxon_identity": "taxon:7a2bd065a0ad0c1f"
+      },
+      "record_id": "col:syn-379",
+      "matched_record_id": null
+    },
+    {
+      "decision": "KEEP",
+      "reason": "first_unique_source_record",
+      "evidence": {
+        "source_record_identity": "col:syn-380",
+        "canonical_taxon_identity": "taxon:f087cee8e8e3359e"
+      },
+      "record_id": "col:syn-380",
+      "matched_record_id": null
+    },
+    {
+      "decision": "KEEP",
+      "reason": "first_unique_source_record",
+      "evidence": {
+        "source_record_identity": "col:syn-381",
+        "canonical_taxon_identity": "taxon:bede3890856faf2c"
+      },
+      "record_id": "col:syn-381",
+      "matched_record_id": null
+    },
+    {
+      "decision": "KEEP",
+      "reason": "first_unique_source_record",
+      "evidence": {
+        "source_record_identity": "col:syn-382",
+        "canonical_taxon_identity": "taxon:91af2769a85cf5ca"
+      },
+      "record_id": "col:syn-382",
+      "matched_record_id": null
+    },
+    {
+      "decision": "KEEP",
+      "reason": "first_unique_source_record",
+      "evidence": {
+        "source_record_identity": "col:syn-383",
+        "canonical_taxon_identity": "taxon:e38c1023949e7ec7"
+      },
+      "record_id": "col:syn-383",
+      "matched_record_id": null
+    },
+    {
+      "decision": "KEEP",
+      "reason": "first_unique_source_record",
+      "evidence": {
+        "source_record_identity": "col:syn-384",
+        "canonical_taxon_identity": "taxon:0dc688e25069f918"
+      },
+      "record_id": "col:syn-384",
+      "matched_record_id": null
+    },
+    {
+      "decision": "KEEP",
+      "reason": "first_unique_source_record",
+      "evidence": {
+        "source_record_identity": "col:syn-385",
+        "canonical_taxon_identity": "taxon:63d0944869178328"
+      },
+      "record_id": "col:syn-385",
+      "matched_record_id": null
+    },
+    {
+      "decision": "KEEP",
+      "reason": "first_unique_source_record",
+      "evidence": {
+        "source_record_identity": "col:syn-386",
+        "canonical_taxon_identity": "taxon:17baf5cc6c88f5c3"
+      },
+      "record_id": "col:syn-386",
+      "matched_record_id": null
+    },
+    {
+      "decision": "KEEP",
+      "reason": "first_unique_source_record",
+      "evidence": {
+        "source_record_identity": "col:syn-387",
+        "canonical_taxon_identity": "taxon:8761611e0b1d2d55"
+      },
+      "record_id": "col:syn-387",
+      "matched_record_id": null
+    },
+    {
+      "decision": "KEEP",
+      "reason": "first_unique_source_record",
+      "evidence": {
+        "source_record_identity": "col:syn-388",
+        "canonical_taxon_identity": "taxon:935be6982fe1c934"
+      },
+      "record_id": "col:syn-388",
+      "matched_record_id": null
+    },
+    {
+      "decision": "KEEP",
+      "reason": "first_unique_source_record",
+      "evidence": {
+        "source_record_identity": "col:syn-389",
+        "canonical_taxon_identity": "taxon:597cf2bf13b29de7"
+      },
+      "record_id": "col:syn-389",
+      "matched_record_id": null
+    },
+    {
+      "decision": "KEEP",
+      "reason": "first_unique_source_record",
+      "evidence": {
+        "source_record_identity": "col:syn-390",
+        "canonical_taxon_identity": "taxon:64af0e2b588e04cf"
+      },
+      "record_id": "col:syn-390",
+      "matched_record_id": null
+    },
+    {
+      "decision": "KEEP",
+      "reason": "first_unique_source_record",
+      "evidence": {
+        "source_record_identity": "col:syn-391",
+        "canonical_taxon_identity": "taxon:d3346a1c1fbab6a1"
+      },
+      "record_id": "col:syn-391",
+      "matched_record_id": null
+    },
+    {
+      "decision": "KEEP",
+      "reason": "first_unique_source_record",
+      "evidence": {
+        "source_record_identity": "col:syn-392",
+        "canonical_taxon_identity": "taxon:114c77b7cd273014"
+      },
+      "record_id": "col:syn-392",
+      "matched_record_id": null
+    },
+    {
+      "decision": "KEEP",
+      "reason": "first_unique_source_record",
+      "evidence": {
+        "source_record_identity": "col:syn-393",
+        "canonical_taxon_identity": "taxon:16786dc8d86ac658"
+      },
+      "record_id": "col:syn-393",
+      "matched_record_id": null
+    },
+    {
+      "decision": "KEEP",
+      "reason": "first_unique_source_record",
+      "evidence": {
+        "source_record_identity": "col:syn-394",
+        "canonical_taxon_identity": "taxon:f2e6635563b5b4a7"
+      },
+      "record_id": "col:syn-394",
+      "matched_record_id": null
+    },
+    {
+      "decision": "KEEP",
+      "reason": "first_unique_source_record",
+      "evidence": {
+        "source_record_identity": "col:syn-395",
+        "canonical_taxon_identity": "taxon:07885eec6b686c73"
+      },
+      "record_id": "col:syn-395",
+      "matched_record_id": null
+    },
+    {
+      "decision": "KEEP",
+      "reason": "first_unique_source_record",
+      "evidence": {
+        "source_record_identity": "col:syn-396",
+        "canonical_taxon_identity": "taxon:ffe70a4aadfd4d42"
+      },
+      "record_id": "col:syn-396",
+      "matched_record_id": null
+    },
+    {
+      "decision": "KEEP",
+      "reason": "first_unique_source_record",
+      "evidence": {
+        "source_record_identity": "col:syn-397",
+        "canonical_taxon_identity": "taxon:e230e40769391029"
+      },
+      "record_id": "col:syn-397",
+      "matched_record_id": null
+    },
+    {
+      "decision": "KEEP",
+      "reason": "first_unique_source_record",
+      "evidence": {
+        "source_record_identity": "col:syn-398",
+        "canonical_taxon_identity": "taxon:cba783f125a4c6e4"
+      },
+      "record_id": "col:syn-398",
+      "matched_record_id": null
+    },
+    {
+      "decision": "KEEP",
+      "reason": "first_unique_source_record",
+      "evidence": {
+        "source_record_identity": "col:syn-399",
+        "canonical_taxon_identity": "taxon:e396b8ed46371ca5"
+      },
+      "record_id": "col:syn-399",
+      "matched_record_id": null
+    },
+    {
+      "decision": "KEEP",
+      "reason": "first_unique_source_record",
+      "evidence": {
+        "source_record_identity": "col:syn-400",
+        "canonical_taxon_identity": "taxon:73c71eebec4453e4"
+      },
+      "record_id": "col:syn-400",
+      "matched_record_id": null
+    },
+    {
+      "decision": "KEEP",
+      "reason": "first_unique_source_record",
+      "evidence": {
+        "source_record_identity": "col:syn-401",
+        "canonical_taxon_identity": "taxon:90e18c3e271712d6"
+      },
+      "record_id": "col:syn-401",
+      "matched_record_id": null
+    },
+    {
+      "decision": "KEEP",
+      "reason": "first_unique_source_record",
+      "evidence": {
+        "source_record_identity": "col:syn-402",
+        "canonical_taxon_identity": "taxon:07621f1d2c81c99c"
+      },
+      "record_id": "col:syn-402",
+      "matched_record_id": null
+    },
+    {
+      "decision": "KEEP",
+      "reason": "first_unique_source_record",
+      "evidence": {
+        "source_record_identity": "col:syn-403",
+        "canonical_taxon_identity": "taxon:a704e1b32a9f866a"
+      },
+      "record_id": "col:syn-403",
+      "matched_record_id": null
+    },
+    {
+      "decision": "KEEP",
+      "reason": "first_unique_source_record",
+      "evidence": {
+        "source_record_identity": "col:syn-404",
+        "canonical_taxon_identity": "taxon:146c8999bd875e6d"
+      },
+      "record_id": "col:syn-404",
+      "matched_record_id": null
+    },
+    {
+      "decision": "KEEP",
+      "reason": "first_unique_source_record",
+      "evidence": {
+        "source_record_identity": "col:syn-405",
+        "canonical_taxon_identity": "taxon:b149c39d8a94a6fe"
+      },
+      "record_id": "col:syn-405",
+      "matched_record_id": null
+    },
+    {
+      "decision": "KEEP",
+      "reason": "first_unique_source_record",
+      "evidence": {
+        "source_record_identity": "col:syn-406",
+        "canonical_taxon_identity": "taxon:6422c54d58f7fe81"
+      },
+      "record_id": "col:syn-406",
+      "matched_record_id": null
+    },
+    {
+      "decision": "KEEP",
+      "reason": "first_unique_source_record",
+      "evidence": {
+        "source_record_identity": "col:syn-407",
+        "canonical_taxon_identity": "taxon:017d13d361a25733"
+      },
+      "record_id": "col:syn-407",
+      "matched_record_id": null
+    },
+    {
+      "decision": "KEEP",
+      "reason": "first_unique_source_record",
+      "evidence": {
+        "source_record_identity": "col:syn-408",
+        "canonical_taxon_identity": "taxon:7b5a4747ecd38da7"
+      },
+      "record_id": "col:syn-408",
+      "matched_record_id": null
+    },
+    {
+      "decision": "KEEP",
+      "reason": "first_unique_source_record",
+      "evidence": {
+        "source_record_identity": "col:syn-409",
+        "canonical_taxon_identity": "taxon:f0ba58d707d6c8f9"
+      },
+      "record_id": "col:syn-409",
+      "matched_record_id": null
+    },
+    {
+      "decision": "KEEP",
+      "reason": "first_unique_source_record",
+      "evidence": {
+        "source_record_identity": "col:syn-410",
+        "canonical_taxon_identity": "taxon:9c603a20f470d0ce"
+      },
+      "record_id": "col:syn-410",
+      "matched_record_id": null
+    },
+    {
+      "decision": "KEEP",
+      "reason": "first_unique_source_record",
+      "evidence": {
+        "source_record_identity": "col:syn-411",
+        "canonical_taxon_identity": "taxon:a875f7b2a6d21e0c"
+      },
+      "record_id": "col:syn-411",
+      "matched_record_id": null
+    },
+    {
+      "decision": "KEEP",
+      "reason": "first_unique_source_record",
+      "evidence": {
+        "source_record_identity": "col:syn-412",
+        "canonical_taxon_identity": "taxon:22bfe1bdf91db97e"
+      },
+      "record_id": "col:syn-412",
+      "matched_record_id": null
+    },
+    {
+      "decision": "KEEP",
+      "reason": "first_unique_source_record",
+      "evidence": {
+        "source_record_identity": "col:syn-413",
+        "canonical_taxon_identity": "taxon:770b256f728a23fc"
+      },
+      "record_id": "col:syn-413",
+      "matched_record_id": null
+    },
+    {
+      "decision": "KEEP",
+      "reason": "first_unique_source_record",
+      "evidence": {
+        "source_record_identity": "col:syn-414",
+        "canonical_taxon_identity": "taxon:887a6790b592272d"
+      },
+      "record_id": "col:syn-414",
+      "matched_record_id": null
+    },
+    {
+      "decision": "KEEP",
+      "reason": "first_unique_source_record",
+      "evidence": {
+        "source_record_identity": "col:syn-415",
+        "canonical_taxon_identity": "taxon:ad47c7ff07cd5937"
+      },
+      "record_id": "col:syn-415",
+      "matched_record_id": null
+    },
+    {
+      "decision": "KEEP",
+      "reason": "first_unique_source_record",
+      "evidence": {
+        "source_record_identity": "col:syn-416",
+        "canonical_taxon_identity": "taxon:1d6cad6dabb1b2f4"
+      },
+      "record_id": "col:syn-416",
+      "matched_record_id": null
+    },
+    {
+      "decision": "KEEP",
+      "reason": "first_unique_source_record",
+      "evidence": {
+        "source_record_identity": "col:syn-417",
+        "canonical_taxon_identity": "taxon:605821a52c3681b8"
+      },
+      "record_id": "col:syn-417",
+      "matched_record_id": null
+    },
+    {
+      "decision": "KEEP",
+      "reason": "first_unique_source_record",
+      "evidence": {
+        "source_record_identity": "col:syn-418",
+        "canonical_taxon_identity": "taxon:9d7d931d22b9238c"
+      },
+      "record_id": "col:syn-418",
+      "matched_record_id": null
+    },
+    {
+      "decision": "KEEP",
+      "reason": "first_unique_source_record",
+      "evidence": {
+        "source_record_identity": "col:syn-419",
+        "canonical_taxon_identity": "taxon:28485430bd2eaf3f"
+      },
+      "record_id": "col:syn-419",
+      "matched_record_id": null
+    },
+    {
+      "decision": "KEEP",
+      "reason": "first_unique_source_record",
+      "evidence": {
+        "source_record_identity": "col:syn-420",
+        "canonical_taxon_identity": "taxon:5ff5349e7ca1687f"
+      },
+      "record_id": "col:syn-420",
+      "matched_record_id": null
+    },
+    {
+      "decision": "KEEP",
+      "reason": "first_unique_source_record",
+      "evidence": {
+        "source_record_identity": "col:syn-421",
+        "canonical_taxon_identity": "taxon:f830c1d90657bca9"
+      },
+      "record_id": "col:syn-421",
+      "matched_record_id": null
+    },
+    {
+      "decision": "KEEP",
+      "reason": "first_unique_source_record",
+      "evidence": {
+        "source_record_identity": "col:syn-422",
+        "canonical_taxon_identity": "taxon:a71e6a7421b0f8ad"
+      },
+      "record_id": "col:syn-422",
+      "matched_record_id": null
+    },
+    {
+      "decision": "KEEP",
+      "reason": "first_unique_source_record",
+      "evidence": {
+        "source_record_identity": "col:syn-423",
+        "canonical_taxon_identity": "taxon:eeb677a8534a7deb"
+      },
+      "record_id": "col:syn-423",
+      "matched_record_id": null
+    },
+    {
+      "decision": "KEEP",
+      "reason": "first_unique_source_record",
+      "evidence": {
+        "source_record_identity": "col:syn-424",
+        "canonical_taxon_identity": "taxon:45c942151daa36d3"
+      },
+      "record_id": "col:syn-424",
+      "matched_record_id": null
+    },
+    {
+      "decision": "KEEP",
+      "reason": "first_unique_source_record",
+      "evidence": {
+        "source_record_identity": "col:syn-425",
+        "canonical_taxon_identity": "taxon:579470781531df19"
+      },
+      "record_id": "col:syn-425",
+      "matched_record_id": null
+    },
+    {
+      "decision": "KEEP",
+      "reason": "first_unique_source_record",
+      "evidence": {
+        "source_record_identity": "col:syn-426",
+        "canonical_taxon_identity": "taxon:e60111fab34b6716"
+      },
+      "record_id": "col:syn-426",
+      "matched_record_id": null
+    },
+    {
+      "decision": "KEEP",
+      "reason": "first_unique_source_record",
+      "evidence": {
+        "source_record_identity": "col:syn-427",
+        "canonical_taxon_identity": "taxon:1dab5044c36bc881"
+      },
+      "record_id": "col:syn-427",
+      "matched_record_id": null
+    },
+    {
+      "decision": "KEEP",
+      "reason": "first_unique_source_record",
+      "evidence": {
+        "source_record_identity": "col:syn-428",
+        "canonical_taxon_identity": "taxon:17ea89a6d5e81c5e"
+      },
+      "record_id": "col:syn-428",
+      "matched_record_id": null
+    },
+    {
+      "decision": "KEEP",
+      "reason": "first_unique_source_record",
+      "evidence": {
+        "source_record_identity": "col:syn-429",
+        "canonical_taxon_identity": "taxon:afc6ee8e8ee04f82"
+      },
+      "record_id": "col:syn-429",
+      "matched_record_id": null
+    },
+    {
+      "decision": "KEEP",
+      "reason": "first_unique_source_record",
+      "evidence": {
+        "source_record_identity": "col:syn-430",
+        "canonical_taxon_identity": "taxon:20192639f23c7faa"
+      },
+      "record_id": "col:syn-430",
+      "matched_record_id": null
+    },
+    {
+      "decision": "KEEP",
+      "reason": "first_unique_source_record",
+      "evidence": {
+        "source_record_identity": "col:syn-431",
+        "canonical_taxon_identity": "taxon:5946faa1f20f4233"
+      },
+      "record_id": "col:syn-431",
+      "matched_record_id": null
+    },
+    {
+      "decision": "KEEP",
+      "reason": "first_unique_source_record",
+      "evidence": {
+        "source_record_identity": "col:syn-432",
+        "canonical_taxon_identity": "taxon:297009db8bac130d"
+      },
+      "record_id": "col:syn-432",
+      "matched_record_id": null
+    },
+    {
+      "decision": "KEEP",
+      "reason": "first_unique_source_record",
+      "evidence": {
+        "source_record_identity": "col:syn-433",
+        "canonical_taxon_identity": "taxon:45ce5379985477ec"
+      },
+      "record_id": "col:syn-433",
+      "matched_record_id": null
+    },
+    {
+      "decision": "KEEP",
+      "reason": "first_unique_source_record",
+      "evidence": {
+        "source_record_identity": "col:syn-434",
+        "canonical_taxon_identity": "taxon:24669f7f4409a214"
+      },
+      "record_id": "col:syn-434",
+      "matched_record_id": null
+    },
+    {
+      "decision": "KEEP",
+      "reason": "first_unique_source_record",
+      "evidence": {
+        "source_record_identity": "col:syn-435",
+        "canonical_taxon_identity": "taxon:f4e478a170eb905f"
+      },
+      "record_id": "col:syn-435",
+      "matched_record_id": null
+    },
+    {
+      "decision": "KEEP",
+      "reason": "first_unique_source_record",
+      "evidence": {
+        "source_record_identity": "col:syn-436",
+        "canonical_taxon_identity": "taxon:72582475a906a8f0"
+      },
+      "record_id": "col:syn-436",
+      "matched_record_id": null
+    },
+    {
+      "decision": "KEEP",
+      "reason": "first_unique_source_record",
+      "evidence": {
+        "source_record_identity": "col:syn-437",
+        "canonical_taxon_identity": "taxon:3e0f40b27a3f27be"
+      },
+      "record_id": "col:syn-437",
+      "matched_record_id": null
+    },
+    {
+      "decision": "KEEP",
+      "reason": "first_unique_source_record",
+      "evidence": {
+        "source_record_identity": "col:syn-438",
+        "canonical_taxon_identity": "taxon:f879591618c91db7"
+      },
+      "record_id": "col:syn-438",
+      "matched_record_id": null
+    },
+    {
+      "decision": "KEEP",
+      "reason": "first_unique_source_record",
+      "evidence": {
+        "source_record_identity": "col:syn-439",
+        "canonical_taxon_identity": "taxon:f400fe0c6976c9de"
+      },
+      "record_id": "col:syn-439",
+      "matched_record_id": null
+    },
+    {
+      "decision": "KEEP",
+      "reason": "first_unique_source_record",
+      "evidence": {
+        "source_record_identity": "col:syn-440",
+        "canonical_taxon_identity": "taxon:0c6e3c1a7a60d0cf"
+      },
+      "record_id": "col:syn-440",
+      "matched_record_id": null
+    },
+    {
+      "decision": "KEEP",
+      "reason": "first_unique_source_record",
+      "evidence": {
+        "source_record_identity": "col:syn-441",
+        "canonical_taxon_identity": "taxon:98ed999ed83052e8"
+      },
+      "record_id": "col:syn-441",
+      "matched_record_id": null
+    },
+    {
+      "decision": "KEEP",
+      "reason": "first_unique_source_record",
+      "evidence": {
+        "source_record_identity": "col:syn-442",
+        "canonical_taxon_identity": "taxon:fa1a12e26d1961b7"
+      },
+      "record_id": "col:syn-442",
+      "matched_record_id": null
+    },
+    {
+      "decision": "KEEP",
+      "reason": "first_unique_source_record",
+      "evidence": {
+        "source_record_identity": "col:syn-443",
+        "canonical_taxon_identity": "taxon:ecd3cff1d49c759e"
+      },
+      "record_id": "col:syn-443",
+      "matched_record_id": null
+    },
+    {
+      "decision": "KEEP",
+      "reason": "first_unique_source_record",
+      "evidence": {
+        "source_record_identity": "col:syn-444",
+        "canonical_taxon_identity": "taxon:79e09d38db98be68"
+      },
+      "record_id": "col:syn-444",
+      "matched_record_id": null
+    },
+    {
+      "decision": "KEEP",
+      "reason": "first_unique_source_record",
+      "evidence": {
+        "source_record_identity": "col:syn-445",
+        "canonical_taxon_identity": "taxon:9d8ea602d86793fc"
+      },
+      "record_id": "col:syn-445",
+      "matched_record_id": null
+    },
+    {
+      "decision": "KEEP",
+      "reason": "first_unique_source_record",
+      "evidence": {
+        "source_record_identity": "col:syn-446",
+        "canonical_taxon_identity": "taxon:bf049cfa6e318806"
+      },
+      "record_id": "col:syn-446",
+      "matched_record_id": null
+    },
+    {
+      "decision": "KEEP",
+      "reason": "first_unique_source_record",
+      "evidence": {
+        "source_record_identity": "col:syn-447",
+        "canonical_taxon_identity": "taxon:d88be47f591d5db2"
+      },
+      "record_id": "col:syn-447",
+      "matched_record_id": null
+    },
+    {
+      "decision": "KEEP",
+      "reason": "first_unique_source_record",
+      "evidence": {
+        "source_record_identity": "col:syn-448",
+        "canonical_taxon_identity": "taxon:1a3a10dcc631b42f"
+      },
+      "record_id": "col:syn-448",
+      "matched_record_id": null
+    },
+    {
+      "decision": "KEEP",
+      "reason": "first_unique_source_record",
+      "evidence": {
+        "source_record_identity": "col:syn-449",
+        "canonical_taxon_identity": "taxon:d27a566ffef332dd"
+      },
+      "record_id": "col:syn-449",
+      "matched_record_id": null
+    },
+    {
+      "decision": "KEEP",
+      "reason": "first_unique_source_record",
+      "evidence": {
+        "source_record_identity": "col:syn-450",
+        "canonical_taxon_identity": "taxon:6eb796bf2cd9fa20"
+      },
+      "record_id": "col:syn-450",
+      "matched_record_id": null
+    },
+    {
+      "decision": "KEEP",
+      "reason": "first_unique_source_record",
+      "evidence": {
+        "source_record_identity": "col:syn-451",
+        "canonical_taxon_identity": "taxon:5cf543d566dade2a"
+      },
+      "record_id": "col:syn-451",
+      "matched_record_id": null
+    },
+    {
+      "decision": "KEEP",
+      "reason": "first_unique_source_record",
+      "evidence": {
+        "source_record_identity": "col:syn-452",
+        "canonical_taxon_identity": "taxon:318c3f7532011c3b"
+      },
+      "record_id": "col:syn-452",
+      "matched_record_id": null
+    },
+    {
+      "decision": "KEEP",
+      "reason": "first_unique_source_record",
+      "evidence": {
+        "source_record_identity": "col:syn-453",
+        "canonical_taxon_identity": "taxon:a1f1207a7bf2fc28"
+      },
+      "record_id": "col:syn-453",
+      "matched_record_id": null
+    },
+    {
+      "decision": "KEEP",
+      "reason": "first_unique_source_record",
+      "evidence": {
+        "source_record_identity": "col:syn-454",
+        "canonical_taxon_identity": "taxon:8f00769e610c7672"
+      },
+      "record_id": "col:syn-454",
+      "matched_record_id": null
+    },
+    {
+      "decision": "KEEP",
+      "reason": "first_unique_source_record",
+      "evidence": {
+        "source_record_identity": "col:syn-455",
+        "canonical_taxon_identity": "taxon:4e70749c8af548c7"
+      },
+      "record_id": "col:syn-455",
+      "matched_record_id": null
+    },
+    {
+      "decision": "KEEP",
+      "reason": "first_unique_source_record",
+      "evidence": {
+        "source_record_identity": "col:syn-456",
+        "canonical_taxon_identity": "taxon:655221c54bf28396"
+      },
+      "record_id": "col:syn-456",
+      "matched_record_id": null
+    },
+    {
+      "decision": "KEEP",
+      "reason": "first_unique_source_record",
+      "evidence": {
+        "source_record_identity": "col:syn-457",
+        "canonical_taxon_identity": "taxon:b9346283b46f74b0"
+      },
+      "record_id": "col:syn-457",
+      "matched_record_id": null
+    },
+    {
+      "decision": "KEEP",
+      "reason": "first_unique_source_record",
+      "evidence": {
+        "source_record_identity": "col:syn-458",
+        "canonical_taxon_identity": "taxon:d386a5f5abbe51da"
+      },
+      "record_id": "col:syn-458",
+      "matched_record_id": null
+    },
+    {
+      "decision": "KEEP",
+      "reason": "first_unique_source_record",
+      "evidence": {
+        "source_record_identity": "col:syn-459",
+        "canonical_taxon_identity": "taxon:cbae2f4ce160fe72"
+      },
+      "record_id": "col:syn-459",
+      "matched_record_id": null
+    },
+    {
+      "decision": "KEEP",
+      "reason": "first_unique_source_record",
+      "evidence": {
+        "source_record_identity": "col:syn-460",
+        "canonical_taxon_identity": "taxon:ae44f1074057fa95"
+      },
+      "record_id": "col:syn-460",
+      "matched_record_id": null
+    },
+    {
+      "decision": "KEEP",
+      "reason": "first_unique_source_record",
+      "evidence": {
+        "source_record_identity": "col:syn-461",
+        "canonical_taxon_identity": "taxon:bee48a1b4a1766f6"
+      },
+      "record_id": "col:syn-461",
+      "matched_record_id": null
+    },
+    {
+      "decision": "KEEP",
+      "reason": "first_unique_source_record",
+      "evidence": {
+        "source_record_identity": "col:syn-462",
+        "canonical_taxon_identity": "taxon:d265d8e612bd8e12"
+      },
+      "record_id": "col:syn-462",
+      "matched_record_id": null
+    },
+    {
+      "decision": "KEEP",
+      "reason": "first_unique_source_record",
+      "evidence": {
+        "source_record_identity": "col:syn-463",
+        "canonical_taxon_identity": "taxon:d5d6a97b59ad303d"
+      },
+      "record_id": "col:syn-463",
+      "matched_record_id": null
+    },
+    {
+      "decision": "KEEP",
+      "reason": "first_unique_source_record",
+      "evidence": {
+        "source_record_identity": "col:syn-464",
+        "canonical_taxon_identity": "taxon:ab8fd9cb2c98bc71"
+      },
+      "record_id": "col:syn-464",
+      "matched_record_id": null
+    },
+    {
+      "decision": "KEEP",
+      "reason": "first_unique_source_record",
+      "evidence": {
+        "source_record_identity": "col:syn-465",
+        "canonical_taxon_identity": "taxon:8883785a49644596"
+      },
+      "record_id": "col:syn-465",
+      "matched_record_id": null
+    },
+    {
+      "decision": "KEEP",
+      "reason": "first_unique_source_record",
+      "evidence": {
+        "source_record_identity": "col:syn-466",
+        "canonical_taxon_identity": "taxon:f8278188b061c305"
+      },
+      "record_id": "col:syn-466",
+      "matched_record_id": null
+    },
+    {
+      "decision": "KEEP",
+      "reason": "first_unique_source_record",
+      "evidence": {
+        "source_record_identity": "col:syn-467",
+        "canonical_taxon_identity": "taxon:515392dae4039d68"
+      },
+      "record_id": "col:syn-467",
+      "matched_record_id": null
+    },
+    {
+      "decision": "KEEP",
+      "reason": "first_unique_source_record",
+      "evidence": {
+        "source_record_identity": "col:syn-468",
+        "canonical_taxon_identity": "taxon:db105d2d7898aa12"
+      },
+      "record_id": "col:syn-468",
+      "matched_record_id": null
+    },
+    {
+      "decision": "KEEP",
+      "reason": "first_unique_source_record",
+      "evidence": {
+        "source_record_identity": "col:syn-469",
+        "canonical_taxon_identity": "taxon:cabb626398e15c65"
+      },
+      "record_id": "col:syn-469",
+      "matched_record_id": null
+    },
+    {
+      "decision": "KEEP",
+      "reason": "first_unique_source_record",
+      "evidence": {
+        "source_record_identity": "col:syn-470",
+        "canonical_taxon_identity": "taxon:ff264f3a5062a07f"
+      },
+      "record_id": "col:syn-470",
+      "matched_record_id": null
+    },
+    {
+      "decision": "KEEP",
+      "reason": "first_unique_source_record",
+      "evidence": {
+        "source_record_identity": "col:syn-471",
+        "canonical_taxon_identity": "taxon:083c43c943c16f10"
+      },
+      "record_id": "col:syn-471",
+      "matched_record_id": null
+    },
+    {
+      "decision": "KEEP",
+      "reason": "first_unique_source_record",
+      "evidence": {
+        "source_record_identity": "col:syn-472",
+        "canonical_taxon_identity": "taxon:6228b7937ec7e047"
+      },
+      "record_id": "col:syn-472",
+      "matched_record_id": null
+    },
+    {
+      "decision": "KEEP",
+      "reason": "first_unique_source_record",
+      "evidence": {
+        "source_record_identity": "col:syn-473",
+        "canonical_taxon_identity": "taxon:a864cce1e6721958"
+      },
+      "record_id": "col:syn-473",
+      "matched_record_id": null
+    },
+    {
+      "decision": "KEEP",
+      "reason": "first_unique_source_record",
+      "evidence": {
+        "source_record_identity": "col:syn-474",
+        "canonical_taxon_identity": "taxon:2bd16c35872f7796"
+      },
+      "record_id": "col:syn-474",
+      "matched_record_id": null
+    },
+    {
+      "decision": "KEEP",
+      "reason": "first_unique_source_record",
+      "evidence": {
+        "source_record_identity": "col:syn-475",
+        "canonical_taxon_identity": "taxon:f5e4e67729467ddc"
+      },
+      "record_id": "col:syn-475",
+      "matched_record_id": null
+    },
+    {
+      "decision": "KEEP",
+      "reason": "first_unique_source_record",
+      "evidence": {
+        "source_record_identity": "col:syn-476",
+        "canonical_taxon_identity": "taxon:8f9344e99278dffa"
+      },
+      "record_id": "col:syn-476",
+      "matched_record_id": null
+    },
+    {
+      "decision": "KEEP",
+      "reason": "first_unique_source_record",
+      "evidence": {
+        "source_record_identity": "col:syn-477",
+        "canonical_taxon_identity": "taxon:f00fa58556e3ce35"
+      },
+      "record_id": "col:syn-477",
+      "matched_record_id": null
+    },
+    {
+      "decision": "KEEP",
+      "reason": "first_unique_source_record",
+      "evidence": {
+        "source_record_identity": "col:syn-478",
+        "canonical_taxon_identity": "taxon:b21d322da0b152ac"
+      },
+      "record_id": "col:syn-478",
+      "matched_record_id": null
+    },
+    {
+      "decision": "KEEP",
+      "reason": "first_unique_source_record",
+      "evidence": {
+        "source_record_identity": "col:syn-479",
+        "canonical_taxon_identity": "taxon:c62752aaa06a5009"
+      },
+      "record_id": "col:syn-479",
+      "matched_record_id": null
+    },
+    {
+      "decision": "KEEP",
+      "reason": "first_unique_source_record",
+      "evidence": {
+        "source_record_identity": "col:syn-480",
+        "canonical_taxon_identity": "taxon:f54a65960c9454c6"
+      },
+      "record_id": "col:syn-480",
+      "matched_record_id": null
+    },
+    {
+      "decision": "KEEP",
+      "reason": "first_unique_source_record",
+      "evidence": {
+        "source_record_identity": "col:syn-481",
+        "canonical_taxon_identity": "taxon:8b01563863202e0c"
+      },
+      "record_id": "col:syn-481",
+      "matched_record_id": null
+    },
+    {
+      "decision": "KEEP",
+      "reason": "first_unique_source_record",
+      "evidence": {
+        "source_record_identity": "col:syn-482",
+        "canonical_taxon_identity": "taxon:6bed56a3e9b31c01"
+      },
+      "record_id": "col:syn-482",
+      "matched_record_id": null
+    },
+    {
+      "decision": "KEEP",
+      "reason": "first_unique_source_record",
+      "evidence": {
+        "source_record_identity": "col:syn-483",
+        "canonical_taxon_identity": "taxon:123a7c65c45f6c22"
+      },
+      "record_id": "col:syn-483",
+      "matched_record_id": null
+    },
+    {
+      "decision": "KEEP",
+      "reason": "first_unique_source_record",
+      "evidence": {
+        "source_record_identity": "col:syn-484",
+        "canonical_taxon_identity": "taxon:3aa4e9dc31784b33"
+      },
+      "record_id": "col:syn-484",
+      "matched_record_id": null
+    },
+    {
+      "decision": "KEEP",
+      "reason": "first_unique_source_record",
+      "evidence": {
+        "source_record_identity": "col:syn-485",
+        "canonical_taxon_identity": "taxon:a5dc969e3004dc4e"
+      },
+      "record_id": "col:syn-485",
+      "matched_record_id": null
+    },
+    {
+      "decision": "KEEP",
+      "reason": "first_unique_source_record",
+      "evidence": {
+        "source_record_identity": "col:syn-486",
+        "canonical_taxon_identity": "taxon:63bde8e092c0f0ba"
+      },
+      "record_id": "col:syn-486",
+      "matched_record_id": null
+    },
+    {
+      "decision": "KEEP",
+      "reason": "first_unique_source_record",
+      "evidence": {
+        "source_record_identity": "col:syn-487",
+        "canonical_taxon_identity": "taxon:3302fdb88cc39e40"
+      },
+      "record_id": "col:syn-487",
+      "matched_record_id": null
+    },
+    {
+      "decision": "KEEP",
+      "reason": "first_unique_source_record",
+      "evidence": {
+        "source_record_identity": "col:syn-488",
+        "canonical_taxon_identity": "taxon:df5407012da4b08d"
+      },
+      "record_id": "col:syn-488",
+      "matched_record_id": null
+    },
+    {
+      "decision": "KEEP",
+      "reason": "first_unique_source_record",
+      "evidence": {
+        "source_record_identity": "col:syn-489",
+        "canonical_taxon_identity": "taxon:57e05b77e3097053"
+      },
+      "record_id": "col:syn-489",
+      "matched_record_id": null
+    },
+    {
+      "decision": "KEEP",
+      "reason": "first_unique_source_record",
+      "evidence": {
+        "source_record_identity": "col:syn-490",
+        "canonical_taxon_identity": "taxon:5f36318db5e57531"
+      },
+      "record_id": "col:syn-490",
+      "matched_record_id": null
+    },
+    {
+      "decision": "KEEP",
+      "reason": "first_unique_source_record",
+      "evidence": {
+        "source_record_identity": "col:syn-491",
+        "canonical_taxon_identity": "taxon:45eb3e820fa55ff3"
+      },
+      "record_id": "col:syn-491",
+      "matched_record_id": null
+    },
+    {
+      "decision": "KEEP",
+      "reason": "first_unique_source_record",
+      "evidence": {
+        "source_record_identity": "col:syn-492",
+        "canonical_taxon_identity": "taxon:915e3474063af45d"
+      },
+      "record_id": "col:syn-492",
+      "matched_record_id": null
+    },
+    {
+      "decision": "KEEP",
+      "reason": "first_unique_source_record",
+      "evidence": {
+        "source_record_identity": "col:syn-493",
+        "canonical_taxon_identity": "taxon:08a4a4bee0aec8e7"
+      },
+      "record_id": "col:syn-493",
+      "matched_record_id": null
+    },
+    {
+      "decision": "KEEP",
+      "reason": "first_unique_source_record",
+      "evidence": {
+        "source_record_identity": "col:syn-494",
+        "canonical_taxon_identity": "taxon:640b52fa57e7650d"
+      },
+      "record_id": "col:syn-494",
+      "matched_record_id": null
+    },
+    {
+      "decision": "KEEP",
+      "reason": "first_unique_source_record",
+      "evidence": {
+        "source_record_identity": "col:syn-495",
+        "canonical_taxon_identity": "taxon:021db72d36a778f4"
+      },
+      "record_id": "col:syn-495",
+      "matched_record_id": null
+    },
+    {
+      "decision": "KEEP",
+      "reason": "first_unique_source_record",
+      "evidence": {
+        "source_record_identity": "col:syn-496",
+        "canonical_taxon_identity": "taxon:bba7412c3d4ad1f1"
+      },
+      "record_id": "col:syn-496",
+      "matched_record_id": null
+    },
+    {
+      "decision": "KEEP",
+      "reason": "first_unique_source_record",
+      "evidence": {
+        "source_record_identity": "col:syn-497",
+        "canonical_taxon_identity": "taxon:e6bf289440230931"
+      },
+      "record_id": "col:syn-497",
+      "matched_record_id": null
+    },
+    {
+      "decision": "KEEP",
+      "reason": "first_unique_source_record",
+      "evidence": {
+        "source_record_identity": "col:syn-498",
+        "canonical_taxon_identity": "taxon:9d411d4d974025fd"
+      },
+      "record_id": "col:syn-498",
+      "matched_record_id": null
+    },
+    {
+      "decision": "KEEP",
+      "reason": "first_unique_source_record",
+      "evidence": {
+        "source_record_identity": "col:syn-499",
+        "canonical_taxon_identity": "taxon:259c7d40eda5320d"
+      },
+      "record_id": "col:syn-499",
+      "matched_record_id": null
+    }
+  ],
+  "idempotent": true,
+  "notes": "Never collapse distinct taxa merely because names match. Same scientific name across sources yields CONFLICT or LINK, not silent MERGE.",
+  "gate": "DEDUPE_IDEMPOTENT_PASS",
+  "pass": true
+}

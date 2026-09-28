@@ -1,0 +1,52 @@
+{
+  "engine_pass": true,
+  "ics_snapshot_present": false,
+  "status": "BLOCKED_EXTERNAL_DATA",
+  "normalized_count": 3,
+  "preserved_ranges": 3,
+  "collapsed_to_point": 0,
+  "samples": [
+    {
+      "earliest_ma": 145.0,
+      "latest_ma": 66.0,
+      "eon": null,
+      "era": null,
+      "period": null,
+      "epoch": null,
+      "age": null,
+      "present": false,
+      "uncertain": false,
+      "open_ended": false,
+      "label": "Cretaceous"
+    },
+    {
+      "earliest_ma": 0.0117,
+      "latest_ma": 0.0,
+      "eon": null,
+      "era": null,
+      "period": "Quaternary",
+      "epoch": "Holocene",
+      "age": null,
+      "present": true,
+      "uncertain": true,
+      "open_ended": false,
+      "label": "Holocene"
+    },
+    {
+      "earliest_ma": 2.58,
+      "latest_ma": 0.0117,
+      "eon": null,
+      "era": null,
+      "period": null,
+      "epoch": "Pleistocene",
+      "age": null,
+      "present": false,
+      "uncertain": false,
+      "open_ended": false,
+      "label": "Pleistocene"
+    }
+  ],
+  "notes": "Real ICS snapshot absent => BLOCKED_EXTERNAL_DATA for production normalization; engine passes fixture tests without collapsing ranges to points.",
+  "gate": "TIME_RANGE_NORMALIZATION_ENGINE_PASS",
+  "pass": true
+}

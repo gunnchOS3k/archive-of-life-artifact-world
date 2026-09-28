@@ -1,0 +1,262 @@
+{
+  "edge_count": 2733,
+  "unique_names": 2729,
+  "cycles_detected": [],
+  "unresolved_conflicts": [],
+  "accepted_resolutions_sample": [
+    {
+      "query": "Synthgenus7dca synthspeciesb91e",
+      "resolved": "synthgenus7dca synthspeciesb91e",
+      "path": "synthgenus7dca synthspeciesb91e"
+    },
+    {
+      "query": "Synthgenusb455 synthspecies23a5",
+      "resolved": "synthgenusb455 synthspecies23a5",
+      "path": "synthgenusb455 synthspecies23a5"
+    },
+    {
+      "query": "Synthgenus204a synthspecies7a39",
+      "resolved": "synthgenus204a synthspecies7a39",
+      "path": "synthgenus204a synthspecies7a39"
+    },
+    {
+      "query": "Synthgenusb8da synthspeciesfb80",
+      "resolved": "synthgenusb8da synthspeciesfb80",
+      "path": "synthgenusb8da synthspeciesfb80"
+    },
+    {
+      "query": "Synthgenus8426 synthspeciesaf0e",
+      "resolved": "synthgenus8426 synthspeciesaf0e",
+      "path": "synthgenus8426 synthspeciesaf0e"
+    },
+    {
+      "query": "Synthgenus0a32 synthspecies863f",
+      "resolved": "synthgenus0a32 synthspecies863f",
+      "path": "synthgenus0a32 synthspecies863f"
+    },
+    {
+      "query": "Synthgenusfe87 synthspeciesbfb7",
+      "resolved": "synthgenusfe87 synthspeciesbfb7",
+      "path": "synthgenusfe87 synthspeciesbfb7"
+    },
+    {
+      "query": "Synthgenus6e0d synthspecies83b6",
+      "resolved": "synthgenus6e0d synthspecies83b6",
+      "path": "synthgenus6e0d synthspecies83b6"
+    },
+    {
+      "query": "Synthgenus2b62 synthspecies6709",
+      "resolved": "synthgenus2b62 synthspecies6709",
+      "path": "synthgenus2b62 synthspecies6709"
+    },
+    {
+      "query": "Synthgenus6e16 synthspeciesd4bc",
+      "resolved": "synthgenus6e16 synthspeciesd4bc",
+      "path": "synthgenus6e16 synthspeciesd4bc"
+    },
+    {
+      "query": "Synthgenuscb44 synthspecies04d4",
+      "resolved": "synthgenuscb44 synthspecies04d4",
+      "path": "synthgenuscb44 synthspecies04d4"
+    },
+    {
+      "query": "Synthgenus0760 synthspeciesf48c",
+      "resolved": "synthgenus0760 synthspeciesf48c",
+      "path": "synthgenus0760 synthspeciesf48c"
+    },
+    {
+      "query": "Synthgenusff93 synthspecies61b4",
+      "resolved": "synthgenusff93 synthspecies61b4",
+      "path": "synthgenusff93 synthspecies61b4"
+    },
+    {
+      "query": "Synthgenus39ea synthspeciesb89d",
+      "resolved": "synthgenus39ea synthspeciesb89d",
+      "path": "synthgenus39ea synthspeciesb89d"
+    },
+    {
+      "query": "Synthgenusb7b9 synthspeciesad8d",
+      "resolved": "synthgenusb7b9 synthspeciesad8d",
+      "path": "synthgenusb7b9 synthspeciesad8d"
+    },
+    {
+      "query": "Synthgenusda33 synthspeciesfc04",
+      "resolved": "synthgenusda33 synthspeciesfc04",
+      "path": "synthgenusda33 synthspeciesfc04"
+    },
+    {
+      "query": "Synthgenusd842 synthspecies7e5b",
+      "resolved": "synthgenusd842 synthspecies7e5b",
+      "path": "synthgenusd842 synthspecies7e5b"
+    },
+    {
+      "query": "Synthgenusc3e9 synthspecies346c",
+      "resolved": "synthgenusc3e9 synthspecies346c",
+      "path": "synthgenusc3e9 synthspecies346c"
+    },
+    {
+      "query": "Synthgenus12f0 synthspeciesa580",
+      "resolved": "synthgenus12f0 synthspeciesa580",
+      "path": "synthgenus12f0 synthspeciesa580"
+    },
+    {
+      "query": "Synthgenusd12c synthspeciescc78",
+      "resolved": "synthgenusd12c synthspeciescc78",
+      "path": "synthgenusd12c synthspeciescc78"
+    },
+    {
+      "query": "Synthgenus2df6 synthspeciesef03",
+      "resolved": "synthgenus2df6 synthspeciesef03",
+      "path": "synthgenus2df6 synthspeciesef03"
+    },
+    {
+      "query": "Synthgenuscb70 synthspecies9d64",
+      "resolved": "synthgenuscb70 synthspecies9d64",
+      "path": "synthgenuscb70 synthspecies9d64"
+    },
+    {
+      "query": "Synthgenusd9f8 synthspecies09ec",
+      "resolved": "synthgenusd9f8 synthspecies09ec",
+      "path": "synthgenusd9f8 synthspecies09ec"
+    },
+    {
+      "query": "Synthgenus0adf synthspeciesc8b7",
+      "resolved": "synthgenus0adf synthspeciesc8b7",
+      "path": "synthgenus0adf synthspeciesc8b7"
+    },
+    {
+      "query": "Synthgenus7d5e synthspecies772b",
+      "resolved": "synthgenus7d5e synthspecies772b",
+      "path": "synthgenus7d5e synthspecies772b"
+    },
+    {
+      "query": "Synthgenusf256 synthspecies0871",
+      "resolved": "synthgenusf256 synthspecies0871",
+      "path": "synthgenusf256 synthspecies0871"
+    },
+    {
+      "query": "Synthgenus8c76 synthspeciese92b",
+      "resolved": "synthgenus8c76 synthspeciese92b",
+      "path": "synthgenus8c76 synthspeciese92b"
+    },
+    {
+      "query": "Synthgenus6417 synthspeciesc55d",
+      "resolved": "synthgenus6417 synthspeciesc55d",
+      "path": "synthgenus6417 synthspeciesc55d"
+    },
+    {
+      "query": "Synthgenusbb10 synthspeciesc7cc",
+      "resolved": "synthgenusbb10 synthspeciesc7cc",
+      "path": "synthgenusbb10 synthspeciesc7cc"
+    },
+    {
+      "query": "Synthgenus1b4e synthspecies8807",
+      "resolved": "synthgenus1b4e synthspecies8807",
+      "path": "synthgenus1b4e synthspecies8807"
+    },
+    {
+      "query": "Synthgenus3317 synthspeciese70a",
+      "resolved": "synthgenus3317 synthspeciese70a",
+      "path": "synthgenus3317 synthspeciese70a"
+    },
+    {
+      "query": "Synthgenus5d3c synthspecies88df",
+      "resolved": "synthgenus5d3c synthspecies88df",
+      "path": "synthgenus5d3c synthspecies88df"
+    },
+    {
+      "query": "Synthgenus9dd9 synthspecies2779",
+      "resolved": "synthgenus9dd9 synthspecies2779",
+      "path": "synthgenus9dd9 synthspecies2779"
+    },
+    {
+      "query": "Synthgenusbbaf synthspeciesd206",
+      "resolved": "synthgenusbbaf synthspeciesd206",
+      "path": "synthgenusbbaf synthspeciesd206"
+    },
+    {
+      "query": "Synthgenus5337 synthspeciesf766",
+      "resolved": "synthgenus5337 synthspeciesf766",
+      "path": "synthgenus5337 synthspeciesf766"
+    },
+    {
+      "query": "Synthgenus7026 synthspecies0d99",
+      "resolved": "synthgenus7026 synthspecies0d99",
+      "path": "synthgenus7026 synthspecies0d99"
+    },
+    {
+      "query": "Synthgenus84a7 synthspeciesbd42",
+      "resolved": "synthgenus84a7 synthspeciesbd42",
+      "path": "synthgenus84a7 synthspeciesbd42"
+    },
+    {
+      "query": "Synthgenusece6 synthspecies148b",
+      "resolved": "synthgenusece6 synthspecies148b",
+      "path": "synthgenusece6 synthspecies148b"
+    },
+    {
+      "query": "Synthgenus46af synthspeciesfab5",
+      "resolved": "synthgenus46af synthspeciesfab5",
+      "path": "synthgenus46af synthspeciesfab5"
+    },
+    {
+      "query": "Synthgenusa5cb synthspecies2214",
+      "resolved": "synthgenusa5cb synthspecies2214",
+      "path": "synthgenusa5cb synthspecies2214"
+    },
+    {
+      "query": "Synthgenus5faa synthspeciesbd40",
+      "resolved": "synthgenus5faa synthspeciesbd40",
+      "path": "synthgenus5faa synthspeciesbd40"
+    },
+    {
+      "query": "Synthgenus216b synthspeciesc994",
+      "resolved": "synthgenus216b synthspeciesc994",
+      "path": "synthgenus216b synthspeciesc994"
+    },
+    {
+      "query": "Synthgenusd273 synthspecies1481",
+      "resolved": "synthgenusd273 synthspecies1481",
+      "path": "synthgenusd273 synthspecies1481"
+    },
+    {
+      "query": "Synthgenusd35c synthspecies5b28",
+      "resolved": "synthgenusd35c synthspecies5b28",
+      "path": "synthgenusd35c synthspecies5b28"
+    },
+    {
+      "query": "Synthgenusb6db synthspecies0271",
+      "resolved": "synthgenusb6db synthspecies0271",
+      "path": "synthgenusb6db synthspecies0271"
+    },
+    {
+      "query": "Synthgenus5599 synthspecies89a0",
+      "resolved": "synthgenus5599 synthspecies89a0",
+      "path": "synthgenus5599 synthspecies89a0"
+    },
+    {
+      "query": "Synthgenus3051 synthspeciesfb42",
+      "resolved": "synthgenus3051 synthspeciesfb42",
+      "path": "synthgenus3051 synthspeciesfb42"
+    },
+    {
+      "query": "Synthgenusb067 synthspecies68f6",
+      "resolved": "synthgenusb067 synthspecies68f6",
+      "path": "synthgenusb067 synthspecies68f6"
+    },
+    {
+      "query": "Synthgenusf202 synthspecies0ad5",
+      "resolved": "synthgenusf202 synthspecies0ad5",
+      "path": "synthgenusf202 synthspecies0ad5"
+    },
+    {
+      "query": "Synthgenus9fa5 synthspeciesc847",
+      "resolved": "synthgenus9fa5 synthspeciesc847",
+      "path": "synthgenus9fa5 synthspeciesc847"
+    }
+  ],
+  "integrity_pass": true,
+  "notes": "Old synonym search resolves to canonical accepted name without erasing historical evidence edges.",
+  "gate": "SYNONYM_GRAPH_INTEGRITY_PASS",
+  "pass": true
+}

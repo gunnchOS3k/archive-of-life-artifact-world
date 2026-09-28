@@ -1,0 +1,62 @@
+{
+  "algorithm": "sha256",
+  "links": [
+    {
+      "name": "raw:col_fixture",
+      "role": "raw_source",
+      "present": true,
+      "sha256": "4a3ed79f24e52ac623fecceff72fab055a1f6c937c0a5c19574c5a0413a25074",
+      "ok": true,
+      "detail": "match"
+    },
+    {
+      "name": "normalized:col_fixture",
+      "role": "normalized_export",
+      "present": true,
+      "sha256": "50157153a10e0c9a50517d2fba76a0ed8db98be9c513af4bd0a8653ae47719dd",
+      "ok": true,
+      "detail": "match"
+    },
+    {
+      "name": "science_db",
+      "role": "canonical_science_db",
+      "present": false,
+      "sha256": null,
+      "ok": true,
+      "detail": "absent"
+    },
+    {
+      "name": "search_index",
+      "role": "search_index",
+      "present": false,
+      "sha256": null,
+      "ok": true,
+      "detail": "absent"
+    },
+    {
+      "name": "offline_pack",
+      "role": "offline_pack",
+      "present": false,
+      "sha256": null,
+      "ok": true,
+      "detail": "absent"
+    },
+    {
+      "name": "manifest",
+      "role": "manifest",
+      "present": true,
+      "sha256": "d24be3f9658f0ad582e1eebfc932a8dd176022f97262e387362f8f7507f1f785",
+      "ok": true,
+      "detail": "match"
+    }
+  ],
+  "corruption_test": {
+    "algorithm": "sha256",
+    "baseline": "6eb09fb4ae174db3d0b22cdb152055ada040cb4f924a7a74059233eee9abd6c7",
+    "tampered": "56cf48f2f6f4de1f4729afaae9fe4496da3a235bf475becb8dd05f6433db6a89",
+    "detected": true,
+    "pass": true
+  },
+  "end_to_end_pass": true,
+  "source_version_traceability_pass": true
+}

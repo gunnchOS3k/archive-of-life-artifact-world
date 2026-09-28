@@ -1,0 +1,23 @@
+{
+  "count": 1,
+  "conflicts": [
+    {
+      "archive_taxon_id": "aol:taxon:5efc275989777320a00e",
+      "field": "rank",
+      "scientific_name": "Synthgenus7dca synthspeciesb91e",
+      "assertions": [
+        {
+          "source": "col",
+          "source_version": "synthetic-1",
+          "value": "species"
+        },
+        {
+          "source": "gbif",
+          "source_version": "synthetic-1",
+          "value": "genus"
+        }
+      ],
+      "human_review_required": true
+    }
+  ]
+}

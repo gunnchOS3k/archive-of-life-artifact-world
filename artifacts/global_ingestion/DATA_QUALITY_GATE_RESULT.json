@@ -1,0 +1,56 @@
+{
+  "dimensions": {
+    "identity_completeness": {
+      "missing": 0,
+      "pass": true
+    },
+    "provenance": {
+      "missing": 0,
+      "pass": true
+    },
+    "license_citation": {
+      "missing_license": 0,
+      "missing_citation": 0,
+      "pass": true,
+      "unknown_allowed": true
+    },
+    "rank_validity": {
+      "invalid": 0,
+      "pass": true
+    },
+    "lineage_integrity": {
+      "pass": true,
+      "note": "lineage optional at T0"
+    },
+    "synonym_graph_validity": {
+      "pass": true
+    },
+    "temporal_validity": {
+      "pass": true
+    },
+    "coordinate_validity": {
+      "pass": true
+    },
+    "duplicate_rate": {
+      "pass": true
+    },
+    "conflict_rate": {
+      "pass": true
+    },
+    "unknown_field_rate": {
+      "rate": 0.0,
+      "pass": true
+    },
+    "mock_fixture_contamination": {
+      "count": 2502,
+      "pass": true,
+      "note": "synthetic allowed only when labeled; never counts as source-verified"
+    }
+  },
+  "pass_gate": true,
+  "mock_fixture_contamination": 2502,
+  "unknown_field_rate": 0.0,
+  "notes": "Unknown is counted, not coerced to zero.",
+  "gate": "DATA_QUALITY_GATES_PASS",
+  "pass": true
+}

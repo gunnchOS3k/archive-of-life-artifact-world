@@ -1,0 +1,28 @@
+{
+  "program": "ARCHIVE_GLOBAL_KNOWLEDGE_INGESTION_PROGRAM",
+  "generatedAt": "2026-09-28T20:13:16Z",
+  "liveMainSha": "03d734453f040e3081e763277e2c15aa62ef095e",
+  "promptAuthoringMain": "03d734453f040e3081e763277e2c15aa62ef095e",
+  "shaMatchPrompt": true,
+  "programBranch": "program/global-knowledge-ingestion-v1",
+  "programHead": "03d734453f040e3081e763277e2c15aa62ef095e",
+  "worktree": "/Users/gunnchos/Downloads/gunnchos-7gc-research-product-spine/repos/archive-of-life-artifact-world/.worktrees/global-knowledge-ingestion-v1",
+  "dirtyOwnerTreesPreserved": true,
+  "ownerDirtyBranchLeftUntouched": "release/v1-in-app-feedback",
+  "architecturePreserve": [
+    "data-pipeline/",
+    "ScientificIngestionService",
+    "ArchiveDex",
+    "Time Atlas",
+    "Global Coverage Matrix",
+    "provenance / mock-data firewalls",
+    "offline packs"
+  ],
+  "scientificTruthDefaults": {
+    "GLOBAL_DATA_COMPLETE": false,
+    "ALL_SPECIES_INGESTED": false,
+    "GLOBAL_KNOWN_TAXON_INDEX_COMPLETE_FOR_SNAPSHOT": false,
+    "ALL_CATALOGUED_TAXA_INGESTED_FOR_SNAPSHOT": false
+  },
+  "notes": "Baseline captured before global ingestion engineering mutations. External scientific snapshots not present."
+}

@@ -1,0 +1,21 @@
+{
+  "record_count": 2500,
+  "build_ms": 19.993499998236075,
+  "exact_p50_ms": 0.00020800507627427578,
+  "exact_p95_ms": 0.0005420006345957518,
+  "prefix_p50_ms": 0.0779999973019585,
+  "synonym_hits": 100,
+  "partition_count": 1,
+  "bootstrap_bytes": 512228,
+  "partition_bytes": 567561,
+  "architecture": {
+    "global": "science/search index on disk",
+    "partitioned_client": "5000-record partitions",
+    "bootstrap": "lightweight name/id map",
+    "forbidden": "full corpus as one frontend JS object"
+  },
+  "pass_gate": true,
+  "notes": "Index supports exact, synonym, prefix, taxon ID, rank, time, extant/extinct, source facets.",
+  "gate": "SEARCH_INDEX_GENERATION_PASS",
+  "pass": true
+}

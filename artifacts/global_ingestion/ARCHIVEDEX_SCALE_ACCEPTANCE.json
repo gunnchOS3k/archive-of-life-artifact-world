@@ -1,0 +1,22 @@
+{
+  "gate": "ARCHIVEDEX_ONE_MILLION_INDEX_USABLE_AUTOMATION_PASS",
+  "pass": true,
+  "requirements": {
+    "paginated_virtualized": true,
+    "search_abstraction": true,
+    "progressive_reveal": true,
+    "lazy_evidence_panels": true,
+    "abort_stale_searches": true,
+    "loading_empty_error_degraded": true,
+    "synonym_resolution": true,
+    "stable_deep_links": true,
+    "synthetic_index_tests": [
+      "100k",
+      "1M"
+    ],
+    "no_thousands_dom_nodes": true
+  },
+  "implementation": "src/services/globalIngestion/archiveDexScale.ts",
+  "note": "Automated technical gate, not human usability approval.",
+  "status": "PASS_WITH_EVIDENCE"
+}
