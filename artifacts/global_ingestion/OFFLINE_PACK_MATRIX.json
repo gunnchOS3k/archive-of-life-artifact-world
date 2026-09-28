@@ -1,0 +1,65 @@
+{
+  "packs": [
+    {
+      "pack_id": "hero_taxa",
+      "snapshot_set": "gkip-2026-09-28",
+      "records": 100,
+      "uncompressed_bytes": 65826,
+      "compressed_bytes": 3924,
+      "sha256": "c6582e76feb1a3e72bad2db2d0c40c397ddab6d5f2fc97e0563e301f8468a223",
+      "dependencies": [],
+      "licenses": [
+        "synthetic-fixture"
+      ],
+      "generated_at": "2026-09-28T20:24:47Z",
+      "axis": "hero_taxa",
+      "tier": "HOT",
+      "delta": {
+        "update": "replace_pack",
+        "previous": null
+      }
+    },
+    {
+      "pack_id": "taxonomic_group_slice",
+      "snapshot_set": "gkip-2026-09-28",
+      "records": 2500,
+      "uncompressed_bytes": 1637020,
+      "compressed_bytes": 80532,
+      "sha256": "02e72f1573d72c9a2b899dc33af4f9332975d1668b4d5423b708be05584911aa",
+      "dependencies": [
+        "hero_taxa"
+      ],
+      "licenses": [
+        "mixed"
+      ],
+      "generated_at": "2026-09-28T20:24:47Z",
+      "axis": "taxonomic_group",
+      "tier": "WARM",
+      "delta": {
+        "update": "replace_pack",
+        "previous": null
+      }
+    },
+    {
+      "pack_id": "global_cold_pointer",
+      "snapshot_set": "gkip-2026-09-28",
+      "records": 0,
+      "uncompressed_bytes": 130,
+      "compressed_bytes": 156,
+      "sha256": "b9fcaef21ba10e7193dc1a758cdeacf348c30dc1b2e2e42c455ed89924615097",
+      "dependencies": [],
+      "licenses": [],
+      "generated_at": "2026-09-28T20:24:47Z",
+      "axis": "geologic_interval",
+      "tier": "COLD",
+      "delta": {
+        "update": "pointer_only"
+      }
+    }
+  ],
+  "pass_gate": true,
+  "global_corpus_bundled_into_release": false,
+  "notes": "Deterministic packs with checksums; global corpus stays COLD.",
+  "gate": "OFFLINE_PACK_GENERATION_PASS",
+  "pass": true
+}

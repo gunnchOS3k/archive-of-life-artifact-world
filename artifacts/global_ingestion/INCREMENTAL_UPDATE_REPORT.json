@@ -1,0 +1,21 @@
+{
+  "ops": 3,
+  "resulting_count": 50,
+  "full_rebuild_count": 50,
+  "result_hash": "830fe890cdeaba54df565ee2b06021b9bd67d11455f1288263aa80599ea3fb09",
+  "full_rebuild_hash": "830fe890cdeaba54df565ee2b06021b9bd67d11455f1288263aa80599ea3fb09",
+  "equal": true,
+  "invalidated_indexes": [
+    "search_bootstrap",
+    "search_partitions"
+  ],
+  "invalidated_packs": [
+    "taxonomic_group_slice",
+    "hero_taxa"
+  ],
+  "rollback_snapshot": "snapshot_a",
+  "pass_gate": true,
+  "notes": "Deterministic patch set; rollback restores snapshot A.",
+  "gate": "INCREMENTAL_EQUALS_FULL_REBUILD_PASS",
+  "pass": true
+}

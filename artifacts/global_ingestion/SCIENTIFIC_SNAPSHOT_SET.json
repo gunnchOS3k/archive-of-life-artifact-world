@@ -1,0 +1,66 @@
+{
+  "snapshot_set_id": "gkip-2026-09-28",
+  "generated_at": "2026-09-28T20:24:47Z",
+  "components": [
+    {
+      "name": "raw:col_fixture",
+      "path": "/Users/gunnchos/Downloads/gunnchos-7gc-research-product-spine/repos/archive-of-life-artifact-world/.worktrees/global-knowledge-ingestion-v1/artifacts/global_ingestion/_work/engineering_fixture.jsonl",
+      "sha256": "4a3ed79f24e52ac623fecceff72fab055a1f6c937c0a5c19574c5a0413a25074",
+      "bytes": 892442,
+      "present": true,
+      "role": "raw_source"
+    },
+    {
+      "name": "normalized:col_fixture",
+      "path": "/Users/gunnchos/Downloads/gunnchos-7gc-research-product-spine/repos/archive-of-life-artifact-world/.worktrees/global-knowledge-ingestion-v1/artifacts/global_ingestion/_work/normalized/clean/col_eng-fixture.jsonl",
+      "sha256": "50157153a10e0c9a50517d2fba76a0ed8db98be9c513af4bd0a8653ae47719dd",
+      "bytes": 2599884,
+      "present": true,
+      "role": "normalized_export"
+    },
+    {
+      "name": "science_db",
+      "path": null,
+      "sha256": null,
+      "bytes": null,
+      "present": false,
+      "role": "canonical_science_db"
+    },
+    {
+      "name": "search_index",
+      "path": null,
+      "sha256": null,
+      "bytes": null,
+      "present": false,
+      "role": "search_index"
+    },
+    {
+      "name": "offline_pack",
+      "path": null,
+      "sha256": null,
+      "bytes": null,
+      "present": false,
+      "role": "offline_pack"
+    },
+    {
+      "name": "manifest",
+      "path": "/Users/gunnchos/Downloads/gunnchos-7gc-research-product-spine/repos/archive-of-life-artifact-world/.worktrees/global-knowledge-ingestion-v1/artifacts/global_ingestion/SCIENTIFIC_SNAPSHOT_SET.json",
+      "sha256": "d24be3f9658f0ad582e1eebfc932a8dd176022f97262e387362f8f7507f1f785",
+      "bytes": 2924,
+      "present": true,
+      "role": "manifest"
+    }
+  ],
+  "global_data_complete": false,
+  "all_species_ingested": false,
+  "notes": "Placeholder set until approved external snapshots are ingested.",
+  "GLOBAL_DATA_COMPLETE": false,
+  "ALL_SPECIES_INGESTED": false,
+  "GLOBAL_KNOWN_TAXON_INDEX_COMPLETE_FOR_SNAPSHOT": false,
+  "ALL_CATALOGUED_TAXA_INGESTED_FOR_SNAPSHOT": false,
+  "ALL_FOSSIL_TAXA_INGESTED_FOR_SNAPSHOT": false,
+  "GLOBAL_OCCURRENCE_COVERAGE_COMPLETE": false,
+  "GLOBAL_DEEP_TIME_COVERAGE_COMPLETE": false,
+  "GLOBAL_MEDIA_RIGHTS_COMPLETE": false,
+  "HUMAN_SCIENTIFIC_REVIEW_COMPLETE": false
+}

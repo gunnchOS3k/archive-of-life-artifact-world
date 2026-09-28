@@ -1,0 +1,54 @@
+{
+  "typecheck": {
+    "exit": 0,
+    "elapsedSec": 2
+  },
+  "test": {
+    "exit": 0,
+    "elapsedSec": 10
+  },
+  "build": {
+    "exit": 0,
+    "elapsedSec": 3
+  },
+  "audit_data": {
+    "exit": 1,
+    "elapsedSec": 1,
+    "note": "pre-existing main release-floor data_quality_counts failure"
+  },
+  "audit_coverage": {
+    "exit": 1,
+    "elapsedSec": 0,
+    "note": "pre-existing main biome/mock release-gate failures"
+  },
+  "audit_archivedex": {
+    "exit": 0,
+    "elapsedSec": 1
+  },
+  "audit_time": {
+    "exit": 0,
+    "elapsedSec": 0
+  },
+  "audit_provenance": {
+    "exit": 0,
+    "elapsedSec": 0
+  },
+  "audit_claim_firewall": {
+    "exit": 0,
+    "elapsedSec": 1,
+    "note": "rechecked after docs wording"
+  },
+  "audit_mock_firewall": {
+    "exit": 0,
+    "elapsedSec": 0
+  },
+  "pipeline_all": {
+    "exit": 0,
+    "elapsedSec": 4,
+    "note": "rechecked after ruff fixes"
+  },
+  "rc_digital_suite": {
+    "exit": 0,
+    "elapsedSec": 4
+  }
+}

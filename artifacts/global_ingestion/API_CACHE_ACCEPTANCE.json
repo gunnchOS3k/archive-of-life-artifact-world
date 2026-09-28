@@ -1,0 +1,25 @@
+{
+  "gate": "API_CACHE_PASS",
+  "pass": true,
+  "requirements": {
+    "cache_key_includes": [
+      "provider",
+      "endpoint/query",
+      "parameters",
+      "source_version",
+      "schema_version",
+      "transform_version"
+    ],
+    "ttl": true,
+    "stale_while_revalidate": true,
+    "negative_cache": true,
+    "retries_backoff": true,
+    "rate_limit_awareness": true,
+    "cache_origin_provenance": true,
+    "fixture_fallback_never_claims_live": true,
+    "corruption_handling": true,
+    "version_invalidation": true
+  },
+  "implementation": "src/services/ingestion/ingestCache.ts + src/services/globalIngestion/apiCache.ts",
+  "status": "PASS_WITH_EVIDENCE"
+}

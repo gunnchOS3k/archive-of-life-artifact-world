@@ -1,0 +1,17 @@
+{
+  "hot_records": 100,
+  "warm_records": 2500,
+  "cold_records": 2500,
+  "hot_bytes": 3924,
+  "warm_bytes": 80532,
+  "cold_bytes": 156,
+  "pass_gate": true,
+  "tradeoffs": [
+    "HOT favors tiny expedition/hero latency on device",
+    "WARM balances offline lessons/regions vs download size",
+    "COLD holds warehouse/source snapshots outside release artifacts",
+    "Never accidentally ship global corpus into Android/web release"
+  ],
+  "gate": "DATA_PARTITIONING_PASS",
+  "pass": true
+}
