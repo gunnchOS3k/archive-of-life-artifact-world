@@ -47,3 +47,8 @@ artifacts/digital_engineering_exhaustion/stream_c/quarantine/unclear_third_party
 !artifacts/digital_engineering_exhaustion/stream_c/quarantine/unclear_third_party/.gitkeep
 
 node_modules
+
+# GKIP ephemeral synthetic/work outputs
+artifacts/global_ingestion/_work/
+artifacts/global_ingestion/checkpoints/
+artifacts/global_ingestion/normalized/

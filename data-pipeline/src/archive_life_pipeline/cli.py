@@ -3,6 +3,7 @@ from __future__ import annotations
 import argparse
 import json
 import sys
+from pathlib import Path
 
 from archive_life_pipeline.audit import run_pipeline_audit
 from archive_life_pipeline.duckdb_runner import run_sql_pipeline
@@ -37,6 +38,48 @@ def main() -> None:
     sub.add_parser("source-list", help="List source import status")
     sub.add_parser("source-validate", help="Validate source configuration")
     sub.add_parser("source-audit", help="Audit source imports and write status JSON")
+
+    from archive_life_pipeline.global_ingestion.bulk_import import SUPPORTED_SOURCES
+
+    bulk = sub.add_parser(
+        "bulk-import",
+        help="Streaming bulk import of approved local source snapshots",
+    )
+    bulk.add_argument("source", choices=[*SUPPORTED_SOURCES, "all"])
+    bulk.add_argument("--input", type=Path, default=None)
+    bulk.add_argument("--snapshot-id", default="local-unapproved")
+    bulk.add_argument("--source-version", default="unknown")
+    bulk.add_argument("--chunk-size", type=int, default=5_000)
+    bulk.add_argument("--resume", action="store_true")
+    bulk.add_argument(
+        "--checkpoint-dir",
+        type=Path,
+        default=Path("artifacts/global_ingestion/checkpoints"),
+    )
+    bulk.add_argument(
+        "--output-dir",
+        type=Path,
+        default=Path("artifacts/global_ingestion/normalized"),
+    )
+    bulk.add_argument("--max-records", type=int, default=None)
+    bulk.add_argument("--dry-run", action="store_true")
+
+    gkip = sub.add_parser(
+        "run-global-ingestion-program",
+        help="Run Global Knowledge Ingestion engineering gates and write artifacts",
+    )
+    gkip.add_argument(
+        "--artifact-dir",
+        type=Path,
+        default=None,
+        help="Defaults to <repo>/artifacts/global_ingestion",
+    )
+    gkip.add_argument("--skip-scale", action="store_true")
+    gkip.add_argument(
+        "--scale-tiers",
+        default="100000,1000000,5000000",
+        help="Comma-separated synthetic scale tiers",
+    )
 
     args = parser.parse_args()
 
@@ -122,6 +165,55 @@ def main() -> None:
         write_status_reports()
         audit = audit_sources()
         print(f"Imported: {audit['importedCount']} · Blocked: {audit['blockedCount']}")
+        sys.exit(0)
+
+    if args.command == "bulk-import":
+        from archive_life_pipeline.global_ingestion.bulk_import import (
+            BulkImportOptions,
+            bulk_import,
+            bulk_import_all,
+        )
+
+        opts = BulkImportOptions(
+            source=args.source,
+            input_path=args.input,
+            snapshot_id=args.snapshot_id,
+            source_version=args.source_version,
+            chunk_size=args.chunk_size,
+            resume=args.resume,
+            checkpoint_dir=args.checkpoint_dir,
+            output_dir=args.output_dir,
+            max_records=args.max_records,
+            dry_run=args.dry_run,
+        )
+        if args.source == "all":
+            results = bulk_import_all(opts)
+            for r in results:
+                print(json.dumps(r.to_dict()))
+            blocked = sum(1 for r in results if r.status == "BLOCKED_EXTERNAL_DATA")
+            print(
+                f"\nCompleted={len(results) - blocked} blocked_external={blocked}",
+                file=sys.stderr,
+            )
+            sys.exit(0)
+        result = bulk_import(opts)
+        print(json.dumps(result.to_dict(), indent=2))
+        sys.exit(0 if result.completed or result.status == "BLOCKED_EXTERNAL_DATA" else 1)
+
+    if args.command == "run-global-ingestion-program":
+        from archive_life_pipeline.global_ingestion.program_runner import run_program
+
+        tiers = [int(x) for x in str(args.scale_tiers).split(",") if x.strip()]
+        artifact_dir = args.artifact_dir
+        if artifact_dir is None:
+            # cli.py -> archive_life_pipeline -> src -> data-pipeline -> repo
+            artifact_dir = Path(__file__).resolve().parents[3] / "artifacts" / "global_ingestion"
+        status = run_program(
+            artifact_dir=artifact_dir,
+            run_scale=not args.skip_scale,
+            scale_tiers=tiers,
+        )
+        print(json.dumps(status, indent=2))
         sys.exit(0)
 
 
