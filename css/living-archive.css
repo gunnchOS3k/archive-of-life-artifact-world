@@ -802,6 +802,20 @@ html.a11y-reduced-motion body.vxp4-living-archive *::after {
   }
 }
 
+body.vxp4-living-archive .portal-return {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  min-width: 44px;
+  padding: 0 0.75rem;
+  color: inherit;
+  text-decoration: underline;
+}
+body.vxp4-living-archive .portal-return:focus-visible {
+  outline: 3px solid currentColor;
+  outline-offset: 2px;
+}
+
 @media (prefers-reduced-motion: reduce) {
   body.vxp4-living-archive .la-brand-seal,
   body.vxp4-living-archive .la-atmosphere::before,
