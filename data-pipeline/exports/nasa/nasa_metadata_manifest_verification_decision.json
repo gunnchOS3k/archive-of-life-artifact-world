@@ -1,0 +1,82 @@
+{
+  "decisionId": "nasa-manifest-review-2026-10-23",
+  "decidedAt": "2026-10-23T05:40:00Z",
+  "historicalManifest": {
+    "path": "data-pipeline/exports/nasa/nasa_metadata_manifest.json",
+    "preserved": true,
+    "bytesRewritten": false,
+    "generatedAt": "2026-07-05T03:41:38Z",
+    "byteLength": 705,
+    "gitBlobSha1": "2111519d4b08551523fc4c544d2d6bcaa08f9eb1",
+    "sha256": "f6d1c4d83b3888b1cd9fd7cd1b4fed11dbd317b857d461666f6a01ea3b3265b6",
+    "historicalClaims": {
+      "recordCount": 21,
+      "verifiedRecordCount": 21,
+      "verificationMode": "source_verified",
+      "dataMode": "real_metadata",
+      "scope": "metadata_only",
+      "measurementDataMode": "not_ingested"
+    }
+  },
+  "currentVerificationDecision": {
+    "verificationMode": "not_source_verified",
+    "sourceVerified": false,
+    "verifiedRecordCount": 0,
+    "appliesToUnverifiedRecordCount": 21,
+    "dataMode": "fetched_metadata_unreviewed",
+    "scope": "metadata_only"
+  },
+  "evidence": {
+    "conclusion": "The 21 is a fetched length copied into verifiedRecordCount. It is not an independent verification.",
+    "writer": {
+      "path": "data-pipeline/src/archive_life_pipeline/nasa_ingest.py",
+      "commit": "97c7deab396bbf560f87cf41498be42db504fee0",
+      "behavior": "When dataMode was real_metadata, verificationMode was set to source_verified and verifiedRecordCount was set to record_count. record_count was len(EONET events) plus len(CMR collections) plus 1 for a POWER response."
+    },
+    "supportingExports": [
+      {
+        "path": "data-pipeline/exports/nasa/eonet_events.json",
+        "sha256": "890b787a0b2e9db81529e6efdabb2fb2be4371cec1df4d4b17501091318324a4",
+        "retrievedAt": "2026-07-05T03:41:37Z",
+        "fetchedCount": 20,
+        "licenseField": false,
+        "checksumField": false,
+        "reviewField": false
+      },
+      {
+        "path": "data-pipeline/exports/nasa/cmr_hls_collections.json",
+        "sha256": "c5fcad3b57fb5f80701e589687aaeff3ac1e09298f16083c4b3daa30005fb07e",
+        "retrievedAt": "2026-07-05T03:41:38Z",
+        "fetchedCount": 0,
+        "note": "Empty collections array labeled REAL NASA METADATA."
+      },
+      {
+        "path": "data-pipeline/exports/nasa/power_climate_savanna.json",
+        "sha256": "1d970c3ddea60a1d0d144cedc978a611f65b07120d69a9cccd53c2034ee838ae",
+        "retrievedAt": "2026-07-05T03:41:38Z",
+        "fetchedCount": 1,
+        "note": "Writer adds 1 for any successful POWER response. The file has no per-record review."
+      }
+    ],
+    "fetchedCountSum": 21,
+    "relatedUnchangedCopies": [
+      {
+        "path": "public/data/earth/nasa_metadata_cache.json",
+        "sha256": "f6d1c4d83b3888b1cd9fd7cd1b4fed11dbd317b857d461666f6a01ea3b3265b6",
+        "note": "Byte-identical to the historical manifest. Not rewritten by this review."
+      },
+      {
+        "path": "data-pipeline/exports/nasa/import_status.json",
+        "sha256": "085f224820462c2833ce432da8ebc7278e7656c9e0fe942669e5e3b9169e3635",
+        "note": "Still copies verifiedRecordCount 21 and dataMode source_verified. Not rewritten by this review. Its checksum is the manifest sha256, which hashes the claim file rather than proving each record."
+      }
+    ],
+    "gap": "No per-record license review, second-source check, or verification artifact separate from the fetch length. docs/TEMPORAL_EARTH_MAPS.md requires an approved license review before source_verified. That review is not in these exports."
+  },
+  "retrieval": {
+    "performed": false,
+    "url": null,
+    "responseSha256": null,
+    "reason": "Not permitted. Before this review, df -h / reported Avail 12Gi (12680000 KiB blocks, about 12.1 GiB), below the 18 GiB reserve, so a download would not leave disk above the reserve. No request was sent. The repo names public NASA endpoints and product citations, but it does not document a specific permitted license for a new download: docs/product-quality/PROVIDER_FEDERATION_STATUS.md lists the NASA license only as \"NASA open\", and docs/NASA_EARTH_SYSTEMS_INTEGRATION.md lists citations without redistribution terms."
+  }
+}
