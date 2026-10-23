@@ -13,7 +13,12 @@ export interface ValidationResult {
   can_claim_source_verified: boolean;
 }
 
-const PLACEHOLDER_IDS = new Set(['', 'unknown', 'n/a', 'na', 'null', 'undefined', '0', 'TODO', 'tbd']);
+/** Compared after trim + toLowerCase, so listed tokens such as TODO must be lowercase. */
+const PLACEHOLDER_IDS = new Set(
+  ['', 'unknown', 'n/a', 'na', 'null', 'undefined', '0', 'TODO', 'tbd'].map((token) =>
+    token.toLowerCase(),
+  ),
+);
 
 /** Paths that field evidence may bind to on a ScientificRecordSnapshot. */
 export const KNOWN_FIELD_EVIDENCE_PATHS = new Set([
