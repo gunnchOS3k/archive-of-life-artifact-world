@@ -90,11 +90,13 @@ export class CoverageDashboardUI {
       biasReport
     );
 
-    const verifiedCount = stats.representedTaxa - stats.mockSampleCount;
+    // representedTaxa minus mock rows is still a sample count. It is not a
+    // scientifically verified record count and it is not release eligibility.
+    const nonMockTaxa = stats.representedTaxa - stats.mockSampleCount;
 
     this.body.innerHTML = `
       <div class="coverage-dashboard">
-        <p class="coverage-note">Global Coverage Matrix — sample snapshot <code>${manifest.snapshotId}</code>. <strong>Mock/sample metrics labeled — not scientific coverage.</strong></p>
+        <p class="coverage-note">Global Coverage Matrix — sample snapshot <code>${manifest.snapshotId}</code>. <strong>Non-mock counts are not scientifically verified records. Scientific review and release eligibility stay external.</strong></p>
         <div class="coverage-grid">
           ${this.statCard('Represented taxa', stats.representedTaxa)}
           ${this.statCard('Searchable (T1+)', stats.searchableTaxa)}
@@ -104,9 +106,10 @@ export class CoverageDashboardUI {
           ${this.statCard('Artifact-ready (T4+)', stats.artifactReadyTaxa)}
           ${this.statCard('Questable (T5+)', stats.questableTaxa)}
           ${this.statCard('Hero (T6)', stats.heroTaxa)}
-          ${this.statCard('Source-verified taxa', verifiedCount)}
+          ${this.statCard('Non-mock taxa', nonMockTaxa)}
           ${this.statCard('Mock/sample (labeled)', stats.mockSampleCount)}
-          ${this.statCard('Release-eligible', verifiedCount)}
+          ${this.statCard('Scientifically verified', 'EXTERNAL')}
+          ${this.statCard('Release-eligible', 'EXTERNAL')}
           ${this.statCard('Blocked external sources', sourceReadiness?.summary?.blocked ?? '—')}
         </div>
         <section class="coverage-section">
