@@ -82,12 +82,22 @@ def verified_count_for_nasa_manifest(
     record_count: int,
     explicit_verified: int | None = None,
 ) -> int:
-    """sample_fallback does not inherit record_count. A reviewed count is kept only when explicit."""
+    """Fetch length is not a reviewed count. explicit_verified is the only reviewed count."""
+    del record_count
     if data_mode == "sample_fallback":
         return 0
     if isinstance(explicit_verified, int):
         return explicit_verified
-    return record_count
+    return 0
+
+
+def nasa_verification_mode(data_mode: str) -> str:
+    """A nonzero payload length does not make verificationMode source_verified."""
+    if data_mode == "cached_nasa_snapshot":
+        return "mixed"
+    if data_mode == "real_metadata":
+        return "real_metadata"
+    return "sample_fallback"
 
 
 def ingest_nasa_metadata() -> dict:
@@ -158,13 +168,7 @@ def ingest_nasa_metadata() -> dict:
     manifest = {
         "generatedAt": _now(),
         "dataMode": data_mode,
-        "verificationMode": (
-            "source_verified"
-            if data_mode == "real_metadata"
-            else "mixed"
-            if data_mode == "cached_nasa_snapshot"
-            else "sample_fallback"
-        ),
+        "verificationMode": nasa_verification_mode(data_mode),
         "scope": "metadata_only",
         "measurementDataMode": "not_ingested",
         "layers": layers,
