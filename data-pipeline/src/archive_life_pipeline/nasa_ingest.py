@@ -77,6 +77,19 @@ def fetch_power_climate(lat: float = -2.0, lon: float = 34.0) -> tuple[dict, str
     return data, checksum
 
 
+def verified_count_for_nasa_manifest(
+    data_mode: str,
+    record_count: int,
+    explicit_verified: int | None = None,
+) -> int:
+    """sample_fallback does not inherit record_count. A reviewed count is kept only when explicit."""
+    if data_mode == "sample_fallback":
+        return 0
+    if isinstance(explicit_verified, int):
+        return explicit_verified
+    return record_count
+
+
 def ingest_nasa_metadata() -> dict:
     """Fetch public NASA metadata or write labeled sample fallback exports."""
     NASA_EXPORT.mkdir(parents=True, exist_ok=True)
@@ -156,7 +169,7 @@ def ingest_nasa_metadata() -> dict:
         "measurementDataMode": "not_ingested",
         "layers": layers,
         "recordCount": record_count,
-        "verifiedRecordCount": record_count,
+        "verifiedRecordCount": verified_count_for_nasa_manifest(data_mode, record_count),
     }
     manifest_cs = _write_json(NASA_EXPORT / "nasa_metadata_manifest.json", manifest)
     NASA_PUBLIC.parent.mkdir(parents=True, exist_ok=True)
@@ -169,7 +182,7 @@ def ingest_nasa_metadata() -> dict:
         "checksum": manifest_cs,
         "sourceVersion": "public-api",
         "dataMode": manifest["verificationMode"],
-        "verifiedRecordCount": record_count,
+        "verifiedRecordCount": manifest["verifiedRecordCount"],
         "scope": "metadata_only",
         "measurementDataMode": "not_ingested",
         "layers": layers,
