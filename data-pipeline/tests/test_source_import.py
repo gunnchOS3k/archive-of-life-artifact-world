@@ -3,8 +3,14 @@ import json
 from archive_life_pipeline.paths import EXPORTS_DIR
 from archive_life_pipeline.source_import import (
     SOURCE_SPECS,
+    UNVERIFIED_REGISTRATION_DATA_MODE,
     _read_import_status,
     _record_to_dict,
+    import_col,
+    import_gbif,
+    import_iucn,
+    import_neotoma,
+    import_pbdb,
     list_sources,
     validate_sources,
 )
@@ -104,6 +110,65 @@ def test_source_verified_does_not_copy_record_count_into_verified_count(tmp_path
     assert nasa_missing.record_count == 9
     assert nasa_missing.data_mode == "source_verified"
     assert nasa_missing.verified_record_count == 0
+
+
+def test_local_snapshot_registration_is_not_source_verified(tmp_path, monkeypatch):
+    """SYNTHETIC empty files only. Registration must not be labeled source_verified."""
+    synthetic = {
+        "note": "SYNTHETIC fixture. Not an observation.",
+        "taxa": [],
+        "records": [],
+        "result": [],
+        "data": [],
+    }
+    col_path = tmp_path / "col.json"
+    gbif_path = tmp_path / "gbif.json"
+    pbdb_path = tmp_path / "pbdb.json"
+    neotoma_path = tmp_path / "neotoma.json"
+    for path in (col_path, gbif_path, pbdb_path, neotoma_path):
+        path.write_text(json.dumps(synthetic))
+
+    env = {
+        "COL_SNAPSHOT_PATH": str(col_path),
+        "COL_SOURCE_VERSION": "synthetic",
+        "COL_CITATION": "SYNTHETIC fixture. Not an observation.",
+        "GBIF_DOWNLOAD_PATH": str(gbif_path),
+        "GBIF_CITATION": "SYNTHETIC fixture. Not an observation.",
+        "PBDB_SNAPSHOT_PATH": str(pbdb_path),
+        "PBDB_SOURCE_VERSION": "synthetic",
+        "NEOTOMA_SNAPSHOT_PATH": str(neotoma_path),
+        "NEOTOMA_SOURCE_VERSION": "synthetic",
+        "IUCN_API_TOKEN": "synthetic-not-sent",
+        "IUCN_API_VERSION": "synthetic",
+    }
+    monkeypatch.setattr("archive_life_pipeline.source_import._load_env", lambda: env)
+    monkeypatch.setattr(
+        "archive_life_pipeline.source_import._export_dir",
+        lambda spec: tmp_path / "exports" / spec.snapshot_subdir,
+    )
+    monkeypatch.setattr(
+        "archive_life_pipeline.source_import.SNAPSHOTS_DIR",
+        tmp_path / "snapshots",
+    )
+    monkeypatch.setattr(
+        "archive_life_pipeline.source_import._fetch_iucn_page",
+        lambda _token: ({"result": [], "note": "SYNTHETIC fixture. Not an observation."}, b""),
+    )
+
+    imported = {
+        "col": import_col(),
+        "gbif": import_gbif(),
+        "pbdb": import_pbdb(),
+        "iucn": import_iucn(),
+        "neotoma": import_neotoma(),
+    }
+    assert UNVERIFIED_REGISTRATION_DATA_MODE == "sample_fallback"
+    for source, record in imported.items():
+        assert record.data_mode == "sample_fallback", source
+        assert record.data_mode != "source_verified", source
+        assert record.verified_record_count == 0, source
+        assert record.record_count == 0, source
+        assert record.imported is True, source
 
 
 def test_nasa_cache_is_explicitly_metadata_only():
