@@ -305,6 +305,59 @@ def _write_import_status(spec: SourceImportSpec, payload: dict[str, Any]) -> Non
     _status_file(spec).write_text(json.dumps(payload, indent=2))
 
 
+# import_nasa already uses this when a result is not source_verified.
+UNVERIFIED_REGISTRATION_DATA_MODE = "sample_fallback"
+
+
+def _unverified_registration_status(
+    *,
+    record_count: int,
+    checksum: str,
+    source_version: str,
+    citation: str,
+    extra: dict[str, Any] | None = None,
+) -> dict[str, Any]:
+    """Register a local snapshot or unreviewed fetch without claiming source_verified."""
+    status: dict[str, Any] = {
+        "imported": True,
+        "status": "imported",
+        "recordCount": record_count,
+        "verifiedRecordCount": 0,
+        "checksum": checksum,
+        "sourceVersion": source_version,
+        "citation": citation,
+        "lastImportTime": _now(),
+        "dataMode": UNVERIFIED_REGISTRATION_DATA_MODE,
+    }
+    if extra:
+        status.update(extra)
+    return status
+
+
+def _fetch_iucn_page(token: str) -> tuple[dict[str, Any], bytes]:
+    import httpx
+
+    url = "https://apiv3.iucnredlist.org/api/v3/species/page/0"
+    resp = httpx.get(url, params={"token": token}, timeout=30.0)
+    resp.raise_for_status()
+    body = resp.json()
+    if not isinstance(body, dict):
+        body = {"result": body}
+    return body, resp.content
+
+
+def _fetch_neotoma_sites() -> tuple[dict[str, Any], bytes]:
+    import httpx
+
+    url = "https://api.neotomadb.org/v2.0/data/sites"
+    resp = httpx.get(url, params={"limit": 50}, timeout=30.0)
+    resp.raise_for_status()
+    body = resp.json()
+    if not isinstance(body, dict):
+        body = {"data": body}
+    return body, resp.content
+
+
 def import_col() -> SourceImportRecord:
     spec = SOURCE_SPECS["col"]
     env = _load_env()
@@ -333,17 +386,13 @@ def import_col() -> SourceImportRecord:
     normalized = out_dir / "col_taxa_normalized.json"
     normalized.write_text(json.dumps({"taxa": records, "importedAt": _now()}, indent=2))
     checksum = _sha256(path)
-    status = {
-        "imported": True,
-        "status": "imported",
-        "recordCount": len(records) if isinstance(records, list) else 0,
-        "checksum": checksum,
-        "sourceVersion": env.get("COL_SOURCE_VERSION", "unknown"),
-        "citation": env.get("COL_CITATION", "Catalogue of Life — imported snapshot"),
-        "lastImportTime": _now(),
-        "dataMode": "source_verified",
-        "sourcePath": str(path),
-    }
+    status = _unverified_registration_status(
+        record_count=len(records) if isinstance(records, list) else 0,
+        checksum=checksum,
+        source_version=env.get("COL_SOURCE_VERSION", "unknown"),
+        citation=env.get("COL_CITATION", "Catalogue of Life — imported snapshot"),
+        extra={"sourcePath": str(path)},
+    )
     _write_import_status(spec, status)
     SNAPSHOTS_DIR.mkdir(parents=True, exist_ok=True)
     (SNAPSHOTS_DIR / "col_import_meta.json").write_text(json.dumps(status, indent=2))
@@ -369,16 +418,12 @@ def import_gbif() -> SourceImportRecord:
     out_path = out_dir / "gbif_occurrences_normalized.json"
     out_path.write_text(json.dumps(data, indent=2))
     count = len(data) if isinstance(data, list) else data.get("count", 0)
-    status = {
-        "imported": True,
-        "status": "imported",
-        "recordCount": count if isinstance(count, int) else 0,
-        "checksum": _sha256(path),
-        "sourceVersion": env.get("GBIF_DOWNLOAD_DOI", "unknown"),
-        "citation": env.get("GBIF_CITATION", "GBIF occurrence download"),
-        "lastImportTime": _now(),
-        "dataMode": "source_verified",
-    }
+    status = _unverified_registration_status(
+        record_count=count if isinstance(count, int) else 0,
+        checksum=_sha256(path),
+        source_version=env.get("GBIF_DOWNLOAD_DOI", "unknown"),
+        citation=env.get("GBIF_CITATION", "GBIF occurrence download"),
+    )
     _write_import_status(spec, status)
     return _read_import_status(spec)
 
@@ -390,27 +435,18 @@ def import_iucn() -> SourceImportRecord:
     if not token:
         raise OSError(spec.blocked_message)
 
-    import httpx
-
     out_dir = _export_dir(spec)
     out_dir.mkdir(parents=True, exist_ok=True)
-    url = "https://apiv3.iucnredlist.org/api/v3/species/page/0"
-    resp = httpx.get(url, params={"token": token}, timeout=30.0)
-    resp.raise_for_status()
-    data = resp.json()
+    data, raw = _fetch_iucn_page(token)
     out_path = out_dir / "iucn_species_page0.json"
     out_path.write_text(json.dumps(data, indent=2))
     count = len(data.get("result", []))
-    status = {
-        "imported": True,
-        "status": "imported",
-        "recordCount": count,
-        "checksum": hashlib.sha256(resp.content).hexdigest(),
-        "sourceVersion": env.get("IUCN_API_VERSION", "v3"),
-        "citation": "IUCN Red List of Threatened Species",
-        "lastImportTime": _now(),
-        "dataMode": "source_verified",
-    }
+    status = _unverified_registration_status(
+        record_count=count,
+        checksum=hashlib.sha256(raw).hexdigest(),
+        source_version=env.get("IUCN_API_VERSION", "v3"),
+        citation="IUCN Red List of Threatened Species",
+    )
     _write_import_status(spec, status)
     return _read_import_status(spec)
 
@@ -434,16 +470,12 @@ def import_pbdb() -> SourceImportRecord:
     records = data if isinstance(data, list) else data.get("records", data.get("taxa", []))
     out_path = out_dir / "pbdb_fossils_normalized.json"
     out_path.write_text(json.dumps({"records": records, "importedAt": _now()}, indent=2))
-    status = {
-        "imported": True,
-        "status": "imported",
-        "recordCount": len(records) if isinstance(records, list) else 0,
-        "checksum": _sha256(path),
-        "sourceVersion": env.get("PBDB_SOURCE_VERSION", "unknown"),
-        "citation": "Paleobiology Database",
-        "lastImportTime": _now(),
-        "dataMode": "source_verified",
-    }
+    status = _unverified_registration_status(
+        record_count=len(records) if isinstance(records, list) else 0,
+        checksum=_sha256(path),
+        source_version=env.get("PBDB_SOURCE_VERSION", "unknown"),
+        citation="Paleobiology Database",
+    )
     _write_import_status(spec, status)
     return _read_import_status(spec)
 
@@ -462,39 +494,26 @@ def import_neotoma() -> SourceImportRecord:
         records = data if isinstance(data, list) else data.get("records", [])
         out_path = out_dir / "neotoma_normalized.json"
         out_path.write_text(json.dumps({"records": records}, indent=2))
-        status = {
-            "imported": True,
-            "status": "imported",
-            "recordCount": len(records) if isinstance(records, list) else 0,
-            "checksum": _sha256(Path(path_str)),
-            "sourceVersion": env.get("NEOTOMA_SOURCE_VERSION", "snapshot"),
-            "citation": "Neotoma Paleoecology Database",
-            "lastImportTime": _now(),
-            "dataMode": "source_verified",
-        }
+        status = _unverified_registration_status(
+            record_count=len(records) if isinstance(records, list) else 0,
+            checksum=_sha256(Path(path_str)),
+            source_version=env.get("NEOTOMA_SOURCE_VERSION", "snapshot"),
+            citation="Neotoma Paleoecology Database",
+        )
         _write_import_status(spec, status)
         return _read_import_status(spec)
 
     if api_enabled:
-        import httpx
-
-        url = "https://api.neotomadb.org/v2.0/data/sites"
-        resp = httpx.get(url, params={"limit": 50}, timeout=30.0)
-        resp.raise_for_status()
-        data = resp.json()
+        data, raw = _fetch_neotoma_sites()
         out_path = out_dir / "neotoma_sites_sample.json"
         out_path.write_text(json.dumps(data, indent=2))
         count = len(data.get("data", []))
-        status = {
-            "imported": True,
-            "status": "imported",
-            "recordCount": count,
-            "checksum": hashlib.sha256(resp.content).hexdigest(),
-            "sourceVersion": "api-v2",
-            "citation": "Neotoma Paleoecology Database API",
-            "lastImportTime": _now(),
-            "dataMode": "source_verified",
-        }
+        status = _unverified_registration_status(
+            record_count=count,
+            checksum=hashlib.sha256(raw).hexdigest(),
+            source_version="api-v2",
+            citation="Neotoma Paleoecology Database API",
+        )
         _write_import_status(spec, status)
         return _read_import_status(spec)
 
