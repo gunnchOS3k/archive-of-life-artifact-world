@@ -246,8 +246,12 @@ def _read_import_status(spec: SourceImportSpec) -> SourceImportRecord:
             rec.imported = has_real or cache.get("imported", False)
             rec.record_count = cache.get("recordCount", len(layers))
             rec.last_import_time = cache.get("generatedAt")
-            rec.data_mode = cache.get(
-                "verificationMode", "source_verified" if has_real else cache.get("dataMode")
+            # An explicit verificationMode on the cache is kept. A missing key does not
+            # become source_verified because a layer was fetched.
+            rec.data_mode = (
+                cache.get("verificationMode")
+                if "verificationMode" in cache
+                else cache.get("dataMode")
             )
             rec.status = "imported" if rec.imported else "blocked"
             rec.blocked_reason = None if rec.imported else spec.blocked_message
