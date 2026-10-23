@@ -169,9 +169,6 @@ def _nasa_cache_on_disk() -> dict[str, Any] | None:
 
 
 def _record_to_dict(spec: SourceImportSpec, rec: SourceImportRecord) -> dict[str, Any]:
-    verified = rec.verified_record_count
-    if verified == 0 and rec.imported and rec.data_mode == "source_verified":
-        verified = rec.record_count
     return {
         "source": rec.source,
         "name": rec.name,
@@ -180,7 +177,7 @@ def _record_to_dict(spec: SourceImportSpec, rec: SourceImportRecord) -> dict[str
         "configured": rec.configured,
         "imported": rec.imported,
         "record_count": rec.record_count,
-        "verified_record_count": verified,
+        "verified_record_count": rec.verified_record_count,
         "checksum": rec.checksum,
         "source_version": rec.source_version,
         "citation": rec.citation,
@@ -241,8 +238,6 @@ def _read_import_status(spec: SourceImportSpec) -> SourceImportRecord:
         rec.status = data.get("status", rec.status)
         rec.data_mode = data.get("dataMode")
         rec.blocked_reason = data.get("blockedReason", rec.blocked_reason)
-        if rec.verified_record_count == 0 and rec.imported and rec.data_mode == "source_verified":
-            rec.verified_record_count = rec.record_count
     elif spec.id == "nasa":
         cache = _nasa_cache_on_disk()
         if cache:
@@ -257,9 +252,8 @@ def _read_import_status(spec: SourceImportSpec) -> SourceImportRecord:
             rec.status = "imported" if rec.imported else "blocked"
             rec.blocked_reason = None if rec.imported else spec.blocked_message
             if rec.imported:
-                rec.verified_record_count = cache.get(
-                    "verifiedRecordCount", rec.record_count if has_real else 0
-                )
+                verified = cache.get("verifiedRecordCount", 0)
+                rec.verified_record_count = verified if isinstance(verified, int) else 0
     if not rec.imported and not rec.blocked_reason and not configured:
         rec.status = "blocked"
         rec.blocked_reason = spec.blocked_message
