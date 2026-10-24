@@ -17,11 +17,13 @@ import {
   hydrateLivingArchiveIcons,
   setEmotionalMode,
 } from '@/ui/livingArchive';
+import { mountPortalReturn } from '@/portalReturn';
 
 let game: Game | null = null;
 const archiveDexService = new ArchiveDexService(dataCatalog, timeAtlasService);
 
 async function init() {
+  mountPortalReturn(document, import.meta.env.VITE_GUNNCHOS_PORTAL_URL);
   document.body.classList.add('vxp4-living-archive');
   setEmotionalMode('home');
   void hydrateLivingArchiveIcons();
