@@ -17,7 +17,7 @@ import {
   hydrateLivingArchiveIcons,
   setEmotionalMode,
 } from '@/ui/livingArchive';
-import { mountPortalReturn } from '@/portalReturn';
+import { mountExpeditionPortalReturn, mountPortalReturn } from '@/portalReturn';
 
 let game: Game | null = null;
 const archiveDexService = new ArchiveDexService(dataCatalog, timeAtlasService);
@@ -154,6 +154,7 @@ async function startGame(continuing: boolean) {
 
   document.getElementById('title-screen')!.classList.remove('active');
   document.getElementById('game-screen')!.classList.add('active');
+  mountExpeditionPortalReturn(document, import.meta.env.VITE_GUNNCHOS_PORTAL_URL);
   setEmotionalMode('explore');
   void hydrateLivingArchiveIcons();
 

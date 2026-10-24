@@ -19,15 +19,28 @@ export function portalReturnHref(value: string | undefined): string | null {
   return allowedPortalUrl(value.trim());
 }
 
+function applyPortalHref(el: HTMLAnchorElement, href: string | null): void {
+  if (!href) {
+    el.hidden = true;
+    el.removeAttribute("href");
+    return;
+  }
+  el.href = href;
+  el.hidden = false;
+}
+
 export function mountPortalReturn(doc: Document, value: string | undefined): void {
   const href = portalReturnHref(value);
   for (const el of doc.querySelectorAll<HTMLAnchorElement>("[data-portal-return]")) {
-    if (!href) {
-      el.hidden = true;
-      el.removeAttribute("href");
-      continue;
-    }
-    el.href = href;
-    el.hidden = false;
+    applyPortalHref(el, href);
+  }
+}
+
+export function mountExpeditionPortalReturn(doc: Document, value: string | undefined): void {
+  const screen = doc.getElementById("game-screen");
+  if (!screen) return;
+  const href = portalReturnHref(value);
+  for (const el of screen.querySelectorAll<HTMLAnchorElement>("[data-portal-return]")) {
+    applyPortalHref(el, href);
   }
 }

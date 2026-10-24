@@ -1,5 +1,5 @@
 import { describe, expect, it } from "vitest";
-import { mountPortalReturn, portalReturnHref } from "./portalReturn";
+import { mountExpeditionPortalReturn, mountPortalReturn, portalReturnHref } from "./portalReturn";
 
 describe("portal return", () => {
   it("defaults an unset gateway to gunnchos.com and rejects other URLs", () => {
@@ -22,5 +22,27 @@ describe("portal return", () => {
     mountPortalReturn(document, "https://example.com/");
     expect(link.hidden).toBe(true);
     expect(link.hasAttribute("href")).toBe(false);
+  });
+
+  it("shows the expedition return after Begin Expedition and rejects other hosts", () => {
+    document.body.innerHTML = `
+      <div id="title-screen" class="screen active">
+        <button id="btn-new-game">Begin Expedition</button>
+        <a data-portal-return hidden>← gunnchOS</a>
+      </div>
+      <div id="game-screen" class="screen">
+        <a data-portal-return hidden>← gunnchOS</a>
+      </div>`;
+    document.getElementById("title-screen")!.classList.remove("active");
+    document.getElementById("game-screen")!.classList.add("active");
+    mountExpeditionPortalReturn(document, undefined);
+    const expedition = document.querySelector("#game-screen a")!;
+    const title = document.querySelector("#title-screen a")!;
+    expect(expedition.hidden).toBe(false);
+    expect(expedition.getAttribute("href")).toBe("https://gunnchos.com");
+    expect(title.hidden).toBe(true);
+    mountExpeditionPortalReturn(document, "https://example.com/");
+    expect(expedition.hidden).toBe(true);
+    expect(expedition.hasAttribute("href")).toBe(false);
   });
 });
