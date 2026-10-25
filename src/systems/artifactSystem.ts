@@ -5,6 +5,7 @@ import {
   evaluateCompanionModules,
   type CompanionModuleDef,
 } from '@/systems/companionModules';
+import { recordCollectedArtifact } from './artifactRecord.mjs';
 
 export function collectArtifact(
   state: SaveState,
@@ -16,24 +17,11 @@ export function collectArtifact(
     modules?: CompanionModuleDef[];
   } = {},
 ) {
-  if (state.artifacts.some((a) => a.speciesId === species.id)) {
-    return { success: false as const, reason: 'already_collected' };
+  const recorded = recordCollectedArtifact(state, species, Date.now());
+  if (!recorded.success) {
+    return { success: false as const, reason: recorded.reason };
   }
-
-  const artifactType = species.artifactTypes[0];
-  const artifact = {
-    id: `${species.id}_${artifactType}`,
-    speciesId: species.id,
-    speciesName: species.commonName,
-    scientificName: species.scientificName,
-    artifactType,
-    ethical: true as const,
-    collectedAt: Date.now(),
-    region: state.player.currentRegion,
-  };
-
-  state.artifacts.push(artifact);
-  state.stats.artifactsCollected++;
+  const artifact = recorded.artifact;
   state.stats.speciesDocumented++;
 
   const provenanceCitations = provenanceFromSpecies(species);
@@ -49,7 +37,7 @@ export function collectArtifact(
 
   state.notebook.unshift({
     time: Date.now(),
-    text: `Collected ${formatArtifactType(artifactType)} from ${species.commonName} (${species.scientificName}) in ${state.player.currentRegion}.${periodNote}${citeLine}`,
+    text: `Collected ${formatArtifactType(artifact.artifactType)} from ${species.commonName} (${species.scientificName}) in ${state.player.currentRegion}.${periodNote}${citeLine}`,
     speciesId: species.id,
     scientificName: species.scientificName,
     regionId: state.player.currentRegion,

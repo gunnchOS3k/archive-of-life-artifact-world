@@ -14,6 +14,8 @@ export interface CollectedArtifact {
   ethical: true;
   collectedAt: number;
   region: string;
+  provenance?: 'game_authored';
+  scientificVerification?: false;
 }
 
 export interface NotebookProvenanceCite {
