@@ -106,9 +106,46 @@ try {
   if (restored.scientificVerification !== false) throw new Error('reload claimed scientific verification');
   if (!restored.clueIds.includes('museum-label-clue')) throw new Error('reload lost the clue');
 
+  const era = await page.evaluate(async () => {
+    await window.__aolAccept('era', 'pleistocene');
+    await window.__aolAccept('save');
+    const saved = JSON.parse(localStorage.getItem('archive_of_life_save') || 'null');
+    const artifacts = saved?.artifacts || [];
+    return {
+      active: saved?.timeAtlas?.activeTimeUnitId || null,
+      viewed: saved?.timeAtlas?.viewedTimeUnits || [],
+      provenance: artifacts.map((item) => item.provenance),
+      scientificVerification: artifacts.map((item) => item.scientificVerification),
+    };
+  });
+  if (era.active !== 'pleistocene' || !era.viewed.includes('pleistocene')) {
+    throw new Error(`era was not recorded ${JSON.stringify(era)}`);
+  }
+  if (era.provenance.some((value) => value !== 'game_authored')) throw new Error('era changed artifact provenance');
+  if (era.scientificVerification.some((value) => value !== false)) throw new Error('era claimed scientific verification');
+
+  await page.reload();
+  await page.getByRole('button', { name: 'Continue Expedition' }).click();
+  await page.waitForFunction(() => document.getElementById('game-screen')?.classList.contains('active'));
+  const eraRestored = await page.evaluate(() => {
+    const saved = JSON.parse(localStorage.getItem('archive_of_life_save') || 'null');
+    const artifacts = saved?.artifacts || [];
+    return {
+      active: saved?.timeAtlas?.activeTimeUnitId || null,
+      viewed: saved?.timeAtlas?.viewedTimeUnits || [],
+      scientificVerification: artifacts.map((item) => item.scientificVerification),
+      provenance: artifacts.map((item) => item.provenance),
+    };
+  });
+  if (eraRestored.active !== 'pleistocene' || !eraRestored.viewed.includes('pleistocene')) {
+    throw new Error('reload lost the viewed era');
+  }
+  if (eraRestored.provenance.some((value) => value !== 'game_authored')) throw new Error('reload changed artifact provenance');
+  if (eraRestored.scientificVerification.some((value) => value !== false)) throw new Error('reload claimed scientific verification');
+
   mkdirSync(dirname(OUT), { recursive: true });
-  writeFileSync(OUT, `${JSON.stringify({ ok: true, runtime: 'vite_preview', explored, restored }, null, 2)}\n`);
-  console.log(JSON.stringify({ ok: true, runtime: 'vite_preview', speciesId: explored.speciesId }));
+  writeFileSync(OUT, `${JSON.stringify({ ok: true, runtime: 'vite_preview', explored, restored, era, eraRestored }, null, 2)}\n`);
+  console.log(JSON.stringify({ ok: true, runtime: 'vite_preview', speciesId: explored.speciesId, era: era.active }));
 } finally {
   await browser?.close();
   preview.kill('SIGTERM');
