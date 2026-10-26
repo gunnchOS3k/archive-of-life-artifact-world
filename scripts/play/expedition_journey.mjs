@@ -143,8 +143,51 @@ try {
   if (eraRestored.provenance.some((value) => value !== 'game_authored')) throw new Error('reload changed artifact provenance');
   if (eraRestored.scientificVerification.some((value) => value !== false)) throw new Error('reload claimed scientific verification');
 
+  await page.locator('#btn-notebook').click();
+  await page.waitForSelector('#panel-notebook:not(.hidden) .notebook-entry');
+  const notebook = await page.evaluate(async () => {
+    const entry = document.querySelector('#panel-notebook .notebook-entry');
+    await window.__aolAccept('save');
+    const saved = JSON.parse(localStorage.getItem('archive_of_life_save') || 'null');
+    return {
+      open: !document.getElementById('panel-notebook')?.classList.contains('hidden'),
+      speciesId: entry?.getAttribute('data-species-id') || null,
+      savedSpeciesId: saved?.notebook?.[0]?.speciesId || null,
+      provenance: (saved?.artifacts || []).map((item) => item.provenance),
+      scientificVerification: (saved?.artifacts || []).map((item) => item.scientificVerification),
+      returnHref: document.querySelector('#game-screen [data-portal-return]')?.getAttribute('href') || null,
+    };
+  });
+  if (!notebook.open) throw new Error('journal control did not open the notebook');
+  if (notebook.speciesId !== explored.speciesId || notebook.savedSpeciesId !== explored.speciesId) {
+    throw new Error(`journal did not show the collected find ${JSON.stringify(notebook)}`);
+  }
+  if (notebook.returnHref !== 'https://gunnchos.com') throw new Error(`return ${notebook.returnHref}`);
+  if (notebook.provenance.some((value) => value !== 'game_authored')) throw new Error('journal changed artifact provenance');
+  if (notebook.scientificVerification.some((value) => value !== false)) throw new Error('journal claimed scientific verification');
+
+  await page.reload();
+  await page.getByRole('button', { name: 'Continue Expedition' }).click();
+  await page.waitForFunction(() => document.getElementById('game-screen')?.classList.contains('active'));
+  await page.locator('#btn-notebook').click();
+  await page.waitForSelector('#panel-notebook:not(.hidden) .notebook-entry');
+  const notebookRestored = await page.evaluate(() => {
+    const entry = document.querySelector('#panel-notebook .notebook-entry');
+    const saved = JSON.parse(localStorage.getItem('archive_of_life_save') || 'null');
+    return {
+      speciesId: entry?.getAttribute('data-species-id') || null,
+      scientificVerification: (saved?.artifacts || []).map((item) => item.scientificVerification),
+      provenance: (saved?.artifacts || []).map((item) => item.provenance),
+      returnHref: document.querySelector('#game-screen [data-portal-return]')?.getAttribute('href') || null,
+    };
+  });
+  if (notebookRestored.speciesId !== explored.speciesId) throw new Error('reload lost the journal entry');
+  if (notebookRestored.returnHref !== 'https://gunnchos.com') throw new Error(`return ${notebookRestored.returnHref}`);
+  if (notebookRestored.provenance.some((value) => value !== 'game_authored')) throw new Error('reload changed artifact provenance');
+  if (notebookRestored.scientificVerification.some((value) => value !== false)) throw new Error('reload claimed scientific verification');
+
   mkdirSync(dirname(OUT), { recursive: true });
-  writeFileSync(OUT, `${JSON.stringify({ ok: true, runtime: 'vite_preview', explored, restored, era, eraRestored }, null, 2)}\n`);
+  writeFileSync(OUT, `${JSON.stringify({ ok: true, runtime: 'vite_preview', explored, restored, era, eraRestored, notebook, notebookRestored }, null, 2)}\n`);
   console.log(JSON.stringify({ ok: true, runtime: 'vite_preview', speciesId: explored.speciesId, era: era.active }));
 } finally {
   await browser?.close();
