@@ -4,6 +4,7 @@ import { World } from './world';
 import { collectArtifact, hasArtifact, formatArtifactType, getCollectedIds } from '@/systems/artifactSystem';
 import { visitRegion, checkQuestProgress } from '@/systems/questSystem';
 import { saveGame } from '@/systems/saveSystem';
+import { discoverClue } from '@/systems/expeditionSystem';
 import {
   buildEncounterTable,
   describeEthicalPrompt,
@@ -840,6 +841,19 @@ export class Game {
 
   async acceptInteract() {
     await this.interact();
+  }
+
+  acceptRecordMuseumClue() {
+    const entry = discoverClue(this.state, {
+      id: 'museum-label-clue',
+      title: 'Museum label',
+      text: 'This label is a game-authored prompt, not a field measurement.',
+      regionId: this.state.player.currentRegion || 'museum',
+      expeditionId: 'museum-walk',
+      unlocksJournal: true,
+    });
+    this.save();
+    return { ok: Boolean(entry), clueId: 'museum-label-clue' };
   }
 
   acceptSetMinigameHold(holding: boolean) {

@@ -72,6 +72,9 @@ async function init() {
         await g.acceptInteract();
         return g.acceptSnapshot();
       }
+      if (cmd === 'clue') {
+        return { ...g.acceptRecordMuseumClue(), snapshot: g.acceptSnapshot() };
+      }
       if (cmd === 'hold') {
         const on = arg !== '0' && arg !== 'false';
         return { ok: g.acceptSetMinigameHold(on), snapshot: g.acceptSnapshot() };
