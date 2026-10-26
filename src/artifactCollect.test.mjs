@@ -1,6 +1,6 @@
 import assert from 'node:assert/strict';
 import { describe, it } from 'node:test';
-import { recordCollectedArtifact, restoreCollectedArtifacts } from './systems/artifactRecord.mjs';
+import { recordCollectedArtifact, restoreCollectedArtifacts } from './systems/artifactRecord.ts';
 import { evaluateExpedition, startExpedition } from './systems/expeditionSystem.ts';
 
 function freshState() {

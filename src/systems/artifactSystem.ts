@@ -5,7 +5,7 @@ import {
   evaluateCompanionModules,
   type CompanionModuleDef,
 } from '@/systems/companionModules';
-import { recordCollectedArtifact } from './artifactRecord.mjs';
+import { recordCollectedArtifact } from './artifactRecord';
 
 export function collectArtifact(
   state: SaveState,

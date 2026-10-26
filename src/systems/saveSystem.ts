@@ -5,7 +5,7 @@ import { createEmptyExpeditionSlice, ensureExpeditionSlice } from '@/systems/exp
 import { createDefaultCampaign, ensureCampaign } from '@/systems/launchCampaign';
 import { speciesCache } from '@/services/IndexedDBCache';
 import { track } from '@/systems/telemetry';
-import { restoreCollectedArtifacts } from './artifactRecord.mjs';
+import { restoreCollectedArtifacts } from './artifactRecord';
 
 const SAVE_KEY = 'archive_of_life_save';
 const SAVE_BACKUP_KEY = 'save_state';
