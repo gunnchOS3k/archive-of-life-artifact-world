@@ -143,6 +143,8 @@ try {
   if (eraRestored.provenance.some((value) => value !== 'game_authored')) throw new Error('reload changed artifact provenance');
   if (eraRestored.scientificVerification.some((value) => value !== false)) throw new Error('reload claimed scientific verification');
 
+  const onboard = page.locator('#onboarding-complete');
+  if (await onboard.isVisible()) await onboard.click();
   await page.locator('#btn-notebook').click();
   await page.waitForSelector('#panel-notebook:not(.hidden) .notebook-entry');
   const notebook = await page.evaluate(async () => {
@@ -169,6 +171,7 @@ try {
   await page.reload();
   await page.getByRole('button', { name: 'Continue Expedition' }).click();
   await page.waitForFunction(() => document.getElementById('game-screen')?.classList.contains('active'));
+  if (await onboard.isVisible()) await onboard.click();
   await page.locator('#btn-notebook').click();
   await page.waitForSelector('#panel-notebook:not(.hidden) .notebook-entry');
   const notebookRestored = await page.evaluate(() => {
