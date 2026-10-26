@@ -189,9 +189,55 @@ try {
   if (notebookRestored.provenance.some((value) => value !== 'game_authored')) throw new Error('reload changed artifact provenance');
   if (notebookRestored.scientificVerification.some((value) => value !== false)) throw new Error('reload claimed scientific verification');
 
+  if (await page.locator('#panel-notebook:not(.hidden)').count()) await page.keyboard.press('Escape');
+  await page.locator('#btn-archive').click();
+  await page.waitForSelector('#panel-archive:not(.hidden) #filter-collected');
+  await page.locator('#filter-collected').selectOption('collected');
+  await page.waitForSelector('#panel-archive .archive-card[data-id="panthera_leo"][data-discovered="true"]');
+  await page.locator('#panel-archive .archive-card[data-id="panthera_leo"]').click();
+  await page.waitForSelector('#panel-archive .sci-name');
+  const dex = await page.evaluate(async () => {
+    await window.__aolAccept('save');
+    const saved = JSON.parse(localStorage.getItem('archive_of_life_save') || 'null');
+    return {
+      open: !document.getElementById('panel-archive')?.classList.contains('hidden'),
+      scientificName: (document.querySelector('#panel-archive .sci-name')?.textContent || '').trim(),
+      provenance: (saved?.artifacts || []).map((item) => item.provenance),
+      scientificVerification: (saved?.artifacts || []).map((item) => item.scientificVerification),
+      returnHref: document.querySelector('#game-screen [data-portal-return]')?.getAttribute('href') || null,
+    };
+  });
+  if (!dex.open) throw new Error('ArchiveDex control did not open');
+  if (dex.scientificName !== 'Panthera leo') throw new Error(`ArchiveDex opened ${dex.scientificName}`);
+  if (dex.returnHref !== 'https://gunnchos.com') throw new Error(`return ${dex.returnHref}`);
+  if (dex.provenance.some((value) => value !== 'game_authored')) throw new Error('ArchiveDex changed artifact provenance');
+  if (dex.scientificVerification.some((value) => value !== false)) throw new Error('ArchiveDex claimed scientific verification');
+
+  await page.reload();
+  await page.getByRole('button', { name: 'Continue Expedition' }).click();
+  await page.waitForFunction(() => document.getElementById('game-screen')?.classList.contains('active'));
+  if (await onboard.isVisible()) await onboard.click();
+  await page.locator('#btn-archive').click();
+  await page.waitForSelector('#panel-archive:not(.hidden) #filter-collected');
+  await page.locator('#filter-collected').selectOption('collected');
+  await page.waitForSelector('#panel-archive .archive-card[data-id="panthera_leo"][data-discovered="true"]');
+  const dexRestored = await page.evaluate(() => {
+    const saved = JSON.parse(localStorage.getItem('archive_of_life_save') || 'null');
+    return {
+      discovered: document.querySelector('#panel-archive .archive-card[data-id="panthera_leo"]')?.getAttribute('data-discovered') || null,
+      provenance: (saved?.artifacts || []).map((item) => item.provenance),
+      scientificVerification: (saved?.artifacts || []).map((item) => item.scientificVerification),
+      returnHref: document.querySelector('#game-screen [data-portal-return]')?.getAttribute('href') || null,
+    };
+  });
+  if (dexRestored.discovered !== 'true') throw new Error('reload lost the ArchiveDex collected entry');
+  if (dexRestored.returnHref !== 'https://gunnchos.com') throw new Error(`return ${dexRestored.returnHref}`);
+  if (dexRestored.provenance.some((value) => value !== 'game_authored')) throw new Error('reload changed artifact provenance');
+  if (dexRestored.scientificVerification.some((value) => value !== false)) throw new Error('reload claimed scientific verification');
+
   mkdirSync(dirname(OUT), { recursive: true });
-  writeFileSync(OUT, `${JSON.stringify({ ok: true, runtime: 'vite_preview', explored, restored, era, eraRestored, notebook, notebookRestored }, null, 2)}\n`);
-  console.log(JSON.stringify({ ok: true, runtime: 'vite_preview', speciesId: explored.speciesId, era: era.active }));
+  writeFileSync(OUT, `${JSON.stringify({ ok: true, runtime: 'vite_preview', explored, restored, era, eraRestored, notebook, notebookRestored, dex, dexRestored }, null, 2)}\n`);
+  console.log(JSON.stringify({ ok: true, runtime: 'vite_preview', speciesId: explored.speciesId, era: era.active, dex: dex.scientificName }));
 } finally {
   await browser?.close();
   preview.kill('SIGTERM');
