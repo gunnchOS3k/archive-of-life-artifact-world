@@ -40,6 +40,7 @@ try {
   await waitForUrl(URL);
   browser = await chromium.launch();
   const page = await browser.newPage();
+  page.setDefaultTimeout(120_000);
   await page.goto(URL);
   await page.getByRole('button', { name: 'Begin Expedition' }).click();
   await page.waitForFunction(() => document.getElementById('game-screen')?.classList.contains('active'));
@@ -47,7 +48,17 @@ try {
 
   const explored = await page.evaluate(async () => {
     const accept = window.__aolAccept;
-    await accept('move', 'species');
+    const regions = ['savanna', 'forest', 'wetland', 'coastal', 'fossil_site'];
+    let travel = null;
+    let moved = null;
+    for (const region of regions) {
+      travel = await accept('travel', region);
+      moved = await accept('move', 'species');
+      if (moved?.target) break;
+      moved = await accept('move', 'fossil');
+      if (moved?.target) break;
+    }
+    await accept('clue');
     await accept('interact');
     await accept('hold', '1');
     for (let i = 0; i < 600; i += 1) {
@@ -60,11 +71,12 @@ try {
     for (let i = 0; i < 40 && window.__aolGame?.activeMinigame; i += 1) {
       await new Promise((resolve) => setTimeout(resolve, 50));
     }
-    const clue = await accept('clue');
     await accept('save');
     const saved = JSON.parse(localStorage.getItem('archive_of_life_save') || 'null');
     return {
-      clue,
+      region: travel?.region || null,
+      target: moved?.target || null,
+      minigame: window.__aolGame?.activeMinigame ? 'open' : null,
       speciesId: saved?.artifacts?.[0]?.speciesId || null,
       provenance: saved?.artifacts?.[0]?.provenance || null,
       scientificVerification: saved?.artifacts?.[0]?.scientificVerification,
@@ -73,7 +85,7 @@ try {
     };
   });
 
-  if (!explored.speciesId) throw new Error('collect did not record an artifact');
+  if (!explored.speciesId) throw new Error(`collect did not record an artifact ${JSON.stringify(explored)}`);
   if (explored.provenance !== 'game_authored') throw new Error(`provenance ${explored.provenance}`);
   if (explored.scientificVerification !== false) throw new Error('scientific verification was not false');
   if (!explored.clueIds.includes('museum-label-clue')) throw new Error('clue was not saved');
