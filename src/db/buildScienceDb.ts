@@ -62,6 +62,15 @@ export function buildScienceDb(opts: BuildScienceDbOptions = {}): BuildScienceDb
     join(bundles, 'regions.json'),
   );
   const regionBiome = new Map(regions.map((r) => [r.id, r.biome ?? 'unknown']));
+  /** Authored region←species membership (identity/geo source of truth for playable zones). */
+  const speciesHomeRegion = new Map<string, string>();
+  for (const r of regions) {
+    for (const sid of r.speciesIds ?? []) {
+      if (!speciesHomeRegion.has(sid)) speciesHomeRegion.set(sid, r.id);
+    }
+  }
+  const resolveRegionId = (speciesId: string, explicit?: string | null, gameplayRegion?: string | null) =>
+    gameplayRegion || explicit || speciesHomeRegion.get(speciesId) || null;
 
   const enc = loadJson<{
     species: Array<{
@@ -89,7 +98,7 @@ export function buildScienceDb(opts: BuildScienceDbOptions = {}): BuildScienceDb
       taxonomy?: { rank?: string };
       provenance?: Array<Record<string, unknown>>;
       fossilProfile?: { maxMa?: number; minMa?: number; period?: string };
-      gameplay?: unknown;
+      gameplay?: { region?: string } | unknown;
       artifactTemplates?: unknown[];
     }>;
   }>(join(bundles, 'hero-species.json'));
@@ -217,7 +226,7 @@ export function buildScienceDb(opts: BuildScienceDbOptions = {}): BuildScienceDb
   };
 
   for (const s of enc.species) {
-    const regionId = s.region ?? null;
+    const regionId = resolveRegionId(s.id, s.region ?? null);
     upsertFrom(
       {
         taxon_id: s.id,
@@ -256,7 +265,11 @@ export function buildScienceDb(opts: BuildScienceDbOptions = {}): BuildScienceDb
   }
 
   for (const s of heroes.species) {
-    const regionId = s.region ?? null;
+    const gameplayRegion =
+      s.gameplay && typeof s.gameplay === 'object' && 'region' in s.gameplay
+        ? String((s.gameplay as { region?: string }).region ?? '')
+        : '';
+    const regionId = resolveRegionId(s.id, s.region ?? null, gameplayRegion || null);
     const extinct = s.isExtinct || s.conservationStatus === 'Extinct';
     upsertFrom(
       {
