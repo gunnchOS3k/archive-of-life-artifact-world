@@ -235,9 +235,61 @@ try {
   if (dexRestored.provenance.some((value) => value !== 'game_authored')) throw new Error('reload changed artifact provenance');
   if (dexRestored.scientificVerification.some((value) => value !== false)) throw new Error('reload claimed scientific verification');
 
+  if (await page.locator('#panel-archive:not(.hidden)').count()) await page.keyboard.press('Escape');
+  await page.locator('#btn-time').click();
+  await page.waitForSelector('#panel-time:not(.hidden) #time-rank-select');
+  await page.locator('#time-rank-select').selectOption('epoch');
+  await page.locator('#panel-time button.time-unit-btn[data-unit="pleistocene"]').click();
+  await page.waitForSelector('#time-atlas-detail');
+  const timeAtlas = await page.evaluate(async () => {
+    await window.__aolAccept('save');
+    const saved = JSON.parse(localStorage.getItem('archive_of_life_save') || 'null');
+    return {
+      open: !document.getElementById('panel-time')?.classList.contains('hidden'),
+      selected: document.querySelector('#panel-time button.time-unit-btn.active')?.getAttribute('data-unit') || null,
+      active: saved?.timeAtlas?.activeTimeUnitId || null,
+      viewed: saved?.timeAtlas?.viewedTimeUnits || [],
+      provenance: (saved?.artifacts || []).map((item) => item.provenance),
+      scientificVerification: (saved?.artifacts || []).map((item) => item.scientificVerification),
+      returnHref: document.querySelector('#game-screen [data-portal-return]')?.getAttribute('href') || null,
+    };
+  });
+  if (!timeAtlas.open) throw new Error('Time Atlas control did not open');
+  if (timeAtlas.selected !== 'pleistocene' || timeAtlas.active !== 'pleistocene') {
+    throw new Error(`Time Atlas did not select Pleistocene ${JSON.stringify(timeAtlas)}`);
+  }
+  if (!timeAtlas.viewed.includes('pleistocene')) throw new Error('Time Atlas did not record Pleistocene');
+  if (timeAtlas.returnHref !== 'https://gunnchos.com') throw new Error(`return ${timeAtlas.returnHref}`);
+  if (timeAtlas.provenance.some((value) => value !== 'game_authored')) throw new Error('Time Atlas changed artifact provenance');
+  if (timeAtlas.scientificVerification.some((value) => value !== false)) throw new Error('Time Atlas claimed scientific verification');
+
+  await page.reload();
+  await page.getByRole('button', { name: 'Continue Expedition' }).click();
+  await page.waitForFunction(() => document.getElementById('game-screen')?.classList.contains('active'));
+  if (await onboard.isVisible()) await onboard.click();
+  await page.locator('#btn-time').click();
+  await page.waitForSelector('#panel-time:not(.hidden) #time-rank-select');
+  await page.locator('#time-rank-select').selectOption('epoch');
+  const timeAtlasRestored = await page.evaluate(() => {
+    const saved = JSON.parse(localStorage.getItem('archive_of_life_save') || 'null');
+    return {
+      active: saved?.timeAtlas?.activeTimeUnitId || null,
+      viewed: saved?.timeAtlas?.viewedTimeUnits || [],
+      provenance: (saved?.artifacts || []).map((item) => item.provenance),
+      scientificVerification: (saved?.artifacts || []).map((item) => item.scientificVerification),
+      returnHref: document.querySelector('#game-screen [data-portal-return]')?.getAttribute('href') || null,
+    };
+  });
+  if (timeAtlasRestored.active !== 'pleistocene' || !timeAtlasRestored.viewed.includes('pleistocene')) {
+    throw new Error('reload lost the Time Atlas selection');
+  }
+  if (timeAtlasRestored.returnHref !== 'https://gunnchos.com') throw new Error(`return ${timeAtlasRestored.returnHref}`);
+  if (timeAtlasRestored.provenance.some((value) => value !== 'game_authored')) throw new Error('reload changed artifact provenance');
+  if (timeAtlasRestored.scientificVerification.some((value) => value !== false)) throw new Error('reload claimed scientific verification');
+
   mkdirSync(dirname(OUT), { recursive: true });
-  writeFileSync(OUT, `${JSON.stringify({ ok: true, runtime: 'vite_preview', explored, restored, era, eraRestored, notebook, notebookRestored, dex, dexRestored }, null, 2)}\n`);
-  console.log(JSON.stringify({ ok: true, runtime: 'vite_preview', speciesId: explored.speciesId, era: era.active, dex: dex.scientificName }));
+  writeFileSync(OUT, `${JSON.stringify({ ok: true, runtime: 'vite_preview', explored, restored, era, eraRestored, notebook, notebookRestored, dex, dexRestored, timeAtlas, timeAtlasRestored }, null, 2)}\n`);
+  console.log(JSON.stringify({ ok: true, runtime: 'vite_preview', speciesId: explored.speciesId, era: era.active, dex: dex.scientificName, timeAtlas: timeAtlas.selected }));
 } finally {
   await browser?.close();
   preview.kill('SIGTERM');
