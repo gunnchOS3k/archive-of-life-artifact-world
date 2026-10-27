@@ -462,6 +462,7 @@ function main() {
     description: r.description,
     color: r.color,
     biome: r.biome,
+    continents: r.continents ?? [],
     speciesIds: r.species ?? [],
     connections: r.connections ?? [],
     bundlePath: regionBundles[r.id as string],

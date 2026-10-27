@@ -301,6 +301,7 @@ export interface PlayableSpecies {
   ethicalInteraction: string;
   timeRange: string;
   habitats: string[];
+  continents: string[];
   diet: string;
   activity: string;
   size: string;
@@ -332,6 +333,7 @@ export function toPlayableSpecies(sp: ArchiveSpecies): PlayableSpecies {
     ethicalInteraction: gp?.ethicalInteraction ?? 'observe_from_distance',
     timeRange: gp?.timeRange ?? sp.fossil?.timeRange ?? 'Present',
     habitats: sp.distribution?.habitats ?? [],
+    continents: sp.distribution?.continents ?? [],
     diet: gp?.diet ?? '',
     activity: gp?.activity ?? '',
     size: gp?.size ?? '',
@@ -346,17 +348,11 @@ export function toPlayableSpecies(sp: ArchiveSpecies): PlayableSpecies {
   };
 }
 
-export function getSpeciesIcon(species: { group: string; conservationStatus?: string; conservation?: { iucnCategory: string } }): string {
-  const status = species.conservationStatus ?? species.conservation?.iucnCategory;
-  const icons: Record<string, string> = {
-    Mammal: '🦁',
-    Insect: '🦋',
-    Arachnid: '🕷️',
-    Reptile: '🦕',
-  };
-  if (status === 'Extinct') return '🦴';
-  return icons[species.group] || '🐾';
-}
+export {
+  getSpeciesIcon,
+  getSpeciesRepresentationLabel,
+  assertSpeciesIconNotMismatched,
+} from './speciesRepresentation';
 
 export function getConservationClass(status: string): string {
   const map: Record<string, string> = {

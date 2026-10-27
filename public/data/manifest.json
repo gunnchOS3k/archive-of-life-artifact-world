@@ -1,7 +1,7 @@
 {
   "snapshotId": "sample-2026-07",
   "version": "3.0.0",
-  "generatedAt": "2026-08-09T16:57:23.572Z",
+  "generatedAt": "2026-10-27T23:25:27.843Z",
   "description": "Sample biodiversity + Time Atlas snapshot — tiered representation with mock provenance",
   "bundles": {
     "heroSpecies": {
@@ -37,7 +37,7 @@
     "regions": {
       "path": "bundles/regions.json",
       "kind": "game_config",
-      "recordCount": 6
+      "recordCount": 7
     },
     "quests": {
       "path": "bundles/quests.json",
@@ -58,7 +58,12 @@
       "savanna": {
         "path": "bundles/region-savanna.json",
         "kind": "region_species",
-        "recordCount": 7
+        "recordCount": 6
+      },
+      "steppe": {
+        "path": "bundles/region-steppe.json",
+        "kind": "region_species",
+        "recordCount": 1
       },
       "forest": {
         "path": "bundles/region-forest.json",

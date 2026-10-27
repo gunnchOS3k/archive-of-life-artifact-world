@@ -126,6 +126,7 @@ async function init() {
         g.acceptOpenAchievements();
         return g.acceptSnapshot();
       }
+      if (cmd === 'species_icon' && arg) return g.acceptSpeciesIcon(arg);
       if (cmd === 'snapshot') return g.acceptSnapshot();
       return { ok: false, error: 'unknown_cmd' };
     };

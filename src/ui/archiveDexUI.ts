@@ -264,7 +264,7 @@ export class ArchiveDexUI {
 
     const reveal = getEntryRevealLevel(entry, collected || entry.representationTier <= 3);
     const tabs = getVisibleTabs(entry, reveal);
-    const icon = reveal === 'hidden' ? '❓' : getSpeciesIcon({ group: entry.group, conservationStatus: entry.conservation?.iucnCategory });
+    const icon = reveal === 'hidden' ? '❓' : getSpeciesIcon({ id: entry.id, commonName: entry.commonName, scientificName: entry.scientificName, family: entry.taxonomy?.family, group: entry.group, conservationStatus: entry.conservation?.iucnCategory });
     const statusClass = getConservationClass(entry.conservation?.iucnCategory ?? 'Not Evaluated');
 
     this.entryHeader.innerHTML = `
@@ -346,7 +346,7 @@ export class ArchiveDexUI {
 
     this.grid.innerHTML = result.entries.map((entry) => {
       const discovered = collectedIds.has(entry.id) || entry.representationTier <= 3;
-      const icon = discovered ? getSpeciesIcon({ group: entry.group, conservationStatus: entry.iucnCategory }) : '🦴';
+      const icon = discovered ? getSpeciesIcon({ id: entry.id, commonName: entry.commonName, scientificName: entry.scientificName, family: entry.family, group: entry.group, conservationStatus: entry.iucnCategory }) : '🦴';
       const statusClass = getConservationClass(entry.iucnCategory ?? 'Not Evaluated');
       return `
         <div class="archive-card ${discovered ? '' : 'locked'}" data-id="${entry.id}" data-discovered="${discovered}" role="button" tabindex="0" aria-label="${discovered ? entry.commonName : 'Undocumented species'}">

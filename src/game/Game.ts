@@ -47,6 +47,7 @@ import {
   toPlayableSpecies,
   type PlayableSpecies,
 } from '@/services/DataCatalogService';
+import { getSpeciesIcon } from '@/services/speciesRepresentation';
 import { EarthLayerService } from '@/services/EarthLayerService';
 import { TemporalMapService } from '@/services/TemporalMapService';
 import { TimeAtlasService } from '@/time/TimeAtlasService';
@@ -818,6 +819,22 @@ export class Game {
   /** Acceptance / Playwright helpers — movement + travel without fragile canvas coordinates. */
   async acceptTravel(regionId: string) {
     await this.travelToRegion(regionId);
+  }
+
+  acceptSpeciesIcon(speciesId: string) {
+    const sp = this.speciesById.get(speciesId);
+    if (!sp) return { ok: false, error: 'unknown_species' };
+    return {
+      ok: true,
+      speciesId: sp.id,
+      commonName: sp.commonName,
+      scientificName: sp.scientificName,
+      family: sp.family,
+      group: sp.group,
+      icon: getSpeciesIcon(sp),
+      region: sp.region,
+      continents: sp.continents,
+    };
   }
 
   acceptMoveBesideTarget(kind?: 'species' | 'fossil' | 'portal') {

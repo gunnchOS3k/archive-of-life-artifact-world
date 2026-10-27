@@ -7,19 +7,36 @@
     "group": "Mammal",
     "family": "Felidae",
     "timeRange": "Present",
-    "habitats": ["savanna", "grassland"],
-    "continents": ["Africa"],
+    "habitats": [
+      "savanna",
+      "grassland"
+    ],
+    "continents": [
+      "Africa"
+    ],
     "diet": "Carnivore",
     "activity": "Crepuscular",
-    "size": "1.2–1.8 m body length",
+    "size": "1.2\u20131.8 m body length",
     "behavior": "Social pride hunter; cooperative group living",
-    "artifactTypes": ["track_cast", "audio_roar_recording", "behavioral_field_note"],
+    "artifactTypes": [
+      "track_cast",
+      "audio_roar_recording",
+      "behavioral_field_note"
+    ],
     "conservationStatus": "Vulnerable",
-    "learningTopics": ["social behavior", "apex predators", "food webs", "conservation"],
+    "learningTopics": [
+      "social behavior",
+      "apex predators",
+      "food webs",
+      "conservation"
+    ],
     "questType": "tracking_observation",
     "dangerLevel": 5,
     "ethicalInteraction": "observe_from_distance",
-    "funFacts": ["Only cats with visible sexual dimorphism in mane", "Prides are mostly related females"],
+    "funFacts": [
+      "Only cats with visible sexual dimorphism in mane",
+      "Prides are mostly related females"
+    ],
     "whyItMatters": "Apex predators regulate herbivore populations and indicate healthy savanna ecosystems.",
     "region": "savanna"
   },
@@ -31,19 +48,35 @@
     "group": "Mammal",
     "family": "Elephantidae",
     "timeRange": "Present",
-    "habitats": ["savanna", "forest"],
-    "continents": ["Africa"],
+    "habitats": [
+      "savanna",
+      "forest"
+    ],
+    "continents": [
+      "Africa"
+    ],
     "diet": "Herbivore",
     "activity": "Diurnal",
     "size": "Up to 4 m at shoulder",
     "behavior": "Matriarchal herds; long-distance migration",
-    "artifactTypes": ["track_cast", "dung_sample", "behavioral_field_note"],
+    "artifactTypes": [
+      "track_cast",
+      "dung_sample",
+      "behavioral_field_note"
+    ],
     "conservationStatus": "Endangered",
-    "learningTopics": ["keystone species", "migration", "conservation"],
+    "learningTopics": [
+      "keystone species",
+      "migration",
+      "conservation"
+    ],
     "questType": "observation",
     "dangerLevel": 4,
     "ethicalInteraction": "observe_from_distance",
-    "funFacts": ["Can recognize themselves in mirrors", "Create water holes used by many species"],
+    "funFacts": [
+      "Can recognize themselves in mirrors",
+      "Create water holes used by many species"
+    ],
     "whyItMatters": "Keystone species that shape landscapes and support biodiversity.",
     "region": "savanna"
   },
@@ -55,19 +88,38 @@
     "group": "Mammal",
     "family": "Canidae",
     "timeRange": "Present",
-    "habitats": ["forest", "grassland", "tundra"],
-    "continents": ["North America", "Europe", "Asia"],
+    "habitats": [
+      "forest",
+      "grassland",
+      "tundra"
+    ],
+    "continents": [
+      "North America",
+      "Europe",
+      "Asia"
+    ],
     "diet": "Carnivore",
     "activity": "Crepuscular",
-    "size": "1.0–1.6 m body length",
+    "size": "1.0\u20131.6 m body length",
     "behavior": "Pack hunter with complex social hierarchy",
-    "artifactTypes": ["track_cast", "audio_howl_recording", "scat_sample"],
+    "artifactTypes": [
+      "track_cast",
+      "audio_howl_recording",
+      "scat_sample"
+    ],
     "conservationStatus": "Least Concern",
-    "learningTopics": ["pack behavior", "trophic cascades", "reintroduction"],
+    "learningTopics": [
+      "pack behavior",
+      "trophic cascades",
+      "reintroduction"
+    ],
     "questType": "tracking",
     "dangerLevel": 4,
     "ethicalInteraction": "observe_from_distance",
-    "funFacts": ["Howls can be heard up to 10 km away", "Yellowstone wolf reintroduction changed river courses"],
+    "funFacts": [
+      "Howls can be heard up to 10 km away",
+      "Yellowstone wolf reintroduction changed river courses"
+    ],
     "whyItMatters": "Top predators restore balance through trophic cascades.",
     "region": "forest"
   },
@@ -79,19 +131,36 @@
     "group": "Mammal",
     "family": "Cervidae",
     "timeRange": "Present",
-    "habitats": ["forest", "grassland", "wetland"],
-    "continents": ["North America"],
+    "habitats": [
+      "forest",
+      "grassland",
+      "wetland"
+    ],
+    "continents": [
+      "North America"
+    ],
     "diet": "Herbivore",
     "activity": "Crepuscular",
-    "size": "0.9–1.1 m shoulder height",
+    "size": "0.9\u20131.1 m shoulder height",
     "behavior": "Alert grazer; seasonal antler growth in males",
-    "artifactTypes": ["shed_antler", "track_cast", "behavioral_field_note"],
+    "artifactTypes": [
+      "shed_antler",
+      "track_cast",
+      "behavioral_field_note"
+    ],
     "conservationStatus": "Least Concern",
-    "learningTopics": ["herbivory", "predator-prey", "adaptation"],
+    "learningTopics": [
+      "herbivory",
+      "predator-prey",
+      "adaptation"
+    ],
     "questType": "tracking",
     "dangerLevel": 1,
     "ethicalInteraction": "observe_quietly",
-    "funFacts": ["Antlers regrow every year", "Tail flash signals alarm to herd"],
+    "funFacts": [
+      "Antlers regrow every year",
+      "Tail flash signals alarm to herd"
+    ],
     "whyItMatters": "Important prey species linking forest and grassland food webs.",
     "region": "forest"
   },
@@ -103,19 +172,35 @@
     "group": "Mammal",
     "family": "Balaenopteridae",
     "timeRange": "Present",
-    "habitats": ["ocean", "coastal"],
-    "continents": ["Global oceans"],
+    "habitats": [
+      "ocean",
+      "coastal"
+    ],
+    "continents": [
+      "Global oceans"
+    ],
     "diet": "Carnivore (filter feeder)",
     "activity": "Diurnal",
-    "size": "Up to 30 m — largest animal ever",
+    "size": "Up to 30 m \u2014 largest animal ever",
     "behavior": "Long-distance ocean migrant; vocal communication",
-    "artifactTypes": ["photo_record", "audio_recording", "migration_tag_data"],
+    "artifactTypes": [
+      "photo_record",
+      "audio_recording",
+      "migration_tag_data"
+    ],
     "conservationStatus": "Endangered",
-    "learningTopics": ["marine ecosystems", "migration", "conservation"],
+    "learningTopics": [
+      "marine ecosystems",
+      "migration",
+      "conservation"
+    ],
     "questType": "observation",
     "dangerLevel": 1,
     "ethicalInteraction": "observe_from_boat",
-    "funFacts": ["Heart weighs as much as a car", "Eats up to 4 tonnes of krill daily"],
+    "funFacts": [
+      "Heart weighs as much as a car",
+      "Eats up to 4 tonnes of krill daily"
+    ],
     "whyItMatters": "Indicator of ocean health; nutrient cycling through vertical migration.",
     "region": "coastal"
   },
@@ -127,19 +212,35 @@
     "group": "Mammal",
     "family": "Ursidae",
     "timeRange": "Present",
-    "habitats": ["forest", "mountain"],
-    "continents": ["North America"],
+    "habitats": [
+      "forest",
+      "mountain"
+    ],
+    "continents": [
+      "North America"
+    ],
     "diet": "Omnivore",
     "activity": "Diurnal",
-    "size": "1.2–1.8 m body length",
+    "size": "1.2\u20131.8 m body length",
     "behavior": "Solitary forager; hibernates in winter",
-    "artifactTypes": ["track_cast", "scat_sample", "behavioral_field_note"],
+    "artifactTypes": [
+      "track_cast",
+      "scat_sample",
+      "behavioral_field_note"
+    ],
     "conservationStatus": "Least Concern",
-    "learningTopics": ["omnivory", "hibernation", "human-wildlife coexistence"],
+    "learningTopics": [
+      "omnivory",
+      "hibernation",
+      "human-wildlife coexistence"
+    ],
     "questType": "tracking",
     "dangerLevel": 3,
     "ethicalInteraction": "avoid_and_observe",
-    "funFacts": ["Can run 50 km/h despite size", "Excellent sense of smell — 7x better than dogs"],
+    "funFacts": [
+      "Can run 50 km/h despite size",
+      "Excellent sense of smell \u2014 7x better than dogs"
+    ],
     "whyItMatters": "Umbrella species for forest conservation planning.",
     "region": "forest"
   },
@@ -151,19 +252,35 @@
     "group": "Mammal",
     "family": "Castoridae",
     "timeRange": "Present",
-    "habitats": ["wetland", "river"],
-    "continents": ["North America"],
+    "habitats": [
+      "wetland",
+      "river"
+    ],
+    "continents": [
+      "North America"
+    ],
     "diet": "Herbivore",
     "activity": "Nocturnal",
-    "size": "0.7–1.0 m body length",
+    "size": "0.7\u20131.0 m body length",
     "behavior": "Ecosystem engineer; builds dams and lodges",
-    "artifactTypes": ["gnaw_mark_sample", "lodge_observation", "track_cast"],
+    "artifactTypes": [
+      "gnaw_mark_sample",
+      "lodge_observation",
+      "track_cast"
+    ],
     "conservationStatus": "Least Concern",
-    "learningTopics": ["ecosystem engineering", "wetland ecology", "keystone species"],
+    "learningTopics": [
+      "ecosystem engineering",
+      "wetland ecology",
+      "keystone species"
+    ],
     "questType": "habitat_study",
     "dangerLevel": 1,
     "ethicalInteraction": "observe_quietly",
-    "funFacts": ["Teeth never stop growing", "Dams create wetlands supporting hundreds of species"],
+    "funFacts": [
+      "Teeth never stop growing",
+      "Dams create wetlands supporting hundreds of species"
+    ],
     "whyItMatters": "Creates wetlands that filter water and support biodiversity.",
     "region": "wetland"
   },
@@ -175,19 +292,36 @@
     "group": "Mammal",
     "family": "Mustelidae",
     "timeRange": "Present",
-    "habitats": ["wetland", "river", "coastal"],
-    "continents": ["North America"],
+    "habitats": [
+      "wetland",
+      "river",
+      "coastal"
+    ],
+    "continents": [
+      "North America"
+    ],
     "diet": "Carnivore",
     "activity": "Diurnal",
-    "size": "0.6–1.0 m body length",
+    "size": "0.6\u20131.0 m body length",
     "behavior": "Playful swimmer; uses slides on riverbanks",
-    "artifactTypes": ["track_cast", "photo_record", "behavioral_field_note"],
+    "artifactTypes": [
+      "track_cast",
+      "photo_record",
+      "behavioral_field_note"
+    ],
     "conservationStatus": "Least Concern",
-    "learningTopics": ["aquatic adaptation", "play behavior", "water quality"],
+    "learningTopics": [
+      "aquatic adaptation",
+      "play behavior",
+      "water quality"
+    ],
     "questType": "observation",
     "dangerLevel": 1,
     "ethicalInteraction": "observe_quietly",
-    "funFacts": ["Can hold breath up to 8 minutes", "Play behavior helps young develop hunting skills"],
+    "funFacts": [
+      "Can hold breath up to 8 minutes",
+      "Play behavior helps young develop hunting skills"
+    ],
     "whyItMatters": "Indicator species for clean freshwater ecosystems.",
     "region": "wetland"
   },
@@ -199,19 +333,36 @@
     "group": "Mammal",
     "family": "Phocidae",
     "timeRange": "Present",
-    "habitats": ["coastal", "ocean"],
-    "continents": ["North Atlantic", "North Pacific"],
+    "habitats": [
+      "coastal",
+      "ocean"
+    ],
+    "continents": [
+      "North Atlantic",
+      "North Pacific"
+    ],
     "diet": "Carnivore",
     "activity": "Diurnal",
-    "size": "1.5–1.9 m body length",
+    "size": "1.5\u20131.9 m body length",
     "behavior": "Social haul-out on rocks; agile swimmer",
-    "artifactTypes": ["photo_record", "track_cast", "behavioral_field_note"],
+    "artifactTypes": [
+      "photo_record",
+      "track_cast",
+      "behavioral_field_note"
+    ],
     "conservationStatus": "Least Concern",
-    "learningTopics": ["marine mammals", "coastal ecology", "thermoregulation"],
+    "learningTopics": [
+      "marine mammals",
+      "coastal ecology",
+      "thermoregulation"
+    ],
     "questType": "observation",
     "dangerLevel": 1,
     "ethicalInteraction": "observe_from_distance",
-    "funFacts": ["Can sleep underwater", "Whiskers detect fish vibrations"],
+    "funFacts": [
+      "Can sleep underwater",
+      "Whiskers detect fish vibrations"
+    ],
     "whyItMatters": "Sentinel species for coastal pollution and fisheries health.",
     "region": "coastal"
   },
@@ -223,20 +374,36 @@
     "group": "Mammal",
     "family": "Equidae",
     "timeRange": "Present",
-    "habitats": ["grassland", "steppe"],
-    "continents": ["Asia"],
+    "habitats": [
+      "grassland",
+      "steppe"
+    ],
+    "continents": [
+      "Asia"
+    ],
     "diet": "Herbivore",
     "activity": "Diurnal",
-    "size": "1.2–1.4 m shoulder height",
+    "size": "1.2\u20131.4 m shoulder height",
     "behavior": "Social herd grazer; only truly wild horse",
-    "artifactTypes": ["track_cast", "photo_record", "conservation_report"],
+    "artifactTypes": [
+      "track_cast",
+      "photo_record",
+      "conservation_report"
+    ],
     "conservationStatus": "Endangered",
-    "learningTopics": ["conservation success", "reintroduction", "grassland ecology"],
+    "learningTopics": [
+      "conservation success",
+      "reintroduction",
+      "grassland ecology"
+    ],
     "questType": "conservation",
     "dangerLevel": 1,
     "ethicalInteraction": "observe_from_distance",
-    "funFacts": ["Went extinct in wild in 1960s", "Successfully reintroduced to Mongolia"],
+    "funFacts": [
+      "Went extinct in wild in 1960s",
+      "Successfully reintroduced to Mongolia"
+    ],
     "whyItMatters": "Symbol of successful species recovery through captive breeding.",
-    "region": "savanna"
+    "region": "steppe"
   }
 ]

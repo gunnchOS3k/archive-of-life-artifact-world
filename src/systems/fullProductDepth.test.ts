@@ -55,6 +55,7 @@ const species: PlayableSpecies = {
   ethicalInteraction: 'observe_from_distance',
   timeRange: 'Present',
   habitats: ['savanna'],
+  continents: ['Africa'],
   diet: '',
   activity: '',
   size: '',

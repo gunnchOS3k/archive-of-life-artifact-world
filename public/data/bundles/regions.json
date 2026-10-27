@@ -9,6 +9,7 @@
     "speciesIds": [],
     "connections": [
       "savanna",
+      "steppe",
       "forest",
       "wetland",
       "coastal",
@@ -32,7 +33,6 @@
     "speciesIds": [
       "panthera_leo",
       "loxodonta_africana",
-      "equus_caballus_ferus",
       "danaus_plexippus",
       "apis_mellifera",
       "latrodectus_mactans",
@@ -41,7 +41,28 @@
     "connections": [
       "museum"
     ],
-    "bundlePath": "bundles/region-savanna.json"
+    "bundlePath": "bundles/region-savanna.json",
+    "continents": [
+      "Africa"
+    ]
+  },
+  {
+    "id": "steppe",
+    "name": "Central Asian Steppe",
+    "type": "explore",
+    "description": "Open grasslands of Central Asia \u2014 authored home for the last truly wild horses. Game-authored planning twin; not a surveyed claim.",
+    "color": "#B8A06A",
+    "biome": "steppe",
+    "continents": [
+      "Asia"
+    ],
+    "speciesIds": [
+      "equus_caballus_ferus"
+    ],
+    "connections": [
+      "museum"
+    ],
+    "bundlePath": "bundles/region-steppe.json"
   },
   {
     "id": "forest",

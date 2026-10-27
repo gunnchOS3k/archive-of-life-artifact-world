@@ -1366,7 +1366,7 @@
         }
       ],
       "gameplay": {
-        "region": "savanna",
+        "region": "steppe",
         "questType": "conservation",
         "dangerLevel": 1,
         "ethicalInteraction": "observe_from_distance",

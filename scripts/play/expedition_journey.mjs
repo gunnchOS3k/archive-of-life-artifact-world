@@ -287,9 +287,61 @@ try {
   if (timeAtlasRestored.provenance.some((value) => value !== 'game_authored')) throw new Error('reload changed artifact provenance');
   if (timeAtlasRestored.scientificVerification.some((value) => value !== false)) throw new Error('reload claimed scientific verification');
 
+  const identity = await page.evaluate(async () => {
+    const accept = window.__aolAccept;
+    await accept('travel', 'savanna');
+    const region = window.__aolGame?.world?.regionData;
+    const lionIcon = await accept('species_icon', 'panthera_leo');
+    return {
+      regionId: region?.id || null,
+      speciesIds: region?.speciesIds || [],
+      horseInSavanna: (region?.speciesIds || []).includes('equus_caballus_ferus'),
+      lionIcon,
+    };
+  });
+  if (identity.horseInSavanna) throw new Error('Przewalski horse still listed in African savanna');
+  if (!identity.speciesIds.includes('panthera_leo')) throw new Error('lion missing from savanna after fix');
+  if (identity.lionIcon?.icon !== '🦁') throw new Error(`lion icon wrong ${JSON.stringify(identity.lionIcon)}`);
+
+  const steppe = await page.evaluate(async () => {
+    const accept = window.__aolAccept;
+    await accept('travel', 'museum');
+    await accept('travel', 'steppe');
+    const moved = await accept('move', 'species');
+    const region = window.__aolGame?.world?.regionData;
+    const horseIcon = await accept('species_icon', 'equus_caballus_ferus');
+    const lionAsMammal = await accept('species_icon', 'equus_caballus_ferus');
+    const interactables = (window.__aolGame?.world?.interactables || [])
+      .filter((item) => item.type === 'species')
+      .map((item) => ({
+        id: item.speciesId,
+        commonName: item.species?.commonName || null,
+        family: item.species?.family || null,
+      }));
+    return {
+      regionId: region?.id || null,
+      continents: region?.continents || [],
+      speciesIds: region?.speciesIds || [],
+      target: moved?.target || null,
+      horseIcon,
+      interactables,
+      horse: interactables.find((item) => item.id === 'equus_caballus_ferus') || null,
+    };
+  });
+  if (steppe.regionId !== 'steppe') throw new Error(`steppe travel failed ${JSON.stringify(steppe)}`);
+  if (!(steppe.continents || []).includes('Asia')) throw new Error(`steppe continents ${JSON.stringify(steppe.continents)}`);
+  if (!steppe.speciesIds.includes('equus_caballus_ferus')) throw new Error('horse missing from steppe');
+  if (!steppe.horse || steppe.horse.commonName !== "Przewalski's Horse") {
+    throw new Error(`steppe horse encounter missing ${JSON.stringify(steppe)}`);
+  }
+  if (steppe.horseIcon?.icon === '🦁') throw new Error('horse still resolves to lion icon on steppe');
+  if (steppe.horseIcon?.icon !== '🐴') throw new Error(`steppe horse icon ${JSON.stringify(steppe.horseIcon)}`);
+  if (steppe.horseIcon?.region !== 'steppe') throw new Error(`horse home region ${steppe.horseIcon?.region}`);
+  if ((steppe.horseIcon?.continents || []).includes('Africa')) throw new Error('horse continents still include Africa');
+
   mkdirSync(dirname(OUT), { recursive: true });
-  writeFileSync(OUT, `${JSON.stringify({ ok: true, runtime: 'vite_preview', explored, restored, era, eraRestored, notebook, notebookRestored, dex, dexRestored, timeAtlas, timeAtlasRestored }, null, 2)}\n`);
-  console.log(JSON.stringify({ ok: true, runtime: 'vite_preview', speciesId: explored.speciesId, era: era.active, dex: dex.scientificName, timeAtlas: timeAtlas.selected }));
+  writeFileSync(OUT, `${JSON.stringify({ ok: true, runtime: 'vite_preview', explored, restored, era, eraRestored, notebook, notebookRestored, dex, dexRestored, timeAtlas, timeAtlasRestored, identity, steppe }, null, 2)}\n`);
+  console.log(JSON.stringify({ ok: true, runtime: 'vite_preview', speciesId: explored.speciesId, era: era.active, dex: dex.scientificName, timeAtlas: timeAtlas.selected, identity, steppeHorse: steppe.horse?.commonName }));
 } finally {
   await browser?.close();
   preview.kill('SIGTERM');

@@ -5,6 +5,8 @@ export interface RegionBundle {
   description: string;
   color: string;
   biome: string;
+  /** Authored geographic scope for eligibility (game-authored; not a surveyed claim). */
+  continents?: string[];
   speciesIds: string[];
   connections: string[];
   bundlePath?: string;
