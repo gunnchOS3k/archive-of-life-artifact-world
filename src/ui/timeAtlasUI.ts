@@ -218,11 +218,15 @@ export class TimeAtlasUI {
   }
 
   private temporalMapStatusLabel(map: TemporalEarthMapRecord): string {
+    if (this.temporalMapService.isScientificallyUnlocked(map)) {
+      return `<span class="earth-mode-badge">SOURCE VERIFIED — UNLOCKED</span> ${map.coveredGridCellCount}/${map.expectedGridCellCount} cells`;
+    }
     if (map.status === 'source_verified') {
-      return `<span class="earth-mode-badge">SOURCE VERIFIED</span> ${map.coveredGridCellCount}/${map.expectedGridCellCount} cells`;
+      // Catalog says verified but asset/coverage gates failed — stay honest.
+      return `<span class="mock-badge">BLOCKED — VERIFIED LABEL WITHOUT AUTHORIZED ASSET</span> ${map.coveredGridCellCount}/${map.expectedGridCellCount} cells`;
     }
     if (map.status === 'partial') {
-      return `<span class="mock-badge">PARTIAL</span> ${map.coveredGridCellCount}/${map.expectedGridCellCount} cells`;
+      return `<span class="mock-badge">PARTIAL — NOT UNLOCKED</span> ${map.coveredGridCellCount}/${map.expectedGridCellCount} cells`;
     }
     return `<span class="mock-badge">BLOCKED — NO SCIENTIFIC ASSET</span> 0/${map.expectedGridCellCount} cells`;
   }

@@ -1,18 +1,18 @@
 {
-  "generatedAt": "2026-07-11T19:12:04.855Z",
+  "generatedAt": "2026-10-29T02:26:16.211Z",
   "ready": false,
   "blockingReasons": [
-    "Not source-verified: col, gbif, iucn, pbdb, neotoma",
+    "Not source-verified: col, gbif, iucn, pbdb, nasa, neotoma",
     "Time Atlas still uses the labeled ICS sample snapshot",
     "17/17 supported time gates lack full-Earth source-verified maps",
     "NASA metadata is cached, but displayed regional measurements remain sample fallback values",
-    "23/23 hero taxa still include mock scientific provenance"
+    "24/24 hero taxa still include mock scientific provenance"
   ],
   "checks": [
     {
       "name": "required_external_sources_verified",
       "passed": false,
-      "message": "Not source-verified: col, gbif, iucn, pbdb, neotoma"
+      "message": "Not source-verified: col, gbif, iucn, pbdb, nasa, neotoma"
     },
     {
       "name": "chronostratigraphy_not_mock",
@@ -32,7 +32,17 @@
     {
       "name": "hero_scientific_fields_not_mock",
       "passed": false,
-      "message": "23/23 hero taxa still include mock scientific provenance"
+      "message": "24/24 hero taxa still include mock scientific provenance"
+    },
+    {
+      "name": "mock_never_labeled_source_verified",
+      "passed": true,
+      "message": "No mock provenance is labeled source_verified"
+    },
+    {
+      "name": "hero_taxonomy_no_mock_col_ids",
+      "passed": true,
+      "message": "Hero taxonomy does not expose MOCK-COL identifiers"
     }
   ],
   "verificationCommand": "npm run audit:production"

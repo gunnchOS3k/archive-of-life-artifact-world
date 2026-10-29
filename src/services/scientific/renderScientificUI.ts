@@ -80,6 +80,14 @@ export function renderScientificSourcesPanel(entry: ArchiveDexEntry): string {
       </div>`;
   }
 
+  const scope =
+    (entry as { scientificScopeStatement?: string }).scientificScopeStatement ||
+    (entry.sources.some((p) => resolveVerificationStatus(p) === 'mock_sample')
+      ? 'External scientific fields include quarantined mock samples — not source-verified. Catalog is incomplete.'
+      : '');
+  const scopeHtml = scope
+    ? `<p class="uncertainty-note" data-scientific-scope="1">${escapeHtml(scope)}</p>`
+    : '';
   const prov = entry.sources
     .map((p) => {
       const status = resolveVerificationStatus(p);
@@ -92,7 +100,7 @@ export function renderScientificSourcesPanel(entry: ArchiveDexEntry): string {
       </div>`;
     })
     .join('');
-  return prov || '<p><em>No provenance records — blocked by external source.</em></p>';
+  return `${scopeHtml}${prov || '<p><em>No provenance records — blocked by external source.</em></p>'}`;
 }
 
 export function renderCoverageSummary(text: string): string {

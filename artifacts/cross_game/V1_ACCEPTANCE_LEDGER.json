@@ -1,0 +1,308 @@
+{
+  "schema": "cross_game_v1_acceptance_ledger.v1",
+  "title": "Cross-game V1 acceptance ledger",
+  "generatedAt": "2026-10-29T02:25:05Z",
+  "baseTipShaAtDraft": "36b0576ff046b98381a13ef218167def16d3d7c6",
+  "workingSha": "pending-commit",
+  "draftPr": 55,
+  "draftPrUrl": "https://github.com/gunnchOS3k/archive-of-life-artifact-world/pull/55",
+  "gates": {
+    "human_v1": false,
+    "rc": false,
+    "v1_0_0_release_authorized": false,
+    "commercial_authorized": false
+  },
+  "allowed_statuses": [
+    "data_registered",
+    "runtime_playable",
+    "gameplay_tested",
+    "final_asset_candidate",
+    "final_asset_human_approved",
+    "rc",
+    "commercial_authorized"
+  ],
+  "status_definitions": {
+    "data_registered": "Content/systems registered in repo artifacts or bundles",
+    "runtime_playable": "Loads and is interactable in a digital runtime",
+    "gameplay_tested": "Automated or scripted gameplay evidence exists",
+    "final_asset_candidate": "Art/asset nominated as final candidate (not human-approved)",
+    "final_asset_human_approved": "Human explicitly approved final asset",
+    "rc": "Release-candidate authorized",
+    "commercial_authorized": "Commercial ship authorized"
+  },
+  "games": {
+    "archive_of_life": {
+      "title": "Archive of Life",
+      "repo": "archive-of-life-artifact-world",
+      "section_complete": true,
+      "overall_status": "gameplay_tested",
+      "human_test": false,
+      "rc": false,
+      "v1": false,
+      "commercial_authorized": false,
+      "earth_complete_catalog_claim": false,
+      "systems": {
+        "ArchiveDex": {
+          "implemented": true,
+          "runtime": true,
+          "automated_evidence": true,
+          "native_evidence": false,
+          "final_art": false,
+          "human_test": false,
+          "blocker": "Human playtest + final art approval pending; mock science quarantined not source-verified",
+          "owner": "archive",
+          "status": "gameplay_tested"
+        },
+        "TimeAtlas": {
+          "implemented": true,
+          "runtime": true,
+          "automated_evidence": true,
+          "native_evidence": false,
+          "final_art": false,
+          "human_test": false,
+          "blocker": "Temporal full-Earth maps remain blocked_external without authorized reconstructions",
+          "owner": "archive",
+          "status": "runtime_playable"
+        },
+        "ScienceDB": {
+          "implemented": true,
+          "runtime": true,
+          "automated_evidence": true,
+          "native_evidence": false,
+          "final_art": false,
+          "human_test": false,
+          "blocker": "Required external COL/GBIF/IUCN/PBDB/NASA imports not source-verified; production readiness remains NOT ready",
+          "owner": "archive",
+          "status": "runtime_playable"
+        },
+        "ExpeditionCollectionJournal": {
+          "implemented": true,
+          "runtime": true,
+          "automated_evidence": true,
+          "native_evidence": false,
+          "final_art": false,
+          "human_test": false,
+          "blocker": "Human expedition feel / balance not signed off",
+          "owner": "archive",
+          "status": "gameplay_tested"
+        },
+        "Lifelings": {
+          "implemented": true,
+          "runtime": true,
+          "automated_evidence": true,
+          "native_evidence": false,
+          "final_art": false,
+          "human_test": false,
+          "blocker": "Companion final art + human approval pending",
+          "owner": "archive",
+          "status": "runtime_playable"
+        },
+        "MuseumHub": {
+          "implemented": true,
+          "runtime": true,
+          "automated_evidence": true,
+          "native_evidence": false,
+          "final_art": false,
+          "human_test": false,
+          "blocker": "Final museum art not human-approved",
+          "owner": "archive",
+          "status": "runtime_playable"
+        },
+        "RegionExplorationSteppe": {
+          "implemented": true,
+          "runtime": true,
+          "automated_evidence": true,
+          "native_evidence": false,
+          "final_art": false,
+          "human_test": false,
+          "blocker": "Single authored steppe encounter; not a surveyed regional catalog",
+          "owner": "archive",
+          "status": "gameplay_tested"
+        },
+        "OfflineIntegrity": {
+          "implemented": true,
+          "runtime": true,
+          "automated_evidence": true,
+          "native_evidence": false,
+          "final_art": false,
+          "human_test": false,
+          "blocker": "liveClaim remains false; not a live-ingest claim",
+          "owner": "archive",
+          "status": "gameplay_tested"
+        },
+        "TaxonHonestIcons": {
+          "implemented": true,
+          "runtime": true,
+          "automated_evidence": true,
+          "native_evidence": false,
+          "final_art": false,
+          "human_test": false,
+          "blocker": "Emoji presentation only \u2014 final art candidates not human-approved",
+          "owner": "archive",
+          "status": "gameplay_tested"
+        },
+        "MockProvenanceQuarantine": {
+          "implemented": true,
+          "runtime": true,
+          "automated_evidence": true,
+          "native_evidence": false,
+          "final_art": false,
+          "human_test": false,
+          "blocker": "Quarantined mocks still present until approved snapshot imports replace them",
+          "owner": "archive",
+          "status": "data_registered"
+        }
+      },
+      "evidence": [
+        "src/services/speciesIdentityGeo.test.ts",
+        "scripts/quarantine-mock-hero-provenance.ts",
+        "scripts/audit-production-readiness.ts",
+        "artifacts/play/EXPEDITION_JOURNEY.json",
+        "public/data/status/production_readiness_report.json"
+      ],
+      "notes": [
+        "ARCHIVE section fully filled this shift.",
+        "Human / RC / V1 / commercial gates stay false.",
+        "Do not interpret gameplay_tested as Earth-complete science or commercial authorization."
+      ]
+    },
+    "anime_aggressors": {
+      "title": "Anime Aggressors",
+      "repo": "anime-aggressors",
+      "section_complete": false,
+      "stub": true,
+      "overall_status": "data_registered",
+      "human_test": false,
+      "rc": false,
+      "v1": false,
+      "commercial_authorized": false,
+      "systems": {
+        "CoreCombat": {
+          "implemented": false,
+          "runtime": false,
+          "automated_evidence": false,
+          "native_evidence": false,
+          "final_art": false,
+          "human_test": false,
+          "blocker": "Stub \u2014 owned outside Archive of Life repo",
+          "owner": "anime",
+          "status": "data_registered"
+        },
+        "FinalArt": {
+          "implemented": false,
+          "runtime": false,
+          "automated_evidence": false,
+          "native_evidence": false,
+          "final_art": false,
+          "human_test": false,
+          "blocker": "Stub",
+          "owner": "anime",
+          "status": "data_registered"
+        },
+        "HumanPlaytest": {
+          "implemented": false,
+          "runtime": false,
+          "automated_evidence": false,
+          "native_evidence": false,
+          "final_art": false,
+          "human_test": false,
+          "blocker": "Stub",
+          "owner": "anime",
+          "status": "data_registered"
+        }
+      }
+    },
+    "pedestrian_pursuit": {
+      "title": "Pedestrian Pursuit",
+      "repo": "pedestrian-pursuit",
+      "section_complete": false,
+      "stub": true,
+      "overall_status": "data_registered",
+      "human_test": false,
+      "rc": false,
+      "v1": false,
+      "commercial_authorized": false,
+      "systems": {
+        "RaceLoop": {
+          "implemented": false,
+          "runtime": false,
+          "automated_evidence": false,
+          "native_evidence": false,
+          "final_art": false,
+          "human_test": false,
+          "blocker": "Stub \u2014 owned outside Archive of Life repo",
+          "owner": "pedestrian",
+          "status": "data_registered"
+        },
+        "FinalArt": {
+          "implemented": false,
+          "runtime": false,
+          "automated_evidence": false,
+          "native_evidence": false,
+          "final_art": false,
+          "human_test": false,
+          "blocker": "Stub",
+          "owner": "pedestrian",
+          "status": "data_registered"
+        },
+        "HumanPlaytest": {
+          "implemented": false,
+          "runtime": false,
+          "automated_evidence": false,
+          "native_evidence": false,
+          "final_art": false,
+          "human_test": false,
+          "blocker": "Stub",
+          "owner": "pedestrian",
+          "status": "data_registered"
+        }
+      }
+    },
+    "beatlink_party": {
+      "title": "BeatLink Party",
+      "repo": "beatlink-party",
+      "section_complete": false,
+      "stub": true,
+      "overall_status": "data_registered",
+      "human_test": false,
+      "rc": false,
+      "v1": false,
+      "commercial_authorized": false,
+      "systems": {
+        "SessionSync": {
+          "implemented": false,
+          "runtime": false,
+          "automated_evidence": false,
+          "native_evidence": false,
+          "final_art": false,
+          "human_test": false,
+          "blocker": "Stub \u2014 owned outside Archive of Life repo",
+          "owner": "beatlink",
+          "status": "data_registered"
+        },
+        "FinalArt": {
+          "implemented": false,
+          "runtime": false,
+          "automated_evidence": false,
+          "native_evidence": false,
+          "final_art": false,
+          "human_test": false,
+          "blocker": "Stub",
+          "owner": "beatlink",
+          "status": "data_registered"
+        },
+        "HumanPlaytest": {
+          "implemented": false,
+          "runtime": false,
+          "automated_evidence": false,
+          "native_evidence": false,
+          "final_art": false,
+          "human_test": false,
+          "blocker": "Stub",
+          "owner": "beatlink",
+          "status": "data_registered"
+        }
+      }
+    }
+  }
+}

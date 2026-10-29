@@ -43,11 +43,16 @@ const SPECIES_ICONS: Record<string, string> = {
   libellula_quadrimaculata: '🪰',
 };
 
+/**
+ * Family-level marks must stay category-neutral — never impersonate one species
+ * inside the family (e.g. Felidae ≠ lion, Equidae ≠ horse, Canidae ≠ wolf).
+ * Taxon-correct marks live in SPECIES_ICONS / looksLike* helpers.
+ */
 const FAMILY_ICONS: Record<string, string> = {
-  Felidae: LION_ICON,
+  Felidae: '🐾',
   Elephantidae: '🐘',
-  Equidae: HORSE_ICON,
-  Canidae: '🐺',
+  Equidae: '🐾',
+  Canidae: '🐾',
   Cervidae: '🦌',
   Ursidae: '🐻',
   Castoridae: '🦫',
@@ -83,10 +88,9 @@ function looksLikeHorse(identity: SpeciesIdentity): boolean {
   const id = norm(identity.id);
   const common = norm(identity.commonName);
   const sci = norm(identity.scientificName);
-  const family = norm(identity.family);
+  // Do not key off Equidae alone — zebras/asses must not impersonate horse.
   return (
     id.includes('equus') ||
-    family === 'equidae' ||
     common.includes('horse') ||
     common.includes('przewalski') ||
     sci.includes('equus')
@@ -144,6 +148,7 @@ export const SPECIES_REPRESENTATION_CONTRACT = Object.freeze({
   lionIcon: LION_ICON,
   horseIcon: HORSE_ICON,
   forbidGroupLionForAllMammals: true,
+  forbidFamilyImpersonation: true,
   provenance: 'game_authored_presentation',
   scientificAcceptanceClaim: false,
 });

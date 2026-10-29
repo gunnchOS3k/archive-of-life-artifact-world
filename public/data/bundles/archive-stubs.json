@@ -33,18 +33,19 @@
           "verificationStatus": "game_authored_verified"
         },
         {
-          "source": "catalogue_of_life",
-          "sourceVersion": "mock-sample-2026-07",
-          "sourceRecordId": "sample_cyanobacteria",
+          "source": "mock_sample",
+          "sourceVersion": "quarantined-mock-sample-2026-07",
+          "sourceRecordId": "QUARANTINED-MOCK-sample_cyanobacteria",
           "license": "MOCK-SAMPLE",
-          "citation": "MOCK SAMPLE — tiered archive stub; requires approved source snapshot import",
+          "citation": "QUARANTINED MOCK SAMPLE \u2014 not Catalogue of Life / GBIF / IUCN / PBDB; not source-verified. Retained for pipeline demos only until an approved snapshot import replaces it.",
           "citationRequired": true,
           "retrievedAt": "2026-10-27T23:25:27.833Z",
           "lastUpdated": "2026-10-27T23:25:27.833Z",
           "isMockData": true,
           "verificationStatus": "mock_sample"
         }
-      ]
+      ],
+      "scientificScopeStatement": "Gameplay-authored hero record. External taxonomy/conservation/distribution fields that lack an approved COL/GBIF/IUCN/PBDB snapshot remain quarantined mock samples \u2014 never source-verified. Catalog is intentionally incomplete (not Earth-complete)."
     },
     {
       "id": "sample_trilobite_elrathia",
@@ -78,18 +79,19 @@
           "verificationStatus": "game_authored_verified"
         },
         {
-          "source": "paleobiodb",
-          "sourceVersion": "mock-sample-2026-07",
-          "sourceRecordId": "sample_trilobite_elrathia",
+          "source": "mock_sample",
+          "sourceVersion": "quarantined-mock-sample-2026-07",
+          "sourceRecordId": "QUARANTINED-MOCK-sample_trilobite_elrathia",
           "license": "MOCK-SAMPLE",
-          "citation": "MOCK SAMPLE — tiered archive stub; requires approved source snapshot import",
+          "citation": "QUARANTINED MOCK SAMPLE \u2014 not Catalogue of Life / GBIF / IUCN / PBDB; not source-verified. Retained for pipeline demos only until an approved snapshot import replaces it.",
           "citationRequired": true,
           "retrievedAt": "2026-10-27T23:25:27.833Z",
           "lastUpdated": "2026-10-27T23:25:27.833Z",
           "isMockData": true,
           "verificationStatus": "mock_sample"
         }
-      ]
+      ],
+      "scientificScopeStatement": "Gameplay-authored hero record. External taxonomy/conservation/distribution fields that lack an approved COL/GBIF/IUCN/PBDB snapshot remain quarantined mock samples \u2014 never source-verified. Catalog is intentionally incomplete (not Earth-complete)."
     },
     {
       "id": "sample_anomalocaris",
@@ -122,18 +124,19 @@
           "verificationStatus": "game_authored_verified"
         },
         {
-          "source": "paleobiodb",
-          "sourceVersion": "mock-sample-2026-07",
-          "sourceRecordId": "sample_anomalocaris",
+          "source": "mock_sample",
+          "sourceVersion": "quarantined-mock-sample-2026-07",
+          "sourceRecordId": "QUARANTINED-MOCK-sample_anomalocaris",
           "license": "MOCK-SAMPLE",
-          "citation": "MOCK SAMPLE — tiered archive stub; requires approved source snapshot import",
+          "citation": "QUARANTINED MOCK SAMPLE \u2014 not Catalogue of Life / GBIF / IUCN / PBDB; not source-verified. Retained for pipeline demos only until an approved snapshot import replaces it.",
           "citationRequired": true,
           "retrievedAt": "2026-10-27T23:25:27.833Z",
           "lastUpdated": "2026-10-27T23:25:27.833Z",
           "isMockData": true,
           "verificationStatus": "mock_sample"
         }
-      ]
+      ],
+      "scientificScopeStatement": "Gameplay-authored hero record. External taxonomy/conservation/distribution fields that lack an approved COL/GBIF/IUCN/PBDB snapshot remain quarantined mock samples \u2014 never source-verified. Catalog is intentionally incomplete (not Earth-complete)."
     },
     {
       "id": "sample_dickinsonia",
@@ -166,18 +169,19 @@
           "verificationStatus": "game_authored_verified"
         },
         {
-          "source": "paleobiodb",
-          "sourceVersion": "mock-sample-2026-07",
-          "sourceRecordId": "sample_dickinsonia",
+          "source": "mock_sample",
+          "sourceVersion": "quarantined-mock-sample-2026-07",
+          "sourceRecordId": "QUARANTINED-MOCK-sample_dickinsonia",
           "license": "MOCK-SAMPLE",
-          "citation": "MOCK SAMPLE — tiered archive stub; requires approved source snapshot import",
+          "citation": "QUARANTINED MOCK SAMPLE \u2014 not Catalogue of Life / GBIF / IUCN / PBDB; not source-verified. Retained for pipeline demos only until an approved snapshot import replaces it.",
           "citationRequired": true,
           "retrievedAt": "2026-10-27T23:25:27.833Z",
           "lastUpdated": "2026-10-27T23:25:27.833Z",
           "isMockData": true,
           "verificationStatus": "mock_sample"
         }
-      ]
+      ],
+      "scientificScopeStatement": "Gameplay-authored hero record. External taxonomy/conservation/distribution fields that lack an approved COL/GBIF/IUCN/PBDB snapshot remain quarantined mock samples \u2014 never source-verified. Catalog is intentionally incomplete (not Earth-complete)."
     },
     {
       "id": "sample_charnia",
@@ -210,18 +214,19 @@
           "verificationStatus": "game_authored_verified"
         },
         {
-          "source": "paleobiodb",
-          "sourceVersion": "mock-sample-2026-07",
-          "sourceRecordId": "sample_charnia",
+          "source": "mock_sample",
+          "sourceVersion": "quarantined-mock-sample-2026-07",
+          "sourceRecordId": "QUARANTINED-MOCK-sample_charnia",
           "license": "MOCK-SAMPLE",
-          "citation": "MOCK SAMPLE — tiered archive stub; requires approved source snapshot import",
+          "citation": "QUARANTINED MOCK SAMPLE \u2014 not Catalogue of Life / GBIF / IUCN / PBDB; not source-verified. Retained for pipeline demos only until an approved snapshot import replaces it.",
           "citationRequired": true,
           "retrievedAt": "2026-10-27T23:25:27.833Z",
           "lastUpdated": "2026-10-27T23:25:27.833Z",
           "isMockData": true,
           "verificationStatus": "mock_sample"
         }
-      ]
+      ],
+      "scientificScopeStatement": "Gameplay-authored hero record. External taxonomy/conservation/distribution fields that lack an approved COL/GBIF/IUCN/PBDB snapshot remain quarantined mock samples \u2014 never source-verified. Catalog is intentionally incomplete (not Earth-complete)."
     },
     {
       "id": "sample_brachiosaurus",
@@ -255,18 +260,19 @@
           "verificationStatus": "game_authored_verified"
         },
         {
-          "source": "paleobiodb",
-          "sourceVersion": "mock-sample-2026-07",
-          "sourceRecordId": "sample_brachiosaurus",
+          "source": "mock_sample",
+          "sourceVersion": "quarantined-mock-sample-2026-07",
+          "sourceRecordId": "QUARANTINED-MOCK-sample_brachiosaurus",
           "license": "MOCK-SAMPLE",
-          "citation": "MOCK SAMPLE — tiered archive stub; requires approved source snapshot import",
+          "citation": "QUARANTINED MOCK SAMPLE \u2014 not Catalogue of Life / GBIF / IUCN / PBDB; not source-verified. Retained for pipeline demos only until an approved snapshot import replaces it.",
           "citationRequired": true,
           "retrievedAt": "2026-10-27T23:25:27.833Z",
           "lastUpdated": "2026-10-27T23:25:27.833Z",
           "isMockData": true,
           "verificationStatus": "mock_sample"
         }
-      ]
+      ],
+      "scientificScopeStatement": "Gameplay-authored hero record. External taxonomy/conservation/distribution fields that lack an approved COL/GBIF/IUCN/PBDB snapshot remain quarantined mock samples \u2014 never source-verified. Catalog is intentionally incomplete (not Earth-complete)."
     },
     {
       "id": "sample_archaeopteryx",
@@ -299,18 +305,19 @@
           "verificationStatus": "game_authored_verified"
         },
         {
-          "source": "paleobiodb",
-          "sourceVersion": "mock-sample-2026-07",
-          "sourceRecordId": "sample_archaeopteryx",
+          "source": "mock_sample",
+          "sourceVersion": "quarantined-mock-sample-2026-07",
+          "sourceRecordId": "QUARANTINED-MOCK-sample_archaeopteryx",
           "license": "MOCK-SAMPLE",
-          "citation": "MOCK SAMPLE — tiered archive stub; requires approved source snapshot import",
+          "citation": "QUARANTINED MOCK SAMPLE \u2014 not Catalogue of Life / GBIF / IUCN / PBDB; not source-verified. Retained for pipeline demos only until an approved snapshot import replaces it.",
           "citationRequired": true,
           "retrievedAt": "2026-10-27T23:25:27.833Z",
           "lastUpdated": "2026-10-27T23:25:27.833Z",
           "isMockData": true,
           "verificationStatus": "mock_sample"
         }
-      ]
+      ],
+      "scientificScopeStatement": "Gameplay-authored hero record. External taxonomy/conservation/distribution fields that lack an approved COL/GBIF/IUCN/PBDB snapshot remain quarantined mock samples \u2014 never source-verified. Catalog is intentionally incomplete (not Earth-complete)."
     },
     {
       "id": "sample_coelophysis",
@@ -344,18 +351,19 @@
           "verificationStatus": "game_authored_verified"
         },
         {
-          "source": "paleobiodb",
-          "sourceVersion": "mock-sample-2026-07",
-          "sourceRecordId": "sample_coelophysis",
+          "source": "mock_sample",
+          "sourceVersion": "quarantined-mock-sample-2026-07",
+          "sourceRecordId": "QUARANTINED-MOCK-sample_coelophysis",
           "license": "MOCK-SAMPLE",
-          "citation": "MOCK SAMPLE — tiered archive stub; requires approved source snapshot import",
+          "citation": "QUARANTINED MOCK SAMPLE \u2014 not Catalogue of Life / GBIF / IUCN / PBDB; not source-verified. Retained for pipeline demos only until an approved snapshot import replaces it.",
           "citationRequired": true,
           "retrievedAt": "2026-10-27T23:25:27.833Z",
           "lastUpdated": "2026-10-27T23:25:27.833Z",
           "isMockData": true,
           "verificationStatus": "mock_sample"
         }
-      ]
+      ],
+      "scientificScopeStatement": "Gameplay-authored hero record. External taxonomy/conservation/distribution fields that lack an approved COL/GBIF/IUCN/PBDB snapshot remain quarantined mock samples \u2014 never source-verified. Catalog is intentionally incomplete (not Earth-complete)."
     },
     {
       "id": "sample_ammonite_cretaceous",
@@ -389,18 +397,19 @@
           "verificationStatus": "game_authored_verified"
         },
         {
-          "source": "paleobiodb",
-          "sourceVersion": "mock-sample-2026-07",
-          "sourceRecordId": "sample_ammonite_cretaceous",
+          "source": "mock_sample",
+          "sourceVersion": "quarantined-mock-sample-2026-07",
+          "sourceRecordId": "QUARANTINED-MOCK-sample_ammonite_cretaceous",
           "license": "MOCK-SAMPLE",
-          "citation": "MOCK SAMPLE — tiered archive stub; requires approved source snapshot import",
+          "citation": "QUARANTINED MOCK SAMPLE \u2014 not Catalogue of Life / GBIF / IUCN / PBDB; not source-verified. Retained for pipeline demos only until an approved snapshot import replaces it.",
           "citationRequired": true,
           "retrievedAt": "2026-10-27T23:25:27.833Z",
           "lastUpdated": "2026-10-27T23:25:27.833Z",
           "isMockData": true,
           "verificationStatus": "mock_sample"
         }
-      ]
+      ],
+      "scientificScopeStatement": "Gameplay-authored hero record. External taxonomy/conservation/distribution fields that lack an approved COL/GBIF/IUCN/PBDB snapshot remain quarantined mock samples \u2014 never source-verified. Catalog is intentionally incomplete (not Earth-complete)."
     },
     {
       "id": "sample_ammonite_devonian",
@@ -438,18 +447,19 @@
           "verificationStatus": "game_authored_verified"
         },
         {
-          "source": "paleobiodb",
-          "sourceVersion": "mock-sample-2026-07",
-          "sourceRecordId": "sample_ammonite_devonian",
+          "source": "mock_sample",
+          "sourceVersion": "quarantined-mock-sample-2026-07",
+          "sourceRecordId": "QUARANTINED-MOCK-sample_ammonite_devonian",
           "license": "MOCK-SAMPLE",
-          "citation": "MOCK SAMPLE — tiered archive stub; requires approved source snapshot import",
+          "citation": "QUARANTINED MOCK SAMPLE \u2014 not Catalogue of Life / GBIF / IUCN / PBDB; not source-verified. Retained for pipeline demos only until an approved snapshot import replaces it.",
           "citationRequired": true,
           "retrievedAt": "2026-10-27T23:25:27.833Z",
           "lastUpdated": "2026-10-27T23:25:27.833Z",
           "isMockData": true,
           "verificationStatus": "mock_sample"
         }
-      ]
+      ],
+      "scientificScopeStatement": "Gameplay-authored hero record. External taxonomy/conservation/distribution fields that lack an approved COL/GBIF/IUCN/PBDB snapshot remain quarantined mock samples \u2014 never source-verified. Catalog is intentionally incomplete (not Earth-complete)."
     },
     {
       "id": "sample_trilobite_group",
@@ -487,18 +497,19 @@
           "verificationStatus": "game_authored_verified"
         },
         {
-          "source": "paleobiodb",
-          "sourceVersion": "mock-sample-2026-07",
-          "sourceRecordId": "sample_trilobite_group",
+          "source": "mock_sample",
+          "sourceVersion": "quarantined-mock-sample-2026-07",
+          "sourceRecordId": "QUARANTINED-MOCK-sample_trilobite_group",
           "license": "MOCK-SAMPLE",
-          "citation": "MOCK SAMPLE — tiered archive stub; requires approved source snapshot import",
+          "citation": "QUARANTINED MOCK SAMPLE \u2014 not Catalogue of Life / GBIF / IUCN / PBDB; not source-verified. Retained for pipeline demos only until an approved snapshot import replaces it.",
           "citationRequired": true,
           "retrievedAt": "2026-10-27T23:25:27.833Z",
           "lastUpdated": "2026-10-27T23:25:27.833Z",
           "isMockData": true,
           "verificationStatus": "mock_sample"
         }
-      ]
+      ],
+      "scientificScopeStatement": "Gameplay-authored hero record. External taxonomy/conservation/distribution fields that lack an approved COL/GBIF/IUCN/PBDB snapshot remain quarantined mock samples \u2014 never source-verified. Catalog is intentionally incomplete (not Earth-complete)."
     },
     {
       "id": "sample_meganeura",
@@ -532,18 +543,19 @@
           "verificationStatus": "game_authored_verified"
         },
         {
-          "source": "paleobiodb",
-          "sourceVersion": "mock-sample-2026-07",
-          "sourceRecordId": "sample_meganeura",
+          "source": "mock_sample",
+          "sourceVersion": "quarantined-mock-sample-2026-07",
+          "sourceRecordId": "QUARANTINED-MOCK-sample_meganeura",
           "license": "MOCK-SAMPLE",
-          "citation": "MOCK SAMPLE — tiered archive stub; requires approved source snapshot import",
+          "citation": "QUARANTINED MOCK SAMPLE \u2014 not Catalogue of Life / GBIF / IUCN / PBDB; not source-verified. Retained for pipeline demos only until an approved snapshot import replaces it.",
           "citationRequired": true,
           "retrievedAt": "2026-10-27T23:25:27.833Z",
           "lastUpdated": "2026-10-27T23:25:27.833Z",
           "isMockData": true,
           "verificationStatus": "mock_sample"
         }
-      ]
+      ],
+      "scientificScopeStatement": "Gameplay-authored hero record. External taxonomy/conservation/distribution fields that lack an approved COL/GBIF/IUCN/PBDB snapshot remain quarantined mock samples \u2014 never source-verified. Catalog is intentionally incomplete (not Earth-complete)."
     },
     {
       "id": "sample_stromatolite",
@@ -578,18 +590,19 @@
           "verificationStatus": "game_authored_verified"
         },
         {
-          "source": "paleobiodb",
-          "sourceVersion": "mock-sample-2026-07",
-          "sourceRecordId": "sample_stromatolite",
+          "source": "mock_sample",
+          "sourceVersion": "quarantined-mock-sample-2026-07",
+          "sourceRecordId": "QUARANTINED-MOCK-sample_stromatolite",
           "license": "MOCK-SAMPLE",
-          "citation": "MOCK SAMPLE — tiered archive stub; requires approved source snapshot import",
+          "citation": "QUARANTINED MOCK SAMPLE \u2014 not Catalogue of Life / GBIF / IUCN / PBDB; not source-verified. Retained for pipeline demos only until an approved snapshot import replaces it.",
           "citationRequired": true,
           "retrievedAt": "2026-10-27T23:25:27.833Z",
           "lastUpdated": "2026-10-27T23:25:27.833Z",
           "isMockData": true,
           "verificationStatus": "mock_sample"
         }
-      ]
+      ],
+      "scientificScopeStatement": "Gameplay-authored hero record. External taxonomy/conservation/distribution fields that lack an approved COL/GBIF/IUCN/PBDB snapshot remain quarantined mock samples \u2014 never source-verified. Catalog is intentionally incomplete (not Earth-complete)."
     },
     {
       "id": "sample_archean_microbe",
@@ -623,18 +636,19 @@
           "verificationStatus": "game_authored_verified"
         },
         {
-          "source": "paleobiodb",
-          "sourceVersion": "mock-sample-2026-07",
-          "sourceRecordId": "sample_archean_microbe",
+          "source": "mock_sample",
+          "sourceVersion": "quarantined-mock-sample-2026-07",
+          "sourceRecordId": "QUARANTINED-MOCK-sample_archean_microbe",
           "license": "MOCK-SAMPLE",
-          "citation": "MOCK SAMPLE — tiered archive stub; requires approved source snapshot import",
+          "citation": "QUARANTINED MOCK SAMPLE \u2014 not Catalogue of Life / GBIF / IUCN / PBDB; not source-verified. Retained for pipeline demos only until an approved snapshot import replaces it.",
           "citationRequired": true,
           "retrievedAt": "2026-10-27T23:25:27.833Z",
           "lastUpdated": "2026-10-27T23:25:27.833Z",
           "isMockData": true,
           "verificationStatus": "mock_sample"
         }
-      ]
+      ],
+      "scientificScopeStatement": "Gameplay-authored hero record. External taxonomy/conservation/distribution fields that lack an approved COL/GBIF/IUCN/PBDB snapshot remain quarantined mock samples \u2014 never source-verified. Catalog is intentionally incomplete (not Earth-complete)."
     },
     {
       "id": "sample_saber_toothed_cat",
@@ -667,30 +681,19 @@
           "verificationStatus": "game_authored_verified"
         },
         {
-          "source": "paleobiodb",
-          "sourceVersion": "mock-sample-2026-07",
-          "sourceRecordId": "sample_saber_toothed_cat",
+          "source": "mock_sample",
+          "sourceVersion": "quarantined-mock-sample-2026-07",
+          "sourceRecordId": "QUARANTINED-MOCK-sample_saber_toothed_cat",
           "license": "MOCK-SAMPLE",
-          "citation": "MOCK SAMPLE — tiered archive stub; requires approved source snapshot import",
-          "citationRequired": true,
-          "retrievedAt": "2026-10-27T23:25:27.833Z",
-          "lastUpdated": "2026-10-27T23:25:27.833Z",
-          "isMockData": true,
-          "verificationStatus": "mock_sample"
-        },
-        {
-          "source": "neotoma",
-          "sourceVersion": "mock-sample-2026-07",
-          "sourceRecordId": "sample_saber_toothed_cat",
-          "license": "MOCK-SAMPLE",
-          "citation": "MOCK SAMPLE — tiered archive stub; requires approved source snapshot import",
+          "citation": "QUARANTINED MOCK SAMPLE \u2014 not Catalogue of Life / GBIF / IUCN / PBDB; not source-verified. Retained for pipeline demos only until an approved snapshot import replaces it.",
           "citationRequired": true,
           "retrievedAt": "2026-10-27T23:25:27.833Z",
           "lastUpdated": "2026-10-27T23:25:27.833Z",
           "isMockData": true,
           "verificationStatus": "mock_sample"
         }
-      ]
+      ],
+      "scientificScopeStatement": "Gameplay-authored hero record. External taxonomy/conservation/distribution fields that lack an approved COL/GBIF/IUCN/PBDB snapshot remain quarantined mock samples \u2014 never source-verified. Catalog is intentionally incomplete (not Earth-complete)."
     },
     {
       "id": "sample_prebiotic_chemistry",
@@ -704,7 +707,7 @@
         "hadean"
       ],
       "taxonomy": {
-        "family": "—",
+        "family": "\u2014",
         "rank": "species",
         "acceptedName": "Prebiotic molecular systems"
       },
@@ -727,14 +730,15 @@
           "sourceVersion": "mock-sample-2026-07",
           "sourceRecordId": "sample_prebiotic_chemistry",
           "license": "MOCK-SAMPLE",
-          "citation": "MOCK SAMPLE — tiered archive stub; requires approved source snapshot import",
+          "citation": "MOCK SAMPLE \u2014 tiered archive stub; requires approved source snapshot import",
           "citationRequired": true,
           "retrievedAt": "2026-10-27T23:25:27.833Z",
           "lastUpdated": "2026-10-27T23:25:27.833Z",
-          "isMockData": true,
-          "verificationStatus": "mock_sample"
+          "isMockData": false,
+          "verificationStatus": "game_authored_verified"
         }
-      ]
+      ],
+      "scientificScopeStatement": "Gameplay-authored hero record. External taxonomy/conservation/distribution fields that lack an approved COL/GBIF/IUCN/PBDB snapshot remain quarantined mock samples \u2014 never source-verified. Catalog is intentionally incomplete (not Earth-complete)."
     }
   ]
 }

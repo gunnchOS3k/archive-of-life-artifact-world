@@ -1,4 +1,5 @@
 import type { PlayableSpecies } from '@/services/DataCatalogService';
+import { getSpeciesIcon } from '@/services/speciesRepresentation';
 
 export class WildlifeObservation {
   private canvas: HTMLCanvasElement;
@@ -107,10 +108,21 @@ export class WildlifeObservation {
     ctx.translate(this.animalX, this.animalY);
     if (this.animalDir < 0) ctx.scale(-1, 1);
 
-    const icons: Record<string, string> = { Mammal: '🦁', Insect: '🦋', Arachnid: '🕷️', Reptile: '🦎' };
+    // Taxon-correct mark when known; never map Mammal→lion (category impersonation).
     ctx.font = '48px sans-serif';
     ctx.textAlign = 'center';
-    ctx.fillText(icons[this.species.group] || '🐾', 0, 0);
+    ctx.fillText(
+      getSpeciesIcon({
+        id: this.species.id,
+        commonName: this.species.commonName,
+        scientificName: this.species.scientificName,
+        family: this.species.family,
+        group: this.species.group,
+        conservationStatus: this.species.conservationStatus,
+      }),
+      0,
+      0,
+    );
 
     if (alert > 0.5) {
       ctx.font = '20px sans-serif';

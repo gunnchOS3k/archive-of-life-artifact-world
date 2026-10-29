@@ -46,6 +46,11 @@ export interface ArchiveSpecies {
   requiredHabitatSignals?: HabitatSignal[];
   /** NASA data products that inform understanding of this species */
   nasaLayerDependencies?: NasaLayerDependency[];
+  /**
+   * Honest scope for scientific claims on this record.
+   * Must not imply Earth-complete catalog or source-verified external ingest.
+   */
+  scientificScopeStatement?: string;
   provenance: DataSourceProvenance[];
 }
 

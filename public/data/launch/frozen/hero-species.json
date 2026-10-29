@@ -15,15 +15,15 @@
       "taxonomy": {
         "family": "Felidae",
         "rank": "species",
-        "acceptedName": "Panthera leo",
-        "catalogueOfLifeId": "MOCK-COL-panthera_leo"
+        "acceptedName": "Panthera leo"
       },
       "conservation": {
         "iucnCategory": "Vulnerable",
-        "assessed": true,
-        "sourceVersion": "mock-iucn-2026-07",
+        "assessed": false,
+        "sourceVersion": "quarantined-mock-iucn-2026-07",
         "lastUpdated": "2026-07-02",
-        "iucnTaxonId": 97119
+        "dataMode": "mock_sample",
+        "uncertaintyNote": "IUCN category is a gameplay planning label from legacy authored data \u2014 not an IUCN Red List source-verified assessment."
       },
       "distribution": {
         "continents": [
@@ -33,15 +33,16 @@
           "savanna",
           "grassland"
         ],
-        "sourceVersion": "mock-gbif-2026-07",
+        "sourceVersion": "quarantined-mock-gbif-2026-07",
         "lastUpdated": "2026-07-02",
-        "gbifTaxonKey": 8114792,
         "occurrenceSummaries": [
           {
             "region": "Africa",
-            "occurrenceCount": 1734
+            "occurrenceCount": 0
           }
-        ]
+        ],
+        "dataMode": "mock_sample",
+        "uncertaintyNote": "Continent/habitat hints are game-authored planning twins \u2014 not GBIF occurrence-verified ranges."
       },
       "artifactTemplates": [
         {
@@ -119,19 +120,19 @@
           "verificationStatus": "game_authored_verified"
         },
         {
-          "source": "catalogue_of_life",
-          "sourceVersion": "mock-sample-2026-07",
-          "sourceRecordId": "MOCK-panthera_leo",
-          "catalogueOfLifeId": "MOCK-COL-panthera_leo",
+          "source": "mock_sample",
+          "sourceVersion": "quarantined-mock-sample-2026-07",
+          "sourceRecordId": "QUARANTINED-MOCK-panthera_leo",
           "license": "MOCK-SAMPLE",
-          "citation": "MOCK SAMPLE \u2014 not sourced from live API; requires approved source snapshot import",
+          "citation": "QUARANTINED MOCK SAMPLE \u2014 not Catalogue of Life / GBIF / IUCN / PBDB; not source-verified. Retained for pipeline demos only until an approved snapshot import replaces it.",
           "citationRequired": true,
           "retrievedAt": "2026-07-05T03:27:29.538Z",
           "lastUpdated": "2026-07-05T03:27:29.538Z",
           "isMockData": true,
           "verificationStatus": "mock_sample"
         }
-      ]
+      ],
+      "scientificScopeStatement": "Gameplay-authored hero record. External taxonomy/conservation/distribution fields that lack an approved COL/GBIF/IUCN/PBDB snapshot remain quarantined mock samples \u2014 never source-verified. Catalog is intentionally incomplete (not Earth-complete)."
     },
     {
       "id": "loxodonta_africana",
@@ -149,15 +150,15 @@
       "taxonomy": {
         "family": "Elephantidae",
         "rank": "species",
-        "acceptedName": "Loxodonta africana",
-        "catalogueOfLifeId": "MOCK-COL-loxodonta_africana"
+        "acceptedName": "Loxodonta africana"
       },
       "conservation": {
         "iucnCategory": "Endangered",
-        "assessed": true,
-        "sourceVersion": "mock-iucn-2026-07",
+        "assessed": false,
+        "sourceVersion": "quarantined-mock-iucn-2026-07",
         "lastUpdated": "2026-07-02",
-        "iucnTaxonId": 79571
+        "dataMode": "mock_sample",
+        "uncertaintyNote": "IUCN category is a gameplay planning label from legacy authored data \u2014 not an IUCN Red List source-verified assessment."
       },
       "distribution": {
         "continents": [
@@ -167,15 +168,16 @@
           "savanna",
           "forest"
         ],
-        "sourceVersion": "mock-gbif-2026-07",
+        "sourceVersion": "quarantined-mock-gbif-2026-07",
         "lastUpdated": "2026-07-02",
-        "gbifTaxonKey": 4922002,
         "occurrenceSummaries": [
           {
             "region": "Africa",
-            "occurrenceCount": 4886
+            "occurrenceCount": 0
           }
-        ]
+        ],
+        "dataMode": "mock_sample",
+        "uncertaintyNote": "Continent/habitat hints are game-authored planning twins \u2014 not GBIF occurrence-verified ranges."
       },
       "artifactTemplates": [
         {
@@ -270,19 +272,19 @@
           "verificationStatus": "game_authored_verified"
         },
         {
-          "source": "catalogue_of_life",
-          "sourceVersion": "mock-sample-2026-07",
-          "sourceRecordId": "MOCK-loxodonta_africana",
-          "catalogueOfLifeId": "MOCK-COL-loxodonta_africana",
+          "source": "mock_sample",
+          "sourceVersion": "quarantined-mock-sample-2026-07",
+          "sourceRecordId": "QUARANTINED-MOCK-loxodonta_africana",
           "license": "MOCK-SAMPLE",
-          "citation": "MOCK SAMPLE \u2014 not sourced from live API; requires approved source snapshot import",
+          "citation": "QUARANTINED MOCK SAMPLE \u2014 not Catalogue of Life / GBIF / IUCN / PBDB; not source-verified. Retained for pipeline demos only until an approved snapshot import replaces it.",
           "citationRequired": true,
           "retrievedAt": "2026-07-05T03:27:29.538Z",
           "lastUpdated": "2026-07-05T03:27:29.538Z",
           "isMockData": true,
           "verificationStatus": "mock_sample"
         }
-      ]
+      ],
+      "scientificScopeStatement": "Gameplay-authored hero record. External taxonomy/conservation/distribution fields that lack an approved COL/GBIF/IUCN/PBDB snapshot remain quarantined mock samples \u2014 never source-verified. Catalog is intentionally incomplete (not Earth-complete)."
     },
     {
       "id": "canis_lupus",
@@ -299,15 +301,15 @@
       "taxonomy": {
         "family": "Canidae",
         "rank": "species",
-        "acceptedName": "Canis lupus",
-        "catalogueOfLifeId": "MOCK-COL-canis_lupus"
+        "acceptedName": "Canis lupus"
       },
       "conservation": {
         "iucnCategory": "Least Concern",
-        "assessed": true,
-        "sourceVersion": "mock-iucn-2026-07",
+        "assessed": false,
+        "sourceVersion": "quarantined-mock-iucn-2026-07",
         "lastUpdated": "2026-07-02",
-        "iucnTaxonId": 77909
+        "dataMode": "mock_sample",
+        "uncertaintyNote": "IUCN category is a gameplay planning label from legacy authored data \u2014 not an IUCN Red List source-verified assessment."
       },
       "distribution": {
         "continents": [
@@ -320,15 +322,16 @@
           "grassland",
           "tundra"
         ],
-        "sourceVersion": "mock-gbif-2026-07",
+        "sourceVersion": "quarantined-mock-gbif-2026-07",
         "lastUpdated": "2026-07-02",
-        "gbifTaxonKey": 6040710,
         "occurrenceSummaries": [
           {
             "region": "North America",
-            "occurrenceCount": 970
+            "occurrenceCount": 0
           }
-        ]
+        ],
+        "dataMode": "mock_sample",
+        "uncertaintyNote": "Continent/habitat hints are game-authored planning twins \u2014 not GBIF occurrence-verified ranges."
       },
       "artifactTemplates": [
         {
@@ -413,19 +416,19 @@
           "verificationStatus": "game_authored_verified"
         },
         {
-          "source": "catalogue_of_life",
-          "sourceVersion": "mock-sample-2026-07",
-          "sourceRecordId": "MOCK-canis_lupus",
-          "catalogueOfLifeId": "MOCK-COL-canis_lupus",
+          "source": "mock_sample",
+          "sourceVersion": "quarantined-mock-sample-2026-07",
+          "sourceRecordId": "QUARANTINED-MOCK-canis_lupus",
           "license": "MOCK-SAMPLE",
-          "citation": "MOCK SAMPLE \u2014 not sourced from live API; requires approved source snapshot import",
+          "citation": "QUARANTINED MOCK SAMPLE \u2014 not Catalogue of Life / GBIF / IUCN / PBDB; not source-verified. Retained for pipeline demos only until an approved snapshot import replaces it.",
           "citationRequired": true,
           "retrievedAt": "2026-07-05T03:27:29.539Z",
           "lastUpdated": "2026-07-05T03:27:29.539Z",
           "isMockData": true,
           "verificationStatus": "mock_sample"
         }
-      ]
+      ],
+      "scientificScopeStatement": "Gameplay-authored hero record. External taxonomy/conservation/distribution fields that lack an approved COL/GBIF/IUCN/PBDB snapshot remain quarantined mock samples \u2014 never source-verified. Catalog is intentionally incomplete (not Earth-complete)."
     },
     {
       "id": "odocoileus_virginianus",
@@ -441,15 +444,15 @@
       "taxonomy": {
         "family": "Cervidae",
         "rank": "species",
-        "acceptedName": "Odocoileus virginianus",
-        "catalogueOfLifeId": "MOCK-COL-odocoileus_virginianus"
+        "acceptedName": "Odocoileus virginianus"
       },
       "conservation": {
         "iucnCategory": "Least Concern",
-        "assessed": true,
-        "sourceVersion": "mock-iucn-2026-07",
+        "assessed": false,
+        "sourceVersion": "quarantined-mock-iucn-2026-07",
         "lastUpdated": "2026-07-02",
-        "iucnTaxonId": 39537
+        "dataMode": "mock_sample",
+        "uncertaintyNote": "IUCN category is a gameplay planning label from legacy authored data \u2014 not an IUCN Red List source-verified assessment."
       },
       "distribution": {
         "continents": [
@@ -460,15 +463,16 @@
           "grassland",
           "wetland"
         ],
-        "sourceVersion": "mock-gbif-2026-07",
+        "sourceVersion": "quarantined-mock-gbif-2026-07",
         "lastUpdated": "2026-07-02",
-        "gbifTaxonKey": 9596551,
         "occurrenceSummaries": [
           {
             "region": "North America",
-            "occurrenceCount": 4069
+            "occurrenceCount": 0
           }
-        ]
+        ],
+        "dataMode": "mock_sample",
+        "uncertaintyNote": "Continent/habitat hints are game-authored planning twins \u2014 not GBIF occurrence-verified ranges."
       },
       "artifactTemplates": [
         {
@@ -575,19 +579,19 @@
           "verificationStatus": "game_authored_verified"
         },
         {
-          "source": "catalogue_of_life",
-          "sourceVersion": "mock-sample-2026-07",
-          "sourceRecordId": "MOCK-odocoileus_virginianus",
-          "catalogueOfLifeId": "MOCK-COL-odocoileus_virginianus",
+          "source": "mock_sample",
+          "sourceVersion": "quarantined-mock-sample-2026-07",
+          "sourceRecordId": "QUARANTINED-MOCK-odocoileus_virginianus",
           "license": "MOCK-SAMPLE",
-          "citation": "MOCK SAMPLE \u2014 not sourced from live API; requires approved source snapshot import",
+          "citation": "QUARANTINED MOCK SAMPLE \u2014 not Catalogue of Life / GBIF / IUCN / PBDB; not source-verified. Retained for pipeline demos only until an approved snapshot import replaces it.",
           "citationRequired": true,
           "retrievedAt": "2026-07-05T03:27:29.539Z",
           "lastUpdated": "2026-07-05T03:27:29.539Z",
           "isMockData": true,
           "verificationStatus": "mock_sample"
         }
-      ]
+      ],
+      "scientificScopeStatement": "Gameplay-authored hero record. External taxonomy/conservation/distribution fields that lack an approved COL/GBIF/IUCN/PBDB snapshot remain quarantined mock samples \u2014 never source-verified. Catalog is intentionally incomplete (not Earth-complete)."
     },
     {
       "id": "balaenoptera_musculus",
@@ -603,15 +607,15 @@
       "taxonomy": {
         "family": "Balaenopteridae",
         "rank": "species",
-        "acceptedName": "Balaenoptera musculus",
-        "catalogueOfLifeId": "MOCK-COL-balaenoptera_musculus"
+        "acceptedName": "Balaenoptera musculus"
       },
       "conservation": {
         "iucnCategory": "Endangered",
-        "assessed": true,
-        "sourceVersion": "mock-iucn-2026-07",
+        "assessed": false,
+        "sourceVersion": "quarantined-mock-iucn-2026-07",
         "lastUpdated": "2026-07-02",
-        "iucnTaxonId": 27409
+        "dataMode": "mock_sample",
+        "uncertaintyNote": "IUCN category is a gameplay planning label from legacy authored data \u2014 not an IUCN Red List source-verified assessment."
       },
       "distribution": {
         "continents": [
@@ -621,15 +625,16 @@
           "ocean",
           "coastal"
         ],
-        "sourceVersion": "mock-gbif-2026-07",
+        "sourceVersion": "quarantined-mock-gbif-2026-07",
         "lastUpdated": "2026-07-02",
-        "gbifTaxonKey": 7146193,
         "occurrenceSummaries": [
           {
             "region": "Global oceans",
-            "occurrenceCount": 2679
+            "occurrenceCount": 0
           }
-        ]
+        ],
+        "dataMode": "mock_sample",
+        "uncertaintyNote": "Continent/habitat hints are game-authored planning twins \u2014 not GBIF occurrence-verified ranges."
       },
       "artifactTemplates": [
         {
@@ -715,19 +720,19 @@
           "verificationStatus": "game_authored_verified"
         },
         {
-          "source": "catalogue_of_life",
-          "sourceVersion": "mock-sample-2026-07",
-          "sourceRecordId": "MOCK-balaenoptera_musculus",
-          "catalogueOfLifeId": "MOCK-COL-balaenoptera_musculus",
+          "source": "mock_sample",
+          "sourceVersion": "quarantined-mock-sample-2026-07",
+          "sourceRecordId": "QUARANTINED-MOCK-balaenoptera_musculus",
           "license": "MOCK-SAMPLE",
-          "citation": "MOCK SAMPLE \u2014 not sourced from live API; requires approved source snapshot import",
+          "citation": "QUARANTINED MOCK SAMPLE \u2014 not Catalogue of Life / GBIF / IUCN / PBDB; not source-verified. Retained for pipeline demos only until an approved snapshot import replaces it.",
           "citationRequired": true,
           "retrievedAt": "2026-07-05T03:27:29.539Z",
           "lastUpdated": "2026-07-05T03:27:29.539Z",
           "isMockData": true,
           "verificationStatus": "mock_sample"
         }
-      ]
+      ],
+      "scientificScopeStatement": "Gameplay-authored hero record. External taxonomy/conservation/distribution fields that lack an approved COL/GBIF/IUCN/PBDB snapshot remain quarantined mock samples \u2014 never source-verified. Catalog is intentionally incomplete (not Earth-complete)."
     },
     {
       "id": "ursus_americanus",
@@ -743,15 +748,15 @@
       "taxonomy": {
         "family": "Ursidae",
         "rank": "species",
-        "acceptedName": "Ursus americanus",
-        "catalogueOfLifeId": "MOCK-COL-ursus_americanus"
+        "acceptedName": "Ursus americanus"
       },
       "conservation": {
         "iucnCategory": "Least Concern",
-        "assessed": true,
-        "sourceVersion": "mock-iucn-2026-07",
+        "assessed": false,
+        "sourceVersion": "quarantined-mock-iucn-2026-07",
         "lastUpdated": "2026-07-02",
-        "iucnTaxonId": 30877
+        "dataMode": "mock_sample",
+        "uncertaintyNote": "IUCN category is a gameplay planning label from legacy authored data \u2014 not an IUCN Red List source-verified assessment."
       },
       "distribution": {
         "continents": [
@@ -761,15 +766,16 @@
           "forest",
           "mountain"
         ],
-        "sourceVersion": "mock-gbif-2026-07",
+        "sourceVersion": "quarantined-mock-gbif-2026-07",
         "lastUpdated": "2026-07-02",
-        "gbifTaxonKey": 4343390,
         "occurrenceSummaries": [
           {
             "region": "North America",
-            "occurrenceCount": 4114
+            "occurrenceCount": 0
           }
-        ]
+        ],
+        "dataMode": "mock_sample",
+        "uncertaintyNote": "Continent/habitat hints are game-authored planning twins \u2014 not GBIF occurrence-verified ranges."
       },
       "artifactTemplates": [
         {
@@ -854,19 +860,19 @@
           "verificationStatus": "game_authored_verified"
         },
         {
-          "source": "catalogue_of_life",
-          "sourceVersion": "mock-sample-2026-07",
-          "sourceRecordId": "MOCK-ursus_americanus",
-          "catalogueOfLifeId": "MOCK-COL-ursus_americanus",
+          "source": "mock_sample",
+          "sourceVersion": "quarantined-mock-sample-2026-07",
+          "sourceRecordId": "QUARANTINED-MOCK-ursus_americanus",
           "license": "MOCK-SAMPLE",
-          "citation": "MOCK SAMPLE \u2014 not sourced from live API; requires approved source snapshot import",
+          "citation": "QUARANTINED MOCK SAMPLE \u2014 not Catalogue of Life / GBIF / IUCN / PBDB; not source-verified. Retained for pipeline demos only until an approved snapshot import replaces it.",
           "citationRequired": true,
           "retrievedAt": "2026-07-05T03:27:29.539Z",
           "lastUpdated": "2026-07-05T03:27:29.539Z",
           "isMockData": true,
           "verificationStatus": "mock_sample"
         }
-      ]
+      ],
+      "scientificScopeStatement": "Gameplay-authored hero record. External taxonomy/conservation/distribution fields that lack an approved COL/GBIF/IUCN/PBDB snapshot remain quarantined mock samples \u2014 never source-verified. Catalog is intentionally incomplete (not Earth-complete)."
     },
     {
       "id": "castor_canadensis",
@@ -882,15 +888,15 @@
       "taxonomy": {
         "family": "Castoridae",
         "rank": "species",
-        "acceptedName": "Castor canadensis",
-        "catalogueOfLifeId": "MOCK-COL-castor_canadensis"
+        "acceptedName": "Castor canadensis"
       },
       "conservation": {
         "iucnCategory": "Least Concern",
-        "assessed": true,
-        "sourceVersion": "mock-iucn-2026-07",
+        "assessed": false,
+        "sourceVersion": "quarantined-mock-iucn-2026-07",
         "lastUpdated": "2026-07-02",
-        "iucnTaxonId": 67590
+        "dataMode": "mock_sample",
+        "uncertaintyNote": "IUCN category is a gameplay planning label from legacy authored data \u2014 not an IUCN Red List source-verified assessment."
       },
       "distribution": {
         "continents": [
@@ -900,15 +906,16 @@
           "wetland",
           "river"
         ],
-        "sourceVersion": "mock-gbif-2026-07",
+        "sourceVersion": "quarantined-mock-gbif-2026-07",
         "lastUpdated": "2026-07-02",
-        "gbifTaxonKey": 2633674,
         "occurrenceSummaries": [
           {
             "region": "North America",
-            "occurrenceCount": 4368
+            "occurrenceCount": 0
           }
-        ]
+        ],
+        "dataMode": "mock_sample",
+        "uncertaintyNote": "Continent/habitat hints are game-authored planning twins \u2014 not GBIF occurrence-verified ranges."
       },
       "artifactTemplates": [
         {
@@ -999,19 +1006,19 @@
           "verificationStatus": "game_authored_verified"
         },
         {
-          "source": "catalogue_of_life",
-          "sourceVersion": "mock-sample-2026-07",
-          "sourceRecordId": "MOCK-castor_canadensis",
-          "catalogueOfLifeId": "MOCK-COL-castor_canadensis",
+          "source": "mock_sample",
+          "sourceVersion": "quarantined-mock-sample-2026-07",
+          "sourceRecordId": "QUARANTINED-MOCK-castor_canadensis",
           "license": "MOCK-SAMPLE",
-          "citation": "MOCK SAMPLE \u2014 not sourced from live API; requires approved source snapshot import",
+          "citation": "QUARANTINED MOCK SAMPLE \u2014 not Catalogue of Life / GBIF / IUCN / PBDB; not source-verified. Retained for pipeline demos only until an approved snapshot import replaces it.",
           "citationRequired": true,
           "retrievedAt": "2026-07-05T03:27:29.539Z",
           "lastUpdated": "2026-07-05T03:27:29.539Z",
           "isMockData": true,
           "verificationStatus": "mock_sample"
         }
-      ]
+      ],
+      "scientificScopeStatement": "Gameplay-authored hero record. External taxonomy/conservation/distribution fields that lack an approved COL/GBIF/IUCN/PBDB snapshot remain quarantined mock samples \u2014 never source-verified. Catalog is intentionally incomplete (not Earth-complete)."
     },
     {
       "id": "lontra_canadensis",
@@ -1027,15 +1034,15 @@
       "taxonomy": {
         "family": "Mustelidae",
         "rank": "species",
-        "acceptedName": "Lontra canadensis",
-        "catalogueOfLifeId": "MOCK-COL-lontra_canadensis"
+        "acceptedName": "Lontra canadensis"
       },
       "conservation": {
         "iucnCategory": "Least Concern",
-        "assessed": true,
-        "sourceVersion": "mock-iucn-2026-07",
+        "assessed": false,
+        "sourceVersion": "quarantined-mock-iucn-2026-07",
         "lastUpdated": "2026-07-02",
-        "iucnTaxonId": 5266
+        "dataMode": "mock_sample",
+        "uncertaintyNote": "IUCN category is a gameplay planning label from legacy authored data \u2014 not an IUCN Red List source-verified assessment."
       },
       "distribution": {
         "continents": [
@@ -1046,15 +1053,16 @@
           "river",
           "coastal"
         ],
-        "sourceVersion": "mock-gbif-2026-07",
+        "sourceVersion": "quarantined-mock-gbif-2026-07",
         "lastUpdated": "2026-07-02",
-        "gbifTaxonKey": 8218660,
         "occurrenceSummaries": [
           {
             "region": "North America",
-            "occurrenceCount": 594
+            "occurrenceCount": 0
           }
-        ]
+        ],
+        "dataMode": "mock_sample",
+        "uncertaintyNote": "Continent/habitat hints are game-authored planning twins \u2014 not GBIF occurrence-verified ranges."
       },
       "artifactTemplates": [
         {
@@ -1145,19 +1153,19 @@
           "verificationStatus": "game_authored_verified"
         },
         {
-          "source": "catalogue_of_life",
-          "sourceVersion": "mock-sample-2026-07",
-          "sourceRecordId": "MOCK-lontra_canadensis",
-          "catalogueOfLifeId": "MOCK-COL-lontra_canadensis",
+          "source": "mock_sample",
+          "sourceVersion": "quarantined-mock-sample-2026-07",
+          "sourceRecordId": "QUARANTINED-MOCK-lontra_canadensis",
           "license": "MOCK-SAMPLE",
-          "citation": "MOCK SAMPLE \u2014 not sourced from live API; requires approved source snapshot import",
+          "citation": "QUARANTINED MOCK SAMPLE \u2014 not Catalogue of Life / GBIF / IUCN / PBDB; not source-verified. Retained for pipeline demos only until an approved snapshot import replaces it.",
           "citationRequired": true,
           "retrievedAt": "2026-07-05T03:27:29.539Z",
           "lastUpdated": "2026-07-05T03:27:29.539Z",
           "isMockData": true,
           "verificationStatus": "mock_sample"
         }
-      ]
+      ],
+      "scientificScopeStatement": "Gameplay-authored hero record. External taxonomy/conservation/distribution fields that lack an approved COL/GBIF/IUCN/PBDB snapshot remain quarantined mock samples \u2014 never source-verified. Catalog is intentionally incomplete (not Earth-complete)."
     },
     {
       "id": "phoca_vitulina",
@@ -1173,15 +1181,15 @@
       "taxonomy": {
         "family": "Phocidae",
         "rank": "species",
-        "acceptedName": "Phoca vitulina",
-        "catalogueOfLifeId": "MOCK-COL-phoca_vitulina"
+        "acceptedName": "Phoca vitulina"
       },
       "conservation": {
         "iucnCategory": "Least Concern",
-        "assessed": true,
-        "sourceVersion": "mock-iucn-2026-07",
+        "assessed": false,
+        "sourceVersion": "quarantined-mock-iucn-2026-07",
         "lastUpdated": "2026-07-02",
-        "iucnTaxonId": 91836
+        "dataMode": "mock_sample",
+        "uncertaintyNote": "IUCN category is a gameplay planning label from legacy authored data \u2014 not an IUCN Red List source-verified assessment."
       },
       "distribution": {
         "continents": [
@@ -1192,15 +1200,16 @@
           "coastal",
           "ocean"
         ],
-        "sourceVersion": "mock-gbif-2026-07",
+        "sourceVersion": "quarantined-mock-gbif-2026-07",
         "lastUpdated": "2026-07-02",
-        "gbifTaxonKey": 5107101,
         "occurrenceSummaries": [
           {
             "region": "North Atlantic",
-            "occurrenceCount": 2480
+            "occurrenceCount": 0
           }
-        ]
+        ],
+        "dataMode": "mock_sample",
+        "uncertaintyNote": "Continent/habitat hints are game-authored planning twins \u2014 not GBIF occurrence-verified ranges."
       },
       "artifactTemplates": [
         {
@@ -1286,19 +1295,19 @@
           "verificationStatus": "game_authored_verified"
         },
         {
-          "source": "catalogue_of_life",
-          "sourceVersion": "mock-sample-2026-07",
-          "sourceRecordId": "MOCK-phoca_vitulina",
-          "catalogueOfLifeId": "MOCK-COL-phoca_vitulina",
+          "source": "mock_sample",
+          "sourceVersion": "quarantined-mock-sample-2026-07",
+          "sourceRecordId": "QUARANTINED-MOCK-phoca_vitulina",
           "license": "MOCK-SAMPLE",
-          "citation": "MOCK SAMPLE \u2014 not sourced from live API; requires approved source snapshot import",
+          "citation": "QUARANTINED MOCK SAMPLE \u2014 not Catalogue of Life / GBIF / IUCN / PBDB; not source-verified. Retained for pipeline demos only until an approved snapshot import replaces it.",
           "citationRequired": true,
           "retrievedAt": "2026-07-05T03:27:29.539Z",
           "lastUpdated": "2026-07-05T03:27:29.539Z",
           "isMockData": true,
           "verificationStatus": "mock_sample"
         }
-      ]
+      ],
+      "scientificScopeStatement": "Gameplay-authored hero record. External taxonomy/conservation/distribution fields that lack an approved COL/GBIF/IUCN/PBDB snapshot remain quarantined mock samples \u2014 never source-verified. Catalog is intentionally incomplete (not Earth-complete)."
     },
     {
       "id": "equus_caballus_ferus",
@@ -1314,15 +1323,15 @@
       "taxonomy": {
         "family": "Equidae",
         "rank": "subspecies",
-        "acceptedName": "Equus ferus przewalskii",
-        "catalogueOfLifeId": "MOCK-COL-equus_caballus_ferus"
+        "acceptedName": "Equus ferus przewalskii"
       },
       "conservation": {
         "iucnCategory": "Endangered",
-        "assessed": true,
-        "sourceVersion": "mock-iucn-2026-07",
+        "assessed": false,
+        "sourceVersion": "quarantined-mock-iucn-2026-07",
         "lastUpdated": "2026-07-02",
-        "iucnTaxonId": 65063
+        "dataMode": "mock_sample",
+        "uncertaintyNote": "IUCN category is a gameplay planning label from legacy authored data \u2014 not an IUCN Red List source-verified assessment."
       },
       "distribution": {
         "continents": [
@@ -1332,15 +1341,16 @@
           "grassland",
           "steppe"
         ],
-        "sourceVersion": "mock-gbif-2026-07",
+        "sourceVersion": "quarantined-mock-gbif-2026-07",
         "lastUpdated": "2026-07-02",
-        "gbifTaxonKey": 9792217,
         "occurrenceSummaries": [
           {
             "region": "Asia",
-            "occurrenceCount": 4356
+            "occurrenceCount": 0
           }
-        ]
+        ],
+        "dataMode": "mock_sample",
+        "uncertaintyNote": "Continent/habitat hints are game-authored planning twins \u2014 not GBIF occurrence-verified ranges."
       },
       "artifactTemplates": [
         {
@@ -1417,19 +1427,19 @@
           "verificationStatus": "game_authored_verified"
         },
         {
-          "source": "catalogue_of_life",
-          "sourceVersion": "mock-sample-2026-07",
-          "sourceRecordId": "MOCK-equus_caballus_ferus",
-          "catalogueOfLifeId": "MOCK-COL-equus_caballus_ferus",
+          "source": "mock_sample",
+          "sourceVersion": "quarantined-mock-sample-2026-07",
+          "sourceRecordId": "QUARANTINED-MOCK-equus_caballus_ferus",
           "license": "MOCK-SAMPLE",
-          "citation": "MOCK SAMPLE \u2014 not sourced from live API; requires approved source snapshot import",
+          "citation": "QUARANTINED MOCK SAMPLE \u2014 not Catalogue of Life / GBIF / IUCN / PBDB; not source-verified. Retained for pipeline demos only until an approved snapshot import replaces it.",
           "citationRequired": true,
           "retrievedAt": "2026-07-05T03:27:29.539Z",
           "lastUpdated": "2026-07-05T03:27:29.539Z",
           "isMockData": true,
           "verificationStatus": "mock_sample"
         }
-      ]
+      ],
+      "scientificScopeStatement": "Gameplay-authored hero record. External taxonomy/conservation/distribution fields that lack an approved COL/GBIF/IUCN/PBDB snapshot remain quarantined mock samples \u2014 never source-verified. Catalog is intentionally incomplete (not Earth-complete)."
     },
     {
       "id": "danaus_plexippus",
@@ -1446,15 +1456,15 @@
       "taxonomy": {
         "family": "Nymphalidae",
         "rank": "species",
-        "acceptedName": "Danaus plexippus",
-        "catalogueOfLifeId": "MOCK-COL-danaus_plexippus"
+        "acceptedName": "Danaus plexippus"
       },
       "conservation": {
         "iucnCategory": "Endangered",
-        "assessed": true,
-        "sourceVersion": "mock-iucn-2026-07",
+        "assessed": false,
+        "sourceVersion": "quarantined-mock-iucn-2026-07",
         "lastUpdated": "2026-07-02",
-        "iucnTaxonId": 48926
+        "dataMode": "mock_sample",
+        "uncertaintyNote": "IUCN category is a gameplay planning label from legacy authored data \u2014 not an IUCN Red List source-verified assessment."
       },
       "distribution": {
         "continents": [
@@ -1465,15 +1475,16 @@
           "wetland",
           "forest edge"
         ],
-        "sourceVersion": "mock-gbif-2026-07",
+        "sourceVersion": "quarantined-mock-gbif-2026-07",
         "lastUpdated": "2026-07-02",
-        "gbifTaxonKey": 5972042,
         "occurrenceSummaries": [
           {
             "region": "North America",
-            "occurrenceCount": 2332
+            "occurrenceCount": 0
           }
-        ]
+        ],
+        "dataMode": "mock_sample",
+        "uncertaintyNote": "Continent/habitat hints are game-authored planning twins \u2014 not GBIF occurrence-verified ranges."
       },
       "artifactTemplates": [
         {
@@ -1581,19 +1592,19 @@
           "verificationStatus": "game_authored_verified"
         },
         {
-          "source": "catalogue_of_life",
-          "sourceVersion": "mock-sample-2026-07",
-          "sourceRecordId": "MOCK-danaus_plexippus",
-          "catalogueOfLifeId": "MOCK-COL-danaus_plexippus",
+          "source": "mock_sample",
+          "sourceVersion": "quarantined-mock-sample-2026-07",
+          "sourceRecordId": "QUARANTINED-MOCK-danaus_plexippus",
           "license": "MOCK-SAMPLE",
-          "citation": "MOCK SAMPLE \u2014 not sourced from live API; requires approved source snapshot import",
+          "citation": "QUARANTINED MOCK SAMPLE \u2014 not Catalogue of Life / GBIF / IUCN / PBDB; not source-verified. Retained for pipeline demos only until an approved snapshot import replaces it.",
           "citationRequired": true,
           "retrievedAt": "2026-07-05T03:27:29.539Z",
           "lastUpdated": "2026-07-05T03:27:29.539Z",
           "isMockData": true,
           "verificationStatus": "mock_sample"
         }
-      ]
+      ],
+      "scientificScopeStatement": "Gameplay-authored hero record. External taxonomy/conservation/distribution fields that lack an approved COL/GBIF/IUCN/PBDB snapshot remain quarantined mock samples \u2014 never source-verified. Catalog is intentionally incomplete (not Earth-complete)."
     },
     {
       "id": "apis_mellifera",
@@ -1611,15 +1622,15 @@
       "taxonomy": {
         "family": "Apidae",
         "rank": "species",
-        "acceptedName": "Apis mellifera",
-        "catalogueOfLifeId": "MOCK-COL-apis_mellifera"
+        "acceptedName": "Apis mellifera"
       },
       "conservation": {
         "iucnCategory": "Data Deficient",
-        "assessed": true,
-        "sourceVersion": "mock-iucn-2026-07",
+        "assessed": false,
+        "sourceVersion": "quarantined-mock-iucn-2026-07",
         "lastUpdated": "2026-07-02",
-        "iucnTaxonId": 41146
+        "dataMode": "mock_sample",
+        "uncertaintyNote": "IUCN category is a gameplay planning label from legacy authored data \u2014 not an IUCN Red List source-verified assessment."
       },
       "distribution": {
         "continents": [
@@ -1630,15 +1641,16 @@
           "forest",
           "urban"
         ],
-        "sourceVersion": "mock-gbif-2026-07",
+        "sourceVersion": "quarantined-mock-gbif-2026-07",
         "lastUpdated": "2026-07-02",
-        "gbifTaxonKey": 4325664,
         "occurrenceSummaries": [
           {
             "region": "Global",
-            "occurrenceCount": 3071
+            "occurrenceCount": 0
           }
-        ]
+        ],
+        "dataMode": "mock_sample",
+        "uncertaintyNote": "Continent/habitat hints are game-authored planning twins \u2014 not GBIF occurrence-verified ranges."
       },
       "artifactTemplates": [
         {
@@ -1739,19 +1751,19 @@
           "verificationStatus": "game_authored_verified"
         },
         {
-          "source": "catalogue_of_life",
-          "sourceVersion": "mock-sample-2026-07",
-          "sourceRecordId": "MOCK-apis_mellifera",
-          "catalogueOfLifeId": "MOCK-COL-apis_mellifera",
+          "source": "mock_sample",
+          "sourceVersion": "quarantined-mock-sample-2026-07",
+          "sourceRecordId": "QUARANTINED-MOCK-apis_mellifera",
           "license": "MOCK-SAMPLE",
-          "citation": "MOCK SAMPLE \u2014 not sourced from live API; requires approved source snapshot import",
+          "citation": "QUARANTINED MOCK SAMPLE \u2014 not Catalogue of Life / GBIF / IUCN / PBDB; not source-verified. Retained for pipeline demos only until an approved snapshot import replaces it.",
           "citationRequired": true,
           "retrievedAt": "2026-07-05T03:27:29.539Z",
           "lastUpdated": "2026-07-05T03:27:29.539Z",
           "isMockData": true,
           "verificationStatus": "mock_sample"
         }
-      ]
+      ],
+      "scientificScopeStatement": "Gameplay-authored hero record. External taxonomy/conservation/distribution fields that lack an approved COL/GBIF/IUCN/PBDB snapshot remain quarantined mock samples \u2014 never source-verified. Catalog is intentionally incomplete (not Earth-complete)."
     },
     {
       "id": "formica_rufa",
@@ -1767,15 +1779,15 @@
       "taxonomy": {
         "family": "Formicidae",
         "rank": "species",
-        "acceptedName": "Formica rufa",
-        "catalogueOfLifeId": "MOCK-COL-formica_rufa"
+        "acceptedName": "Formica rufa"
       },
       "conservation": {
         "iucnCategory": "Least Concern",
-        "assessed": true,
-        "sourceVersion": "mock-iucn-2026-07",
+        "assessed": false,
+        "sourceVersion": "quarantined-mock-iucn-2026-07",
         "lastUpdated": "2026-07-02",
-        "iucnTaxonId": 91840
+        "dataMode": "mock_sample",
+        "uncertaintyNote": "IUCN category is a gameplay planning label from legacy authored data \u2014 not an IUCN Red List source-verified assessment."
       },
       "distribution": {
         "continents": [
@@ -1784,15 +1796,16 @@
         "habitats": [
           "forest"
         ],
-        "sourceVersion": "mock-gbif-2026-07",
+        "sourceVersion": "quarantined-mock-gbif-2026-07",
         "lastUpdated": "2026-07-02",
-        "gbifTaxonKey": 7956046,
         "occurrenceSummaries": [
           {
             "region": "Europe",
-            "occurrenceCount": 4851
+            "occurrenceCount": 0
           }
-        ]
+        ],
+        "dataMode": "mock_sample",
+        "uncertaintyNote": "Continent/habitat hints are game-authored planning twins \u2014 not GBIF occurrence-verified ranges."
       },
       "artifactTemplates": [
         {
@@ -1877,19 +1890,19 @@
           "verificationStatus": "game_authored_verified"
         },
         {
-          "source": "catalogue_of_life",
-          "sourceVersion": "mock-sample-2026-07",
-          "sourceRecordId": "MOCK-formica_rufa",
-          "catalogueOfLifeId": "MOCK-COL-formica_rufa",
+          "source": "mock_sample",
+          "sourceVersion": "quarantined-mock-sample-2026-07",
+          "sourceRecordId": "QUARANTINED-MOCK-formica_rufa",
           "license": "MOCK-SAMPLE",
-          "citation": "MOCK SAMPLE \u2014 not sourced from live API; requires approved source snapshot import",
+          "citation": "QUARANTINED MOCK SAMPLE \u2014 not Catalogue of Life / GBIF / IUCN / PBDB; not source-verified. Retained for pipeline demos only until an approved snapshot import replaces it.",
           "citationRequired": true,
           "retrievedAt": "2026-07-05T03:27:29.539Z",
           "lastUpdated": "2026-07-05T03:27:29.539Z",
           "isMockData": true,
           "verificationStatus": "mock_sample"
         }
-      ]
+      ],
+      "scientificScopeStatement": "Gameplay-authored hero record. External taxonomy/conservation/distribution fields that lack an approved COL/GBIF/IUCN/PBDB snapshot remain quarantined mock samples \u2014 never source-verified. Catalog is intentionally incomplete (not Earth-complete)."
     },
     {
       "id": "anax_junius",
@@ -1905,15 +1918,15 @@
       "taxonomy": {
         "family": "Aeshnidae",
         "rank": "species",
-        "acceptedName": "Anax junius",
-        "catalogueOfLifeId": "MOCK-COL-anax_junius"
+        "acceptedName": "Anax junius"
       },
       "conservation": {
         "iucnCategory": "Least Concern",
-        "assessed": true,
-        "sourceVersion": "mock-iucn-2026-07",
+        "assessed": false,
+        "sourceVersion": "quarantined-mock-iucn-2026-07",
         "lastUpdated": "2026-07-02",
-        "iucnTaxonId": 10084
+        "dataMode": "mock_sample",
+        "uncertaintyNote": "IUCN category is a gameplay planning label from legacy authored data \u2014 not an IUCN Red List source-verified assessment."
       },
       "distribution": {
         "continents": [
@@ -1924,15 +1937,16 @@
           "pond",
           "river"
         ],
-        "sourceVersion": "mock-gbif-2026-07",
+        "sourceVersion": "quarantined-mock-gbif-2026-07",
         "lastUpdated": "2026-07-02",
-        "gbifTaxonKey": 4100354,
         "occurrenceSummaries": [
           {
             "region": "North America",
-            "occurrenceCount": 2562
+            "occurrenceCount": 0
           }
-        ]
+        ],
+        "dataMode": "mock_sample",
+        "uncertaintyNote": "Continent/habitat hints are game-authored planning twins \u2014 not GBIF occurrence-verified ranges."
       },
       "artifactTemplates": [
         {
@@ -2023,19 +2037,19 @@
           "verificationStatus": "game_authored_verified"
         },
         {
-          "source": "catalogue_of_life",
-          "sourceVersion": "mock-sample-2026-07",
-          "sourceRecordId": "MOCK-anax_junius",
-          "catalogueOfLifeId": "MOCK-COL-anax_junius",
+          "source": "mock_sample",
+          "sourceVersion": "quarantined-mock-sample-2026-07",
+          "sourceRecordId": "QUARANTINED-MOCK-anax_junius",
           "license": "MOCK-SAMPLE",
-          "citation": "MOCK SAMPLE \u2014 not sourced from live API; requires approved source snapshot import",
+          "citation": "QUARANTINED MOCK SAMPLE \u2014 not Catalogue of Life / GBIF / IUCN / PBDB; not source-verified. Retained for pipeline demos only until an approved snapshot import replaces it.",
           "citationRequired": true,
           "retrievedAt": "2026-07-05T03:27:29.539Z",
           "lastUpdated": "2026-07-05T03:27:29.539Z",
           "isMockData": true,
           "verificationStatus": "mock_sample"
         }
-      ]
+      ],
+      "scientificScopeStatement": "Gameplay-authored hero record. External taxonomy/conservation/distribution fields that lack an approved COL/GBIF/IUCN/PBDB snapshot remain quarantined mock samples \u2014 never source-verified. Catalog is intentionally incomplete (not Earth-complete)."
     },
     {
       "id": "latrodectus_mactans",
@@ -2051,15 +2065,15 @@
       "taxonomy": {
         "family": "Theridiidae",
         "rank": "species",
-        "acceptedName": "Latrodectus mactans",
-        "catalogueOfLifeId": "MOCK-COL-latrodectus_mactans"
+        "acceptedName": "Latrodectus mactans"
       },
       "conservation": {
         "iucnCategory": "Least Concern",
-        "assessed": true,
-        "sourceVersion": "mock-iucn-2026-07",
+        "assessed": false,
+        "sourceVersion": "quarantined-mock-iucn-2026-07",
         "lastUpdated": "2026-07-02",
-        "iucnTaxonId": 36110
+        "dataMode": "mock_sample",
+        "uncertaintyNote": "IUCN category is a gameplay planning label from legacy authored data \u2014 not an IUCN Red List source-verified assessment."
       },
       "distribution": {
         "continents": [
@@ -2070,15 +2084,16 @@
           "forest edge",
           "urban"
         ],
-        "sourceVersion": "mock-gbif-2026-07",
+        "sourceVersion": "quarantined-mock-gbif-2026-07",
         "lastUpdated": "2026-07-02",
-        "gbifTaxonKey": 759577,
         "occurrenceSummaries": [
           {
             "region": "North America",
-            "occurrenceCount": 3037
+            "occurrenceCount": 0
           }
-        ]
+        ],
+        "dataMode": "mock_sample",
+        "uncertaintyNote": "Continent/habitat hints are game-authored planning twins \u2014 not GBIF occurrence-verified ranges."
       },
       "artifactTemplates": [
         {
@@ -2145,19 +2160,19 @@
           "verificationStatus": "game_authored_verified"
         },
         {
-          "source": "catalogue_of_life",
-          "sourceVersion": "mock-sample-2026-07",
-          "sourceRecordId": "MOCK-latrodectus_mactans",
-          "catalogueOfLifeId": "MOCK-COL-latrodectus_mactans",
+          "source": "mock_sample",
+          "sourceVersion": "quarantined-mock-sample-2026-07",
+          "sourceRecordId": "QUARANTINED-MOCK-latrodectus_mactans",
           "license": "MOCK-SAMPLE",
-          "citation": "MOCK SAMPLE \u2014 not sourced from live API; requires approved source snapshot import",
+          "citation": "QUARANTINED MOCK SAMPLE \u2014 not Catalogue of Life / GBIF / IUCN / PBDB; not source-verified. Retained for pipeline demos only until an approved snapshot import replaces it.",
           "citationRequired": true,
           "retrievedAt": "2026-07-05T03:27:29.539Z",
           "lastUpdated": "2026-07-05T03:27:29.539Z",
           "isMockData": true,
           "verificationStatus": "mock_sample"
         }
-      ]
+      ],
+      "scientificScopeStatement": "Gameplay-authored hero record. External taxonomy/conservation/distribution fields that lack an approved COL/GBIF/IUCN/PBDB snapshot remain quarantined mock samples \u2014 never source-verified. Catalog is intentionally incomplete (not Earth-complete)."
     },
     {
       "id": "dynastes_hercules",
@@ -2173,15 +2188,15 @@
       "taxonomy": {
         "family": "Scarabaeidae",
         "rank": "species",
-        "acceptedName": "Dynastes hercules",
-        "catalogueOfLifeId": "MOCK-COL-dynastes_hercules"
+        "acceptedName": "Dynastes hercules"
       },
       "conservation": {
         "iucnCategory": "Least Concern",
-        "assessed": true,
-        "sourceVersion": "mock-iucn-2026-07",
+        "assessed": false,
+        "sourceVersion": "quarantined-mock-iucn-2026-07",
         "lastUpdated": "2026-07-02",
-        "iucnTaxonId": 33149
+        "dataMode": "mock_sample",
+        "uncertaintyNote": "IUCN category is a gameplay planning label from legacy authored data \u2014 not an IUCN Red List source-verified assessment."
       },
       "distribution": {
         "continents": [
@@ -2191,15 +2206,16 @@
         "habitats": [
           "rainforest"
         ],
-        "sourceVersion": "mock-gbif-2026-07",
+        "sourceVersion": "quarantined-mock-gbif-2026-07",
         "lastUpdated": "2026-07-02",
-        "gbifTaxonKey": 6144646,
         "occurrenceSummaries": [
           {
             "region": "Central America",
-            "occurrenceCount": 1157
+            "occurrenceCount": 0
           }
-        ]
+        ],
+        "dataMode": "mock_sample",
+        "uncertaintyNote": "Continent/habitat hints are game-authored planning twins \u2014 not GBIF occurrence-verified ranges."
       },
       "artifactTemplates": [
         {
@@ -2300,19 +2316,19 @@
           "verificationStatus": "game_authored_verified"
         },
         {
-          "source": "catalogue_of_life",
-          "sourceVersion": "mock-sample-2026-07",
-          "sourceRecordId": "MOCK-dynastes_hercules",
-          "catalogueOfLifeId": "MOCK-COL-dynastes_hercules",
+          "source": "mock_sample",
+          "sourceVersion": "quarantined-mock-sample-2026-07",
+          "sourceRecordId": "QUARANTINED-MOCK-dynastes_hercules",
           "license": "MOCK-SAMPLE",
-          "citation": "MOCK SAMPLE \u2014 not sourced from live API; requires approved source snapshot import",
+          "citation": "QUARANTINED MOCK SAMPLE \u2014 not Catalogue of Life / GBIF / IUCN / PBDB; not source-verified. Retained for pipeline demos only until an approved snapshot import replaces it.",
           "citationRequired": true,
           "retrievedAt": "2026-07-05T03:27:29.539Z",
           "lastUpdated": "2026-07-05T03:27:29.539Z",
           "isMockData": true,
           "verificationStatus": "mock_sample"
         }
-      ]
+      ],
+      "scientificScopeStatement": "Gameplay-authored hero record. External taxonomy/conservation/distribution fields that lack an approved COL/GBIF/IUCN/PBDB snapshot remain quarantined mock samples \u2014 never source-verified. Catalog is intentionally incomplete (not Earth-complete)."
     },
     {
       "id": "libellula_quadrimaculata",
@@ -2328,15 +2344,15 @@
       "taxonomy": {
         "family": "Libellulidae",
         "rank": "species",
-        "acceptedName": "Libellula quadrimaculata",
-        "catalogueOfLifeId": "MOCK-COL-libellula_quadrimaculata"
+        "acceptedName": "Libellula quadrimaculata"
       },
       "conservation": {
         "iucnCategory": "Least Concern",
-        "assessed": true,
-        "sourceVersion": "mock-iucn-2026-07",
+        "assessed": false,
+        "sourceVersion": "quarantined-mock-iucn-2026-07",
         "lastUpdated": "2026-07-02",
-        "iucnTaxonId": 64823
+        "dataMode": "mock_sample",
+        "uncertaintyNote": "IUCN category is a gameplay planning label from legacy authored data \u2014 not an IUCN Red List source-verified assessment."
       },
       "distribution": {
         "continents": [
@@ -2347,15 +2363,16 @@
           "wetland",
           "pond"
         ],
-        "sourceVersion": "mock-gbif-2026-07",
+        "sourceVersion": "quarantined-mock-gbif-2026-07",
         "lastUpdated": "2026-07-02",
-        "gbifTaxonKey": 1246352,
         "occurrenceSummaries": [
           {
             "region": "Europe",
-            "occurrenceCount": 1304
+            "occurrenceCount": 0
           }
-        ]
+        ],
+        "dataMode": "mock_sample",
+        "uncertaintyNote": "Continent/habitat hints are game-authored planning twins \u2014 not GBIF occurrence-verified ranges."
       },
       "artifactTemplates": [
         {
@@ -2446,19 +2463,19 @@
           "verificationStatus": "game_authored_verified"
         },
         {
-          "source": "catalogue_of_life",
-          "sourceVersion": "mock-sample-2026-07",
-          "sourceRecordId": "MOCK-libellula_quadrimaculata",
-          "catalogueOfLifeId": "MOCK-COL-libellula_quadrimaculata",
+          "source": "mock_sample",
+          "sourceVersion": "quarantined-mock-sample-2026-07",
+          "sourceRecordId": "QUARANTINED-MOCK-libellula_quadrimaculata",
           "license": "MOCK-SAMPLE",
-          "citation": "MOCK SAMPLE \u2014 not sourced from live API; requires approved source snapshot import",
+          "citation": "QUARANTINED MOCK SAMPLE \u2014 not Catalogue of Life / GBIF / IUCN / PBDB; not source-verified. Retained for pipeline demos only until an approved snapshot import replaces it.",
           "citationRequired": true,
           "retrievedAt": "2026-07-05T03:27:29.539Z",
           "lastUpdated": "2026-07-05T03:27:29.539Z",
           "isMockData": true,
           "verificationStatus": "mock_sample"
         }
-      ]
+      ],
+      "scientificScopeStatement": "Gameplay-authored hero record. External taxonomy/conservation/distribution fields that lack an approved COL/GBIF/IUCN/PBDB snapshot remain quarantined mock samples \u2014 never source-verified. Catalog is intentionally incomplete (not Earth-complete)."
     },
     {
       "id": "bombus_terrestris",
@@ -2474,15 +2491,15 @@
       "taxonomy": {
         "family": "Apidae",
         "rank": "species",
-        "acceptedName": "Bombus terrestris",
-        "catalogueOfLifeId": "MOCK-COL-bombus_terrestris"
+        "acceptedName": "Bombus terrestris"
       },
       "conservation": {
         "iucnCategory": "Least Concern",
-        "assessed": true,
-        "sourceVersion": "mock-iucn-2026-07",
+        "assessed": false,
+        "sourceVersion": "quarantined-mock-iucn-2026-07",
         "lastUpdated": "2026-07-02",
-        "iucnTaxonId": 27095
+        "dataMode": "mock_sample",
+        "uncertaintyNote": "IUCN category is a gameplay planning label from legacy authored data \u2014 not an IUCN Red List source-verified assessment."
       },
       "distribution": {
         "continents": [
@@ -2493,15 +2510,16 @@
           "forest",
           "garden"
         ],
-        "sourceVersion": "mock-gbif-2026-07",
+        "sourceVersion": "quarantined-mock-gbif-2026-07",
         "lastUpdated": "2026-07-02",
-        "gbifTaxonKey": 8408237,
         "occurrenceSummaries": [
           {
             "region": "Europe",
-            "occurrenceCount": 2964
+            "occurrenceCount": 0
           }
-        ]
+        ],
+        "dataMode": "mock_sample",
+        "uncertaintyNote": "Continent/habitat hints are game-authored planning twins \u2014 not GBIF occurrence-verified ranges."
       },
       "artifactTemplates": [
         {
@@ -2602,19 +2620,19 @@
           "verificationStatus": "game_authored_verified"
         },
         {
-          "source": "catalogue_of_life",
-          "sourceVersion": "mock-sample-2026-07",
-          "sourceRecordId": "MOCK-bombus_terrestris",
-          "catalogueOfLifeId": "MOCK-COL-bombus_terrestris",
+          "source": "mock_sample",
+          "sourceVersion": "quarantined-mock-sample-2026-07",
+          "sourceRecordId": "QUARANTINED-MOCK-bombus_terrestris",
           "license": "MOCK-SAMPLE",
-          "citation": "MOCK SAMPLE \u2014 not sourced from live API; requires approved source snapshot import",
+          "citation": "QUARANTINED MOCK SAMPLE \u2014 not Catalogue of Life / GBIF / IUCN / PBDB; not source-verified. Retained for pipeline demos only until an approved snapshot import replaces it.",
           "citationRequired": true,
           "retrievedAt": "2026-07-05T03:27:29.539Z",
           "lastUpdated": "2026-07-05T03:27:29.539Z",
           "isMockData": true,
           "verificationStatus": "mock_sample"
         }
-      ]
+      ],
+      "scientificScopeStatement": "Gameplay-authored hero record. External taxonomy/conservation/distribution fields that lack an approved COL/GBIF/IUCN/PBDB snapshot remain quarantined mock samples \u2014 never source-verified. Catalog is intentionally incomplete (not Earth-complete)."
     },
     {
       "id": "acanthoscurria_geniculata",
@@ -2630,15 +2648,15 @@
       "taxonomy": {
         "family": "Theraphosidae",
         "rank": "species",
-        "acceptedName": "Acanthoscurria geniculata",
-        "catalogueOfLifeId": "MOCK-COL-acanthoscurria_geniculata"
+        "acceptedName": "Acanthoscurria geniculata"
       },
       "conservation": {
         "iucnCategory": "Least Concern",
-        "assessed": true,
-        "sourceVersion": "mock-iucn-2026-07",
+        "assessed": false,
+        "sourceVersion": "quarantined-mock-iucn-2026-07",
         "lastUpdated": "2026-07-02",
-        "iucnTaxonId": 97897
+        "dataMode": "mock_sample",
+        "uncertaintyNote": "IUCN category is a gameplay planning label from legacy authored data \u2014 not an IUCN Red List source-verified assessment."
       },
       "distribution": {
         "continents": [
@@ -2647,15 +2665,16 @@
         "habitats": [
           "rainforest floor"
         ],
-        "sourceVersion": "mock-gbif-2026-07",
+        "sourceVersion": "quarantined-mock-gbif-2026-07",
         "lastUpdated": "2026-07-02",
-        "gbifTaxonKey": 2430698,
         "occurrenceSummaries": [
           {
             "region": "South America",
-            "occurrenceCount": 2505
+            "occurrenceCount": 0
           }
-        ]
+        ],
+        "dataMode": "mock_sample",
+        "uncertaintyNote": "Continent/habitat hints are game-authored planning twins \u2014 not GBIF occurrence-verified ranges."
       },
       "artifactTemplates": [
         {
@@ -2722,19 +2741,19 @@
           "verificationStatus": "game_authored_verified"
         },
         {
-          "source": "catalogue_of_life",
-          "sourceVersion": "mock-sample-2026-07",
-          "sourceRecordId": "MOCK-acanthoscurria_geniculata",
-          "catalogueOfLifeId": "MOCK-COL-acanthoscurria_geniculata",
+          "source": "mock_sample",
+          "sourceVersion": "quarantined-mock-sample-2026-07",
+          "sourceRecordId": "QUARANTINED-MOCK-acanthoscurria_geniculata",
           "license": "MOCK-SAMPLE",
-          "citation": "MOCK SAMPLE \u2014 not sourced from live API; requires approved source snapshot import",
+          "citation": "QUARANTINED MOCK SAMPLE \u2014 not Catalogue of Life / GBIF / IUCN / PBDB; not source-verified. Retained for pipeline demos only until an approved snapshot import replaces it.",
           "citationRequired": true,
           "retrievedAt": "2026-07-05T03:27:29.539Z",
           "lastUpdated": "2026-07-05T03:27:29.539Z",
           "isMockData": true,
           "verificationStatus": "mock_sample"
         }
-      ]
+      ],
+      "scientificScopeStatement": "Gameplay-authored hero record. External taxonomy/conservation/distribution fields that lack an approved COL/GBIF/IUCN/PBDB snapshot remain quarantined mock samples \u2014 never source-verified. Catalog is intentionally incomplete (not Earth-complete)."
     },
     {
       "id": "pachnoda_marginata",
@@ -2750,15 +2769,15 @@
       "taxonomy": {
         "family": "Scarabaeidae",
         "rank": "species",
-        "acceptedName": "Pachnoda marginata",
-        "catalogueOfLifeId": "MOCK-COL-pachnoda_marginata"
+        "acceptedName": "Pachnoda marginata"
       },
       "conservation": {
         "iucnCategory": "Least Concern",
-        "assessed": true,
-        "sourceVersion": "mock-iucn-2026-07",
+        "assessed": false,
+        "sourceVersion": "quarantined-mock-iucn-2026-07",
         "lastUpdated": "2026-07-02",
-        "iucnTaxonId": 92682
+        "dataMode": "mock_sample",
+        "uncertaintyNote": "IUCN category is a gameplay planning label from legacy authored data \u2014 not an IUCN Red List source-verified assessment."
       },
       "distribution": {
         "continents": [
@@ -2768,15 +2787,16 @@
           "tropical forest",
           "savanna"
         ],
-        "sourceVersion": "mock-gbif-2026-07",
+        "sourceVersion": "quarantined-mock-gbif-2026-07",
         "lastUpdated": "2026-07-02",
-        "gbifTaxonKey": 1375208,
         "occurrenceSummaries": [
           {
             "region": "Africa",
-            "occurrenceCount": 823
+            "occurrenceCount": 0
           }
-        ]
+        ],
+        "dataMode": "mock_sample",
+        "uncertaintyNote": "Continent/habitat hints are game-authored planning twins \u2014 not GBIF occurrence-verified ranges."
       },
       "artifactTemplates": [
         {
@@ -2853,19 +2873,19 @@
           "verificationStatus": "game_authored_verified"
         },
         {
-          "source": "catalogue_of_life",
-          "sourceVersion": "mock-sample-2026-07",
-          "sourceRecordId": "MOCK-pachnoda_marginata",
-          "catalogueOfLifeId": "MOCK-COL-pachnoda_marginata",
+          "source": "mock_sample",
+          "sourceVersion": "quarantined-mock-sample-2026-07",
+          "sourceRecordId": "QUARANTINED-MOCK-pachnoda_marginata",
           "license": "MOCK-SAMPLE",
-          "citation": "MOCK SAMPLE \u2014 not sourced from live API; requires approved source snapshot import",
+          "citation": "QUARANTINED MOCK SAMPLE \u2014 not Catalogue of Life / GBIF / IUCN / PBDB; not source-verified. Retained for pipeline demos only until an approved snapshot import replaces it.",
           "citationRequired": true,
           "retrievedAt": "2026-07-05T03:27:29.539Z",
           "lastUpdated": "2026-07-05T03:27:29.539Z",
           "isMockData": true,
           "verificationStatus": "mock_sample"
         }
-      ]
+      ],
+      "scientificScopeStatement": "Gameplay-authored hero record. External taxonomy/conservation/distribution fields that lack an approved COL/GBIF/IUCN/PBDB snapshot remain quarantined mock samples \u2014 never source-verified. Catalog is intentionally incomplete (not Earth-complete)."
     },
     {
       "id": "mammuthus_primigenius",
@@ -2882,15 +2902,15 @@
       "taxonomy": {
         "family": "Elephantidae",
         "rank": "species",
-        "acceptedName": "Mammuthus primigenius",
-        "catalogueOfLifeId": "MOCK-COL-mammuthus_primigenius"
+        "acceptedName": "Mammuthus primigenius"
       },
       "conservation": {
         "iucnCategory": "Extinct",
-        "assessed": true,
-        "sourceVersion": "mock-iucn-2026-07",
+        "assessed": false,
+        "sourceVersion": "quarantined-mock-iucn-2026-07",
         "lastUpdated": "2026-07-02",
-        "iucnTaxonId": 76059
+        "dataMode": "mock_sample",
+        "uncertaintyNote": "IUCN category is a gameplay planning label from legacy authored data \u2014 not an IUCN Red List source-verified assessment."
       },
       "distribution": {
         "continents": [
@@ -2901,15 +2921,16 @@
           "tundra",
           "steppe"
         ],
-        "sourceVersion": "mock-gbif-2026-07",
+        "sourceVersion": "quarantined-mock-gbif-2026-07",
         "lastUpdated": "2026-07-02",
-        "gbifTaxonKey": 1926216,
         "occurrenceSummaries": [
           {
             "region": "Eurasia",
-            "occurrenceCount": 5058
+            "occurrenceCount": 0
           }
-        ]
+        ],
+        "dataMode": "mock_sample",
+        "uncertaintyNote": "Continent/habitat hints are game-authored planning twins \u2014 not GBIF occurrence-verified ranges."
       },
       "fossil": {
         "timeRange": "Pleistocene\u2013Holocene (extinct ~4,000 years ago)",
@@ -2922,8 +2943,7 @@
         "livingRelatives": [
           "Asian Elephant"
         ],
-        "paleobiodbTaxonNo": 612372,
-        "sourceVersion": "mock-pbdb-2026-07",
+        "sourceVersion": "quarantined-mock-pbdb-2026-07",
         "lastUpdated": "2026-07-02"
       },
       "artifactTemplates": [
@@ -3005,19 +3025,19 @@
           "verificationStatus": "game_authored_verified"
         },
         {
-          "source": "paleobiodb",
-          "sourceVersion": "mock-sample-2026-07",
-          "sourceRecordId": "MOCK-mammuthus_primigenius",
-          "paleobiodbTaxonNo": 257354,
+          "source": "mock_sample",
+          "sourceVersion": "quarantined-mock-sample-2026-07",
+          "sourceRecordId": "QUARANTINED-MOCK-mammuthus_primigenius",
           "license": "MOCK-SAMPLE",
-          "citation": "MOCK SAMPLE \u2014 not sourced from live API; requires approved source snapshot import",
+          "citation": "QUARANTINED MOCK SAMPLE \u2014 not Catalogue of Life / GBIF / IUCN / PBDB; not source-verified. Retained for pipeline demos only until an approved snapshot import replaces it.",
           "citationRequired": true,
           "retrievedAt": "2026-07-05T03:27:29.539Z",
           "lastUpdated": "2026-07-05T03:27:29.539Z",
           "isMockData": true,
           "verificationStatus": "mock_sample"
         }
-      ]
+      ],
+      "scientificScopeStatement": "Gameplay-authored hero record. External taxonomy/conservation/distribution fields that lack an approved COL/GBIF/IUCN/PBDB snapshot remain quarantined mock samples \u2014 never source-verified. Catalog is intentionally incomplete (not Earth-complete)."
     },
     {
       "id": "tyrannosaurus_rex",
@@ -3034,15 +3054,15 @@
       "taxonomy": {
         "family": "Tyrannosauridae",
         "rank": "species",
-        "acceptedName": "Tyrannosaurus rex",
-        "catalogueOfLifeId": "MOCK-COL-tyrannosaurus_rex"
+        "acceptedName": "Tyrannosaurus rex"
       },
       "conservation": {
         "iucnCategory": "Extinct",
-        "assessed": true,
-        "sourceVersion": "mock-iucn-2026-07",
+        "assessed": false,
+        "sourceVersion": "quarantined-mock-iucn-2026-07",
         "lastUpdated": "2026-07-02",
-        "iucnTaxonId": 98710
+        "dataMode": "mock_sample",
+        "uncertaintyNote": "IUCN category is a gameplay planning label from legacy authored data \u2014 not an IUCN Red List source-verified assessment."
       },
       "distribution": {
         "continents": [
@@ -3052,15 +3072,16 @@
           "floodplain",
           "forest"
         ],
-        "sourceVersion": "mock-gbif-2026-07",
+        "sourceVersion": "quarantined-mock-gbif-2026-07",
         "lastUpdated": "2026-07-02",
-        "gbifTaxonKey": 3768675,
         "occurrenceSummaries": [
           {
             "region": "North America",
-            "occurrenceCount": 2322
+            "occurrenceCount": 0
           }
-        ]
+        ],
+        "dataMode": "mock_sample",
+        "uncertaintyNote": "Continent/habitat hints are game-authored planning twins \u2014 not GBIF occurrence-verified ranges."
       },
       "fossil": {
         "timeRange": "Late Cretaceous (~68\u201366 Ma)",
@@ -3074,8 +3095,7 @@
           "Chickens",
           "All birds"
         ],
-        "paleobiodbTaxonNo": 534128,
-        "sourceVersion": "mock-pbdb-2026-07",
+        "sourceVersion": "quarantined-mock-pbdb-2026-07",
         "lastUpdated": "2026-07-02"
       },
       "artifactTemplates": [
@@ -3176,19 +3196,19 @@
           "verificationStatus": "game_authored_verified"
         },
         {
-          "source": "paleobiodb",
-          "sourceVersion": "mock-sample-2026-07",
-          "sourceRecordId": "MOCK-tyrannosaurus_rex",
-          "paleobiodbTaxonNo": 305798,
+          "source": "mock_sample",
+          "sourceVersion": "quarantined-mock-sample-2026-07",
+          "sourceRecordId": "QUARANTINED-MOCK-tyrannosaurus_rex",
           "license": "MOCK-SAMPLE",
-          "citation": "MOCK SAMPLE \u2014 not sourced from live API; requires approved source snapshot import",
+          "citation": "QUARANTINED MOCK SAMPLE \u2014 not Catalogue of Life / GBIF / IUCN / PBDB; not source-verified. Retained for pipeline demos only until an approved snapshot import replaces it.",
           "citationRequired": true,
           "retrievedAt": "2026-07-05T03:27:29.539Z",
           "lastUpdated": "2026-07-05T03:27:29.539Z",
           "isMockData": true,
           "verificationStatus": "mock_sample"
         }
-      ]
+      ],
+      "scientificScopeStatement": "Gameplay-authored hero record. External taxonomy/conservation/distribution fields that lack an approved COL/GBIF/IUCN/PBDB snapshot remain quarantined mock samples \u2014 never source-verified. Catalog is intentionally incomplete (not Earth-complete)."
     },
     {
       "id": "trilobita_order",
@@ -3209,15 +3229,15 @@
       "taxonomy": {
         "family": "Trilobita",
         "rank": "order",
-        "acceptedName": "Trilobita (order)",
-        "catalogueOfLifeId": "MOCK-COL-trilobita_order"
+        "acceptedName": "Trilobita (order)"
       },
       "conservation": {
         "iucnCategory": "Extinct",
-        "assessed": true,
-        "sourceVersion": "mock-iucn-2026-07",
+        "assessed": false,
+        "sourceVersion": "quarantined-mock-iucn-2026-07",
         "lastUpdated": "2026-07-02",
-        "iucnTaxonId": 60887
+        "dataMode": "mock_sample",
+        "uncertaintyNote": "IUCN category is a gameplay planning label from legacy authored data \u2014 not an IUCN Red List source-verified assessment."
       },
       "distribution": {
         "continents": [
@@ -3226,15 +3246,16 @@
         "habitats": [
           "ancient seafloor"
         ],
-        "sourceVersion": "mock-gbif-2026-07",
+        "sourceVersion": "quarantined-mock-gbif-2026-07",
         "lastUpdated": "2026-07-02",
-        "gbifTaxonKey": 294847,
         "occurrenceSummaries": [
           {
             "region": "Global ancient oceans",
-            "occurrenceCount": 3452
+            "occurrenceCount": 0
           }
-        ]
+        ],
+        "dataMode": "mock_sample",
+        "uncertaintyNote": "Continent/habitat hints are game-authored planning twins \u2014 not GBIF occurrence-verified ranges."
       },
       "fossil": {
         "timeRange": "Cambrian\u2013Permian (~521\u2013252 Ma)",
@@ -3248,8 +3269,7 @@
           "Horseshoe crabs",
           "Arachnids"
         ],
-        "paleobiodbTaxonNo": 62096,
-        "sourceVersion": "mock-pbdb-2026-07",
+        "sourceVersion": "quarantined-mock-pbdb-2026-07",
         "lastUpdated": "2026-07-02"
       },
       "artifactTemplates": [
@@ -3331,19 +3351,19 @@
           "verificationStatus": "game_authored_verified"
         },
         {
-          "source": "paleobiodb",
-          "sourceVersion": "mock-sample-2026-07",
-          "sourceRecordId": "MOCK-trilobita_order",
-          "paleobiodbTaxonNo": 447527,
+          "source": "mock_sample",
+          "sourceVersion": "quarantined-mock-sample-2026-07",
+          "sourceRecordId": "QUARANTINED-MOCK-trilobita_order",
           "license": "MOCK-SAMPLE",
-          "citation": "MOCK SAMPLE \u2014 not sourced from live API; requires approved source snapshot import",
+          "citation": "QUARANTINED MOCK SAMPLE \u2014 not Catalogue of Life / GBIF / IUCN / PBDB; not source-verified. Retained for pipeline demos only until an approved snapshot import replaces it.",
           "citationRequired": true,
           "retrievedAt": "2026-07-05T03:27:29.539Z",
           "lastUpdated": "2026-07-05T03:27:29.539Z",
           "isMockData": true,
           "verificationStatus": "mock_sample"
         }
-      ]
+      ],
+      "scientificScopeStatement": "Gameplay-authored hero record. External taxonomy/conservation/distribution fields that lack an approved COL/GBIF/IUCN/PBDB snapshot remain quarantined mock samples \u2014 never source-verified. Catalog is intentionally incomplete (not Earth-complete)."
     },
     {
       "id": "ursus_maritimus",
@@ -3464,19 +3484,19 @@
           "verificationStatus": "game_authored_verified"
         },
         {
-          "source": "gbif",
-          "sourceVersion": "public-key-reference",
-          "sourceRecordId": "2433406",
-          "gbifTaxonKey": 2433406,
-          "license": "CC-BY-4.0",
-          "citation": "GBIF taxon key 2433406 for Ursus maritimus \u2014 live occurrences via ScientificIngestionService",
+          "source": "mock_sample",
+          "sourceVersion": "quarantined-mock-sample-2026-07",
+          "sourceRecordId": "QUARANTINED-MOCK-ursus_maritimus",
+          "license": "MOCK-SAMPLE",
+          "citation": "QUARANTINED MOCK SAMPLE \u2014 not Catalogue of Life / GBIF / IUCN / PBDB; not source-verified. Retained for pipeline demos only until an approved snapshot import replaces it.",
           "citationRequired": true,
           "retrievedAt": "2026-08-07T19:00:00.000Z",
           "lastUpdated": "2026-08-07T19:00:00.000Z",
           "isMockData": true,
           "verificationStatus": "mock_sample"
         }
-      ]
+      ],
+      "scientificScopeStatement": "Gameplay-authored hero record. External taxonomy/conservation/distribution fields that lack an approved COL/GBIF/IUCN/PBDB snapshot remain quarantined mock samples \u2014 never source-verified. Catalog is intentionally incomplete (not Earth-complete)."
     }
   ]
 }

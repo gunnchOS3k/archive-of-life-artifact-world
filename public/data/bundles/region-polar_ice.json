@@ -71,7 +71,8 @@
           "isMockData": false,
           "verificationStatus": "game_authored_verified"
         }
-      ]
+      ],
+      "scientificScopeStatement": "Gameplay-authored hero record. External taxonomy/conservation/distribution fields that lack an approved COL/GBIF/IUCN/PBDB snapshot remain quarantined mock samples \u2014 never source-verified. Catalog is intentionally incomplete (not Earth-complete)."
     },
     {
       "id": "odobenus_rosmarus",
@@ -130,19 +131,19 @@
           "verificationStatus": "game_authored_verified"
         },
         {
-          "source": "gbif",
-          "sourceVersion": "public-key-reference",
-          "sourceRecordId": "2433417",
-          "gbifTaxonKey": 2433417,
-          "license": "CC-BY-4.0",
-          "citation": "GBIF taxon key 2433417 referenced for Odobenus rosmarus; live occurrence fetch via ScientificIngestionService",
+          "source": "mock_sample",
+          "sourceVersion": "quarantined-mock-sample-2026-07",
+          "sourceRecordId": "QUARANTINED-MOCK-odobenus_rosmarus",
+          "license": "MOCK-SAMPLE",
+          "citation": "QUARANTINED MOCK SAMPLE \u2014 not Catalogue of Life / GBIF / IUCN / PBDB; not source-verified. Retained for pipeline demos only until an approved snapshot import replaces it.",
           "citationRequired": true,
           "retrievedAt": "2026-08-07T19:00:00.000Z",
           "lastUpdated": "2026-08-07T19:00:00.000Z",
-          "isMockData": false,
-          "verificationStatus": "needs_source_verification"
+          "isMockData": true,
+          "verificationStatus": "mock_sample"
         }
-      ]
+      ],
+      "scientificScopeStatement": "Gameplay-authored hero record. External taxonomy/conservation/distribution fields that lack an approved COL/GBIF/IUCN/PBDB snapshot remain quarantined mock samples \u2014 never source-verified. Catalog is intentionally incomplete (not Earth-complete)."
     },
     {
       "id": "pygoscelis_adeliae",
@@ -201,19 +202,19 @@
           "verificationStatus": "game_authored_verified"
         },
         {
-          "source": "gbif",
-          "sourceVersion": "public-key-reference",
-          "sourceRecordId": "2481662",
-          "gbifTaxonKey": 2481662,
-          "license": "CC-BY-4.0",
-          "citation": "GBIF taxon key 2481662 referenced for Pygoscelis adeliae; live occurrence fetch via ScientificIngestionService",
+          "source": "mock_sample",
+          "sourceVersion": "quarantined-mock-sample-2026-07",
+          "sourceRecordId": "QUARANTINED-MOCK-pygoscelis_adeliae",
+          "license": "MOCK-SAMPLE",
+          "citation": "QUARANTINED MOCK SAMPLE \u2014 not Catalogue of Life / GBIF / IUCN / PBDB; not source-verified. Retained for pipeline demos only until an approved snapshot import replaces it.",
           "citationRequired": true,
           "retrievedAt": "2026-08-07T19:00:00.000Z",
           "lastUpdated": "2026-08-07T19:00:00.000Z",
-          "isMockData": false,
-          "verificationStatus": "needs_source_verification"
+          "isMockData": true,
+          "verificationStatus": "mock_sample"
         }
-      ]
+      ],
+      "scientificScopeStatement": "Gameplay-authored hero record. External taxonomy/conservation/distribution fields that lack an approved COL/GBIF/IUCN/PBDB snapshot remain quarantined mock samples \u2014 never source-verified. Catalog is intentionally incomplete (not Earth-complete)."
     },
     {
       "id": "aptendytes_forsteri",
@@ -272,19 +273,19 @@
           "verificationStatus": "game_authored_verified"
         },
         {
-          "source": "gbif",
-          "sourceVersion": "public-key-reference",
-          "sourceRecordId": "2481660",
-          "gbifTaxonKey": 2481660,
-          "license": "CC-BY-4.0",
-          "citation": "GBIF taxon key 2481660 referenced for Aptenodytes forsteri; live occurrence fetch via ScientificIngestionService",
+          "source": "mock_sample",
+          "sourceVersion": "quarantined-mock-sample-2026-07",
+          "sourceRecordId": "QUARANTINED-MOCK-aptendytes_forsteri",
+          "license": "MOCK-SAMPLE",
+          "citation": "QUARANTINED MOCK SAMPLE \u2014 not Catalogue of Life / GBIF / IUCN / PBDB; not source-verified. Retained for pipeline demos only until an approved snapshot import replaces it.",
           "citationRequired": true,
           "retrievedAt": "2026-08-07T19:00:00.000Z",
           "lastUpdated": "2026-08-07T19:00:00.000Z",
-          "isMockData": false,
-          "verificationStatus": "needs_source_verification"
+          "isMockData": true,
+          "verificationStatus": "mock_sample"
         }
-      ]
+      ],
+      "scientificScopeStatement": "Gameplay-authored hero record. External taxonomy/conservation/distribution fields that lack an approved COL/GBIF/IUCN/PBDB snapshot remain quarantined mock samples \u2014 never source-verified. Catalog is intentionally incomplete (not Earth-complete)."
     },
     {
       "id": "somniosus_microcephalus",
@@ -342,7 +343,8 @@
           "isMockData": false,
           "verificationStatus": "game_authored_verified"
         }
-      ]
+      ],
+      "scientificScopeStatement": "Gameplay-authored hero record. External taxonomy/conservation/distribution fields that lack an approved COL/GBIF/IUCN/PBDB snapshot remain quarantined mock samples \u2014 never source-verified. Catalog is intentionally incomplete (not Earth-complete)."
     },
     {
       "id": "boreogadus_saida",
@@ -400,7 +402,8 @@
           "isMockData": false,
           "verificationStatus": "game_authored_verified"
         }
-      ]
+      ],
+      "scientificScopeStatement": "Gameplay-authored hero record. External taxonomy/conservation/distribution fields that lack an approved COL/GBIF/IUCN/PBDB snapshot remain quarantined mock samples \u2014 never source-verified. Catalog is intentionally incomplete (not Earth-complete)."
     },
     {
       "id": "vulpes_lagopus",
@@ -459,19 +462,19 @@
           "verificationStatus": "game_authored_verified"
         },
         {
-          "source": "gbif",
-          "sourceVersion": "public-key-reference",
-          "sourceRecordId": "5219254",
-          "gbifTaxonKey": 5219254,
-          "license": "CC-BY-4.0",
-          "citation": "GBIF taxon key 5219254 referenced for Vulpes lagopus; live occurrence fetch via ScientificIngestionService",
+          "source": "mock_sample",
+          "sourceVersion": "quarantined-mock-sample-2026-07",
+          "sourceRecordId": "QUARANTINED-MOCK-vulpes_lagopus",
+          "license": "MOCK-SAMPLE",
+          "citation": "QUARANTINED MOCK SAMPLE \u2014 not Catalogue of Life / GBIF / IUCN / PBDB; not source-verified. Retained for pipeline demos only until an approved snapshot import replaces it.",
           "citationRequired": true,
           "retrievedAt": "2026-08-07T19:00:00.000Z",
           "lastUpdated": "2026-08-07T19:00:00.000Z",
-          "isMockData": false,
-          "verificationStatus": "needs_source_verification"
+          "isMockData": true,
+          "verificationStatus": "mock_sample"
         }
-      ]
+      ],
+      "scientificScopeStatement": "Gameplay-authored hero record. External taxonomy/conservation/distribution fields that lack an approved COL/GBIF/IUCN/PBDB snapshot remain quarantined mock samples \u2014 never source-verified. Catalog is intentionally incomplete (not Earth-complete)."
     },
     {
       "id": "rangifer_tarandus",
@@ -530,19 +533,19 @@
           "verificationStatus": "game_authored_verified"
         },
         {
-          "source": "gbif",
-          "sourceVersion": "public-key-reference",
-          "sourceRecordId": "2440942",
-          "gbifTaxonKey": 2440942,
-          "license": "CC-BY-4.0",
-          "citation": "GBIF taxon key 2440942 referenced for Rangifer tarandus; live occurrence fetch via ScientificIngestionService",
+          "source": "mock_sample",
+          "sourceVersion": "quarantined-mock-sample-2026-07",
+          "sourceRecordId": "QUARANTINED-MOCK-rangifer_tarandus",
+          "license": "MOCK-SAMPLE",
+          "citation": "QUARANTINED MOCK SAMPLE \u2014 not Catalogue of Life / GBIF / IUCN / PBDB; not source-verified. Retained for pipeline demos only until an approved snapshot import replaces it.",
           "citationRequired": true,
           "retrievedAt": "2026-08-07T19:00:00.000Z",
           "lastUpdated": "2026-08-07T19:00:00.000Z",
-          "isMockData": false,
-          "verificationStatus": "needs_source_verification"
+          "isMockData": true,
+          "verificationStatus": "mock_sample"
         }
-      ]
+      ],
+      "scientificScopeStatement": "Gameplay-authored hero record. External taxonomy/conservation/distribution fields that lack an approved COL/GBIF/IUCN/PBDB snapshot remain quarantined mock samples \u2014 never source-verified. Catalog is intentionally incomplete (not Earth-complete)."
     },
     {
       "id": "alca_torda",
@@ -600,7 +603,8 @@
           "isMockData": false,
           "verificationStatus": "game_authored_verified"
         }
-      ]
+      ],
+      "scientificScopeStatement": "Gameplay-authored hero record. External taxonomy/conservation/distribution fields that lack an approved COL/GBIF/IUCN/PBDB snapshot remain quarantined mock samples \u2014 never source-verified. Catalog is intentionally incomplete (not Earth-complete)."
     },
     {
       "id": "calanus_glacialis",
@@ -658,7 +662,8 @@
           "isMockData": false,
           "verificationStatus": "game_authored_verified"
         }
-      ]
+      ],
+      "scientificScopeStatement": "Gameplay-authored hero record. External taxonomy/conservation/distribution fields that lack an approved COL/GBIF/IUCN/PBDB snapshot remain quarantined mock samples \u2014 never source-verified. Catalog is intentionally incomplete (not Earth-complete)."
     },
     {
       "id": "ursus_maritimus",
@@ -717,19 +722,19 @@
           "verificationStatus": "game_authored_verified"
         },
         {
-          "source": "gbif",
-          "sourceVersion": "public-key-reference",
-          "sourceRecordId": "2433406",
-          "gbifTaxonKey": 2433406,
-          "license": "CC-BY-4.0",
-          "citation": "GBIF taxon key 2433406 referenced for Ursus maritimus; live occurrence fetch via ScientificIngestionService",
+          "source": "mock_sample",
+          "sourceVersion": "quarantined-mock-sample-2026-07",
+          "sourceRecordId": "QUARANTINED-MOCK-ursus_maritimus",
+          "license": "MOCK-SAMPLE",
+          "citation": "QUARANTINED MOCK SAMPLE \u2014 not Catalogue of Life / GBIF / IUCN / PBDB; not source-verified. Retained for pipeline demos only until an approved snapshot import replaces it.",
           "citationRequired": true,
           "retrievedAt": "2026-08-07T19:00:00.000Z",
           "lastUpdated": "2026-08-07T19:00:00.000Z",
-          "isMockData": false,
-          "verificationStatus": "needs_source_verification"
+          "isMockData": true,
+          "verificationStatus": "mock_sample"
         }
-      ]
+      ],
+      "scientificScopeStatement": "Gameplay-authored hero record. External taxonomy/conservation/distribution fields that lack an approved COL/GBIF/IUCN/PBDB snapshot remain quarantined mock samples \u2014 never source-verified. Catalog is intentionally incomplete (not Earth-complete)."
     },
     {
       "id": "aptendytes_patagonicus",
@@ -788,19 +793,19 @@
           "verificationStatus": "game_authored_verified"
         },
         {
-          "source": "gbif",
-          "sourceVersion": "public-key-reference",
-          "sourceRecordId": "2481661",
-          "gbifTaxonKey": 2481661,
-          "license": "CC-BY-4.0",
-          "citation": "GBIF taxon key 2481661 referenced for Aptenodytes patagonicus; live occurrence fetch via ScientificIngestionService",
+          "source": "mock_sample",
+          "sourceVersion": "quarantined-mock-sample-2026-07",
+          "sourceRecordId": "QUARANTINED-MOCK-aptendytes_patagonicus",
+          "license": "MOCK-SAMPLE",
+          "citation": "QUARANTINED MOCK SAMPLE \u2014 not Catalogue of Life / GBIF / IUCN / PBDB; not source-verified. Retained for pipeline demos only until an approved snapshot import replaces it.",
           "citationRequired": true,
           "retrievedAt": "2026-08-07T19:00:00.000Z",
           "lastUpdated": "2026-08-07T19:00:00.000Z",
-          "isMockData": false,
-          "verificationStatus": "needs_source_verification"
+          "isMockData": true,
+          "verificationStatus": "mock_sample"
         }
-      ]
+      ],
+      "scientificScopeStatement": "Gameplay-authored hero record. External taxonomy/conservation/distribution fields that lack an approved COL/GBIF/IUCN/PBDB snapshot remain quarantined mock samples \u2014 never source-verified. Catalog is intentionally incomplete (not Earth-complete)."
     }
   ]
 }

@@ -19,15 +19,15 @@
       "taxonomy": {
         "family": "Balaenopteridae",
         "rank": "species",
-        "acceptedName": "Balaenoptera musculus",
-        "catalogueOfLifeId": "MOCK-COL-balaenoptera_musculus"
+        "acceptedName": "Balaenoptera musculus"
       },
       "conservation": {
         "iucnCategory": "Endangered",
-        "assessed": true,
-        "sourceVersion": "mock-iucn-2026-07",
+        "assessed": false,
+        "sourceVersion": "quarantined-mock-iucn-2026-07",
         "lastUpdated": "2026-07-02",
-        "iucnTaxonId": 27409
+        "dataMode": "mock_sample",
+        "uncertaintyNote": "IUCN category is a gameplay planning label from legacy authored data \u2014 not an IUCN Red List source-verified assessment."
       },
       "distribution": {
         "continents": [
@@ -37,15 +37,16 @@
           "ocean",
           "coastal"
         ],
-        "sourceVersion": "mock-gbif-2026-07",
+        "sourceVersion": "quarantined-mock-gbif-2026-07",
         "lastUpdated": "2026-07-02",
-        "gbifTaxonKey": 7146193,
         "occurrenceSummaries": [
           {
             "region": "Global oceans",
-            "occurrenceCount": 2679
+            "occurrenceCount": 0
           }
-        ]
+        ],
+        "dataMode": "mock_sample",
+        "uncertaintyNote": "Continent/habitat hints are game-authored planning twins \u2014 not GBIF occurrence-verified ranges."
       },
       "artifactTemplates": [
         {
@@ -78,7 +79,7 @@
         "timeRange": "Present",
         "diet": "Carnivore (filter feeder)",
         "activity": "Diurnal",
-        "size": "Up to 30 m — largest animal ever",
+        "size": "Up to 30 m \u2014 largest animal ever",
         "behavior": "Long-distance ocean migrant; vocal communication",
         "learningTopics": [
           "marine ecosystems",
@@ -131,19 +132,19 @@
           "verificationStatus": "game_authored_verified"
         },
         {
-          "source": "catalogue_of_life",
-          "sourceVersion": "mock-sample-2026-07",
-          "sourceRecordId": "MOCK-balaenoptera_musculus",
-          "catalogueOfLifeId": "MOCK-COL-balaenoptera_musculus",
+          "source": "mock_sample",
+          "sourceVersion": "quarantined-mock-sample-2026-07",
+          "sourceRecordId": "QUARANTINED-MOCK-balaenoptera_musculus",
           "license": "MOCK-SAMPLE",
-          "citation": "MOCK SAMPLE — not sourced from live API; requires approved source snapshot import",
+          "citation": "QUARANTINED MOCK SAMPLE \u2014 not Catalogue of Life / GBIF / IUCN / PBDB; not source-verified. Retained for pipeline demos only until an approved snapshot import replaces it.",
           "citationRequired": true,
           "retrievedAt": "2026-07-05T03:27:29.539Z",
           "lastUpdated": "2026-07-05T03:27:29.539Z",
           "isMockData": true,
           "verificationStatus": "mock_sample"
         }
-      ]
+      ],
+      "scientificScopeStatement": "Gameplay-authored hero record. External taxonomy/conservation/distribution fields that lack an approved COL/GBIF/IUCN/PBDB snapshot remain quarantined mock samples \u2014 never source-verified. Catalog is intentionally incomplete (not Earth-complete)."
     },
     {
       "id": "phoca_vitulina",
@@ -159,15 +160,15 @@
       "taxonomy": {
         "family": "Phocidae",
         "rank": "species",
-        "acceptedName": "Phoca vitulina",
-        "catalogueOfLifeId": "MOCK-COL-phoca_vitulina"
+        "acceptedName": "Phoca vitulina"
       },
       "conservation": {
         "iucnCategory": "Least Concern",
-        "assessed": true,
-        "sourceVersion": "mock-iucn-2026-07",
+        "assessed": false,
+        "sourceVersion": "quarantined-mock-iucn-2026-07",
         "lastUpdated": "2026-07-02",
-        "iucnTaxonId": 91836
+        "dataMode": "mock_sample",
+        "uncertaintyNote": "IUCN category is a gameplay planning label from legacy authored data \u2014 not an IUCN Red List source-verified assessment."
       },
       "distribution": {
         "continents": [
@@ -178,15 +179,16 @@
           "coastal",
           "ocean"
         ],
-        "sourceVersion": "mock-gbif-2026-07",
+        "sourceVersion": "quarantined-mock-gbif-2026-07",
         "lastUpdated": "2026-07-02",
-        "gbifTaxonKey": 5107101,
         "occurrenceSummaries": [
           {
             "region": "North Atlantic",
-            "occurrenceCount": 2480
+            "occurrenceCount": 0
           }
-        ]
+        ],
+        "dataMode": "mock_sample",
+        "uncertaintyNote": "Continent/habitat hints are game-authored planning twins \u2014 not GBIF occurrence-verified ranges."
       },
       "artifactTemplates": [
         {
@@ -219,7 +221,7 @@
         "timeRange": "Present",
         "diet": "Carnivore",
         "activity": "Diurnal",
-        "size": "1.5–1.9 m body length",
+        "size": "1.5\u20131.9 m body length",
         "behavior": "Social haul-out on rocks; agile swimmer",
         "learningTopics": [
           "marine mammals",
@@ -272,19 +274,19 @@
           "verificationStatus": "game_authored_verified"
         },
         {
-          "source": "catalogue_of_life",
-          "sourceVersion": "mock-sample-2026-07",
-          "sourceRecordId": "MOCK-phoca_vitulina",
-          "catalogueOfLifeId": "MOCK-COL-phoca_vitulina",
+          "source": "mock_sample",
+          "sourceVersion": "quarantined-mock-sample-2026-07",
+          "sourceRecordId": "QUARANTINED-MOCK-phoca_vitulina",
           "license": "MOCK-SAMPLE",
-          "citation": "MOCK SAMPLE — not sourced from live API; requires approved source snapshot import",
+          "citation": "QUARANTINED MOCK SAMPLE \u2014 not Catalogue of Life / GBIF / IUCN / PBDB; not source-verified. Retained for pipeline demos only until an approved snapshot import replaces it.",
           "citationRequired": true,
           "retrievedAt": "2026-07-05T03:27:29.539Z",
           "lastUpdated": "2026-07-05T03:27:29.539Z",
           "isMockData": true,
           "verificationStatus": "mock_sample"
         }
-      ]
+      ],
+      "scientificScopeStatement": "Gameplay-authored hero record. External taxonomy/conservation/distribution fields that lack an approved COL/GBIF/IUCN/PBDB snapshot remain quarantined mock samples \u2014 never source-verified. Catalog is intentionally incomplete (not Earth-complete)."
     }
   ]
 }

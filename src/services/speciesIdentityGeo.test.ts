@@ -11,6 +11,14 @@ import {
   speciesEligibleInRegion,
   timeEligibleForPresentEncounter,
 } from './geographicEligibility';
+import { TemporalMapService } from './TemporalMapService';
+import type { TemporalEarthMapCatalog } from '@/schema/temporalMap';
+import {
+  assertNoEarthCompleteClaim,
+  evaluateRegionExploration,
+  getRegionExplorationCard,
+} from '@/systems/regionExploration';
+import { resolveVerificationStatus } from '@/schema/provenance';
 
 const ROOT = join(process.cwd());
 
@@ -55,6 +63,17 @@ describe('species icon identity (lion ≠ horse)', () => {
         SPECIES_REPRESENTATION_CONTRACT.lionIcon,
       ),
     ).toThrow(/must not use the lion icon/);
+  });
+
+  it('does not let Felidae / Equidae / Canidae family marks impersonate specific taxa', () => {
+    expect(getSpeciesIcon({ family: 'Felidae', group: 'Mammal' })).not.toBe(
+      SPECIES_REPRESENTATION_CONTRACT.lionIcon,
+    );
+    expect(getSpeciesIcon({ family: 'Equidae', group: 'Mammal' })).not.toBe(
+      SPECIES_REPRESENTATION_CONTRACT.horseIcon,
+    );
+    expect(getSpeciesIcon({ family: 'Canidae', group: 'Mammal' })).not.toBe('🐺');
+    expect(SPECIES_REPRESENTATION_CONTRACT.forbidFamilyImpersonation).toBe(true);
   });
 });
 
@@ -124,5 +143,75 @@ describe('geographic / time eligibility', () => {
     expect(horse?.region).toBe('steppe');
     expect(horse?.continents).toContain('Asia');
     expect(horse?.continents).not.toContain('Africa');
+  });
+});
+
+describe('hero mock provenance quarantine', () => {
+  it('never labels mock hero provenance as source_verified or CoL', () => {
+    const heroes = loadJson<{ species: Array<{
+      id: string;
+      taxonomy?: { catalogueOfLifeId?: string };
+      scientificScopeStatement?: string;
+      provenance: Array<{
+        source: string;
+        verificationStatus?: string;
+        isMockData?: boolean;
+        catalogueOfLifeId?: string;
+        license?: string;
+      }>;
+    }> }>('public/data/bundles/hero-species.json');
+
+    for (const sp of heroes.species) {
+      expect(String(sp.taxonomy?.catalogueOfLifeId || '')).not.toMatch(/^MOCK-/);
+      expect(sp.scientificScopeStatement).toBeTruthy();
+      for (const p of sp.provenance) {
+        const status = resolveVerificationStatus(p);
+        if (
+          p.isMockData ||
+          p.source === 'mock_sample' ||
+          p.license === 'MOCK-SAMPLE' ||
+          String(p.catalogueOfLifeId || '').startsWith('MOCK-')
+        ) {
+          expect(status).toBe('mock_sample');
+          expect(status).not.toBe('source_verified');
+          expect(p.source).toBe('mock_sample');
+        }
+      }
+    }
+  });
+});
+
+describe('temporal maps stay blocked without authorized assets', () => {
+  it('does not unlock mock / blocked catalog entries', () => {
+    const catalog = loadJson<TemporalEarthMapCatalog>('public/data/maps/temporal_map_catalog.json');
+    const svc = new TemporalMapService();
+    // Inject catalog without fetch
+    (svc as unknown as { catalog: TemporalEarthMapCatalog }).catalog = catalog;
+    expect(catalog.isMockData).toBe(true);
+    for (const map of catalog.maps) {
+      expect(svc.isScientificallyUnlocked(map)).toBe(false);
+      expect(svc.unlockLabel(map)).toMatch(/BLOCKED|PARTIAL/);
+    }
+  });
+});
+
+describe('steppe region exploration depth', () => {
+  it('advances gameplay depth without Earth-complete claim', () => {
+    const card = getRegionExplorationCard('steppe');
+    expect(card).toBeTruthy();
+    assertNoEarthCompleteClaim(card!);
+    expect(card!.earthCompleteClaim).toBe(false);
+    expect(card!.encounterTaxonIds).toContain('equus_caballus_ferus');
+
+    const evaluated = evaluateRegionExploration(card!, {
+      portalReachable: true,
+      taxonEncountered: true,
+      iconHonest: true,
+      observationRecorded: true,
+      offlineIntegrityOk: true,
+    });
+    expect(evaluated.complete).toBe(true);
+    expect(evaluated.earthCompleteClaim).toBe(false);
+    expect(evaluated.status).toBe('gameplay_tested');
   });
 });

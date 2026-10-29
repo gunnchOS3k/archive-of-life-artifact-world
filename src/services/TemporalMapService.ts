@@ -51,6 +51,25 @@ export class TemporalMapService {
     };
   }
 
+  /**
+   * Only source-verified maps may unlock scientific paleogeography rendering.
+   * Blocked / partial / mock catalog entries stay blocked with honest labels.
+   */
+  isScientificallyUnlocked(map: TemporalEarthMapRecord | undefined): boolean {
+    if (!map) return false;
+    if (this.getCatalog().isMockData) return false;
+    return map.status === 'source_verified' && map.asset != null && map.fullEarthCoverage === true;
+  }
+
+  /** Honest status string for UI — never upgrades blocked → unlocked. */
+  unlockLabel(map: TemporalEarthMapRecord): string {
+    if (this.isScientificallyUnlocked(map)) return 'SOURCE VERIFIED — unlocked';
+    if (map.status === 'partial') {
+      return `PARTIAL — blocked from full unlock (${map.coveredGridCellCount}/${map.expectedGridCellCount} cells)`;
+    }
+    return `BLOCKED — ${map.blockedReason ?? map.uncertaintyNotes ?? 'no authorized external reconstruction'}`;
+  }
+
   private async fetchJson<T>(path: string): Promise<T> {
     const response = await fetch(path);
     if (!response.ok) throw new Error(`Failed to load ${path}: ${response.status}`);

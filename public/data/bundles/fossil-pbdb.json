@@ -2,23 +2,22 @@
   "records": [
     {
       "speciesId": "mammuthus_primigenius",
-      "timeRange": "Pleistocene–Holocene (extinct ~4,000 years ago)",
+      "timeRange": "Pleistocene\u2013Holocene (extinct ~4,000 years ago)",
       "fossilLocations": [
         "Siberia",
         "Alaska",
         "Yukon"
       ],
-      "paleoenvironment": "Mammoth steppe — cold grassland",
+      "paleoenvironment": "Mammoth steppe \u2014 cold grassland",
       "livingRelatives": [
         "Asian Elephant"
       ],
-      "paleobiodbTaxonNo": 445642,
-      "sourceVersion": "mock-pbdb-2026-07",
+      "sourceVersion": "quarantined-mock-pbdb-2026-07",
       "lastUpdated": "2026-07-02"
     },
     {
       "speciesId": "tyrannosaurus_rex",
-      "timeRange": "Late Cretaceous (~68–66 Ma)",
+      "timeRange": "Late Cretaceous (~68\u201366 Ma)",
       "fossilLocations": [
         "Montana",
         "South Dakota",
@@ -29,13 +28,12 @@
         "Chickens",
         "All birds"
       ],
-      "paleobiodbTaxonNo": 190704,
-      "sourceVersion": "mock-pbdb-2026-07",
+      "sourceVersion": "quarantined-mock-pbdb-2026-07",
       "lastUpdated": "2026-07-02"
     },
     {
       "speciesId": "trilobita_order",
-      "timeRange": "Cambrian–Permian (~521–252 Ma)",
+      "timeRange": "Cambrian\u2013Permian (~521\u2013252 Ma)",
       "fossilLocations": [
         "Morocco",
         "Utah",
@@ -46,8 +44,7 @@
         "Horseshoe crabs",
         "Arachnids"
       ],
-      "paleobiodbTaxonNo": 730989,
-      "sourceVersion": "mock-pbdb-2026-07",
+      "sourceVersion": "quarantined-mock-pbdb-2026-07",
       "lastUpdated": "2026-07-02"
     }
   ]

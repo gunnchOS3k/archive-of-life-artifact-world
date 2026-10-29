@@ -42,7 +42,7 @@
     "id": "steppe",
     "name": "Central Asian Steppe",
     "type": "explore",
-    "description": "Open grasslands of Central Asia \u2014 authored home for the last truly wild horses. Game-authored planning twin; not a surveyed claim.",
+    "description": "Open grasslands of Central Asia \u2014 authored home for Przewalski's horse observation loop (portal \u2192 encounter \u2192 ArchiveDex \u2192 offline integrity). Game-authored planning twin; not a surveyed or Earth-complete regional catalog.",
     "color": "#B8A06A",
     "biome": "steppe",
     "continents": [
