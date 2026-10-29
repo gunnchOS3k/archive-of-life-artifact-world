@@ -704,6 +704,41 @@ body {
 
 .archive-coverage { margin-bottom: 0.25rem; }
 
+.museum-honesty {
+  margin: 0.75rem 0;
+  padding: 0.65rem 0.85rem;
+  border: 1px solid var(--border);
+  background: var(--bg-card);
+  color: var(--text-secondary);
+  font-size: 0.85rem;
+  max-width: 36rem;
+}
+.museum-honesty-title { margin: 0 0 0.25rem; color: var(--text-primary); font-weight: 600; }
+.museum-honesty-subtitle { margin: 0 0 0.4rem; }
+.museum-honesty-floors { margin: 0; padding-left: 1.1rem; }
+.museum-honesty-floors li { margin: 0.15rem 0; }
+#hud-museum-honesty-host:not([hidden]) {
+  max-width: min(28rem, 92vw);
+  margin: 0.35rem 0;
+}
+.archivedex-honesty {
+  margin-bottom: 0.5rem;
+  padding: 0.55rem 0.75rem;
+  border: 1px solid var(--border);
+  background: var(--bg-card);
+  font-size: 0.82rem;
+  color: var(--text-secondary);
+}
+.archivedex-honesty p { margin: 0.2rem 0; }
+.dex-art-honesty,
+.dex-iucn-honesty,
+.species-art-honesty {
+  display: inline-block;
+  margin-top: 0.2rem;
+  font-size: 0.72rem;
+  color: var(--text-secondary);
+}
+
 .coverage-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);

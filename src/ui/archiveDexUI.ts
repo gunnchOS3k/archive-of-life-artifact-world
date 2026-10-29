@@ -8,6 +8,10 @@ import { getEntryRevealLevel, getVisibleTabs } from '@/services/archivedexMapper
 import { renderArchiveDexTab } from '@/ui/archiveDexTabs';
 import { formatArtifactType } from '@/systems/artifactSystem';
 import { renderSourcesEvidencePanel } from '@/ui/evidence/SourcesEvidencePanel';
+import {
+  buildArchiveDexEntryPresentation,
+  mountArchiveDexHonestyBanner,
+} from '@/systems/museumDexPresentation';
 
 export class ArchiveDexUI {
   private container: HTMLElement;
@@ -63,6 +67,7 @@ export class ArchiveDexUI {
     this.unlockModal = document.getElementById('archivedex-unlock-modal')!;
 
     this.bindFilters();
+    mountArchiveDexHonestyBanner(this.container);
     this.unlockModal?.querySelector('#archivedex-unlock-close')?.addEventListener('click', () => this.hideUnlockModal());
     this.unlockModal?.querySelector('#archivedex-unlock-dismiss')?.addEventListener('click', () => this.hideUnlockModal());
     this.unlockModal?.querySelector('#archivedex-unlock-open')?.addEventListener('click', () => {
@@ -214,6 +219,7 @@ export class ArchiveDexUI {
 
   setData(state: SaveState) {
     this.state = state;
+    mountArchiveDexHonestyBanner(this.container);
     this.render();
   }
 
@@ -264,18 +270,34 @@ export class ArchiveDexUI {
 
     const reveal = getEntryRevealLevel(entry, collected || entry.representationTier <= 3);
     const tabs = getVisibleTabs(entry, reveal);
-    const icon = reveal === 'hidden' ? '❓' : getSpeciesIcon({ id: entry.id, commonName: entry.commonName, scientificName: entry.scientificName, family: entry.taxonomy?.family, group: entry.group, conservationStatus: entry.conservation?.iucnCategory });
+    const presentation = buildArchiveDexEntryPresentation(entry.id);
+    const icon = reveal === 'hidden'
+      ? '❓'
+      : presentation?.representationMark ??
+        getSpeciesIcon({
+          id: entry.id,
+          commonName: entry.commonName,
+          scientificName: entry.scientificName,
+          family: entry.taxonomy?.family,
+          group: entry.group,
+          conservationStatus: entry.conservation?.iucnCategory,
+        });
     const statusClass = getConservationClass(entry.conservation?.iucnCategory ?? 'Not Evaluated');
+    const honestyBadge = presentation
+      ? `<span class="dex-badge dex-art-honesty">${presentation.artStatusLabel}</span>
+         <span class="dex-badge dex-iucn-honesty">IUCN assessed=false</span>`
+      : `<span class="dex-badge dex-art-honesty">authored / sample — not finished model</span>`;
 
     this.entryHeader.innerHTML = `
-      <div class="archivedex-entry-hero">
-        <div class="archivedex-icon ${reveal === 'hidden' ? 'silhouette' : ''}">${icon}</div>
+      <div class="archivedex-entry-hero" ${presentation ? `aria-label="${presentation.ariaLabel.replace(/"/g, '&quot;')}"` : ''}>
+        <div class="archivedex-icon ${reveal === 'hidden' ? 'silhouette' : ''}" aria-hidden="true">${icon}</div>
         <div>
           <h3>${entry.commonName}</h3>
           <p class="sci-name">${reveal === 'hidden' ? '???' : entry.scientificName}</p>
           ${entry.archiveNumber ? `<span class="dex-badge">${entry.archiveNumber}</span>` : ''}
           <span class="dex-badge">T${entry.representationTier}</span>
           <span class="species-status status-${statusClass}">${entry.conservation?.iucnCategory ?? entry.lifeStatus}</span>
+          ${honestyBadge}
         </div>
       </div>
     `;
@@ -346,14 +368,29 @@ export class ArchiveDexUI {
 
     this.grid.innerHTML = result.entries.map((entry) => {
       const discovered = collectedIds.has(entry.id) || entry.representationTier <= 3;
-      const icon = discovered ? getSpeciesIcon({ id: entry.id, commonName: entry.commonName, scientificName: entry.scientificName, family: entry.family, group: entry.group, conservationStatus: entry.iucnCategory }) : '🦴';
+      const presentation = buildArchiveDexEntryPresentation(entry.id);
+      const icon = discovered
+        ? presentation?.representationMark ??
+          getSpeciesIcon({
+            id: entry.id,
+            commonName: entry.commonName,
+            scientificName: entry.scientificName,
+            family: entry.family,
+            group: entry.group,
+            conservationStatus: entry.iucnCategory,
+          })
+        : '🦴';
       const statusClass = getConservationClass(entry.iucnCategory ?? 'Not Evaluated');
+      const aria = discovered
+        ? (presentation?.ariaLabel ?? entry.commonName)
+        : 'Undocumented species';
       return `
-        <div class="archive-card ${discovered ? '' : 'locked'}" data-id="${entry.id}" data-discovered="${discovered}" role="button" tabindex="0" aria-label="${discovered ? entry.commonName : 'Undocumented species'}">
-          <div class="species-icon ${discovered ? '' : 'silhouette'}">${discovered ? icon : '❓'}</div>
+        <div class="archive-card ${discovered ? '' : 'locked'}" data-id="${entry.id}" data-discovered="${discovered}" role="button" tabindex="0" aria-label="${aria.replace(/"/g, '&quot;')}">
+          <div class="species-icon ${discovered ? '' : 'silhouette'}" aria-hidden="true">${discovered ? icon : '❓'}</div>
           <div class="species-name">${discovered ? entry.commonName : 'Undocumented'}</div>
           <div class="species-tier">T${entry.representationTier}</div>
           ${discovered ? `<span class="species-status status-${statusClass}">${entry.iucnCategory ?? entry.lifeStatus ?? 'Archive'}</span>` : '<span class="species-clue">Field documentation required</span>'}
+          ${presentation && discovered ? `<span class="species-art-honesty">${presentation.artStatusLabel}</span>` : ''}
         </div>`;
     }).join('');
 

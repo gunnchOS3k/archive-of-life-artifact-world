@@ -119,3 +119,90 @@ export function assertMuseumDexHonesty(
     }
   }
 }
+
+/** HTML for museum honesty strip mounted into the live player HUD / title hub. */
+export function renderMuseumHubHonestyHtml(hub: MuseumHubPresentation = buildMuseumHubPresentation()): string {
+  return `
+    <aside class="museum-honesty" data-museum-honesty="1" role="status" aria-live="polite" aria-label="${escapeAttr(hub.ariaLabel)}">
+      <p class="museum-honesty-title">${escapeHtml(hub.title)}</p>
+      <p class="museum-honesty-subtitle">${escapeHtml(hub.subtitle)}</p>
+      <ul class="museum-honesty-floors">
+        <li>Explore regions: ${hub.exploreRegionCount} (floor ≥12)</li>
+        <li>Flagship taxa: ${hub.flagshipCount} (floor 24)</li>
+        <li>${escapeHtml(hub.temporalMapsHonesty)}</li>
+        <li>${escapeHtml(hub.iucnHonesty)}</li>
+        <li>Authored floors only — not Earth-complete / not production-ready</li>
+      </ul>
+    </aside>
+  `.trim();
+}
+
+/** Compact ArchiveDex honesty banner (sample/authored floors; emoji ≠ finished). */
+export function renderArchiveDexHonestyBannerHtml(): string {
+  const entries = listArchiveDexFlagshipPresentations();
+  const sample = entries[0];
+  const artNote = sample?.artStatusLabel ?? 'identity candidate — not a finished model';
+  return `
+    <div class="archivedex-honesty" data-archivedex-honesty="1" role="note" aria-label="ArchiveDex honesty: authored floors, IUCN not assessed, identity marks are not finished models">
+      <p>ArchiveDex shows authored / sample floors. IUCN assessed=false. Identity marks (including emoji) are not finished models — ${escapeHtml(artNote)}.</p>
+      <p>Maps 0/17 source-verified · production-ready=false · source_verified release=false</p>
+    </div>
+  `.trim();
+}
+
+/**
+ * Mount museum hub presentation into a live DOM root (title screen or in-game museum HUD).
+ * Returns false if the host node is missing.
+ */
+export function mountMuseumHubPresentation(
+  root: ParentNode | null | undefined,
+  hub: MuseumHubPresentation = buildMuseumHubPresentation(),
+): boolean {
+  if (!root || typeof (root as ParentNode).querySelector !== 'function') return false;
+  const host =
+    (root.querySelector('[data-museum-honesty-host]:not([hidden])') as HTMLElement | null) ??
+    (root.querySelector('#museum-honesty-host') as HTMLElement | null) ??
+    (root.querySelector('[data-museum-honesty-host]') as HTMLElement | null);
+  if (!host) return false;
+  host.innerHTML = renderMuseumHubHonestyHtml(hub);
+  host.setAttribute('aria-label', hub.ariaLabel);
+  const title = root.querySelector('#title-screen') as HTMLElement | null;
+  if (title) title.setAttribute('aria-label', hub.ariaLabel);
+  const regionName = root.querySelector('#region-name') as HTMLElement | null;
+  if (regionName) {
+    regionName.textContent = hub.title;
+    regionName.setAttribute('aria-label', hub.ariaLabel);
+  }
+  assertMuseumDexHonesty(hub, listArchiveDexFlagshipPresentations());
+  return true;
+}
+
+/**
+ * Mount ArchiveDex honesty banner into the archive panel body.
+ */
+export function mountArchiveDexHonestyBanner(root: ParentNode | null | undefined): boolean {
+  if (!root || typeof (root as ParentNode).querySelector !== 'function') return false;
+  const panel = root.querySelector('#panel-archive') ?? root;
+  let host = panel.querySelector('#archivedex-honesty-host') as HTMLElement | null;
+  if (!host) {
+    const coverage = panel.querySelector('#archive-coverage');
+    if (!coverage || !coverage.parentElement) return false;
+    host = coverage.ownerDocument!.createElement('div');
+    host.id = 'archivedex-honesty-host';
+    coverage.parentElement.insertBefore(host, coverage);
+  }
+  host.innerHTML = renderArchiveDexHonestyBannerHtml();
+  return true;
+}
+
+function escapeHtml(value: string): string {
+  return value
+    .replace(/&/g, '&amp;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;')
+    .replace(/"/g, '&quot;');
+}
+
+function escapeAttr(value: string): string {
+  return escapeHtml(value).replace(/'/g, '&#39;');
+}

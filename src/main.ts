@@ -18,6 +18,7 @@ import {
   setEmotionalMode,
 } from '@/ui/livingArchive';
 import { mountExpeditionPortalReturn, mountPortalReturn } from '@/portalReturn';
+import { mountMuseumHubPresentation } from '@/systems/museumDexPresentation';
 
 let game: Game | null = null;
 const archiveDexService = new ArchiveDexService(dataCatalog, timeAtlasService);
@@ -27,6 +28,7 @@ async function init() {
   document.body.classList.add('vxp4-living-archive');
   setEmotionalMode('home');
   void hydrateLivingArchiveIcons();
+  mountMuseumHubPresentation(document);
 
   const params =
     typeof window !== 'undefined' ? new URLSearchParams(window.location.search) : null;

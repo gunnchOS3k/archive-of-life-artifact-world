@@ -293,41 +293,54 @@ describe('expedition journey polish', () => {
     expect(hub.ariaLabel.length).toBeGreaterThan(40);
   });
 
-  it('RTM exists, references shared PVS, and keeps Cursor-Complete / HUMAN gates false', () => {
+  it('RTM binds GUNNCHOS3K_PVS@1.0.0 and keeps HUMAN/RC2/V1 + independent_review not_started', () => {
     const rtm = loadJson<{
-      gates: {
-        human: boolean;
-        rc: boolean;
-        v1: boolean;
-        production: boolean;
-        cursor_complete_claimed: boolean;
+      schema_version: string;
+      contract_id: string;
+      contract_version: string;
+      contract_source_sha: string;
+      product_id: string;
+      honesty_flags: { HUMAN: boolean; RC2: boolean; V1: boolean };
+      phase_summary: {
+        cursor_complete: { status: string };
+        codex_independently_verified: { status: string };
+        human_approval: { status: string };
       };
-      sharedPvs: { present: boolean };
-      honestyInvariants: string[];
-      rows: Array<{ id: string; specialty: string }>;
-      cursorCompleteGaps: string[];
+      rows: Array<{
+        req_id: string;
+        independent_review_status: string;
+        limitations: string[];
+        notes?: string;
+      }>;
     }>(join(ROOT, 'artifacts/rtm/ARCHIVE_REQUIREMENTS_TO_EVIDENCE_MATRIX.json'));
-    expect(rtm.sharedPvs.present).toBe(true);
-    expect(rtm.gates.human).toBe(false);
-    expect(rtm.gates.rc).toBe(false);
-    expect(rtm.gates.v1).toBe(false);
-    expect(rtm.gates.production).toBe(false);
-    expect(rtm.gates.cursor_complete_claimed).toBe(false);
-    expect(rtm.honestyInvariants.some((line) => line.includes('sample_fallback'))).toBe(true);
-    expect(rtm.honestyInvariants.some((line) => line.includes('0/17'))).toBe(true);
+    expect(rtm.schema_version).toBe('1.0.0');
+    expect(rtm.contract_id).toBe('GUNNCHOS3K_PVS');
+    expect(rtm.contract_version).toBe('1.0.0');
+    expect(rtm.contract_source_sha.startsWith('45b4566')).toBe(true);
+    expect(rtm.product_id).toBe('archive-of-life');
+    expect(rtm.honesty_flags.HUMAN).toBe(false);
+    expect(rtm.honesty_flags.RC2).toBe(false);
+    expect(rtm.honesty_flags.V1).toBe(false);
+    expect(rtm.phase_summary.cursor_complete.status).toBe('not_started');
+    expect(rtm.phase_summary.codex_independently_verified.status).toBe('not_started');
+    expect(rtm.phase_summary.human_approval.status).toBe('not_started');
     expect(rtm.rows.length).toBeGreaterThanOrEqual(10);
-    const specialties = new Set(rtm.rows.map((r) => r.specialty));
+    expect(rtm.rows.every((r) => r.independent_review_status === 'not_started')).toBe(true);
+    const blob = JSON.stringify(rtm);
+    expect(blob).toMatch(/sample_fallback/);
+    expect(blob).toMatch(/0\/17/);
+    expect(blob).toMatch(/IUCN/);
+    const ids = new Set(rtm.rows.map((r) => r.req_id));
     for (const needed of [
-      'scientific_provenance',
-      'taxonomy_geo_temporal',
-      'offline_integrity',
-      'expeditions',
-      'organism_identity',
-      'save_migrations',
-      'accessibility',
+      'AOL-SCI-001',
+      'AOL-SCI-002',
+      'AOL-TAX-003',
+      'AOL-EXP-001',
+      'AOL-ORG-001',
+      'AOL-A11Y-001',
+      'AOL-MUX-001',
     ]) {
-      expect(specialties.has(needed)).toBe(true);
+      expect(ids.has(needed)).toBe(true);
     }
-    expect(rtm.cursorCompleteGaps.length).toBeGreaterThan(0);
   });
 });

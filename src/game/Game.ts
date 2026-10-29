@@ -29,6 +29,10 @@ import {
   type DeviceRoleProfile,
 } from '@/device/deviceRoles';
 import { hydrateLivingArchiveIcons, setEmotionalMode } from '@/ui/livingArchive';
+import {
+  buildMuseumHubPresentation,
+  mountMuseumHubPresentation,
+} from '@/systems/museumDexPresentation';
 import { FossilExcavation } from '@/minigames/fossilExcavation';
 import { WildlifeObservation } from '@/minigames/wildlifeObservation';
 import { ArchiveDexUI } from '@/ui/archiveDexUI';
@@ -545,6 +549,7 @@ export class Game {
 
     const region = this.catalog.getConfig().regions.find((r) => r.id === regionId);
     document.getElementById('region-name')!.textContent = region?.name ?? regionId;
+    this.applyMuseumHubPresentation(regionId);
     track('region_travel', {
       region: regionId,
       biome: region?.biome ?? '',
@@ -569,6 +574,21 @@ export class Game {
 
     this.syncAchievements();
     this.save();
+  }
+
+  /** Wire museum honesty presentation + a11y labels into the live HUD when at the hub. */
+  private applyMuseumHubPresentation(regionId: string) {
+    const host = document.getElementById('hud-museum-honesty-host');
+    if (!host) return;
+    if (regionId !== 'museum') {
+      host.hidden = true;
+      host.innerHTML = '';
+      return;
+    }
+    host.hidden = false;
+    const hub = buildMuseumHubPresentation();
+    mountMuseumHubPresentation(document.getElementById('game-screen') ?? document, hub);
+    setEmotionalMode('home');
   }
 
   private rebuildEncounterTable() {

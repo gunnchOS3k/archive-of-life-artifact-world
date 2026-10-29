@@ -1,251 +1,378 @@
 {
-  "schema": "gunnchos3k.requirements_to_evidence_matrix.v1",
-  "title": "Archive of Life \u2014 Requirements-to-Evidence Matrix (RTM)",
-  "product": "archive_of_life",
-  "draftPr": 55,
-  "draftPrUrl": "https://github.com/gunnchOS3k/archive-of-life-artifact-world/pull/55",
-  "generatedAt": "2026-10-29T19:00:00Z",
-  "tipShaAtDraft": "8a95ce54ae8e0e4c90bc96f67121af829219b461",
-  "sharedPvs": {
-    "present": true,
-    "worktreePath": "/Users/gunnchos/Downloads/gunnchos-7gc-research-product-spine/repos/_open_lab_worktrees/product-verification-standard",
-    "branch": "docs/gunnchos3k-product-verification-standard-v1",
-    "relativeRefs": [
-      "docs/quality/schemas",
-      "docs/quality/specialty_matrices"
-    ],
-    "status": "scaffold_present_schemas_empty",
-    "note": "Shared PVS directories exist but schema files are not yet published. This RTM uses the local specialty schema below and will rebase onto shared PVS row IDs when they land."
+  "schema_version": "1.0.0",
+  "contract_id": "GUNNCHOS3K_PVS",
+  "contract_version": "1.0.0",
+  "contract_source_sha": "45b456617002569c33a5a27fe30d5cf8be5a7032",
+  "product_id": "archive-of-life",
+  "product_repo": "https://github.com/gunnchOS3k/archive-of-life-artifact-world",
+  "generated_at": "2026-10-29T20:05:00Z",
+  "honesty_flags": {
+    "HUMAN": false,
+    "RC2": false,
+    "V1": false
   },
-  "localSchema": {
-    "id": "archive.specialty.rtm.v1",
-    "alignedWith": [
-      "gunnchOS3k_Requirements_Pack_2026-08-14/05_REQUIREMENTS_TRACEABILITY_AND_VV_PLAN.md",
-      "gunnchOS3k_Requirements_Pack_2026-08-14/08_GAME_PORTFOLIO_GDD_TDD_RELEASE_REQUIREMENTS.md"
-    ],
-    "verificationMethods": [
-      "A",
-      "I",
-      "D",
-      "T"
-    ],
-    "statusEnum": [
-      "not_started",
-      "partial",
-      "cursor_complete_candidate",
-      "automated_evidence",
-      "blocked_external",
-      "human_required",
-      "owner_authorized"
-    ]
+  "phase_summary": {
+    "cursor_complete": {
+      "status": "not_started",
+      "notes": "Automated evidence and UI wiring exist; Cursor-Complete is not claimed. Floors 157/24/12 remain authored/sample; emoji≠finished; IUCN blocked; 0/17 maps."
+    },
+    "codex_independently_verified": {
+      "status": "not_started"
+    },
+    "human_approval": {
+      "status": "not_started"
+    }
   },
-  "gates": {
-    "human": false,
-    "rc": false,
-    "v1": false,
-    "production": false,
-    "cursor_complete_claimed": false
-  },
-  "honestyInvariants": [
-    "sample_fallback \u2260 source_verified",
-    "IUCN remains blocked_external without IUCN_API_TOKEN + rights review",
-    "Time Atlas full-Earth maps remain 0/17 source-verified",
-    "NASA historical manifest SHA preserved; bounded acquires stay sample_fallback",
-    "Never invent credentials, maps, or assessed=true IUCN rows"
-  ],
-  "specialty": [
-    "scientific_provenance",
-    "taxonomy_geo_temporal",
-    "offline_integrity",
-    "expeditions",
-    "organism_identity",
-    "save_migrations",
-    "accessibility"
-  ],
   "rows": [
     {
-      "id": "AOL-SCI-001",
-      "specialty": "scientific_provenance",
-      "requirement": "Bounded public acquires (COL/GBIF/PBDB/Neotoma/NASA/ICS) MUST register as sample_fallback with verified_record_count=0; never auto-promote to source_verified.",
-      "method": "T",
-      "evidence": [
-        "artifacts/archive_full/SCIENCE_HONESTY_MATRIX.json",
-        "public/data/status/public_bounded_acquire_report.json",
-        "src/services/ingestion/publicSourceAdapters.ts",
+      "req_id": "AOL-SCI-001",
+      "owner": "archive-science",
+      "expected_behavior": "Bounded public acquires (COL/GBIF/PBDB/Neotoma/NASA/ICS) register as sample_fallback with verified_record_count=0 and never auto-promote to source_verified.",
+      "verification_method": "automated test + evidence artifact",
+      "layers": [1, 2],
+      "tests": [
+        "src/systems/expeditionJourneyPolish.test.ts",
         "data-pipeline/src/archive_life_pipeline/public_bounded_acquire.py"
       ],
-      "status": "automated_evidence",
-      "cursorComplete": false,
-      "blocker": null
+      "automated_evidence": [
+        "artifacts/archive_full/SCIENCE_HONESTY_MATRIX.json",
+        "public/data/status/public_bounded_acquire_report.json",
+        "src/services/ingestion/publicSourceAdapters.ts"
+      ],
+      "native_physical": {
+        "status": "not_applicable",
+        "platforms": [],
+        "notes": "Provenance honesty is digital/evidence-path."
+      },
+      "art_status": "not_applicable",
+      "limitations": [
+        "sample_fallback ≠ source_verified",
+        "NASA historical manifest SHA preserved; bounded acquires stay sample_fallback"
+      ],
+      "severity": "blocker",
+      "sha": "c84b1760f3442df5bb9c2bcb345b7fb0e6581aad",
+      "independent_review_status": "not_started",
+      "cursor_complete_status": "in_progress",
+      "notes": "Specialty: scientific_provenance. Production gate remains false."
     },
     {
-      "id": "AOL-SCI-002",
-      "specialty": "scientific_provenance",
-      "requirement": "IUCN SHALL remain blocked_external until owner token + rights review; assessed=true forbidden without authorized snapshot.",
-      "method": "I",
-      "evidence": [
+      "req_id": "AOL-SCI-002",
+      "owner": "archive-science",
+      "expected_behavior": "IUCN remains blocked_external until owner token + rights review; assessed=true is forbidden without an authorized snapshot.",
+      "verification_method": "inspection + evidence artifact",
+      "layers": [1, 2, 7],
+      "tests": [
+        "src/systems/expeditionJourneyPolish.test.ts"
+      ],
+      "automated_evidence": [
         "docs/OWNER_IUCN_SETUP.md",
         "artifacts/archive_full/SCIENCE_HONESTY_MATRIX.json",
         "public/data/manifest.json"
       ],
-      "status": "blocked_external",
-      "cursorComplete": false,
-      "blocker": "IUCN_API_TOKEN + rights review (human/external)"
+      "native_physical": {
+        "status": "blocked",
+        "platforms": [],
+        "notes": "Blocked on IUCN_API_TOKEN + rights review."
+      },
+      "art_status": "not_applicable",
+      "limitations": [
+        "IUCN blocked_external without IUCN_API_TOKEN + rights review",
+        "Never invent credentials or assessed=true IUCN rows"
+      ],
+      "severity": "blocker",
+      "sha": "c84b1760f3442df5bb9c2bcb345b7fb0e6581aad",
+      "independent_review_status": "not_started",
+      "cursor_complete_status": "not_started",
+      "notes": "Specialty: scientific_provenance. External credential gate."
     },
     {
-      "id": "AOL-SCI-003",
-      "specialty": "scientific_provenance",
-      "requirement": "NASA July 5 historical manifest SHA-256 MUST be preserved; bounded NASA acquires write versioned snapshots only and stay not source_verified for release.",
-      "method": "T",
-      "evidence": [
+      "req_id": "AOL-SCI-003",
+      "owner": "archive-science",
+      "expected_behavior": "NASA July 5 historical manifest SHA-256 is preserved; bounded NASA acquires write versioned snapshots only and stay not source_verified for release.",
+      "verification_method": "automated test + evidence artifact",
+      "layers": [1, 2],
+      "tests": [
+        "src/systems/expeditionJourneyPolish.test.ts"
+      ],
+      "automated_evidence": [
         "artifacts/archive_full/DATA_COVERAGE_HONESTY.json",
         "artifacts/archive_full/SCIENCE_HONESTY_MATRIX.json",
         "public/data/earth/nasa_metadata_cache.json"
       ],
-      "status": "automated_evidence",
-      "cursorComplete": false,
-      "blocker": null
+      "native_physical": {
+        "status": "not_applicable",
+        "platforms": [],
+        "notes": "Historical manifest integrity is repo evidence."
+      },
+      "art_status": "not_applicable",
+      "limitations": [
+        "NASA historical manifest SHA preserved; bounded acquires stay sample_fallback"
+      ],
+      "severity": "high",
+      "sha": "c84b1760f3442df5bb9c2bcb345b7fb0e6581aad",
+      "independent_review_status": "not_started",
+      "cursor_complete_status": "in_progress",
+      "notes": "Specialty: scientific_provenance."
     },
     {
-      "id": "AOL-TAX-001",
-      "specialty": "taxonomy_geo_temporal",
-      "requirement": "Taxon identity marks MUST be species-specific where authored; family/group fallbacks MUST NOT impersonate a charismatic sibling (lion\u2260all mammals; horse\u2260all Equidae).",
-      "method": "T",
-      "evidence": [
+      "req_id": "AOL-TAX-001",
+      "owner": "archive-taxonomy",
+      "expected_behavior": "Taxon identity marks are species-specific where authored; family/group fallbacks must not impersonate a charismatic sibling (lion≠all mammals; horse≠all Equidae).",
+      "verification_method": "automated test",
+      "layers": [1, 2],
+      "tests": [
+        "src/services/speciesIdentityGeo.test.ts"
+      ],
+      "automated_evidence": [
         "src/services/speciesRepresentation.ts",
-        "src/services/speciesIdentityGeo.test.ts",
         "src/services/flagshipTaxonProfiles.ts"
       ],
-      "status": "automated_evidence",
-      "cursorComplete": false,
-      "blocker": null
+      "native_physical": {
+        "status": "not_applicable",
+        "platforms": [],
+        "notes": "Identity mark honesty is digital."
+      },
+      "art_status": "wip",
+      "limitations": [
+        "emoji/identity candidate ≠ finished model / human-approved art"
+      ],
+      "severity": "high",
+      "sha": "c84b1760f3442df5bb9c2bcb345b7fb0e6581aad",
+      "independent_review_status": "not_started",
+      "cursor_complete_status": "in_progress",
+      "notes": "Specialty: taxonomy_geo_temporal."
     },
     {
-      "id": "AOL-TAX-002",
-      "specialty": "taxonomy_geo_temporal",
-      "requirement": "Geographic eligibility MUST keep Przewalski's horse out of African savanna and preserve steppe honesty.",
-      "method": "T",
-      "evidence": [
+      "req_id": "AOL-TAX-002",
+      "owner": "archive-taxonomy",
+      "expected_behavior": "Geographic eligibility keeps Przewalski's horse out of African savanna and preserves steppe honesty.",
+      "verification_method": "automated test",
+      "layers": [1, 2, 4],
+      "tests": [
+        "src/services/speciesIdentityGeo.test.ts"
+      ],
+      "automated_evidence": [
         "src/services/geographicEligibility.ts",
-        "src/services/speciesIdentityGeo.test.ts",
         "src/systems/regionExploration.ts"
       ],
-      "status": "automated_evidence",
-      "cursorComplete": false,
-      "blocker": null
+      "native_physical": {
+        "status": "not_applicable",
+        "platforms": [],
+        "notes": "Geo eligibility covered by unit/journey tests."
+      },
+      "art_status": "not_applicable",
+      "limitations": [],
+      "severity": "high",
+      "sha": "c84b1760f3442df5bb9c2bcb345b7fb0e6581aad",
+      "independent_review_status": "not_started",
+      "cursor_complete_status": "in_progress",
+      "notes": "Specialty: taxonomy_geo_temporal."
     },
     {
-      "id": "AOL-TAX-003",
-      "specialty": "taxonomy_geo_temporal",
-      "requirement": "Time Atlas MUST display 0/17 source-verified full-Earth maps honesty; ICS sample MUST NOT unlock maps.",
-      "method": "T",
-      "evidence": [
+      "req_id": "AOL-TAX-003",
+      "owner": "archive-taxonomy",
+      "expected_behavior": "Time Atlas displays 0/17 source-verified full-Earth maps honesty; ICS sample does not unlock maps.",
+      "verification_method": "automated test + evidence artifact",
+      "layers": [2, 4],
+      "tests": [
+        "src/systems/expeditionJourneyPolish.test.ts"
+      ],
+      "automated_evidence": [
         "src/ui/timeAtlasUI.ts",
         "public/data/status/temporal_map_readiness_report.json",
         "artifacts/archive_full/SCIENCE_HONESTY_MATRIX.json"
       ],
-      "status": "automated_evidence",
-      "cursorComplete": false,
-      "blocker": "Approved full-Earth temporal map assets (external/scientific)"
+      "native_physical": {
+        "status": "blocked",
+        "platforms": [],
+        "notes": "Approved full-Earth temporal map assets not available."
+      },
+      "art_status": "not_started",
+      "limitations": [
+        "Time Atlas full-Earth maps remain 0/17 source-verified"
+      ],
+      "severity": "blocker",
+      "sha": "c84b1760f3442df5bb9c2bcb345b7fb0e6581aad",
+      "independent_review_status": "not_started",
+      "cursor_complete_status": "not_started",
+      "notes": "Specialty: taxonomy_geo_temporal."
     },
     {
-      "id": "AOL-OFF-001",
-      "specialty": "offline_integrity",
-      "requirement": "Offline pack integrity MUST hash bundles with liveClaim=false; save/reload MUST preserve expedition state without inventing live science claims.",
-      "method": "T",
-      "evidence": [
+      "req_id": "AOL-OFF-001",
+      "owner": "archive-runtime",
+      "expected_behavior": "Offline pack integrity hashes bundles with liveClaim=false; save/reload preserves expedition state without inventing live science claims.",
+      "verification_method": "automated test",
+      "layers": [1, 2, 4],
+      "tests": [
+        "src/systems/expeditionJourneyPolish.test.ts"
+      ],
+      "automated_evidence": [
         "src/systems/offlinePack.ts",
-        "src/systems/expeditionJourneyPolish.test.ts",
         "artifacts/play/EXPEDITION_JOURNEY.json"
       ],
-      "status": "automated_evidence",
-      "cursorComplete": false,
-      "blocker": null
+      "native_physical": {
+        "status": "not_run",
+        "platforms": [],
+        "notes": "Digital offline integrity covered; device offline pass not claimed."
+      },
+      "art_status": "not_applicable",
+      "limitations": [],
+      "severity": "medium",
+      "sha": "c84b1760f3442df5bb9c2bcb345b7fb0e6581aad",
+      "independent_review_status": "not_started",
+      "cursor_complete_status": "in_progress",
+      "notes": "Specialty: offline_integrity."
     },
     {
-      "id": "AOL-EXP-001",
-      "specialty": "expeditions",
-      "requirement": "Museum \u2192 expedition \u2192 observation \u2192 ArchiveDex \u2192 Lifeling \u2192 museum \u2192 save/reload loop MUST be digitally playable with \u226512 explore regions and honest floors.",
-      "method": "T",
-      "evidence": [
+      "req_id": "AOL-EXP-001",
+      "owner": "archive-gameplay",
+      "expected_behavior": "Input-driven museum → expedition → observation → ArchiveDex → Lifeling → museum → save/reload loop is digitally playable with ≥12 explore regions and honest floors (157/24/12).",
+      "verification_method": "automated test + system journey",
+      "layers": [2, 4, 6],
+      "tests": [
+        "src/systems/expeditionJourneyPolish.test.ts",
+        "src/systems/museumDexPlayerUi.test.ts"
+      ],
+      "automated_evidence": [
         "src/systems/regionExploration.ts",
-        "src/systems/expeditionJourneyPolish.test.ts",
         "src/systems/museumDexPresentation.ts",
+        "src/game/Game.ts",
+        "src/ui/archiveDexUI.ts",
         "artifacts/play/EXPEDITION_JOURNEY.json"
       ],
-      "status": "cursor_complete_candidate",
-      "cursorComplete": false,
-      "blocker": "Human expedition feel / balance sign-off"
+      "native_physical": {
+        "status": "not_run",
+        "platforms": [],
+        "notes": "Human expedition feel / balance sign-off still required."
+      },
+      "art_status": "wip",
+      "limitations": [
+        "Human expedition feel / balance sign-off",
+        "HUMAN/RC2/V1 remain false"
+      ],
+      "severity": "high",
+      "sha": "c84b1760f3442df5bb9c2bcb345b7fb0e6581aad",
+      "independent_review_status": "not_started",
+      "cursor_complete_status": "in_progress",
+      "notes": "Specialty: expeditions. Player UI mounts museum/dex honesty surfaces."
     },
     {
-      "id": "AOL-ORG-001",
-      "specialty": "organism_identity",
-      "requirement": "Flagship 24 observation profiles MUST carry species-specific marks and art_status \u2260 finished models / human-approved unless earned.",
-      "method": "T",
-      "evidence": [
+      "req_id": "AOL-ORG-001",
+      "owner": "archive-art",
+      "expected_behavior": "Flagship 24 observation profiles carry species-specific marks and art_status ≠ finished models / human-approved unless earned.",
+      "verification_method": "automated test",
+      "layers": [1, 4],
+      "tests": [
+        "src/systems/expeditionJourneyPolish.test.ts"
+      ],
+      "automated_evidence": [
         "src/services/flagshipTaxonProfiles.ts",
         "src/minigames/wildlifeObservation.ts",
         "src/systems/museumDexPresentation.ts"
       ],
-      "status": "cursor_complete_candidate",
-      "cursorComplete": false,
-      "blocker": "Human final-art approval"
+      "native_physical": {
+        "status": "not_applicable",
+        "platforms": [],
+        "notes": "Art honesty is presentation-layer until final assets."
+      },
+      "art_status": "wip",
+      "limitations": [
+        "emoji/identity candidate ≠ finished model",
+        "Human final-art approval pending"
+      ],
+      "severity": "high",
+      "sha": "c84b1760f3442df5bb9c2bcb345b7fb0e6581aad",
+      "independent_review_status": "not_started",
+      "cursor_complete_status": "in_progress",
+      "notes": "Specialty: organism_identity."
     },
     {
-      "id": "AOL-SAV-001",
-      "specialty": "save_migrations",
-      "requirement": "Saves MUST migrate to SAVE_VERSION with companion/expedition/campaign defaults; globalCoverageClaimed MUST stay false after migration.",
-      "method": "T",
-      "evidence": [
-        "src/systems/saveSystem.ts",
+      "req_id": "AOL-SAV-001",
+      "owner": "archive-runtime",
+      "expected_behavior": "Saves migrate to SAVE_VERSION with companion/expedition/campaign defaults; globalCoverageClaimed stays false after migration.",
+      "verification_method": "automated test",
+      "layers": [1, 2],
+      "tests": [
         "src/systems/expeditionJourneyPolish.test.ts"
       ],
-      "status": "automated_evidence",
-      "cursorComplete": false,
-      "blocker": null
-    },
-    {
-      "id": "AOL-A11Y-001",
-      "specialty": "accessibility",
-      "requirement": "Accessibility settings (reduced motion, high contrast, large text, SR hints) MUST persist and apply to document root; museum/dex presentation MUST expose honest labels for assistive tech.",
-      "method": "T",
-      "evidence": [
-        "src/systems/accessibility.ts",
-        "src/systems/fullProductDepth.test.ts",
-        "src/systems/museumDexPresentation.ts"
+      "automated_evidence": [
+        "src/systems/saveSystem.ts"
       ],
-      "status": "partial",
-      "cursorComplete": false,
-      "blocker": "Full WCAG human audit + native screen-reader pass"
+      "native_physical": {
+        "status": "not_applicable",
+        "platforms": [],
+        "notes": "Save migration is digital."
+      },
+      "art_status": "not_applicable",
+      "limitations": [],
+      "severity": "medium",
+      "sha": "c84b1760f3442df5bb9c2bcb345b7fb0e6581aad",
+      "independent_review_status": "not_started",
+      "cursor_complete_status": "in_progress",
+      "notes": "Specialty: save_migrations."
     },
     {
-      "id": "AOL-MUX-001",
-      "specialty": "expeditions",
-      "requirement": "Museum hub + ArchiveDex presentation MUST state sample/authored floors honestly and never claim Earth-complete / production-ready / source_verified release.",
-      "method": "T",
-      "evidence": [
+      "req_id": "AOL-A11Y-001",
+      "owner": "archive-a11y",
+      "expected_behavior": "Accessibility settings (reduced motion, high contrast, large text, SR hints) persist and apply to document root; museum/dex presentation exposes honest labels for assistive tech.",
+      "verification_method": "automated test + accessibility inspection",
+      "layers": [4, 6],
+      "tests": [
+        "src/systems/fullProductDepth.test.ts",
+        "src/systems/expeditionJourneyPolish.test.ts",
+        "src/systems/museumDexPlayerUi.test.ts"
+      ],
+      "automated_evidence": [
+        "src/systems/accessibility.ts",
+        "src/systems/museumDexPresentation.ts",
+        "src/ui/archiveDexUI.ts",
+        "src/game/Game.ts"
+      ],
+      "native_physical": {
+        "status": "not_run",
+        "platforms": [],
+        "notes": "Full WCAG human audit + native screen-reader pass still required."
+      },
+      "art_status": "not_applicable",
+      "limitations": [
+        "Native/device screen-reader + human a11y sign-off pending"
+      ],
+      "severity": "medium",
+      "sha": "c84b1760f3442df5bb9c2bcb345b7fb0e6581aad",
+      "independent_review_status": "not_started",
+      "cursor_complete_status": "in_progress",
+      "notes": "Specialty: accessibility."
+    },
+    {
+      "req_id": "AOL-MUX-001",
+      "owner": "archive-gameplay",
+      "expected_behavior": "Museum hub + ArchiveDex presentation state sample/authored floors honestly and never claim Earth-complete / production-ready / source_verified release.",
+      "verification_method": "automated test + UI mount",
+      "layers": [2, 4, 6],
+      "tests": [
+        "src/systems/expeditionJourneyPolish.test.ts",
+        "src/systems/museumDexPlayerUi.test.ts"
+      ],
+      "automated_evidence": [
         "src/systems/museumDexPresentation.ts",
         "artifacts/owner_playable_review/OWNER_PLAYABLE_REVIEW_PACKAGE.json",
         "public/data/status/production_readiness_report.json"
       ],
-      "status": "cursor_complete_candidate",
-      "cursorComplete": false,
-      "blocker": "Human playtest + final museum art"
+      "native_physical": {
+        "status": "not_run",
+        "platforms": [],
+        "notes": "Human playtest + final museum art pending."
+      },
+      "art_status": "wip",
+      "limitations": [
+        "Human playtest + final museum art",
+        "production remains false"
+      ],
+      "severity": "high",
+      "sha": "c84b1760f3442df5bb9c2bcb345b7fb0e6581aad",
+      "independent_review_status": "not_started",
+      "cursor_complete_status": "in_progress",
+      "notes": "Specialty: expeditions / museum presentation."
     }
-  ],
-  "cursorCompleteGaps": [
-    "Authorized IUCN snapshot import (blocked_external)",
-    "17/17 source-verified temporal Earth maps",
-    "Promotion of any sample_fallback \u2192 source_verified under human license review",
-    "Human final-art approval for flagship taxa",
-    "Native/device screen-reader + human a11y sign-off",
-    "Human expedition feel / balance / RC authorization",
-    "Shared PVS schema IDs not yet published (rebase when available)"
-  ],
-  "next": [
-    "Owner digital playthrough via OWNER_PLAYABLE_REVIEW checklist",
-    "Rebase RTM row IDs onto shared PVS specialty matrices when schemas land",
-    "Optional IUCN credentialed import after rights review",
-    "Keep HUMAN/RC/V1/production false until earned"
   ]
 }
