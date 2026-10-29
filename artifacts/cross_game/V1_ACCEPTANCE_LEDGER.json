@@ -3,7 +3,7 @@
   "title": "Cross-game V1 acceptance ledger",
   "generatedAt": "2026-10-29T20:40:00Z",
   "baseTipShaAtDraft": "36b0576ff046b98381a13ef218167def16d3d7c6",
-  "workingSha": "637909e87cbf55387d3091fa0424910b68a8d59c",
+  "workingSha": "e6e85ff4af5f22539fbcd7d0f9003a4a55f0cb8a",
   "draftPr": 55,
   "draftPrUrl": "https://github.com/gunnchOS3k/archive-of-life-artifact-world/pull/55",
   "rtm": "artifacts/rtm/ARCHIVE_REQUIREMENTS_TO_EVIDENCE_MATRIX.json",
