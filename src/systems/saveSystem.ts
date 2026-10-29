@@ -74,7 +74,8 @@ export function createDefaultSave(): SaveState {
   };
 }
 
-function migrateSave(raw: Partial<SaveState>): SaveState {
+/** Migrate a partial/legacy save onto SAVE_VERSION defaults (idempotent). */
+export function migrateSave(raw: Partial<SaveState>): SaveState {
   const defaults = createDefaultSave();
   const companion = ensureCompanionProgressFields({
     ...defaults.companion,

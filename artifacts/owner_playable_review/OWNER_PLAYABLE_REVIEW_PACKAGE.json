@@ -1,9 +1,12 @@
 {
   "schema": "archive_owner_playable_review_package/v1",
   "title": "Archive of Life — Owner Playable Review Package (Priority 2)",
-  "generatedAt": "2026-10-29T15:10:00Z",
+  "generatedAt": "2026-10-29T19:05:00Z",
   "draftPr": 55,
   "draftPrUrl": "https://github.com/gunnchOS3k/archive-of-life-artifact-world/pull/55",
+  "rtm": "artifacts/rtm/ARCHIVE_REQUIREMENTS_TO_EVIDENCE_MATRIX.json",
+  "rtmHuman": "artifacts/rtm/ARCHIVE_RTM.md",
+  "cursorCompleteClaimed": false,
   "gates": {
     "human_ready": false,
     "rc_ready": false,
@@ -60,6 +63,8 @@
     "genericIconForbiddenAsFinal": true
   },
   "evidence": [
+    "artifacts/rtm/ARCHIVE_REQUIREMENTS_TO_EVIDENCE_MATRIX.json",
+    "artifacts/rtm/ARCHIVE_RTM.md",
     "artifacts/archive_full/SCIENCE_HONESTY_MATRIX.json",
     "artifacts/archive_full/DATA_COVERAGE_HONESTY.json",
     "artifacts/play/EXPEDITION_JOURNEY.json",
@@ -67,6 +72,7 @@
     "public/data/status/temporal_map_readiness_report.json",
     "public/data/status/production_readiness_report.json",
     "src/systems/expeditionJourneyPolish.test.ts",
+    "src/systems/museumDexPresentation.ts",
     "src/services/ingestion/publicSourceAdapters.ts",
     "src/ui/timeAtlasUI.ts",
     "docs/OWNER_IUCN_SETUP.md"
@@ -88,8 +94,9 @@
   ],
   "next": [
     "Owner digital playthrough using this checklist",
+    "Rebase RTM onto shared PVS specialty matrices when schemas publish",
     "Optional IUCN credentialed import after rights review",
     "Temporal map asset acquisition pipeline (scientific)",
-    "Keep HUMAN/RC/V1 false until earned"
+    "Keep HUMAN/RC/V1/production false until earned"
   ]
 }

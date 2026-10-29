@@ -1,11 +1,13 @@
 {
   "schema": "cross_game_v1_acceptance_ledger.v1",
   "title": "Cross-game V1 acceptance ledger",
-  "generatedAt": "2026-10-29T15:15:00Z",
+  "generatedAt": "2026-10-29T19:05:00Z",
   "baseTipShaAtDraft": "36b0576ff046b98381a13ef218167def16d3d7c6",
-  "workingSha": "f708e226fb745364f8815c342f3e051520acff08",
+  "workingSha": "3f32f624b95d1b1f1cf9d0f1f533531fe7e45268",
   "draftPr": 55,
   "draftPrUrl": "https://github.com/gunnchOS3k/archive-of-life-artifact-world/pull/55",
+  "rtm": "artifacts/rtm/ARCHIVE_REQUIREMENTS_TO_EVIDENCE_MATRIX.json",
+  "cursorCompleteClaimed": false,
   "gates": {
     "human_v1": false,
     "rc": false,
@@ -166,13 +168,17 @@
         "docs/OWNER_IUCN_SETUP.md",
         "src/services/flagshipTaxonProfiles.ts",
         "src/systems/expeditionJourneyPolish.test.ts",
+        "src/systems/museumDexPresentation.ts",
         "public/data/status/public_bounded_acquire_report.json",
         "artifacts/archive_full/SCIENCE_HONESTY_MATRIX.json",
-        "artifacts/owner_playable_review/OWNER_PLAYABLE_REVIEW_PACKAGE.json"
+        "artifacts/owner_playable_review/OWNER_PLAYABLE_REVIEW_PACKAGE.json",
+        "artifacts/rtm/ARCHIVE_REQUIREMENTS_TO_EVIDENCE_MATRIX.json",
+        "artifacts/rtm/ARCHIVE_RTM.md"
       ],
       "notes": [
-        "ARCHIVE Priority 2: science honesty matrix, Time Atlas 0/17 copy, flagship art_status, expedition loop polish, owner review package.",
-        "Human / RC / V1 / commercial gates stay false.",
+        "ARCHIVE Priority 2 + RTM: science honesty matrix, Time Atlas 0/17 copy, flagship art_status, expedition/museum-dex polish, owner review package.",
+        "Shared PVS scaffold referenced; specialty schemas empty — local RTM until rebase.",
+        "Human / RC / V1 / commercial gates stay false; Cursor-Complete not claimed.",
         "Do not interpret gameplay_tested as Earth-complete science or commercial authorization.",
         "iucnAssessed source-verified count remains 0; sample_fallback never promoted to source_verified."
       ]
@@ -316,5 +322,5 @@
       }
     }
   },
-  "contentSha": "f708e226fb745364f8815c342f3e051520acff08"
+  "contentSha": "3f32f624b95d1b1f1cf9d0f1f533531fe7e45268"
 }

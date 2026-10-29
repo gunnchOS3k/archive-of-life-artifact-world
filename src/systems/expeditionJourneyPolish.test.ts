@@ -16,7 +16,15 @@ import {
   getRegionExplorationCard,
   REGION_EXPLORATION_CARDS,
 } from '@/systems/regionExploration';
-import { createDefaultSave, validateSave, saveGame, loadSave, deleteSave } from '@/systems/saveSystem';
+import {
+  createDefaultSave,
+  validateSave,
+  saveGame,
+  loadSave,
+  deleteSave,
+  migrateSave,
+  SAVE_VERSION,
+} from '@/systems/saveSystem';
 import {
   buildOfflinePackManifest,
   stampOfflinePackIntegrity,
@@ -27,6 +35,12 @@ import { RELEASE_PROVENANCE_CLASSES } from '@/schema/provenance';
 import { collectArtifact } from '@/systems/artifactSystem';
 import type { PlayableSpecies } from '@/services/DataCatalogService';
 import type { LifelingTrait } from '@/schema';
+import {
+  assertMuseumDexHonesty,
+  buildMuseumHubPresentation,
+  listArchiveDexFlagshipPresentations,
+} from '@/systems/museumDexPresentation';
+import { applyAccessibilitySettings, loadAccessibilitySettings } from '@/systems/accessibility';
 
 const ROOT = process.cwd();
 const DATA = join(ROOT, 'public/data');
@@ -227,5 +241,93 @@ describe('expedition journey polish', () => {
     }>(join(ROOT, 'artifacts/archive_full/DATA_COVERAGE_HONESTY.json'));
     expect(honesty.GLOBAL_DATA_COMPLETE).toBe(false);
     expect(honesty.iucn_assessed_source_verified_count ?? 0).toBe(0);
+  });
+
+  it('museum hub + ArchiveDex presentations stay honest (no Earth-complete / IUCN assessed)', () => {
+    const hub = buildMuseumHubPresentation();
+    const entries = listArchiveDexFlagshipPresentations();
+    expect(hub.exploreRegionCount).toBeGreaterThanOrEqual(12);
+    expect(hub.flagshipCount).toBe(24);
+    expect(hub.earthCompleteClaim).toBe(false);
+    expect(hub.productionReadyClaim).toBe(false);
+    expect(hub.sourceVerifiedReleaseClaim).toBe(false);
+    expect(hub.temporalMapsHonesty).toContain('0/17');
+    expect(hub.ariaLabel.toLowerCase()).toMatch(/0 of 17|0\/17/);
+    expect(entries).toHaveLength(24);
+    for (const entry of entries) {
+      expect(entry.iucnAssessed).toBe(false);
+      expect(entry.finishedModelClaimed).toBe(false);
+      expect(entry.claimClass).not.toBe('source_verified');
+      expect(entry.artStatusLabel).toMatch(/candidate|not a finished model|not human-approved|not finished/i);
+    }
+    expect(() => assertMuseumDexHonesty(hub, entries)).not.toThrow();
+  });
+
+  it('migrates legacy saves to SAVE_VERSION without global coverage claims', () => {
+    const legacy = {
+      version: 1,
+      player: { x: 10, y: 20, currentRegion: 'steppe', visitedRegions: ['museum', 'steppe'] },
+      artifacts: [],
+      notebook: [],
+      quests: { active: [], completed: [] },
+      companion: { name: 'Legacy Scout', bodyColor: '#111', equippedTraits: [], unlockedTraits: [] },
+      stats: { artifactsCollected: 0, speciesDocumented: 1, regionsExplored: 2 },
+      campaign: { globalCoverageClaimed: true },
+    };
+    const migrated = migrateSave(legacy as never);
+    expect(migrated.version).toBe(SAVE_VERSION);
+    expect(migrated.player.currentRegion).toBe('steppe');
+    expect(migrated.companion.name).toBe('Legacy Scout');
+    expect(migrated.campaign?.globalCoverageClaimed).toBe(false);
+    expect(migrated.expeditions).toBeTruthy();
+    expect(validateSave(migrated)).toBe(true);
+  });
+
+  it('a11y settings apply without claiming human polish complete', () => {
+    const root = document.createElement('div');
+    const settings = { ...loadAccessibilitySettings(), highContrast: true, largeText: true };
+    applyAccessibilitySettings(settings, root);
+    expect(root.classList.contains('a11y-high-contrast')).toBe(true);
+    expect(root.classList.contains('a11y-large-text')).toBe(true);
+    const hub = buildMuseumHubPresentation();
+    expect(hub.ariaLabel.length).toBeGreaterThan(40);
+  });
+
+  it('RTM exists, references shared PVS, and keeps Cursor-Complete / HUMAN gates false', () => {
+    const rtm = loadJson<{
+      gates: {
+        human: boolean;
+        rc: boolean;
+        v1: boolean;
+        production: boolean;
+        cursor_complete_claimed: boolean;
+      };
+      sharedPvs: { present: boolean };
+      honestyInvariants: string[];
+      rows: Array<{ id: string; specialty: string }>;
+      cursorCompleteGaps: string[];
+    }>(join(ROOT, 'artifacts/rtm/ARCHIVE_REQUIREMENTS_TO_EVIDENCE_MATRIX.json'));
+    expect(rtm.sharedPvs.present).toBe(true);
+    expect(rtm.gates.human).toBe(false);
+    expect(rtm.gates.rc).toBe(false);
+    expect(rtm.gates.v1).toBe(false);
+    expect(rtm.gates.production).toBe(false);
+    expect(rtm.gates.cursor_complete_claimed).toBe(false);
+    expect(rtm.honestyInvariants.some((line) => line.includes('sample_fallback'))).toBe(true);
+    expect(rtm.honestyInvariants.some((line) => line.includes('0/17'))).toBe(true);
+    expect(rtm.rows.length).toBeGreaterThanOrEqual(10);
+    const specialties = new Set(rtm.rows.map((r) => r.specialty));
+    for (const needed of [
+      'scientific_provenance',
+      'taxonomy_geo_temporal',
+      'offline_integrity',
+      'expeditions',
+      'organism_identity',
+      'save_migrations',
+      'accessibility',
+    ]) {
+      expect(specialties.has(needed)).toBe(true);
+    }
+    expect(rtm.cursorCompleteGaps.length).toBeGreaterThan(0);
   });
 });

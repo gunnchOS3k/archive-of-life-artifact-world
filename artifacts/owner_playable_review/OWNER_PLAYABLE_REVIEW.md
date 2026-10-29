@@ -28,4 +28,5 @@
 **Art:** Flagship presentation uses `emoji_identity_candidate` — do **not** claim finished models.
 
 Machine-readable matrix: `artifacts/archive_full/SCIENCE_HONESTY_MATRIX.json`  
-Full package: `artifacts/owner_playable_review/OWNER_PLAYABLE_REVIEW_PACKAGE.json`
+Full package: `artifacts/owner_playable_review/OWNER_PLAYABLE_REVIEW_PACKAGE.json`  
+**RTM (requirements → evidence):** `artifacts/rtm/ARCHIVE_RTM.md` (references shared PVS scaffold; Cursor-Complete **not** claimed)
