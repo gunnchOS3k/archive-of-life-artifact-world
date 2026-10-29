@@ -3,7 +3,7 @@
   "title": "Cross-game V1 acceptance ledger",
   "generatedAt": "2026-10-29T19:05:00Z",
   "baseTipShaAtDraft": "36b0576ff046b98381a13ef218167def16d3d7c6",
-  "workingSha": "3f32f624b95d1b1f1cf9d0f1f533531fe7e45268",
+  "workingSha": "ebc7b82852000a047d01ffe7917348c609094163",
   "draftPr": 55,
   "draftPrUrl": "https://github.com/gunnchOS3k/archive-of-life-artifact-world/pull/55",
   "rtm": "artifacts/rtm/ARCHIVE_REQUIREMENTS_TO_EVIDENCE_MATRIX.json",
@@ -322,5 +322,5 @@
       }
     }
   },
-  "contentSha": "3f32f624b95d1b1f1cf9d0f1f533531fe7e45268"
+  "contentSha": "ebc7b82852000a047d01ffe7917348c609094163"
 }
