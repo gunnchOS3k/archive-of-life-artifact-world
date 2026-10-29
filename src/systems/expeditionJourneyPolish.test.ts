@@ -316,7 +316,7 @@ describe('expedition journey polish', () => {
     expect(rtm.schema_version).toBe('1.0.0');
     expect(rtm.contract_id).toBe('GUNNCHOS3K_PVS');
     expect(rtm.contract_version).toBe('1.0.0');
-    expect(rtm.contract_source_sha.startsWith('45b4566')).toBe(true);
+    expect(rtm.contract_source_sha.startsWith('935eb3a')).toBe(true);
     expect(rtm.product_id).toBe('archive-of-life');
     expect(rtm.honesty_flags.HUMAN).toBe(false);
     expect(rtm.honesty_flags.RC2).toBe(false);

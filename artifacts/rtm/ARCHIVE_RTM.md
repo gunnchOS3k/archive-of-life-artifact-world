@@ -2,7 +2,7 @@
 
 **Machine-readable:** [`ARCHIVE_REQUIREMENTS_TO_EVIDENCE_MATRIX.json`](./ARCHIVE_REQUIREMENTS_TO_EVIDENCE_MATRIX.json)  
 **Contract:** `GUNNCHOS3K_PVS@1.0.0`  
-**Contract source SHA:** `45b456617002569c33a5a27fe30d5cf8be5a7032` (gunnchos-site)  
+**Contract source SHA:** `935eb3a20548b1a4b726f2ba305df94ff496be16` (gunnchos-site / GUNNCHOS3K_PVS@1.0.0)  
 **Schema:** gunnchos-site `docs/quality/schemas/requirements_to_evidence_matrix.schema.json`  
 **Draft PR:** [#55](https://github.com/gunnchOS3k/archive-of-life-artifact-world/pull/55)  
 **Honesty flags:** `HUMAN=false` · `RC2=false` · `V1=false` · production not claimed · Cursor-Complete **not claimed**  
@@ -10,7 +10,7 @@
 
 ## Shared Product Verification Standard (PVS)
 
-Pinned worktree: `_open_lab_worktrees/product-verification-standard` @ `45b4566+`  
+Pinned worktree: `_open_lab_worktrees/product-verification-standard` @ `935eb3a`  
 Paths: `docs/quality/schemas/requirements_to_evidence_matrix.schema.json`, `docs/quality/specialty_matrices/ARCHIVE_OF_LIFE.md`, `contracts/quality/PRODUCT_VERIFICATION_STANDARD.v1.json`
 
 This RTM validates against the shared schema. Local specialty row IDs keep the `AOL-` prefix from the Archive specialty sketch.
