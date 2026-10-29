@@ -1,9 +1,9 @@
 {
   "schema": "cross_game_v1_acceptance_ledger.v1",
   "title": "Cross-game V1 acceptance ledger",
-  "generatedAt": "2026-10-29T15:12:00Z",
+  "generatedAt": "2026-10-29T15:15:00Z",
   "baseTipShaAtDraft": "36b0576ff046b98381a13ef218167def16d3d7c6",
-  "workingSha": "fd9b55c09764b86c7f464729dc85e7fcc5c50618",
+  "workingSha": "f63acb0a604da2a444e11b780902af075cab90ca",
   "draftPr": 55,
   "draftPrUrl": "https://github.com/gunnchOS3k/archive-of-life-artifact-world/pull/55",
   "gates": {
@@ -316,5 +316,5 @@
       }
     }
   },
-  "contentSha": "5e83f4c32196cb49c68bb205433f8fbee86a7c72"
+  "contentSha": "f63acb0a604da2a444e11b780902af075cab90ca"
 }
