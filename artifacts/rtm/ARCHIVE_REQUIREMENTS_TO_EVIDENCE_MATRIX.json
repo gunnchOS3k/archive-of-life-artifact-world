@@ -14,7 +14,7 @@
   "phase_summary": {
     "cursor_complete": {
       "status": "not_started",
-      "notes": "Automated evidence and UI wiring exist; Cursor-Complete is not claimed. Floors 157/24/12 remain authored/sample; emoji≠finished; IUCN blocked; 0/17 maps."
+      "notes": "Automated evidence and UI wiring exist; Cursor-Complete is not claimed. Floors 157/24/12 remain authored/sample; emoji\u2260finished; IUCN blocked; 0/17 maps."
     },
     "codex_independently_verified": {
       "status": "not_started"
@@ -29,7 +29,10 @@
       "owner": "archive-science",
       "expected_behavior": "Bounded public acquires (COL/GBIF/PBDB/Neotoma/NASA/ICS) register as sample_fallback with verified_record_count=0 and never auto-promote to source_verified.",
       "verification_method": "automated test + evidence artifact",
-      "layers": [1, 2],
+      "layers": [
+        1,
+        2
+      ],
       "tests": [
         "src/systems/expeditionJourneyPolish.test.ts",
         "data-pipeline/src/archive_life_pipeline/public_bounded_acquire.py"
@@ -46,11 +49,11 @@
       },
       "art_status": "not_applicable",
       "limitations": [
-        "sample_fallback ≠ source_verified",
+        "sample_fallback \u2260 source_verified",
         "NASA historical manifest SHA preserved; bounded acquires stay sample_fallback"
       ],
       "severity": "blocker",
-      "sha": "c84b1760f3442df5bb9c2bcb345b7fb0e6581aad",
+      "sha": "d581420c6d81d1d3e590d9b572f67a8d15a3d0e2",
       "independent_review_status": "not_started",
       "cursor_complete_status": "in_progress",
       "notes": "Specialty: scientific_provenance. Production gate remains false."
@@ -60,7 +63,11 @@
       "owner": "archive-science",
       "expected_behavior": "IUCN remains blocked_external until owner token + rights review; assessed=true is forbidden without an authorized snapshot.",
       "verification_method": "inspection + evidence artifact",
-      "layers": [1, 2, 7],
+      "layers": [
+        1,
+        2,
+        7
+      ],
       "tests": [
         "src/systems/expeditionJourneyPolish.test.ts"
       ],
@@ -80,7 +87,7 @@
         "Never invent credentials or assessed=true IUCN rows"
       ],
       "severity": "blocker",
-      "sha": "c84b1760f3442df5bb9c2bcb345b7fb0e6581aad",
+      "sha": "d581420c6d81d1d3e590d9b572f67a8d15a3d0e2",
       "independent_review_status": "not_started",
       "cursor_complete_status": "not_started",
       "notes": "Specialty: scientific_provenance. External credential gate."
@@ -90,7 +97,10 @@
       "owner": "archive-science",
       "expected_behavior": "NASA July 5 historical manifest SHA-256 is preserved; bounded NASA acquires write versioned snapshots only and stay not source_verified for release.",
       "verification_method": "automated test + evidence artifact",
-      "layers": [1, 2],
+      "layers": [
+        1,
+        2
+      ],
       "tests": [
         "src/systems/expeditionJourneyPolish.test.ts"
       ],
@@ -109,7 +119,7 @@
         "NASA historical manifest SHA preserved; bounded acquires stay sample_fallback"
       ],
       "severity": "high",
-      "sha": "c84b1760f3442df5bb9c2bcb345b7fb0e6581aad",
+      "sha": "d581420c6d81d1d3e590d9b572f67a8d15a3d0e2",
       "independent_review_status": "not_started",
       "cursor_complete_status": "in_progress",
       "notes": "Specialty: scientific_provenance."
@@ -117,9 +127,12 @@
     {
       "req_id": "AOL-TAX-001",
       "owner": "archive-taxonomy",
-      "expected_behavior": "Taxon identity marks are species-specific where authored; family/group fallbacks must not impersonate a charismatic sibling (lion≠all mammals; horse≠all Equidae).",
+      "expected_behavior": "Taxon identity marks are species-specific where authored; family/group fallbacks must not impersonate a charismatic sibling (lion\u2260all mammals; horse\u2260all Equidae).",
       "verification_method": "automated test",
-      "layers": [1, 2],
+      "layers": [
+        1,
+        2
+      ],
       "tests": [
         "src/services/speciesIdentityGeo.test.ts"
       ],
@@ -134,10 +147,10 @@
       },
       "art_status": "wip",
       "limitations": [
-        "emoji/identity candidate ≠ finished model / human-approved art"
+        "emoji/identity candidate \u2260 finished model / human-approved art"
       ],
       "severity": "high",
-      "sha": "c84b1760f3442df5bb9c2bcb345b7fb0e6581aad",
+      "sha": "d581420c6d81d1d3e590d9b572f67a8d15a3d0e2",
       "independent_review_status": "not_started",
       "cursor_complete_status": "in_progress",
       "notes": "Specialty: taxonomy_geo_temporal."
@@ -147,7 +160,11 @@
       "owner": "archive-taxonomy",
       "expected_behavior": "Geographic eligibility keeps Przewalski's horse out of African savanna and preserves steppe honesty.",
       "verification_method": "automated test",
-      "layers": [1, 2, 4],
+      "layers": [
+        1,
+        2,
+        4
+      ],
       "tests": [
         "src/services/speciesIdentityGeo.test.ts"
       ],
@@ -163,7 +180,7 @@
       "art_status": "not_applicable",
       "limitations": [],
       "severity": "high",
-      "sha": "c84b1760f3442df5bb9c2bcb345b7fb0e6581aad",
+      "sha": "d581420c6d81d1d3e590d9b572f67a8d15a3d0e2",
       "independent_review_status": "not_started",
       "cursor_complete_status": "in_progress",
       "notes": "Specialty: taxonomy_geo_temporal."
@@ -173,7 +190,10 @@
       "owner": "archive-taxonomy",
       "expected_behavior": "Time Atlas displays 0/17 source-verified full-Earth maps honesty; ICS sample does not unlock maps.",
       "verification_method": "automated test + evidence artifact",
-      "layers": [2, 4],
+      "layers": [
+        2,
+        4
+      ],
       "tests": [
         "src/systems/expeditionJourneyPolish.test.ts"
       ],
@@ -192,7 +212,7 @@
         "Time Atlas full-Earth maps remain 0/17 source-verified"
       ],
       "severity": "blocker",
-      "sha": "c84b1760f3442df5bb9c2bcb345b7fb0e6581aad",
+      "sha": "d581420c6d81d1d3e590d9b572f67a8d15a3d0e2",
       "independent_review_status": "not_started",
       "cursor_complete_status": "not_started",
       "notes": "Specialty: taxonomy_geo_temporal."
@@ -202,7 +222,11 @@
       "owner": "archive-runtime",
       "expected_behavior": "Offline pack integrity hashes bundles with liveClaim=false; save/reload preserves expedition state without inventing live science claims.",
       "verification_method": "automated test",
-      "layers": [1, 2, 4],
+      "layers": [
+        1,
+        2,
+        4
+      ],
       "tests": [
         "src/systems/expeditionJourneyPolish.test.ts"
       ],
@@ -218,7 +242,7 @@
       "art_status": "not_applicable",
       "limitations": [],
       "severity": "medium",
-      "sha": "c84b1760f3442df5bb9c2bcb345b7fb0e6581aad",
+      "sha": "d581420c6d81d1d3e590d9b572f67a8d15a3d0e2",
       "independent_review_status": "not_started",
       "cursor_complete_status": "in_progress",
       "notes": "Specialty: offline_integrity."
@@ -226,9 +250,13 @@
     {
       "req_id": "AOL-EXP-001",
       "owner": "archive-gameplay",
-      "expected_behavior": "Input-driven museum → expedition → observation → ArchiveDex → Lifeling → museum → save/reload loop is digitally playable with ≥12 explore regions and honest floors (157/24/12).",
+      "expected_behavior": "Input-driven museum \u2192 expedition \u2192 observation \u2192 ArchiveDex \u2192 Lifeling \u2192 museum \u2192 save/reload loop is digitally playable with \u226512 explore regions and honest floors (157/24/12).",
       "verification_method": "automated test + system journey",
-      "layers": [2, 4, 6],
+      "layers": [
+        2,
+        4,
+        6
+      ],
       "tests": [
         "src/systems/expeditionJourneyPolish.test.ts",
         "src/systems/museumDexPlayerUi.test.ts"
@@ -251,7 +279,7 @@
         "HUMAN/RC2/V1 remain false"
       ],
       "severity": "high",
-      "sha": "c84b1760f3442df5bb9c2bcb345b7fb0e6581aad",
+      "sha": "d581420c6d81d1d3e590d9b572f67a8d15a3d0e2",
       "independent_review_status": "not_started",
       "cursor_complete_status": "in_progress",
       "notes": "Specialty: expeditions. Player UI mounts museum/dex honesty surfaces."
@@ -259,9 +287,12 @@
     {
       "req_id": "AOL-ORG-001",
       "owner": "archive-art",
-      "expected_behavior": "Flagship 24 observation profiles carry species-specific marks and art_status ≠ finished models / human-approved unless earned.",
+      "expected_behavior": "Flagship 24 observation profiles carry species-specific marks and art_status \u2260 finished models / human-approved unless earned.",
       "verification_method": "automated test",
-      "layers": [1, 4],
+      "layers": [
+        1,
+        4
+      ],
       "tests": [
         "src/systems/expeditionJourneyPolish.test.ts"
       ],
@@ -277,11 +308,11 @@
       },
       "art_status": "wip",
       "limitations": [
-        "emoji/identity candidate ≠ finished model",
+        "emoji/identity candidate \u2260 finished model",
         "Human final-art approval pending"
       ],
       "severity": "high",
-      "sha": "c84b1760f3442df5bb9c2bcb345b7fb0e6581aad",
+      "sha": "d581420c6d81d1d3e590d9b572f67a8d15a3d0e2",
       "independent_review_status": "not_started",
       "cursor_complete_status": "in_progress",
       "notes": "Specialty: organism_identity."
@@ -291,7 +322,10 @@
       "owner": "archive-runtime",
       "expected_behavior": "Saves migrate to SAVE_VERSION with companion/expedition/campaign defaults; globalCoverageClaimed stays false after migration.",
       "verification_method": "automated test",
-      "layers": [1, 2],
+      "layers": [
+        1,
+        2
+      ],
       "tests": [
         "src/systems/expeditionJourneyPolish.test.ts"
       ],
@@ -306,7 +340,7 @@
       "art_status": "not_applicable",
       "limitations": [],
       "severity": "medium",
-      "sha": "c84b1760f3442df5bb9c2bcb345b7fb0e6581aad",
+      "sha": "d581420c6d81d1d3e590d9b572f67a8d15a3d0e2",
       "independent_review_status": "not_started",
       "cursor_complete_status": "in_progress",
       "notes": "Specialty: save_migrations."
@@ -316,7 +350,10 @@
       "owner": "archive-a11y",
       "expected_behavior": "Accessibility settings (reduced motion, high contrast, large text, SR hints) persist and apply to document root; museum/dex presentation exposes honest labels for assistive tech.",
       "verification_method": "automated test + accessibility inspection",
-      "layers": [4, 6],
+      "layers": [
+        4,
+        6
+      ],
       "tests": [
         "src/systems/fullProductDepth.test.ts",
         "src/systems/expeditionJourneyPolish.test.ts",
@@ -338,7 +375,7 @@
         "Native/device screen-reader + human a11y sign-off pending"
       ],
       "severity": "medium",
-      "sha": "c84b1760f3442df5bb9c2bcb345b7fb0e6581aad",
+      "sha": "d581420c6d81d1d3e590d9b572f67a8d15a3d0e2",
       "independent_review_status": "not_started",
       "cursor_complete_status": "in_progress",
       "notes": "Specialty: accessibility."
@@ -348,7 +385,11 @@
       "owner": "archive-gameplay",
       "expected_behavior": "Museum hub + ArchiveDex presentation state sample/authored floors honestly and never claim Earth-complete / production-ready / source_verified release.",
       "verification_method": "automated test + UI mount",
-      "layers": [2, 4, 6],
+      "layers": [
+        2,
+        4,
+        6
+      ],
       "tests": [
         "src/systems/expeditionJourneyPolish.test.ts",
         "src/systems/museumDexPlayerUi.test.ts"
@@ -369,7 +410,7 @@
         "production remains false"
       ],
       "severity": "high",
-      "sha": "c84b1760f3442df5bb9c2bcb345b7fb0e6581aad",
+      "sha": "d581420c6d81d1d3e590d9b572f67a8d15a3d0e2",
       "independent_review_status": "not_started",
       "cursor_complete_status": "in_progress",
       "notes": "Specialty: expeditions / museum presentation."
