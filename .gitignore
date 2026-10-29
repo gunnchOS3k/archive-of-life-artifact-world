@@ -22,6 +22,9 @@ data-pipeline/snapshots/public_bounded/**
 !data-pipeline/snapshots/public_bounded/ACQUIRE_MANIFEST.json
 !data-pipeline/snapshots/public_bounded/ics_label_inventory.json
 !data-pipeline/snapshots/public_bounded/pbdb_flagship_bounded.json
+# Versioned NASA bounded acquires (must never land in exports/nasa/)
+!data-pipeline/snapshots/public_bounded/nasa/
+!data-pipeline/snapshots/public_bounded/nasa/**
 
 # Large exports unless explicitly scoped samples
 data-pipeline/exports/**

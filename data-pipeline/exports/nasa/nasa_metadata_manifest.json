@@ -1,7 +1,7 @@
 {
-  "generatedAt": "2026-10-29T05:00:58Z",
+  "generatedAt": "2026-07-05T03:41:38Z",
   "dataMode": "real_metadata",
-  "verificationMode": "real_metadata",
+  "verificationMode": "source_verified",
   "scope": "metadata_only",
   "measurementDataMode": "not_ingested",
   "layers": [
@@ -25,5 +25,5 @@
     }
   ],
   "recordCount": 21,
-  "verifiedRecordCount": 0
+  "verifiedRecordCount": 21
 }

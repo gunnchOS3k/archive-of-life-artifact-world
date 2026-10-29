@@ -345,6 +345,43 @@ def acquire_iucn_status() -> dict[str, Any]:
     }
 
 
+def acquire_nasa_bounded() -> dict[str, Any]:
+    """Fetch NASA metadata into a versioned snapshot. Never touches historical exports."""
+    from archive_life_pipeline.nasa_ingest import (
+        HISTORICAL_MANIFEST_SHA256,
+        historical_manifest_bytes_ok,
+        ingest_nasa_metadata,
+        versioned_nasa_snapshot_dir,
+    )
+
+    before_ok = historical_manifest_bytes_ok()
+    result = ingest_nasa_metadata(output_dir=versioned_nasa_snapshot_dir())
+    after_ok = historical_manifest_bytes_ok()
+    if not before_ok or not after_ok:
+        raise RuntimeError(
+            "Historical NASA manifest SHA drifted during bounded acquire; "
+            f"expected {HISTORICAL_MANIFEST_SHA256}"
+        )
+    path = Path(result["sourcePath"])
+    # Do NOT rewrite data-pipeline/exports/nasa/import_status.json (historical).
+    return {
+        "source": "nasa",
+        "imported": bool(result.get("imported")),
+        "recordCount": result.get("recordCount", 0),
+        "verifiedRecordCount": 0,
+        "dataMode": "sample_fallback",
+        "path": str(path),
+        "snapshotDir": result.get("snapshotDir"),
+        "approvedForUse": False,
+        "sourceVerified": False,
+        "note": (
+            "Versioned snapshot only — historical "
+            "data-pipeline/exports/nasa/nasa_metadata_manifest.json unchanged; "
+            "fetch length is not source_verified"
+        ),
+    }
+
+
 def acquire_all_public_bounded(*, include_nasa: bool = True) -> dict[str, Any]:
     results: dict[str, Any] = {}
     results["col"] = acquire_col_bounded()
@@ -354,20 +391,11 @@ def acquire_all_public_bounded(*, include_nasa: bool = True) -> dict[str, Any]:
     results["ics"] = acquire_ics_labels()
     results["iucn"] = acquire_iucn_status()
     if include_nasa:
-        from archive_life_pipeline.source_import import import_nasa
-
         try:
-            nasa = import_nasa()
-            results["nasa"] = {
-                "source": "nasa",
-                "imported": nasa.imported,
-                "recordCount": nasa.record_count,
-                "verifiedRecordCount": nasa.verified_record_count,
-                "dataMode": nasa.data_mode,
-                "note": "Metadata only — regional measurements remain sample",
-            }
+            results["nasa"] = acquire_nasa_bounded()
         except Exception as exc:  # noqa: BLE001
-            results["nasa"] = {"source": "nasa", "error": str(exc)}
+            results["nasa"] = {"source": "nasa", "error": str(exc), "verifiedRecordCount": 0}
+    # Regenerates public status from historical NASA import_status + decision file.
     write_status_reports()
     manifest = {
         "generatedAt": _now(),
@@ -382,6 +410,7 @@ def acquire_all_public_bounded(*, include_nasa: bool = True) -> dict[str, Any]:
                 "dataMode": v.get("dataMode"),
                 "blocked": v.get("blocked"),
                 "path": v.get("path"),
+                "snapshotDir": v.get("snapshotDir"),
             }
             for k, v in results.items()
         },
@@ -390,6 +419,8 @@ def acquire_all_public_bounded(*, include_nasa: bool = True) -> dict[str, Any]:
             "IUCN remains blocked without authorized token + rights review",
             "ICS labels do not unlock 17 temporal maps",
             "NASA metadata ≠ regional measurement verification",
+            "NASA historical manifest SHA is immutable; new acquires use versioned snapshots",
+            "Import record counts are not source verification",
         ],
     }
     OUT_DIR.mkdir(parents=True, exist_ok=True)

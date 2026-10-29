@@ -144,12 +144,12 @@
     "header": {
       "title": "NASA/POWER Source Native Resolution Daily Data",
       "api": {
-        "version": "v2.10.1",
+        "version": "v2.9.4",
         "name": "POWER Daily API"
       },
       "sources": [
-        "MERRA2",
         "SYN1DEG",
+        "MERRA2",
         "POWER"
       ],
       "fill_value": -999.0,
@@ -177,11 +177,11 @@
       }
     },
     "times": {
-      "data": 0.291,
+      "data": 0.3,
       "process": 0.01
     }
   },
-  "retrievedAt": "2026-10-29T05:00:58Z",
+  "retrievedAt": "2026-07-05T03:41:38Z",
   "sourceUrl": "https://power.larc.nasa.gov/",
   "dataMode": "REAL NASA METADATA"
 }

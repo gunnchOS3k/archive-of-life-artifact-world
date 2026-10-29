@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-29T05:00:58Z",
+  "generatedAt": "2026-10-29T14:33:03Z",
   "approvedForUse": false,
   "anySourceVerified": false,
   "productionReady": false,
@@ -56,15 +56,19 @@
       "imported": true,
       "recordCount": 21,
       "verifiedRecordCount": 0,
-      "dataMode": "real_metadata",
+      "dataMode": "sample_fallback",
       "blocked": null,
-      "path": null
+      "path": "data-pipeline/snapshots/public_bounded/nasa/2026-10-29T05-00-58Z/nasa_metadata_manifest.json",
+      "snapshotDir": "data-pipeline/snapshots/public_bounded/nasa/2026-10-29T05-00-58Z"
     }
   },
   "honesty": [
     "Bounded public fetches do not promote mock hero provenance to source_verified",
     "IUCN remains blocked without authorized token + rights review",
     "ICS labels do not unlock 17 temporal maps",
-    "NASA metadata \u2260 regional measurement verification"
+    "NASA metadata \u2260 regional measurement verification",
+    "NASA historical manifest SHA is immutable; new acquires use versioned snapshots",
+    "Import record counts are not source verification",
+    "Relocated 2026-10-29 overwrite into snapshots/public_bounded/nasa/2026-10-29T05-00-58Z; restored f6d1\u2026 historical bytes"
   ]
 }

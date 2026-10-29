@@ -349,7 +349,21 @@ def validate_sources() -> dict[str, Any]:
 def _write_import_status(spec: SourceImportSpec, payload: dict[str, Any]) -> None:
     out_dir = _export_dir(spec)
     out_dir.mkdir(parents=True, exist_ok=True)
-    _status_file(spec).write_text(json.dumps(payload, indent=2))
+    status_path = _status_file(spec)
+    if spec.id == "nasa":
+        # Historical NASA import_status.json is immutable evidence.
+        from archive_life_pipeline.nasa_ingest import (
+            HISTORICAL_IMPORT_STATUS_SHA256,
+            assert_not_protected_historical_write,
+        )
+
+        assert_not_protected_historical_write(status_path)
+        raise PermissionError(
+            "Refusing to rewrite historical NASA import_status.json "
+            f"(expected sha256 {HISTORICAL_IMPORT_STATUS_SHA256}). "
+            "Write bounded acquires under snapshots/public_bounded/nasa/."
+        )
+    status_path.write_text(json.dumps(payload, indent=2))
 
 
 # import_nasa already uses this when a result is not source_verified.
@@ -568,27 +582,47 @@ def import_neotoma() -> SourceImportRecord:
 
 
 def import_nasa() -> SourceImportRecord:
-    from archive_life_pipeline.nasa_ingest import ingest_nasa_metadata
+    """Acquire NASA metadata into a versioned snapshot; leave historical exports intact.
 
-    spec = SOURCE_SPECS["nasa"]
-    result = ingest_nasa_metadata()
-    status = {
+    Live status continues to be derived from the immutable historical
+    import_status.json plus nasa_metadata_manifest_verification_decision.json.
+    """
+    from archive_life_pipeline.nasa_ingest import (
+        HISTORICAL_MANIFEST_SHA256,
+        historical_manifest_bytes_ok,
+        ingest_nasa_metadata,
+        versioned_nasa_snapshot_dir,
+    )
+
+    result = ingest_nasa_metadata(output_dir=versioned_nasa_snapshot_dir())
+    if not historical_manifest_bytes_ok():
+        raise RuntimeError(
+            "Historical NASA manifest bytes changed during import_nasa; "
+            f"expected sha256 {HISTORICAL_MANIFEST_SHA256}"
+        )
+    # Persist acquire pointer next to the snapshot (not under protected exports).
+    snapshot_dir = Path(result["snapshotDir"])
+    pointer = {
         "imported": result.get("imported", False),
         "status": "imported" if result.get("imported") else result.get("status", "sample_fallback"),
         "recordCount": result.get("recordCount", 0),
-        "verifiedRecordCount": result.get("verifiedRecordCount", 0),
+        "verifiedRecordCount": 0,
         "checksum": result.get("checksum"),
-        "sourceVersion": result.get("sourceVersion", "public-api"),
+        "sourceVersion": result.get("sourceVersion", "public-api-bounded-snapshot"),
         "citation": "NASA Earthdata / EONET / POWER public APIs",
         "lastImportTime": _now(),
-        "dataMode": result.get("dataMode", "sample_fallback"),
+        "dataMode": "sample_fallback",
         "scope": result.get("scope", "metadata_only"),
         "measurementDataMode": result.get("measurementDataMode", "not_ingested"),
         "layers": result.get("layers", []),
-        "blockedReason": None if result.get("imported") else "No real NASA metadata fetched",
+        "approvedForUse": False,
+        "sourceVerified": False,
+        "snapshotDir": str(snapshot_dir),
+        "historicalManifestSha256": HISTORICAL_MANIFEST_SHA256,
+        "note": "Does not rewrite historical exports/nasa/import_status.json",
     }
-    _write_import_status(spec, status)
-    return _read_import_status(spec)
+    (snapshot_dir / "acquire_registration.json").write_text(json.dumps(pointer, indent=2))
+    return _read_import_status(SOURCE_SPECS["nasa"])
 
 
 IMPORTERS = {
@@ -630,12 +664,17 @@ def audit_sources() -> dict[str, Any]:
     imported = [r for r in records if r.imported]
     blocked = [r for r in records if not r.imported]
     source_dicts = [_record_to_dict(SOURCE_SPECS[r.source], r) for r in records]
+    verified = sum(int(s.get("verified_record_count") or 0) for s in source_dicts)
+    historical_verified = sum(
+        int(s.get("historical_verified_record_count") or 0) for s in source_dicts
+    )
     return {
         "generatedAt": _now(),
         "importedCount": len(imported),
         "blockedCount": len(blocked),
         "commandAvailableCount": sum(1 for s in source_dicts if s.get("command_available")),
-        "verifiedRecordCount": sum(s.get("verified_record_count", 0) for s in source_dicts),
+        "verifiedRecordCount": verified,
+        "historical_verified_record_count": historical_verified,
         "sources": source_dicts,
         "passed": True,
     }
@@ -653,6 +692,9 @@ def write_status_reports() -> None:
             "imported": audit["importedCount"],
             "blocked": audit["blockedCount"],
             "verifiedRecordCount": audit.get("verifiedRecordCount", 0),
+            "historical_verified_record_count": audit.get(
+                "historical_verified_record_count", 0
+            ),
         },
     }
     (STATUS_DIR / "source_import_status.json").write_text(json.dumps(audit, indent=2))
