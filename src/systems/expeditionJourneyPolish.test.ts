@@ -6,6 +6,7 @@ import { join } from 'node:path';
 import { describe, expect, it } from 'vitest';
 import {
   assertFlagshipArtHonesty,
+  flagshipArtStatusLabel,
   listFlagshipTaxonIds,
   FLAGSHIP_OBSERVATION_PROFILES,
 } from '@/services/flagshipTaxonProfiles';
@@ -95,10 +96,28 @@ describe('expedition journey polish', () => {
     expect(REGION_EXPLORATION_CARDS.length).toBe(13);
   });
 
-  it('completes steppe portal → observation → lifeling → offline save path digitally', () => {
-    const card = getRegionExplorationCard('steppe');
-    expect(card).toBeTruthy();
-    const result = evaluateRegionExploration(card!, {
+  it('completes museum → expedition → observation → dex → lifeling → museum → save/reload', () => {
+    const museum = getRegionExplorationCard('museum');
+    const steppe = getRegionExplorationCard('steppe');
+    expect(museum).toBeTruthy();
+    expect(steppe).toBeTruthy();
+    expect(
+      evaluateRegionExploration(museum!, {
+        portalReachable: true,
+        taxonEncountered: false,
+        iconHonest: true,
+        observationRecorded: false,
+        offlineIntegrityOk: true,
+      }).earthCompleteClaim,
+    ).toBe(false);
+
+    const horseProfile = FLAGSHIP_OBSERVATION_PROFILES.equus_caballus_ferus;
+    expect(horseProfile).toBeTruthy();
+    assertFlagshipArtHonesty(horseProfile);
+    expect(flagshipArtStatusLabel(horseProfile)).toMatch(/not a finished model|not human-approved|candidate/i);
+    expect(horseProfile.finalArtStatus).not.toBe('final_asset_human_approved');
+
+    const result = evaluateRegionExploration(steppe!, {
       portalReachable: true,
       taxonEncountered: true,
       iconHonest: true,
@@ -110,6 +129,9 @@ describe('expedition journey polish', () => {
 
     deleteSave();
     const state = createDefaultSave();
+    state.player.currentRegion = 'museum';
+    state.player.visitedRegions = ['museum'];
+    // Expedition out
     state.player.currentRegion = 'steppe';
     state.player.visitedRegions = ['museum', 'steppe'];
     const traits: LifelingTrait[] = [
@@ -129,14 +151,46 @@ describe('expedition journey polish', () => {
       modules: modules as never,
     });
     expect(collected.success).toBe(true);
-    expect(validateSave(state)).toBe(true);
+    // Dex / documentation + lifeling
+    state.stats.speciesDocumented = Math.max(1, state.stats.speciesDocumented ?? 0);
     state.companion.name = 'Steppe Scout';
+    state.companion.unlockedTraits = [
+      ...new Set([...(state.companion.unlockedTraits ?? []), 'steppe_mane']),
+    ];
+    // Return to museum after collection
+    state.player.currentRegion = 'museum';
+    if (!state.player.visitedRegions.includes('museum')) {
+      state.player.visitedRegions.push('museum');
+    }
+    expect(validateSave(state)).toBe(true);
     saveGame(state);
     const restored = loadSave();
-    expect(restored?.player.visitedRegions).toContain('steppe');
+    expect(restored?.player.visitedRegions).toEqual(expect.arrayContaining(['museum', 'steppe']));
+    expect(restored?.player.currentRegion).toBe('museum');
     expect(restored?.companion.name).toBe('Steppe Scout');
+    expect(restored?.companion.unlockedTraits).toContain('steppe_mane');
     expect((restored?.stats.speciesDocumented ?? 0) + (restored?.artifacts.length ?? 0)).toBeGreaterThan(0);
     deleteSave();
+  });
+
+  it('owner playable review package documents scientific claim honesty', () => {
+    const pkg = loadJson<{
+      gates: { human_ready: boolean; rc_ready: boolean; v1_ready: boolean; production_ready: boolean };
+      scientificClaimHonesty: {
+        anySourceVerified: boolean;
+        temporalMapsSourceVerified: string;
+        iucnBlockedWithoutCredentials: boolean;
+      };
+      flagshipArtHonesty: { finishedModelsClaimed: boolean };
+    }>(join(ROOT, 'artifacts/owner_playable_review/OWNER_PLAYABLE_REVIEW_PACKAGE.json'));
+    expect(pkg.gates.human_ready).toBe(false);
+    expect(pkg.gates.rc_ready).toBe(false);
+    expect(pkg.gates.v1_ready).toBe(false);
+    expect(pkg.gates.production_ready).toBe(false);
+    expect(pkg.scientificClaimHonesty.anySourceVerified).toBe(false);
+    expect(pkg.scientificClaimHonesty.temporalMapsSourceVerified).toBe('0/17');
+    expect(pkg.scientificClaimHonesty.iucnBlockedWithoutCredentials).toBe(true);
+    expect(pkg.flagshipArtHonesty.finishedModelsClaimed).toBe(false);
   });
 
   it('offline pack integrity remains honest (liveClaim false)', () => {

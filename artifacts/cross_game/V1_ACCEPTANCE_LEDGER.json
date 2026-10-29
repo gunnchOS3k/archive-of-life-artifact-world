@@ -1,9 +1,9 @@
 {
   "schema": "cross_game_v1_acceptance_ledger.v1",
   "title": "Cross-game V1 acceptance ledger",
-  "generatedAt": "2026-10-29T14:34:23Z",
+  "generatedAt": "2026-10-29T15:12:00Z",
   "baseTipShaAtDraft": "36b0576ff046b98381a13ef218167def16d3d7c6",
-  "workingSha": "7cdf9236b011ad37664cff8abd594901fd31e3f8",
+  "workingSha": "fd9b55c09764b86c7f464729dc85e7fcc5c50618",
   "draftPr": 55,
   "draftPrUrl": "https://github.com/gunnchOS3k/archive-of-life-artifact-world/pull/55",
   "gates": {
@@ -60,7 +60,7 @@
           "native_evidence": false,
           "final_art": false,
           "human_test": false,
-          "blocker": "17/17 full-Earth maps blocked_external; ICS remains labeled sample; no fake unlock",
+          "blocker": "0/17 full-Earth maps source-verified; ICS remains labeled sample; blocked honesty copy in Time Atlas UI",
           "owner": "archive",
           "status": "runtime_playable"
         },
@@ -166,13 +166,15 @@
         "docs/OWNER_IUCN_SETUP.md",
         "src/services/flagshipTaxonProfiles.ts",
         "src/systems/expeditionJourneyPolish.test.ts",
-        "public/data/status/public_bounded_acquire_report.json"
+        "public/data/status/public_bounded_acquire_report.json",
+        "artifacts/archive_full/SCIENCE_HONESTY_MATRIX.json",
+        "artifacts/owner_playable_review/OWNER_PLAYABLE_REVIEW_PACKAGE.json"
       ],
       "notes": [
-        "ARCHIVE section updated after public-bounded acquire + flagship/region/journey polish.",
+        "ARCHIVE Priority 2: science honesty matrix, Time Atlas 0/17 copy, flagship art_status, expedition loop polish, owner review package.",
         "Human / RC / V1 / commercial gates stay false.",
         "Do not interpret gameplay_tested as Earth-complete science or commercial authorization.",
-        "iucnAssessed source-verified count remains 0; mock quarantine preserved."
+        "iucnAssessed source-verified count remains 0; sample_fallback never promoted to source_verified."
       ]
     },
     "anime_aggressors": {

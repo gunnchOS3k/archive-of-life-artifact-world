@@ -12,7 +12,8 @@
     "Bounded public acquires (COL/GBIF/PBDB/Neotoma/NASA/ICS) registered as sample_fallback with verified_record_count=0 \u2014 not source_verified release.",
     "IUCN remains blocked_external without IUCN_API_TOKEN + rights review (see docs/OWNER_IUCN_SETUP.md).",
     "ICS label inventory does not clear time_manifest.isMockData or unlock 17 temporal maps.",
-    "NASA historical manifest restored to SHA-256 f6d1c4d8\u2026; bounded acquires write versioned snapshots/public_bounded/nasa/<stamp>/ only; source_verified remains FALSE."
+    "NASA historical manifest restored to SHA-256 f6d1c4d8\u2026; bounded acquires write versioned snapshots/public_bounded/nasa/<stamp>/ only; source_verified remains FALSE.",
+    "Priority 2 science honesty matrix: COL/GBIF/PBDB/Neotoma/NASA/ICS remain sample_fallback (verified=0); Time Atlas 0/17 source-verified."
   ],
   "fixture_tier_r_unique_taxa_not_global": true,
   "public_bounded_acquire": {

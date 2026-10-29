@@ -1,5 +1,9 @@
 import type { PlayableSpecies } from '@/services/DataCatalogService';
-import { getFlagshipProfile } from '@/services/flagshipTaxonProfiles';
+import {
+  flagshipArtStatusLabel,
+  getFlagshipProfile,
+  type FlagshipObservationProfile,
+} from '@/services/flagshipTaxonProfiles';
 import { getSpeciesIcon } from '@/services/speciesRepresentation';
 
 export class WildlifeObservation {
@@ -21,6 +25,8 @@ export class WildlifeObservation {
   private alertDecayWhileHolding = 15;
   private alertRiseIdle = 10;
   private habitatCue = '';
+  private artStatusLabel = 'Art status: emoji identity candidate (not a finished model)';
+  private flagshipProfile: FlagshipObservationProfile | undefined;
   private _onKeyDown: (e: KeyboardEvent) => void;
   private _onKeyUp: (e: KeyboardEvent) => void;
   private _onPointerDown: (e: PointerEvent) => void;
@@ -37,6 +43,7 @@ export class WildlifeObservation {
     this.timer = 0;
     this.complete = false;
     const profile = getFlagshipProfile(species.id);
+    this.flagshipProfile = profile;
     if (profile) {
       this.moveSpeedPx = profile.moveSpeedPx;
       this.alertness = profile.baseAlertness;
@@ -45,6 +52,7 @@ export class WildlifeObservation {
       this.alertDecayWhileHolding = profile.alertDecayWhileHolding;
       this.alertRiseIdle = profile.alertRiseIdle;
       this.habitatCue = profile.habitatCues[0] ?? '';
+      this.artStatusLabel = flagshipArtStatusLabel(profile);
     }
 
     this._onKeyDown = (e: KeyboardEvent) => {
@@ -166,12 +174,24 @@ export class WildlifeObservation {
     ctx.fillText(
       this.holding ? `Observing ${this.species.commonName}... stay still!${habitat}` : `${holdHint}${habitat}`,
       w / 2,
-      h - 15,
+      h - 28,
     );
+    ctx.font = '10px sans-serif';
+    ctx.fillStyle = 'rgba(255,255,255,0.85)';
+    ctx.fillText(this.artStatusLabel, w / 2, h - 12);
   }
 
   getPatience() {
     return this.patience;
+  }
+
+  /** Honest presentation claim for journey / review packages. */
+  getArtStatusLabel() {
+    return this.artStatusLabel;
+  }
+
+  getFlagshipProfile() {
+    return this.flagshipProfile;
   }
 
   destroy() {

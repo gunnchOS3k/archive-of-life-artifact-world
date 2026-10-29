@@ -309,3 +309,19 @@ export function assertFlagshipArtHonesty(profile: FlagshipObservationProfile): v
     throw new Error(`Flagship ${profile.taxonId}: missing species-specific representation mark`);
   }
 }
+
+/** Player-facing art honesty — never imply finished production models. */
+export function flagshipArtStatusLabel(profile: FlagshipObservationProfile): string {
+  switch (profile.finalArtStatus) {
+    case 'emoji_identity_candidate':
+      return 'Art status: emoji identity candidate (not a finished model)';
+    case 'procedural_candidate':
+      return 'Art status: procedural candidate (not human-approved final art)';
+    case 'final_asset_candidate':
+      return 'Art status: final-asset candidate (awaiting human approval)';
+    case 'final_asset_human_approved':
+      return 'Art status: human-approved final art';
+    default:
+      return 'Art status: not finished';
+  }
+}

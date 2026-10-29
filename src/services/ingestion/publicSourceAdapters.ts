@@ -464,13 +464,120 @@ export function assertNeverPromoteMock(status: VerificationStatus, isMock: boole
   }
 }
 
+/**
+ * Bounded public acquires register as sample_fallback / needs_source_verification.
+ * Never promote those modes to source_verified without human license + redistribution review.
+ */
+export function assertNeverPromoteSampleFallback(
+  dataMode: string | null | undefined,
+  verificationStatus: VerificationStatus | string | null | undefined,
+  verifiedRecordCount = 0,
+): void {
+  const mode = (dataMode ?? '').toLowerCase();
+  const status = (verificationStatus ?? '').toLowerCase();
+  const fallbackish =
+    mode === 'sample_fallback' ||
+    mode === 'not_source_verified' ||
+    status === 'needs_source_verification' ||
+    status === 'mock_sample' ||
+    status === 'blocked_external';
+  if (fallbackish && status === 'source_verified') {
+    throw new Error(
+      'Honesty violation: sample_fallback / unverified modes must never be labeled source_verified',
+    );
+  }
+  if (fallbackish && verifiedRecordCount > 0 && status === 'source_verified') {
+    throw new Error(
+      'Honesty violation: verified_record_count cannot invent source_verified for sample_fallback',
+    );
+  }
+  if (mode === 'sample_fallback' && verifiedRecordCount !== 0) {
+    throw new Error(
+      'Honesty violation: sample_fallback must keep verified_record_count=0 until human approval',
+    );
+  }
+}
+
+export type ScienceHonestyRow = {
+  source: PublicAdapterSource;
+  dataMode: string;
+  verificationStatus: VerificationStatus | 'blocked_external';
+  verifiedRecordCount: number;
+  recordCount: number;
+  approvedForUse: false;
+  sourceVerifiedRelease: false;
+  notes: string;
+};
+
+/** Canonical Priority-2 science honesty matrix for COL/GBIF/PBDB/Neotoma/NASA/ICS (+ IUCN gate). */
+export function buildScienceHonestyMatrix(input: {
+  col: { recordCount: number; verifiedRecordCount: number; dataMode: string };
+  gbif: { recordCount: number; verifiedRecordCount: number; dataMode: string };
+  pbdb: { recordCount: number; verifiedRecordCount: number; dataMode: string };
+  neotoma: { recordCount: number; verifiedRecordCount: number; dataMode: string };
+  nasa: { recordCount: number; verifiedRecordCount: number; dataMode: string };
+  ics: { recordCount: number; verifiedRecordCount: number; dataMode: string };
+  iucn: { blocked: boolean; recordCount: number; verifiedRecordCount: number; dataMode: string | null };
+}): { anySourceVerified: false; productionReady: false; rows: ScienceHonestyRow[] } {
+  const rows: ScienceHonestyRow[] = (
+    [
+      ['col', input.col, 'Bounded COL ChecklistBank fetch — sample_fallback only'],
+      ['gbif', input.gbif, 'Bounded GBIF species match — sample_fallback only'],
+      ['pbdb', input.pbdb, 'Bounded PBDB taxa — sample_fallback only'],
+      ['neotoma', input.neotoma, 'Bounded Neotoma sites — sample_fallback only'],
+      [
+        'nasa',
+        input.nasa,
+        'NASA historical bytes preserved separately; bounded acquires stay not source_verified',
+      ],
+      [
+        'ics',
+        input.ics,
+        'ICS label inventory does not unlock 17 temporal maps or clear isMockData',
+      ],
+    ] as const
+  ).map(([source, row, notes]) => {
+    assertNeverPromoteSampleFallback(row.dataMode, 'needs_source_verification', row.verifiedRecordCount);
+    return {
+      source,
+      dataMode: row.dataMode,
+      verificationStatus: 'needs_source_verification' as const,
+      verifiedRecordCount: row.verifiedRecordCount,
+      recordCount: row.recordCount,
+      approvedForUse: false as const,
+      sourceVerifiedRelease: false as const,
+      notes,
+    };
+  });
+
+  rows.push({
+    source: 'iucn',
+    dataMode: input.iucn.dataMode ?? 'blocked_external',
+    verificationStatus: 'blocked_external',
+    verifiedRecordCount: input.iucn.verifiedRecordCount,
+    recordCount: input.iucn.recordCount,
+    approvedForUse: false,
+    sourceVerifiedRelease: false,
+    notes: input.iucn.blocked
+      ? 'IUCN blocked without IUCN_API_TOKEN + rights review (docs/OWNER_IUCN_SETUP.md)'
+      : 'IUCN token present but still not source_verified until human rights review',
+  });
+
+  return { anySourceVerified: false, productionReady: false, rows };
+}
+
 export function classifyUnsupportedClaim(claim: string): VerificationStatus {
   const c = claim.toLowerCase();
+  // Honest "0/17 verified" / blocked-map copy is allowed — only fake unlocks are unsupported.
+  if (/\b0\s*\/\s*17\b/.test(c) && (c.includes('verified') || c.includes('blocked'))) {
+    return 'needs_source_verification';
+  }
   if (
     c.includes('earth-complete') ||
     c.includes('all species') ||
     c.includes('global catalog complete') ||
-    c.includes('17 maps unlocked')
+    c.includes('17 maps unlocked') ||
+    (c.includes('17/17') && c.includes('unlocked'))
   ) {
     return 'unsupported_claim';
   }

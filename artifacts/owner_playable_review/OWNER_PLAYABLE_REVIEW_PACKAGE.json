@@ -1,0 +1,95 @@
+{
+  "schema": "archive_owner_playable_review_package/v1",
+  "title": "Archive of Life — Owner Playable Review Package (Priority 2)",
+  "generatedAt": "2026-10-29T15:10:00Z",
+  "draftPr": 55,
+  "draftPrUrl": "https://github.com/gunnchOS3k/archive-of-life-artifact-world/pull/55",
+  "gates": {
+    "human_ready": false,
+    "rc_ready": false,
+    "v1_ready": false,
+    "production_ready": false,
+    "commercial_authorized": false
+  },
+  "playableLoop": [
+    "Museum hub orientation",
+    "Expedition portal → field region (steppe / savanna)",
+    "Species-specific wildlife observation (honest art_status)",
+    "Collect find → ArchiveDex entry",
+    "Lifeling / companion trait unlock",
+    "Museum exhibit refresh",
+    "Save → reload offline integrity (liveClaim=false)"
+  ],
+  "floors": {
+    "encounterTaxa": 157,
+    "flagshipHeroes": 24,
+    "exploreRegionsMin": 12,
+    "museum": true,
+    "archiveDex": true,
+    "timeAtlas": true,
+    "lifelings": true
+  },
+  "scientificClaimHonesty": {
+    "document": "artifacts/archive_full/SCIENCE_HONESTY_MATRIX.json",
+    "anySourceVerified": false,
+    "sampleFallbackPromotionForbidden": true,
+    "iucnBlockedWithoutCredentials": true,
+    "temporalMapsSourceVerified": "0/17",
+    "nasaHistoricalBytesPreserved": true,
+    "nasaHistoricalSha256": "f6d1c4d83b3888b1cd9fd7cd1b4fed11dbd317b857d461666f6a01ea3b3265b6",
+    "nasaBoundedAcquiresVersionSeparated": true,
+    "claimsForbidden": [
+      "Earth-complete catalog",
+      "All species ingested",
+      "17 maps unlocked",
+      "sample_fallback promoted to source_verified",
+      "Finished production 3D models for flagship taxa",
+      "HUMAN / RC / V1 / production ready"
+    ],
+    "claimsAllowed": [
+      "157 encounter taxa playable sample/authored floor",
+      "24 flagship observation profiles with emoji identity candidates",
+      "0/17 full-Earth Time Atlas maps source-verified (blocked honesty)",
+      "IUCN blocked_external until owner token + rights review",
+      "NASA historical manifest SHA preserved; bounded acquires write versioned snapshots only"
+    ]
+  },
+  "flagshipArtHonesty": {
+    "finalArtStatusDefault": "emoji_identity_candidate",
+    "finishedModelsClaimed": false,
+    "genericIconForbiddenAsFinal": true
+  },
+  "evidence": [
+    "artifacts/archive_full/SCIENCE_HONESTY_MATRIX.json",
+    "artifacts/archive_full/DATA_COVERAGE_HONESTY.json",
+    "artifacts/play/EXPEDITION_JOURNEY.json",
+    "public/data/status/public_bounded_acquire_report.json",
+    "public/data/status/temporal_map_readiness_report.json",
+    "public/data/status/production_readiness_report.json",
+    "src/systems/expeditionJourneyPolish.test.ts",
+    "src/services/ingestion/publicSourceAdapters.ts",
+    "src/ui/timeAtlasUI.ts",
+    "docs/OWNER_IUCN_SETUP.md"
+  ],
+  "ownerReviewChecklist": [
+    "Play museum → expedition → observation → dex → lifeling → museum → save/reload once digitally",
+    "Confirm Time Atlas banner shows 0/17 source-verified (not unlocked)",
+    "Confirm observation UI shows art status is not finished models",
+    "Confirm production_readiness_report.ready === false",
+    "Confirm IUCN remains blocked without credentials",
+    "Do not authorize HUMAN/RC/V1 from this package alone"
+  ],
+  "blockers": [
+    "Authorized IUCN_API_TOKEN + rights review for assessed=true",
+    "Approved full-Earth temporal map assets for 17 gates",
+    "Human license approval to promote any sample_fallback → source_verified",
+    "Human final-art approval for flagship taxa",
+    "Human playtest sign-off"
+  ],
+  "next": [
+    "Owner digital playthrough using this checklist",
+    "Optional IUCN credentialed import after rights review",
+    "Temporal map asset acquisition pipeline (scientific)",
+    "Keep HUMAN/RC/V1 false until earned"
+  ]
+}

@@ -83,9 +83,14 @@ export class TimeAtlasUI {
     if (!this.state) return;
 
     const manifest = this.timeService.getManifest();
-    this.mockBanner.innerHTML = manifest.isMockData
-      ? '<span class="mock-badge">MOCK TIME SAMPLE</span> Geologic boundaries are illustrative until live ICS ingestion is connected.'
+    const mapSummary = this.temporalMapService.getSummary();
+    const verifiedMaps = mapSummary.sourceVerified;
+    const totalMaps = mapSummary.total || 17;
+    const mapHonesty = `<span class="mock-badge">FULL-EARTH MAPS ${verifiedMaps}/${totalMaps} SOURCE-VERIFIED</span> Blocked until authorized reconstruction assets exist — no speculative coastlines.`;
+    const mockHonesty = manifest.isMockData
+      ? '<span class="mock-badge">MOCK TIME SAMPLE</span> Geologic boundaries are illustrative until live ICS ingestion is connected. '
       : '';
+    this.mockBanner.innerHTML = `${mockHonesty}${mapHonesty}`;
 
     const query = this.searchInput?.value ?? '';
     const units = query
@@ -233,10 +238,14 @@ export class TimeAtlasUI {
   }
 
   private renderTemporalMapStatus(maps: TemporalEarthMapRecord[]): string {
+    const summary = this.temporalMapService.getSummary();
+    const catalogHonesty = `<p><strong>Catalog honesty:</strong> ${summary.sourceVerified}/${summary.total || 17} full-Earth maps source-verified (blocked maps stay locked).</p>`;
+
     if (maps.length === 0) {
       return `
         <div class="time-data-quality">
           <h4>Full-Earth reconstruction</h4>
+          ${catalogHonesty}
           <p>No Time Gate directly targets this unit. The catalog is keyed to the 17 supported expedition gates.</p>
         </div>
       `;
@@ -245,6 +254,7 @@ export class TimeAtlasUI {
     return `
       <div class="time-data-quality">
         <h4>Full-Earth reconstruction</h4>
+        ${catalogHonesty}
         ${maps
           .map(
             (map) => `
