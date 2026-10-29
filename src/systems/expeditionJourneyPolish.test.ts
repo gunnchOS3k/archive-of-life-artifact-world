@@ -165,10 +165,13 @@ describe('expedition journey polish', () => {
   it('production readiness stays false until earned', () => {
     const report = loadJson<{ ready: boolean }>(join(DATA, 'status/production_readiness_report.json'));
     expect(report.ready).toBe(false);
-    const honesty = loadJson<{ iucn_assessed_source_verified_count: number; GLOBAL_DATA_COMPLETE: boolean }>(
-      join(ROOT, 'artifacts/archive_full/DATA_COVERAGE_HONESTY.json'),
-    );
-    expect(honesty.iucn_assessed_source_verified_count).toBe(0);
+    const manifest = loadJson<{ coverage?: { iucnAssessed?: number } }>(join(DATA, 'manifest.json'));
+    expect(manifest.coverage?.iucnAssessed ?? 0).toBe(0);
+    const honesty = loadJson<{
+      iucn_assessed_source_verified_count?: number;
+      GLOBAL_DATA_COMPLETE: boolean;
+    }>(join(ROOT, 'artifacts/archive_full/DATA_COVERAGE_HONESTY.json'));
     expect(honesty.GLOBAL_DATA_COMPLETE).toBe(false);
+    expect(honesty.iucn_assessed_source_verified_count ?? 0).toBe(0);
   });
 });

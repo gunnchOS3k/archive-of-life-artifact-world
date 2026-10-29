@@ -152,12 +152,23 @@ def acquire_gbif_bounded(names: list[str] | None = None) -> dict[str, Any]:
         checksum=_sha256_bytes(path.read_bytes()),
         source_version="gbif-species-match-bounded",
         citation="GBIF species match API (bounded flagship)",
-        extra={"sourcePath": str(path.relative_to(REPO_ROOT)), "errors": errors, "approvedForUse": False},
+        extra={
+            "sourcePath": str(path.relative_to(REPO_ROOT)),
+            "errors": errors,
+            "approvedForUse": False,
+        },
     )
     export = EXPORTS_DIR / "gbif"
     export.mkdir(parents=True, exist_ok=True)
     (export / "gbif_occurrences_normalized.json").write_text(
-        json.dumps({"records": records, "count": len(records), "note": "species match not occurrences"}, indent=2)
+        json.dumps(
+            {
+                "records": records,
+                "count": len(records),
+                "note": "species match not occurrences",
+            },
+            indent=2,
+        )
     )
     _write_import_status(SOURCE_SPECS["gbif"], status)
     return {"source": "gbif", "path": str(path), **status}
@@ -197,7 +208,11 @@ def acquire_pbdb_bounded(names: list[str] | None = None) -> dict[str, Any]:
         checksum=_sha256_bytes(path.read_bytes()),
         source_version="pbdb-data1.2-bounded",
         citation="Paleobiology Database public API (bounded)",
-        extra={"sourcePath": str(path.relative_to(REPO_ROOT)), "errors": errors, "approvedForUse": False},
+        extra={
+            "sourcePath": str(path.relative_to(REPO_ROOT)),
+            "errors": errors,
+            "approvedForUse": False,
+        },
     )
     export = EXPORTS_DIR / "pbdb"
     export.mkdir(parents=True, exist_ok=True)
@@ -232,7 +247,11 @@ def acquire_neotoma_bounded(limit: int = 25) -> dict[str, Any]:
         checksum=_sha256_bytes(path.read_bytes() if path.exists() else raw),
         source_version="neotoma-api-v2-bounded",
         citation="Neotoma Paleoecology Database API (sites sample)",
-        extra={"sourcePath": str(path.relative_to(REPO_ROOT)), "errors": errors, "approvedForUse": False},
+        extra={
+            "sourcePath": str(path.relative_to(REPO_ROOT)),
+            "errors": errors,
+            "approvedForUse": False,
+        },
     )
     if not records:
         status["imported"] = False
@@ -318,7 +337,12 @@ def acquire_iucn_status() -> dict[str, Any]:
     from archive_life_pipeline.source_import import import_iucn
 
     rec = import_iucn()
-    return {"source": "iucn", "blocked": False, "imported": rec.imported, "recordCount": rec.record_count}
+    return {
+        "source": "iucn",
+        "blocked": False,
+        "imported": rec.imported,
+        "recordCount": rec.record_count,
+    }
 
 
 def acquire_all_public_bounded(*, include_nasa: bool = True) -> dict[str, Any]:
