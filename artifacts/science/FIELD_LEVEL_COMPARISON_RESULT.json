@@ -1,0 +1,82 @@
+{
+  "schema": "aol.field_level_source_comparison.v1",
+  "generatedAt": "2026-10-29T22:51:08.449Z",
+  "fixtureSnapshotId": "wave008-scientific-fixture-v1",
+  "anySourceVerified": false,
+  "productionReady": false,
+  "rule": "Field matches against authorized fixtures do not promote sample_fallback to source_verified; human license/redistribution review remains required.",
+  "comparisons": [
+    {
+      "taxonId": "panthera_leo",
+      "scientificName": "Panthera leo",
+      "fixtureSource": "Catalogue of Life",
+      "fixtureRecordId": "COL:taxon:PL001",
+      "fixtureRetrievedAt": "2024-06-01T12:00:00.000Z",
+      "fixtureLicense": "UNVERIFIED-FIXTURE",
+      "fixtureUncertainty": "accepted name in COL snapshot",
+      "verificationStatus": "needs_source_verification",
+      "dataMode": "sample_fallback",
+      "sourceVerifiedRelease": false,
+      "fieldRows": [
+        {
+          "field": "scientific_name",
+          "status": "match",
+          "fixtureValue": "Panthera leo",
+          "gameValue": "Panthera leo",
+          "notes": "Accepted scientific name must match fixture spelling"
+        },
+        {
+          "field": "common_name",
+          "status": "match",
+          "fixtureValue": "Lion",
+          "gameValue": "Lion",
+          "notes": "Common name is display-facing; mismatch is noted but not a release promotion"
+        },
+        {
+          "field": "geographic_region",
+          "status": "match",
+          "fixtureValue": "Afrotropical",
+          "gameValue": "Afrotropical",
+          "notes": "Region label compared when game supplies one"
+        },
+        {
+          "field": "source_organization",
+          "status": "match",
+          "fixtureValue": "Catalogue of Life",
+          "gameValue": "Catalogue of Life",
+          "notes": "Fixture organization retained for UI provenance surface"
+        },
+        {
+          "field": "source_record_id",
+          "status": "match",
+          "fixtureValue": "COL:taxon:PL001",
+          "gameValue": "COL:taxon:PL001",
+          "notes": "Fixture record id retained; game_authored play rows stay distinct"
+        },
+        {
+          "field": "license",
+          "status": "match",
+          "fixtureValue": "UNVERIFIED-FIXTURE",
+          "gameValue": "UNVERIFIED-FIXTURE",
+          "notes": "License surfaced honestly (UNVERIFIED-FIXTURE ≠ redistribution approval)"
+        },
+        {
+          "field": "retrieved_at",
+          "status": "match",
+          "fixtureValue": "2024-06-01T12:00:00.000Z",
+          "gameValue": "2024-06-01T12:00:00.000Z",
+          "notes": "Retrieval date from fixture snapshot"
+        },
+        {
+          "field": "uncertainty",
+          "status": "match",
+          "fixtureValue": "accepted name in COL snapshot",
+          "gameValue": "accepted name in COL snapshot",
+          "notes": "Uncertainty/confidence basis retained for ArchiveDex evidence panel"
+        }
+      ],
+      "matchedFields": 8,
+      "comparedFields": 8
+    }
+  ]
+}

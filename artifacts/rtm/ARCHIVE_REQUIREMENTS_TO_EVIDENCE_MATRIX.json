@@ -35,17 +35,20 @@
       ],
       "tests": [
         "src/systems/expeditionJourneyPolish.test.ts",
-        "data-pipeline/src/archive_life_pipeline/public_bounded_acquire.py"
+        "data-pipeline/src/archive_life_pipeline/public_bounded_acquire.py",
+        "src/services/ingestion/fieldLevelSourceComparison.test.ts"
       ],
       "automated_evidence": [
         "artifacts/archive_full/SCIENCE_HONESTY_MATRIX.json",
         "public/data/status/public_bounded_acquire_report.json",
-        "src/services/ingestion/publicSourceAdapters.ts"
+        "src/services/ingestion/publicSourceAdapters.ts",
+        "artifacts/science/FIELD_LEVEL_COMPARISON_RESULT.json",
+        "public/data/status/field_level_comparison.json"
       ],
       "native_physical": {
         "status": "not_applicable",
         "platforms": [],
-        "notes": "Provenance honesty is digital/evidence-path."
+        "notes": "Field comparison is digital fixture evidence; human license review still required before source_verified release."
       },
       "art_status": "not_applicable",
       "limitations": [
@@ -53,10 +56,10 @@
         "NASA historical manifest SHA preserved; bounded acquires stay sample_fallback"
       ],
       "severity": "blocker",
-      "sha": "1dad3288274b6119b8448818a49262e098d65d81",
+      "sha": "PENDING_TIP",
       "independent_review_status": "not_started",
       "cursor_complete_status": "in_progress",
-      "notes": "Specialty: scientific_provenance. Production gate remains false."
+      "notes": "Specialty: scientific_provenance. Production gate remains false. Bounded Lion field-level COL fixture comparison surfaces source/date/license/uncertainty in SourcesEvidencePanel; anySourceVerified/productionReady remain false; sample_fallback not promoted."
     },
     {
       "req_id": "AOL-SCI-002",
