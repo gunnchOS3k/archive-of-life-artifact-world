@@ -1,7 +1,7 @@
 {
   "schema": "cross_game_v1_acceptance_ledger.v1",
   "title": "Cross-game V1 acceptance ledger",
-  "generatedAt": "2026-10-29T02:25:05Z",
+  "generatedAt": "2026-10-29T02:56:25Z",
   "baseTipShaAtDraft": "36b0576ff046b98381a13ef218167def16d3d7c6",
   "workingSha": "d3f2071fbb05fea28ddd20d366f9d25e65b73c73",
   "draftPr": 55,
@@ -71,7 +71,7 @@
           "native_evidence": false,
           "final_art": false,
           "human_test": false,
-          "blocker": "Required external COL/GBIF/IUCN/PBDB/NASA imports not source-verified; production readiness remains NOT ready",
+          "blocker": "Required external COL/GBIF/IUCN/PBDB/NASA imports not source-verified; iucnAssessed source-verified count is 0 after mock quarantine; production readiness remains NOT ready",
           "owner": "archive",
           "status": "runtime_playable"
         },
@@ -148,7 +148,7 @@
           "native_evidence": false,
           "final_art": false,
           "human_test": false,
-          "blocker": "Quarantined mocks still present until approved snapshot imports replace them",
+          "blocker": "Quarantined mocks still present; IUCN gameplay labels retained with assessed=false; awaiting authorized IUCN_API_TOKEN snapshot import before any assessed=true",
           "owner": "archive",
           "status": "data_registered"
         }
@@ -158,12 +158,15 @@
         "scripts/quarantine-mock-hero-provenance.ts",
         "scripts/audit-production-readiness.ts",
         "artifacts/play/EXPEDITION_JOURNEY.json",
-        "public/data/status/production_readiness_report.json"
+        "public/data/status/production_readiness_report.json",
+        "artifacts/archive_full/DATA_COVERAGE_HONESTY.json",
+        "scripts/audit-data.ts"
       ],
       "notes": [
         "ARCHIVE section fully filled this shift.",
         "Human / RC / V1 / commercial gates stay false.",
-        "Do not interpret gameplay_tested as Earth-complete science or commercial authorization."
+        "Do not interpret gameplay_tested as Earth-complete science or commercial authorization.",
+        "IUCN honesty: manifest.coverage.iucnAssessed reconciled to 0 source-verified assessments; mock category labels kept for gameplay; Human/RC/V1 remain false."
       ]
     },
     "anime_aggressors": {

@@ -3,10 +3,14 @@
   "GLOBAL_DATA_COMPLETE": false,
   "ALL_SPECIES_INGESTED": false,
   "liveClaim": false,
+  "iucn_assessed_source_verified_count": 0,
+  "iucn_token_import_available": false,
   "notes": [
     "Scientific data cannot be fabricated — ingestion pipelines are validated; coverage tracked honestly.",
     "Launch Tier E/F floors are playable sample/authored content, not empirical completeness of every species.",
-    "Temporal map source-verified assets remain incomplete until external scientific imports are approved."
+    "Temporal map source-verified assets remain incomplete until external scientific imports are approved.",
+    "After mock quarantine, hero conservation.assessed is false for gameplay IUCN category labels; manifest.coverage.iucnAssessed counts only source-verified assessments (currently 0).",
+    "IUCN Red List API import remains blocked without IUCN_API_TOKEN / rights review — do not invent assessments or promote mock_sample to verified."
   ],
   "fixture_tier_r_unique_taxa_not_global": true
 }

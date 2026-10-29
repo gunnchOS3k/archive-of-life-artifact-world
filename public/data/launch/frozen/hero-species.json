@@ -3385,10 +3385,11 @@
       },
       "conservation": {
         "iucnCategory": "Vulnerable",
-        "assessed": true,
-        "sourceVersion": "wave-f-alpha",
+        "assessed": false,
+        "sourceVersion": "quarantined-mock-iucn-2026-07",
         "lastUpdated": "2026-08-07",
-        "iucnTaxonId": 22823
+        "dataMode": "mock_sample",
+        "uncertaintyNote": "IUCN category is a gameplay planning label from legacy authored data \u2014 not an IUCN Red List source-verified assessment."
       },
       "distribution": {
         "continents": [

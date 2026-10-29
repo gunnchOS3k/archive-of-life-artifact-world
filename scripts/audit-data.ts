@@ -75,11 +75,26 @@ function audit(): AuditResult[] {
     message: `Extinct: index ${extinctInIndex}, manifest ${manifest.coverage.extinctFossil}`,
   });
 
-  const iucnAssessed = hero.species.filter((s) => s.conservation?.assessed).length;
+  // assessed=true must mean real IUCN evidence — mock gameplay labels stay assessed=false.
+  const iucnAssessed = hero.species.filter(
+    (s) =>
+      s.conservation?.assessed === true &&
+      s.conservation?.dataMode !== 'mock_sample' &&
+      !String(s.conservation?.sourceVersion || '').includes('mock')
+  ).length;
+  const falseAssessed = hero.species.filter(
+    (s) =>
+      s.conservation?.assessed === true &&
+      (s.conservation?.dataMode === 'mock_sample' ||
+        String(s.conservation?.sourceVersion || '').includes('mock'))
+  );
   results.push({
     name: 'iucn_assessed_represented',
-    passed: iucnAssessed >= manifest.coverage.iucnAssessed,
-    message: `${iucnAssessed} IUCN-assessed conservation records in hero bundle`,
+    passed:
+      falseAssessed.length === 0 && iucnAssessed === manifest.coverage.iucnAssessed,
+    message: falseAssessed.length
+      ? `Mock conservation marked assessed=true: ${falseAssessed.map((s) => s.id).join(', ')}`
+      : `${iucnAssessed} source-verified IUCN assessments in hero (manifest ${manifest.coverage.iucnAssessed})`,
   });
 
   results.push({

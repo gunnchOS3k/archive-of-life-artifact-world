@@ -129,7 +129,12 @@ function quarantineSpecies(sp: Species): Species {
   const conservation = sp.conservation ? { ...sp.conservation } : undefined;
   if (conservation) {
     const sv = String(conservation.sourceVersion || '');
-    if (sv.includes('mock') || conservation.dataMode === 'mock_sample') {
+    const isMockConservation =
+      sv.includes('mock') ||
+      conservation.dataMode === 'mock_sample' ||
+      // assessed=true is only legal with explicit source_verified evidence from an approved IUCN import
+      (conservation.assessed === true && conservation.dataMode !== 'source_verified');
+    if (isMockConservation) {
       conservation.sourceVersion = 'quarantined-mock-iucn-2026-07';
       conservation.dataMode = 'mock_sample';
       conservation.assessed = false;

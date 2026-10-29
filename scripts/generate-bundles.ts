@@ -414,7 +414,10 @@ function main() {
 
   const threatened = indexEntries.filter((e) => e.isThreatened).length;
   const extinctCount = indexEntries.filter((e) => e.isExtinct).length;
-  const iucnAssessed = indexEntries.filter((e) => e.iucnCategory && e.iucnCategory !== 'Not Evaluated').length;
+  // Only source-verified conservation.assessed=true counts — never mock gameplay category labels.
+  const iucnAssessed = allSpecies.filter(
+    (s) => s.conservation?.assessed === true && s.conservation?.dataMode !== 'mock_sample'
+  ).length;
   const playable = indexEntries.filter((e) => e.isPlayable).length;
 
   writeFileSync(join(OUT, 'hero-species.json'), JSON.stringify({ species: allSpecies }, null, 2));
@@ -434,8 +437,9 @@ function main() {
     )
   );
 
+  // Retain gameplay conservation labels (assessed may be false); coverage.iucnAssessed only counts verified.
   const conservationOverlay = allSpecies
-    .filter((s) => s.conservation?.assessed)
+    .filter((s) => s.conservation?.iucnCategory)
     .map((s) => ({ speciesId: s.id, ...s.conservation }));
   writeFileSync(join(OUT, 'conservation-overlay.json'), JSON.stringify({ records: conservationOverlay }, null, 2));
 
