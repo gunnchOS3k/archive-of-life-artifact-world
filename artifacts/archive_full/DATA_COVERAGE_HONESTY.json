@@ -11,12 +11,15 @@
     "Temporal map source-verified assets remain incomplete until external scientific imports are approved.",
     "Bounded public acquires (COL/GBIF/PBDB/Neotoma/NASA/ICS) registered as sample_fallback with verified_record_count=0 \u2014 not source_verified release.",
     "IUCN remains blocked_external without IUCN_API_TOKEN + rights review (see docs/OWNER_IUCN_SETUP.md).",
-    "ICS label inventory does not clear time_manifest.isMockData or unlock 17 temporal maps."
+    "ICS label inventory does not clear time_manifest.isMockData or unlock 17 temporal maps.",
+    "NASA historical manifest restored to SHA-256 f6d1c4d8\u2026; bounded acquires write versioned snapshots/public_bounded/nasa/<stamp>/ only; source_verified remains FALSE."
   ],
   "fixture_tier_r_unique_taxa_not_global": true,
   "public_bounded_acquire": {
     "approvedForUse": false,
     "anySourceVerified": false,
     "command": "npm run source:acquire:public-bounded"
-  }
+  },
+  "nasa_historical_manifest_sha256": "f6d1c4d83b3888b1cd9fd7cd1b4fed11dbd317b857d461666f6a01ea3b3265b6",
+  "nasa_source_verified": false
 }
