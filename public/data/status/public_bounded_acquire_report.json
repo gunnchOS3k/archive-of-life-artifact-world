@@ -1,0 +1,70 @@
+{
+  "generatedAt": "2026-10-29T05:00:58Z",
+  "approvedForUse": false,
+  "anySourceVerified": false,
+  "productionReady": false,
+  "results": {
+    "col": {
+      "imported": true,
+      "recordCount": 120,
+      "verifiedRecordCount": 0,
+      "dataMode": "sample_fallback",
+      "blocked": null,
+      "path": "/Users/gunnchos/Downloads/gunnchos-7gc-research-product-spine/repos/archive-of-life-artifact-world/.worktrees/pr55-archive-v1-acceptance-20261028/data-pipeline/snapshots/public_bounded/col_flagship_bounded.json"
+    },
+    "gbif": {
+      "imported": true,
+      "recordCount": 24,
+      "verifiedRecordCount": 0,
+      "dataMode": "sample_fallback",
+      "blocked": null,
+      "path": "/Users/gunnchos/Downloads/gunnchos-7gc-research-product-spine/repos/archive-of-life-artifact-world/.worktrees/pr55-archive-v1-acceptance-20261028/data-pipeline/snapshots/public_bounded/gbif_flagship_match_bounded.json"
+    },
+    "pbdb": {
+      "imported": true,
+      "recordCount": 2,
+      "verifiedRecordCount": 0,
+      "dataMode": "sample_fallback",
+      "blocked": null,
+      "path": "/Users/gunnchos/Downloads/gunnchos-7gc-research-product-spine/repos/archive-of-life-artifact-world/.worktrees/pr55-archive-v1-acceptance-20261028/data-pipeline/snapshots/public_bounded/pbdb_flagship_bounded.json"
+    },
+    "neotoma": {
+      "imported": true,
+      "recordCount": 25,
+      "verifiedRecordCount": 0,
+      "dataMode": "sample_fallback",
+      "blocked": null,
+      "path": "/Users/gunnchos/Downloads/gunnchos-7gc-research-product-spine/repos/archive-of-life-artifact-world/.worktrees/pr55-archive-v1-acceptance-20261028/data-pipeline/snapshots/public_bounded/neotoma_sites_bounded.json"
+    },
+    "ics": {
+      "imported": true,
+      "recordCount": 17,
+      "verifiedRecordCount": 0,
+      "dataMode": "sample_fallback",
+      "blocked": null,
+      "path": "/Users/gunnchos/Downloads/gunnchos-7gc-research-product-spine/repos/archive-of-life-artifact-world/.worktrees/pr55-archive-v1-acceptance-20261028/data-pipeline/snapshots/public_bounded/ics_label_inventory.json"
+    },
+    "iucn": {
+      "imported": false,
+      "recordCount": 0,
+      "verifiedRecordCount": 0,
+      "dataMode": null,
+      "blocked": true,
+      "path": null
+    },
+    "nasa": {
+      "imported": true,
+      "recordCount": 21,
+      "verifiedRecordCount": 0,
+      "dataMode": "real_metadata",
+      "blocked": null,
+      "path": null
+    }
+  },
+  "honesty": [
+    "Bounded public fetches do not promote mock hero provenance to source_verified",
+    "IUCN remains blocked without authorized token + rights review",
+    "ICS labels do not unlock 17 temporal maps",
+    "NASA metadata \u2260 regional measurement verification"
+  ]
+}

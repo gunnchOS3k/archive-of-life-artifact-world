@@ -26,8 +26,18 @@ export type VerificationStatus =
   | 'source_verified'
   | 'mock_sample'
   | 'blocked_external'
+  | 'unsupported_claim'
   | 'derived_inferred'
   | 'needs_source_verification';
+
+/** Canonical release provenance classes (never promote mock_sample → source_verified). */
+export const RELEASE_PROVENANCE_CLASSES = [
+  'game_authored_verified',
+  'source_verified',
+  'mock_sample',
+  'blocked_external',
+  'unsupported_claim',
+] as const satisfies readonly VerificationStatus[];
 
 export interface DataSourceProvenance {
   source: SourceName;

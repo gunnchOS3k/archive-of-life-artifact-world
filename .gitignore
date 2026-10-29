@@ -16,6 +16,12 @@ data-pipeline/.ruff_cache/
 data-pipeline/snapshots/**/*
 !data-pipeline/snapshots/README.md
 !data-pipeline/snapshots/.gitkeep
+# Bounded acquire evidence (regenerate payloads via npm run source:acquire:public-bounded)
+!data-pipeline/snapshots/public_bounded/
+data-pipeline/snapshots/public_bounded/**
+!data-pipeline/snapshots/public_bounded/ACQUIRE_MANIFEST.json
+!data-pipeline/snapshots/public_bounded/ics_label_inventory.json
+!data-pipeline/snapshots/public_bounded/pbdb_flagship_bounded.json
 
 # Large exports unless explicitly scoped samples
 data-pipeline/exports/**

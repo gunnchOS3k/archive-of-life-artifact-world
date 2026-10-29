@@ -128,7 +128,8 @@ export class TimeAtlasUI {
     const manifest = this.timeService.getManifest();
     const taxa = this.timeService.getTaxaOverlappingUnit(unit.id);
     const ancestors = this.timeService.getAncestors(unit.id);
-    const dataQuality = manifest.isMockData ? 'mock_sample' : 'source_verified';
+    // Non-mock ≠ source_verified. Unapproved chronology stays needs_source_verification.
+    const dataQuality = manifest.isMockData ? 'mock_sample' : 'needs_source_verification';
     const provHtml = unit.sourceProvenance
       .map(
         (p) => `

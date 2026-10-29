@@ -1,4 +1,5 @@
 import type { PlayableSpecies } from '@/services/DataCatalogService';
+import { getFlagshipProfile } from '@/services/flagshipTaxonProfiles';
 import { getSpeciesIcon } from '@/services/speciesRepresentation';
 
 export class WildlifeObservation {
@@ -14,6 +15,12 @@ export class WildlifeObservation {
   private animalDir = 1;
   private timer = 0;
   private complete = false;
+  private moveSpeedPx = 30;
+  private patienceGain = 25;
+  private patienceDecay = 5;
+  private alertDecayWhileHolding = 15;
+  private alertRiseIdle = 10;
+  private habitatCue = '';
   private _onKeyDown: (e: KeyboardEvent) => void;
   private _onKeyUp: (e: KeyboardEvent) => void;
   private _onPointerDown: (e: PointerEvent) => void;
@@ -29,6 +36,16 @@ export class WildlifeObservation {
     this.animalDir = 1;
     this.timer = 0;
     this.complete = false;
+    const profile = getFlagshipProfile(species.id);
+    if (profile) {
+      this.moveSpeedPx = profile.moveSpeedPx;
+      this.alertness = profile.baseAlertness;
+      this.patienceGain = profile.patienceGain;
+      this.patienceDecay = profile.patienceDecay;
+      this.alertDecayWhileHolding = profile.alertDecayWhileHolding;
+      this.alertRiseIdle = profile.alertRiseIdle;
+      this.habitatCue = profile.habitatCues[0] ?? '';
+    }
 
     this._onKeyDown = (e: KeyboardEvent) => {
       if (e.code === 'Space') {
@@ -58,17 +75,17 @@ export class WildlifeObservation {
     if (this.complete) return;
 
     this.timer += dt;
-    this.animalX += this.animalDir * 30 * dt;
+    this.animalX += this.animalDir * this.moveSpeedPx * dt;
     if (this.animalX < 80 || this.animalX > this.canvas.width - 80) {
       this.animalDir *= -1;
     }
 
     if (this.holding) {
-      this.patience = Math.min(100, this.patience + 25 * dt);
-      this.alertness = Math.max(0, this.alertness - 15 * dt);
+      this.patience = Math.min(100, this.patience + this.patienceGain * dt);
+      this.alertness = Math.max(0, this.alertness - this.alertDecayWhileHolding * dt);
     } else {
-      this.alertness = Math.min(100, this.alertness + 10 * dt);
-      this.patience = Math.max(0, this.patience - 5 * dt);
+      this.alertness = Math.min(100, this.alertness + this.alertRiseIdle * dt);
+      this.patience = Math.max(0, this.patience - this.patienceDecay * dt);
     }
 
     if (this.alertness >= 100) {
@@ -141,14 +158,15 @@ export class WildlifeObservation {
     ctx.fillStyle = '#fff';
     ctx.font = '12px sans-serif';
     ctx.textAlign = 'center';
+    const holdHint =
+      typeof window !== 'undefined' && window.matchMedia?.('(pointer: coarse)').matches
+        ? 'Hold on screen to observe quietly'
+        : 'Hold Space to observe quietly';
+    const habitat = this.habitatCue ? ` · ${this.habitatCue}` : '';
     ctx.fillText(
-      this.holding
-        ? 'Observing... stay still!'
-        : (typeof window !== 'undefined' && window.matchMedia?.('(pointer: coarse)').matches
-          ? 'Hold on screen to observe quietly'
-          : 'Hold Space to observe quietly'),
+      this.holding ? `Observing ${this.species.commonName}... stay still!${habitat}` : `${holdHint}${habitat}`,
       w / 2,
-      h - 15
+      h - 15,
     );
   }
 

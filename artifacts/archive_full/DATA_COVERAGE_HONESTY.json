@@ -6,11 +6,19 @@
   "iucn_assessed_source_verified_count": 0,
   "iucn_token_import_available": false,
   "notes": [
-    "Scientific data cannot be fabricated — ingestion pipelines are validated; coverage tracked honestly.",
+    "Scientific data cannot be fabricated \u2014 ingestion pipelines are validated; coverage tracked honestly.",
     "Launch Tier E/F floors are playable sample/authored content, not empirical completeness of every species.",
     "Temporal map source-verified assets remain incomplete until external scientific imports are approved.",
     "After mock quarantine, hero conservation.assessed is false for gameplay IUCN category labels; manifest.coverage.iucnAssessed counts only source-verified assessments (currently 0).",
-    "IUCN Red List API import remains blocked without IUCN_API_TOKEN / rights review — do not invent assessments or promote mock_sample to verified."
+    "IUCN Red List API import remains blocked without IUCN_API_TOKEN / rights review \u2014 do not invent assessments or promote mock_sample to verified.",
+    "Bounded public acquires (COL/GBIF/PBDB/Neotoma/NASA/ICS) registered as sample_fallback with verified_record_count=0 \u2014 not source_verified release.",
+    "IUCN remains blocked_external without IUCN_API_TOKEN + rights review (see docs/OWNER_IUCN_SETUP.md).",
+    "ICS label inventory does not clear time_manifest.isMockData or unlock 17 temporal maps."
   ],
-  "fixture_tier_r_unique_taxa_not_global": true
+  "fixture_tier_r_unique_taxa_not_global": true,
+  "public_bounded_acquire": {
+    "approvedForUse": false,
+    "anySourceVerified": false,
+    "command": "npm run source:acquire:public-bounded"
+  }
 }

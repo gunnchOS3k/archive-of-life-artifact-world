@@ -1,9 +1,9 @@
 {
   "schema": "cross_game_v1_acceptance_ledger.v1",
   "title": "Cross-game V1 acceptance ledger",
-  "generatedAt": "2026-10-29T02:58:56Z",
+  "generatedAt": "2026-10-29T05:01:22Z",
   "baseTipShaAtDraft": "36b0576ff046b98381a13ef218167def16d3d7c6",
-  "workingSha": "7d29c143803b5a18eb00216a66ee811ad601f154",
+  "workingSha": "PENDING_COMMIT",
   "draftPr": 55,
   "draftPrUrl": "https://github.com/gunnchOS3k/archive-of-life-artifact-world/pull/55",
   "gates": {
@@ -60,7 +60,7 @@
           "native_evidence": false,
           "final_art": false,
           "human_test": false,
-          "blocker": "Temporal full-Earth maps remain blocked_external without authorized reconstructions",
+          "blocker": "17/17 full-Earth maps blocked_external; ICS remains labeled sample; no fake unlock",
           "owner": "archive",
           "status": "runtime_playable"
         },
@@ -71,7 +71,7 @@
           "native_evidence": false,
           "final_art": false,
           "human_test": false,
-          "blocker": "Required external COL/GBIF/IUCN/PBDB/NASA imports not source-verified; iucnAssessed source-verified count is 0 after mock quarantine; production readiness remains NOT ready",
+          "blocker": "Bounded public COL/GBIF/PBDB/Neotoma/NASA snapshots acquired as sample_fallback (verified=0); IUCN blocked without token; ICS/maps not source-verified; production ready=false",
           "owner": "archive",
           "status": "runtime_playable"
         },
@@ -115,7 +115,7 @@
           "native_evidence": false,
           "final_art": false,
           "human_test": false,
-          "blocker": "Single authored steppe encounter; not a surveyed regional catalog",
+          "blocker": "12 explore regions + museum cards deepened; Steppe horse honesty preserved; not Earth-complete",
           "owner": "archive",
           "status": "gameplay_tested"
         },
@@ -137,7 +137,7 @@
           "native_evidence": false,
           "final_art": false,
           "human_test": false,
-          "blocker": "Emoji presentation only \u2014 final art candidates not human-approved",
+          "blocker": "Flagship 24 species-specific observation profiles + emoji identity candidates \u2014 final art not human-approved",
           "owner": "archive",
           "status": "gameplay_tested"
         },
@@ -160,13 +160,19 @@
         "artifacts/play/EXPEDITION_JOURNEY.json",
         "public/data/status/production_readiness_report.json",
         "artifacts/archive_full/DATA_COVERAGE_HONESTY.json",
-        "scripts/audit-data.ts"
+        "scripts/audit-data.ts",
+        "src/services/ingestion/publicSourceAdapters.ts",
+        "data-pipeline/src/archive_life_pipeline/public_bounded_acquire.py",
+        "docs/OWNER_IUCN_SETUP.md",
+        "src/services/flagshipTaxonProfiles.ts",
+        "src/systems/expeditionJourneyPolish.test.ts",
+        "public/data/status/public_bounded_acquire_report.json"
       ],
       "notes": [
-        "ARCHIVE section fully filled this shift.",
+        "ARCHIVE section updated after public-bounded acquire + flagship/region/journey polish.",
         "Human / RC / V1 / commercial gates stay false.",
         "Do not interpret gameplay_tested as Earth-complete science or commercial authorization.",
-        "IUCN honesty: manifest.coverage.iucnAssessed reconciled to 0 source-verified assessments; mock category labels kept for gameplay; Human/RC/V1 remain false."
+        "iucnAssessed source-verified count remains 0; mock quarantine preserved."
       ]
     },
     "anime_aggressors": {
