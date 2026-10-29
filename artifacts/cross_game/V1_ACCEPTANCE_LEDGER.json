@@ -3,7 +3,7 @@
   "title": "Cross-game V1 acceptance ledger",
   "generatedAt": "2026-10-29T19:05:00Z",
   "baseTipShaAtDraft": "36b0576ff046b98381a13ef218167def16d3d7c6",
-  "workingSha": "ebc7b82852000a047d01ffe7917348c609094163",
+  "workingSha": "8a95ce54ae8e0e4c90bc96f67121af829219b461",
   "draftPr": 55,
   "draftPrUrl": "https://github.com/gunnchOS3k/archive-of-life-artifact-world/pull/55",
   "rtm": "artifacts/rtm/ARCHIVE_REQUIREMENTS_TO_EVIDENCE_MATRIX.json",
@@ -177,7 +177,7 @@
       ],
       "notes": [
         "ARCHIVE Priority 2 + RTM: science honesty matrix, Time Atlas 0/17 copy, flagship art_status, expedition/museum-dex polish, owner review package.",
-        "Shared PVS scaffold referenced; specialty schemas empty — local RTM until rebase.",
+        "Shared PVS scaffold referenced; specialty schemas empty \u2014 local RTM until rebase.",
         "Human / RC / V1 / commercial gates stay false; Cursor-Complete not claimed.",
         "Do not interpret gameplay_tested as Earth-complete science or commercial authorization.",
         "iucnAssessed source-verified count remains 0; sample_fallback never promoted to source_verified."
@@ -322,5 +322,5 @@
       }
     }
   },
-  "contentSha": "ebc7b82852000a047d01ffe7917348c609094163"
+  "contentSha": "8a95ce54ae8e0e4c90bc96f67121af829219b461"
 }
