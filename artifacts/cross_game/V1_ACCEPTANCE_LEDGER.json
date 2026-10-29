@@ -177,10 +177,12 @@
       ],
       "notes": [
         "ARCHIVE Priority 2 + RTM: science honesty matrix, Time Atlas 0/17 copy, flagship art_status, expedition/museum-dex polish, owner review package.",
-        "Shared PVS scaffold referenced; specialty schemas empty \u2014 local RTM until rebase.",
         "Human / RC / V1 / commercial gates stay false; Cursor-Complete not claimed.",
         "Do not interpret gameplay_tested as Earth-complete science or commercial authorization.",
-        "iucnAssessed source-verified count remains 0; sample_fallback never promoted to source_verified."
+        "iucnAssessed source-verified count remains 0; sample_fallback never promoted to source_verified.",
+        "RTM bound to GUNNCHOS3K_PVS@1.0.0 (gunnchos-site 45b4566+); schema-validated; independent_review=not_started.",
+        "Museum/dex honesty mounts wired into player UI + a11y; floors 157/24/12; emoji\u2260finished; IUCN blocked; 0/17 maps.",
+        "Human / RC / V1 / commercial gates stay false; Cursor-Complete not claimed."
       ]
     },
     "anime_aggressors": {
@@ -322,5 +324,5 @@
       }
     }
   },
-  "contentSha": "8a95ce54ae8e0e4c90bc96f67121af829219b461"
+  "contentSha": "1dad3288274b6119b8448818a49262e098d65d81"
 }
