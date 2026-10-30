@@ -149,6 +149,17 @@ export const DEFAULT_FIELD_COMPARE_TARGETS: GameFacing[] = [
     commonName: "Przewalski's Horse",
     scientificName: 'Equus ferus przewalskii',
   },
+  // Bounded public acquires (approvedForUse=false) — still sample_fallback only.
+  {
+    taxonId: 'lontra_canadensis',
+    commonName: 'North American River Otter',
+    scientificName: 'Lontra canadensis',
+  },
+  {
+    taxonId: 'mammuthus_primigenius',
+    commonName: 'Woolly Mammoth',
+    scientificName: 'Mammuthus primigenius',
+  },
 ];
 
 /** Gate 1 organism shape → FixtureRecord (fixture_sample — not live export). */
@@ -228,6 +239,73 @@ export function fixtureRecordFromGbifBatchRecord(
     confidence_or_uncertainty: {
       confidence: 'FIXTURE_TEST_ONLY',
       confidence_basis: 'sparse GBIF ingest batch — name/key/license only; not a full provenance snapshot',
+    },
+    verification_status: 'needs_source_verification',
+  };
+}
+
+/**
+ * COL public_bounded flagship hit → sparse FixtureRecord.
+ * Uses species-rank classification label; approvedForUse remains false at snapshot level.
+ */
+export function fixtureRecordFromColBoundedTaxon(
+  entry: {
+    query?: string;
+    hit?: {
+      classification?: Array<{ id?: string; name?: string; label?: string; rank?: string; status?: string }>;
+    };
+  },
+  retrievedAt?: string,
+): FixtureRecord | null {
+  const classification = entry.hit?.classification ?? [];
+  const species =
+    classification.find((c) => String(c.rank ?? '').toLowerCase() === 'species' && c.status === 'accepted') ??
+    classification.find((c) => String(c.rank ?? '').toLowerCase() === 'species');
+  // Require a real species-rank classification name — never fall back to an
+  // infraspecific query string (that would invent an exact fixture match).
+  const accepted = species?.name?.trim();
+  if (!accepted) return null;
+  return {
+    scientific_name: { accepted_scientific_name: accepted },
+    source_organization: 'Catalogue of Life',
+    source_record_id: species?.id ? `COL:bounded:${species.id}` : undefined,
+    retrieved_at: retrievedAt,
+    license: { license_spdx_or_label: 'COL terms of use' },
+    confidence_or_uncertainty: {
+      confidence: 'FIXTURE_TEST_ONLY',
+      confidence_basis:
+        'public_bounded COL acquire — sample_fallback; approvedForUse=false; not source_verified release',
+    },
+    verification_status: 'needs_source_verification',
+  };
+}
+
+/** PBDB public_bounded flagship row → sparse FixtureRecord (approvedForUse=false). */
+export function fixtureRecordFromPbdbBoundedRecord(
+  entry: {
+    query?: string;
+    row?: {
+      accepted_name?: string;
+      accepted_no?: string;
+      taxon_name?: string;
+      taxon_no?: string;
+    };
+  },
+  retrievedAt?: string,
+): FixtureRecord | null {
+  const accepted = entry.row?.accepted_name ?? entry.row?.taxon_name ?? entry.query;
+  if (!accepted) return null;
+  const id = entry.row?.accepted_no ?? entry.row?.taxon_no;
+  return {
+    scientific_name: { accepted_scientific_name: accepted },
+    source_organization: 'Paleobiology Database',
+    source_record_id: id ? `PBDB:bounded:${id}` : undefined,
+    retrieved_at: retrievedAt,
+    license: { license_spdx_or_label: 'CC BY 4.0' },
+    confidence_or_uncertainty: {
+      confidence: 'FIXTURE_TEST_ONLY',
+      confidence_basis:
+        'public_bounded PBDB acquire — sample_fallback; approvedForUse=false; not source_verified release',
     },
     verification_status: 'needs_source_verification',
   };

@@ -24,6 +24,8 @@ describe('lockedScienceSurroundExperience', () => {
     expect(html).toContain('0/17');
     expect(html).toContain('Continue the expedition');
     expect(html).toContain('procedural');
+    expect(html).toContain('lifeling-honesty');
+    expect(html).toContain('data-conservation-badges="false"');
 
     const outDir = join(process.cwd(), 'artifacts/science');
     mkdirSync(outDir, { recursive: true });

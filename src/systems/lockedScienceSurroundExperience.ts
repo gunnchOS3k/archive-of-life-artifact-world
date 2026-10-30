@@ -11,6 +11,7 @@ import {
   type TemporalMapCatalogHonesty,
 } from '@/systems/timeAtlasBlockedPresentation';
 import { renderFlagshipOriginalArtProgressHtml } from '@/systems/flagshipOriginalArtProgress';
+import { renderLifelingHonestyHtml } from '@/systems/lifelingHonestyPresentation';
 import { renderTaxonomyReconcileHonestyHtml, type TaxonomyReconcileReport } from '@/services/ingestion/taxonomyReconcile';
 import type { TemporalEarthMapCatalog } from '@/schema/temporalMap';
 
@@ -114,6 +115,7 @@ export function renderLockedScienceSurroundHtml(input?: {
     renderIucnBlockedPanelHtml(iucn),
     renderTemporalMapCatalogBannerHtml(mapHonesty),
     renderFlagshipOriginalArtProgressHtml(),
+    renderLifelingHonestyHtml(),
     taxonomyHtml,
     '</section>',
   ].join('\n');

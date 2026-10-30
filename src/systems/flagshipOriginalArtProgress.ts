@@ -61,6 +61,21 @@ export const PROCEDURAL_ART_WAVE1: readonly string[] = [
   'balaenoptera_musculus',
 ] as const;
 
+/** Second-wave briefs — still procedural candidates, never finished models. */
+export const PROCEDURAL_ART_WAVE2: readonly string[] = [
+  'odocoileus_virginianus',
+  'ursus_americanus',
+  'danaus_plexippus',
+  'tyrannosaurus_rex',
+  'lontra_canadensis',
+  'castor_canadensis',
+] as const;
+
+export const PROCEDURAL_ART_WAVES: readonly string[] = [
+  ...PROCEDURAL_ART_WAVE1,
+  ...PROCEDURAL_ART_WAVE2,
+] as const;
+
 const SILHOUETTE_BRIEFS: Record<string, Omit<SilhouetteBrief, 'taxonId' | 'assetKind' | 'finishedModel' | 'humanApproved'>> = {
   panthera_leo: {
     posture: 'lateral walk cycle, head slightly below withers',
@@ -98,6 +113,42 @@ const SILHOUETTE_BRIEFS: Record<string, Omit<SilhouetteBrief, 'taxonId' | 'asset
     locomotionCue: 'slow fluke drive',
     habitatBackdrop: 'upwelling / krill patch — pelagic',
   },
+  odocoileus_virginianus: {
+    posture: 'alert freeze, ears flared, white flag ready',
+    anatomyFocus: ['white rump flag', 'antler candidate (buck seasonal)', 'slender legs'],
+    locomotionCue: 'browse pause → explosive bound',
+    habitatBackdrop: 'oak-edge browse / creek crossing — Nearctic forest margin',
+  },
+  ursus_americanus: {
+    posture: '¾ rear-quarter forage stand',
+    anatomyFocus: ['rounded ear profile', 'plantigrade gait mass', 'short tail'],
+    locomotionCue: 'amble → brief gallop',
+    habitatBackdrop: 'mixed forest berry / mast forage — not polar substitution',
+  },
+  danaus_plexippus: {
+    posture: 'open-wing glide, dorsal orange field visible',
+    anatomyFocus: ['veined wing panel', 'clubbed antennae', 'slender body'],
+    locomotionCue: 'flutter → sustained migratory glide',
+    habitatBackdrop: 'milkweed corridor / roost cluster — migratory honesty',
+  },
+  tyrannosaurus_rex: {
+    posture: 'lateral mid-stride, skull foreshortened',
+    anatomyFocus: ['massive skull', 'reduced forelimbs', 'bipedal balance tail'],
+    locomotionCue: 'heavy bipedal walk — reconstruction framing',
+    habitatBackdrop: 'Late Cretaceous floodplain — fossil reconstruction, not living zoo',
+  },
+  lontra_canadensis: {
+    posture: 'streamside stretch with arched back',
+    anatomyFocus: ['streamlined body', 'webbed feet cue', 'tapered tail'],
+    locomotionCue: 'porpoise swim → bank scramble',
+    habitatBackdrop: 'riparian pool / beaver-influenced waterway',
+  },
+  castor_canadensis: {
+    posture: 'sitting haul-out with flat tail visible',
+    anatomyFocus: ['paddle tail', 'large incisor focus', 'waterproof coat mass'],
+    locomotionCue: 'waddle → powerful swim kick',
+    habitatBackdrop: 'lodge pond / felled aspen shoreline',
+  },
 };
 
 const RULE =
@@ -115,15 +166,25 @@ export function buildSilhouetteBrief(taxonId: string): SilhouetteBrief | null {
   };
 }
 
-/** Effective art status after wave-1 procedural progress (does not mutate profiles). */
+/** Effective art status after wave-1/2 procedural progress (does not mutate profiles). */
 export function effectiveFlagshipArtStatus(profile: FlagshipObservationProfile): FinalArtStatus {
   assertFlagshipArtHonesty(profile);
-  if (PROCEDURAL_ART_WAVE1.includes(profile.taxonId)) {
+  if (PROCEDURAL_ART_WAVES.includes(profile.taxonId)) {
     if (profile.finalArtStatus === 'emoji_identity_candidate') {
       return 'procedural_candidate';
     }
   }
   return profile.finalArtStatus;
+}
+
+function proceduralWaveNote(taxonId: string): string {
+  if (PROCEDURAL_ART_WAVE2.includes(taxonId)) {
+    return 'Wave-2 silhouette brief authored; still not a finished model';
+  }
+  if (PROCEDURAL_ART_WAVE1.includes(taxonId)) {
+    return 'Wave-1 silhouette brief authored; still not a finished model';
+  }
+  return 'Remains emoji identity candidate — not finished';
 }
 
 export function buildFlagshipOriginalArtProgressReport(
@@ -134,7 +195,7 @@ export function buildFlagshipOriginalArtProgressReport(
     assertFlagshipArtHonesty(profile);
     const currentStatus = effectiveFlagshipArtStatus(profile);
     const silhouetteBrief = currentStatus === 'procedural_candidate' ? buildSilhouetteBrief(id) : null;
-    const priorStatus: FinalArtStatus = PROCEDURAL_ART_WAVE1.includes(id)
+    const priorStatus: FinalArtStatus = PROCEDURAL_ART_WAVES.includes(id)
       ? 'emoji_identity_candidate'
       : profile.finalArtStatus;
     return {
@@ -151,9 +212,7 @@ export function buildFlagshipOriginalArtProgressReport(
       emojiEqualsFinished: false,
       finishedModelClaimed: false,
       originalArtApproved: false,
-      progressNote: silhouetteBrief
-        ? 'Wave-1 silhouette brief authored; still not a finished model'
-        : 'Remains emoji identity candidate — not finished',
+      progressNote: proceduralWaveNote(id),
     };
   });
 
@@ -201,8 +260,8 @@ export function renderFlagshipOriginalArtProgressHtml(
 ): string {
   assertFlagshipOriginalArtProgress(report);
   return [
-    '<aside class="flagship-art-progress" data-emoji-finished="false" data-procedural-wave="1" role="note">',
-    `<p><strong>Original art progress:</strong> ${report.proceduralCandidateCount}/${report.flagshipCount} flagships have procedural silhouette briefs — emoji ≠ finished.</p>`,
+    '<aside class="flagship-art-progress" data-emoji-finished="false" data-procedural-wave="2" role="note">',
+    `<p><strong>Original art progress:</strong> ${report.proceduralCandidateCount}/${report.flagshipCount} flagships have procedural silhouette briefs (waves 1–2) — emoji ≠ finished.</p>`,
     `<p>finishedModelsClaimed=false · humanApproved=false · ${escapeHtml(report.rule)}</p>`,
     '</aside>',
   ].join('');

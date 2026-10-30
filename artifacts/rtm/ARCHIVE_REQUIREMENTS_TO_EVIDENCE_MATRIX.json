@@ -5,7 +5,7 @@
   "contract_source_sha": "935eb3a20548b1a4b726f2ba305df94ff496be16",
   "product_id": "archive-of-life",
   "product_repo": "https://github.com/gunnchOS3k/archive-of-life-artifact-world",
-  "generated_at": "2026-10-30T16:05:00Z",
+  "generated_at": "2026-10-30T17:45:00Z",
   "honesty_flags": {
     "HUMAN": false,
     "RC2": false,
@@ -14,7 +14,7 @@
   "phase_summary": {
     "cursor_complete": {
       "status": "not_started",
-      "notes": "Automated evidence and UI wiring exist; Cursor-Complete is not claimed. Floors 157/24/12 remain authored/sample; emoji\u2260finished (6/24 procedural silhouette briefs); IUCN blocked; 0/17 maps."
+      "notes": "Automated evidence and UI wiring exist; Cursor-Complete is not claimed. Floors 157/24/12 remain authored/sample; emoji\u2260finished (12/24 procedural silhouette briefs waves 1\u20132); IUCN blocked; 0/17 maps; Lifeling cosmetic-only."
     },
     "codex_independently_verified": {
       "status": "not_started"
@@ -67,10 +67,10 @@
         "Public-data alternatives remain investigation-only (approvedForUse=false)"
       ],
       "severity": "blocker",
-      "sha": "8a7bac7d5b6fc1d0633a0dc1627a393cb28b45f0",
+      "sha": "PENDING_IMPLEMENT_SHA",
       "independent_review_status": "not_started",
       "cursor_complete_status": "in_progress",
-      "notes": "Specialty: scientific_provenance. Production gate remains false. Taxonomy reconcile across wave008/COL/GBIF/PBDB fixtures with snapshot SHA-256 + retrievedAt; ACQUIRE_MANIFEST paths relativized; optional local COL/GBIF bounded hashes recorded when present (gitignored). Field matrix held; iucnBlocksAllScience=false; anySourceVerified/productionReady false; sample_fallback never promoted; NASA historical f6d1c4d8\u2026 untouched."
+      "notes": "Specialty: scientific_provenance. Production gate remains false. Field matrix expanded to 17 taxa via public_bounded COL/PBDB (Lontra + Mammuthus) with approvedForUse=false; taxonomy reconcile held; anySourceVerified/productionReady false; sample_fallback never promoted; NASA historical f6d1c4d8\u2026 untouched; IUCN not invented."
     },
     {
       "req_id": "AOL-SCI-002",
@@ -298,10 +298,10 @@
         "HUMAN/RC2/V1 remain false"
       ],
       "severity": "high",
-      "sha": "1dad3288274b6119b8448818a49262e098d65d81",
+      "sha": "PENDING_IMPLEMENT_SHA",
       "independent_review_status": "not_started",
       "cursor_complete_status": "in_progress",
-      "notes": "Specialty: expeditions. Player UI mounts museum/dex honesty surfaces."
+      "notes": "Specialty: expeditions. Museum/dex/Lifeling honesty surfaces continue under IUCN blocked + 0/17 maps; expedition journey ok=true; HUMAN/RC2/V1 false."
     },
     {
       "req_id": "AOL-ORG-001",
@@ -316,7 +316,8 @@
         "src/systems/expeditionJourneyPolish.test.ts",
         "src/systems/flagshipArtHonestyPresentation.test.ts",
         "src/systems/flagshipOriginalArtProgress.test.ts",
-        "src/systems/lockedScienceSurroundExperience.test.ts"
+        "src/systems/lockedScienceSurroundExperience.test.ts",
+        "src/systems/lifelingHonestyPresentation.test.ts"
       ],
       "automated_evidence": [
         "src/services/flagshipTaxonProfiles.ts",
@@ -325,9 +326,12 @@
         "src/systems/flagshipArtHonestyPresentation.ts",
         "src/systems/flagshipOriginalArtProgress.ts",
         "src/systems/lockedScienceSurroundExperience.ts",
+        "src/systems/lifelingHonestyPresentation.ts",
+        "src/ui/companionUI.ts",
         "artifacts/science/FLAGSHIP_ART_HONESTY.json",
         "artifacts/science/FLAGSHIP_ART_PROGRESS.json",
-        "artifacts/science/LOCKED_SCIENCE_SURROUND.json"
+        "artifacts/science/LOCKED_SCIENCE_SURROUND.json",
+        "artifacts/science/LIFELING_HONESTY.json"
       ],
       "native_physical": {
         "status": "not_applicable",
@@ -340,10 +344,10 @@
         "Human final-art approval pending"
       ],
       "severity": "high",
-      "sha": "8a7bac7d5b6fc1d0633a0dc1627a393cb28b45f0",
+      "sha": "PENDING_IMPLEMENT_SHA",
       "independent_review_status": "not_started",
       "cursor_complete_status": "in_progress",
-      "notes": "Specialty: organism_identity. Wave-1 original art: 6/24 procedural silhouette briefs (lion/elephant/wolf/whale/Przewalski/mammoth); emoji\u2260finished; finishedModelsClaimed=false; ArchiveDex mounts art-progress + locked-science surround (IUCN blocked + 0/17 maps) without inventing credentials/assets."
+      "notes": "Specialty: organism_identity. Waves 1\u20132 original art: 12/24 procedural silhouette briefs; emoji\u2260finished; finishedModelsClaimed=false; Lifeling honesty strip (conservationBadgesShown=false) mounted in companion UI + locked-science surround; IUCN blocked + 0/17 maps held."
     },
     {
       "req_id": "AOL-SAV-001",

@@ -1,9 +1,9 @@
 {
   "schema": "aol.flagship_original_art_progress.v1",
-  "generatedAt": "2026-10-30T16:00:00.000Z",
+  "generatedAt": "2026-10-30T17:30:00.000Z",
   "flagshipCount": 24,
-  "proceduralCandidateCount": 6,
-  "emojiIdentityCount": 18,
+  "proceduralCandidateCount": 12,
+  "emojiIdentityCount": 12,
   "finishedModelsClaimed": false,
   "emojiEqualsFinished": false,
   "anyHumanApprovedFinal": false,
@@ -91,13 +91,26 @@
       "scientificName": "Odocoileus virginianus",
       "representationMark": "🦌",
       "priorStatus": "emoji_identity_candidate",
-      "currentStatus": "emoji_identity_candidate",
-      "artStatusLabel": "Art status: emoji identity candidate (not a finished model)",
-      "silhouetteBrief": null,
+      "currentStatus": "procedural_candidate",
+      "artStatusLabel": "Art status: procedural candidate (silhouette brief — not human-approved final art)",
+      "silhouetteBrief": {
+        "taxonId": "odocoileus_virginianus",
+        "posture": "alert freeze, ears flared, white flag ready",
+        "anatomyFocus": [
+          "white rump flag",
+          "antler candidate (buck seasonal)",
+          "slender legs"
+        ],
+        "locomotionCue": "browse pause → explosive bound",
+        "habitatBackdrop": "oak-edge browse / creek crossing — Nearctic forest margin",
+        "assetKind": "silhouette_brief",
+        "finishedModel": false,
+        "humanApproved": false
+      },
       "emojiEqualsFinished": false,
       "finishedModelClaimed": false,
       "originalArtApproved": false,
-      "progressNote": "Remains emoji identity candidate — not finished"
+      "progressNote": "Wave-2 silhouette brief authored; still not a finished model"
     },
     {
       "taxonId": "balaenoptera_musculus",
@@ -130,39 +143,78 @@
       "scientificName": "Ursus americanus",
       "representationMark": "🐻",
       "priorStatus": "emoji_identity_candidate",
-      "currentStatus": "emoji_identity_candidate",
-      "artStatusLabel": "Art status: emoji identity candidate (not a finished model)",
-      "silhouetteBrief": null,
+      "currentStatus": "procedural_candidate",
+      "artStatusLabel": "Art status: procedural candidate (silhouette brief — not human-approved final art)",
+      "silhouetteBrief": {
+        "taxonId": "ursus_americanus",
+        "posture": "¾ rear-quarter forage stand",
+        "anatomyFocus": [
+          "rounded ear profile",
+          "plantigrade gait mass",
+          "short tail"
+        ],
+        "locomotionCue": "amble → brief gallop",
+        "habitatBackdrop": "mixed forest berry / mast forage — not polar substitution",
+        "assetKind": "silhouette_brief",
+        "finishedModel": false,
+        "humanApproved": false
+      },
       "emojiEqualsFinished": false,
       "finishedModelClaimed": false,
       "originalArtApproved": false,
-      "progressNote": "Remains emoji identity candidate — not finished"
+      "progressNote": "Wave-2 silhouette brief authored; still not a finished model"
     },
     {
       "taxonId": "castor_canadensis",
       "scientificName": "Castor canadensis",
       "representationMark": "🦫",
       "priorStatus": "emoji_identity_candidate",
-      "currentStatus": "emoji_identity_candidate",
-      "artStatusLabel": "Art status: emoji identity candidate (not a finished model)",
-      "silhouetteBrief": null,
+      "currentStatus": "procedural_candidate",
+      "artStatusLabel": "Art status: procedural candidate (silhouette brief — not human-approved final art)",
+      "silhouetteBrief": {
+        "taxonId": "castor_canadensis",
+        "posture": "sitting haul-out with flat tail visible",
+        "anatomyFocus": [
+          "paddle tail",
+          "large incisor focus",
+          "waterproof coat mass"
+        ],
+        "locomotionCue": "waddle → powerful swim kick",
+        "habitatBackdrop": "lodge pond / felled aspen shoreline",
+        "assetKind": "silhouette_brief",
+        "finishedModel": false,
+        "humanApproved": false
+      },
       "emojiEqualsFinished": false,
       "finishedModelClaimed": false,
       "originalArtApproved": false,
-      "progressNote": "Remains emoji identity candidate — not finished"
+      "progressNote": "Wave-2 silhouette brief authored; still not a finished model"
     },
     {
       "taxonId": "lontra_canadensis",
       "scientificName": "Lontra canadensis",
       "representationMark": "🦦",
       "priorStatus": "emoji_identity_candidate",
-      "currentStatus": "emoji_identity_candidate",
-      "artStatusLabel": "Art status: emoji identity candidate (not a finished model)",
-      "silhouetteBrief": null,
+      "currentStatus": "procedural_candidate",
+      "artStatusLabel": "Art status: procedural candidate (silhouette brief — not human-approved final art)",
+      "silhouetteBrief": {
+        "taxonId": "lontra_canadensis",
+        "posture": "streamside stretch with arched back",
+        "anatomyFocus": [
+          "streamlined body",
+          "webbed feet cue",
+          "tapered tail"
+        ],
+        "locomotionCue": "porpoise swim → bank scramble",
+        "habitatBackdrop": "riparian pool / beaver-influenced waterway",
+        "assetKind": "silhouette_brief",
+        "finishedModel": false,
+        "humanApproved": false
+      },
       "emojiEqualsFinished": false,
       "finishedModelClaimed": false,
       "originalArtApproved": false,
-      "progressNote": "Remains emoji identity candidate — not finished"
+      "progressNote": "Wave-2 silhouette brief authored; still not a finished model"
     },
     {
       "taxonId": "phoca_vitulina",
@@ -208,13 +260,26 @@
       "scientificName": "Danaus plexippus",
       "representationMark": "🦋",
       "priorStatus": "emoji_identity_candidate",
-      "currentStatus": "emoji_identity_candidate",
-      "artStatusLabel": "Art status: emoji identity candidate (not a finished model)",
-      "silhouetteBrief": null,
+      "currentStatus": "procedural_candidate",
+      "artStatusLabel": "Art status: procedural candidate (silhouette brief — not human-approved final art)",
+      "silhouetteBrief": {
+        "taxonId": "danaus_plexippus",
+        "posture": "open-wing glide, dorsal orange field visible",
+        "anatomyFocus": [
+          "veined wing panel",
+          "clubbed antennae",
+          "slender body"
+        ],
+        "locomotionCue": "flutter → sustained migratory glide",
+        "habitatBackdrop": "milkweed corridor / roost cluster — migratory honesty",
+        "assetKind": "silhouette_brief",
+        "finishedModel": false,
+        "humanApproved": false
+      },
       "emojiEqualsFinished": false,
       "finishedModelClaimed": false,
       "originalArtApproved": false,
-      "progressNote": "Remains emoji identity candidate — not finished"
+      "progressNote": "Wave-2 silhouette brief authored; still not a finished model"
     },
     {
       "taxonId": "apis_mellifera",
@@ -364,13 +429,26 @@
       "scientificName": "Tyrannosaurus rex",
       "representationMark": "🦖",
       "priorStatus": "emoji_identity_candidate",
-      "currentStatus": "emoji_identity_candidate",
-      "artStatusLabel": "Art status: emoji identity candidate (not a finished model)",
-      "silhouetteBrief": null,
+      "currentStatus": "procedural_candidate",
+      "artStatusLabel": "Art status: procedural candidate (silhouette brief — not human-approved final art)",
+      "silhouetteBrief": {
+        "taxonId": "tyrannosaurus_rex",
+        "posture": "lateral mid-stride, skull foreshortened",
+        "anatomyFocus": [
+          "massive skull",
+          "reduced forelimbs",
+          "bipedal balance tail"
+        ],
+        "locomotionCue": "heavy bipedal walk — reconstruction framing",
+        "habitatBackdrop": "Late Cretaceous floodplain — fossil reconstruction, not living zoo",
+        "assetKind": "silhouette_brief",
+        "finishedModel": false,
+        "humanApproved": false
+      },
       "emojiEqualsFinished": false,
       "finishedModelClaimed": false,
       "originalArtApproved": false,
-      "progressNote": "Remains emoji identity candidate — not finished"
+      "progressNote": "Wave-2 silhouette brief authored; still not a finished model"
     },
     {
       "taxonId": "trilobita_order",

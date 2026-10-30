@@ -9,8 +9,10 @@ import {
   findFixtureRecordAllowingInfraspecific,
   formatComparisonForUi,
   fixtureRecordFromColBatchEntry,
+  fixtureRecordFromColBoundedTaxon,
   fixtureRecordFromGate1Organism,
   fixtureRecordFromGbifBatchRecord,
+  fixtureRecordFromPbdbBoundedRecord,
   mergeFixtureRecordsPreferringRich,
   type FixtureRecord,
 } from './fieldLevelSourceComparison';
@@ -81,9 +83,62 @@ function loadMergedFixtureRecords(): { snapshotId: string; records: FixtureRecor
     )
     .map((r) => fixtureRecordFromGbifBatchRecord(r, gbifBatch.license ?? 'CC BY 4.0'));
 
+  const colBounded = JSON.parse(
+    readFileSync(join(ROOT, 'data-pipeline/snapshots/public_bounded/col_flagship_bounded.json'), 'utf8'),
+  ) as {
+    approvedForUse?: boolean;
+    retrievedAt?: string;
+    verificationStatus?: string;
+    taxa?: Array<{
+      query?: string;
+      hit?: {
+        classification?: Array<{ id?: string; name?: string; label?: string; rank?: string; status?: string }>;
+      };
+    }>;
+  };
+  expect(colBounded.approvedForUse).toBe(false);
+  const colBoundedRecords = (colBounded.taxa ?? [])
+    .map((t) => fixtureRecordFromColBoundedTaxon(t, colBounded.retrievedAt))
+    .filter((r): r is FixtureRecord => {
+      if (!r) return false;
+      const name = String(r.scientific_name?.accepted_scientific_name ?? '').toLowerCase();
+      return flagshipNames.has(name);
+    });
+
+  const pbdbBounded = JSON.parse(
+    readFileSync(join(ROOT, 'data-pipeline/snapshots/public_bounded/pbdb_flagship_bounded.json'), 'utf8'),
+  ) as {
+    approvedForUse?: boolean;
+    retrievedAt?: string;
+    records?: Array<{
+      query?: string;
+      row?: {
+        accepted_name?: string;
+        accepted_no?: string;
+        taxon_name?: string;
+        taxon_no?: string;
+      };
+    }>;
+  };
+  expect(pbdbBounded.approvedForUse).toBe(false);
+  const pbdbBoundedRecords = (pbdbBounded.records ?? [])
+    .map((r) => fixtureRecordFromPbdbBoundedRecord(r, pbdbBounded.retrievedAt))
+    .filter((r): r is FixtureRecord => {
+      if (!r) return false;
+      const name = String(r.scientific_name?.accepted_scientific_name ?? '').toLowerCase();
+      return flagshipNames.has(name);
+    });
+
   return {
-    snapshotId: `${wave.snapshotId}+gate1+col/gbif-batch`,
-    records: mergeFixtureRecordsPreferringRich(wave.records, gate1Records, colRecords, gbifRecords),
+    snapshotId: `${wave.snapshotId}+gate1+col/gbif-batch+bounded-col/pbdb`,
+    records: mergeFixtureRecordsPreferringRich(
+      wave.records,
+      gate1Records,
+      colRecords,
+      gbifRecords,
+      colBoundedRecords,
+      pbdbBoundedRecords,
+    ),
   };
 }
 
@@ -227,12 +282,30 @@ describe('fieldLevelSourceComparison', () => {
     expect(byId.equus_caballus_ferus?.sourceVerifiedRelease).toBe(false);
     expect(byId.equus_caballus_ferus?.fixtureUncertainty).toMatch(/infraspecific_of_fixture/);
 
+    // River otter — COL public_bounded acquire (approvedForUse=false)
+    expect(byId.lontra_canadensis?.fixtureSource).toBe('Catalogue of Life');
+    expect(byId.lontra_canadensis?.fixtureRecordId).toMatch(/^COL:bounded:/);
+    expect(byId.lontra_canadensis?.fieldRows.find((r) => r.field === 'scientific_name')?.status).toBe(
+      'match',
+    );
+    expect(byId.lontra_canadensis?.dataMode).toBe('sample_fallback');
+    expect(byId.lontra_canadensis?.sourceVerifiedRelease).toBe(false);
+    expect(byId.lontra_canadensis?.fixtureUncertainty).toMatch(/approvedForUse=false/);
+
+    // Woolly mammoth — PBDB public_bounded (richer wave008 may win; still sample_fallback)
+    expect(byId.mammuthus_primigenius?.fieldRows.find((r) => r.field === 'scientific_name')?.status).toBe(
+      'match',
+    );
+    expect(byId.mammuthus_primigenius?.dataMode).toBe('sample_fallback');
+    expect(byId.mammuthus_primigenius?.sourceVerifiedRelease).toBe(false);
+    expect(byId.mammuthus_primigenius?.fixtureSource).toMatch(/Paleobiology|PBDB|Catalogue of Life/i);
+
     // Never promote; never invent IUCN assessments in this matrix
     expect(report.anySourceVerified).toBe(false);
     expect(report.comparisons.every((c) => c.sourceVerifiedRelease === false)).toBe(true);
     expect(report.comparisons.every((c) => c.dataMode === 'sample_fallback')).toBe(true);
     expect(report.comparisons.every((c) => !/iucn/i.test(c.fixtureSource))).toBe(true);
-    expect(report.comparisons.length).toBeGreaterThanOrEqual(15);
+    expect(report.comparisons.length).toBeGreaterThanOrEqual(17);
 
     writeEvidence(report);
     const written = JSON.parse(
