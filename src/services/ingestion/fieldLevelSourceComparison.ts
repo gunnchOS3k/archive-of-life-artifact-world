@@ -59,6 +59,11 @@ export type GameFacing = {
   regionLabel?: string;
 };
 
+/**
+ * Flagship (and paleo flagship) targets with game-facing identity.
+ * Only taxa that have a matching authorized fixture record produce field rows;
+ * IUCN / mock / teaching fixture rows are never treated as assessments.
+ */
 export const DEFAULT_FIELD_COMPARE_TARGETS: GameFacing[] = [
   {
     taxonId: 'panthera_leo',
@@ -66,7 +71,158 @@ export const DEFAULT_FIELD_COMPARE_TARGETS: GameFacing[] = [
     scientificName: 'Panthera leo',
     regionLabel: 'Afrotropical',
   },
+  {
+    taxonId: 'canis_lupus',
+    commonName: 'Gray Wolf',
+    scientificName: 'Canis lupus',
+    // wave008 GBIF fixture has no region — omit so we do not invent geography
+  },
+  {
+    taxonId: 'tyrannosaurus_rex',
+    commonName: 'Tyrannosaurus rex',
+    scientificName: 'Tyrannosaurus rex',
+    regionLabel: 'Late Cretaceous North America',
+  },
+  {
+    taxonId: 'danaus_plexippus',
+    commonName: 'Monarch Butterfly',
+    scientificName: 'Danaus plexippus',
+    regionLabel: 'Nearctic migratory corridor (fixture)',
+  },
+  {
+    taxonId: 'ursus_maritimus',
+    commonName: 'Polar Bear',
+    scientificName: 'Ursus maritimus',
+  },
+  {
+    taxonId: 'loxodonta_africana',
+    commonName: 'African Elephant',
+    scientificName: 'Loxodonta africana',
+  },
+  {
+    taxonId: 'castor_canadensis',
+    commonName: 'North American Beaver',
+    scientificName: 'Castor canadensis',
+  },
+  {
+    taxonId: 'apis_mellifera',
+    commonName: 'Western Honeybee',
+    scientificName: 'Apis mellifera',
+  },
 ];
+
+/** Gate 1 organism shape → FixtureRecord (fixture_sample — not live export). */
+export function fixtureRecordFromGate1Organism(organism: {
+  commonName?: string;
+  scientificName?: string;
+  sourceOrganization?: string;
+  sourceRecordId?: string;
+  license?: string;
+  retrievalDate?: string;
+  geographicProvenance?: string;
+  confidence?: string;
+}): FixtureRecord {
+  const retrieved = organism.retrievalDate
+    ? (organism.retrievalDate.includes('T')
+        ? organism.retrievalDate
+        : `${organism.retrievalDate}T00:00:00.000Z`)
+    : undefined;
+  return {
+    common_name: organism.commonName,
+    scientific_name: { accepted_scientific_name: organism.scientificName },
+    source_organization: organism.sourceOrganization,
+    source_record_id: organism.sourceRecordId,
+    retrieved_at: retrieved,
+    license: { license_spdx_or_label: organism.license },
+    confidence_or_uncertainty: {
+      confidence: organism.confidence,
+      confidence_basis: organism.confidence
+        ? `gate1 fixture confidence=${organism.confidence} (not source_verified release)`
+        : 'gate1 fixture — sample only',
+    },
+    geographic_provenance: organism.geographicProvenance
+      ? { region: organism.geographicProvenance }
+      : undefined,
+    verification_status: 'needs_source_verification',
+  };
+}
+
+/** COL tier-R batch entry → sparse FixtureRecord (FIXTURE_TEST_ONLY). */
+export function fixtureRecordFromColBatchEntry(
+  entry: { id?: string; scientificName?: string; acceptedName?: string },
+  batchLicense = 'COL terms of use',
+): FixtureRecord {
+  const accepted = entry.acceptedName ?? entry.scientificName;
+  return {
+    scientific_name: { accepted_scientific_name: accepted },
+    source_organization: 'Catalogue of Life',
+    source_record_id: entry.id ? `COL:fixture:${entry.id}` : undefined,
+    license: { license_spdx_or_label: batchLicense },
+    confidence_or_uncertainty: {
+      confidence: 'FIXTURE_TEST_ONLY',
+      confidence_basis: 'sparse COL ingest batch — name/id only; not a full provenance snapshot',
+    },
+    verification_status: 'needs_source_verification',
+  };
+}
+
+/** GBIF tier-R batch record → sparse FixtureRecord (FIXTURE_TEST_ONLY). */
+export function fixtureRecordFromGbifBatchRecord(
+  record: {
+    key?: number;
+    scientificName?: string;
+    acceptedScientificName?: string;
+    license?: string;
+  },
+  batchLicense = 'CC BY 4.0',
+): FixtureRecord {
+  const accepted = record.acceptedScientificName ?? record.scientificName;
+  return {
+    scientific_name: { accepted_scientific_name: accepted },
+    source_organization: 'GBIF',
+    source_record_id:
+      record.key != null ? `GBIF:fixture:${record.key}` : undefined,
+    license: { license_spdx_or_label: record.license ?? batchLicense },
+    confidence_or_uncertainty: {
+      confidence: 'FIXTURE_TEST_ONLY',
+      confidence_basis: 'sparse GBIF ingest batch — name/key/license only; not a full provenance snapshot',
+    },
+    verification_status: 'needs_source_verification',
+  };
+}
+
+/**
+ * Prefer richer wave008-style records when scientific names collide.
+ * Skips mock/teaching/IUCN-blocked rows that must not become assessments.
+ */
+export function mergeFixtureRecordsPreferringRich(
+  primary: FixtureRecord[],
+  ...extras: FixtureRecord[][]
+): FixtureRecord[] {
+  const blockedOrgs = new Set(['iucn']);
+  const blockedNames = new Set([
+    'ludus archivalis',
+    'mockus exemplaris',
+    'incertae sedis blocked',
+  ]);
+  const out: FixtureRecord[] = [];
+  const seen = new Set<string>();
+
+  const pushAll = (records: FixtureRecord[]) => {
+    for (const r of records) {
+      const name = norm(r.scientific_name?.accepted_scientific_name);
+      if (!name || seen.has(name)) continue;
+      const org = norm(r.source_organization);
+      if (blockedOrgs.has(org) || blockedNames.has(name)) continue;
+      seen.add(name);
+      out.push(r);
+    }
+  };
+
+  pushAll(primary);
+  for (const batch of extras) pushAll(batch);
+  return out;
+}
 
 function norm(value: string | null | undefined): string {
   return String(value ?? '')
@@ -101,6 +257,27 @@ function compareField(
   };
 }
 
+/** Like compareField, but both-absent does not count as a match (honest sparse fixtures). */
+function compareAbsentAware(
+  field: string,
+  fixtureValue: string | null | undefined,
+  gameValue: string | null | undefined,
+  notes: string,
+): FieldCompareRow {
+  const f = fixtureValue == null || String(fixtureValue).trim() === '' ? null : String(fixtureValue);
+  const g = gameValue == null || String(gameValue).trim() === '' ? null : String(gameValue);
+  if (f == null && g == null) {
+    return {
+      field,
+      status: 'fixture_only',
+      fixtureValue: null,
+      gameValue: null,
+      notes,
+    };
+  }
+  return compareField(field, f, g, notes);
+}
+
 export function findFixtureRecord(
   records: FixtureRecord[],
   scientificName: string,
@@ -126,11 +303,11 @@ export function compareTaxonAgainstFixture(
       game.commonName,
       'Common name is display-facing; mismatch is noted but not a release promotion',
     ),
-    compareField(
+    compareAbsentAware(
       'geographic_region',
       fixture.geographic_provenance?.region,
       game.regionLabel ?? null,
-      'Region label compared when game supplies one',
+      'Region label compared when either side supplies one; both-absent is not a vacuous match',
     ),
     compareField(
       'source_organization',
@@ -150,11 +327,11 @@ export function compareTaxonAgainstFixture(
       fixture.license?.license_spdx_or_label,
       'License surfaced honestly (UNVERIFIED-FIXTURE ≠ redistribution approval)',
     ),
-    compareField(
+    compareAbsentAware(
       'retrieved_at',
       fixture.retrieved_at,
       fixture.retrieved_at,
-      'Retrieval date from fixture snapshot',
+      'Retrieval date from fixture snapshot; both-absent is not a vacuous match',
     ),
     compareField(
       'uncertainty',
@@ -248,15 +425,17 @@ export function formatComparisonForUi(comparison: TaxonFieldComparison): string 
       (r) =>
         `<li data-field="${r.field}" data-status="${r.status}"><strong>${r.field}</strong>: ${r.status}` +
         `${r.fixtureValue ? ` · fixture=${r.fixtureValue}` : ''}` +
-        `${r.gameValue ? ` · game=${r.gameValue}` : ''}</li>`,
+        `${r.gameValue ? ` · game=${r.gameValue}` : ''}` +
+        `${r.notes ? ` · ${r.notes}` : ''}</li>`,
     )
     .join('');
   return [
-    `<section class="field-level-comparison" data-taxon="${comparison.taxonId}" data-source-verified-release="false">`,
+    `<section class="field-level-comparison" data-taxon="${comparison.taxonId}" data-source-verified-release="false" data-matched-fields="${comparison.matchedFields}" data-compared-fields="${comparison.comparedFields}">`,
     `<h4>Field-level fixture comparison</h4>`,
     `<p>Source: ${comparison.fixtureSource} · Record: ${comparison.fixtureRecordId}</p>`,
     `<p>Retrieved: ${comparison.fixtureRetrievedAt} · License: ${comparison.fixtureLicense}</p>`,
     `<p>Uncertainty: ${comparison.fixtureUncertainty}</p>`,
+    `<p data-match-count="true">Field matches: ${comparison.matchedFields}/${comparison.comparedFields}</p>`,
     `<p><em>dataMode=${comparison.dataMode}; verificationStatus=${comparison.verificationStatus}; sourceVerifiedRelease=false</em></p>`,
     `<ul>${rows}</ul>`,
     `</section>`,

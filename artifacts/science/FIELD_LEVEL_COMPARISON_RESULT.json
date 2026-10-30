@@ -1,7 +1,7 @@
 {
   "schema": "aol.field_level_source_comparison.v1",
-  "generatedAt": "2026-10-29T22:51:08.449Z",
-  "fixtureSnapshotId": "wave008-scientific-fixture-v1",
+  "generatedAt": "2026-10-30T00:24:18.153Z",
+  "fixtureSnapshotId": "wave008-scientific-fixture-v1+gate1+col/gbif-batch",
   "anySourceVerified": false,
   "productionReady": false,
   "rule": "Field matches against authorized fixtures do not promote sample_fallback to source_verified; human license/redistribution review remains required.",
@@ -37,7 +37,7 @@
           "status": "match",
           "fixtureValue": "Afrotropical",
           "gameValue": "Afrotropical",
-          "notes": "Region label compared when game supplies one"
+          "notes": "Region label compared when either side supplies one; both-absent is not a vacuous match"
         },
         {
           "field": "source_organization",
@@ -65,7 +65,7 @@
           "status": "match",
           "fixtureValue": "2024-06-01T12:00:00.000Z",
           "gameValue": "2024-06-01T12:00:00.000Z",
-          "notes": "Retrieval date from fixture snapshot"
+          "notes": "Retrieval date from fixture snapshot; both-absent is not a vacuous match"
         },
         {
           "field": "uncertainty",
@@ -77,6 +77,510 @@
       ],
       "matchedFields": 8,
       "comparedFields": 8
+    },
+    {
+      "taxonId": "canis_lupus",
+      "scientificName": "Canis lupus",
+      "fixtureSource": "GBIF",
+      "fixtureRecordId": "GBIF:taxon:5219173",
+      "fixtureRetrievedAt": "2024-06-01T12:00:00.000Z",
+      "fixtureLicense": "UNVERIFIED-FIXTURE",
+      "fixtureUncertainty": "conflicting species/subspecies treatments",
+      "verificationStatus": "needs_source_verification",
+      "dataMode": "sample_fallback",
+      "sourceVerifiedRelease": false,
+      "fieldRows": [
+        {
+          "field": "scientific_name",
+          "status": "match",
+          "fixtureValue": "Canis lupus",
+          "gameValue": "Canis lupus",
+          "notes": "Accepted scientific name must match fixture spelling"
+        },
+        {
+          "field": "common_name",
+          "status": "match",
+          "fixtureValue": "Gray wolf",
+          "gameValue": "Gray Wolf",
+          "notes": "Common name is display-facing; mismatch is noted but not a release promotion"
+        },
+        {
+          "field": "geographic_region",
+          "status": "fixture_only",
+          "fixtureValue": null,
+          "gameValue": null,
+          "notes": "Region label compared when either side supplies one; both-absent is not a vacuous match"
+        },
+        {
+          "field": "source_organization",
+          "status": "match",
+          "fixtureValue": "GBIF",
+          "gameValue": "GBIF",
+          "notes": "Fixture organization retained for UI provenance surface"
+        },
+        {
+          "field": "source_record_id",
+          "status": "match",
+          "fixtureValue": "GBIF:taxon:5219173",
+          "gameValue": "GBIF:taxon:5219173",
+          "notes": "Fixture record id retained; game_authored play rows stay distinct"
+        },
+        {
+          "field": "license",
+          "status": "match",
+          "fixtureValue": "UNVERIFIED-FIXTURE",
+          "gameValue": "UNVERIFIED-FIXTURE",
+          "notes": "License surfaced honestly (UNVERIFIED-FIXTURE ≠ redistribution approval)"
+        },
+        {
+          "field": "retrieved_at",
+          "status": "match",
+          "fixtureValue": "2024-06-01T12:00:00.000Z",
+          "gameValue": "2024-06-01T12:00:00.000Z",
+          "notes": "Retrieval date from fixture snapshot; both-absent is not a vacuous match"
+        },
+        {
+          "field": "uncertainty",
+          "status": "match",
+          "fixtureValue": "conflicting species/subspecies treatments",
+          "gameValue": "conflicting species/subspecies treatments",
+          "notes": "Uncertainty/confidence basis retained for ArchiveDex evidence panel"
+        }
+      ],
+      "matchedFields": 7,
+      "comparedFields": 7
+    },
+    {
+      "taxonId": "tyrannosaurus_rex",
+      "scientificName": "Tyrannosaurus rex",
+      "fixtureSource": "Paleobiology Database",
+      "fixtureRecordId": "PBDB:taxon:54833",
+      "fixtureRetrievedAt": "2024-06-01T12:00:00.000Z",
+      "fixtureLicense": "UNVERIFIED-FIXTURE",
+      "fixtureUncertainty": "fossil interval",
+      "verificationStatus": "needs_source_verification",
+      "dataMode": "sample_fallback",
+      "sourceVerifiedRelease": false,
+      "fieldRows": [
+        {
+          "field": "scientific_name",
+          "status": "match",
+          "fixtureValue": "Tyrannosaurus rex",
+          "gameValue": "Tyrannosaurus rex",
+          "notes": "Accepted scientific name must match fixture spelling"
+        },
+        {
+          "field": "common_name",
+          "status": "mismatch",
+          "fixtureValue": "Tyrant lizard king",
+          "gameValue": "Tyrannosaurus rex",
+          "notes": "Common name is display-facing; mismatch is noted but not a release promotion"
+        },
+        {
+          "field": "geographic_region",
+          "status": "match",
+          "fixtureValue": "Late Cretaceous North America",
+          "gameValue": "Late Cretaceous North America",
+          "notes": "Region label compared when either side supplies one; both-absent is not a vacuous match"
+        },
+        {
+          "field": "source_organization",
+          "status": "match",
+          "fixtureValue": "Paleobiology Database",
+          "gameValue": "Paleobiology Database",
+          "notes": "Fixture organization retained for UI provenance surface"
+        },
+        {
+          "field": "source_record_id",
+          "status": "match",
+          "fixtureValue": "PBDB:taxon:54833",
+          "gameValue": "PBDB:taxon:54833",
+          "notes": "Fixture record id retained; game_authored play rows stay distinct"
+        },
+        {
+          "field": "license",
+          "status": "match",
+          "fixtureValue": "UNVERIFIED-FIXTURE",
+          "gameValue": "UNVERIFIED-FIXTURE",
+          "notes": "License surfaced honestly (UNVERIFIED-FIXTURE ≠ redistribution approval)"
+        },
+        {
+          "field": "retrieved_at",
+          "status": "match",
+          "fixtureValue": "2024-06-01T12:00:00.000Z",
+          "gameValue": "2024-06-01T12:00:00.000Z",
+          "notes": "Retrieval date from fixture snapshot; both-absent is not a vacuous match"
+        },
+        {
+          "field": "uncertainty",
+          "status": "match",
+          "fixtureValue": "fossil interval",
+          "gameValue": "fossil interval",
+          "notes": "Uncertainty/confidence basis retained for ArchiveDex evidence panel"
+        }
+      ],
+      "matchedFields": 7,
+      "comparedFields": 8
+    },
+    {
+      "taxonId": "danaus_plexippus",
+      "scientificName": "Danaus plexippus",
+      "fixtureSource": "GBIF (fixture mirror)",
+      "fixtureRecordId": "FX-GBIF-DPLEX-001",
+      "fixtureRetrievedAt": "2026-08-06T00:00:00.000Z",
+      "fixtureLicense": "CC-BY-4.0",
+      "fixtureUncertainty": "gate1 fixture confidence=fixture_verified (not source_verified release)",
+      "verificationStatus": "needs_source_verification",
+      "dataMode": "sample_fallback",
+      "sourceVerifiedRelease": false,
+      "fieldRows": [
+        {
+          "field": "scientific_name",
+          "status": "match",
+          "fixtureValue": "Danaus plexippus",
+          "gameValue": "Danaus plexippus",
+          "notes": "Accepted scientific name must match fixture spelling"
+        },
+        {
+          "field": "common_name",
+          "status": "match",
+          "fixtureValue": "Monarch Butterfly",
+          "gameValue": "Monarch Butterfly",
+          "notes": "Common name is display-facing; mismatch is noted but not a release promotion"
+        },
+        {
+          "field": "geographic_region",
+          "status": "match",
+          "fixtureValue": "Nearctic migratory corridor (fixture)",
+          "gameValue": "Nearctic migratory corridor (fixture)",
+          "notes": "Region label compared when either side supplies one; both-absent is not a vacuous match"
+        },
+        {
+          "field": "source_organization",
+          "status": "match",
+          "fixtureValue": "GBIF (fixture mirror)",
+          "gameValue": "GBIF (fixture mirror)",
+          "notes": "Fixture organization retained for UI provenance surface"
+        },
+        {
+          "field": "source_record_id",
+          "status": "match",
+          "fixtureValue": "FX-GBIF-DPLEX-001",
+          "gameValue": "FX-GBIF-DPLEX-001",
+          "notes": "Fixture record id retained; game_authored play rows stay distinct"
+        },
+        {
+          "field": "license",
+          "status": "match",
+          "fixtureValue": "CC-BY-4.0",
+          "gameValue": "CC-BY-4.0",
+          "notes": "License surfaced honestly (UNVERIFIED-FIXTURE ≠ redistribution approval)"
+        },
+        {
+          "field": "retrieved_at",
+          "status": "match",
+          "fixtureValue": "2026-08-06T00:00:00.000Z",
+          "gameValue": "2026-08-06T00:00:00.000Z",
+          "notes": "Retrieval date from fixture snapshot; both-absent is not a vacuous match"
+        },
+        {
+          "field": "uncertainty",
+          "status": "match",
+          "fixtureValue": "gate1 fixture confidence=fixture_verified (not source_verified release)",
+          "gameValue": "gate1 fixture confidence=fixture_verified (not source_verified release)",
+          "notes": "Uncertainty/confidence basis retained for ArchiveDex evidence panel"
+        }
+      ],
+      "matchedFields": 8,
+      "comparedFields": 8
+    },
+    {
+      "taxonId": "ursus_maritimus",
+      "scientificName": "Ursus maritimus",
+      "fixtureSource": "Catalogue of Life",
+      "fixtureRecordId": "COL:fixture:FIX-COL-7",
+      "fixtureRetrievedAt": "",
+      "fixtureLicense": "COL terms of use",
+      "fixtureUncertainty": "sparse COL ingest batch — name/id only; not a full provenance snapshot",
+      "verificationStatus": "needs_source_verification",
+      "dataMode": "sample_fallback",
+      "sourceVerifiedRelease": false,
+      "fieldRows": [
+        {
+          "field": "scientific_name",
+          "status": "match",
+          "fixtureValue": "Ursus maritimus",
+          "gameValue": "Ursus maritimus",
+          "notes": "Accepted scientific name must match fixture spelling"
+        },
+        {
+          "field": "common_name",
+          "status": "game_only",
+          "fixtureValue": null,
+          "gameValue": "Polar Bear",
+          "notes": "Common name is display-facing; mismatch is noted but not a release promotion"
+        },
+        {
+          "field": "geographic_region",
+          "status": "fixture_only",
+          "fixtureValue": null,
+          "gameValue": null,
+          "notes": "Region label compared when either side supplies one; both-absent is not a vacuous match"
+        },
+        {
+          "field": "source_organization",
+          "status": "match",
+          "fixtureValue": "Catalogue of Life",
+          "gameValue": "Catalogue of Life",
+          "notes": "Fixture organization retained for UI provenance surface"
+        },
+        {
+          "field": "source_record_id",
+          "status": "match",
+          "fixtureValue": "COL:fixture:FIX-COL-7",
+          "gameValue": "COL:fixture:FIX-COL-7",
+          "notes": "Fixture record id retained; game_authored play rows stay distinct"
+        },
+        {
+          "field": "license",
+          "status": "match",
+          "fixtureValue": "COL terms of use",
+          "gameValue": "COL terms of use",
+          "notes": "License surfaced honestly (UNVERIFIED-FIXTURE ≠ redistribution approval)"
+        },
+        {
+          "field": "retrieved_at",
+          "status": "fixture_only",
+          "fixtureValue": null,
+          "gameValue": null,
+          "notes": "Retrieval date from fixture snapshot; both-absent is not a vacuous match"
+        },
+        {
+          "field": "uncertainty",
+          "status": "match",
+          "fixtureValue": "sparse COL ingest batch — name/id only; not a full provenance snapshot",
+          "gameValue": "sparse COL ingest batch — name/id only; not a full provenance snapshot",
+          "notes": "Uncertainty/confidence basis retained for ArchiveDex evidence panel"
+        }
+      ],
+      "matchedFields": 5,
+      "comparedFields": 5
+    },
+    {
+      "taxonId": "loxodonta_africana",
+      "scientificName": "Loxodonta africana",
+      "fixtureSource": "Catalogue of Life",
+      "fixtureRecordId": "COL:fixture:FIX-COL-17",
+      "fixtureRetrievedAt": "",
+      "fixtureLicense": "COL terms of use",
+      "fixtureUncertainty": "sparse COL ingest batch — name/id only; not a full provenance snapshot",
+      "verificationStatus": "needs_source_verification",
+      "dataMode": "sample_fallback",
+      "sourceVerifiedRelease": false,
+      "fieldRows": [
+        {
+          "field": "scientific_name",
+          "status": "match",
+          "fixtureValue": "Loxodonta africana",
+          "gameValue": "Loxodonta africana",
+          "notes": "Accepted scientific name must match fixture spelling"
+        },
+        {
+          "field": "common_name",
+          "status": "game_only",
+          "fixtureValue": null,
+          "gameValue": "African Elephant",
+          "notes": "Common name is display-facing; mismatch is noted but not a release promotion"
+        },
+        {
+          "field": "geographic_region",
+          "status": "fixture_only",
+          "fixtureValue": null,
+          "gameValue": null,
+          "notes": "Region label compared when either side supplies one; both-absent is not a vacuous match"
+        },
+        {
+          "field": "source_organization",
+          "status": "match",
+          "fixtureValue": "Catalogue of Life",
+          "gameValue": "Catalogue of Life",
+          "notes": "Fixture organization retained for UI provenance surface"
+        },
+        {
+          "field": "source_record_id",
+          "status": "match",
+          "fixtureValue": "COL:fixture:FIX-COL-17",
+          "gameValue": "COL:fixture:FIX-COL-17",
+          "notes": "Fixture record id retained; game_authored play rows stay distinct"
+        },
+        {
+          "field": "license",
+          "status": "match",
+          "fixtureValue": "COL terms of use",
+          "gameValue": "COL terms of use",
+          "notes": "License surfaced honestly (UNVERIFIED-FIXTURE ≠ redistribution approval)"
+        },
+        {
+          "field": "retrieved_at",
+          "status": "fixture_only",
+          "fixtureValue": null,
+          "gameValue": null,
+          "notes": "Retrieval date from fixture snapshot; both-absent is not a vacuous match"
+        },
+        {
+          "field": "uncertainty",
+          "status": "match",
+          "fixtureValue": "sparse COL ingest batch — name/id only; not a full provenance snapshot",
+          "gameValue": "sparse COL ingest batch — name/id only; not a full provenance snapshot",
+          "notes": "Uncertainty/confidence basis retained for ArchiveDex evidence panel"
+        }
+      ],
+      "matchedFields": 5,
+      "comparedFields": 5
+    },
+    {
+      "taxonId": "castor_canadensis",
+      "scientificName": "Castor canadensis",
+      "fixtureSource": "Catalogue of Life",
+      "fixtureRecordId": "COL:fixture:FIX-COL-52",
+      "fixtureRetrievedAt": "",
+      "fixtureLicense": "COL terms of use",
+      "fixtureUncertainty": "sparse COL ingest batch — name/id only; not a full provenance snapshot",
+      "verificationStatus": "needs_source_verification",
+      "dataMode": "sample_fallback",
+      "sourceVerifiedRelease": false,
+      "fieldRows": [
+        {
+          "field": "scientific_name",
+          "status": "match",
+          "fixtureValue": "Castor canadensis",
+          "gameValue": "Castor canadensis",
+          "notes": "Accepted scientific name must match fixture spelling"
+        },
+        {
+          "field": "common_name",
+          "status": "game_only",
+          "fixtureValue": null,
+          "gameValue": "North American Beaver",
+          "notes": "Common name is display-facing; mismatch is noted but not a release promotion"
+        },
+        {
+          "field": "geographic_region",
+          "status": "fixture_only",
+          "fixtureValue": null,
+          "gameValue": null,
+          "notes": "Region label compared when either side supplies one; both-absent is not a vacuous match"
+        },
+        {
+          "field": "source_organization",
+          "status": "match",
+          "fixtureValue": "Catalogue of Life",
+          "gameValue": "Catalogue of Life",
+          "notes": "Fixture organization retained for UI provenance surface"
+        },
+        {
+          "field": "source_record_id",
+          "status": "match",
+          "fixtureValue": "COL:fixture:FIX-COL-52",
+          "gameValue": "COL:fixture:FIX-COL-52",
+          "notes": "Fixture record id retained; game_authored play rows stay distinct"
+        },
+        {
+          "field": "license",
+          "status": "match",
+          "fixtureValue": "COL terms of use",
+          "gameValue": "COL terms of use",
+          "notes": "License surfaced honestly (UNVERIFIED-FIXTURE ≠ redistribution approval)"
+        },
+        {
+          "field": "retrieved_at",
+          "status": "fixture_only",
+          "fixtureValue": null,
+          "gameValue": null,
+          "notes": "Retrieval date from fixture snapshot; both-absent is not a vacuous match"
+        },
+        {
+          "field": "uncertainty",
+          "status": "match",
+          "fixtureValue": "sparse COL ingest batch — name/id only; not a full provenance snapshot",
+          "gameValue": "sparse COL ingest batch — name/id only; not a full provenance snapshot",
+          "notes": "Uncertainty/confidence basis retained for ArchiveDex evidence panel"
+        }
+      ],
+      "matchedFields": 5,
+      "comparedFields": 5
+    },
+    {
+      "taxonId": "apis_mellifera",
+      "scientificName": "Apis mellifera",
+      "fixtureSource": "Catalogue of Life",
+      "fixtureRecordId": "COL:fixture:FIX-COL-141",
+      "fixtureRetrievedAt": "",
+      "fixtureLicense": "COL terms of use",
+      "fixtureUncertainty": "sparse COL ingest batch — name/id only; not a full provenance snapshot",
+      "verificationStatus": "needs_source_verification",
+      "dataMode": "sample_fallback",
+      "sourceVerifiedRelease": false,
+      "fieldRows": [
+        {
+          "field": "scientific_name",
+          "status": "match",
+          "fixtureValue": "Apis mellifera",
+          "gameValue": "Apis mellifera",
+          "notes": "Accepted scientific name must match fixture spelling"
+        },
+        {
+          "field": "common_name",
+          "status": "game_only",
+          "fixtureValue": null,
+          "gameValue": "Western Honeybee",
+          "notes": "Common name is display-facing; mismatch is noted but not a release promotion"
+        },
+        {
+          "field": "geographic_region",
+          "status": "fixture_only",
+          "fixtureValue": null,
+          "gameValue": null,
+          "notes": "Region label compared when either side supplies one; both-absent is not a vacuous match"
+        },
+        {
+          "field": "source_organization",
+          "status": "match",
+          "fixtureValue": "Catalogue of Life",
+          "gameValue": "Catalogue of Life",
+          "notes": "Fixture organization retained for UI provenance surface"
+        },
+        {
+          "field": "source_record_id",
+          "status": "match",
+          "fixtureValue": "COL:fixture:FIX-COL-141",
+          "gameValue": "COL:fixture:FIX-COL-141",
+          "notes": "Fixture record id retained; game_authored play rows stay distinct"
+        },
+        {
+          "field": "license",
+          "status": "match",
+          "fixtureValue": "COL terms of use",
+          "gameValue": "COL terms of use",
+          "notes": "License surfaced honestly (UNVERIFIED-FIXTURE ≠ redistribution approval)"
+        },
+        {
+          "field": "retrieved_at",
+          "status": "fixture_only",
+          "fixtureValue": null,
+          "gameValue": null,
+          "notes": "Retrieval date from fixture snapshot; both-absent is not a vacuous match"
+        },
+        {
+          "field": "uncertainty",
+          "status": "match",
+          "fixtureValue": "sparse COL ingest batch — name/id only; not a full provenance snapshot",
+          "gameValue": "sparse COL ingest batch — name/id only; not a full provenance snapshot",
+          "notes": "Uncertainty/confidence basis retained for ArchiveDex evidence panel"
+        }
+      ],
+      "matchedFields": 5,
+      "comparedFields": 5
     }
   ]
 }
