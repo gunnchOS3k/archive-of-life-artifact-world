@@ -189,6 +189,15 @@ body.vxp4-living-archive .la-cta-group {
   background: linear-gradient(180deg, rgba(16, 24, 32, 0.96), rgba(16, 24, 32, 0.88));
   padding: 0.65rem 0.25rem 0.85rem;
   border-radius: 12px;
+  scroll-margin-top: 1rem;
+}
+
+/* Resume honesty can push content long — pin Continue dock to the fold bottom while scrolling. */
+body.vxp4-living-archive #title-screen:has([data-resume-cta-dock='true']) .la-cta-group,
+body.vxp4-living-archive #title-screen:has([data-resume-available='true']) .la-cta-group {
+  top: auto;
+  bottom: 0.75rem;
+  box-shadow: 0 -10px 28px rgba(0, 0, 0, 0.28);
 }
 
 body.vxp4-living-archive .btn-primary {

@@ -346,7 +346,39 @@ export function mountMuseumHubPresentation(
     regionName.setAttribute('aria-label', hub.ariaLabel);
   }
   bindMuseumExpeditionCta(host);
+  syncTitleCtaPriorityForResume(root);
   assertMuseumDexHonesty(hub, listArchiveDexFlagshipPresentations());
+  return true;
+}
+
+/**
+ * When a local save exists, promote Continue on the title dock (visual + data only).
+ * Never unlocks maps / IUCN / source_verified; NASA science paths untouched.
+ */
+export function syncTitleCtaPriorityForResume(root: ParentNode | null | undefined): boolean {
+  if (!root || typeof (root as ParentNode).querySelector !== 'function') return false;
+  const begin = root.querySelector('#btn-new-game') as HTMLButtonElement | null;
+  const cont = root.querySelector('#btn-continue') as HTMLButtonElement | null;
+  const dock = root.querySelector('.la-cta-group') as HTMLElement | null;
+  if (!begin || !cont) return false;
+  const resume = hasSave();
+  if (resume) {
+    cont.classList.add('btn-primary');
+    cont.classList.remove('btn-secondary');
+    begin.classList.add('btn-secondary');
+    begin.classList.remove('btn-primary');
+    cont.dataset.resumeTitlePriority = 'true';
+    begin.dataset.resumeTitlePriority = 'false';
+    dock?.setAttribute('data-resume-cta-dock', 'true');
+  } else {
+    begin.classList.add('btn-primary');
+    begin.classList.remove('btn-secondary');
+    cont.classList.add('btn-secondary');
+    cont.classList.remove('btn-primary');
+    cont.dataset.resumeTitlePriority = 'false';
+    begin.dataset.resumeTitlePriority = 'false';
+    dock?.removeAttribute('data-resume-cta-dock');
+  }
   return true;
 }
 

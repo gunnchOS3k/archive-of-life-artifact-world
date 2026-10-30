@@ -74,8 +74,10 @@ const horse: PlayableSpecies = {
 function fakeDocument(): Document {
   const html = `
     <div id="title-screen" class="screen active">
-      <button id="btn-new-game" type="button">Begin Expedition</button>
-      <button id="btn-continue" type="button">Continue Expedition</button>
+      <div class="la-cta-group">
+        <button id="btn-new-game" type="button" class="btn-primary">Begin Expedition</button>
+        <button id="btn-continue" type="button" class="btn-secondary">Continue Expedition</button>
+      </div>
       <div id="museum-honesty-host" data-museum-honesty-host></div>
     </div>
     <div id="game-screen">
@@ -252,18 +254,37 @@ describe('museum/dex player UI wiring', () => {
     const cta = host.querySelector('[data-action="start-expedition"]') as HTMLButtonElement;
     expect(cta.dataset.preferContinue).toBe('true');
     expect(cta.dataset.mapsUnlocked).toBe('false');
+    const cont = doc.getElementById('btn-continue')!;
+    const begin = doc.getElementById('btn-new-game')!;
+    expect(cont.dataset.resumeTitlePriority).toBe('true');
+    expect(cont.className).toContain('btn-primary');
+    expect(begin.className).toContain('btn-secondary');
+    expect(doc.querySelector('.la-cta-group')?.getAttribute('data-resume-cta-dock')).toBe('true');
     let continued = false;
     let began = false;
-    doc.getElementById('btn-continue')!.addEventListener('click', () => {
+    cont.addEventListener('click', () => {
       continued = true;
     });
-    doc.getElementById('btn-new-game')!.addEventListener('click', () => {
+    begin.addEventListener('click', () => {
       began = true;
     });
     cta.click();
     expect(continued).toBe(true);
     expect(began).toBe(false);
     deleteSave();
+  });
+
+  it('keeps NASA historical manifest SHA intact (no invent science)', () => {
+    const expected =
+      'f6d1c4d83b3888b1cd9fd7cd1b4fed11dbd317b857d461666f6a01ea3b3265b6';
+    const honesty = JSON.parse(
+      readFileSync(join(ROOT, 'artifacts/archive_full/DATA_COVERAGE_HONESTY.json'), 'utf8'),
+    ) as { nasa_historical_manifest_sha256?: string; nasa_source_verified?: boolean };
+    expect(honesty.nasa_historical_manifest_sha256).toBe(expected);
+    expect(honesty.nasa_source_verified).toBe(false);
+    const banner = renderArchiveDexHonestyBannerHtml();
+    expect(banner).toMatch(/NASA science/i);
+    expect(banner).not.toMatch(/source_verified=true|NASA.*verified release/i);
   });
 
   it('index.html hosts museum/dex honesty mount points', () => {
