@@ -67,7 +67,7 @@
         "Public-data alternatives remain investigation-only (approvedForUse=false)"
       ],
       "severity": "blocker",
-      "sha": "PENDING_IMPLEMENT_SHA",
+      "sha": "58973a6e7b4351e5398e3570ff686ec18839b3a4",
       "independent_review_status": "not_started",
       "cursor_complete_status": "in_progress",
       "notes": "Specialty: scientific_provenance. Field matrix 24 taxa incl. class-rank Trilobita via PBDB bounded (PBDB:19100, approvedForUse=false); anySourceVerified/productionReady false; NASA historical f6d1c4d8…; IUCN not invented; maps 0/17 held."
@@ -167,7 +167,7 @@
         "emoji/identity candidate ≠ finished model / human-approved art"
       ],
       "severity": "high",
-      "sha": "PENDING_IMPLEMENT_SHA",
+      "sha": "58973a6e7b4351e5398e3570ff686ec18839b3a4",
       "independent_review_status": "not_started",
       "cursor_complete_status": "in_progress",
       "notes": "Specialty: taxonomy_geo_temporal."
@@ -344,7 +344,7 @@
         "Human final-art approval pending"
       ],
       "severity": "high",
-      "sha": "PENDING_IMPLEMENT_SHA",
+      "sha": "58973a6e7b4351e5398e3570ff686ec18839b3a4",
       "independent_review_status": "not_started",
       "cursor_complete_status": "in_progress",
       "notes": "Specialty: organism_identity. 24/24 procedural briefs ≠ finished; trilobita field now PBDB-bounded sample_fallback; HUMAN finals pending (EXTERNAL_BLOCKERS)."
