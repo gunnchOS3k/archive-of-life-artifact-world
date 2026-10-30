@@ -24,6 +24,7 @@ import { renderPublicAlternativesHonestyHtml } from '@/services/ingestion/public
 import { renderLockedScienceSurroundHtml } from '@/systems/lockedScienceSurroundExperience';
 import { resolveObservationMotionForTaxon } from '@/systems/observationLocomotion';
 import { screenReaderHintHtml } from '@/systems/accessibility';
+import { renderLifelingHonestyHtml } from '@/systems/lifelingHonestyPresentation';
 
 export type MuseumDexClaimClass =
   | 'game_authored_floor'
@@ -203,7 +204,11 @@ export function renderMuseumHubHonestyHtml(hub: MuseumHubPresentation = buildMus
         <li>${escapeHtml(hub.temporalMapsHonesty)}</li>
         <li>${escapeHtml(hub.iucnHonesty)}</li>
         <li>Authored floors only — not Earth-complete / not production-ready</li>
+        <li>Museum → expedition → ArchiveDex → Lifeling → save/resume stays playable without IUCN/maps unlocks</li>
       </ul>
+      <div class="museum-lifeling-bridge" data-museum-lifeling-bridge="1">
+        ${renderLifelingHonestyHtml()}
+      </div>
     </aside>
   `.trim();
 }

@@ -187,6 +187,15 @@ describe('museum/dex player UI wiring', () => {
     expect(hub.flagshipCount).toBe(24);
   });
 
+  it('museum hub bridges Lifeling honesty without IUCN/maps unlock claims', () => {
+    const html = renderMuseumHubHonestyHtml();
+    expect(html).toContain('data-museum-lifeling-bridge');
+    expect(html).toContain('lifeling-honesty');
+    expect(html).toMatch(/save\/resume|Lifeling/i);
+    expect(html).toContain('0/17');
+    expect(html).toMatch(/blocked_external|IUCN/i);
+  });
+
   it('index.html hosts museum/dex honesty mount points', () => {
     const html = readFileSync(join(ROOT, 'index.html'), 'utf8');
     expect(html).toContain('id="museum-honesty-host"');

@@ -210,6 +210,71 @@ export function hasSave(): boolean {
   return localStorage.getItem(SAVE_KEY) !== null;
 }
 
+/** Honest resume summary — never claims source_verified science or IUCN assessed. */
+export type ResumeCheckpoint = {
+  region: string;
+  visitedRegions: string[];
+  companionName: string;
+  companionLevel: number;
+  speciesDocumented: number;
+  artifactCount: number;
+  hasExpeditionProgress: boolean;
+  sourceVerifiedReleaseClaim: false;
+  iucnAssessedClaim: false;
+  mapsUnlockedClaim: false;
+};
+
+export function describeResumeCheckpoint(state: SaveState): ResumeCheckpoint {
+  const visited = state.player.visitedRegions ?? [];
+  const expeditionDone = state.expeditions?.completed?.length ?? 0;
+  const expeditionActive = state.expeditions?.active?.length ?? 0;
+  return {
+    region: state.player.currentRegion,
+    visitedRegions: [...visited],
+    companionName: state.companion.name,
+    companionLevel: state.companion.level ?? 1,
+    speciesDocumented: state.stats.speciesDocumented ?? 0,
+    artifactCount: state.artifacts?.length ?? 0,
+    hasExpeditionProgress:
+      expeditionDone > 0 || expeditionActive > 0 || visited.some((r) => r !== 'museum'),
+    sourceVerifiedReleaseClaim: false,
+    iucnAssessedClaim: false,
+    mapsUnlockedClaim: false,
+  };
+}
+
+/** Load + announce resume for museum → expedition → Lifeling continuity. */
+export function resumeFromSave(): { state: SaveState; checkpoint: ResumeCheckpoint } | null {
+  const state = loadSave();
+  if (!state) return null;
+  const checkpoint = describeResumeCheckpoint(state);
+  track('resume', {
+    region: checkpoint.region,
+    companionLevel: checkpoint.companionLevel,
+    speciesDocumented: checkpoint.speciesDocumented,
+  });
+  return { state, checkpoint };
+}
+
+export function renderResumeCheckpointHtml(checkpoint: ResumeCheckpoint): string {
+  const visited = checkpoint.visitedRegions.join(', ') || 'museum';
+  return [
+    '<aside class="resume-checkpoint" data-resume-checkpoint="1" data-source-verified="false" data-iucn-assessed="false" data-maps="0/17" role="status" aria-live="polite">',
+    `<p><strong>Resume:</strong> ${escapeResume(checkpoint.companionName)} · Lv ${checkpoint.companionLevel} · region <code>${escapeResume(checkpoint.region)}</code></p>`,
+    `<p>Visited: ${escapeResume(visited)} · documented ${checkpoint.speciesDocumented} · artifacts ${checkpoint.artifactCount}</p>`,
+    '<p>sourceVerifiedRelease=false · iucnAssessed=false · mapsUnlocked=false — museum / ArchiveDex / Lifeling floors only.</p>',
+    '</aside>',
+  ].join('\n');
+}
+
+function escapeResume(value: string): string {
+  return value
+    .replace(/&/g, '&amp;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;')
+    .replace(/"/g, '&quot;');
+}
+
 export function deleteSave(): void {
   localStorage.removeItem(SAVE_KEY);
   void speciesCache.deleteBundle(SAVE_BACKUP_KEY);

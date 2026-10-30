@@ -1426,6 +1426,17 @@ html:not(.a11y-sr-hints) .a11y-sr-only[data-a11y-sr-hint] { display: none; }
 .dex-brief-strip-title { margin: 0 0 0.25rem; font-weight: 600; color: var(--text-primary); }
 .dex-brief-strip ul { margin: 0; padding-left: 1.1rem; }
 .dex-brief-strip li { margin: 0.1rem 0; }
+.taxonomy-reconcile-entry,
+.resume-checkpoint,
+.museum-lifeling-bridge {
+  margin-top: 0.5rem;
+  padding: 0.45rem 0.6rem;
+  border: 1px dashed var(--border);
+  font-size: 0.78rem;
+  color: var(--text-secondary);
+}
+.taxonomy-reconcile-entry ul { margin: 0.2rem 0; padding-left: 1.1rem; }
+.dex-behavior-bridge { margin-top: 0.4rem; font-size: 0.78rem; color: var(--text-secondary); }
 .companion-progress {
   margin-top: 0.5rem;
   font-size: 0.85rem;

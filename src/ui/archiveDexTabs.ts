@@ -11,6 +11,8 @@ import {
   renderIucnBlockedPanelHtml,
   resolveIucnPlayerPresentation,
 } from '@/systems/iucnBlockedPresentation';
+import { renderTaxonomyReconcileEntryHtml } from '@/services/ingestion/taxonomyReconcile';
+import { buildArchiveDexEntryPresentation } from '@/systems/museumDexPresentation';
 
 type EmptyLabel = string;
 
@@ -127,9 +129,18 @@ export function renderArchiveDexTab(entry: ArchiveDexEntry, tab: ArchiveDexTabId
         ${entry.identity?.debatedClassification ? `<p class="uncertainty-note">${escapeHtml(entry.identity.debatedClassification)}</p>` : field('Classification debates', undefined, 'None noted')}
       `;
       break;
-    case 'taxonomy':
-      body = taxonomyLadder(entry) + listField('Synonyms', entry.taxonomy.synonyms, 'Unknown') + listField('Related taxa', entry.taxonomy.relatedTaxa, 'Not available in current snapshot');
+    case 'taxonomy': {
+      const flagship = buildArchiveDexEntryPresentation(entry.id);
+      body =
+        taxonomyLadder(entry) +
+        listField('Synonyms', entry.taxonomy.synonyms, 'Unknown') +
+        listField('Related taxa', entry.taxonomy.relatedTaxa, 'Not available in current snapshot') +
+        renderTaxonomyReconcileEntryHtml(entry.id, entry.scientificName) +
+        (flagship?.behaviorNote
+          ? `<p class="dex-behavior-bridge"><span class="detail-label">Authored behavior note:</span> ${escapeHtml(flagship.behaviorNote)} <em>(procedural ≠ finished; not IUCN)</em></p>`
+          : '');
       break;
+    }
     case 'time':
       body = `
         ${field('Life status', entry.lifeStatus)}

@@ -2,9 +2,12 @@ import { beforeEach, describe, expect, it } from 'vitest';
 import {
   createDefaultSave,
   deleteSave,
+  describeResumeCheckpoint,
   hasSave,
   importSaveJson,
   loadSave,
+  renderResumeCheckpointHtml,
+  resumeFromSave,
   saveGame,
   serializeSave,
   validateSave,
@@ -88,5 +91,38 @@ describe('saveSystem + journal provenance', () => {
     const imported = importSaveJson(json);
     expect(imported?.artifacts).toHaveLength(1);
     expect(imported?.notebook[0].scientificName).toBe('Panthera leo');
+  });
+
+  it('resumes museum→expedition→Lifeling checkpoint without science unlock claims', () => {
+    deleteSave();
+    const state = createDefaultSave();
+    state.player.currentRegion = 'steppe';
+    state.player.visitedRegions = ['museum', 'steppe'];
+    state.companion.name = 'Steppe Scout';
+    state.companion.level = 2;
+    state.stats.speciesDocumented = 1;
+    state.expeditions = {
+      active: ['exp_steppe_1'],
+      completed: [],
+      progress: {},
+      discoveredClueIds: [],
+    };
+    saveGame(state);
+
+    const resumed = resumeFromSave();
+    expect(resumed).toBeTruthy();
+    expect(resumed!.state.player.currentRegion).toBe('steppe');
+    expect(resumed!.checkpoint.companionName).toBe('Steppe Scout');
+    expect(resumed!.checkpoint.hasExpeditionProgress).toBe(true);
+    expect(resumed!.checkpoint.sourceVerifiedReleaseClaim).toBe(false);
+    expect(resumed!.checkpoint.iucnAssessedClaim).toBe(false);
+    expect(resumed!.checkpoint.mapsUnlockedClaim).toBe(false);
+
+    const cp = describeResumeCheckpoint(resumed!.state);
+    const html = renderResumeCheckpointHtml(cp);
+    expect(html).toContain('data-resume-checkpoint');
+    expect(html).toContain('sourceVerifiedRelease=false');
+    expect(html).toContain('iucnAssessed=false');
+    deleteSave();
   });
 });

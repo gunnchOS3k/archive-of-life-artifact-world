@@ -5,6 +5,8 @@ import { describe, expect, it } from 'vitest';
 import {
   assertTaxonomyReconcileHonesty,
   buildTaxonomyReconcileReport,
+  buildTaxonomyReconcileEntryPresentation,
+  renderTaxonomyReconcileEntryHtml,
   renderTaxonomyReconcileHonestyHtml,
   type TaxonomyAuthorityRecord,
   type TaxonomySourceSnapshotMeta,
@@ -216,6 +218,19 @@ describe('taxonomyReconcile', () => {
     const html = renderTaxonomyReconcileHonestyHtml(report);
     expect(html).toContain('sample_fallback');
     expect(html).toContain('0/17');
+
+    const entryHtml = renderTaxonomyReconcileEntryHtml(
+      'panthera_leo',
+      'Panthera leo',
+      lion,
+    );
+    expect(entryHtml).toContain('data-taxonomy-reconcile-entry');
+    expect(entryHtml).toContain('data-source-verified="false"');
+    expect(entryHtml).toContain('data-iucn-assessed="false"');
+    const entryPres = buildTaxonomyReconcileEntryPresentation('panthera_leo', 'Panthera leo', lion);
+    expect(entryPres.sourceVerifiedRelease).toBe(false);
+    expect(entryPres.iucnAssessed).toBe(false);
+    expect(entryPres.dataMode).toBe('sample_fallback');
 
     const outDir = join(ROOT, 'artifacts/science');
     mkdirSync(outDir, { recursive: true });

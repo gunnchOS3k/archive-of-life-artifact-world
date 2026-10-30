@@ -225,10 +225,82 @@ export function renderTaxonomyReconcileHonestyHtml(
   ].join('');
 }
 
+export type TaxonomyReconcileEntryPresentation = {
+  taxonId: string;
+  scientificName: string;
+  acceptedNameAgreement: TaxonomyReconcileRow['acceptedNameAgreement'] | 'unknown';
+  hitCount: number;
+  dataMode: 'sample_fallback';
+  verificationStatus: 'needs_source_verification';
+  sourceVerifiedRelease: false;
+  iucnAssessed: false;
+  notes: string;
+};
+
+/** Per-entry Dex strip — never invents source_verified or IUCN assessed. */
+export function buildTaxonomyReconcileEntryPresentation(
+  taxonId: string,
+  scientificName: string,
+  row?: TaxonomyReconcileRow | null,
+): TaxonomyReconcileEntryPresentation {
+  if (row) {
+    return {
+      taxonId,
+      scientificName,
+      acceptedNameAgreement: row.acceptedNameAgreement,
+      hitCount: row.hits.length,
+      dataMode: 'sample_fallback',
+      verificationStatus: 'needs_source_verification',
+      sourceVerifiedRelease: false,
+      iucnAssessed: false,
+      notes: row.notes,
+    };
+  }
+  return {
+    taxonId,
+    scientificName,
+    acceptedNameAgreement: 'unknown',
+    hitCount: 0,
+    dataMode: 'sample_fallback',
+    verificationStatus: 'needs_source_verification',
+    sourceVerifiedRelease: false,
+    iucnAssessed: false,
+    notes:
+      'Open Sources / museum taxonomy reconcile for permitted COL/GBIF/PBDB fixture hits — sample_fallback only; IUCN blocked_external does not freeze this path.',
+  };
+}
+
+export function renderTaxonomyReconcileEntryHtml(
+  taxonId: string,
+  scientificName: string,
+  row?: TaxonomyReconcileRow | null,
+): string {
+  const p = buildTaxonomyReconcileEntryPresentation(taxonId, scientificName, row);
+  const agreement =
+    p.acceptedNameAgreement === 'unknown'
+      ? 'not loaded in this view'
+      : p.acceptedNameAgreement;
+  return `
+    <aside class="taxonomy-reconcile-entry" data-taxonomy-reconcile-entry="1" data-taxon-id="${escapeAttr(taxonId)}" data-data-mode="sample_fallback" data-source-verified="false" data-iucn-assessed="false" role="note" aria-label="Taxonomy reconcile sample_fallback — not source-verified; IUCN not assessed">
+      <p class="taxonomy-reconcile-entry-title"><strong>Taxonomy reconcile</strong> (sample_fallback · needs_source_verification)</p>
+      <ul>
+        <li>Game name: <em>${escapeHtml(scientificName)}</em></li>
+        <li>Accepted-name agreement: <code>${escapeHtml(agreement)}</code> · fixture hits: ${p.hitCount}</li>
+        <li>sourceVerifiedRelease=false · iucnAssessed=false · maps 0/17 locked</li>
+      </ul>
+      <p class="taxonomy-reconcile-entry-notes">${escapeHtml(p.notes)}</p>
+    </aside>
+  `.trim();
+}
+
 function escapeHtml(value: string): string {
   return value
     .replace(/&/g, '&amp;')
     .replace(/</g, '&lt;')
     .replace(/>/g, '&gt;')
     .replace(/"/g, '&quot;');
+}
+
+function escapeAttr(value: string): string {
+  return escapeHtml(value).replace(/'/g, '&#39;');
 }

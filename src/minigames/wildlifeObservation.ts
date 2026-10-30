@@ -11,6 +11,7 @@ import {
   stepObservationPose,
   type ObservationMotionMode,
 } from '@/systems/observationLocomotion';
+import { drawObservationSilhouetteStub } from '@/systems/observationSilhouette';
 
 export class WildlifeObservation {
   private canvas: HTMLCanvasElement;
@@ -158,18 +159,12 @@ export class WildlifeObservation {
     // Procedural silhouette stub under the identity mark (≠ finished model).
     ctx.save();
     ctx.translate(this.animalX, this.animalY);
-    if (this.animalDir < 0) ctx.scale(-1, 1);
-    ctx.fillStyle = 'rgba(20, 28, 18, 0.35)';
-    ctx.beginPath();
-    ctx.ellipse(0, 8, 28, 14, 0, 0, Math.PI * 2);
-    ctx.fill();
-    ctx.beginPath();
-    ctx.ellipse(18, -2, 12, 10, 0, 0, Math.PI * 2);
-    ctx.fill();
+    drawObservationSilhouetteStub(ctx, this.motionMode, this.animalDir);
 
     const alert = this.alertness / 100;
     ctx.font = '48px sans-serif';
     ctx.textAlign = 'center';
+    if (this.animalDir < 0) ctx.scale(-1, 1);
     ctx.fillText(
       getSpeciesIcon({
         id: this.species.id,
