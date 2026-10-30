@@ -30,7 +30,7 @@ export interface MuseumHubPresentation {
   earthCompleteClaim: false;
   productionReadyClaim: false;
   sourceVerifiedReleaseClaim: false;
-  temporalMapsHonesty: '0/17 full-Earth maps source-verified — blocked';
+  temporalMapsHonesty: '0/17 full-Earth maps source-verified — blocked / illustration only (not unlocked)';
   iucnHonesty: 'IUCN Red List unavailable (blocked_external) — needs owner API credentials and rights review before assessed statuses appear';
   objectives: string[];
   ariaLabel: string;
@@ -63,7 +63,7 @@ export function buildMuseumHubPresentation(): MuseumHubPresentation {
     earthCompleteClaim: false,
     productionReadyClaim: false,
     sourceVerifiedReleaseClaim: false,
-    temporalMapsHonesty: '0/17 full-Earth maps source-verified — blocked',
+    temporalMapsHonesty: '0/17 full-Earth maps source-verified — blocked / illustration only (not unlocked)',
     iucnHonesty:
       'IUCN Red List unavailable (blocked_external) — needs owner API credentials and rights review before assessed statuses appear',
     objectives: museum?.objectives ?? [],

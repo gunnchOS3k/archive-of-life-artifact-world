@@ -1112,6 +1112,35 @@ body {
 .uncertainty-note { font-size: 0.8rem; color: var(--accent-gold); font-style: italic; }
 .time-hint { color: var(--text-secondary); font-size: 0.9rem; }
 .time-mock-banner { margin-bottom: 0.5rem; }
+.temporal-map-honesty-banner {
+  display: block;
+  margin: 0.25rem 0 0.5rem;
+  padding: 0.55rem 0.75rem;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  background: var(--bg-secondary);
+  font-size: 0.85rem;
+  line-height: 1.4;
+}
+.temporal-map-state-legend {
+  display: block;
+  margin-top: 0.35rem;
+  font-size: 0.78rem;
+  color: var(--text-secondary);
+}
+.temporal-map-blocked-panel {
+  margin: 0.45rem 0;
+  padding: 0.55rem 0.7rem;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  background: rgba(0, 0, 0, 0.04);
+  font-size: 0.82rem;
+}
+.temporal-map-blocked-panel p { margin: 0.3rem 0; }
+.temporal-map-blocked-invariants { opacity: 0.85; }
+.temporal-map-status { display: inline-flex; flex-wrap: wrap; align-items: center; gap: 0.35rem; }
+.temporal-map-state-blocked .mock-badge,
+.temporal-map-state-illustration .mock-badge { background: #6a6a6a; color: #fff; }
 .archive-filters { gap: 0.35rem; }
 @media (max-width: 768px) {
   .time-atlas-layout { grid-template-columns: 1fr; }

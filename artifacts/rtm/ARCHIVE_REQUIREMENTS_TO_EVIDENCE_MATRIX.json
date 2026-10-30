@@ -201,10 +201,12 @@
         4
       ],
       "tests": [
-        "src/systems/expeditionJourneyPolish.test.ts"
+        "src/systems/expeditionJourneyPolish.test.ts",
+        "src/systems/timeAtlasBlockedPresentation.test.ts"
       ],
       "automated_evidence": [
         "src/ui/timeAtlasUI.ts",
+        "src/systems/timeAtlasBlockedPresentation.ts",
         "public/data/status/temporal_map_readiness_report.json",
         "artifacts/archive_full/SCIENCE_HONESTY_MATRIX.json"
       ],
@@ -220,8 +222,8 @@
       "severity": "blocker",
       "sha": "1dad3288274b6119b8448818a49262e098d65d81",
       "independent_review_status": "not_started",
-      "cursor_complete_status": "not_started",
-      "notes": "Specialty: taxonomy_geo_temporal."
+      "cursor_complete_status": "in_progress",
+      "notes": "Specialty: taxonomy_geo_temporal. Player-facing blocked vs illustration vs verified map states; maps stay locked without authorized reconstruction assets; status/UI hacks cannot mark source_verified or unlock. Keep 0/17 until real assets exist."
     },
     {
       "req_id": "AOL-OFF-001",

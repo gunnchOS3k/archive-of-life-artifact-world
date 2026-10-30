@@ -190,7 +190,7 @@ describe('temporal maps stay blocked without authorized assets', () => {
     expect(catalog.isMockData).toBe(true);
     for (const map of catalog.maps) {
       expect(svc.isScientificallyUnlocked(map)).toBe(false);
-      expect(svc.unlockLabel(map)).toMatch(/BLOCKED|PARTIAL/);
+      expect(svc.unlockLabel(map)).toMatch(/BLOCKED|PARTIAL|ILLUSTRATION/);
     }
   });
 });

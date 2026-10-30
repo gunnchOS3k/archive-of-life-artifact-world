@@ -5,6 +5,13 @@ import { TimeAtlasService } from '@/time/TimeAtlasService';
 import type { DataCatalogService } from '@/services/DataCatalogService';
 import { TemporalMapService } from '@/services/TemporalMapService';
 import type { TemporalEarthMapRecord } from '@/schema/temporalMap';
+import {
+  renderTemporalMapBlockedPanelHtml,
+  renderTemporalMapCatalogBannerHtml,
+  renderTemporalMapStatusHtml,
+  resolveTemporalMapPresentation,
+  summarizeTemporalMapCatalogHonesty,
+} from '@/systems/timeAtlasBlockedPresentation';
 
 const RANK_LABELS: Record<GeologicTimeRank, string> = {
   eon: 'Eons',
@@ -83,14 +90,13 @@ export class TimeAtlasUI {
     if (!this.state) return;
 
     const manifest = this.timeService.getManifest();
-    const mapSummary = this.temporalMapService.getSummary();
-    const verifiedMaps = mapSummary.sourceVerified;
-    const totalMaps = mapSummary.total || 17;
-    const mapHonesty = `<span class="mock-badge">FULL-EARTH MAPS ${verifiedMaps}/${totalMaps} SOURCE-VERIFIED</span> Blocked until authorized reconstruction assets exist — no speculative coastlines.`;
+    const catalog = this.temporalMapService.getCatalog();
+    const mapHonesty = summarizeTemporalMapCatalogHonesty(catalog);
+    const mapHonestyHtml = renderTemporalMapCatalogBannerHtml(mapHonesty);
     const mockHonesty = manifest.isMockData
       ? '<span class="mock-badge">MOCK TIME SAMPLE</span> Geologic boundaries are illustrative until live ICS ingestion is connected. '
       : '';
-    this.mockBanner.innerHTML = `${mockHonesty}${mapHonesty}`;
+    this.mockBanner.innerHTML = `${mockHonesty}${mapHonestyHtml}`;
 
     const query = this.searchInput?.value ?? '';
     const units = query
@@ -224,22 +230,16 @@ export class TimeAtlasUI {
   }
 
   private temporalMapStatusLabel(map: TemporalEarthMapRecord): string {
-    if (this.temporalMapService.isScientificallyUnlocked(map)) {
-      return `<span class="earth-mode-badge">SOURCE VERIFIED — UNLOCKED</span> ${map.coveredGridCellCount}/${map.expectedGridCellCount} cells`;
-    }
-    if (map.status === 'source_verified') {
-      // Catalog says verified but asset/coverage gates failed — stay honest.
-      return `<span class="mock-badge">BLOCKED — VERIFIED LABEL WITHOUT AUTHORIZED ASSET</span> ${map.coveredGridCellCount}/${map.expectedGridCellCount} cells`;
-    }
-    if (map.status === 'partial') {
-      return `<span class="mock-badge">PARTIAL — NOT UNLOCKED</span> ${map.coveredGridCellCount}/${map.expectedGridCellCount} cells`;
-    }
-    return `<span class="mock-badge">BLOCKED — NO SCIENTIFIC ASSET</span> 0/${map.expectedGridCellCount} cells`;
+    const presentation = resolveTemporalMapPresentation(map, {
+      catalogIsMockData: this.temporalMapService.getCatalog().isMockData,
+    });
+    return renderTemporalMapStatusHtml(presentation);
   }
 
   private renderTemporalMapStatus(maps: TemporalEarthMapRecord[]): string {
-    const summary = this.temporalMapService.getSummary();
-    const catalogHonesty = `<p><strong>Catalog honesty:</strong> ${summary.sourceVerified}/${summary.total || 17} full-Earth maps source-verified (blocked maps stay locked).</p>`;
+    const catalog = this.temporalMapService.getCatalog();
+    const honesty = summarizeTemporalMapCatalogHonesty(catalog);
+    const catalogHonesty = `<p><strong>Catalog honesty:</strong> ${honesty.scientificallyUnlocked}/${honesty.expectedTotal} full-Earth maps source-verified (blocked=${honesty.blocked}, illustration=${honesty.illustration}; locked without authorized assets).</p>`;
 
     if (maps.length === 0) {
       return `
@@ -256,17 +256,20 @@ export class TimeAtlasUI {
         <h4>Full-Earth reconstruction</h4>
         ${catalogHonesty}
         ${maps
-          .map(
-            (map) => `
-              <p>${this.temporalMapStatusLabel(map)}</p>
-              <p>${map.blockedReason ?? map.uncertaintyNotes}</p>
-              ${
-                map.status === 'source_verified' && map.asset
-                  ? `<p>Packaged asset: <code>${map.asset.path}</code> · SHA-256 verified</p>`
-                  : '<p><em>No speculative coastlines are rendered while source data is missing.</em></p>'
-              }
-            `
-          )
+          .map((map) => {
+            const presentation = resolveTemporalMapPresentation(map, {
+              catalogIsMockData: catalog.isMockData,
+            });
+            const assetLine =
+              presentation.scientificallyUnlocked && map.asset
+                ? `<p>Packaged asset: <code>${map.asset.path}</code> · SHA-256 verified</p>`
+                : '<p><em>No speculative coastlines are rendered while source data is missing.</em></p>';
+            return `
+              <p>${renderTemporalMapStatusHtml(presentation)}</p>
+              ${renderTemporalMapBlockedPanelHtml(presentation)}
+              ${assetLine}
+            `;
+          })
           .join('')}
       </div>
     `;
