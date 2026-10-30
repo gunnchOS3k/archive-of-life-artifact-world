@@ -2,6 +2,10 @@ import type { SaveState, LifelingTrait } from '@/schema';
 import { Lifeling } from '@/game/companion';
 import { companionProgressSummary, ensureCompanionProgressFields } from '@/systems/companionProgression';
 import { renderLifelingHonestyHtml } from '@/systems/lifelingHonestyPresentation';
+import {
+  buildLifelingTraitJourney,
+  renderLifelingTraitJourneyHtml,
+} from '@/systems/lifelingTraitJourney';
 
 export class CompanionUI {
   private canvas: HTMLCanvasElement;
@@ -64,7 +68,7 @@ export class CompanionUI {
     this.renderPreview();
   }
 
-  /** Honest strip: cosmetic/affinity only while IUCN stays blocked_external. */
+  /** Honest strip + trait unlock journey (cosmetic only while IUCN stays blocked_external). */
   private mountLifelingHonesty() {
     if (!this.progressEl?.parentElement) return;
     const host =
@@ -75,7 +79,8 @@ export class CompanionUI {
         this.progressEl!.parentElement!.insertBefore(el, this.progressEl!.nextSibling);
         return el;
       })();
-    host.innerHTML = renderLifelingHonestyHtml();
+    const journey = buildLifelingTraitJourney(this.state!.companion, this.traits);
+    host.innerHTML = `${renderLifelingHonestyHtml()}\n${renderLifelingTraitJourneyHtml(journey)}`;
   }
 
   private renderPreview() {

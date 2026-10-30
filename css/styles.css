@@ -1459,3 +1459,20 @@ html:not(.a11y-sr-hints) .a11y-sr-only[data-a11y-sr-hint] { display: none; }
 .ach-title { font-weight: 700; }
 .ach-desc { font-size: 0.9rem; color: var(--text-secondary); }
 .ach-meta { font-size: 0.75rem; margin-top: 0.25rem; color: var(--accent-green); }
+
+
+/* Lifeling trait unlock journey (cosmetic only; IUCN blocked_external) */
+.lifeling-trait-journey {
+  margin: 0.5rem 0 0.75rem;
+  padding: 0.65rem 0.75rem;
+  border: 1px solid var(--border);
+  background: rgba(0, 0, 0, 0.2);
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  line-height: 1.35;
+}
+.lifeling-trait-journey strong { color: var(--text-primary); }
+.lifeling-trait-journey-species code {
+  color: var(--accent-green);
+  font-size: 0.8rem;
+}
