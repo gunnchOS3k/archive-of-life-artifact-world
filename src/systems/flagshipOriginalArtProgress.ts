@@ -71,9 +71,20 @@ export const PROCEDURAL_ART_WAVE2: readonly string[] = [
   'castor_canadensis',
 ] as const;
 
+/** Third-wave briefs — still procedural candidates, never finished models. */
+export const PROCEDURAL_ART_WAVE3: readonly string[] = [
+  'phoca_vitulina',
+  'apis_mellifera',
+  'ursus_maritimus',
+  'anax_junius',
+  'dynastes_hercules',
+  'trilobita_order',
+] as const;
+
 export const PROCEDURAL_ART_WAVES: readonly string[] = [
   ...PROCEDURAL_ART_WAVE1,
   ...PROCEDURAL_ART_WAVE2,
+  ...PROCEDURAL_ART_WAVE3,
 ] as const;
 
 const SILHOUETTE_BRIEFS: Record<string, Omit<SilhouetteBrief, 'taxonId' | 'assetKind' | 'finishedModel' | 'humanApproved'>> = {
@@ -149,6 +160,42 @@ const SILHOUETTE_BRIEFS: Record<string, Omit<SilhouetteBrief, 'taxonId' | 'asset
     locomotionCue: 'waddle → powerful swim kick',
     habitatBackdrop: 'lodge pond / felled aspen shoreline',
   },
+  phoca_vitulina: {
+    posture: 'haul-out side profile, head raised',
+    anatomyFocus: ['spotted coat candidate', 'hind-flipper stance', 'whisker mass'],
+    locomotionCue: 'undulating swim → awkward haul-out',
+    habitatBackdrop: 'rocky intertidal / harbor haul-out',
+  },
+  apis_mellifera: {
+    posture: '¾ hover over blossom',
+    anatomyFocus: ['pollen baskets', 'banded abdomen', 'transparent wing pair'],
+    locomotionCue: 'hover → straight-line forage flight',
+    habitatBackdrop: 'meadow blossom / hive-adjacent forage',
+  },
+  ursus_maritimus: {
+    posture: 'lateral walk on ice edge',
+    anatomyFocus: ['elongate neck', 'large plantigrade paws', 'insulating bulk'],
+    locomotionCue: 'steady ice-edge amble',
+    habitatBackdrop: 'sea-ice margin / polar coastal — never temperate forest substitution',
+  },
+  anax_junius: {
+    posture: 'hover with wings horizontal',
+    anatomyFocus: ['elongate abdomen', 'large compound eyes', 'paired wing planes'],
+    locomotionCue: 'patrol hover → dart intercept',
+    habitatBackdrop: 'pond margin / open water patrol lane',
+  },
+  dynastes_hercules: {
+    posture: '¾ front with thoracic horn forward',
+    anatomyFocus: ['thoracic horn', 'elytra mass', 'powerful forelegs'],
+    locomotionCue: 'deliberate climb on trunk',
+    habitatBackdrop: 'Neotropical canopy / rotting log stage',
+  },
+  trilobita_order: {
+    posture: 'dorsal fossil plate, cephalon forward',
+    anatomyFocus: ['cephalon shield', 'thoracic segments', 'pygidium'],
+    locomotionCue: 'static reconstruction pose — not a living gait claim',
+    habitatBackdrop: 'Paleozoic seafloor reconstruction — fossil framing only',
+  },
 };
 
 const RULE =
@@ -178,6 +225,9 @@ export function effectiveFlagshipArtStatus(profile: FlagshipObservationProfile):
 }
 
 function proceduralWaveNote(taxonId: string): string {
+  if (PROCEDURAL_ART_WAVE3.includes(taxonId)) {
+    return 'Wave-3 silhouette brief authored; still not a finished model';
+  }
   if (PROCEDURAL_ART_WAVE2.includes(taxonId)) {
     return 'Wave-2 silhouette brief authored; still not a finished model';
   }
@@ -260,8 +310,8 @@ export function renderFlagshipOriginalArtProgressHtml(
 ): string {
   assertFlagshipOriginalArtProgress(report);
   return [
-    '<aside class="flagship-art-progress" data-emoji-finished="false" data-procedural-wave="2" role="note">',
-    `<p><strong>Original art progress:</strong> ${report.proceduralCandidateCount}/${report.flagshipCount} flagships have procedural silhouette briefs (waves 1–2) — emoji ≠ finished.</p>`,
+    '<aside class="flagship-art-progress" data-emoji-finished="false" data-procedural-wave="3" role="note">',
+    `<p><strong>Original art progress:</strong> ${report.proceduralCandidateCount}/${report.flagshipCount} flagships have procedural silhouette briefs (waves 1–3) — emoji ≠ finished.</p>`,
     `<p>finishedModelsClaimed=false · humanApproved=false · ${escapeHtml(report.rule)}</p>`,
     '</aside>',
   ].join('');

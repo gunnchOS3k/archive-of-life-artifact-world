@@ -1,9 +1,9 @@
 {
   "schema": "aol.flagship_original_art_progress.v1",
-  "generatedAt": "2026-10-30T17:30:00.000Z",
+  "generatedAt": "2026-10-30T18:15:00.000Z",
   "flagshipCount": 24,
-  "proceduralCandidateCount": 12,
-  "emojiIdentityCount": 12,
+  "proceduralCandidateCount": 18,
+  "emojiIdentityCount": 6,
   "finishedModelsClaimed": false,
   "emojiEqualsFinished": false,
   "anyHumanApprovedFinal": false,
@@ -221,13 +221,26 @@
       "scientificName": "Phoca vitulina",
       "representationMark": "🦭",
       "priorStatus": "emoji_identity_candidate",
-      "currentStatus": "emoji_identity_candidate",
-      "artStatusLabel": "Art status: emoji identity candidate (not a finished model)",
-      "silhouetteBrief": null,
+      "currentStatus": "procedural_candidate",
+      "artStatusLabel": "Art status: procedural candidate (silhouette brief — not human-approved final art)",
+      "silhouetteBrief": {
+        "taxonId": "phoca_vitulina",
+        "posture": "haul-out side profile, head raised",
+        "anatomyFocus": [
+          "spotted coat candidate",
+          "hind-flipper stance",
+          "whisker mass"
+        ],
+        "locomotionCue": "undulating swim → awkward haul-out",
+        "habitatBackdrop": "rocky intertidal / harbor haul-out",
+        "assetKind": "silhouette_brief",
+        "finishedModel": false,
+        "humanApproved": false
+      },
       "emojiEqualsFinished": false,
       "finishedModelClaimed": false,
       "originalArtApproved": false,
-      "progressNote": "Remains emoji identity candidate — not finished"
+      "progressNote": "Wave-3 silhouette brief authored; still not a finished model"
     },
     {
       "taxonId": "equus_caballus_ferus",
@@ -286,13 +299,26 @@
       "scientificName": "Apis mellifera",
       "representationMark": "🐝",
       "priorStatus": "emoji_identity_candidate",
-      "currentStatus": "emoji_identity_candidate",
-      "artStatusLabel": "Art status: emoji identity candidate (not a finished model)",
-      "silhouetteBrief": null,
+      "currentStatus": "procedural_candidate",
+      "artStatusLabel": "Art status: procedural candidate (silhouette brief — not human-approved final art)",
+      "silhouetteBrief": {
+        "taxonId": "apis_mellifera",
+        "posture": "¾ hover over blossom",
+        "anatomyFocus": [
+          "pollen baskets",
+          "banded abdomen",
+          "transparent wing pair"
+        ],
+        "locomotionCue": "hover → straight-line forage flight",
+        "habitatBackdrop": "meadow blossom / hive-adjacent forage",
+        "assetKind": "silhouette_brief",
+        "finishedModel": false,
+        "humanApproved": false
+      },
       "emojiEqualsFinished": false,
       "finishedModelClaimed": false,
       "originalArtApproved": false,
-      "progressNote": "Remains emoji identity candidate — not finished"
+      "progressNote": "Wave-3 silhouette brief authored; still not a finished model"
     },
     {
       "taxonId": "formica_rufa",
@@ -312,13 +338,26 @@
       "scientificName": "Anax junius",
       "representationMark": "🪰",
       "priorStatus": "emoji_identity_candidate",
-      "currentStatus": "emoji_identity_candidate",
-      "artStatusLabel": "Art status: emoji identity candidate (not a finished model)",
-      "silhouetteBrief": null,
+      "currentStatus": "procedural_candidate",
+      "artStatusLabel": "Art status: procedural candidate (silhouette brief — not human-approved final art)",
+      "silhouetteBrief": {
+        "taxonId": "anax_junius",
+        "posture": "hover with wings horizontal",
+        "anatomyFocus": [
+          "elongate abdomen",
+          "large compound eyes",
+          "paired wing planes"
+        ],
+        "locomotionCue": "patrol hover → dart intercept",
+        "habitatBackdrop": "pond margin / open water patrol lane",
+        "assetKind": "silhouette_brief",
+        "finishedModel": false,
+        "humanApproved": false
+      },
       "emojiEqualsFinished": false,
       "finishedModelClaimed": false,
       "originalArtApproved": false,
-      "progressNote": "Remains emoji identity candidate — not finished"
+      "progressNote": "Wave-3 silhouette brief authored; still not a finished model"
     },
     {
       "taxonId": "latrodectus_mactans",
@@ -338,13 +377,26 @@
       "scientificName": "Dynastes hercules",
       "representationMark": "🪲",
       "priorStatus": "emoji_identity_candidate",
-      "currentStatus": "emoji_identity_candidate",
-      "artStatusLabel": "Art status: emoji identity candidate (not a finished model)",
-      "silhouetteBrief": null,
+      "currentStatus": "procedural_candidate",
+      "artStatusLabel": "Art status: procedural candidate (silhouette brief — not human-approved final art)",
+      "silhouetteBrief": {
+        "taxonId": "dynastes_hercules",
+        "posture": "¾ front with thoracic horn forward",
+        "anatomyFocus": [
+          "thoracic horn",
+          "elytra mass",
+          "powerful forelegs"
+        ],
+        "locomotionCue": "deliberate climb on trunk",
+        "habitatBackdrop": "Neotropical canopy / rotting log stage",
+        "assetKind": "silhouette_brief",
+        "finishedModel": false,
+        "humanApproved": false
+      },
       "emojiEqualsFinished": false,
       "finishedModelClaimed": false,
       "originalArtApproved": false,
-      "progressNote": "Remains emoji identity candidate — not finished"
+      "progressNote": "Wave-3 silhouette brief authored; still not a finished model"
     },
     {
       "taxonId": "libellula_quadrimaculata",
@@ -455,26 +507,52 @@
       "scientificName": "Trilobita",
       "representationMark": "🦴",
       "priorStatus": "emoji_identity_candidate",
-      "currentStatus": "emoji_identity_candidate",
-      "artStatusLabel": "Art status: emoji identity candidate (not a finished model)",
-      "silhouetteBrief": null,
+      "currentStatus": "procedural_candidate",
+      "artStatusLabel": "Art status: procedural candidate (silhouette brief — not human-approved final art)",
+      "silhouetteBrief": {
+        "taxonId": "trilobita_order",
+        "posture": "dorsal fossil plate, cephalon forward",
+        "anatomyFocus": [
+          "cephalon shield",
+          "thoracic segments",
+          "pygidium"
+        ],
+        "locomotionCue": "static reconstruction pose — not a living gait claim",
+        "habitatBackdrop": "Paleozoic seafloor reconstruction — fossil framing only",
+        "assetKind": "silhouette_brief",
+        "finishedModel": false,
+        "humanApproved": false
+      },
       "emojiEqualsFinished": false,
       "finishedModelClaimed": false,
       "originalArtApproved": false,
-      "progressNote": "Remains emoji identity candidate — not finished"
+      "progressNote": "Wave-3 silhouette brief authored; still not a finished model"
     },
     {
       "taxonId": "ursus_maritimus",
       "scientificName": "Ursus maritimus",
       "representationMark": "🐻",
       "priorStatus": "emoji_identity_candidate",
-      "currentStatus": "emoji_identity_candidate",
-      "artStatusLabel": "Art status: emoji identity candidate (not a finished model)",
-      "silhouetteBrief": null,
+      "currentStatus": "procedural_candidate",
+      "artStatusLabel": "Art status: procedural candidate (silhouette brief — not human-approved final art)",
+      "silhouetteBrief": {
+        "taxonId": "ursus_maritimus",
+        "posture": "lateral walk on ice edge",
+        "anatomyFocus": [
+          "elongate neck",
+          "large plantigrade paws",
+          "insulating bulk"
+        ],
+        "locomotionCue": "steady ice-edge amble",
+        "habitatBackdrop": "sea-ice margin / polar coastal — never temperate forest substitution",
+        "assetKind": "silhouette_brief",
+        "finishedModel": false,
+        "humanApproved": false
+      },
       "emojiEqualsFinished": false,
       "finishedModelClaimed": false,
       "originalArtApproved": false,
-      "progressNote": "Remains emoji identity candidate — not finished"
+      "progressNote": "Wave-3 silhouette brief authored; still not a finished model"
     }
   ],
   "rule": "Original-art progress may advance emoji → procedural silhouette briefs; emoji never equals finished art; human approval still required for final assets."

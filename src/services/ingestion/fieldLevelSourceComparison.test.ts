@@ -1,4 +1,4 @@
-import { mkdirSync, readFileSync, writeFileSync } from 'node:fs';
+import { existsSync, mkdirSync, readFileSync, writeFileSync } from 'node:fs';
 import { join } from 'node:path';
 import { describe, expect, it } from 'vitest';
 import {
@@ -83,27 +83,39 @@ function loadMergedFixtureRecords(): { snapshotId: string; records: FixtureRecor
     )
     .map((r) => fixtureRecordFromGbifBatchRecord(r, gbifBatch.license ?? 'CC BY 4.0'));
 
-  const colBounded = JSON.parse(
-    readFileSync(join(ROOT, 'data-pipeline/snapshots/public_bounded/col_flagship_bounded.json'), 'utf8'),
-  ) as {
-    approvedForUse?: boolean;
-    retrievedAt?: string;
-    verificationStatus?: string;
-    taxa?: Array<{
-      query?: string;
-      hit?: {
-        classification?: Array<{ id?: string; name?: string; label?: string; rank?: string; status?: string }>;
-      };
-    }>;
-  };
-  expect(colBounded.approvedForUse).toBe(false);
-  const colBoundedRecords = (colBounded.taxa ?? [])
-    .map((t) => fixtureRecordFromColBoundedTaxon(t, colBounded.retrievedAt))
-    .filter((r): r is FixtureRecord => {
-      if (!r) return false;
-      const name = String(r.scientific_name?.accepted_scientific_name ?? '').toLowerCase();
-      return flagshipNames.has(name);
-    });
+  const normalizeName = (n: string) =>
+    n
+      .toLowerCase()
+      .replace(/\([^)]*\)/g, ' ')
+      .replace(/\s+/g, ' ')
+      .trim();
+  const flagshipNamesNorm = new Set([...flagshipNames].map(normalizeName));
+
+  // COL bounded acquire is gitignored — optional enrichment when present locally / CI without it.
+  const colBoundedPath = join(ROOT, 'data-pipeline/snapshots/public_bounded/col_flagship_bounded.json');
+  let colBoundedRecords: FixtureRecord[] = [];
+  if (existsSync(colBoundedPath)) {
+    const colBounded = JSON.parse(readFileSync(colBoundedPath, 'utf8')) as {
+      approvedForUse?: boolean;
+      retrievedAt?: string;
+      verificationStatus?: string;
+      taxa?: Array<{
+        query?: string;
+        hit?: {
+          classification?: Array<{ id?: string; name?: string; label?: string; rank?: string; status?: string }>;
+        };
+      }>;
+    };
+    expect(colBounded.approvedForUse).toBe(false);
+    expect(colBounded.verificationStatus).not.toBe('source_verified');
+    colBoundedRecords = (colBounded.taxa ?? [])
+      .map((t) => fixtureRecordFromColBoundedTaxon(t, colBounded.retrievedAt))
+      .filter((r): r is FixtureRecord => {
+        if (!r) return false;
+        const name = normalizeName(String(r.scientific_name?.accepted_scientific_name ?? ''));
+        return flagshipNamesNorm.has(name);
+      });
+  }
 
   const pbdbBounded = JSON.parse(
     readFileSync(join(ROOT, 'data-pipeline/snapshots/public_bounded/pbdb_flagship_bounded.json'), 'utf8'),
@@ -300,12 +312,28 @@ describe('fieldLevelSourceComparison', () => {
     expect(byId.mammuthus_primigenius?.sourceVerifiedRelease).toBe(false);
     expect(byId.mammuthus_primigenius?.fixtureSource).toMatch(/Paleobiology|PBDB|Catalogue of Life/i);
 
+    // Wave-3 insect/arachnid COL bounded species (approvedForUse=false)
+    for (const id of [
+      'anax_junius',
+      'latrodectus_mactans',
+      'libellula_quadrimaculata',
+      'dynastes_hercules',
+      'pachnoda_marginata',
+      'acanthoscurria_geniculata',
+    ] as const) {
+      expect(byId[id]?.fixtureSource).toBe('Catalogue of Life');
+      expect(byId[id]?.dataMode).toBe('sample_fallback');
+      expect(byId[id]?.sourceVerifiedRelease).toBe(false);
+      expect(byId[id]?.fieldRows.find((r) => r.field === 'scientific_name')?.status).toBe('match');
+      expect(byId[id]?.fixtureUncertainty).toMatch(/approvedForUse=false|sparse COL|FIXTURE_TEST_ONLY/i);
+    }
+
     // Never promote; never invent IUCN assessments in this matrix
     expect(report.anySourceVerified).toBe(false);
     expect(report.comparisons.every((c) => c.sourceVerifiedRelease === false)).toBe(true);
     expect(report.comparisons.every((c) => c.dataMode === 'sample_fallback')).toBe(true);
     expect(report.comparisons.every((c) => !/iucn/i.test(c.fixtureSource))).toBe(true);
-    expect(report.comparisons.length).toBeGreaterThanOrEqual(17);
+    expect(report.comparisons.length).toBeGreaterThanOrEqual(23);
 
     writeEvidence(report);
     const written = JSON.parse(

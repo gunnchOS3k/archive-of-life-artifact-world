@@ -160,6 +160,37 @@ export const DEFAULT_FIELD_COMPARE_TARGETS: GameFacing[] = [
     commonName: 'Woolly Mammoth',
     scientificName: 'Mammuthus primigenius',
   },
+  // Additional public_bounded COL species (approvedForUse=false) — still sample_fallback.
+  {
+    taxonId: 'anax_junius',
+    commonName: 'Green Darner',
+    scientificName: 'Anax junius',
+  },
+  {
+    taxonId: 'latrodectus_mactans',
+    commonName: 'Southern Black Widow',
+    scientificName: 'Latrodectus mactans',
+  },
+  {
+    taxonId: 'libellula_quadrimaculata',
+    commonName: 'Four-spotted Skimmer',
+    scientificName: 'Libellula quadrimaculata',
+  },
+  {
+    taxonId: 'dynastes_hercules',
+    commonName: 'Hercules Beetle',
+    scientificName: 'Dynastes hercules',
+  },
+  {
+    taxonId: 'pachnoda_marginata',
+    commonName: 'Sun Beetle',
+    scientificName: 'Pachnoda marginata',
+  },
+  {
+    taxonId: 'acanthoscurria_geniculata',
+    commonName: 'Brazilian Whiteknee Tarantula',
+    scientificName: 'Acanthoscurria geniculata',
+  },
 ];
 
 /** Gate 1 organism shape → FixtureRecord (fixture_sample — not live export). */
@@ -344,11 +375,14 @@ export function mergeFixtureRecordsPreferringRich(
   return out;
 }
 
+/** Normalize scientific names for matching; strips parenthetical subgenus markers. */
 function norm(value: string | null | undefined): string {
   return String(value ?? '')
     .trim()
     .toLowerCase()
-    .replace(/\s+/g, ' ');
+    .replace(/\([^)]*\)/g, ' ')
+    .replace(/\s+/g, ' ')
+    .trim();
 }
 
 function compareField(
