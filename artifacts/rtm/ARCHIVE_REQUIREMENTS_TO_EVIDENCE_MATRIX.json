@@ -5,7 +5,7 @@
   "contract_source_sha": "935eb3a20548b1a4b726f2ba305df94ff496be16",
   "product_id": "archive-of-life",
   "product_repo": "https://github.com/gunnchOS3k/archive-of-life-artifact-world",
-  "generated_at": "2026-10-30T19:05:00Z",
+  "generated_at": "2026-10-30T19:55:00Z",
   "honesty_flags": {
     "HUMAN": false,
     "RC2": false,
@@ -14,7 +14,7 @@
   "phase_summary": {
     "cursor_complete": {
       "status": "not_started",
-      "notes": "Automated evidence and UI wiring exist; Cursor-Complete is not claimed. Floors 157/24/12 remain authored/sample; 24/24 procedural silhouette briefs (waves 1–4) still ≠ finished/human-approved; IUCN blocked; 0/17 maps; Lifeling cosmetic-only."
+      "notes": "Digital art/field matrix advanced; EXTERNAL_BLOCKERS remain for human final art, live IUCN, paleomaps. CURSOR_COMPLETE not claimed."
     },
     "codex_independently_verified": {
       "status": "not_started"
@@ -67,10 +67,10 @@
         "Public-data alternatives remain investigation-only (approvedForUse=false)"
       ],
       "severity": "blocker",
-      "sha": "dac21e402820a90bc363c23c6c53d91edc732698",
+      "sha": "PENDING_IMPLEMENT_SHA",
       "independent_review_status": "not_started",
       "cursor_complete_status": "in_progress",
-      "notes": "Specialty: scientific_provenance. Field matrix 23 taxa sample_fallback (trilobita_order remains without clean bounded fixture — not invented); anySourceVerified/productionReady false; NASA historical f6d1c4d8… untouched; IUCN not invented."
+      "notes": "Specialty: scientific_provenance. Field matrix 24 taxa incl. class-rank Trilobita via PBDB bounded (PBDB:19100, approvedForUse=false); anySourceVerified/productionReady false; NASA historical f6d1c4d8…; IUCN not invented; maps 0/17 held."
     },
     {
       "req_id": "AOL-SCI-002",
@@ -167,7 +167,7 @@
         "emoji/identity candidate ≠ finished model / human-approved art"
       ],
       "severity": "high",
-      "sha": "1dad3288274b6119b8448818a49262e098d65d81",
+      "sha": "PENDING_IMPLEMENT_SHA",
       "independent_review_status": "not_started",
       "cursor_complete_status": "in_progress",
       "notes": "Specialty: taxonomy_geo_temporal."
@@ -344,10 +344,10 @@
         "Human final-art approval pending"
       ],
       "severity": "high",
-      "sha": "dac21e402820a90bc363c23c6c53d91edc732698",
+      "sha": "PENDING_IMPLEMENT_SHA",
       "independent_review_status": "not_started",
       "cursor_complete_status": "in_progress",
-      "notes": "Specialty: organism_identity. Waves 1–4: 24/24 procedural silhouette briefs; emoji≠finished; finishedModelsClaimed=false; Lifeling honesty conservationBadgesShown=false; IUCN blocked + 0/17 maps held; human final-art approval still pending."
+      "notes": "Specialty: organism_identity. 24/24 procedural briefs ≠ finished; trilobita field now PBDB-bounded sample_fallback; HUMAN finals pending (EXTERNAL_BLOCKERS)."
     },
     {
       "req_id": "AOL-SAV-001",

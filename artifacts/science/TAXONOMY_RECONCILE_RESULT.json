@@ -41,10 +41,10 @@
     {
       "sourceId": "pbdb_bounded",
       "snapshotId": "pbdb_flagship_bounded",
-      "retrievedAt": "2026-10-29T05:00:56Z",
-      "sha256": "3304fdb6b03118953f947a612979cf1f079d428435db633a523fa3b06105d2f6",
+      "retrievedAt": "2026-10-30T17:40:00Z",
+      "sha256": "fe06fb1c4a7f26ed7b33908ac080a6c86da8adf8bd3a161cb5b671678f80caad",
       "license": "CC BY 4.0 Paleobiology Database",
-      "recordCount": 2,
+      "recordCount": 3,
       "dataMode": "sample_fallback",
       "approvedForUse": false,
       "sourceVerifiedRelease": false
@@ -280,6 +280,27 @@
         }
       ],
       "acceptedNameAgreement": "agree",
+      "synonymCoverage": [],
+      "notes": "Authority hits recorded; still sample_fallback until human rights review",
+      "dataMode": "sample_fallback",
+      "verificationStatus": "needs_source_verification",
+      "sourceVerifiedRelease": false
+    },
+    {
+      "taxonId": "trilobita_order",
+      "gameScientificName": "Trilobita",
+      "hits": [
+        {
+          "sourceId": "pbdb_bounded",
+          "acceptedName": "Trilobita",
+          "scientificName": "Trilobita",
+          "rank": "class",
+          "synonyms": [],
+          "sourceRecordId": "PBDB:19100",
+          "notes": "PBDB bounded snapshot — sample_fallback; approvedForUse=false"
+        }
+      ],
+      "acceptedNameAgreement": "single_source",
       "synonymCoverage": [],
       "notes": "Authority hits recorded; still sample_fallback until human rights review",
       "dataMode": "sample_fallback",

@@ -2,8 +2,8 @@
   "schema": "aol.taxonomy_reconcile.v1",
   "generatedAt": "2026-10-30T16:00:00.000Z",
   "anySourceVerified": false,
-  "rowCount": 10,
-  "hits": 10,
+  "rowCount": 11,
+  "hits": 11,
   "snapshots": [
     {
       "sourceId": "wave008_col",
@@ -32,9 +32,9 @@
     {
       "sourceId": "pbdb_bounded",
       "snapshotId": "pbdb_flagship_bounded",
-      "retrievedAt": "2026-10-29T05:00:56Z",
-      "sha256": "3304fdb6b03118953f947a612979cf1f079d428435db633a523fa3b06105d2f6",
-      "recordCount": 2,
+      "retrievedAt": "2026-10-30T17:40:00Z",
+      "sha256": "fe06fb1c4a7f26ed7b33908ac080a6c86da8adf8bd3a161cb5b671678f80caad",
+      "recordCount": 3,
       "dataMode": "sample_fallback"
     },
     {

@@ -80,6 +80,7 @@ export const DEFAULT_RECONCILE_TAXA: TaxonomyReconcileInputTaxon[] = [
   { taxonId: 'equus_caballus_ferus', scientificName: 'Equus ferus przewalskii' },
   { taxonId: 'mammuthus_primigenius', scientificName: 'Mammuthus primigenius' },
   { taxonId: 'tyrannosaurus_rex', scientificName: 'Tyrannosaurus rex' },
+  { taxonId: 'trilobita_order', scientificName: 'Trilobita' },
   { taxonId: 'danaus_plexippus', scientificName: 'Danaus plexippus' },
   { taxonId: 'apis_mellifera', scientificName: 'Apis mellifera' },
 ];

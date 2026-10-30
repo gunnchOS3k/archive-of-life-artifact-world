@@ -336,12 +336,22 @@ describe('fieldLevelSourceComparison', () => {
     expect(byId.mammuthus_primigenius?.sourceVerifiedRelease).toBe(false);
     expect(byId.mammuthus_primigenius?.fixtureSource).toMatch(/Paleobiology|PBDB|Catalogue of Life/i);
 
+    // Trilobita class — PBDB public_bounded class-rank (approvedForUse=false); closes prior game_only gap
+    expect(byId.trilobita_order?.fixtureSource).toBe('Paleobiology Database');
+    expect(byId.trilobita_order?.fixtureRecordId).toBe('PBDB:bounded:19100');
+    expect(byId.trilobita_order?.fieldRows.find((r) => r.field === 'scientific_name')?.status).toBe(
+      'match',
+    );
+    expect(byId.trilobita_order?.dataMode).toBe('sample_fallback');
+    expect(byId.trilobita_order?.sourceVerifiedRelease).toBe(false);
+    expect(byId.trilobita_order?.fixtureUncertainty).toMatch(/approvedForUse=false/);
+
     // Never promote; never invent IUCN assessments in this matrix
     expect(report.anySourceVerified).toBe(false);
     expect(report.comparisons.every((c) => c.sourceVerifiedRelease === false)).toBe(true);
     expect(report.comparisons.every((c) => c.dataMode === 'sample_fallback')).toBe(true);
     expect(report.comparisons.every((c) => !/iucn/i.test(c.fixtureSource))).toBe(true);
-    expect(report.comparisons.length).toBeGreaterThanOrEqual(23);
+    expect(report.comparisons.length).toBeGreaterThanOrEqual(24);
 
     writeEvidence(report);
     const written = JSON.parse(

@@ -24,11 +24,12 @@
     },
     "pbdb": {
       "imported": true,
-      "recordCount": 2,
+      "recordCount": 3,
       "verifiedRecordCount": 0,
       "dataMode": "sample_fallback",
       "blocked": null,
-      "path": "data-pipeline/snapshots/public_bounded/pbdb_flagship_bounded.json"
+      "path": "data-pipeline/snapshots/public_bounded/pbdb_flagship_bounded.json",
+      "note": "Includes class-rank Trilobita (PBDB:19100); approvedForUse=false; not source_verified"
     },
     "neotoma": {
       "imported": true,

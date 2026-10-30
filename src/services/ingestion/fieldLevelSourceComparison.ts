@@ -191,6 +191,12 @@ export const DEFAULT_FIELD_COMPARE_TARGETS: GameFacing[] = [
     commonName: 'Brazilian Whiteknee Tarantula',
     scientificName: 'Acanthoscurria geniculata',
   },
+  // Class-rank fossil via public_bounded PBDB (approvedForUse=false) — not IUCN/maps/source_verified.
+  {
+    taxonId: 'trilobita_order',
+    commonName: 'Trilobite',
+    scientificName: 'Trilobita',
+  },
 ];
 
 /** Gate 1 organism shape → FixtureRecord (fixture_sample — not live export). */

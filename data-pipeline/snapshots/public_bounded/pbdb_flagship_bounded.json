@@ -35,9 +35,26 @@
         "taxon_no": "54833",
         "taxon_rank": "species"
       }
+    },
+    {
+      "query": "Trilobita",
+      "row": {
+        "accepted_name": "Trilobita",
+        "accepted_no": "19100",
+        "accepted_rank": "class",
+        "is_extant": "extinct",
+        "n_occs": 56571,
+        "orig_no": "19100",
+        "parent_no": "308386",
+        "record_type": "txn",
+        "reference_no": "6930",
+        "taxon_name": "Trilobita",
+        "taxon_no": "19100",
+        "taxon_rank": "class"
+      }
     }
   ],
-  "retrievedAt": "2026-10-29T05:00:56Z",
+  "retrievedAt": "2026-10-30T17:40:00Z",
   "source": "pbdb",
   "verificationStatus": "needs_source_verification"
 }
