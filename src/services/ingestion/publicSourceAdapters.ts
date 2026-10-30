@@ -8,8 +8,8 @@
  * sample_fallback until human license approval. Never promote mock_sample.
  */
 
-import { createHash } from 'node:crypto';
 import type { VerificationStatus } from '@/schema/provenance';
+import { sha256Text } from './browserSha256';
 
 export type PublicAdapterSource =
   | 'col'
@@ -69,10 +69,6 @@ export const IUCN_OWNER_SETUP_STEPS = [
   'Run: npm run source:audit && npm run audit:production',
   'Keep production ready=false until verified_record_count>0 AND data_mode=source_verified after review.',
 ] as const;
-
-function sha256Text(text: string): string {
-  return createHash('sha256').update(text).digest('hex');
-}
 
 function nowIso(): string {
   return new Date().toISOString();
