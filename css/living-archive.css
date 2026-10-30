@@ -118,13 +118,17 @@ body.vxp4-living-archive #title-screen {
     radial-gradient(ellipse at 85% 75%, rgba(201, 132, 42, 0.16), transparent 40%),
     linear-gradient(165deg, #163028 0%, #101820 48%, #1a2430 100%);
   align-items: stretch;
-  justify-content: center;
+  justify-content: flex-start;
+  /* Resume honesty strip can grow past the fold — allow scroll so Continue stays clickable. */
+  overflow-x: hidden;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
 }
 
 body.vxp4-living-archive .title-content {
   max-width: 720px;
   width: min(92vw, 720px);
-  margin: auto;
+  margin: 0 auto;
   padding: 2.5rem 1.5rem 3rem;
   text-align: left;
   position: relative;
@@ -179,6 +183,12 @@ body.vxp4-living-archive .la-cta-group {
   flex-wrap: wrap;
   gap: 0.75rem;
   margin-bottom: 1.5rem;
+  position: sticky;
+  top: 0.75rem;
+  z-index: 3;
+  background: linear-gradient(180deg, rgba(16, 24, 32, 0.96), rgba(16, 24, 32, 0.88));
+  padding: 0.65rem 0.25rem 0.85rem;
+  border-radius: 12px;
 }
 
 body.vxp4-living-archive .btn-primary {

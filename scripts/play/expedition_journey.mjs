@@ -16,6 +16,19 @@ function sleep(ms) {
   return new Promise((resolve) => setTimeout(resolve, ms));
 }
 
+/** Title CTAs can sit under a tall resume honesty strip; force a reachable Continue click. */
+async function clickContinueExpedition(page) {
+  const btn = page.locator('#btn-continue');
+  await btn.waitFor({ state: 'attached' });
+  await page.evaluate(() => {
+    const el = document.getElementById('btn-continue');
+    const screen = document.getElementById('title-screen');
+    el?.scrollIntoView({ block: 'center', inline: 'nearest' });
+    screen?.scrollTo?.(0, 0);
+  });
+  await btn.click({ force: true });
+}
+
 async function waitForUrl(url) {
   const stop = Date.now() + 120_000;
   while (Date.now() < stop) {
@@ -92,7 +105,7 @@ try {
   if (explored.returnHref !== 'https://gunnchos.com') throw new Error(`return ${explored.returnHref}`);
 
   await page.reload();
-  await page.getByRole('button', { name: 'Continue Expedition' }).click();
+  await clickContinueExpedition(page);
   await page.waitForFunction(() => document.getElementById('game-screen')?.classList.contains('active'));
   const restored = await page.evaluate(() => {
     const saved = JSON.parse(localStorage.getItem('archive_of_life_save') || 'null');
@@ -125,7 +138,7 @@ try {
   if (era.scientificVerification.some((value) => value !== false)) throw new Error('era claimed scientific verification');
 
   await page.reload();
-  await page.getByRole('button', { name: 'Continue Expedition' }).click();
+  await clickContinueExpedition(page);
   await page.waitForFunction(() => document.getElementById('game-screen')?.classList.contains('active'));
   const eraRestored = await page.evaluate(() => {
     const saved = JSON.parse(localStorage.getItem('archive_of_life_save') || 'null');
@@ -169,7 +182,7 @@ try {
   if (notebook.scientificVerification.some((value) => value !== false)) throw new Error('journal claimed scientific verification');
 
   await page.reload();
-  await page.getByRole('button', { name: 'Continue Expedition' }).click();
+  await clickContinueExpedition(page);
   await page.waitForFunction(() => document.getElementById('game-screen')?.classList.contains('active'));
   if (await onboard.isVisible()) await onboard.click();
   await page.locator('#btn-notebook').click();
@@ -214,7 +227,7 @@ try {
   if (dex.scientificVerification.some((value) => value !== false)) throw new Error('ArchiveDex claimed scientific verification');
 
   await page.reload();
-  await page.getByRole('button', { name: 'Continue Expedition' }).click();
+  await clickContinueExpedition(page);
   await page.waitForFunction(() => document.getElementById('game-screen')?.classList.contains('active'));
   if (await onboard.isVisible()) await onboard.click();
   await page.locator('#btn-archive').click();
@@ -264,7 +277,7 @@ try {
   if (timeAtlas.scientificVerification.some((value) => value !== false)) throw new Error('Time Atlas claimed scientific verification');
 
   await page.reload();
-  await page.getByRole('button', { name: 'Continue Expedition' }).click();
+  await clickContinueExpedition(page);
   await page.waitForFunction(() => document.getElementById('game-screen')?.classList.contains('active'));
   if (await onboard.isVisible()) await onboard.click();
   await page.locator('#btn-time').click();
