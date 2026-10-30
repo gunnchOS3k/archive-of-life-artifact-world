@@ -5,6 +5,7 @@ import {
   PROCEDURAL_ART_WAVE1,
   PROCEDURAL_ART_WAVE2,
   PROCEDURAL_ART_WAVE3,
+  PROCEDURAL_ART_WAVE4,
   PROCEDURAL_ART_WAVES,
   assertFlagshipOriginalArtProgress,
   buildFlagshipOriginalArtProgressReport,
@@ -14,14 +15,14 @@ import {
 import { buildFlagshipArtHonestyReport, assertFlagshipArtHonestyReport } from './flagshipArtHonestyPresentation';
 
 describe('flagshipOriginalArtProgress', () => {
-  it('advances wave-1/2/3 flagships to procedural silhouette briefs without claiming finished art', () => {
-    const report = buildFlagshipOriginalArtProgressReport('2026-10-30T18:15:00.000Z');
+  it('advances waves 1–4 so all 24 flagships have procedural briefs without claiming finished art', () => {
+    const report = buildFlagshipOriginalArtProgressReport('2026-10-30T19:00:00.000Z');
     assertFlagshipOriginalArtProgress(report);
 
     expect(report.flagshipCount).toBe(24);
-    expect(report.proceduralCandidateCount).toBeGreaterThanOrEqual(PROCEDURAL_ART_WAVES.length);
-    expect(report.proceduralCandidateCount).toBe(18);
-    expect(report.emojiIdentityCount).toBe(6);
+    expect(report.proceduralCandidateCount).toBe(PROCEDURAL_ART_WAVES.length);
+    expect(report.proceduralCandidateCount).toBe(24);
+    expect(report.emojiIdentityCount).toBe(0);
     expect(report.finishedModelsClaimed).toBe(false);
     expect(report.emojiEqualsFinished).toBe(false);
     expect(report.anyHumanApprovedFinal).toBe(false);
@@ -37,20 +38,24 @@ describe('flagshipOriginalArtProgress', () => {
     expect(PROCEDURAL_ART_WAVE1.length).toBe(6);
     expect(PROCEDURAL_ART_WAVE2.length).toBe(6);
     expect(PROCEDURAL_ART_WAVE3.length).toBe(6);
+    expect(PROCEDURAL_ART_WAVE4.length).toBe(6);
     expect(buildSilhouetteBrief('panthera_leo')?.anatomyFocus.length).toBeGreaterThan(0);
     expect(buildSilhouetteBrief('equus_caballus_ferus')?.habitatBackdrop).toMatch(/steppe/i);
     expect(buildSilhouetteBrief('danaus_plexippus')?.locomotionCue).toMatch(/migratory/i);
     expect(buildSilhouetteBrief('tyrannosaurus_rex')?.habitatBackdrop).toMatch(/reconstruction/i);
     expect(buildSilhouetteBrief('ursus_maritimus')?.habitatBackdrop).toMatch(/polar|ice/i);
     expect(buildSilhouetteBrief('trilobita_order')?.habitatBackdrop).toMatch(/fossil/i);
+    expect(buildSilhouetteBrief('formica_rufa')?.habitatBackdrop).toMatch(/ant|forest/i);
+    expect(buildSilhouetteBrief('pachnoda_marginata')?.locomotionCue).toMatch(/flight|climb/i);
 
     const html = renderFlagshipOriginalArtProgressHtml(report);
     expect(html).toContain('emoji ≠ finished');
     expect(html).toContain('data-emoji-finished="false"');
-    expect(html).toContain('data-procedural-wave="3"');
+    expect(html).toContain('data-procedural-wave="4"');
+    expect(html).toContain('human-approved finals still pending');
 
     // Honesty report still refuses finished/approved claims after procedural progress.
-    const honesty = buildFlagshipArtHonestyReport('2026-10-30T18:15:00.000Z');
+    const honesty = buildFlagshipArtHonestyReport('2026-10-30T19:00:00.000Z');
     assertFlagshipArtHonestyReport(honesty);
     expect(honesty.emojiEqualsFinished).toBe(false);
     expect(honesty.finishedModelsClaimed).toBe(false);

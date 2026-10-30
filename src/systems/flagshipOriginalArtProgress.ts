@@ -81,10 +81,21 @@ export const PROCEDURAL_ART_WAVE3: readonly string[] = [
   'trilobita_order',
 ] as const;
 
+/** Fourth-wave briefs — closes remaining emoji identity candidates; still not finished models. */
+export const PROCEDURAL_ART_WAVE4: readonly string[] = [
+  'formica_rufa',
+  'bombus_terrestris',
+  'latrodectus_mactans',
+  'libellula_quadrimaculata',
+  'acanthoscurria_geniculata',
+  'pachnoda_marginata',
+] as const;
+
 export const PROCEDURAL_ART_WAVES: readonly string[] = [
   ...PROCEDURAL_ART_WAVE1,
   ...PROCEDURAL_ART_WAVE2,
   ...PROCEDURAL_ART_WAVE3,
+  ...PROCEDURAL_ART_WAVE4,
 ] as const;
 
 const SILHOUETTE_BRIEFS: Record<string, Omit<SilhouetteBrief, 'taxonId' | 'assetKind' | 'finishedModel' | 'humanApproved'>> = {
@@ -196,6 +207,42 @@ const SILHOUETTE_BRIEFS: Record<string, Omit<SilhouetteBrief, 'taxonId' | 'asset
     locomotionCue: 'static reconstruction pose — not a living gait claim',
     habitatBackdrop: 'Paleozoic seafloor reconstruction — fossil framing only',
   },
+  formica_rufa: {
+    posture: 'lateral worker with raised antennae',
+    anatomyFocus: ['narrow waist', 'mandible cue', 'segmented antennae'],
+    locomotionCue: 'trail-follow scurries',
+    habitatBackdrop: 'wood-ant mound / forest floor trail',
+  },
+  bombus_terrestris: {
+    posture: '¾ hover at flower face',
+    anatomyFocus: ['fuzzy thorax', 'banded abdomen', 'pollen-laden legs'],
+    locomotionCue: 'heavy buzz hover → short forage hop',
+    habitatBackdrop: 'meadow clover / nest-bank forage',
+  },
+  latrodectus_mactans: {
+    posture: 'inverted web sit, abdomen down',
+    anatomyFocus: ['globose abdomen', 'hourglass mark candidate', 'slender legs'],
+    locomotionCue: 'web-vibration wait — not a chase predator claim',
+    habitatBackdrop: 'sheltered web niche / debris overhang',
+  },
+  libellula_quadrimaculata: {
+    posture: 'perch with wings outspread',
+    anatomyFocus: ['four wing spots', 'broad abdomen', 'compound eyes'],
+    locomotionCue: 'perch → short territorial sally',
+    habitatBackdrop: 'marsh edge / sunlit reed perch',
+  },
+  acanthoscurria_geniculata: {
+    posture: 'forward threat-display candidate, legs spread',
+    anatomyFocus: ['banded leg joints', 'robust cephalothorax', 'urticating-hair framing'],
+    locomotionCue: 'deliberate terrestrial walk',
+    habitatBackdrop: 'Neotropical leaf litter / burrow mouth — husbandry not wild claim',
+  },
+  pachnoda_marginata: {
+    posture: '¾ dorsal on fruit surface',
+    anatomyFocus: ['shield-shaped elytra', 'margin contrast', 'clubbed antennae'],
+    locomotionCue: 'clumsy climb → short buzz flight',
+    habitatBackdrop: 'fruiting canopy / rotting fruit stage',
+  },
 };
 
 const RULE =
@@ -225,6 +272,9 @@ export function effectiveFlagshipArtStatus(profile: FlagshipObservationProfile):
 }
 
 function proceduralWaveNote(taxonId: string): string {
+  if (PROCEDURAL_ART_WAVE4.includes(taxonId)) {
+    return 'Wave-4 silhouette brief authored; still not a finished model';
+  }
   if (PROCEDURAL_ART_WAVE3.includes(taxonId)) {
     return 'Wave-3 silhouette brief authored; still not a finished model';
   }
@@ -310,8 +360,8 @@ export function renderFlagshipOriginalArtProgressHtml(
 ): string {
   assertFlagshipOriginalArtProgress(report);
   return [
-    '<aside class="flagship-art-progress" data-emoji-finished="false" data-procedural-wave="3" role="note">',
-    `<p><strong>Original art progress:</strong> ${report.proceduralCandidateCount}/${report.flagshipCount} flagships have procedural silhouette briefs (waves 1–3) — emoji ≠ finished.</p>`,
+    '<aside class="flagship-art-progress" data-emoji-finished="false" data-procedural-wave="4" role="note">',
+    `<p><strong>Original art progress:</strong> ${report.proceduralCandidateCount}/${report.flagshipCount} flagships have procedural silhouette briefs (waves 1–4) — emoji ≠ finished; human-approved finals still pending.</p>`,
     `<p>finishedModelsClaimed=false · humanApproved=false · ${escapeHtml(report.rule)}</p>`,
     '</aside>',
   ].join('');

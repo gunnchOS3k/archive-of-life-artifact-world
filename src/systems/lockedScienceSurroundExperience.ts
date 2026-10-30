@@ -34,7 +34,7 @@ const RULE =
 
 const PLAYER_BEATS = [
   'Museum hub honesty: authored floors, IUCN blocked, maps 0/17',
-  'Region expedition with species-specific observation (emoji/procedural ≠ finished art)',
+  'Region expedition with species-specific observation (24/24 procedural briefs ≠ finished art)',
   'ArchiveDex entry with art-progress + taxonomy-reconcile strips',
   'Lifeling companion handling without conservation-assessment badges',
   'Time Atlas banner: blocked/illustration honesty — no fake unlock',

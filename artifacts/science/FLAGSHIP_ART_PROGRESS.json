@@ -1,9 +1,9 @@
 {
   "schema": "aol.flagship_original_art_progress.v1",
-  "generatedAt": "2026-10-30T18:15:00.000Z",
+  "generatedAt": "2026-10-30T19:00:00.000Z",
   "flagshipCount": 24,
-  "proceduralCandidateCount": 18,
-  "emojiIdentityCount": 6,
+  "proceduralCandidateCount": 24,
+  "emojiIdentityCount": 0,
   "finishedModelsClaimed": false,
   "emojiEqualsFinished": false,
   "anyHumanApprovedFinal": false,
@@ -325,13 +325,26 @@
       "scientificName": "Formica rufa",
       "representationMark": "🐜",
       "priorStatus": "emoji_identity_candidate",
-      "currentStatus": "emoji_identity_candidate",
-      "artStatusLabel": "Art status: emoji identity candidate (not a finished model)",
-      "silhouetteBrief": null,
+      "currentStatus": "procedural_candidate",
+      "artStatusLabel": "Art status: procedural candidate (silhouette brief — not human-approved final art)",
+      "silhouetteBrief": {
+        "taxonId": "formica_rufa",
+        "posture": "lateral worker with raised antennae",
+        "anatomyFocus": [
+          "narrow waist",
+          "mandible cue",
+          "segmented antennae"
+        ],
+        "locomotionCue": "trail-follow scurries",
+        "habitatBackdrop": "wood-ant mound / forest floor trail",
+        "assetKind": "silhouette_brief",
+        "finishedModel": false,
+        "humanApproved": false
+      },
       "emojiEqualsFinished": false,
       "finishedModelClaimed": false,
       "originalArtApproved": false,
-      "progressNote": "Remains emoji identity candidate — not finished"
+      "progressNote": "Wave-4 silhouette brief authored; still not a finished model"
     },
     {
       "taxonId": "anax_junius",
@@ -364,13 +377,26 @@
       "scientificName": "Latrodectus mactans",
       "representationMark": "🕷️",
       "priorStatus": "emoji_identity_candidate",
-      "currentStatus": "emoji_identity_candidate",
-      "artStatusLabel": "Art status: emoji identity candidate (not a finished model)",
-      "silhouetteBrief": null,
+      "currentStatus": "procedural_candidate",
+      "artStatusLabel": "Art status: procedural candidate (silhouette brief — not human-approved final art)",
+      "silhouetteBrief": {
+        "taxonId": "latrodectus_mactans",
+        "posture": "inverted web sit, abdomen down",
+        "anatomyFocus": [
+          "globose abdomen",
+          "hourglass mark candidate",
+          "slender legs"
+        ],
+        "locomotionCue": "web-vibration wait — not a chase predator claim",
+        "habitatBackdrop": "sheltered web niche / debris overhang",
+        "assetKind": "silhouette_brief",
+        "finishedModel": false,
+        "humanApproved": false
+      },
       "emojiEqualsFinished": false,
       "finishedModelClaimed": false,
       "originalArtApproved": false,
-      "progressNote": "Remains emoji identity candidate — not finished"
+      "progressNote": "Wave-4 silhouette brief authored; still not a finished model"
     },
     {
       "taxonId": "dynastes_hercules",
@@ -403,52 +429,104 @@
       "scientificName": "Libellula quadrimaculata",
       "representationMark": "🪰",
       "priorStatus": "emoji_identity_candidate",
-      "currentStatus": "emoji_identity_candidate",
-      "artStatusLabel": "Art status: emoji identity candidate (not a finished model)",
-      "silhouetteBrief": null,
+      "currentStatus": "procedural_candidate",
+      "artStatusLabel": "Art status: procedural candidate (silhouette brief — not human-approved final art)",
+      "silhouetteBrief": {
+        "taxonId": "libellula_quadrimaculata",
+        "posture": "perch with wings outspread",
+        "anatomyFocus": [
+          "four wing spots",
+          "broad abdomen",
+          "compound eyes"
+        ],
+        "locomotionCue": "perch → short territorial sally",
+        "habitatBackdrop": "marsh edge / sunlit reed perch",
+        "assetKind": "silhouette_brief",
+        "finishedModel": false,
+        "humanApproved": false
+      },
       "emojiEqualsFinished": false,
       "finishedModelClaimed": false,
       "originalArtApproved": false,
-      "progressNote": "Remains emoji identity candidate — not finished"
+      "progressNote": "Wave-4 silhouette brief authored; still not a finished model"
     },
     {
       "taxonId": "bombus_terrestris",
       "scientificName": "Bombus terrestris",
       "representationMark": "🐝",
       "priorStatus": "emoji_identity_candidate",
-      "currentStatus": "emoji_identity_candidate",
-      "artStatusLabel": "Art status: emoji identity candidate (not a finished model)",
-      "silhouetteBrief": null,
+      "currentStatus": "procedural_candidate",
+      "artStatusLabel": "Art status: procedural candidate (silhouette brief — not human-approved final art)",
+      "silhouetteBrief": {
+        "taxonId": "bombus_terrestris",
+        "posture": "¾ hover at flower face",
+        "anatomyFocus": [
+          "fuzzy thorax",
+          "banded abdomen",
+          "pollen-laden legs"
+        ],
+        "locomotionCue": "heavy buzz hover → short forage hop",
+        "habitatBackdrop": "meadow clover / nest-bank forage",
+        "assetKind": "silhouette_brief",
+        "finishedModel": false,
+        "humanApproved": false
+      },
       "emojiEqualsFinished": false,
       "finishedModelClaimed": false,
       "originalArtApproved": false,
-      "progressNote": "Remains emoji identity candidate — not finished"
+      "progressNote": "Wave-4 silhouette brief authored; still not a finished model"
     },
     {
       "taxonId": "acanthoscurria_geniculata",
       "scientificName": "Acanthoscurria geniculata",
       "representationMark": "🕷️",
       "priorStatus": "emoji_identity_candidate",
-      "currentStatus": "emoji_identity_candidate",
-      "artStatusLabel": "Art status: emoji identity candidate (not a finished model)",
-      "silhouetteBrief": null,
+      "currentStatus": "procedural_candidate",
+      "artStatusLabel": "Art status: procedural candidate (silhouette brief — not human-approved final art)",
+      "silhouetteBrief": {
+        "taxonId": "acanthoscurria_geniculata",
+        "posture": "forward threat-display candidate, legs spread",
+        "anatomyFocus": [
+          "banded leg joints",
+          "robust cephalothorax",
+          "urticating-hair framing"
+        ],
+        "locomotionCue": "deliberate terrestrial walk",
+        "habitatBackdrop": "Neotropical leaf litter / burrow mouth — husbandry not wild claim",
+        "assetKind": "silhouette_brief",
+        "finishedModel": false,
+        "humanApproved": false
+      },
       "emojiEqualsFinished": false,
       "finishedModelClaimed": false,
       "originalArtApproved": false,
-      "progressNote": "Remains emoji identity candidate — not finished"
+      "progressNote": "Wave-4 silhouette brief authored; still not a finished model"
     },
     {
       "taxonId": "pachnoda_marginata",
       "scientificName": "Pachnoda marginata",
       "representationMark": "🪲",
       "priorStatus": "emoji_identity_candidate",
-      "currentStatus": "emoji_identity_candidate",
-      "artStatusLabel": "Art status: emoji identity candidate (not a finished model)",
-      "silhouetteBrief": null,
+      "currentStatus": "procedural_candidate",
+      "artStatusLabel": "Art status: procedural candidate (silhouette brief — not human-approved final art)",
+      "silhouetteBrief": {
+        "taxonId": "pachnoda_marginata",
+        "posture": "¾ dorsal on fruit surface",
+        "anatomyFocus": [
+          "shield-shaped elytra",
+          "margin contrast",
+          "clubbed antennae"
+        ],
+        "locomotionCue": "clumsy climb → short buzz flight",
+        "habitatBackdrop": "fruiting canopy / rotting fruit stage",
+        "assetKind": "silhouette_brief",
+        "finishedModel": false,
+        "humanApproved": false
+      },
       "emojiEqualsFinished": false,
       "finishedModelClaimed": false,
       "originalArtApproved": false,
-      "progressNote": "Remains emoji identity candidate — not finished"
+      "progressNote": "Wave-4 silhouette brief authored; still not a finished model"
     },
     {
       "taxonId": "mammuthus_primigenius",

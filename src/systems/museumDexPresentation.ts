@@ -150,8 +150,8 @@ export function renderArchiveDexHonestyBannerHtml(): string {
   return `
     <div class="archivedex-honesty" data-archivedex-honesty="1" role="note" aria-label="ArchiveDex honesty: authored floors, IUCN blocked_external not assessed, identity marks are not finished models">
       <p>ArchiveDex shows authored / sample floors. IUCN Red List is <strong>blocked_external</strong> (no owner credential / rights review yet) — assessed=false; no fake assessed badges.</p>
-      <p>Identity marks (including emoji) are not finished models — ${escapeHtml(artNote)}.</p>
-      <p>Maps 0/17 source-verified · production-ready=false · source_verified release=false</p>
+      <p>Identity marks (including emoji) are not finished models — ${escapeHtml(artNote)}. Wave-4 procedural briefs cover 24/24 flagships; human-approved finals still pending.</p>
+      <p>Maps 0/17 source-verified · production-ready=false · source_verified release=false · anySourceVerified=false</p>
       <p>IUCN token absence does not freeze COL/GBIF/PBDB/Neotoma/NASA science — those paths stay sample_fallback until human review.</p>
       ${renderFlagshipArtHonestyHtml()}
       ${renderFlagshipOriginalArtProgressHtml()}

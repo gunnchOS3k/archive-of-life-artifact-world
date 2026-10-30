@@ -5,7 +5,7 @@
   "contract_source_sha": "935eb3a20548b1a4b726f2ba305df94ff496be16",
   "product_id": "archive-of-life",
   "product_repo": "https://github.com/gunnchOS3k/archive-of-life-artifact-world",
-  "generated_at": "2026-10-30T18:20:00Z",
+  "generated_at": "2026-10-30T19:05:00Z",
   "honesty_flags": {
     "HUMAN": false,
     "RC2": false,
@@ -14,7 +14,7 @@
   "phase_summary": {
     "cursor_complete": {
       "status": "not_started",
-      "notes": "Automated evidence and UI wiring exist; Cursor-Complete is not claimed. Floors 157/24/12 remain authored/sample; emoji≠finished (18/24 procedural silhouette briefs waves 1–3); IUCN blocked; 0/17 maps; Lifeling cosmetic-only."
+      "notes": "Automated evidence and UI wiring exist; Cursor-Complete is not claimed. Floors 157/24/12 remain authored/sample; 24/24 procedural silhouette briefs (waves 1–4) still ≠ finished/human-approved; IUCN blocked; 0/17 maps; Lifeling cosmetic-only."
     },
     "codex_independently_verified": {
       "status": "not_started"
@@ -67,10 +67,10 @@
         "Public-data alternatives remain investigation-only (approvedForUse=false)"
       ],
       "severity": "blocker",
-      "sha": "f036364e2944408b0542411cf22ed3fe2f96f6e1",
+      "sha": "PENDING_IMPLEMENT_SHA",
       "independent_review_status": "not_started",
       "cursor_complete_status": "in_progress",
-      "notes": "Specialty: scientific_provenance. Production gate remains false. Field matrix 23 taxa via wave008/Gate1/COL/GBIF + public_bounded COL/PBDB (approvedForUse=false); anySourceVerified/productionReady false; sample_fallback never promoted; NASA historical f6d1c4d8… untouched; IUCN not invented."
+      "notes": "Specialty: scientific_provenance. Field matrix 23 taxa sample_fallback (trilobita_order remains without clean bounded fixture — not invented); anySourceVerified/productionReady false; NASA historical f6d1c4d8… untouched; IUCN not invented."
     },
     {
       "req_id": "AOL-SCI-002",
@@ -298,10 +298,10 @@
         "HUMAN/RC2/V1 remain false"
       ],
       "severity": "high",
-      "sha": "f036364e2944408b0542411cf22ed3fe2f96f6e1",
+      "sha": "PENDING_IMPLEMENT_SHA",
       "independent_review_status": "not_started",
       "cursor_complete_status": "in_progress",
-      "notes": "Specialty: expeditions. Museum/dex/Lifeling honesty surfaces continue under IUCN blocked + 0/17 maps; expedition journey ok=true; HUMAN/RC2/V1 false."
+      "notes": "Specialty: expeditions. Surround beats cite 24/24 procedural ≠ finished; museum→expedition→Lifeling loop under IUCN blocked + 0/17; HUMAN/RC2/V1 false."
     },
     {
       "req_id": "AOL-ORG-001",
@@ -344,10 +344,10 @@
         "Human final-art approval pending"
       ],
       "severity": "high",
-      "sha": "f036364e2944408b0542411cf22ed3fe2f96f6e1",
+      "sha": "PENDING_IMPLEMENT_SHA",
       "independent_review_status": "not_started",
       "cursor_complete_status": "in_progress",
-      "notes": "Specialty: organism_identity. Waves 1–3 original art: 18/24 procedural silhouette briefs; emoji≠finished; finishedModelsClaimed=false; Lifeling honesty strip conservationBadgesShown=false; IUCN blocked + 0/17 maps held."
+      "notes": "Specialty: organism_identity. Waves 1–4: 24/24 procedural silhouette briefs; emoji≠finished; finishedModelsClaimed=false; Lifeling honesty conservationBadgesShown=false; IUCN blocked + 0/17 maps held; human final-art approval still pending."
     },
     {
       "req_id": "AOL-SAV-001",
@@ -442,10 +442,10 @@
         "production remains false"
       ],
       "severity": "high",
-      "sha": "1dad3288274b6119b8448818a49262e098d65d81",
+      "sha": "PENDING_IMPLEMENT_SHA",
       "independent_review_status": "not_started",
       "cursor_complete_status": "in_progress",
-      "notes": "Specialty: expeditions / museum presentation."
+      "notes": "Specialty: museum presentation. ArchiveDex honesty banner cites Wave-4 24/24 procedural ≠ finished + anySourceVerified=false; IUCN blocked; maps 0/17."
     }
   ]
 }
