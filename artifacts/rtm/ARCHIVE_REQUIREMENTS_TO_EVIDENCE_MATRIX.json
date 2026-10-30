@@ -93,7 +93,7 @@
         "Never invent credentials or assessed=true IUCN rows"
       ],
       "severity": "blocker",
-      "sha": "PENDING_S4C_TIP",
+      "sha": "c46a462fd00f9c0b5d59f4f15b57dfc39d14f5ac",
       "independent_review_status": "not_started",
       "cursor_complete_status": "in_progress",
       "notes": "Specialty: scientific_provenance. Player-facing IUCN blocked_external UX (ArchiveDex cards/entry/conservation tab/evidence strip + museum honesty) explains rights/credential gate; assessed=false; no fake assessed badges; blocked adapter path cannot flip conservation.assessed or source_verified. Live IUCN import still external."
