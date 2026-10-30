@@ -14,7 +14,7 @@
   "phase_summary": {
     "cursor_complete": {
       "status": "not_started",
-      "notes": "Automated evidence and UI wiring exist; Cursor-Complete is not claimed. Floors 157/24/12 remain authored/sample; emoji\u2260finished (12/24 procedural silhouette briefs waves 1\u20132); IUCN blocked; 0/17 maps; Lifeling cosmetic-only."
+      "notes": "Automated evidence and UI wiring exist; Cursor-Complete is not claimed. Floors 157/24/12 remain authored/sample; emoji≠finished (12/24 procedural silhouette briefs waves 1–2); IUCN blocked; 0/17 maps; Lifeling cosmetic-only."
     },
     "codex_independently_verified": {
       "status": "not_started"
@@ -62,15 +62,15 @@
       },
       "art_status": "not_applicable",
       "limitations": [
-        "sample_fallback \u2260 source_verified",
+        "sample_fallback ≠ source_verified",
         "NASA historical manifest SHA preserved; bounded acquires stay sample_fallback",
         "Public-data alternatives remain investigation-only (approvedForUse=false)"
       ],
       "severity": "blocker",
-      "sha": "PENDING_IMPLEMENT_SHA",
+      "sha": "5fb180f53f1b8e2f466b642fa5fa434f05750474",
       "independent_review_status": "not_started",
       "cursor_complete_status": "in_progress",
-      "notes": "Specialty: scientific_provenance. Production gate remains false. Field matrix expanded to 17 taxa via public_bounded COL/PBDB (Lontra + Mammuthus) with approvedForUse=false; taxonomy reconcile held; anySourceVerified/productionReady false; sample_fallback never promoted; NASA historical f6d1c4d8\u2026 untouched; IUCN not invented."
+      "notes": "Specialty: scientific_provenance. Production gate remains false. Field matrix expanded to 17 taxa via public_bounded COL/PBDB (Lontra + Mammuthus) with approvedForUse=false; taxonomy reconcile held; anySourceVerified/productionReady false; sample_fallback never promoted; NASA historical f6d1c4d8… untouched; IUCN not invented."
     },
     {
       "req_id": "AOL-SCI-002",
@@ -107,7 +107,7 @@
       "sha": "c46a462fd00f9c0b5d59f4f15b57dfc39d14f5ac",
       "independent_review_status": "not_started",
       "cursor_complete_status": "in_progress",
-      "notes": "Specialty: scientific_provenance. Player-facing IUCN blocked_external UX held; assessed=false; no fake assessed badges. IUCN token absence does not freeze COL/GBIF/PBDB/Neotoma/NASA science (sample_fallback continues). Public alternatives investigation-only \u2014 never substitute for IUCN assessments. Live IUCN import still external."
+      "notes": "Specialty: scientific_provenance. Player-facing IUCN blocked_external UX held; assessed=false; no fake assessed badges. IUCN token absence does not freeze COL/GBIF/PBDB/Neotoma/NASA science (sample_fallback continues). Public alternatives investigation-only — never substitute for IUCN assessments. Live IUCN import still external."
     },
     {
       "req_id": "AOL-SCI-003",
@@ -144,7 +144,7 @@
     {
       "req_id": "AOL-TAX-001",
       "owner": "archive-taxonomy",
-      "expected_behavior": "Taxon identity marks are species-specific where authored; family/group fallbacks must not impersonate a charismatic sibling (lion\u2260all mammals; horse\u2260all Equidae).",
+      "expected_behavior": "Taxon identity marks are species-specific where authored; family/group fallbacks must not impersonate a charismatic sibling (lion≠all mammals; horse≠all Equidae).",
       "verification_method": "automated test",
       "layers": [
         1,
@@ -164,7 +164,7 @@
       },
       "art_status": "wip",
       "limitations": [
-        "emoji/identity candidate \u2260 finished model / human-approved art"
+        "emoji/identity candidate ≠ finished model / human-approved art"
       ],
       "severity": "high",
       "sha": "1dad3288274b6119b8448818a49262e098d65d81",
@@ -269,7 +269,7 @@
     {
       "req_id": "AOL-EXP-001",
       "owner": "archive-gameplay",
-      "expected_behavior": "Input-driven museum \u2192 expedition \u2192 observation \u2192 ArchiveDex \u2192 Lifeling \u2192 museum \u2192 save/reload loop is digitally playable with \u226512 explore regions and honest floors (157/24/12).",
+      "expected_behavior": "Input-driven museum → expedition → observation → ArchiveDex → Lifeling → museum → save/reload loop is digitally playable with ≥12 explore regions and honest floors (157/24/12).",
       "verification_method": "automated test + system journey",
       "layers": [
         2,
@@ -298,7 +298,7 @@
         "HUMAN/RC2/V1 remain false"
       ],
       "severity": "high",
-      "sha": "PENDING_IMPLEMENT_SHA",
+      "sha": "5fb180f53f1b8e2f466b642fa5fa434f05750474",
       "independent_review_status": "not_started",
       "cursor_complete_status": "in_progress",
       "notes": "Specialty: expeditions. Museum/dex/Lifeling honesty surfaces continue under IUCN blocked + 0/17 maps; expedition journey ok=true; HUMAN/RC2/V1 false."
@@ -306,7 +306,7 @@
     {
       "req_id": "AOL-ORG-001",
       "owner": "archive-art",
-      "expected_behavior": "Flagship 24 observation profiles carry species-specific marks and art_status \u2260 finished models / human-approved unless earned.",
+      "expected_behavior": "Flagship 24 observation profiles carry species-specific marks and art_status ≠ finished models / human-approved unless earned.",
       "verification_method": "automated test",
       "layers": [
         1,
@@ -340,14 +340,14 @@
       },
       "art_status": "wip",
       "limitations": [
-        "emoji/identity candidate \u2260 finished model",
+        "emoji/identity candidate ≠ finished model",
         "Human final-art approval pending"
       ],
       "severity": "high",
-      "sha": "PENDING_IMPLEMENT_SHA",
+      "sha": "5fb180f53f1b8e2f466b642fa5fa434f05750474",
       "independent_review_status": "not_started",
       "cursor_complete_status": "in_progress",
-      "notes": "Specialty: organism_identity. Waves 1\u20132 original art: 12/24 procedural silhouette briefs; emoji\u2260finished; finishedModelsClaimed=false; Lifeling honesty strip (conservationBadgesShown=false) mounted in companion UI + locked-science surround; IUCN blocked + 0/17 maps held."
+      "notes": "Specialty: organism_identity. Waves 1–2 original art: 12/24 procedural silhouette briefs; emoji≠finished; finishedModelsClaimed=false; Lifeling honesty strip (conservationBadgesShown=false) mounted in companion UI + locked-science surround; IUCN blocked + 0/17 maps held."
     },
     {
       "req_id": "AOL-SAV-001",
