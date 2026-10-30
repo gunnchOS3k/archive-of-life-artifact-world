@@ -1,0 +1,251 @@
+{
+  "schema": "aol.flagship_art_honesty.v1",
+  "generatedAt": "2026-10-30T12:00:00.000Z",
+  "flagshipCount": 24,
+  "finishedModelsClaimed": false,
+  "emojiEqualsFinished": false,
+  "anyHumanApprovedFinal": false,
+  "rows": [
+    {
+      "taxonId": "panthera_leo",
+      "scientificName": "Panthera leo",
+      "representationMark": "🦁",
+      "artStatusLabel": "Art status: emoji identity candidate (not a finished model)",
+      "finalArtStatus": "emoji_identity_candidate",
+      "finishedModelClaimed": false,
+      "emojiIsFinishedArt": false,
+      "originalArtApproved": false
+    },
+    {
+      "taxonId": "loxodonta_africana",
+      "scientificName": "Loxodonta africana",
+      "representationMark": "🐘",
+      "artStatusLabel": "Art status: emoji identity candidate (not a finished model)",
+      "finalArtStatus": "emoji_identity_candidate",
+      "finishedModelClaimed": false,
+      "emojiIsFinishedArt": false,
+      "originalArtApproved": false
+    },
+    {
+      "taxonId": "canis_lupus",
+      "scientificName": "Canis lupus",
+      "representationMark": "🐺",
+      "artStatusLabel": "Art status: emoji identity candidate (not a finished model)",
+      "finalArtStatus": "emoji_identity_candidate",
+      "finishedModelClaimed": false,
+      "emojiIsFinishedArt": false,
+      "originalArtApproved": false
+    },
+    {
+      "taxonId": "odocoileus_virginianus",
+      "scientificName": "Odocoileus virginianus",
+      "representationMark": "🦌",
+      "artStatusLabel": "Art status: emoji identity candidate (not a finished model)",
+      "finalArtStatus": "emoji_identity_candidate",
+      "finishedModelClaimed": false,
+      "emojiIsFinishedArt": false,
+      "originalArtApproved": false
+    },
+    {
+      "taxonId": "balaenoptera_musculus",
+      "scientificName": "Balaenoptera musculus",
+      "representationMark": "🐋",
+      "artStatusLabel": "Art status: emoji identity candidate (not a finished model)",
+      "finalArtStatus": "emoji_identity_candidate",
+      "finishedModelClaimed": false,
+      "emojiIsFinishedArt": false,
+      "originalArtApproved": false
+    },
+    {
+      "taxonId": "ursus_americanus",
+      "scientificName": "Ursus americanus",
+      "representationMark": "🐻",
+      "artStatusLabel": "Art status: emoji identity candidate (not a finished model)",
+      "finalArtStatus": "emoji_identity_candidate",
+      "finishedModelClaimed": false,
+      "emojiIsFinishedArt": false,
+      "originalArtApproved": false
+    },
+    {
+      "taxonId": "castor_canadensis",
+      "scientificName": "Castor canadensis",
+      "representationMark": "🦫",
+      "artStatusLabel": "Art status: emoji identity candidate (not a finished model)",
+      "finalArtStatus": "emoji_identity_candidate",
+      "finishedModelClaimed": false,
+      "emojiIsFinishedArt": false,
+      "originalArtApproved": false
+    },
+    {
+      "taxonId": "lontra_canadensis",
+      "scientificName": "Lontra canadensis",
+      "representationMark": "🦦",
+      "artStatusLabel": "Art status: emoji identity candidate (not a finished model)",
+      "finalArtStatus": "emoji_identity_candidate",
+      "finishedModelClaimed": false,
+      "emojiIsFinishedArt": false,
+      "originalArtApproved": false
+    },
+    {
+      "taxonId": "phoca_vitulina",
+      "scientificName": "Phoca vitulina",
+      "representationMark": "🦭",
+      "artStatusLabel": "Art status: emoji identity candidate (not a finished model)",
+      "finalArtStatus": "emoji_identity_candidate",
+      "finishedModelClaimed": false,
+      "emojiIsFinishedArt": false,
+      "originalArtApproved": false
+    },
+    {
+      "taxonId": "equus_caballus_ferus",
+      "scientificName": "Equus ferus przewalskii",
+      "representationMark": "🐴",
+      "artStatusLabel": "Art status: emoji identity candidate (not a finished model)",
+      "finalArtStatus": "emoji_identity_candidate",
+      "finishedModelClaimed": false,
+      "emojiIsFinishedArt": false,
+      "originalArtApproved": false
+    },
+    {
+      "taxonId": "danaus_plexippus",
+      "scientificName": "Danaus plexippus",
+      "representationMark": "🦋",
+      "artStatusLabel": "Art status: emoji identity candidate (not a finished model)",
+      "finalArtStatus": "emoji_identity_candidate",
+      "finishedModelClaimed": false,
+      "emojiIsFinishedArt": false,
+      "originalArtApproved": false
+    },
+    {
+      "taxonId": "apis_mellifera",
+      "scientificName": "Apis mellifera",
+      "representationMark": "🐝",
+      "artStatusLabel": "Art status: emoji identity candidate (not a finished model)",
+      "finalArtStatus": "emoji_identity_candidate",
+      "finishedModelClaimed": false,
+      "emojiIsFinishedArt": false,
+      "originalArtApproved": false
+    },
+    {
+      "taxonId": "formica_rufa",
+      "scientificName": "Formica rufa",
+      "representationMark": "🐜",
+      "artStatusLabel": "Art status: emoji identity candidate (not a finished model)",
+      "finalArtStatus": "emoji_identity_candidate",
+      "finishedModelClaimed": false,
+      "emojiIsFinishedArt": false,
+      "originalArtApproved": false
+    },
+    {
+      "taxonId": "anax_junius",
+      "scientificName": "Anax junius",
+      "representationMark": "🪰",
+      "artStatusLabel": "Art status: emoji identity candidate (not a finished model)",
+      "finalArtStatus": "emoji_identity_candidate",
+      "finishedModelClaimed": false,
+      "emojiIsFinishedArt": false,
+      "originalArtApproved": false
+    },
+    {
+      "taxonId": "latrodectus_mactans",
+      "scientificName": "Latrodectus mactans",
+      "representationMark": "🕷️",
+      "artStatusLabel": "Art status: emoji identity candidate (not a finished model)",
+      "finalArtStatus": "emoji_identity_candidate",
+      "finishedModelClaimed": false,
+      "emojiIsFinishedArt": false,
+      "originalArtApproved": false
+    },
+    {
+      "taxonId": "dynastes_hercules",
+      "scientificName": "Dynastes hercules",
+      "representationMark": "🪲",
+      "artStatusLabel": "Art status: emoji identity candidate (not a finished model)",
+      "finalArtStatus": "emoji_identity_candidate",
+      "finishedModelClaimed": false,
+      "emojiIsFinishedArt": false,
+      "originalArtApproved": false
+    },
+    {
+      "taxonId": "libellula_quadrimaculata",
+      "scientificName": "Libellula quadrimaculata",
+      "representationMark": "🪰",
+      "artStatusLabel": "Art status: emoji identity candidate (not a finished model)",
+      "finalArtStatus": "emoji_identity_candidate",
+      "finishedModelClaimed": false,
+      "emojiIsFinishedArt": false,
+      "originalArtApproved": false
+    },
+    {
+      "taxonId": "bombus_terrestris",
+      "scientificName": "Bombus terrestris",
+      "representationMark": "🐝",
+      "artStatusLabel": "Art status: emoji identity candidate (not a finished model)",
+      "finalArtStatus": "emoji_identity_candidate",
+      "finishedModelClaimed": false,
+      "emojiIsFinishedArt": false,
+      "originalArtApproved": false
+    },
+    {
+      "taxonId": "acanthoscurria_geniculata",
+      "scientificName": "Acanthoscurria geniculata",
+      "representationMark": "🕷️",
+      "artStatusLabel": "Art status: emoji identity candidate (not a finished model)",
+      "finalArtStatus": "emoji_identity_candidate",
+      "finishedModelClaimed": false,
+      "emojiIsFinishedArt": false,
+      "originalArtApproved": false
+    },
+    {
+      "taxonId": "pachnoda_marginata",
+      "scientificName": "Pachnoda marginata",
+      "representationMark": "🪲",
+      "artStatusLabel": "Art status: emoji identity candidate (not a finished model)",
+      "finalArtStatus": "emoji_identity_candidate",
+      "finishedModelClaimed": false,
+      "emojiIsFinishedArt": false,
+      "originalArtApproved": false
+    },
+    {
+      "taxonId": "mammuthus_primigenius",
+      "scientificName": "Mammuthus primigenius",
+      "representationMark": "🦣",
+      "artStatusLabel": "Art status: emoji identity candidate (not a finished model)",
+      "finalArtStatus": "emoji_identity_candidate",
+      "finishedModelClaimed": false,
+      "emojiIsFinishedArt": false,
+      "originalArtApproved": false
+    },
+    {
+      "taxonId": "tyrannosaurus_rex",
+      "scientificName": "Tyrannosaurus rex",
+      "representationMark": "🦖",
+      "artStatusLabel": "Art status: emoji identity candidate (not a finished model)",
+      "finalArtStatus": "emoji_identity_candidate",
+      "finishedModelClaimed": false,
+      "emojiIsFinishedArt": false,
+      "originalArtApproved": false
+    },
+    {
+      "taxonId": "trilobita_order",
+      "scientificName": "Trilobita",
+      "representationMark": "🦴",
+      "artStatusLabel": "Art status: emoji identity candidate (not a finished model)",
+      "finalArtStatus": "emoji_identity_candidate",
+      "finishedModelClaimed": false,
+      "emojiIsFinishedArt": false,
+      "originalArtApproved": false
+    },
+    {
+      "taxonId": "ursus_maritimus",
+      "scientificName": "Ursus maritimus",
+      "representationMark": "🐻",
+      "artStatusLabel": "Art status: emoji identity candidate (not a finished model)",
+      "finalArtStatus": "emoji_identity_candidate",
+      "finishedModelClaimed": false,
+      "emojiIsFinishedArt": false,
+      "originalArtApproved": false
+    }
+  ],
+  "rule": "Emoji / procedural identity marks are candidates only — never finished models or human-approved original art until earned."
+}

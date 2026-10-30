@@ -109,6 +109,46 @@ export const DEFAULT_FIELD_COMPARE_TARGETS: GameFacing[] = [
     commonName: 'Western Honeybee',
     scientificName: 'Apis mellifera',
   },
+  // Additional flagships with authorized COL sparse batch rows (still sample_fallback).
+  {
+    taxonId: 'ursus_americanus',
+    commonName: 'American Black Bear',
+    scientificName: 'Ursus americanus',
+  },
+  {
+    taxonId: 'odocoileus_virginianus',
+    commonName: 'White-tailed Deer',
+    scientificName: 'Odocoileus virginianus',
+  },
+  {
+    taxonId: 'balaenoptera_musculus',
+    commonName: 'Blue Whale',
+    scientificName: 'Balaenoptera musculus',
+  },
+  {
+    taxonId: 'phoca_vitulina',
+    commonName: 'Harbor Seal',
+    scientificName: 'Phoca vitulina',
+  },
+  {
+    taxonId: 'formica_rufa',
+    commonName: 'Red Wood Ant',
+    scientificName: 'Formica rufa',
+  },
+  {
+    taxonId: 'bombus_terrestris',
+    commonName: 'Buff-tailed Bumblebee',
+    scientificName: 'Bombus terrestris',
+  },
+  /**
+   * Przewalski's horse: game uses infraspecific epithet; COL sparse batch has Equus ferus.
+   * Exact name mismatch is honest — never invent a verified subspecies row.
+   */
+  {
+    taxonId: 'equus_caballus_ferus',
+    commonName: "Przewalski's Horse",
+    scientificName: 'Equus ferus przewalskii',
+  },
 ];
 
 /** Gate 1 organism shape → FixtureRecord (fixture_sample — not live export). */
@@ -288,16 +328,38 @@ export function findFixtureRecord(
   return records.find((r) => norm(r.scientific_name?.accepted_scientific_name) === want);
 }
 
+/**
+ * Exact match first; else parent binomial when game name is an infraspecific epithet
+ * (e.g. Equus ferus przewalskii → Equus ferus). Does not invent subspecies fixtures.
+ */
+export function findFixtureRecordAllowingInfraspecific(
+  records: FixtureRecord[],
+  scientificName: string,
+): { record: FixtureRecord; relation: 'exact' | 'infraspecific_of_fixture' } | undefined {
+  const exact = findFixtureRecord(records, scientificName);
+  if (exact) return { record: exact, relation: 'exact' };
+
+  const parts = norm(scientificName).split(' ').filter(Boolean);
+  if (parts.length < 3) return undefined;
+  const parent = `${parts[0]} ${parts[1]}`;
+  const parentRec = findFixtureRecord(records, parent);
+  if (!parentRec) return undefined;
+  return { record: parentRec, relation: 'infraspecific_of_fixture' };
+}
+
 export function compareTaxonAgainstFixture(
   game: GameFacing,
   fixture: FixtureRecord,
+  relation: 'exact' | 'infraspecific_of_fixture' = 'exact',
 ): TaxonFieldComparison {
   const rows: FieldCompareRow[] = [
     compareField(
       'scientific_name',
       fixture.scientific_name?.accepted_scientific_name,
       game.scientificName,
-      'Accepted scientific name must match fixture spelling',
+      relation === 'infraspecific_of_fixture'
+        ? 'Game infraspecific epithet vs fixture parent binomial — honest mismatch; not a verified subspecies row'
+        : 'Accepted scientific name must match fixture spelling',
     ),
     compareField(
       'common_name',
@@ -345,10 +407,28 @@ export function compareTaxonAgainstFixture(
         ?? null,
       'Uncertainty/confidence basis retained for ArchiveDex evidence panel',
     ),
+    compareField(
+      'taxonomy_relation',
+      relation,
+      relation,
+      relation === 'infraspecific_of_fixture'
+        ? 'Infraspecific game name linked to parent fixture binomial without inventing a subspecies fixture'
+        : 'Exact scientific-name fixture match',
+    ),
   ];
 
   const compared = rows.filter((r) => r.status === 'match' || r.status === 'mismatch');
   const matched = compared.filter((r) => r.status === 'match');
+
+  const baseUncertainty = String(
+    fixture.confidence_or_uncertainty?.confidence_basis
+      ?? fixture.confidence_or_uncertainty?.confidence
+      ?? 'unspecified',
+  );
+  const fixtureUncertainty =
+    relation === 'infraspecific_of_fixture'
+      ? `${baseUncertainty}; taxonomy_relation=infraspecific_of_fixture (scientific_name mismatch expected)`
+      : baseUncertainty;
 
   return {
     taxonId: game.taxonId,
@@ -357,11 +437,7 @@ export function compareTaxonAgainstFixture(
     fixtureRecordId: String(fixture.source_record_id ?? ''),
     fixtureRetrievedAt: String(fixture.retrieved_at ?? ''),
     fixtureLicense: String(fixture.license?.license_spdx_or_label ?? 'unknown'),
-    fixtureUncertainty: String(
-      fixture.confidence_or_uncertainty?.confidence_basis
-        ?? fixture.confidence_or_uncertainty?.confidence
-        ?? 'unspecified',
-    ),
+    fixtureUncertainty,
     verificationStatus: 'needs_source_verification',
     dataMode: 'sample_fallback',
     sourceVerifiedRelease: false,
@@ -379,8 +455,8 @@ export function buildFieldComparisonReportFromRecords(
 ): FieldComparisonReport {
   const comparisons: TaxonFieldComparison[] = [];
   for (const game of targets) {
-    const record = findFixtureRecord(records, game.scientificName);
-    if (!record) {
+    const found = findFixtureRecordAllowingInfraspecific(records, game.scientificName);
+    if (!found) {
       comparisons.push({
         taxonId: game.taxonId,
         scientificName: game.scientificName,
@@ -406,7 +482,7 @@ export function buildFieldComparisonReportFromRecords(
       });
       continue;
     }
-    comparisons.push(compareTaxonAgainstFixture(game, record));
+    comparisons.push(compareTaxonAgainstFixture(game, found.record, found.relation));
   }
 
   return {

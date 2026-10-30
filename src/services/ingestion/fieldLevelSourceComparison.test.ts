@@ -6,6 +6,7 @@ import {
   compareTaxonAgainstFixture,
   DEFAULT_FIELD_COMPARE_TARGETS,
   findFixtureRecord,
+  findFixtureRecordAllowingInfraspecific,
   formatComparisonForUi,
   fixtureRecordFromColBatchEntry,
   fixtureRecordFromGate1Organism,
@@ -51,9 +52,14 @@ function loadMergedFixtureRecords(): { snapshotId: string; records: FixtureRecor
     license?: string;
     entries?: Array<{ id?: string; scientificName?: string; acceptedName?: string }>;
   };
-  const flagshipNames = new Set(
-    DEFAULT_FIELD_COMPARE_TARGETS.map((t) => t.scientificName.toLowerCase()),
-  );
+  /** Exact flagship names plus parent binomials for infraspecific epithets. */
+  const flagshipNames = new Set<string>();
+  for (const t of DEFAULT_FIELD_COMPARE_TARGETS) {
+    const n = t.scientificName.toLowerCase();
+    flagshipNames.add(n);
+    const parts = n.split(/\s+/).filter(Boolean);
+    if (parts.length >= 3) flagshipNames.add(`${parts[0]} ${parts[1]}`);
+  }
   const colRecords = (colBatch.entries ?? [])
     .filter((e) => flagshipNames.has(String(e.acceptedName ?? e.scientificName ?? '').toLowerCase()))
     .map((e) => fixtureRecordFromColBatchEntry(e, colBatch.license ?? 'COL terms of use'));
@@ -129,12 +135,15 @@ describe('fieldLevelSourceComparison', () => {
 
     const byId = Object.fromEntries(report.comparisons.map((c) => [c.taxonId, c]));
 
-    // Lion — wave008 COL rich snapshot
+    // Lion — wave008 COL rich snapshot (+ taxonomy_relation exact)
     expect(byId.panthera_leo?.fixtureSource).toBe('Catalogue of Life');
-    expect(byId.panthera_leo?.matchedFields).toBe(8);
-    expect(byId.panthera_leo?.comparedFields).toBe(8);
+    expect(byId.panthera_leo?.matchedFields).toBe(9);
+    expect(byId.panthera_leo?.comparedFields).toBe(9);
     expect(byId.panthera_leo?.dataMode).toBe('sample_fallback');
     expect(byId.panthera_leo?.sourceVerifiedRelease).toBe(false);
+    expect(byId.panthera_leo?.fieldRows.find((r) => r.field === 'taxonomy_relation')?.status).toBe(
+      'match',
+    );
 
     // Gray wolf — wave008 GBIF (preferred over sparse COL batch)
     expect(byId.canis_lupus?.fixtureSource).toBe('GBIF');
@@ -191,11 +200,39 @@ describe('fieldLevelSourceComparison', () => {
       expect(sparseHtml).toContain('sparse_gap=retrieved_at (absent)');
     }
 
+    // Additional COL sparse flagships (still sample_fallback; sparse gaps honest)
+    for (const id of [
+      'ursus_americanus',
+      'odocoileus_virginianus',
+      'balaenoptera_musculus',
+      'phoca_vitulina',
+      'formica_rufa',
+      'bombus_terrestris',
+    ] as const) {
+      expect(byId[id]?.sourceVerifiedRelease).toBe(false);
+      expect(byId[id]?.dataMode).toBe('sample_fallback');
+      expect(byId[id]?.fixtureSource).toBe('Catalogue of Life');
+      expect(byId[id]?.fieldRows.find((r) => r.field === 'scientific_name')?.status).toBe('match');
+      expect(byId[id]?.fieldRows.find((r) => r.field === 'common_name')?.status).toBe('game_only');
+    }
+
+    // Przewalski's horse — infraspecific vs Equus ferus parent; honest scientific_name mismatch
+    expect(byId.equus_caballus_ferus?.fixtureSource).toBe('Catalogue of Life');
+    expect(byId.equus_caballus_ferus?.fieldRows.find((r) => r.field === 'scientific_name')?.status).toBe(
+      'mismatch',
+    );
+    expect(
+      byId.equus_caballus_ferus?.fieldRows.find((r) => r.field === 'taxonomy_relation')?.fixtureValue,
+    ).toBe('infraspecific_of_fixture');
+    expect(byId.equus_caballus_ferus?.sourceVerifiedRelease).toBe(false);
+    expect(byId.equus_caballus_ferus?.fixtureUncertainty).toMatch(/infraspecific_of_fixture/);
+
     // Never promote; never invent IUCN assessments in this matrix
     expect(report.anySourceVerified).toBe(false);
     expect(report.comparisons.every((c) => c.sourceVerifiedRelease === false)).toBe(true);
     expect(report.comparisons.every((c) => c.dataMode === 'sample_fallback')).toBe(true);
     expect(report.comparisons.every((c) => !/iucn/i.test(c.fixtureSource))).toBe(true);
+    expect(report.comparisons.length).toBeGreaterThanOrEqual(15);
 
     writeEvidence(report);
     const written = JSON.parse(
@@ -239,6 +276,30 @@ describe('fieldLevelSourceComparison', () => {
     expect(html).toContain('Uncertainty:');
     expect(html).toContain(`Field matches: ${comparison.matchedFields}/${comparison.comparedFields}`);
     expect(html).toContain('data-match-count="true"');
+  });
+
+  it('links infraspecific game names to parent binomial fixtures without inventing subspecies rows', () => {
+    const records: FixtureRecord[] = [
+      {
+        scientific_name: { accepted_scientific_name: 'Equus ferus' },
+        source_organization: 'Catalogue of Life',
+        source_record_id: 'COL:fixture:equus-ferus',
+        license: { license_spdx_or_label: 'COL terms of use' },
+      },
+    ];
+    const found = findFixtureRecordAllowingInfraspecific(records, 'Equus ferus przewalskii');
+    expect(found?.relation).toBe('infraspecific_of_fixture');
+    const comparison = compareTaxonAgainstFixture(
+      {
+        taxonId: 'equus_caballus_ferus',
+        commonName: "Przewalski's Horse",
+        scientificName: 'Equus ferus przewalskii',
+      },
+      found!.record,
+      found!.relation,
+    );
+    expect(comparison.sourceVerifiedRelease).toBe(false);
+    expect(comparison.fieldRows.find((r) => r.field === 'scientific_name')?.status).toBe('mismatch');
   });
 
   it('skips mock/teaching/IUCN fixture rows when merging', () => {

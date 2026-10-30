@@ -5,7 +5,7 @@
   "contract_source_sha": "935eb3a20548b1a4b726f2ba305df94ff496be16",
   "product_id": "archive-of-life",
   "product_repo": "https://github.com/gunnchOS3k/archive-of-life-artifact-world",
-  "generated_at": "2026-10-29T20:35:00Z",
+  "generated_at": "2026-10-30T13:45:00Z",
   "honesty_flags": {
     "HUMAN": false,
     "RC2": false,
@@ -36,14 +36,19 @@
       "tests": [
         "src/systems/expeditionJourneyPolish.test.ts",
         "data-pipeline/src/archive_life_pipeline/public_bounded_acquire.py",
-        "src/services/ingestion/fieldLevelSourceComparison.test.ts"
+        "src/services/ingestion/fieldLevelSourceComparison.test.ts",
+        "src/services/ingestion/sourceVerificationWorkflow.test.ts"
       ],
       "automated_evidence": [
         "artifacts/archive_full/SCIENCE_HONESTY_MATRIX.json",
         "public/data/status/public_bounded_acquire_report.json",
         "src/services/ingestion/publicSourceAdapters.ts",
+        "src/services/ingestion/sourceVerificationWorkflow.ts",
+        "src/services/ingestion/publicDataAlternatives.ts",
         "artifacts/science/FIELD_LEVEL_COMPARISON_RESULT.json",
-        "public/data/status/field_level_comparison.json"
+        "artifacts/science/PUBLIC_DATA_ALTERNATIVES.json",
+        "public/data/status/field_level_comparison.json",
+        "public/data/status/public_data_alternatives.json"
       ],
       "native_physical": {
         "status": "not_applicable",
@@ -53,13 +58,14 @@
       "art_status": "not_applicable",
       "limitations": [
         "sample_fallback \u2260 source_verified",
-        "NASA historical manifest SHA preserved; bounded acquires stay sample_fallback"
+        "NASA historical manifest SHA preserved; bounded acquires stay sample_fallback",
+        "Public-data alternatives remain investigation-only (approvedForUse=false)"
       ],
       "severity": "blocker",
-      "sha": "4be987536a835013eb4b0d57858dce87f5a27b44",
+      "sha": "pending-implement-stamp",
       "independent_review_status": "not_started",
       "cursor_complete_status": "in_progress",
-      "notes": "Specialty: scientific_provenance. Production gate remains false. Multi-taxon field-level fixture matrix (Lion COL 8/8, Gray wolf GBIF 7/7, T.rex PBDB 7/8 honest common_name mismatch, Monarch Gate1 8/8, Polar bear/Elephant/Beaver/Honeybee sparse COL 5/5 with explicit sparse_gap labels for common_name/region/retrieved) surfaces source/date/license/uncertainty/match counts in SourcesEvidencePanel; anySourceVerified/productionReady remain false; sample_fallback not promoted; IUCN rows excluded; NASA historical honesty untouched."
+      "notes": "Specialty: scientific_provenance. Production gate remains false. Provenance/verification tooling + permitted open-data import workflows (COL/GBIF/PBDB/Neotoma/NASA/ICS); IUCN gated separately. Field matrix expanded to 15 taxa (Lion 9/9, wolf 8/8, T.rex 8/9, Monarch 9/9, sparse COL\u00d710 at 6/6, Przewalski's horse infraspecific 5/6 honest scientific_name mismatch). Public alternatives catalog (WoRMS/OBIS/OpenTree/Wikidata/iNat/EOL/Smithsonian) without invented rights; iucnBlocksAllScience=false. anySourceVerified/productionReady false; sample_fallback never promoted; NASA historical untouched."
     },
     {
       "req_id": "AOL-SCI-002",
@@ -96,7 +102,7 @@
       "sha": "c46a462fd00f9c0b5d59f4f15b57dfc39d14f5ac",
       "independent_review_status": "not_started",
       "cursor_complete_status": "in_progress",
-      "notes": "Specialty: scientific_provenance. Player-facing IUCN blocked_external UX (ArchiveDex cards/entry/conservation tab/evidence strip + museum honesty) explains rights/credential gate; assessed=false; no fake assessed badges; blocked adapter path cannot flip conservation.assessed or source_verified. Live IUCN import still external."
+      "notes": "Specialty: scientific_provenance. Player-facing IUCN blocked_external UX held; assessed=false; no fake assessed badges. IUCN token absence does not freeze COL/GBIF/PBDB/Neotoma/NASA science (sample_fallback continues). Public alternatives investigation-only — never substitute for IUCN assessments. Live IUCN import still external."
     },
     {
       "req_id": "AOL-SCI-003",
@@ -302,12 +308,15 @@
         4
       ],
       "tests": [
-        "src/systems/expeditionJourneyPolish.test.ts"
+        "src/systems/expeditionJourneyPolish.test.ts",
+        "src/systems/flagshipArtHonestyPresentation.test.ts"
       ],
       "automated_evidence": [
         "src/services/flagshipTaxonProfiles.ts",
         "src/minigames/wildlifeObservation.ts",
-        "src/systems/museumDexPresentation.ts"
+        "src/systems/museumDexPresentation.ts",
+        "src/systems/flagshipArtHonestyPresentation.ts",
+        "artifacts/science/FLAGSHIP_ART_HONESTY.json"
       ],
       "native_physical": {
         "status": "not_applicable",
@@ -320,10 +329,10 @@
         "Human final-art approval pending"
       ],
       "severity": "high",
-      "sha": "1dad3288274b6119b8448818a49262e098d65d81",
+      "sha": "pending-implement-stamp",
       "independent_review_status": "not_started",
       "cursor_complete_status": "in_progress",
-      "notes": "Specialty: organism_identity."
+      "notes": "Specialty: organism_identity. Flagship art honesty report: 24/24 emoji/procedural candidates; finishedModelsClaimed=false; emojiEqualsFinished=false; ArchiveDex banner mounts original-art honesty strip."
     },
     {
       "req_id": "AOL-SAV-001",

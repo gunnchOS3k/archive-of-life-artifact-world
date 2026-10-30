@@ -14,6 +14,8 @@ import {
   getRegionExplorationCard,
   REGION_EXPLORATION_CARDS,
 } from '@/systems/regionExploration';
+import { renderFlagshipArtHonestyHtml } from '@/systems/flagshipArtHonestyPresentation';
+import { renderPublicAlternativesHonestyHtml } from '@/services/ingestion/publicDataAlternatives';
 
 export type MuseumDexClaimClass =
   | 'game_authored_floor'
@@ -148,6 +150,9 @@ export function renderArchiveDexHonestyBannerHtml(): string {
       <p>ArchiveDex shows authored / sample floors. IUCN Red List is <strong>blocked_external</strong> (no owner credential / rights review yet) — assessed=false; no fake assessed badges.</p>
       <p>Identity marks (including emoji) are not finished models — ${escapeHtml(artNote)}.</p>
       <p>Maps 0/17 source-verified · production-ready=false · source_verified release=false</p>
+      <p>IUCN token absence does not freeze COL/GBIF/PBDB/Neotoma/NASA science — those paths stay sample_fallback until human review.</p>
+      ${renderFlagshipArtHonestyHtml()}
+      ${renderPublicAlternativesHonestyHtml()}
     </div>
   `.trim();
 }
