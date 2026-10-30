@@ -1428,7 +1428,9 @@ html:not(.a11y-sr-hints) .a11y-sr-only[data-a11y-sr-hint] { display: none; }
 .dex-brief-strip li { margin: 0.1rem 0; }
 .taxonomy-reconcile-entry,
 .resume-checkpoint,
-.museum-lifeling-bridge {
+.museum-lifeling-bridge,
+.museum-silhouette-svg-bridge,
+.silhouette-svg-package {
   margin-top: 0.5rem;
   padding: 0.45rem 0.6rem;
   border: 1px dashed var(--border);
@@ -1436,7 +1438,15 @@ html:not(.a11y-sr-hints) .a11y-sr-only[data-a11y-sr-hint] { display: none; }
   color: var(--text-secondary);
 }
 .taxonomy-reconcile-entry ul { margin: 0.2rem 0; padding-left: 1.1rem; }
-.dex-behavior-bridge { margin-top: 0.4rem; font-size: 0.78rem; color: var(--text-secondary); }
+.dex-behavior-bridge,
+.dex-silhouette-svg-path { margin-top: 0.4rem; font-size: 0.78rem; color: var(--text-secondary); }
+.silhouette-svg-preview {
+  margin: 0.4rem 0;
+  max-width: 6rem;
+  color: var(--text-secondary);
+}
+.silhouette-svg-preview svg { width: 100%; height: auto; display: block; }
+.silhouette-svg-preview figcaption { font-size: 0.68rem; margin-top: 0.2rem; }
 .companion-progress {
   margin-top: 0.5rem;
   font-size: 0.85rem;

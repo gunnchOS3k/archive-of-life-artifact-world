@@ -25,6 +25,7 @@ import { renderLockedScienceSurroundHtml } from '@/systems/lockedScienceSurround
 import { resolveObservationMotionForTaxon } from '@/systems/observationLocomotion';
 import { screenReaderHintHtml } from '@/systems/accessibility';
 import { renderLifelingHonestyHtml } from '@/systems/lifelingHonestyPresentation';
+import { renderSilhouetteSvgPackageHtml } from '@/systems/silhouetteSvgPackage';
 
 export type MuseumDexClaimClass =
   | 'game_authored_floor'
@@ -156,10 +157,12 @@ export function renderArchiveDexBriefStripHtml(
   const sr = screenReaderHintHtml(
     `${presentation.scientificName}${wave} silhouette brief: locomotion and behavior are authored procedural cues, not finished models. IUCN assessed false.`,
   );
+  const mode = presentation.observationMotionMode ?? 'amble';
   return `
     <aside class="dex-brief-strip" data-dex-brief-strip="1" data-finished-model="false" role="note" aria-label="Authored silhouette brief — not a finished model">
       <p class="dex-brief-strip-title">Silhouette brief${wave} (procedural candidate — not human-approved final art)</p>
       <ul>${parts.join('')}</ul>
+      <p class="dex-silhouette-svg-path">SVG stub path: <code>/assets/silhouettes/silhouette-${escapeHtml(mode)}.svg</code> (procedural ≠ finished)</p>
       ${sr}
     </aside>
   `.trim();
@@ -208,6 +211,9 @@ export function renderMuseumHubHonestyHtml(hub: MuseumHubPresentation = buildMus
       </ul>
       <div class="museum-lifeling-bridge" data-museum-lifeling-bridge="1">
         ${renderLifelingHonestyHtml()}
+      </div>
+      <div class="museum-silhouette-svg-bridge" data-museum-silhouette-svg-bridge="1">
+        ${renderSilhouetteSvgPackageHtml()}
       </div>
     </aside>
   `.trim();

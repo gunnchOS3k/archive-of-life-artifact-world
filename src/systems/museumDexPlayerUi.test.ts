@@ -194,6 +194,9 @@ describe('museum/dex player UI wiring', () => {
     expect(html).toMatch(/save\/resume|Lifeling/i);
     expect(html).toContain('0/17');
     expect(html).toMatch(/blocked_external|IUCN/i);
+    expect(html).toContain('data-museum-silhouette-svg-bridge');
+    expect(html).toContain('data-silhouette-svg-package');
+    expect(html).toContain('finishedModelsClaimed=false');
   });
 
   it('index.html hosts museum/dex honesty mount points', () => {
