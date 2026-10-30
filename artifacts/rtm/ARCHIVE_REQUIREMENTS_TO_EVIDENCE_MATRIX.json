@@ -14,7 +14,7 @@
   "phase_summary": {
     "cursor_complete": {
       "status": "not_started",
-      "notes": "Automated evidence and UI wiring exist; Cursor-Complete is not claimed. Floors 157/24/12 remain authored/sample; emoji\u2260finished; IUCN blocked; 0/17 maps."
+      "notes": "Automated evidence and UI wiring exist; Cursor-Complete is not claimed. Floors 157/24/12 remain authored/sample; emoji≠finished; IUCN blocked; 0/17 maps."
     },
     "codex_independently_verified": {
       "status": "not_started"
@@ -57,15 +57,15 @@
       },
       "art_status": "not_applicable",
       "limitations": [
-        "sample_fallback \u2260 source_verified",
+        "sample_fallback ≠ source_verified",
         "NASA historical manifest SHA preserved; bounded acquires stay sample_fallback",
         "Public-data alternatives remain investigation-only (approvedForUse=false)"
       ],
       "severity": "blocker",
-      "sha": "pending-implement-stamp",
+      "sha": "1734424817dc4ecb504e051e56068eb978b01b49",
       "independent_review_status": "not_started",
       "cursor_complete_status": "in_progress",
-      "notes": "Specialty: scientific_provenance. Production gate remains false. Provenance/verification tooling + permitted open-data import workflows (COL/GBIF/PBDB/Neotoma/NASA/ICS); IUCN gated separately. Field matrix expanded to 15 taxa (Lion 9/9, wolf 8/8, T.rex 8/9, Monarch 9/9, sparse COL\u00d710 at 6/6, Przewalski's horse infraspecific 5/6 honest scientific_name mismatch). Public alternatives catalog (WoRMS/OBIS/OpenTree/Wikidata/iNat/EOL/Smithsonian) without invented rights; iucnBlocksAllScience=false. anySourceVerified/productionReady false; sample_fallback never promoted; NASA historical untouched."
+      "notes": "Specialty: scientific_provenance. Production gate remains false. Provenance/verification tooling + permitted open-data import workflows (COL/GBIF/PBDB/Neotoma/NASA/ICS); IUCN gated separately. Field matrix expanded to 15 taxa (Lion 9/9, wolf 8/8, T.rex 8/9, Monarch 9/9, sparse COL×10 at 6/6, Przewalski's horse infraspecific 5/6 honest scientific_name mismatch). Public alternatives catalog (WoRMS/OBIS/OpenTree/Wikidata/iNat/EOL/Smithsonian) without invented rights; iucnBlocksAllScience=false. anySourceVerified/productionReady false; sample_fallback never promoted; NASA historical untouched."
     },
     {
       "req_id": "AOL-SCI-002",
@@ -139,7 +139,7 @@
     {
       "req_id": "AOL-TAX-001",
       "owner": "archive-taxonomy",
-      "expected_behavior": "Taxon identity marks are species-specific where authored; family/group fallbacks must not impersonate a charismatic sibling (lion\u2260all mammals; horse\u2260all Equidae).",
+      "expected_behavior": "Taxon identity marks are species-specific where authored; family/group fallbacks must not impersonate a charismatic sibling (lion≠all mammals; horse≠all Equidae).",
       "verification_method": "automated test",
       "layers": [
         1,
@@ -159,7 +159,7 @@
       },
       "art_status": "wip",
       "limitations": [
-        "emoji/identity candidate \u2260 finished model / human-approved art"
+        "emoji/identity candidate ≠ finished model / human-approved art"
       ],
       "severity": "high",
       "sha": "1dad3288274b6119b8448818a49262e098d65d81",
@@ -264,7 +264,7 @@
     {
       "req_id": "AOL-EXP-001",
       "owner": "archive-gameplay",
-      "expected_behavior": "Input-driven museum \u2192 expedition \u2192 observation \u2192 ArchiveDex \u2192 Lifeling \u2192 museum \u2192 save/reload loop is digitally playable with \u226512 explore regions and honest floors (157/24/12).",
+      "expected_behavior": "Input-driven museum → expedition → observation → ArchiveDex → Lifeling → museum → save/reload loop is digitally playable with ≥12 explore regions and honest floors (157/24/12).",
       "verification_method": "automated test + system journey",
       "layers": [
         2,
@@ -301,7 +301,7 @@
     {
       "req_id": "AOL-ORG-001",
       "owner": "archive-art",
-      "expected_behavior": "Flagship 24 observation profiles carry species-specific marks and art_status \u2260 finished models / human-approved unless earned.",
+      "expected_behavior": "Flagship 24 observation profiles carry species-specific marks and art_status ≠ finished models / human-approved unless earned.",
       "verification_method": "automated test",
       "layers": [
         1,
@@ -325,11 +325,11 @@
       },
       "art_status": "wip",
       "limitations": [
-        "emoji/identity candidate \u2260 finished model",
+        "emoji/identity candidate ≠ finished model",
         "Human final-art approval pending"
       ],
       "severity": "high",
-      "sha": "pending-implement-stamp",
+      "sha": "1734424817dc4ecb504e051e56068eb978b01b49",
       "independent_review_status": "not_started",
       "cursor_complete_status": "in_progress",
       "notes": "Specialty: organism_identity. Flagship art honesty report: 24/24 emoji/procedural candidates; finishedModelsClaimed=false; emojiEqualsFinished=false; ArchiveDex banner mounts original-art honesty strip."
