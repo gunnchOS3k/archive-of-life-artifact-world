@@ -107,7 +107,9 @@ describe('museum/dex player UI wiring', () => {
     const doc = fakeDocument();
     expect(mountArchiveDexHonestyBanner(doc.getElementById('panel-archive'))).toBe(true);
     const banner = doc.querySelector('[data-archivedex-honesty]');
-    expect(banner?.textContent ?? '').toMatch(/not finished model|IUCN assessed/i);
+    expect(banner?.textContent ?? '').toMatch(/not finished model|IUCN|blocked_external|assessed/i);
+    expect(banner?.textContent ?? '').toMatch(/blocked_external/i);
+    expect(banner?.textContent ?? '').toMatch(/assessed=false/i);
     expect(renderArchiveDexHonestyBannerHtml()).toContain('0/17');
 
     const entries = listArchiveDexFlagshipPresentations();

@@ -739,6 +739,50 @@ body {
   color: var(--text-secondary);
 }
 
+.iucn-blocked-chip,
+.status-iucn-blocked {
+  background: #6a6a6a;
+  color: #fff;
+  font-size: 0.7rem;
+  padding: 0.12rem 0.45rem;
+  border-radius: 4px;
+}
+.iucn-gameplay-label {
+  display: block;
+  margin-top: 0.15rem;
+  font-size: 0.68rem;
+  color: var(--text-secondary);
+  font-style: italic;
+}
+.iucn-blocked-panel,
+.iucn-blocked-evidence {
+  margin: 0.55rem 0;
+  padding: 0.65rem 0.8rem;
+  border: 1px solid var(--border);
+  background: var(--bg-card);
+  font-size: 0.82rem;
+  color: var(--text-secondary);
+}
+.iucn-blocked-panel .iucn-blocked-title,
+.iucn-blocked-evidence strong {
+  color: var(--text-primary);
+}
+.iucn-blocked-panel p,
+.iucn-blocked-evidence p {
+  margin: 0.35rem 0;
+}
+.iucn-blocked-owner-steps {
+  margin-top: 0.4rem;
+  font-size: 0.78rem;
+}
+.iucn-blocked-owner-steps ol {
+  margin: 0.3rem 0 0;
+  padding-left: 1.2rem;
+}
+.iucn-blocked-invariants {
+  opacity: 0.85;
+}
+
 .coverage-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);

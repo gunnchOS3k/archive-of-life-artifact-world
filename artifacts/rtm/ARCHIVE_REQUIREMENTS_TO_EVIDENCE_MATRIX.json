@@ -59,7 +59,7 @@
       "sha": "4be987536a835013eb4b0d57858dce87f5a27b44",
       "independent_review_status": "not_started",
       "cursor_complete_status": "in_progress",
-      "notes": "Specialty: scientific_provenance. Production gate remains false. Multi-taxon field-level fixture matrix (Lion COL 8/8, Gray wolf GBIF 7/7, T.rex PBDB 7/8 honest common_name mismatch, Monarch Gate1 8/8, Polar bear/Elephant/Beaver/Honeybee sparse COL 5/5) surfaces source/date/license/uncertainty/match counts in SourcesEvidencePanel; anySourceVerified/productionReady remain false; sample_fallback not promoted; IUCN rows excluded; NASA historical honesty untouched."
+      "notes": "Specialty: scientific_provenance. Production gate remains false. Multi-taxon field-level fixture matrix (Lion COL 8/8, Gray wolf GBIF 7/7, T.rex PBDB 7/8 honest common_name mismatch, Monarch Gate1 8/8, Polar bear/Elephant/Beaver/Honeybee sparse COL 5/5 with explicit sparse_gap labels for common_name/region/retrieved) surfaces source/date/license/uncertainty/match counts in SourcesEvidencePanel; anySourceVerified/productionReady remain false; sample_fallback not promoted; IUCN rows excluded; NASA historical honesty untouched."
     },
     {
       "req_id": "AOL-SCI-002",
@@ -72,12 +72,15 @@
         7
       ],
       "tests": [
-        "src/systems/expeditionJourneyPolish.test.ts"
+        "src/systems/expeditionJourneyPolish.test.ts",
+        "src/systems/iucnBlockedPresentation.test.ts",
+        "src/services/ingestion/publicSourceAdapters.test.ts"
       ],
       "automated_evidence": [
         "docs/OWNER_IUCN_SETUP.md",
         "artifacts/archive_full/SCIENCE_HONESTY_MATRIX.json",
-        "public/data/manifest.json"
+        "public/data/manifest.json",
+        "src/systems/iucnBlockedPresentation.ts"
       ],
       "native_physical": {
         "status": "blocked",
@@ -90,10 +93,10 @@
         "Never invent credentials or assessed=true IUCN rows"
       ],
       "severity": "blocker",
-      "sha": "1dad3288274b6119b8448818a49262e098d65d81",
+      "sha": "PENDING_S4C_TIP",
       "independent_review_status": "not_started",
-      "cursor_complete_status": "not_started",
-      "notes": "Specialty: scientific_provenance. External credential gate."
+      "cursor_complete_status": "in_progress",
+      "notes": "Specialty: scientific_provenance. Player-facing IUCN blocked_external UX (ArchiveDex cards/entry/conservation tab/evidence strip + museum honesty) explains rights/credential gate; assessed=false; no fake assessed badges; blocked adapter path cannot flip conservation.assessed or source_verified. Live IUCN import still external."
     },
     {
       "req_id": "AOL-SCI-003",

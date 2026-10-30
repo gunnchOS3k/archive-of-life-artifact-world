@@ -9,6 +9,7 @@ import {
   type FieldComparisonReport,
   type TaxonFieldComparison,
 } from '@/services/ingestion/fieldLevelSourceComparison';
+import { renderIucnBlockedEvidenceStripHtml } from '@/systems/iucnBlockedPresentation';
 
 export type SourcesEvidencePanelHandle = {
   abort: () => void;
@@ -197,9 +198,12 @@ function paintResult(
       </aside>`
     : '';
 
+  const iucnStrip = renderIucnBlockedEvidenceStripHtml();
+
   if (!result.records.length) {
     container.innerHTML =
       banner +
+      iucnStrip +
       failureHtml +
       emptyMessage(result) +
       (result.failures.length
@@ -213,6 +217,7 @@ function paintResult(
 
   container.innerHTML =
     banner +
+    iucnStrip +
     conflictHtml +
     failureHtml +
     `<div class="evidence-card-list">${result.records.map((r) => evidenceCard(r)).join('')}</div>` +

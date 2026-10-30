@@ -31,7 +31,7 @@ export interface MuseumHubPresentation {
   productionReadyClaim: false;
   sourceVerifiedReleaseClaim: false;
   temporalMapsHonesty: '0/17 full-Earth maps source-verified — blocked';
-  iucnHonesty: 'IUCN blocked_external until owner token + rights review';
+  iucnHonesty: 'IUCN Red List unavailable (blocked_external) — needs owner API credentials and rights review before assessed statuses appear';
   objectives: string[];
   ariaLabel: string;
 }
@@ -64,9 +64,10 @@ export function buildMuseumHubPresentation(): MuseumHubPresentation {
     productionReadyClaim: false,
     sourceVerifiedReleaseClaim: false,
     temporalMapsHonesty: '0/17 full-Earth maps source-verified — blocked',
-    iucnHonesty: 'IUCN blocked_external until owner token + rights review',
+    iucnHonesty:
+      'IUCN Red List unavailable (blocked_external) — needs owner API credentials and rights review before assessed statuses appear',
     objectives: museum?.objectives ?? [],
-    ariaLabel: `${title}. ${subtitle} Explore regions: ${exploreCount}. Flagship taxa: ${flagshipCount}. Maps: 0 of 17 source-verified. IUCN blocked.`,
+    ariaLabel: `${title}. ${subtitle} Explore regions: ${exploreCount}. Flagship taxa: ${flagshipCount}. Maps: 0 of 17 source-verified. IUCN blocked_external; assessed=false.`,
   };
 }
 
@@ -89,7 +90,7 @@ export function buildArchiveDexEntryPresentation(
     claimClass: 'game_authored_floor',
     iucnAssessed: false,
     finishedModelClaimed: false,
-    ariaLabel: `ArchiveDex entry ${profile.scientificName}. ${artStatusLabel}. IUCN assessed false. Not source-verified release.`,
+    ariaLabel: `ArchiveDex entry ${profile.scientificName}. ${artStatusLabel}. IUCN blocked_external; assessed=false. Not source-verified release.`,
   };
 }
 
@@ -143,8 +144,9 @@ export function renderArchiveDexHonestyBannerHtml(): string {
   const sample = entries[0];
   const artNote = sample?.artStatusLabel ?? 'identity candidate — not a finished model';
   return `
-    <div class="archivedex-honesty" data-archivedex-honesty="1" role="note" aria-label="ArchiveDex honesty: authored floors, IUCN not assessed, identity marks are not finished models">
-      <p>ArchiveDex shows authored / sample floors. IUCN assessed=false. Identity marks (including emoji) are not finished models — ${escapeHtml(artNote)}.</p>
+    <div class="archivedex-honesty" data-archivedex-honesty="1" role="note" aria-label="ArchiveDex honesty: authored floors, IUCN blocked_external not assessed, identity marks are not finished models">
+      <p>ArchiveDex shows authored / sample floors. IUCN Red List is <strong>blocked_external</strong> (no owner credential / rights review yet) — assessed=false; no fake assessed badges.</p>
+      <p>Identity marks (including emoji) are not finished models — ${escapeHtml(artNote)}.</p>
       <p>Maps 0/17 source-verified · production-ready=false · source_verified release=false</p>
     </div>
   `.trim();

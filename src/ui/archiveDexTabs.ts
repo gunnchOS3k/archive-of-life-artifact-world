@@ -7,6 +7,10 @@ import {
   renderScientificSourcesPanel,
 } from '@/services/scientific/renderScientificUI';
 import { truthChipHtml } from '@/ui/livingArchive';
+import {
+  renderIucnBlockedPanelHtml,
+  resolveIucnPlayerPresentation,
+} from '@/systems/iucnBlockedPresentation';
 
 type EmptyLabel = string;
 
@@ -101,7 +105,7 @@ export function renderArchiveDexTab(entry: ArchiveDexEntry, tab: ArchiveDexTabId
         ${field('Representation tier', `T${entry.representationTier}`)}
         ${field('Region', entry.region, 'Unknown')}
         ${field('Time', entry.time?.timeRangeLabel ?? entry.time?.timeUnitIds?.join(' – '), 'Not available in current snapshot')}
-        ${field('Conservation', entry.conservation?.iucnCategory, 'Not assessed')}
+        ${field('Conservation', undefined, 'IUCN blocked_external — not assessed')}
         ${field('Artifact', entry.artifactsEvidence?.collectedArtifactTypes?.join(', '), 'Not yet collected')}
         ${entry.overview?.shortDescription ? `<p class="dex-description">${entry.overview.shortDescription}</p>` : field('Description', undefined)}
         ${entry.overview?.whyItMatters ? `<div class="why-matters"><strong>Why it matters:</strong> ${entry.overview.whyItMatters}</div>` : field('Why it matters', undefined, 'Not available in current snapshot')}
@@ -206,7 +210,13 @@ export function renderArchiveDexTab(entry: ArchiveDexEntry, tab: ArchiveDexTabId
       break;
     case 'conservation':
       body = `
-        ${field('IUCN category', entry.conservation?.iucnCategory, 'Not assessed')}
+        ${renderIucnBlockedPanelHtml(
+          resolveIucnPlayerPresentation({
+            assessed: entry.conservation?.assessed,
+            iucnCategory: entry.conservation?.iucnCategory,
+            dataMode: 'mock_sample',
+          }),
+        )}
         ${field('Population trend', entry.conservation?.populationTrend, 'Unknown')}
         ${listField('Major threats', entry.conservation?.majorThreats, 'Not available in current snapshot')}
         ${listField('Conservation actions', entry.conservation?.conservationActions, 'Not available in current snapshot')}

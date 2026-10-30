@@ -1,6 +1,6 @@
 {
   "schema": "aol.field_level_source_comparison.v1",
-  "generatedAt": "2026-10-30T00:24:18.153Z",
+  "generatedAt": "2026-10-30T00:45:08.318Z",
   "fixtureSnapshotId": "wave008-scientific-fixture-v1+gate1+col/gbif-batch",
   "anySourceVerified": false,
   "productionReady": false,
@@ -301,7 +301,7 @@
       "fixtureRecordId": "COL:fixture:FIX-COL-7",
       "fixtureRetrievedAt": "",
       "fixtureLicense": "COL terms of use",
-      "fixtureUncertainty": "sparse COL ingest batch — name/id only; not a full provenance snapshot",
+      "fixtureUncertainty": "sparse COL ingest batch — name/id only; gaps: common_name absent, geographic_region absent, retrieved_at absent; not a full provenance snapshot",
       "verificationStatus": "needs_source_verification",
       "dataMode": "sample_fallback",
       "sourceVerifiedRelease": false,
@@ -358,8 +358,8 @@
         {
           "field": "uncertainty",
           "status": "match",
-          "fixtureValue": "sparse COL ingest batch — name/id only; not a full provenance snapshot",
-          "gameValue": "sparse COL ingest batch — name/id only; not a full provenance snapshot",
+          "fixtureValue": "sparse COL ingest batch — name/id only; gaps: common_name absent, geographic_region absent, retrieved_at absent; not a full provenance snapshot",
+          "gameValue": "sparse COL ingest batch — name/id only; gaps: common_name absent, geographic_region absent, retrieved_at absent; not a full provenance snapshot",
           "notes": "Uncertainty/confidence basis retained for ArchiveDex evidence panel"
         }
       ],
@@ -373,7 +373,7 @@
       "fixtureRecordId": "COL:fixture:FIX-COL-17",
       "fixtureRetrievedAt": "",
       "fixtureLicense": "COL terms of use",
-      "fixtureUncertainty": "sparse COL ingest batch — name/id only; not a full provenance snapshot",
+      "fixtureUncertainty": "sparse COL ingest batch — name/id only; gaps: common_name absent, geographic_region absent, retrieved_at absent; not a full provenance snapshot",
       "verificationStatus": "needs_source_verification",
       "dataMode": "sample_fallback",
       "sourceVerifiedRelease": false,
@@ -430,8 +430,8 @@
         {
           "field": "uncertainty",
           "status": "match",
-          "fixtureValue": "sparse COL ingest batch — name/id only; not a full provenance snapshot",
-          "gameValue": "sparse COL ingest batch — name/id only; not a full provenance snapshot",
+          "fixtureValue": "sparse COL ingest batch — name/id only; gaps: common_name absent, geographic_region absent, retrieved_at absent; not a full provenance snapshot",
+          "gameValue": "sparse COL ingest batch — name/id only; gaps: common_name absent, geographic_region absent, retrieved_at absent; not a full provenance snapshot",
           "notes": "Uncertainty/confidence basis retained for ArchiveDex evidence panel"
         }
       ],
@@ -445,7 +445,7 @@
       "fixtureRecordId": "COL:fixture:FIX-COL-52",
       "fixtureRetrievedAt": "",
       "fixtureLicense": "COL terms of use",
-      "fixtureUncertainty": "sparse COL ingest batch — name/id only; not a full provenance snapshot",
+      "fixtureUncertainty": "sparse COL ingest batch — name/id only; gaps: common_name absent, geographic_region absent, retrieved_at absent; not a full provenance snapshot",
       "verificationStatus": "needs_source_verification",
       "dataMode": "sample_fallback",
       "sourceVerifiedRelease": false,
@@ -502,8 +502,8 @@
         {
           "field": "uncertainty",
           "status": "match",
-          "fixtureValue": "sparse COL ingest batch — name/id only; not a full provenance snapshot",
-          "gameValue": "sparse COL ingest batch — name/id only; not a full provenance snapshot",
+          "fixtureValue": "sparse COL ingest batch — name/id only; gaps: common_name absent, geographic_region absent, retrieved_at absent; not a full provenance snapshot",
+          "gameValue": "sparse COL ingest batch — name/id only; gaps: common_name absent, geographic_region absent, retrieved_at absent; not a full provenance snapshot",
           "notes": "Uncertainty/confidence basis retained for ArchiveDex evidence panel"
         }
       ],
@@ -517,7 +517,7 @@
       "fixtureRecordId": "COL:fixture:FIX-COL-141",
       "fixtureRetrievedAt": "",
       "fixtureLicense": "COL terms of use",
-      "fixtureUncertainty": "sparse COL ingest batch — name/id only; not a full provenance snapshot",
+      "fixtureUncertainty": "sparse COL ingest batch — name/id only; gaps: common_name absent, geographic_region absent, retrieved_at absent; not a full provenance snapshot",
       "verificationStatus": "needs_source_verification",
       "dataMode": "sample_fallback",
       "sourceVerifiedRelease": false,
@@ -574,8 +574,8 @@
         {
           "field": "uncertainty",
           "status": "match",
-          "fixtureValue": "sparse COL ingest batch — name/id only; not a full provenance snapshot",
-          "gameValue": "sparse COL ingest batch — name/id only; not a full provenance snapshot",
+          "fixtureValue": "sparse COL ingest batch — name/id only; gaps: common_name absent, geographic_region absent, retrieved_at absent; not a full provenance snapshot",
+          "gameValue": "sparse COL ingest batch — name/id only; gaps: common_name absent, geographic_region absent, retrieved_at absent; not a full provenance snapshot",
           "notes": "Uncertainty/confidence basis retained for ArchiveDex evidence panel"
         }
       ],

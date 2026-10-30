@@ -176,8 +176,19 @@ describe('fieldLevelSourceComparison', () => {
       expect(byId[id]?.fieldRows.find((r) => r.field === 'scientific_name')?.status).toBe('match');
       // sparse batches lack common_name → game_only (honest gap, not a silent invent)
       expect(byId[id]?.fieldRows.find((r) => r.field === 'common_name')?.status).toBe('game_only');
+      expect(byId[id]?.fieldRows.find((r) => r.field === 'geographic_region')?.status).toBe(
+        'fixture_only',
+      );
+      expect(byId[id]?.fieldRows.find((r) => r.field === 'retrieved_at')?.status).toBe('fixture_only');
       expect(byId[id]?.fixtureLicense.length).toBeGreaterThan(0);
-      expect(byId[id]?.fixtureUncertainty.length).toBeGreaterThan(0);
+      expect(byId[id]?.fixtureUncertainty).toMatch(/gaps: common_name absent/);
+      expect(byId[id]?.fixtureUncertainty).toMatch(/geographic_region absent/);
+      expect(byId[id]?.fixtureUncertainty).toMatch(/retrieved_at absent/);
+      const sparseHtml = formatComparisonForUi(byId[id]!);
+      expect(sparseHtml).toContain('data-sparse-gap="common_name"');
+      expect(sparseHtml).toContain('data-sparse-gap="geographic_region"');
+      expect(sparseHtml).toContain('data-sparse-gap="retrieved_at"');
+      expect(sparseHtml).toContain('sparse_gap=retrieved_at (absent)');
     }
 
     // Never promote; never invent IUCN assessments in this matrix

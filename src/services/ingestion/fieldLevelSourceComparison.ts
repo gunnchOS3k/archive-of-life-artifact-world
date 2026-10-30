@@ -157,10 +157,12 @@ export function fixtureRecordFromColBatchEntry(
     scientific_name: { accepted_scientific_name: accepted },
     source_organization: 'Catalogue of Life',
     source_record_id: entry.id ? `COL:fixture:${entry.id}` : undefined,
+    // Intentionally omit common_name, geographic_provenance, retrieved_at — honest sparse gaps.
     license: { license_spdx_or_label: batchLicense },
     confidence_or_uncertainty: {
       confidence: 'FIXTURE_TEST_ONLY',
-      confidence_basis: 'sparse COL ingest batch — name/id only; not a full provenance snapshot',
+      confidence_basis:
+        'sparse COL ingest batch — name/id only; gaps: common_name absent, geographic_region absent, retrieved_at absent; not a full provenance snapshot',
     },
     verification_status: 'needs_source_verification',
   };
@@ -419,21 +421,47 @@ export function buildFieldComparisonReportFromRecords(
   };
 }
 
+const SPARSE_GAP_FIELDS = new Set(['common_name', 'geographic_region', 'retrieved_at']);
+
+function sparseGapAttr(row: FieldCompareRow): string {
+  if (!SPARSE_GAP_FIELDS.has(row.field)) return '';
+  if (row.status !== 'game_only' && row.status !== 'fixture_only') return '';
+  return ` data-sparse-gap="${row.field}"`;
+}
+
+function sparseGapNote(row: FieldCompareRow): string {
+  if (!SPARSE_GAP_FIELDS.has(row.field)) return '';
+  if (row.status === 'game_only') {
+    return ` · sparse_gap=${row.field} (fixture absent)`;
+  }
+  if (row.status === 'fixture_only' && row.fixtureValue == null && row.gameValue == null) {
+    return ` · sparse_gap=${row.field} (both absent)`;
+  }
+  if (row.status === 'fixture_only') {
+    return ` · sparse_gap=${row.field} (game absent)`;
+  }
+  return '';
+}
+
 export function formatComparisonForUi(comparison: TaxonFieldComparison): string {
   const rows = comparison.fieldRows
     .map(
       (r) =>
-        `<li data-field="${r.field}" data-status="${r.status}"><strong>${r.field}</strong>: ${r.status}` +
+        `<li data-field="${r.field}" data-status="${r.status}"${sparseGapAttr(r)}><strong>${r.field}</strong>: ${r.status}` +
         `${r.fixtureValue ? ` · fixture=${r.fixtureValue}` : ''}` +
         `${r.gameValue ? ` · game=${r.gameValue}` : ''}` +
+        `${sparseGapNote(r)}` +
         `${r.notes ? ` · ${r.notes}` : ''}</li>`,
     )
     .join('');
+  const retrievedLabel = comparison.fixtureRetrievedAt
+    ? comparison.fixtureRetrievedAt
+    : 'sparse_gap=retrieved_at (absent)';
   return [
     `<section class="field-level-comparison" data-taxon="${comparison.taxonId}" data-source-verified-release="false" data-matched-fields="${comparison.matchedFields}" data-compared-fields="${comparison.comparedFields}">`,
     `<h4>Field-level fixture comparison</h4>`,
     `<p>Source: ${comparison.fixtureSource} · Record: ${comparison.fixtureRecordId}</p>`,
-    `<p>Retrieved: ${comparison.fixtureRetrievedAt} · License: ${comparison.fixtureLicense}</p>`,
+    `<p>Retrieved: ${retrievedLabel} · License: ${comparison.fixtureLicense}</p>`,
     `<p>Uncertainty: ${comparison.fixtureUncertainty}</p>`,
     `<p data-match-count="true">Field matches: ${comparison.matchedFields}/${comparison.comparedFields}</p>`,
     `<p><em>dataMode=${comparison.dataMode}; verificationStatus=${comparison.verificationStatus}; sourceVerifiedRelease=false</em></p>`,
