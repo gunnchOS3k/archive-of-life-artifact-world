@@ -127,6 +127,9 @@ describe('museum/dex player UI wiring', () => {
     expect(strip).toContain('data-dex-brief-strip');
     expect(strip).toContain('data-finished-model="false"');
     expect(strip).toMatch(/Locomotion|Behavior|not a finished/i);
+    expect(strip).toContain('data-silhouette-svg-preview');
+    expect(strip).toContain('data-mode="amble"');
+    expect(strip).toContain('/assets/silhouettes/silhouette-amble.svg');
     expect(() => assertMuseumDexHonesty(buildMuseumHubPresentation(), entries)).not.toThrow();
   });
 
@@ -197,6 +200,10 @@ describe('museum/dex player UI wiring', () => {
     expect(html).toContain('data-museum-silhouette-svg-bridge');
     expect(html).toContain('data-silhouette-svg-package');
     expect(html).toContain('finishedModelsClaimed=false');
+    expect(html).toContain('data-museum-expedition-cta');
+    expect(html).toContain('data-action="start-expedition"');
+    expect(html).toContain('data-maps-unlocked="false"');
+    expect(html).toContain('0/17');
   });
 
   it('index.html hosts museum/dex honesty mount points', () => {

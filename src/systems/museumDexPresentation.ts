@@ -25,7 +25,10 @@ import { renderLockedScienceSurroundHtml } from '@/systems/lockedScienceSurround
 import { resolveObservationMotionForTaxon } from '@/systems/observationLocomotion';
 import { screenReaderHintHtml } from '@/systems/accessibility';
 import { renderLifelingHonestyHtml } from '@/systems/lifelingHonestyPresentation';
-import { renderSilhouetteSvgPackageHtml } from '@/systems/silhouetteSvgPackage';
+import {
+  renderSilhouetteSvgPackageHtml,
+  renderSilhouetteSvgPreviewHtml,
+} from '@/systems/silhouetteSvgPackage';
 
 export type MuseumDexClaimClass =
   | 'game_authored_floor'
@@ -162,9 +165,29 @@ export function renderArchiveDexBriefStripHtml(
     <aside class="dex-brief-strip" data-dex-brief-strip="1" data-finished-model="false" role="note" aria-label="Authored silhouette brief — not a finished model">
       <p class="dex-brief-strip-title">Silhouette brief${wave} (procedural candidate — not human-approved final art)</p>
       <ul>${parts.join('')}</ul>
+      ${renderSilhouetteSvgPreviewHtml(mode)}
       <p class="dex-silhouette-svg-path">SVG stub path: <code>/assets/silhouettes/silhouette-${escapeHtml(mode)}.svg</code> (procedural ≠ finished)</p>
       ${sr}
     </aside>
+  `.trim();
+}
+
+/**
+ * Museum expedition CTA — playable loop without maps/IUCN unlock claims.
+ * Wire via data-museum-expedition-cta; host may bind click to region select.
+ */
+export function renderMuseumExpeditionCtaHtml(
+  hub: MuseumHubPresentation = buildMuseumHubPresentation(),
+): string {
+  return `
+    <div class="museum-expedition-cta" data-museum-expedition-cta="1" role="region" aria-label="Start region expedition — maps and IUCN remain locked">
+      <p class="museum-expedition-cta-title"><strong>Continue expedition</strong></p>
+      <p class="museum-expedition-cta-body">Choose an authored region (${hub.exploreRegionCount} floors) → observe flagships with procedural silhouette briefs → return to ArchiveDex / Lifeling. Paleomaps stay <strong>0/17</strong>; IUCN stays <strong>blocked_external</strong> (assessed=false).</p>
+      <button type="button" class="museum-expedition-cta-btn" data-action="start-expedition" data-maps-unlocked="false" data-iucn-assessed="false" data-source-verified="false" data-finished-art="false">
+        Enter region expedition
+      </button>
+      <p class="museum-expedition-cta-honesty">No IUCN badges · no paleomap unlock · procedural ≠ finished · HUMAN/RC2/V1=false</p>
+    </div>
   `.trim();
 }
 
@@ -215,6 +238,7 @@ export function renderMuseumHubHonestyHtml(hub: MuseumHubPresentation = buildMus
       <div class="museum-silhouette-svg-bridge" data-museum-silhouette-svg-bridge="1">
         ${renderSilhouetteSvgPackageHtml()}
       </div>
+      ${renderMuseumExpeditionCtaHtml(hub)}
     </aside>
   `.trim();
 }

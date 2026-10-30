@@ -62,7 +62,7 @@
       },
       "art_status": "not_applicable",
       "limitations": [
-        "sample_fallback ≠ source_verified",
+        "sample_fallback \u2260 source_verified",
         "NASA historical manifest SHA preserved; bounded acquires stay sample_fallback",
         "Public-data alternatives remain investigation-only (approvedForUse=false)"
       ],
@@ -70,7 +70,7 @@
       "sha": "58973a6e7b4351e5398e3570ff686ec18839b3a4",
       "independent_review_status": "not_started",
       "cursor_complete_status": "in_progress",
-      "notes": "Specialty: scientific_provenance. Field matrix 24 taxa incl. class-rank Trilobita via PBDB bounded (PBDB:19100, approvedForUse=false); anySourceVerified/productionReady false; NASA historical f6d1c4d8…; IUCN not invented; maps 0/17 held."
+      "notes": "Specialty: scientific_provenance. Field matrix 24 taxa incl. class-rank Trilobita via PBDB bounded (PBDB:19100, approvedForUse=false); anySourceVerified/productionReady false; NASA historical f6d1c4d8\u2026; IUCN not invented; maps 0/17 held."
     },
     {
       "req_id": "AOL-SCI-002",
@@ -107,7 +107,7 @@
       "sha": "c46a462fd00f9c0b5d59f4f15b57dfc39d14f5ac",
       "independent_review_status": "not_started",
       "cursor_complete_status": "in_progress",
-      "notes": "Specialty: scientific_provenance. Player-facing IUCN blocked_external UX held; assessed=false; no fake assessed badges. IUCN token absence does not freeze COL/GBIF/PBDB/Neotoma/NASA science (sample_fallback continues). Public alternatives investigation-only — never substitute for IUCN assessments. Live IUCN import still external."
+      "notes": "Specialty: scientific_provenance. Player-facing IUCN blocked_external UX held; assessed=false; no fake assessed badges. IUCN token absence does not freeze COL/GBIF/PBDB/Neotoma/NASA science (sample_fallback continues). Public alternatives investigation-only \u2014 never substitute for IUCN assessments. Live IUCN import still external."
     },
     {
       "req_id": "AOL-SCI-003",
@@ -144,7 +144,7 @@
     {
       "req_id": "AOL-TAX-001",
       "owner": "archive-taxonomy",
-      "expected_behavior": "Taxon identity marks are species-specific where authored; family/group fallbacks must not impersonate a charismatic sibling (lion≠all mammals; horse≠all Equidae).",
+      "expected_behavior": "Taxon identity marks are species-specific where authored; family/group fallbacks must not impersonate a charismatic sibling (lion\u2260all mammals; horse\u2260all Equidae).",
       "verification_method": "automated test",
       "layers": [
         1,
@@ -164,7 +164,7 @@
       },
       "art_status": "wip",
       "limitations": [
-        "emoji/identity candidate ≠ finished model / human-approved art"
+        "emoji/identity candidate \u2260 finished model / human-approved art"
       ],
       "severity": "high",
       "sha": "58973a6e7b4351e5398e3570ff686ec18839b3a4",
@@ -269,7 +269,7 @@
     {
       "req_id": "AOL-EXP-001",
       "owner": "archive-gameplay",
-      "expected_behavior": "Input-driven museum → expedition → observation → ArchiveDex → Lifeling → museum → save/reload loop is digitally playable with ≥12 explore regions and honest floors (157/24/12).",
+      "expected_behavior": "Input-driven museum \u2192 expedition \u2192 observation \u2192 ArchiveDex \u2192 Lifeling \u2192 museum \u2192 save/reload loop is digitally playable with \u226512 explore regions and honest floors (157/24/12).",
       "verification_method": "automated test + system journey",
       "layers": [
         2,
@@ -301,12 +301,12 @@
       "sha": "dac21e402820a90bc363c23c6c53d91edc732698",
       "independent_review_status": "not_started",
       "cursor_complete_status": "in_progress",
-      "notes": "Specialty: expeditions. Surround beats cite 24/24 procedural ≠ finished; museum→expedition→Lifeling loop under IUCN blocked + 0/17; HUMAN/RC2/V1 false."
+      "notes": "Specialty: expeditions. Surround beats cite 24/24 procedural \u2260 finished; museum\u2192expedition\u2192Lifeling loop under IUCN blocked + 0/17; HUMAN/RC2/V1 false."
     },
     {
       "req_id": "AOL-ORG-001",
       "owner": "archive-art",
-      "expected_behavior": "Flagship 24 observation profiles carry species-specific marks and art_status ≠ finished models / human-approved unless earned.",
+      "expected_behavior": "Flagship 24 observation profiles carry species-specific marks and art_status \u2260 finished models / human-approved unless earned.",
       "verification_method": "automated test",
       "layers": [
         1,
@@ -340,14 +340,14 @@
       },
       "art_status": "wip",
       "limitations": [
-        "emoji/identity candidate ≠ finished model",
+        "emoji/identity candidate \u2260 finished model",
         "Human final-art approval pending"
       ],
       "severity": "high",
       "sha": "58973a6e7b4351e5398e3570ff686ec18839b3a4",
       "independent_review_status": "not_started",
       "cursor_complete_status": "in_progress",
-      "notes": "Specialty: organism_identity. 24/24 procedural briefs ≠ finished; trilobita field now PBDB-bounded sample_fallback; HUMAN finals pending (EXTERNAL_BLOCKERS)."
+      "notes": "Specialty: organism_identity. 24/24 procedural briefs \u2260 finished; trilobita field now PBDB-bounded sample_fallback; HUMAN finals pending (EXTERNAL_BLOCKERS)."
     },
     {
       "req_id": "AOL-SAV-001",
@@ -445,7 +445,13 @@
       "sha": "dac21e402820a90bc363c23c6c53d91edc732698",
       "independent_review_status": "not_started",
       "cursor_complete_status": "in_progress",
-      "notes": "Specialty: museum presentation. ArchiveDex honesty banner cites Wave-4 24/24 procedural ≠ finished + anySourceVerified=false; IUCN blocked; maps 0/17."
+      "notes": "Specialty: museum presentation. ArchiveDex honesty banner cites Wave-4 24/24 procedural \u2260 finished + anySourceVerified=false; IUCN blocked; maps 0/17."
+    }
+  ],
+  "notes_log": [
+    {
+      "at": "2026-10-30T21:18:00Z",
+      "note": "S15: procedural silhouette SVG package + museum/Dex honesty bridge; finishedModelsClaimed=false; IUCN/maps external unchanged."
     }
   ]
 }
