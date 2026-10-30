@@ -56,10 +56,10 @@
         "NASA historical manifest SHA preserved; bounded acquires stay sample_fallback"
       ],
       "severity": "blocker",
-      "sha": "5950248c09ee40bb3c3ae4791619d36c7344a01d",
+      "sha": "4be987536a835013eb4b0d57858dce87f5a27b44",
       "independent_review_status": "not_started",
       "cursor_complete_status": "in_progress",
-      "notes": "Specialty: scientific_provenance. Production gate remains false. Bounded Lion field-level COL fixture comparison surfaces source/date/license/uncertainty in SourcesEvidencePanel; anySourceVerified/productionReady remain false; sample_fallback not promoted."
+      "notes": "Specialty: scientific_provenance. Production gate remains false. Multi-taxon field-level fixture matrix (Lion COL 8/8, Gray wolf GBIF 7/7, T.rex PBDB 7/8 honest common_name mismatch, Monarch Gate1 8/8, Polar bear/Elephant/Beaver/Honeybee sparse COL 5/5) surfaces source/date/license/uncertainty/match counts in SourcesEvidencePanel; anySourceVerified/productionReady remain false; sample_fallback not promoted; IUCN rows excluded; NASA historical honesty untouched."
     },
     {
       "req_id": "AOL-SCI-002",
