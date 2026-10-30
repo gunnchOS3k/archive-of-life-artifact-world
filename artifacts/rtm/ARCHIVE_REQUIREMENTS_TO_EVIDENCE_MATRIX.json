@@ -67,7 +67,7 @@
         "Public-data alternatives remain investigation-only (approvedForUse=false)"
       ],
       "severity": "blocker",
-      "sha": "PENDING_IMPLEMENT_SHA",
+      "sha": "dac21e402820a90bc363c23c6c53d91edc732698",
       "independent_review_status": "not_started",
       "cursor_complete_status": "in_progress",
       "notes": "Specialty: scientific_provenance. Field matrix 23 taxa sample_fallback (trilobita_order remains without clean bounded fixture — not invented); anySourceVerified/productionReady false; NASA historical f6d1c4d8… untouched; IUCN not invented."
@@ -298,7 +298,7 @@
         "HUMAN/RC2/V1 remain false"
       ],
       "severity": "high",
-      "sha": "PENDING_IMPLEMENT_SHA",
+      "sha": "dac21e402820a90bc363c23c6c53d91edc732698",
       "independent_review_status": "not_started",
       "cursor_complete_status": "in_progress",
       "notes": "Specialty: expeditions. Surround beats cite 24/24 procedural ≠ finished; museum→expedition→Lifeling loop under IUCN blocked + 0/17; HUMAN/RC2/V1 false."
@@ -344,7 +344,7 @@
         "Human final-art approval pending"
       ],
       "severity": "high",
-      "sha": "PENDING_IMPLEMENT_SHA",
+      "sha": "dac21e402820a90bc363c23c6c53d91edc732698",
       "independent_review_status": "not_started",
       "cursor_complete_status": "in_progress",
       "notes": "Specialty: organism_identity. Waves 1–4: 24/24 procedural silhouette briefs; emoji≠finished; finishedModelsClaimed=false; Lifeling honesty conservationBadgesShown=false; IUCN blocked + 0/17 maps held; human final-art approval still pending."
@@ -442,7 +442,7 @@
         "production remains false"
       ],
       "severity": "high",
-      "sha": "PENDING_IMPLEMENT_SHA",
+      "sha": "dac21e402820a90bc363c23c6c53d91edc732698",
       "independent_review_status": "not_started",
       "cursor_complete_status": "in_progress",
       "notes": "Specialty: museum presentation. ArchiveDex honesty banner cites Wave-4 24/24 procedural ≠ finished + anySourceVerified=false; IUCN blocked; maps 0/17."
