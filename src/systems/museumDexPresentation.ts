@@ -172,23 +172,64 @@ export function renderArchiveDexBriefStripHtml(
   `.trim();
 }
 
+/** Authored explore-region labels for CTA hint (never paleomap unlocks). */
+export function listMuseumExpeditionRegionHints(limit = 4): string[] {
+  return REGION_EXPLORATION_CARDS.filter((c) => c.regionId !== 'museum')
+    .slice(0, limit)
+    .map((c) => c.displayName);
+}
+
 /**
  * Museum expedition CTA — playable loop without maps/IUCN unlock claims.
- * Wire via data-museum-expedition-cta; host may bind click to region select.
+ * Wire via data-museum-expedition-cta; bindMuseumExpeditionCta attaches click.
  */
 export function renderMuseumExpeditionCtaHtml(
   hub: MuseumHubPresentation = buildMuseumHubPresentation(),
 ): string {
+  const hints = listMuseumExpeditionRegionHints();
+  const hintLine = hints.length
+    ? `<p class="museum-expedition-cta-hints">Authored floors (sample): ${hints.map((h) => escapeHtml(h)).join(' · ')}</p>`
+    : '';
   return `
     <div class="museum-expedition-cta" data-museum-expedition-cta="1" role="region" aria-label="Start region expedition — maps and IUCN remain locked">
       <p class="museum-expedition-cta-title"><strong>Continue expedition</strong></p>
       <p class="museum-expedition-cta-body">Choose an authored region (${hub.exploreRegionCount} floors) → observe flagships with procedural silhouette briefs → return to ArchiveDex / Lifeling. Paleomaps stay <strong>0/17</strong>; IUCN stays <strong>blocked_external</strong> (assessed=false).</p>
+      ${hintLine}
       <button type="button" class="museum-expedition-cta-btn" data-action="start-expedition" data-maps-unlocked="false" data-iucn-assessed="false" data-source-verified="false" data-finished-art="false">
         Enter region expedition
       </button>
       <p class="museum-expedition-cta-honesty">No IUCN badges · no paleomap unlock · procedural ≠ finished · HUMAN/RC2/V1=false</p>
     </div>
   `.trim();
+}
+
+/**
+ * Bind CTA click to existing Begin/Continue expedition or map/earth HUD controls.
+ * Never sets mapsUnlocked / iucnAssessed / sourceVerified.
+ */
+export function bindMuseumExpeditionCta(root: ParentNode | null | undefined): boolean {
+  if (!root || typeof (root as ParentNode).querySelector !== 'function') return false;
+  const btn = root.querySelector(
+    '[data-museum-expedition-cta] [data-action="start-expedition"]',
+  ) as HTMLButtonElement | null;
+  if (!btn || btn.dataset.bound === '1') return false;
+  btn.dataset.bound = '1';
+  btn.addEventListener('click', () => {
+    const doc = btn.ownerDocument;
+    const title = doc.getElementById('title-screen');
+    const titleActive = title?.classList.contains('active');
+    const targets = titleActive
+      ? (['btn-new-game', 'btn-continue'] as const)
+      : (['btn-map', 'btn-earth', 'btn-continue', 'btn-new-game'] as const);
+    for (const id of targets) {
+      const el = doc.getElementById(id) as HTMLButtonElement | null;
+      if (el && !el.disabled) {
+        el.click();
+        return;
+      }
+    }
+  });
+  return true;
 }
 
 export function listArchiveDexFlagshipPresentations(): ArchiveDexEntryPresentation[] {
@@ -285,6 +326,7 @@ export function mountMuseumHubPresentation(
     regionName.textContent = hub.title;
     regionName.setAttribute('aria-label', hub.ariaLabel);
   }
+  bindMuseumExpeditionCta(host);
   assertMuseumDexHonesty(hub, listArchiveDexFlagshipPresentations());
   return true;
 }

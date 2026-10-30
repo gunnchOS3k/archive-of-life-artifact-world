@@ -1455,6 +1455,7 @@ html:not(.a11y-sr-hints) .a11y-sr-only[data-a11y-sr-hint] { display: none; }
 }
 .museum-expedition-cta-title { margin: 0 0 0.25rem; }
 .museum-expedition-cta-body { margin: 0 0 0.45rem; color: var(--text-secondary); }
+.museum-expedition-cta-hints { margin: 0 0 0.45rem; font-size: 0.75rem; color: var(--text-secondary); }
 .museum-expedition-cta-btn {
   display: inline-block;
   padding: 0.4rem 0.75rem;

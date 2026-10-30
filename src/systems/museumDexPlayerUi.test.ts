@@ -10,6 +10,8 @@ import {
   buildArchiveDexEntryPresentation,
   buildMuseumHubPresentation,
   listArchiveDexFlagshipPresentations,
+  bindMuseumExpeditionCta,
+  listMuseumExpeditionRegionHints,
   mountArchiveDexHonestyBanner,
   mountMuseumHubPresentation,
   renderArchiveDexBriefStripHtml,
@@ -71,12 +73,16 @@ const horse: PlayableSpecies = {
 
 function fakeDocument(): Document {
   const html = `
-    <div id="title-screen">
+    <div id="title-screen" class="screen active">
+      <button id="btn-new-game" type="button">Begin Expedition</button>
+      <button id="btn-continue" type="button">Continue Expedition</button>
       <div id="museum-honesty-host" data-museum-honesty-host></div>
     </div>
     <div id="game-screen">
       <div id="region-name">Archive Museum</div>
       <div id="hud-museum-honesty-host" data-museum-honesty-host hidden></div>
+      <button id="btn-map" type="button">Map</button>
+      <button id="btn-earth" type="button">Earth</button>
       <div id="panel-archive">
         <div id="archivedex-honesty-host"></div>
         <div id="archive-coverage"></div>
@@ -204,6 +210,28 @@ describe('museum/dex player UI wiring', () => {
     expect(html).toContain('data-action="start-expedition"');
     expect(html).toContain('data-maps-unlocked="false"');
     expect(html).toContain('0/17');
+    expect(listMuseumExpeditionRegionHints().length).toBeGreaterThan(0);
+    expect(html).toContain('Authored floors (sample)');
+  });
+
+  it('binds museum expedition CTA to Begin Expedition without science unlocks', () => {
+    const doc = fakeDocument();
+    const hub = buildMuseumHubPresentation();
+    expect(mountMuseumHubPresentation(doc, hub)).toBe(true);
+    const cta = doc.querySelector(
+      '[data-action="start-expedition"]',
+    ) as HTMLButtonElement;
+    expect(cta).toBeTruthy();
+    expect(cta.dataset.mapsUnlocked).toBe('false');
+    expect(cta.dataset.iucnAssessed).toBe('false');
+    expect(cta.dataset.sourceVerified).toBe('false');
+    let clicked = false;
+    doc.getElementById('btn-new-game')!.addEventListener('click', () => {
+      clicked = true;
+    });
+    expect(bindMuseumExpeditionCta(doc.getElementById('museum-honesty-host'))).toBe(false); // already bound
+    cta.click();
+    expect(clicked).toBe(true);
   });
 
   it('index.html hosts museum/dex honesty mount points', () => {
