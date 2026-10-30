@@ -29,6 +29,12 @@ import {
   renderSilhouetteSvgPackageHtml,
   renderSilhouetteSvgPreviewHtml,
 } from '@/systems/silhouetteSvgPackage';
+import {
+  hasSave,
+  loadSave,
+  describeResumeCheckpoint,
+  renderResumeCheckpointHtml,
+} from '@/systems/saveSystem';
 
 export type MuseumDexClaimClass =
   | 'game_authored_floor'
@@ -181,6 +187,7 @@ export function listMuseumExpeditionRegionHints(limit = 4): string[] {
 
 /**
  * Museum expedition CTA — playable loop without maps/IUCN unlock claims.
+ * Resume-aware: when a local save exists, surface honest checkpoint + prefer Continue.
  * Wire via data-museum-expedition-cta; bindMuseumExpeditionCta attaches click.
  */
 export function renderMuseumExpeditionCtaHtml(
@@ -190,13 +197,20 @@ export function renderMuseumExpeditionCtaHtml(
   const hintLine = hints.length
     ? `<p class="museum-expedition-cta-hints">Authored floors (sample): ${hints.map((h) => escapeHtml(h)).join(' · ')}</p>`
     : '';
+  const save = hasSave() ? loadSave() : null;
+  const checkpoint = save ? describeResumeCheckpoint(save) : null;
+  const resumeBlock = checkpoint ? renderResumeCheckpointHtml(checkpoint) : '';
+  const title = checkpoint ? 'Continue expedition' : 'Begin expedition';
+  const btnLabel = checkpoint ? 'Continue region expedition' : 'Enter region expedition';
+  const resumeAttr = checkpoint ? 'true' : 'false';
   return `
-    <div class="museum-expedition-cta" data-museum-expedition-cta="1" role="region" aria-label="Start region expedition — maps and IUCN remain locked">
-      <p class="museum-expedition-cta-title"><strong>Continue expedition</strong></p>
+    <div class="museum-expedition-cta" data-museum-expedition-cta="1" data-resume-available="${resumeAttr}" role="region" aria-label="${checkpoint ? 'Continue' : 'Start'} region expedition — maps and IUCN remain locked">
+      <p class="museum-expedition-cta-title"><strong>${title}</strong></p>
       <p class="museum-expedition-cta-body">Choose an authored region (${hub.exploreRegionCount} floors) → observe flagships with procedural silhouette briefs → return to ArchiveDex / Lifeling. Paleomaps stay <strong>0/17</strong>; IUCN stays <strong>blocked_external</strong> (assessed=false).</p>
       ${hintLine}
-      <button type="button" class="museum-expedition-cta-btn" data-action="start-expedition" data-maps-unlocked="false" data-iucn-assessed="false" data-source-verified="false" data-finished-art="false">
-        Enter region expedition
+      ${resumeBlock}
+      <button type="button" class="museum-expedition-cta-btn" data-action="start-expedition" data-prefer-continue="${resumeAttr}" data-maps-unlocked="false" data-iucn-assessed="false" data-source-verified="false" data-finished-art="false">
+        ${btnLabel}
       </button>
       <p class="museum-expedition-cta-honesty">No IUCN badges · no paleomap unlock · procedural ≠ finished · HUMAN/RC2/V1=false</p>
     </div>
@@ -205,7 +219,7 @@ export function renderMuseumExpeditionCtaHtml(
 
 /**
  * Bind CTA click to existing Begin/Continue expedition or map/earth HUD controls.
- * Never sets mapsUnlocked / iucnAssessed / sourceVerified.
+ * Prefer Continue when a save exists; never sets mapsUnlocked / iucnAssessed / sourceVerified.
  */
 export function bindMuseumExpeditionCta(root: ParentNode | null | undefined): boolean {
   if (!root || typeof (root as ParentNode).querySelector !== 'function') return false;
@@ -218,12 +232,17 @@ export function bindMuseumExpeditionCta(root: ParentNode | null | undefined): bo
     const doc = btn.ownerDocument;
     const title = doc.getElementById('title-screen');
     const titleActive = title?.classList.contains('active');
-    const targets = titleActive
-      ? (['btn-new-game', 'btn-continue'] as const)
+    const preferContinue = btn.dataset.preferContinue === 'true' || hasSave();
+    const titleTargets = preferContinue
+      ? (['btn-continue', 'btn-new-game'] as const)
+      : (['btn-new-game', 'btn-continue'] as const);
+    const gameTargets = preferContinue
+      ? (['btn-continue', 'btn-map', 'btn-earth', 'btn-new-game'] as const)
       : (['btn-map', 'btn-earth', 'btn-continue', 'btn-new-game'] as const);
+    const targets = titleActive ? titleTargets : gameTargets;
     for (const id of targets) {
       const el = doc.getElementById(id) as HTMLButtonElement | null;
-      if (el && !el.disabled) {
+      if (el && !el.disabled && el.style.display !== 'none') {
         el.click();
         return;
       }

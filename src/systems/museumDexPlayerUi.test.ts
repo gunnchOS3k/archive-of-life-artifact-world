@@ -216,6 +216,7 @@ describe('museum/dex player UI wiring', () => {
 
   it('binds museum expedition CTA to Begin Expedition without science unlocks', () => {
     const doc = fakeDocument();
+    deleteSave();
     const hub = buildMuseumHubPresentation();
     expect(mountMuseumHubPresentation(doc, hub)).toBe(true);
     const cta = doc.querySelector(
@@ -225,6 +226,8 @@ describe('museum/dex player UI wiring', () => {
     expect(cta.dataset.mapsUnlocked).toBe('false');
     expect(cta.dataset.iucnAssessed).toBe('false');
     expect(cta.dataset.sourceVerified).toBe('false');
+    expect(cta.dataset.preferContinue).toBe('false');
+    expect(doc.querySelector('[data-museum-expedition-cta]')!.getAttribute('data-resume-available')).toBe('false');
     let clicked = false;
     doc.getElementById('btn-new-game')!.addEventListener('click', () => {
       clicked = true;
@@ -232,6 +235,35 @@ describe('museum/dex player UI wiring', () => {
     expect(bindMuseumExpeditionCta(doc.getElementById('museum-honesty-host'))).toBe(false); // already bound
     cta.click();
     expect(clicked).toBe(true);
+  });
+
+  it('resume-aware CTA prefers Continue and surfaces checkpoint honesty', () => {
+    deleteSave();
+    const state = createDefaultSave();
+    state.player.currentRegion = 'savanna';
+    state.player.visitedRegions = ['museum', 'savanna'];
+    saveGame(state);
+    const doc = fakeDocument();
+    expect(mountMuseumHubPresentation(doc, buildMuseumHubPresentation())).toBe(true);
+    const host = doc.getElementById('museum-honesty-host')!;
+    expect(host.innerHTML).toContain('data-resume-checkpoint');
+    expect(host.innerHTML).toContain('Continue expedition');
+    expect(host.innerHTML).toContain('sourceVerifiedRelease=false');
+    const cta = host.querySelector('[data-action="start-expedition"]') as HTMLButtonElement;
+    expect(cta.dataset.preferContinue).toBe('true');
+    expect(cta.dataset.mapsUnlocked).toBe('false');
+    let continued = false;
+    let began = false;
+    doc.getElementById('btn-continue')!.addEventListener('click', () => {
+      continued = true;
+    });
+    doc.getElementById('btn-new-game')!.addEventListener('click', () => {
+      began = true;
+    });
+    cta.click();
+    expect(continued).toBe(true);
+    expect(began).toBe(false);
+    deleteSave();
   });
 
   it('index.html hosts museum/dex honesty mount points', () => {
