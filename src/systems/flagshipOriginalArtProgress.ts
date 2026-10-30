@@ -271,18 +271,19 @@ export function effectiveFlagshipArtStatus(profile: FlagshipObservationProfile):
   return profile.finalArtStatus;
 }
 
+/** 1–4 for authored procedural waves; null if taxon not yet briefed. */
+export function proceduralArtWaveNumber(taxonId: string): number | null {
+  if (PROCEDURAL_ART_WAVE1.includes(taxonId)) return 1;
+  if (PROCEDURAL_ART_WAVE2.includes(taxonId)) return 2;
+  if (PROCEDURAL_ART_WAVE3.includes(taxonId)) return 3;
+  if (PROCEDURAL_ART_WAVE4.includes(taxonId)) return 4;
+  return null;
+}
+
 function proceduralWaveNote(taxonId: string): string {
-  if (PROCEDURAL_ART_WAVE4.includes(taxonId)) {
-    return 'Wave-4 silhouette brief authored; still not a finished model';
-  }
-  if (PROCEDURAL_ART_WAVE3.includes(taxonId)) {
-    return 'Wave-3 silhouette brief authored; still not a finished model';
-  }
-  if (PROCEDURAL_ART_WAVE2.includes(taxonId)) {
-    return 'Wave-2 silhouette brief authored; still not a finished model';
-  }
-  if (PROCEDURAL_ART_WAVE1.includes(taxonId)) {
-    return 'Wave-1 silhouette brief authored; still not a finished model';
+  const wave = proceduralArtWaveNumber(taxonId);
+  if (wave != null) {
+    return `Wave-${wave} silhouette brief authored; still not a finished model`;
   }
   return 'Remains emoji identity candidate — not finished';
 }

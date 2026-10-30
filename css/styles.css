@@ -1402,6 +1402,30 @@ body {
   --border: #fff;
 }
 .a11y-large-text { font-size: 118%; }
+/* Screen-reader-only hints (visible when a11y-sr-hints is on via clip, not display:none) */
+.a11y-sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+html:not(.a11y-sr-hints) .a11y-sr-only[data-a11y-sr-hint] { display: none; }
+.dex-brief-strip {
+  margin-top: 0.45rem;
+  padding: 0.4rem 0.55rem;
+  border: 1px dashed var(--border);
+  background: transparent;
+  font-size: 0.75rem;
+  color: var(--text-secondary);
+}
+.dex-brief-strip-title { margin: 0 0 0.25rem; font-weight: 600; color: var(--text-primary); }
+.dex-brief-strip ul { margin: 0; padding-left: 1.1rem; }
+.dex-brief-strip li { margin: 0.1rem 0; }
 .companion-progress {
   margin-top: 0.5rem;
   font-size: 0.85rem;

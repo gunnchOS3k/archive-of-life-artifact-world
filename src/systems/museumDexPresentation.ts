@@ -15,9 +15,15 @@ import {
   REGION_EXPLORATION_CARDS,
 } from '@/systems/regionExploration';
 import { renderFlagshipArtHonestyHtml } from '@/systems/flagshipArtHonestyPresentation';
-import { renderFlagshipOriginalArtProgressHtml } from '@/systems/flagshipOriginalArtProgress';
+import {
+  buildSilhouetteBrief,
+  proceduralArtWaveNumber,
+  renderFlagshipOriginalArtProgressHtml,
+} from '@/systems/flagshipOriginalArtProgress';
 import { renderPublicAlternativesHonestyHtml } from '@/services/ingestion/publicDataAlternatives';
 import { renderLockedScienceSurroundHtml } from '@/systems/lockedScienceSurroundExperience';
+import { resolveObservationMotionForTaxon } from '@/systems/observationLocomotion';
+import { screenReaderHintHtml } from '@/systems/accessibility';
 
 export type MuseumDexClaimClass =
   | 'game_authored_floor'
@@ -48,6 +54,12 @@ export interface ArchiveDexEntryPresentation {
   claimClass: MuseumDexClaimClass;
   iucnAssessed: false;
   finishedModelClaimed: false;
+  /** Authored Wave silhouette brief — procedural ≠ finished model. */
+  locomotionCue: string | null;
+  behaviorNote: string | null;
+  posture: string | null;
+  observationMotionMode: string | null;
+  silhouetteBriefWave: number | null;
   ariaLabel: string;
 }
 
@@ -86,6 +98,13 @@ export function buildArchiveDexEntryPresentation(
     scientificName: profile.scientificName,
   });
   const artStatusLabel = flagshipArtStatusLabel(profile);
+  const motion = resolveObservationMotionForTaxon(taxonId);
+  const brief = buildSilhouetteBrief(taxonId);
+  const loco = motion.locomotionCue ?? brief?.locomotionCue ?? null;
+  const behavior = motion.behaviorNote ?? profile.behaviorNote ?? null;
+  const posture = motion.posture ?? brief?.posture ?? null;
+  const locoHint = loco ? ` Locomotion cue: ${loco}.` : '';
+  const behaviorHint = behavior ? ` Behavior: ${behavior}.` : '';
   return {
     taxonId: profile.taxonId,
     scientificName: profile.scientificName,
@@ -94,8 +113,55 @@ export function buildArchiveDexEntryPresentation(
     claimClass: 'game_authored_floor',
     iucnAssessed: false,
     finishedModelClaimed: false,
-    ariaLabel: `ArchiveDex entry ${profile.scientificName}. ${artStatusLabel}. IUCN blocked_external; assessed=false. Not source-verified release.`,
+    locomotionCue: loco,
+    behaviorNote: behavior,
+    posture,
+    observationMotionMode: motion.mode,
+    silhouetteBriefWave: proceduralArtWaveNumber(taxonId),
+    ariaLabel: `ArchiveDex entry ${profile.scientificName}. ${artStatusLabel}.${locoHint}${behaviorHint} IUCN blocked_external; assessed=false. Not source-verified release. Procedural silhouette brief ≠ finished model.`,
   };
+}
+
+/** HTML strip for ArchiveDex entry hero — authored locomotion/behavior, never finished-model. */
+export function renderArchiveDexBriefStripHtml(
+  presentation: ArchiveDexEntryPresentation,
+): string {
+  const parts: string[] = [];
+  if (presentation.locomotionCue) {
+    parts.push(
+      `<li><span class="detail-label">Locomotion (authored brief):</span> ${escapeHtml(presentation.locomotionCue)}</li>`,
+    );
+  }
+  if (presentation.behaviorNote) {
+    parts.push(
+      `<li><span class="detail-label">Behavior note:</span> ${escapeHtml(presentation.behaviorNote)}</li>`,
+    );
+  }
+  if (presentation.posture) {
+    parts.push(
+      `<li><span class="detail-label">Posture brief:</span> ${escapeHtml(presentation.posture)}</li>`,
+    );
+  }
+  if (presentation.observationMotionMode) {
+    parts.push(
+      `<li><span class="detail-label">Observation motion mode:</span> <code>${escapeHtml(presentation.observationMotionMode)}</code> (procedural ≠ finished)</li>`,
+    );
+  }
+  if (!parts.length) return '';
+  const wave =
+    presentation.silhouetteBriefWave != null
+      ? ` Wave-${presentation.silhouetteBriefWave}`
+      : '';
+  const sr = screenReaderHintHtml(
+    `${presentation.scientificName}${wave} silhouette brief: locomotion and behavior are authored procedural cues, not finished models. IUCN assessed false.`,
+  );
+  return `
+    <aside class="dex-brief-strip" data-dex-brief-strip="1" data-finished-model="false" role="note" aria-label="Authored silhouette brief — not a finished model">
+      <p class="dex-brief-strip-title">Silhouette brief${wave} (procedural candidate — not human-approved final art)</p>
+      <ul>${parts.join('')}</ul>
+      ${sr}
+    </aside>
+  `.trim();
 }
 
 export function listArchiveDexFlagshipPresentations(): ArchiveDexEntryPresentation[] {

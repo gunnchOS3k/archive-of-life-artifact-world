@@ -11,6 +11,7 @@ import { renderSourcesEvidencePanel } from '@/ui/evidence/SourcesEvidencePanel';
 import {
   buildArchiveDexEntryPresentation,
   mountArchiveDexHonestyBanner,
+  renderArchiveDexBriefStripHtml,
 } from '@/systems/museumDexPresentation';
 import {
   renderIucnHonestyBadgeHtml,
@@ -306,6 +307,8 @@ export class ArchiveDexUI {
       : `<span class="dex-badge dex-art-honesty">authored / sample — not finished model</span>
          ${renderIucnHonestyBadgeHtml(iucn)}`;
 
+    const briefStrip =
+      presentation && reveal !== 'hidden' ? renderArchiveDexBriefStripHtml(presentation) : '';
     this.entryHeader.innerHTML = `
       <div class="archivedex-entry-hero" ${presentation ? `aria-label="${presentation.ariaLabel.replace(/"/g, '&quot;')}"` : ''}>
         <div class="archivedex-icon ${reveal === 'hidden' ? 'silhouette' : ''}" aria-hidden="true">${icon}</div>
@@ -316,6 +319,7 @@ export class ArchiveDexUI {
           <span class="dex-badge">T${entry.representationTier}</span>
           ${renderIucnPlayerStatusHtml(iucn)}
           ${honestyBadge}
+          ${briefStrip}
         </div>
       </div>
     `;

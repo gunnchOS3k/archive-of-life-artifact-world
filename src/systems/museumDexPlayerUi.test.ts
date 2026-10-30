@@ -12,6 +12,7 @@ import {
   listArchiveDexFlagshipPresentations,
   mountArchiveDexHonestyBanner,
   mountMuseumHubPresentation,
+  renderArchiveDexBriefStripHtml,
   renderArchiveDexHonestyBannerHtml,
   renderMuseumHubHonestyHtml,
 } from '@/systems/museumDexPresentation';
@@ -118,6 +119,14 @@ describe('museum/dex player UI wiring', () => {
     expect(horseEntry?.finishedModelClaimed).toBe(false);
     expect(horseEntry?.iucnAssessed).toBe(false);
     expect(horseEntry?.artStatusLabel).toMatch(/candidate|not a finished model|not human-approved|not finished/i);
+    expect(horseEntry?.locomotionCue).toMatch(/trot|lope|amble/i);
+    expect(horseEntry?.behaviorNote).toBeTruthy();
+    expect(horseEntry?.observationMotionMode).toBe('amble');
+    expect(horseEntry?.silhouetteBriefWave).toBe(1);
+    const strip = renderArchiveDexBriefStripHtml(horseEntry!);
+    expect(strip).toContain('data-dex-brief-strip');
+    expect(strip).toContain('data-finished-model="false"');
+    expect(strip).toMatch(/Locomotion|Behavior|not a finished/i);
     expect(() => assertMuseumDexHonesty(buildMuseumHubPresentation(), entries)).not.toThrow();
   });
 
