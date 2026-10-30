@@ -1,6 +1,6 @@
 {
   "schema": "aol.field_level_source_comparison.v1",
-  "generatedAt": "2026-10-30T13:41:09.784Z",
+  "generatedAt": "2026-10-30T16:32:46.343Z",
   "fixtureSnapshotId": "wave008-scientific-fixture-v1+gate1+col/gbif-batch",
   "anySourceVerified": false,
   "productionReady": false,

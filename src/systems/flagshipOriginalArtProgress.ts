@@ -1,0 +1,217 @@
+/**
+ * Flagship original-art progress beyond emoji identity marks.
+ * Advancing to procedural_candidate / silhouette briefs ≠ finished models.
+ */
+
+import {
+  FLAGSHIP_OBSERVATION_PROFILES,
+  assertFlagshipArtHonesty,
+  flagshipArtStatusLabel,
+  listFlagshipTaxonIds,
+  type FinalArtStatus,
+  type FlagshipObservationProfile,
+} from '@/services/flagshipTaxonProfiles';
+
+export type SilhouetteBrief = {
+  taxonId: string;
+  posture: string;
+  anatomyFocus: string[];
+  locomotionCue: string;
+  habitatBackdrop: string;
+  /** Procedural / authored brief only — not a packaged final asset. */
+  assetKind: 'silhouette_brief';
+  finishedModel: false;
+  humanApproved: false;
+};
+
+export type FlagshipArtProgressRow = {
+  taxonId: string;
+  scientificName: string;
+  representationMark: string;
+  priorStatus: FinalArtStatus;
+  currentStatus: FinalArtStatus;
+  artStatusLabel: string;
+  silhouetteBrief: SilhouetteBrief | null;
+  emojiEqualsFinished: false;
+  finishedModelClaimed: false;
+  originalArtApproved: false;
+  progressNote: string;
+};
+
+export type FlagshipArtProgressReport = {
+  schema: 'aol.flagship_original_art_progress.v1';
+  generatedAt: string;
+  flagshipCount: number;
+  proceduralCandidateCount: number;
+  emojiIdentityCount: number;
+  finishedModelsClaimed: false;
+  emojiEqualsFinished: false;
+  anyHumanApprovedFinal: false;
+  rows: FlagshipArtProgressRow[];
+  rule: string;
+};
+
+/** First-wave species advancing emoji → procedural silhouette briefs. */
+export const PROCEDURAL_ART_WAVE1: readonly string[] = [
+  'panthera_leo',
+  'loxodonta_africana',
+  'equus_caballus_ferus',
+  'mammuthus_primigenius',
+  'canis_lupus',
+  'balaenoptera_musculus',
+] as const;
+
+const SILHOUETTE_BRIEFS: Record<string, Omit<SilhouetteBrief, 'taxonId' | 'assetKind' | 'finishedModel' | 'humanApproved'>> = {
+  panthera_leo: {
+    posture: 'lateral walk cycle, head slightly below withers',
+    anatomyFocus: ['mane mass (male adult candidate)', 'digitigrade limbs', 'long counterbalancing tail'],
+    locomotionCue: 'ambulatory stalk → short bound',
+    habitatBackdrop: 'open grassland / termite-mound vantage',
+  },
+  loxodonta_africana: {
+    posture: '¾ front-quarter with trunk mid-reach',
+    anatomyFocus: ['large ears', 'columnar limbs', 'trunk tip finger cues'],
+    locomotionCue: 'slow amble, weight-shift honesty',
+    habitatBackdrop: 'watering hole / acacia browse',
+  },
+  equus_caballus_ferus: {
+    posture: 'alert stand, erect dorsal mane',
+    anatomyFocus: ['stocky Przewalski proportions', 'erect mane (not domestic fall)', 'short convex profile'],
+    locomotionCue: 'steppe trot readiness',
+    habitatBackdrop: 'Asian steppe — never African savanna substitution',
+  },
+  mammuthus_primigenius: {
+    posture: 'lateral with curved tusks forward',
+    anatomyFocus: ['high shoulder hump', 'curved tusks', 'woolly coat mass'],
+    locomotionCue: 'heavy amble on mammoth-steppe',
+    habitatBackdrop: 'Pleistocene steppe / frozen silt — reconstruction framing',
+  },
+  canis_lupus: {
+    posture: 'forward stalk, ears high',
+    anatomyFocus: ['long legs', 'bushy tail carriage', 'narrow chest'],
+    locomotionCue: 'trot → brief lope',
+    habitatBackdrop: 'forest-edge pack trail',
+  },
+  balaenoptera_musculus: {
+    posture: 'lateral surface skim with blow',
+    anatomyFocus: ['elongate body', 'small dorsal fin placement', 'baleen-mouth mass'],
+    locomotionCue: 'slow fluke drive',
+    habitatBackdrop: 'upwelling / krill patch — pelagic',
+  },
+};
+
+const RULE =
+  'Original-art progress may advance emoji → procedural silhouette briefs; emoji never equals finished art; human approval still required for final assets.';
+
+export function buildSilhouetteBrief(taxonId: string): SilhouetteBrief | null {
+  const brief = SILHOUETTE_BRIEFS[taxonId];
+  if (!brief) return null;
+  return {
+    taxonId,
+    ...brief,
+    assetKind: 'silhouette_brief',
+    finishedModel: false,
+    humanApproved: false,
+  };
+}
+
+/** Effective art status after wave-1 procedural progress (does not mutate profiles). */
+export function effectiveFlagshipArtStatus(profile: FlagshipObservationProfile): FinalArtStatus {
+  assertFlagshipArtHonesty(profile);
+  if (PROCEDURAL_ART_WAVE1.includes(profile.taxonId)) {
+    if (profile.finalArtStatus === 'emoji_identity_candidate') {
+      return 'procedural_candidate';
+    }
+  }
+  return profile.finalArtStatus;
+}
+
+export function buildFlagshipOriginalArtProgressReport(
+  generatedAt = new Date().toISOString(),
+): FlagshipArtProgressReport {
+  const rows: FlagshipArtProgressRow[] = listFlagshipTaxonIds().map((id) => {
+    const profile = FLAGSHIP_OBSERVATION_PROFILES[id];
+    assertFlagshipArtHonesty(profile);
+    const currentStatus = effectiveFlagshipArtStatus(profile);
+    const silhouetteBrief = currentStatus === 'procedural_candidate' ? buildSilhouetteBrief(id) : null;
+    const priorStatus: FinalArtStatus = PROCEDURAL_ART_WAVE1.includes(id)
+      ? 'emoji_identity_candidate'
+      : profile.finalArtStatus;
+    return {
+      taxonId: profile.taxonId,
+      scientificName: profile.scientificName,
+      representationMark: profile.representationMark,
+      priorStatus,
+      currentStatus,
+      artStatusLabel:
+        currentStatus === 'procedural_candidate'
+          ? 'Art status: procedural candidate (silhouette brief — not human-approved final art)'
+          : flagshipArtStatusLabel(profile),
+      silhouetteBrief,
+      emojiEqualsFinished: false,
+      finishedModelClaimed: false,
+      originalArtApproved: false,
+      progressNote: silhouetteBrief
+        ? 'Wave-1 silhouette brief authored; still not a finished model'
+        : 'Remains emoji identity candidate — not finished',
+    };
+  });
+
+  return {
+    schema: 'aol.flagship_original_art_progress.v1',
+    generatedAt,
+    flagshipCount: rows.length,
+    proceduralCandidateCount: rows.filter((r) => r.currentStatus === 'procedural_candidate').length,
+    emojiIdentityCount: rows.filter((r) => r.currentStatus === 'emoji_identity_candidate').length,
+    finishedModelsClaimed: false,
+    emojiEqualsFinished: false,
+    anyHumanApprovedFinal: false,
+    rows,
+    rule: RULE,
+  };
+}
+
+export function assertFlagshipOriginalArtProgress(report: FlagshipArtProgressReport): void {
+  if (report.finishedModelsClaimed || report.emojiEqualsFinished || report.anyHumanApprovedFinal) {
+    throw new Error('Art progress must not claim finished/approved finals');
+  }
+  if (report.flagshipCount !== 24) {
+    throw new Error(`Expected 24 flagships, got ${report.flagshipCount}`);
+  }
+  if (report.proceduralCandidateCount < 1) {
+    throw new Error('Wave-1 art progress expects at least one procedural candidate');
+  }
+  for (const row of report.rows) {
+    if (row.emojiEqualsFinished || row.finishedModelClaimed || row.originalArtApproved) {
+      throw new Error(`Honesty violation: ${row.taxonId}`);
+    }
+    if (row.currentStatus === 'final_asset_human_approved') {
+      throw new Error(`Honesty violation: ${row.taxonId} auto human-approved`);
+    }
+    if (row.silhouetteBrief) {
+      if (row.silhouetteBrief.finishedModel || row.silhouetteBrief.humanApproved) {
+        throw new Error(`Silhouette brief ${row.taxonId} claimed finished/approved`);
+      }
+    }
+  }
+}
+
+export function renderFlagshipOriginalArtProgressHtml(
+  report: FlagshipArtProgressReport = buildFlagshipOriginalArtProgressReport(),
+): string {
+  assertFlagshipOriginalArtProgress(report);
+  return [
+    '<aside class="flagship-art-progress" data-emoji-finished="false" data-procedural-wave="1" role="note">',
+    `<p><strong>Original art progress:</strong> ${report.proceduralCandidateCount}/${report.flagshipCount} flagships have procedural silhouette briefs — emoji ≠ finished.</p>`,
+    `<p>finishedModelsClaimed=false · humanApproved=false · ${escapeHtml(report.rule)}</p>`,
+    '</aside>',
+  ].join('');
+}
+
+function escapeHtml(value: string): string {
+  return value
+    .replace(/&/g, '&amp;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;')
+    .replace(/"/g, '&quot;');
+}

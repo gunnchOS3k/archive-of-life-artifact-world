@@ -5,7 +5,7 @@
   "contract_source_sha": "935eb3a20548b1a4b726f2ba305df94ff496be16",
   "product_id": "archive-of-life",
   "product_repo": "https://github.com/gunnchOS3k/archive-of-life-artifact-world",
-  "generated_at": "2026-10-30T13:45:00Z",
+  "generated_at": "2026-10-30T16:05:00Z",
   "honesty_flags": {
     "HUMAN": false,
     "RC2": false,
@@ -14,7 +14,7 @@
   "phase_summary": {
     "cursor_complete": {
       "status": "not_started",
-      "notes": "Automated evidence and UI wiring exist; Cursor-Complete is not claimed. Floors 157/24/12 remain authored/sample; emoji≠finished; IUCN blocked; 0/17 maps."
+      "notes": "Automated evidence and UI wiring exist; Cursor-Complete is not claimed. Floors 157/24/12 remain authored/sample; emoji≠finished (6/24 procedural silhouette briefs); IUCN blocked; 0/17 maps."
     },
     "codex_independently_verified": {
       "status": "not_started"
@@ -37,7 +37,8 @@
         "src/systems/expeditionJourneyPolish.test.ts",
         "data-pipeline/src/archive_life_pipeline/public_bounded_acquire.py",
         "src/services/ingestion/fieldLevelSourceComparison.test.ts",
-        "src/services/ingestion/sourceVerificationWorkflow.test.ts"
+        "src/services/ingestion/sourceVerificationWorkflow.test.ts",
+        "src/services/ingestion/taxonomyReconcile.test.ts"
       ],
       "automated_evidence": [
         "artifacts/archive_full/SCIENCE_HONESTY_MATRIX.json",
@@ -45,10 +46,14 @@
         "src/services/ingestion/publicSourceAdapters.ts",
         "src/services/ingestion/sourceVerificationWorkflow.ts",
         "src/services/ingestion/publicDataAlternatives.ts",
+        "src/services/ingestion/taxonomyReconcile.ts",
         "artifacts/science/FIELD_LEVEL_COMPARISON_RESULT.json",
         "artifacts/science/PUBLIC_DATA_ALTERNATIVES.json",
+        "artifacts/science/TAXONOMY_RECONCILE_RESULT.json",
         "public/data/status/field_level_comparison.json",
-        "public/data/status/public_data_alternatives.json"
+        "public/data/status/public_data_alternatives.json",
+        "public/data/status/taxonomy_reconcile.json",
+        "data-pipeline/snapshots/public_bounded/ACQUIRE_MANIFEST.json"
       ],
       "native_physical": {
         "status": "not_applicable",
@@ -62,10 +67,10 @@
         "Public-data alternatives remain investigation-only (approvedForUse=false)"
       ],
       "severity": "blocker",
-      "sha": "1734424817dc4ecb504e051e56068eb978b01b49",
+      "sha": "PLACEHOLDER_IMPLEMENT",
       "independent_review_status": "not_started",
       "cursor_complete_status": "in_progress",
-      "notes": "Specialty: scientific_provenance. Production gate remains false. Provenance/verification tooling + permitted open-data import workflows (COL/GBIF/PBDB/Neotoma/NASA/ICS); IUCN gated separately. Field matrix expanded to 15 taxa (Lion 9/9, wolf 8/8, T.rex 8/9, Monarch 9/9, sparse COL×10 at 6/6, Przewalski's horse infraspecific 5/6 honest scientific_name mismatch). Public alternatives catalog (WoRMS/OBIS/OpenTree/Wikidata/iNat/EOL/Smithsonian) without invented rights; iucnBlocksAllScience=false. anySourceVerified/productionReady false; sample_fallback never promoted; NASA historical untouched."
+      "notes": "Specialty: scientific_provenance. Production gate remains false. Taxonomy reconcile across wave008/COL/GBIF/PBDB fixtures with snapshot SHA-256 + retrievedAt; ACQUIRE_MANIFEST paths relativized; optional local COL/GBIF bounded hashes recorded when present (gitignored). Field matrix held; iucnBlocksAllScience=false; anySourceVerified/productionReady false; sample_fallback never promoted; NASA historical f6d1c4d8… untouched."
     },
     {
       "req_id": "AOL-SCI-002",
@@ -309,14 +314,20 @@
       ],
       "tests": [
         "src/systems/expeditionJourneyPolish.test.ts",
-        "src/systems/flagshipArtHonestyPresentation.test.ts"
+        "src/systems/flagshipArtHonestyPresentation.test.ts",
+        "src/systems/flagshipOriginalArtProgress.test.ts",
+        "src/systems/lockedScienceSurroundExperience.test.ts"
       ],
       "automated_evidence": [
         "src/services/flagshipTaxonProfiles.ts",
         "src/minigames/wildlifeObservation.ts",
         "src/systems/museumDexPresentation.ts",
         "src/systems/flagshipArtHonestyPresentation.ts",
-        "artifacts/science/FLAGSHIP_ART_HONESTY.json"
+        "src/systems/flagshipOriginalArtProgress.ts",
+        "src/systems/lockedScienceSurroundExperience.ts",
+        "artifacts/science/FLAGSHIP_ART_HONESTY.json",
+        "artifacts/science/FLAGSHIP_ART_PROGRESS.json",
+        "artifacts/science/LOCKED_SCIENCE_SURROUND.json"
       ],
       "native_physical": {
         "status": "not_applicable",
@@ -329,10 +340,10 @@
         "Human final-art approval pending"
       ],
       "severity": "high",
-      "sha": "1734424817dc4ecb504e051e56068eb978b01b49",
+      "sha": "PLACEHOLDER_IMPLEMENT",
       "independent_review_status": "not_started",
       "cursor_complete_status": "in_progress",
-      "notes": "Specialty: organism_identity. Flagship art honesty report: 24/24 emoji/procedural candidates; finishedModelsClaimed=false; emojiEqualsFinished=false; ArchiveDex banner mounts original-art honesty strip."
+      "notes": "Specialty: organism_identity. Wave-1 original art: 6/24 procedural silhouette briefs (lion/elephant/wolf/whale/Przewalski/mammoth); emoji≠finished; finishedModelsClaimed=false; ArchiveDex mounts art-progress + locked-science surround (IUCN blocked + 0/17 maps) without inventing credentials/assets."
     },
     {
       "req_id": "AOL-SAV-001",

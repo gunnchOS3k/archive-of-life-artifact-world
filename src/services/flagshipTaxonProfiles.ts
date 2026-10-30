@@ -50,6 +50,7 @@ export const FLAGSHIP_OBSERVATION_PROFILES: Record<string, FlagshipObservationPr
     habitatCues: ['open grassland', 'pride shade', 'termite mound vantage'],
     behaviorNote: 'Social pride hunter; cooperative group living — observe from distance',
     representationMark: '🦁',
+    finalArtStatus: 'procedural_candidate',
   },
   loxodonta_africana: {
     ...DEFAULTS,
@@ -61,6 +62,7 @@ export const FLAGSHIP_OBSERVATION_PROFILES: Record<string, FlagshipObservationPr
     habitatCues: ['watering hole', 'acacia browse', 'dust wallow'],
     behaviorNote: 'Matriarchal herd browser; slow deliberate movement',
     representationMark: '🐘',
+    finalArtStatus: 'procedural_candidate',
   },
   canis_lupus: {
     ...DEFAULTS,
@@ -71,6 +73,7 @@ export const FLAGSHIP_OBSERVATION_PROFILES: Record<string, FlagshipObservationPr
     habitatCues: ['forest edge', 'pack trail', 'howl ridge'],
     behaviorNote: 'Pack hunter with high vigilance at forest margins',
     representationMark: '🐺',
+    finalArtStatus: 'procedural_candidate',
   },
   odocoileus_virginianus: {
     ...DEFAULTS,
@@ -92,6 +95,7 @@ export const FLAGSHIP_OBSERVATION_PROFILES: Record<string, FlagshipObservationPr
     habitatCues: ['upwelling zone', 'krill patch', 'surface blow'],
     behaviorNote: 'Pelagic filter feeder; long calm observation windows',
     representationMark: '🐋',
+    finalArtStatus: 'procedural_candidate',
   },
   ursus_americanus: {
     ...DEFAULTS,
@@ -142,6 +146,7 @@ export const FLAGSHIP_OBSERVATION_PROFILES: Record<string, FlagshipObservationPr
     habitatCues: ['steppe wind', 'shortgrass forage', 'dust plume'],
     behaviorNote: 'Asian steppe wild horse — never lion-coded representation',
     representationMark: '🐴',
+    finalArtStatus: 'procedural_candidate',
   },
   danaus_plexippus: {
     ...DEFAULTS,
@@ -254,6 +259,7 @@ export const FLAGSHIP_OBSERVATION_PROFILES: Record<string, FlagshipObservationPr
     habitatCues: ['mammoth steppe', 'tusk polish', 'frozen silt'],
     behaviorNote: 'Extinct megafauna reconstruction — fossil/excavation framing',
     representationMark: '🦣',
+    finalArtStatus: 'procedural_candidate',
   },
   tyrannosaurus_rex: {
     ...DEFAULTS,

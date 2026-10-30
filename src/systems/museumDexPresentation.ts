@@ -15,7 +15,9 @@ import {
   REGION_EXPLORATION_CARDS,
 } from '@/systems/regionExploration';
 import { renderFlagshipArtHonestyHtml } from '@/systems/flagshipArtHonestyPresentation';
+import { renderFlagshipOriginalArtProgressHtml } from '@/systems/flagshipOriginalArtProgress';
 import { renderPublicAlternativesHonestyHtml } from '@/services/ingestion/publicDataAlternatives';
+import { renderLockedScienceSurroundHtml } from '@/systems/lockedScienceSurroundExperience';
 
 export type MuseumDexClaimClass =
   | 'game_authored_floor'
@@ -152,7 +154,9 @@ export function renderArchiveDexHonestyBannerHtml(): string {
       <p>Maps 0/17 source-verified · production-ready=false · source_verified release=false</p>
       <p>IUCN token absence does not freeze COL/GBIF/PBDB/Neotoma/NASA science — those paths stay sample_fallback until human review.</p>
       ${renderFlagshipArtHonestyHtml()}
+      ${renderFlagshipOriginalArtProgressHtml()}
       ${renderPublicAlternativesHonestyHtml()}
+      ${renderLockedScienceSurroundHtml()}
     </div>
   `.trim();
 }

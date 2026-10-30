@@ -218,7 +218,8 @@ export function assertIucnBlockedHonesty(presentation: IucnBlockedPresentation):
   if (presentation.sourceVerified !== false || presentation.gateState !== 'blocked_external') {
     throw new Error('IUCN blocked presentation must stay blocked_external / sourceVerified=false');
   }
-  if (presentation.dataMode === 'source_verified') {
+  // Union already excludes source_verified; widen for a runtime honesty guard.
+  if ((presentation.dataMode as string) === 'source_verified') {
     throw new Error('IUCN blocked presentation must not use dataMode=source_verified');
   }
 }
