@@ -25,13 +25,16 @@ export function isGameAuthoredVerified(hero?: ArchiveSpecies): boolean {
 
 export function isSourceVerified(entry: SpeciesIndexEntry, hero?: ArchiveSpecies): boolean {
   if (isMockEntry(entry, hero)) return false;
+  // Release-eligible only with explicit source_verified provenance — never index source labels alone
+  // (quarantined mock heroes / stubs must not inflate verified or release-eligible counts).
   const hasVerifiedProv = hero?.provenance?.some(
-    (p) => p.verificationStatus === 'source_verified' || (p.isMockData === false && p.source !== 'game_authored')
+    (p) =>
+      p.verificationStatus === 'source_verified' &&
+      p.isMockData !== true &&
+      p.source !== 'mock_sample' &&
+      p.source !== 'game_authored'
   );
-  const hasRealSource = entry.sources?.some(
-    (s) => s !== 'mock_sample' && s !== 'game_authored'
-  );
-  return !!(hasVerifiedProv || (hasRealSource && !isMockEntry(entry, hero)));
+  return !!hasVerifiedProv;
 }
 
 export function computeDataQualityCounts(

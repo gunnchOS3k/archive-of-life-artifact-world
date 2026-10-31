@@ -1,0 +1,637 @@
+{
+  "schema": "aol.flagship_original_art_progress.v1",
+  "generatedAt": "2026-10-30T19:00:00.000Z",
+  "flagshipCount": 24,
+  "proceduralCandidateCount": 24,
+  "emojiIdentityCount": 0,
+  "finishedModelsClaimed": false,
+  "emojiEqualsFinished": false,
+  "anyHumanApprovedFinal": false,
+  "rows": [
+    {
+      "taxonId": "panthera_leo",
+      "scientificName": "Panthera leo",
+      "representationMark": "🦁",
+      "priorStatus": "emoji_identity_candidate",
+      "currentStatus": "procedural_candidate",
+      "artStatusLabel": "Art status: procedural candidate (silhouette brief — not human-approved final art)",
+      "silhouetteBrief": {
+        "taxonId": "panthera_leo",
+        "posture": "lateral walk cycle, head slightly below withers",
+        "anatomyFocus": [
+          "mane mass (male adult candidate)",
+          "digitigrade limbs",
+          "long counterbalancing tail"
+        ],
+        "locomotionCue": "ambulatory stalk → short bound",
+        "habitatBackdrop": "open grassland / termite-mound vantage",
+        "assetKind": "silhouette_brief",
+        "finishedModel": false,
+        "humanApproved": false
+      },
+      "emojiEqualsFinished": false,
+      "finishedModelClaimed": false,
+      "originalArtApproved": false,
+      "progressNote": "Wave-1 silhouette brief authored; still not a finished model"
+    },
+    {
+      "taxonId": "loxodonta_africana",
+      "scientificName": "Loxodonta africana",
+      "representationMark": "🐘",
+      "priorStatus": "emoji_identity_candidate",
+      "currentStatus": "procedural_candidate",
+      "artStatusLabel": "Art status: procedural candidate (silhouette brief — not human-approved final art)",
+      "silhouetteBrief": {
+        "taxonId": "loxodonta_africana",
+        "posture": "¾ front-quarter with trunk mid-reach",
+        "anatomyFocus": [
+          "large ears",
+          "columnar limbs",
+          "trunk tip finger cues"
+        ],
+        "locomotionCue": "slow amble, weight-shift honesty",
+        "habitatBackdrop": "watering hole / acacia browse",
+        "assetKind": "silhouette_brief",
+        "finishedModel": false,
+        "humanApproved": false
+      },
+      "emojiEqualsFinished": false,
+      "finishedModelClaimed": false,
+      "originalArtApproved": false,
+      "progressNote": "Wave-1 silhouette brief authored; still not a finished model"
+    },
+    {
+      "taxonId": "canis_lupus",
+      "scientificName": "Canis lupus",
+      "representationMark": "🐺",
+      "priorStatus": "emoji_identity_candidate",
+      "currentStatus": "procedural_candidate",
+      "artStatusLabel": "Art status: procedural candidate (silhouette brief — not human-approved final art)",
+      "silhouetteBrief": {
+        "taxonId": "canis_lupus",
+        "posture": "forward stalk, ears high",
+        "anatomyFocus": [
+          "long legs",
+          "bushy tail carriage",
+          "narrow chest"
+        ],
+        "locomotionCue": "trot → brief lope",
+        "habitatBackdrop": "forest-edge pack trail",
+        "assetKind": "silhouette_brief",
+        "finishedModel": false,
+        "humanApproved": false
+      },
+      "emojiEqualsFinished": false,
+      "finishedModelClaimed": false,
+      "originalArtApproved": false,
+      "progressNote": "Wave-1 silhouette brief authored; still not a finished model"
+    },
+    {
+      "taxonId": "odocoileus_virginianus",
+      "scientificName": "Odocoileus virginianus",
+      "representationMark": "🦌",
+      "priorStatus": "emoji_identity_candidate",
+      "currentStatus": "procedural_candidate",
+      "artStatusLabel": "Art status: procedural candidate (silhouette brief — not human-approved final art)",
+      "silhouetteBrief": {
+        "taxonId": "odocoileus_virginianus",
+        "posture": "alert freeze, ears flared, white flag ready",
+        "anatomyFocus": [
+          "white rump flag",
+          "antler candidate (buck seasonal)",
+          "slender legs"
+        ],
+        "locomotionCue": "browse pause → explosive bound",
+        "habitatBackdrop": "oak-edge browse / creek crossing — Nearctic forest margin",
+        "assetKind": "silhouette_brief",
+        "finishedModel": false,
+        "humanApproved": false
+      },
+      "emojiEqualsFinished": false,
+      "finishedModelClaimed": false,
+      "originalArtApproved": false,
+      "progressNote": "Wave-2 silhouette brief authored; still not a finished model"
+    },
+    {
+      "taxonId": "balaenoptera_musculus",
+      "scientificName": "Balaenoptera musculus",
+      "representationMark": "🐋",
+      "priorStatus": "emoji_identity_candidate",
+      "currentStatus": "procedural_candidate",
+      "artStatusLabel": "Art status: procedural candidate (silhouette brief — not human-approved final art)",
+      "silhouetteBrief": {
+        "taxonId": "balaenoptera_musculus",
+        "posture": "lateral surface skim with blow",
+        "anatomyFocus": [
+          "elongate body",
+          "small dorsal fin placement",
+          "baleen-mouth mass"
+        ],
+        "locomotionCue": "slow fluke drive",
+        "habitatBackdrop": "upwelling / krill patch — pelagic",
+        "assetKind": "silhouette_brief",
+        "finishedModel": false,
+        "humanApproved": false
+      },
+      "emojiEqualsFinished": false,
+      "finishedModelClaimed": false,
+      "originalArtApproved": false,
+      "progressNote": "Wave-1 silhouette brief authored; still not a finished model"
+    },
+    {
+      "taxonId": "ursus_americanus",
+      "scientificName": "Ursus americanus",
+      "representationMark": "🐻",
+      "priorStatus": "emoji_identity_candidate",
+      "currentStatus": "procedural_candidate",
+      "artStatusLabel": "Art status: procedural candidate (silhouette brief — not human-approved final art)",
+      "silhouetteBrief": {
+        "taxonId": "ursus_americanus",
+        "posture": "¾ rear-quarter forage stand",
+        "anatomyFocus": [
+          "rounded ear profile",
+          "plantigrade gait mass",
+          "short tail"
+        ],
+        "locomotionCue": "amble → brief gallop",
+        "habitatBackdrop": "mixed forest berry / mast forage — not polar substitution",
+        "assetKind": "silhouette_brief",
+        "finishedModel": false,
+        "humanApproved": false
+      },
+      "emojiEqualsFinished": false,
+      "finishedModelClaimed": false,
+      "originalArtApproved": false,
+      "progressNote": "Wave-2 silhouette brief authored; still not a finished model"
+    },
+    {
+      "taxonId": "castor_canadensis",
+      "scientificName": "Castor canadensis",
+      "representationMark": "🦫",
+      "priorStatus": "emoji_identity_candidate",
+      "currentStatus": "procedural_candidate",
+      "artStatusLabel": "Art status: procedural candidate (silhouette brief — not human-approved final art)",
+      "silhouetteBrief": {
+        "taxonId": "castor_canadensis",
+        "posture": "sitting haul-out with flat tail visible",
+        "anatomyFocus": [
+          "paddle tail",
+          "large incisor focus",
+          "waterproof coat mass"
+        ],
+        "locomotionCue": "waddle → powerful swim kick",
+        "habitatBackdrop": "lodge pond / felled aspen shoreline",
+        "assetKind": "silhouette_brief",
+        "finishedModel": false,
+        "humanApproved": false
+      },
+      "emojiEqualsFinished": false,
+      "finishedModelClaimed": false,
+      "originalArtApproved": false,
+      "progressNote": "Wave-2 silhouette brief authored; still not a finished model"
+    },
+    {
+      "taxonId": "lontra_canadensis",
+      "scientificName": "Lontra canadensis",
+      "representationMark": "🦦",
+      "priorStatus": "emoji_identity_candidate",
+      "currentStatus": "procedural_candidate",
+      "artStatusLabel": "Art status: procedural candidate (silhouette brief — not human-approved final art)",
+      "silhouetteBrief": {
+        "taxonId": "lontra_canadensis",
+        "posture": "streamside stretch with arched back",
+        "anatomyFocus": [
+          "streamlined body",
+          "webbed feet cue",
+          "tapered tail"
+        ],
+        "locomotionCue": "porpoise swim → bank scramble",
+        "habitatBackdrop": "riparian pool / beaver-influenced waterway",
+        "assetKind": "silhouette_brief",
+        "finishedModel": false,
+        "humanApproved": false
+      },
+      "emojiEqualsFinished": false,
+      "finishedModelClaimed": false,
+      "originalArtApproved": false,
+      "progressNote": "Wave-2 silhouette brief authored; still not a finished model"
+    },
+    {
+      "taxonId": "phoca_vitulina",
+      "scientificName": "Phoca vitulina",
+      "representationMark": "🦭",
+      "priorStatus": "emoji_identity_candidate",
+      "currentStatus": "procedural_candidate",
+      "artStatusLabel": "Art status: procedural candidate (silhouette brief — not human-approved final art)",
+      "silhouetteBrief": {
+        "taxonId": "phoca_vitulina",
+        "posture": "haul-out side profile, head raised",
+        "anatomyFocus": [
+          "spotted coat candidate",
+          "hind-flipper stance",
+          "whisker mass"
+        ],
+        "locomotionCue": "undulating swim → awkward haul-out",
+        "habitatBackdrop": "rocky intertidal / harbor haul-out",
+        "assetKind": "silhouette_brief",
+        "finishedModel": false,
+        "humanApproved": false
+      },
+      "emojiEqualsFinished": false,
+      "finishedModelClaimed": false,
+      "originalArtApproved": false,
+      "progressNote": "Wave-3 silhouette brief authored; still not a finished model"
+    },
+    {
+      "taxonId": "equus_caballus_ferus",
+      "scientificName": "Equus ferus przewalskii",
+      "representationMark": "🐴",
+      "priorStatus": "emoji_identity_candidate",
+      "currentStatus": "procedural_candidate",
+      "artStatusLabel": "Art status: procedural candidate (silhouette brief — not human-approved final art)",
+      "silhouetteBrief": {
+        "taxonId": "equus_caballus_ferus",
+        "posture": "alert stand, erect dorsal mane",
+        "anatomyFocus": [
+          "stocky Przewalski proportions",
+          "erect mane (not domestic fall)",
+          "short convex profile"
+        ],
+        "locomotionCue": "steppe trot readiness",
+        "habitatBackdrop": "Asian steppe — never African savanna substitution",
+        "assetKind": "silhouette_brief",
+        "finishedModel": false,
+        "humanApproved": false
+      },
+      "emojiEqualsFinished": false,
+      "finishedModelClaimed": false,
+      "originalArtApproved": false,
+      "progressNote": "Wave-1 silhouette brief authored; still not a finished model"
+    },
+    {
+      "taxonId": "danaus_plexippus",
+      "scientificName": "Danaus plexippus",
+      "representationMark": "🦋",
+      "priorStatus": "emoji_identity_candidate",
+      "currentStatus": "procedural_candidate",
+      "artStatusLabel": "Art status: procedural candidate (silhouette brief — not human-approved final art)",
+      "silhouetteBrief": {
+        "taxonId": "danaus_plexippus",
+        "posture": "open-wing glide, dorsal orange field visible",
+        "anatomyFocus": [
+          "veined wing panel",
+          "clubbed antennae",
+          "slender body"
+        ],
+        "locomotionCue": "flutter → sustained migratory glide",
+        "habitatBackdrop": "milkweed corridor / roost cluster — migratory honesty",
+        "assetKind": "silhouette_brief",
+        "finishedModel": false,
+        "humanApproved": false
+      },
+      "emojiEqualsFinished": false,
+      "finishedModelClaimed": false,
+      "originalArtApproved": false,
+      "progressNote": "Wave-2 silhouette brief authored; still not a finished model"
+    },
+    {
+      "taxonId": "apis_mellifera",
+      "scientificName": "Apis mellifera",
+      "representationMark": "🐝",
+      "priorStatus": "emoji_identity_candidate",
+      "currentStatus": "procedural_candidate",
+      "artStatusLabel": "Art status: procedural candidate (silhouette brief — not human-approved final art)",
+      "silhouetteBrief": {
+        "taxonId": "apis_mellifera",
+        "posture": "¾ hover over blossom",
+        "anatomyFocus": [
+          "pollen baskets",
+          "banded abdomen",
+          "transparent wing pair"
+        ],
+        "locomotionCue": "hover → straight-line forage flight",
+        "habitatBackdrop": "meadow blossom / hive-adjacent forage",
+        "assetKind": "silhouette_brief",
+        "finishedModel": false,
+        "humanApproved": false
+      },
+      "emojiEqualsFinished": false,
+      "finishedModelClaimed": false,
+      "originalArtApproved": false,
+      "progressNote": "Wave-3 silhouette brief authored; still not a finished model"
+    },
+    {
+      "taxonId": "formica_rufa",
+      "scientificName": "Formica rufa",
+      "representationMark": "🐜",
+      "priorStatus": "emoji_identity_candidate",
+      "currentStatus": "procedural_candidate",
+      "artStatusLabel": "Art status: procedural candidate (silhouette brief — not human-approved final art)",
+      "silhouetteBrief": {
+        "taxonId": "formica_rufa",
+        "posture": "lateral worker with raised antennae",
+        "anatomyFocus": [
+          "narrow waist",
+          "mandible cue",
+          "segmented antennae"
+        ],
+        "locomotionCue": "trail-follow scurries",
+        "habitatBackdrop": "wood-ant mound / forest floor trail",
+        "assetKind": "silhouette_brief",
+        "finishedModel": false,
+        "humanApproved": false
+      },
+      "emojiEqualsFinished": false,
+      "finishedModelClaimed": false,
+      "originalArtApproved": false,
+      "progressNote": "Wave-4 silhouette brief authored; still not a finished model"
+    },
+    {
+      "taxonId": "anax_junius",
+      "scientificName": "Anax junius",
+      "representationMark": "🪰",
+      "priorStatus": "emoji_identity_candidate",
+      "currentStatus": "procedural_candidate",
+      "artStatusLabel": "Art status: procedural candidate (silhouette brief — not human-approved final art)",
+      "silhouetteBrief": {
+        "taxonId": "anax_junius",
+        "posture": "hover with wings horizontal",
+        "anatomyFocus": [
+          "elongate abdomen",
+          "large compound eyes",
+          "paired wing planes"
+        ],
+        "locomotionCue": "patrol hover → dart intercept",
+        "habitatBackdrop": "pond margin / open water patrol lane",
+        "assetKind": "silhouette_brief",
+        "finishedModel": false,
+        "humanApproved": false
+      },
+      "emojiEqualsFinished": false,
+      "finishedModelClaimed": false,
+      "originalArtApproved": false,
+      "progressNote": "Wave-3 silhouette brief authored; still not a finished model"
+    },
+    {
+      "taxonId": "latrodectus_mactans",
+      "scientificName": "Latrodectus mactans",
+      "representationMark": "🕷️",
+      "priorStatus": "emoji_identity_candidate",
+      "currentStatus": "procedural_candidate",
+      "artStatusLabel": "Art status: procedural candidate (silhouette brief — not human-approved final art)",
+      "silhouetteBrief": {
+        "taxonId": "latrodectus_mactans",
+        "posture": "inverted web sit, abdomen down",
+        "anatomyFocus": [
+          "globose abdomen",
+          "hourglass mark candidate",
+          "slender legs"
+        ],
+        "locomotionCue": "web-vibration wait — not a chase predator claim",
+        "habitatBackdrop": "sheltered web niche / debris overhang",
+        "assetKind": "silhouette_brief",
+        "finishedModel": false,
+        "humanApproved": false
+      },
+      "emojiEqualsFinished": false,
+      "finishedModelClaimed": false,
+      "originalArtApproved": false,
+      "progressNote": "Wave-4 silhouette brief authored; still not a finished model"
+    },
+    {
+      "taxonId": "dynastes_hercules",
+      "scientificName": "Dynastes hercules",
+      "representationMark": "🪲",
+      "priorStatus": "emoji_identity_candidate",
+      "currentStatus": "procedural_candidate",
+      "artStatusLabel": "Art status: procedural candidate (silhouette brief — not human-approved final art)",
+      "silhouetteBrief": {
+        "taxonId": "dynastes_hercules",
+        "posture": "¾ front with thoracic horn forward",
+        "anatomyFocus": [
+          "thoracic horn",
+          "elytra mass",
+          "powerful forelegs"
+        ],
+        "locomotionCue": "deliberate climb on trunk",
+        "habitatBackdrop": "Neotropical canopy / rotting log stage",
+        "assetKind": "silhouette_brief",
+        "finishedModel": false,
+        "humanApproved": false
+      },
+      "emojiEqualsFinished": false,
+      "finishedModelClaimed": false,
+      "originalArtApproved": false,
+      "progressNote": "Wave-3 silhouette brief authored; still not a finished model"
+    },
+    {
+      "taxonId": "libellula_quadrimaculata",
+      "scientificName": "Libellula quadrimaculata",
+      "representationMark": "🪰",
+      "priorStatus": "emoji_identity_candidate",
+      "currentStatus": "procedural_candidate",
+      "artStatusLabel": "Art status: procedural candidate (silhouette brief — not human-approved final art)",
+      "silhouetteBrief": {
+        "taxonId": "libellula_quadrimaculata",
+        "posture": "perch with wings outspread",
+        "anatomyFocus": [
+          "four wing spots",
+          "broad abdomen",
+          "compound eyes"
+        ],
+        "locomotionCue": "perch → short territorial sally",
+        "habitatBackdrop": "marsh edge / sunlit reed perch",
+        "assetKind": "silhouette_brief",
+        "finishedModel": false,
+        "humanApproved": false
+      },
+      "emojiEqualsFinished": false,
+      "finishedModelClaimed": false,
+      "originalArtApproved": false,
+      "progressNote": "Wave-4 silhouette brief authored; still not a finished model"
+    },
+    {
+      "taxonId": "bombus_terrestris",
+      "scientificName": "Bombus terrestris",
+      "representationMark": "🐝",
+      "priorStatus": "emoji_identity_candidate",
+      "currentStatus": "procedural_candidate",
+      "artStatusLabel": "Art status: procedural candidate (silhouette brief — not human-approved final art)",
+      "silhouetteBrief": {
+        "taxonId": "bombus_terrestris",
+        "posture": "¾ hover at flower face",
+        "anatomyFocus": [
+          "fuzzy thorax",
+          "banded abdomen",
+          "pollen-laden legs"
+        ],
+        "locomotionCue": "heavy buzz hover → short forage hop",
+        "habitatBackdrop": "meadow clover / nest-bank forage",
+        "assetKind": "silhouette_brief",
+        "finishedModel": false,
+        "humanApproved": false
+      },
+      "emojiEqualsFinished": false,
+      "finishedModelClaimed": false,
+      "originalArtApproved": false,
+      "progressNote": "Wave-4 silhouette brief authored; still not a finished model"
+    },
+    {
+      "taxonId": "acanthoscurria_geniculata",
+      "scientificName": "Acanthoscurria geniculata",
+      "representationMark": "🕷️",
+      "priorStatus": "emoji_identity_candidate",
+      "currentStatus": "procedural_candidate",
+      "artStatusLabel": "Art status: procedural candidate (silhouette brief — not human-approved final art)",
+      "silhouetteBrief": {
+        "taxonId": "acanthoscurria_geniculata",
+        "posture": "forward threat-display candidate, legs spread",
+        "anatomyFocus": [
+          "banded leg joints",
+          "robust cephalothorax",
+          "urticating-hair framing"
+        ],
+        "locomotionCue": "deliberate terrestrial walk",
+        "habitatBackdrop": "Neotropical leaf litter / burrow mouth — husbandry not wild claim",
+        "assetKind": "silhouette_brief",
+        "finishedModel": false,
+        "humanApproved": false
+      },
+      "emojiEqualsFinished": false,
+      "finishedModelClaimed": false,
+      "originalArtApproved": false,
+      "progressNote": "Wave-4 silhouette brief authored; still not a finished model"
+    },
+    {
+      "taxonId": "pachnoda_marginata",
+      "scientificName": "Pachnoda marginata",
+      "representationMark": "🪲",
+      "priorStatus": "emoji_identity_candidate",
+      "currentStatus": "procedural_candidate",
+      "artStatusLabel": "Art status: procedural candidate (silhouette brief — not human-approved final art)",
+      "silhouetteBrief": {
+        "taxonId": "pachnoda_marginata",
+        "posture": "¾ dorsal on fruit surface",
+        "anatomyFocus": [
+          "shield-shaped elytra",
+          "margin contrast",
+          "clubbed antennae"
+        ],
+        "locomotionCue": "clumsy climb → short buzz flight",
+        "habitatBackdrop": "fruiting canopy / rotting fruit stage",
+        "assetKind": "silhouette_brief",
+        "finishedModel": false,
+        "humanApproved": false
+      },
+      "emojiEqualsFinished": false,
+      "finishedModelClaimed": false,
+      "originalArtApproved": false,
+      "progressNote": "Wave-4 silhouette brief authored; still not a finished model"
+    },
+    {
+      "taxonId": "mammuthus_primigenius",
+      "scientificName": "Mammuthus primigenius",
+      "representationMark": "🦣",
+      "priorStatus": "emoji_identity_candidate",
+      "currentStatus": "procedural_candidate",
+      "artStatusLabel": "Art status: procedural candidate (silhouette brief — not human-approved final art)",
+      "silhouetteBrief": {
+        "taxonId": "mammuthus_primigenius",
+        "posture": "lateral with curved tusks forward",
+        "anatomyFocus": [
+          "high shoulder hump",
+          "curved tusks",
+          "woolly coat mass"
+        ],
+        "locomotionCue": "heavy amble on mammoth-steppe",
+        "habitatBackdrop": "Pleistocene steppe / frozen silt — reconstruction framing",
+        "assetKind": "silhouette_brief",
+        "finishedModel": false,
+        "humanApproved": false
+      },
+      "emojiEqualsFinished": false,
+      "finishedModelClaimed": false,
+      "originalArtApproved": false,
+      "progressNote": "Wave-1 silhouette brief authored; still not a finished model"
+    },
+    {
+      "taxonId": "tyrannosaurus_rex",
+      "scientificName": "Tyrannosaurus rex",
+      "representationMark": "🦖",
+      "priorStatus": "emoji_identity_candidate",
+      "currentStatus": "procedural_candidate",
+      "artStatusLabel": "Art status: procedural candidate (silhouette brief — not human-approved final art)",
+      "silhouetteBrief": {
+        "taxonId": "tyrannosaurus_rex",
+        "posture": "lateral mid-stride, skull foreshortened",
+        "anatomyFocus": [
+          "massive skull",
+          "reduced forelimbs",
+          "bipedal balance tail"
+        ],
+        "locomotionCue": "heavy bipedal walk — reconstruction framing",
+        "habitatBackdrop": "Late Cretaceous floodplain — fossil reconstruction, not living zoo",
+        "assetKind": "silhouette_brief",
+        "finishedModel": false,
+        "humanApproved": false
+      },
+      "emojiEqualsFinished": false,
+      "finishedModelClaimed": false,
+      "originalArtApproved": false,
+      "progressNote": "Wave-2 silhouette brief authored; still not a finished model"
+    },
+    {
+      "taxonId": "trilobita_order",
+      "scientificName": "Trilobita",
+      "representationMark": "🦴",
+      "priorStatus": "emoji_identity_candidate",
+      "currentStatus": "procedural_candidate",
+      "artStatusLabel": "Art status: procedural candidate (silhouette brief — not human-approved final art)",
+      "silhouetteBrief": {
+        "taxonId": "trilobita_order",
+        "posture": "dorsal fossil plate, cephalon forward",
+        "anatomyFocus": [
+          "cephalon shield",
+          "thoracic segments",
+          "pygidium"
+        ],
+        "locomotionCue": "static reconstruction pose — not a living gait claim",
+        "habitatBackdrop": "Paleozoic seafloor reconstruction — fossil framing only",
+        "assetKind": "silhouette_brief",
+        "finishedModel": false,
+        "humanApproved": false
+      },
+      "emojiEqualsFinished": false,
+      "finishedModelClaimed": false,
+      "originalArtApproved": false,
+      "progressNote": "Wave-3 silhouette brief authored; still not a finished model"
+    },
+    {
+      "taxonId": "ursus_maritimus",
+      "scientificName": "Ursus maritimus",
+      "representationMark": "🐻",
+      "priorStatus": "emoji_identity_candidate",
+      "currentStatus": "procedural_candidate",
+      "artStatusLabel": "Art status: procedural candidate (silhouette brief — not human-approved final art)",
+      "silhouetteBrief": {
+        "taxonId": "ursus_maritimus",
+        "posture": "lateral walk on ice edge",
+        "anatomyFocus": [
+          "elongate neck",
+          "large plantigrade paws",
+          "insulating bulk"
+        ],
+        "locomotionCue": "steady ice-edge amble",
+        "habitatBackdrop": "sea-ice margin / polar coastal — never temperate forest substitution",
+        "assetKind": "silhouette_brief",
+        "finishedModel": false,
+        "humanApproved": false
+      },
+      "emojiEqualsFinished": false,
+      "finishedModelClaimed": false,
+      "originalArtApproved": false,
+      "progressNote": "Wave-3 silhouette brief authored; still not a finished model"
+    }
+  ],
+  "rule": "Original-art progress may advance emoji → procedural silhouette briefs; emoji never equals finished art; human approval still required for final assets."
+}

@@ -4,6 +4,7 @@ import { World } from './world';
 import { collectArtifact, hasArtifact, formatArtifactType, getCollectedIds } from '@/systems/artifactSystem';
 import { visitRegion, checkQuestProgress } from '@/systems/questSystem';
 import { saveGame } from '@/systems/saveSystem';
+import { discoverClue } from '@/systems/expeditionSystem';
 import {
   buildEncounterTable,
   describeEthicalPrompt,
@@ -28,6 +29,10 @@ import {
   type DeviceRoleProfile,
 } from '@/device/deviceRoles';
 import { hydrateLivingArchiveIcons, setEmotionalMode } from '@/ui/livingArchive';
+import {
+  buildMuseumHubPresentation,
+  mountMuseumHubPresentation,
+} from '@/systems/museumDexPresentation';
 import { FossilExcavation } from '@/minigames/fossilExcavation';
 import { WildlifeObservation } from '@/minigames/wildlifeObservation';
 import { ArchiveDexUI } from '@/ui/archiveDexUI';
@@ -46,6 +51,7 @@ import {
   toPlayableSpecies,
   type PlayableSpecies,
 } from '@/services/DataCatalogService';
+import { getSpeciesIcon } from '@/services/speciesRepresentation';
 import { EarthLayerService } from '@/services/EarthLayerService';
 import { TemporalMapService } from '@/services/TemporalMapService';
 import { TimeAtlasService } from '@/time/TimeAtlasService';
@@ -543,6 +549,7 @@ export class Game {
 
     const region = this.catalog.getConfig().regions.find((r) => r.id === regionId);
     document.getElementById('region-name')!.textContent = region?.name ?? regionId;
+    this.applyMuseumHubPresentation(regionId);
     track('region_travel', {
       region: regionId,
       biome: region?.biome ?? '',
@@ -567,6 +574,21 @@ export class Game {
 
     this.syncAchievements();
     this.save();
+  }
+
+  /** Wire museum honesty presentation + a11y labels into the live HUD when at the hub. */
+  private applyMuseumHubPresentation(regionId: string) {
+    const host = document.getElementById('hud-museum-honesty-host');
+    if (!host) return;
+    if (regionId !== 'museum') {
+      host.hidden = true;
+      host.innerHTML = '';
+      return;
+    }
+    host.hidden = false;
+    const hub = buildMuseumHubPresentation();
+    mountMuseumHubPresentation(document.getElementById('game-screen') ?? document, hub);
+    setEmotionalMode('home');
   }
 
   private rebuildEncounterTable() {
@@ -819,6 +841,22 @@ export class Game {
     await this.travelToRegion(regionId);
   }
 
+  acceptSpeciesIcon(speciesId: string) {
+    const sp = this.speciesById.get(speciesId);
+    if (!sp) return { ok: false, error: 'unknown_species' };
+    return {
+      ok: true,
+      speciesId: sp.id,
+      commonName: sp.commonName,
+      scientificName: sp.scientificName,
+      family: sp.family,
+      group: sp.group,
+      icon: getSpeciesIcon(sp),
+      region: sp.region,
+      continents: sp.continents,
+    };
+  }
+
   acceptMoveBesideTarget(kind?: 'species' | 'fossil' | 'portal') {
     const targets = this.world.getInteractables().filter((item) => {
       if (!kind) return item.type === 'species' || item.type === 'fossil';
@@ -840,6 +878,19 @@ export class Game {
 
   async acceptInteract() {
     await this.interact();
+  }
+
+  acceptRecordMuseumClue() {
+    const entry = discoverClue(this.state, {
+      id: 'museum-label-clue',
+      title: 'Museum label',
+      text: 'This label is a game-authored prompt, not a field measurement.',
+      regionId: this.state.player.currentRegion || 'museum',
+      expeditionId: 'museum-walk',
+      unlocksJournal: true,
+    });
+    this.save();
+    return { ok: Boolean(entry), clueId: 'museum-label-clue' };
   }
 
   acceptSetMinigameHold(holding: boolean) {

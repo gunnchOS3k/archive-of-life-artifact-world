@@ -7,6 +7,12 @@ import {
   renderScientificSourcesPanel,
 } from '@/services/scientific/renderScientificUI';
 import { truthChipHtml } from '@/ui/livingArchive';
+import {
+  renderIucnBlockedPanelHtml,
+  resolveIucnPlayerPresentation,
+} from '@/systems/iucnBlockedPresentation';
+import { renderTaxonomyReconcileEntryHtml } from '@/services/ingestion/taxonomyReconcile';
+import { buildArchiveDexEntryPresentation } from '@/systems/museumDexPresentation';
 
 type EmptyLabel = string;
 
@@ -101,7 +107,7 @@ export function renderArchiveDexTab(entry: ArchiveDexEntry, tab: ArchiveDexTabId
         ${field('Representation tier', `T${entry.representationTier}`)}
         ${field('Region', entry.region, 'Unknown')}
         ${field('Time', entry.time?.timeRangeLabel ?? entry.time?.timeUnitIds?.join(' – '), 'Not available in current snapshot')}
-        ${field('Conservation', entry.conservation?.iucnCategory, 'Not assessed')}
+        ${field('Conservation', undefined, 'IUCN blocked_external — not assessed')}
         ${field('Artifact', entry.artifactsEvidence?.collectedArtifactTypes?.join(', '), 'Not yet collected')}
         ${entry.overview?.shortDescription ? `<p class="dex-description">${entry.overview.shortDescription}</p>` : field('Description', undefined)}
         ${entry.overview?.whyItMatters ? `<div class="why-matters"><strong>Why it matters:</strong> ${entry.overview.whyItMatters}</div>` : field('Why it matters', undefined, 'Not available in current snapshot')}
@@ -123,9 +129,18 @@ export function renderArchiveDexTab(entry: ArchiveDexEntry, tab: ArchiveDexTabId
         ${entry.identity?.debatedClassification ? `<p class="uncertainty-note">${escapeHtml(entry.identity.debatedClassification)}</p>` : field('Classification debates', undefined, 'None noted')}
       `;
       break;
-    case 'taxonomy':
-      body = taxonomyLadder(entry) + listField('Synonyms', entry.taxonomy.synonyms, 'Unknown') + listField('Related taxa', entry.taxonomy.relatedTaxa, 'Not available in current snapshot');
+    case 'taxonomy': {
+      const flagship = buildArchiveDexEntryPresentation(entry.id);
+      body =
+        taxonomyLadder(entry) +
+        listField('Synonyms', entry.taxonomy.synonyms, 'Unknown') +
+        listField('Related taxa', entry.taxonomy.relatedTaxa, 'Not available in current snapshot') +
+        renderTaxonomyReconcileEntryHtml(entry.id, entry.scientificName) +
+        (flagship?.behaviorNote
+          ? `<p class="dex-behavior-bridge"><span class="detail-label">Authored behavior note:</span> ${escapeHtml(flagship.behaviorNote)} <em>(procedural ≠ finished; not IUCN)</em></p>`
+          : '');
       break;
+    }
     case 'time':
       body = `
         ${field('Life status', entry.lifeStatus)}
@@ -206,7 +221,13 @@ export function renderArchiveDexTab(entry: ArchiveDexEntry, tab: ArchiveDexTabId
       break;
     case 'conservation':
       body = `
-        ${field('IUCN category', entry.conservation?.iucnCategory, 'Not assessed')}
+        ${renderIucnBlockedPanelHtml(
+          resolveIucnPlayerPresentation({
+            assessed: entry.conservation?.assessed,
+            iucnCategory: entry.conservation?.iucnCategory,
+            dataMode: 'mock_sample',
+          }),
+        )}
         ${field('Population trend', entry.conservation?.populationTrend, 'Unknown')}
         ${listField('Major threats', entry.conservation?.majorThreats, 'Not available in current snapshot')}
         ${listField('Conservation actions', entry.conservation?.conservationActions, 'Not available in current snapshot')}

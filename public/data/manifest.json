@@ -1,8 +1,8 @@
 {
   "snapshotId": "sample-2026-07",
   "version": "3.0.0",
-  "generatedAt": "2026-08-09T16:57:23.572Z",
-  "description": "Sample biodiversity + Time Atlas snapshot — tiered representation with mock provenance",
+  "generatedAt": "2026-10-27T23:32:30.609Z",
+  "description": "Sample biodiversity + Time Atlas snapshot \u2014 game-authored + quarantined mock provenance (not source-verified; not Earth-complete)",
   "bundles": {
     "heroSpecies": {
       "path": "bundles/hero-species.json",
@@ -37,7 +37,7 @@
     "regions": {
       "path": "bundles/regions.json",
       "kind": "game_config",
-      "recordCount": 6
+      "recordCount": 7
     },
     "quests": {
       "path": "bundles/quests.json",
@@ -58,7 +58,12 @@
       "savanna": {
         "path": "bundles/region-savanna.json",
         "kind": "region_species",
-        "recordCount": 7
+        "recordCount": 6
+      },
+      "steppe": {
+        "path": "bundles/region-steppe.json",
+        "kind": "region_species",
+        "recordCount": 1
       },
       "forest": {
         "path": "bundles/region-forest.json",
@@ -105,7 +110,7 @@
   },
   "coverage": {
     "representedSpecies": 196,
-    "iucnAssessed": 24,
+    "iucnAssessed": 0,
     "threatened": 6,
     "extinctFossil": 30,
     "playableQuestSpecies": 24,

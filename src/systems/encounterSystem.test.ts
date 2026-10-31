@@ -19,6 +19,7 @@ function species(partial: Partial<PlayableSpecies> & Pick<PlayableSpecies, 'id' 
     ethicalInteraction: 'observe_from_distance',
     timeRange: 'Present',
     habitats: ['savanna'],
+  continents: ['Africa'],
     diet: '',
     activity: '',
     size: '',

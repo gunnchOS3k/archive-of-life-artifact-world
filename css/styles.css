@@ -704,6 +704,85 @@ body {
 
 .archive-coverage { margin-bottom: 0.25rem; }
 
+.museum-honesty {
+  margin: 0.75rem 0;
+  padding: 0.65rem 0.85rem;
+  border: 1px solid var(--border);
+  background: var(--bg-card);
+  color: var(--text-secondary);
+  font-size: 0.85rem;
+  max-width: 36rem;
+}
+.museum-honesty-title { margin: 0 0 0.25rem; color: var(--text-primary); font-weight: 600; }
+.museum-honesty-subtitle { margin: 0 0 0.4rem; }
+.museum-honesty-floors { margin: 0; padding-left: 1.1rem; }
+.museum-honesty-floors li { margin: 0.15rem 0; }
+#hud-museum-honesty-host:not([hidden]) {
+  max-width: min(28rem, 92vw);
+  margin: 0.35rem 0;
+}
+.archivedex-honesty {
+  margin-bottom: 0.5rem;
+  padding: 0.55rem 0.75rem;
+  border: 1px solid var(--border);
+  background: var(--bg-card);
+  font-size: 0.82rem;
+  color: var(--text-secondary);
+}
+.archivedex-honesty p { margin: 0.2rem 0; }
+.dex-art-honesty,
+.dex-iucn-honesty,
+.species-art-honesty {
+  display: inline-block;
+  margin-top: 0.2rem;
+  font-size: 0.72rem;
+  color: var(--text-secondary);
+}
+
+.iucn-blocked-chip,
+.status-iucn-blocked {
+  background: #6a6a6a;
+  color: #fff;
+  font-size: 0.7rem;
+  padding: 0.12rem 0.45rem;
+  border-radius: 4px;
+}
+.iucn-gameplay-label {
+  display: block;
+  margin-top: 0.15rem;
+  font-size: 0.68rem;
+  color: var(--text-secondary);
+  font-style: italic;
+}
+.iucn-blocked-panel,
+.iucn-blocked-evidence {
+  margin: 0.55rem 0;
+  padding: 0.65rem 0.8rem;
+  border: 1px solid var(--border);
+  background: var(--bg-card);
+  font-size: 0.82rem;
+  color: var(--text-secondary);
+}
+.iucn-blocked-panel .iucn-blocked-title,
+.iucn-blocked-evidence strong {
+  color: var(--text-primary);
+}
+.iucn-blocked-panel p,
+.iucn-blocked-evidence p {
+  margin: 0.35rem 0;
+}
+.iucn-blocked-owner-steps {
+  margin-top: 0.4rem;
+  font-size: 0.78rem;
+}
+.iucn-blocked-owner-steps ol {
+  margin: 0.3rem 0 0;
+  padding-left: 1.2rem;
+}
+.iucn-blocked-invariants {
+  opacity: 0.85;
+}
+
 .coverage-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -1033,6 +1112,35 @@ body {
 .uncertainty-note { font-size: 0.8rem; color: var(--accent-gold); font-style: italic; }
 .time-hint { color: var(--text-secondary); font-size: 0.9rem; }
 .time-mock-banner { margin-bottom: 0.5rem; }
+.temporal-map-honesty-banner {
+  display: block;
+  margin: 0.25rem 0 0.5rem;
+  padding: 0.55rem 0.75rem;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  background: var(--bg-secondary);
+  font-size: 0.85rem;
+  line-height: 1.4;
+}
+.temporal-map-state-legend {
+  display: block;
+  margin-top: 0.35rem;
+  font-size: 0.78rem;
+  color: var(--text-secondary);
+}
+.temporal-map-blocked-panel {
+  margin: 0.45rem 0;
+  padding: 0.55rem 0.7rem;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  background: rgba(0, 0, 0, 0.04);
+  font-size: 0.82rem;
+}
+.temporal-map-blocked-panel p { margin: 0.3rem 0; }
+.temporal-map-blocked-invariants { opacity: 0.85; }
+.temporal-map-status { display: inline-flex; flex-wrap: wrap; align-items: center; gap: 0.35rem; }
+.temporal-map-state-blocked .mock-badge,
+.temporal-map-state-illustration .mock-badge { background: #6a6a6a; color: #fff; }
 .archive-filters { gap: 0.35rem; }
 @media (max-width: 768px) {
   .time-atlas-layout { grid-template-columns: 1fr; }
@@ -1294,6 +1402,74 @@ body {
   --border: #fff;
 }
 .a11y-large-text { font-size: 118%; }
+/* Screen-reader-only hints (visible when a11y-sr-hints is on via clip, not display:none) */
+.a11y-sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+html:not(.a11y-sr-hints) .a11y-sr-only[data-a11y-sr-hint] { display: none; }
+.dex-brief-strip {
+  margin-top: 0.45rem;
+  padding: 0.4rem 0.55rem;
+  border: 1px dashed var(--border);
+  background: transparent;
+  font-size: 0.75rem;
+  color: var(--text-secondary);
+}
+.dex-brief-strip-title { margin: 0 0 0.25rem; font-weight: 600; color: var(--text-primary); }
+.dex-brief-strip ul { margin: 0; padding-left: 1.1rem; }
+.dex-brief-strip li { margin: 0.1rem 0; }
+.taxonomy-reconcile-entry,
+.resume-checkpoint,
+.museum-lifeling-bridge,
+.museum-silhouette-svg-bridge,
+.silhouette-svg-package {
+  margin-top: 0.5rem;
+  padding: 0.45rem 0.6rem;
+  border: 1px dashed var(--border);
+  font-size: 0.78rem;
+  color: var(--text-secondary);
+}
+.taxonomy-reconcile-entry ul { margin: 0.2rem 0; padding-left: 1.1rem; }
+.dex-behavior-bridge,
+.dex-silhouette-svg-path { margin-top: 0.4rem; font-size: 0.78rem; color: var(--text-secondary); }
+.silhouette-svg-preview {
+  margin: 0.4rem 0;
+  max-width: 6rem;
+  color: var(--text-secondary);
+}
+.silhouette-svg-preview svg { width: 100%; height: auto; display: block; }
+.silhouette-svg-preview figcaption { font-size: 0.68rem; margin-top: 0.2rem; }
+.museum-expedition-cta {
+  margin-top: 0.65rem;
+  padding: 0.55rem 0.7rem;
+  border: 1px solid var(--border);
+  font-size: 0.82rem;
+}
+.museum-expedition-cta-title { margin: 0 0 0.25rem; }
+.museum-expedition-cta-body { margin: 0 0 0.45rem; color: var(--text-secondary); }
+.museum-expedition-cta-hints { margin: 0 0 0.45rem; font-size: 0.75rem; color: var(--text-secondary); }
+.museum-expedition-cta-btn {
+  display: inline-block;
+  padding: 0.4rem 0.75rem;
+  font: inherit;
+  cursor: pointer;
+  border: 1px solid var(--border);
+  background: transparent;
+  color: inherit;
+}
+.museum-expedition-cta-honesty {
+  margin: 0.4rem 0 0;
+  font-size: 0.72rem;
+  color: var(--text-secondary);
+}
 .companion-progress {
   margin-top: 0.5rem;
   font-size: 0.85rem;
@@ -1316,3 +1492,20 @@ body {
 .ach-title { font-weight: 700; }
 .ach-desc { font-size: 0.9rem; color: var(--text-secondary); }
 .ach-meta { font-size: 0.75rem; margin-top: 0.25rem; color: var(--accent-green); }
+
+
+/* Lifeling trait unlock journey (cosmetic only; IUCN blocked_external) */
+.lifeling-trait-journey {
+  margin: 0.5rem 0 0.75rem;
+  padding: 0.65rem 0.75rem;
+  border: 1px solid var(--border);
+  background: rgba(0, 0, 0, 0.2);
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  line-height: 1.35;
+}
+.lifeling-trait-journey strong { color: var(--text-primary); }
+.lifeling-trait-journey-species code {
+  color: var(--accent-green);
+  font-size: 0.8rem;
+}

@@ -2,6 +2,11 @@ import type {
   TemporalEarthMapCatalog,
   TemporalEarthMapRecord,
 } from '@/schema/temporalMap';
+import {
+  isAuthorizedSourceVerifiedMap,
+  resolveTemporalMapPresentation,
+  summarizeTemporalMapCatalogHonesty,
+} from '@/systems/timeAtlasBlockedPresentation';
 
 const TEMPORAL_MAP_CATALOG_PATH = '/data/maps/temporal_map_catalog.json';
 
@@ -42,13 +47,41 @@ export class TemporalMapService {
   }
 
   getSummary() {
-    const maps = this.getCatalog().maps;
+    const catalog = this.getCatalog();
+    const maps = catalog.maps;
+    const honesty = summarizeTemporalMapCatalogHonesty(catalog);
     return {
       total: maps.length,
-      sourceVerified: maps.filter((map) => map.status === 'source_verified').length,
+      /** Scientifically unlocked count — never raw status labels alone. */
+      sourceVerified: honesty.scientificallyUnlocked,
+      scientificallyUnlocked: honesty.scientificallyUnlocked,
+      labeledSourceVerified: honesty.labeledSourceVerified,
       partial: maps.filter((map) => map.status === 'partial').length,
-      blocked: maps.filter((map) => map.status === 'blocked_external').length,
+      blocked: honesty.blocked,
+      illustration: honesty.illustration,
+      honestyCopy: honesty.honestyCopy,
     };
+  }
+
+  /**
+   * Only authorized source-verified maps may unlock scientific paleogeography.
+   * Status hacks / mock catalogs / missing assets stay locked.
+   */
+  isScientificallyUnlocked(map: TemporalEarthMapRecord | undefined): boolean {
+    if (!map) return false;
+    return isAuthorizedSourceVerifiedMap(map, this.getCatalog().isMockData);
+  }
+
+  /** Honest status string for UI — never upgrades blocked → unlocked. */
+  unlockLabel(map: TemporalEarthMapRecord): string {
+    const presentation = resolveTemporalMapPresentation(map, {
+      catalogIsMockData: this.getCatalog().isMockData,
+    });
+    if (presentation.playerState === 'verified') return 'SOURCE VERIFIED — unlocked';
+    if (presentation.playerState === 'illustration') {
+      return `ILLUSTRATION — not unlocked (${map.coveredGridCellCount}/${map.expectedGridCellCount} cells)`;
+    }
+    return `BLOCKED — ${map.blockedReason ?? map.uncertaintyNotes ?? 'no authorized external reconstruction'}`;
   }
 
   private async fetchJson<T>(path: string): Promise<T> {

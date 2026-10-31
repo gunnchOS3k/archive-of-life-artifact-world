@@ -1,0 +1,49 @@
+{
+  "schema": "aol.taxonomy_reconcile.v1",
+  "generatedAt": "2026-10-30T16:00:00.000Z",
+  "anySourceVerified": false,
+  "rowCount": 11,
+  "hits": 11,
+  "snapshots": [
+    {
+      "sourceId": "wave008_col",
+      "snapshotId": "wave008-scientific-fixture-v1",
+      "retrievedAt": "2024-06-01T12:00:00.000Z",
+      "sha256": "934d290071d3d0fc2e6303c53f2a4cc9acf362241b1f9ce6b2804a8c8090d5c1",
+      "recordCount": 6,
+      "dataMode": "sample_fallback"
+    },
+    {
+      "sourceId": "col_batch",
+      "snapshotId": "fixture-col-tier-r-beta-2026-08",
+      "retrievedAt": null,
+      "sha256": "a327779fe10248f4f6d5aba815850d586746df57c3046e011086f1b86b991ea0",
+      "recordCount": 595,
+      "dataMode": "sample_fallback"
+    },
+    {
+      "sourceId": "gbif_batch",
+      "snapshotId": "fixture-gbif-tier-r-beta-2026-08",
+      "retrievedAt": null,
+      "sha256": "9d8926155d8cc138e7bbf17167bc5a294721ff9b54861f0945267e895c020c74",
+      "recordCount": 280,
+      "dataMode": "sample_fallback"
+    },
+    {
+      "sourceId": "pbdb_bounded",
+      "snapshotId": "pbdb_flagship_bounded",
+      "retrievedAt": "2026-10-30T17:40:00Z",
+      "sha256": "fe06fb1c4a7f26ed7b33908ac080a6c86da8adf8bd3a161cb5b671678f80caad",
+      "recordCount": 3,
+      "dataMode": "sample_fallback"
+    },
+    {
+      "sourceId": "col_batch",
+      "snapshotId": "col_flagship_bounded.local",
+      "retrievedAt": "2026-10-29T05:00:42Z",
+      "sha256": "92b14971c1b423a26aa59c4be5bcb2eb32199c62b0972a607c2d139e2b7be3a0",
+      "recordCount": 120,
+      "dataMode": "sample_fallback"
+    }
+  ]
+}

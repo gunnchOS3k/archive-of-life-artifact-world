@@ -1,0 +1,10 @@
+{
+  "note": "Bounded public NASA acquire that incorrectly overwrote historical exports in 5e83f4c. Relocated here; historical protected paths restored from origin/main (97c7dea authentic bytes).",
+  "retrievedAt": "2026-10-29T05:00:58Z",
+  "approvedForUse": false,
+  "sourceVerified": false,
+  "verificationStatus": "needs_source_verification",
+  "historicalProtectedPath": "data-pipeline/exports/nasa/nasa_metadata_manifest.json",
+  "historicalSha256": "f6d1c4d83b3888b1cd9fd7cd1b4fed11dbd317b857d461666f6a01ea3b3265b6",
+  "thisManifestSha256": "b159d16c808c9b0f015ff154e79f4e994514ef240036adc5608e07c425d848c7"
+}

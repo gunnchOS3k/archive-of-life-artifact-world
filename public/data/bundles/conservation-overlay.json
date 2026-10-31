@@ -3,186 +3,209 @@
     {
       "speciesId": "panthera_leo",
       "iucnCategory": "Vulnerable",
-      "assessed": true,
-      "sourceVersion": "mock-iucn-2026-07",
+      "assessed": false,
+      "sourceVersion": "quarantined-mock-iucn-2026-07",
       "lastUpdated": "2026-07-02",
-      "iucnTaxonId": 3703
+      "dataMode": "mock_sample",
+      "uncertaintyNote": "Gameplay planning label \u2014 not IUCN source-verified."
     },
     {
       "speciesId": "loxodonta_africana",
       "iucnCategory": "Endangered",
-      "assessed": true,
-      "sourceVersion": "mock-iucn-2026-07",
+      "assessed": false,
+      "sourceVersion": "quarantined-mock-iucn-2026-07",
       "lastUpdated": "2026-07-02",
-      "iucnTaxonId": 63322
+      "dataMode": "mock_sample",
+      "uncertaintyNote": "Gameplay planning label \u2014 not IUCN source-verified."
     },
     {
       "speciesId": "canis_lupus",
       "iucnCategory": "Least Concern",
-      "assessed": true,
-      "sourceVersion": "mock-iucn-2026-07",
+      "assessed": false,
+      "sourceVersion": "quarantined-mock-iucn-2026-07",
       "lastUpdated": "2026-07-02",
-      "iucnTaxonId": 85180
+      "dataMode": "mock_sample",
+      "uncertaintyNote": "Gameplay planning label \u2014 not IUCN source-verified."
     },
     {
       "speciesId": "odocoileus_virginianus",
       "iucnCategory": "Least Concern",
-      "assessed": true,
-      "sourceVersion": "mock-iucn-2026-07",
+      "assessed": false,
+      "sourceVersion": "quarantined-mock-iucn-2026-07",
       "lastUpdated": "2026-07-02",
-      "iucnTaxonId": 16700
+      "dataMode": "mock_sample",
+      "uncertaintyNote": "Gameplay planning label \u2014 not IUCN source-verified."
     },
     {
       "speciesId": "balaenoptera_musculus",
       "iucnCategory": "Endangered",
-      "assessed": true,
-      "sourceVersion": "mock-iucn-2026-07",
+      "assessed": false,
+      "sourceVersion": "quarantined-mock-iucn-2026-07",
       "lastUpdated": "2026-07-02",
-      "iucnTaxonId": 30573
+      "dataMode": "mock_sample",
+      "uncertaintyNote": "Gameplay planning label \u2014 not IUCN source-verified."
     },
     {
       "speciesId": "ursus_americanus",
       "iucnCategory": "Least Concern",
-      "assessed": true,
-      "sourceVersion": "mock-iucn-2026-07",
+      "assessed": false,
+      "sourceVersion": "quarantined-mock-iucn-2026-07",
       "lastUpdated": "2026-07-02",
-      "iucnTaxonId": 83200
+      "dataMode": "mock_sample",
+      "uncertaintyNote": "Gameplay planning label \u2014 not IUCN source-verified."
     },
     {
       "speciesId": "castor_canadensis",
       "iucnCategory": "Least Concern",
-      "assessed": true,
-      "sourceVersion": "mock-iucn-2026-07",
+      "assessed": false,
+      "sourceVersion": "quarantined-mock-iucn-2026-07",
       "lastUpdated": "2026-07-02",
-      "iucnTaxonId": 60812
+      "dataMode": "mock_sample",
+      "uncertaintyNote": "Gameplay planning label \u2014 not IUCN source-verified."
     },
     {
       "speciesId": "lontra_canadensis",
       "iucnCategory": "Least Concern",
-      "assessed": true,
-      "sourceVersion": "mock-iucn-2026-07",
+      "assessed": false,
+      "sourceVersion": "quarantined-mock-iucn-2026-07",
       "lastUpdated": "2026-07-02",
-      "iucnTaxonId": 59209
+      "dataMode": "mock_sample",
+      "uncertaintyNote": "Gameplay planning label \u2014 not IUCN source-verified."
     },
     {
       "speciesId": "phoca_vitulina",
       "iucnCategory": "Least Concern",
-      "assessed": true,
-      "sourceVersion": "mock-iucn-2026-07",
+      "assessed": false,
+      "sourceVersion": "quarantined-mock-iucn-2026-07",
       "lastUpdated": "2026-07-02",
-      "iucnTaxonId": 56642
+      "dataMode": "mock_sample",
+      "uncertaintyNote": "Gameplay planning label \u2014 not IUCN source-verified."
     },
     {
       "speciesId": "equus_caballus_ferus",
       "iucnCategory": "Endangered",
-      "assessed": true,
-      "sourceVersion": "mock-iucn-2026-07",
+      "assessed": false,
+      "sourceVersion": "quarantined-mock-iucn-2026-07",
       "lastUpdated": "2026-07-02",
-      "iucnTaxonId": 86590
+      "dataMode": "mock_sample",
+      "uncertaintyNote": "Gameplay planning label \u2014 not IUCN source-verified."
     },
     {
       "speciesId": "danaus_plexippus",
       "iucnCategory": "Endangered",
-      "assessed": true,
-      "sourceVersion": "mock-iucn-2026-07",
+      "assessed": false,
+      "sourceVersion": "quarantined-mock-iucn-2026-07",
       "lastUpdated": "2026-07-02",
-      "iucnTaxonId": 17584
+      "dataMode": "mock_sample",
+      "uncertaintyNote": "Gameplay planning label \u2014 not IUCN source-verified."
     },
     {
       "speciesId": "apis_mellifera",
       "iucnCategory": "Data Deficient",
-      "assessed": true,
-      "sourceVersion": "mock-iucn-2026-07",
+      "assessed": false,
+      "sourceVersion": "quarantined-mock-iucn-2026-07",
       "lastUpdated": "2026-07-02",
-      "iucnTaxonId": 19538
+      "dataMode": "mock_sample",
+      "uncertaintyNote": "Gameplay planning label \u2014 not IUCN source-verified."
     },
     {
       "speciesId": "formica_rufa",
       "iucnCategory": "Least Concern",
-      "assessed": true,
-      "sourceVersion": "mock-iucn-2026-07",
+      "assessed": false,
+      "sourceVersion": "quarantined-mock-iucn-2026-07",
       "lastUpdated": "2026-07-02",
-      "iucnTaxonId": 85943
+      "dataMode": "mock_sample",
+      "uncertaintyNote": "Gameplay planning label \u2014 not IUCN source-verified."
     },
     {
       "speciesId": "anax_junius",
       "iucnCategory": "Least Concern",
-      "assessed": true,
-      "sourceVersion": "mock-iucn-2026-07",
+      "assessed": false,
+      "sourceVersion": "quarantined-mock-iucn-2026-07",
       "lastUpdated": "2026-07-02",
-      "iucnTaxonId": 882
+      "dataMode": "mock_sample",
+      "uncertaintyNote": "Gameplay planning label \u2014 not IUCN source-verified."
     },
     {
       "speciesId": "latrodectus_mactans",
       "iucnCategory": "Least Concern",
-      "assessed": true,
-      "sourceVersion": "mock-iucn-2026-07",
+      "assessed": false,
+      "sourceVersion": "quarantined-mock-iucn-2026-07",
       "lastUpdated": "2026-07-02",
-      "iucnTaxonId": 7486
+      "dataMode": "mock_sample",
+      "uncertaintyNote": "Gameplay planning label \u2014 not IUCN source-verified."
     },
     {
       "speciesId": "dynastes_hercules",
       "iucnCategory": "Least Concern",
-      "assessed": true,
-      "sourceVersion": "mock-iucn-2026-07",
+      "assessed": false,
+      "sourceVersion": "quarantined-mock-iucn-2026-07",
       "lastUpdated": "2026-07-02",
-      "iucnTaxonId": 13736
+      "dataMode": "mock_sample",
+      "uncertaintyNote": "Gameplay planning label \u2014 not IUCN source-verified."
     },
     {
       "speciesId": "libellula_quadrimaculata",
       "iucnCategory": "Least Concern",
-      "assessed": true,
-      "sourceVersion": "mock-iucn-2026-07",
+      "assessed": false,
+      "sourceVersion": "quarantined-mock-iucn-2026-07",
       "lastUpdated": "2026-07-02",
-      "iucnTaxonId": 7883
+      "dataMode": "mock_sample",
+      "uncertaintyNote": "Gameplay planning label \u2014 not IUCN source-verified."
     },
     {
       "speciesId": "bombus_terrestris",
       "iucnCategory": "Least Concern",
-      "assessed": true,
-      "sourceVersion": "mock-iucn-2026-07",
+      "assessed": false,
+      "sourceVersion": "quarantined-mock-iucn-2026-07",
       "lastUpdated": "2026-07-02",
-      "iucnTaxonId": 92334
+      "dataMode": "mock_sample",
+      "uncertaintyNote": "Gameplay planning label \u2014 not IUCN source-verified."
     },
     {
       "speciesId": "acanthoscurria_geniculata",
       "iucnCategory": "Least Concern",
-      "assessed": true,
-      "sourceVersion": "mock-iucn-2026-07",
+      "assessed": false,
+      "sourceVersion": "quarantined-mock-iucn-2026-07",
       "lastUpdated": "2026-07-02",
-      "iucnTaxonId": 78666
+      "dataMode": "mock_sample",
+      "uncertaintyNote": "Gameplay planning label \u2014 not IUCN source-verified."
     },
     {
       "speciesId": "pachnoda_marginata",
       "iucnCategory": "Least Concern",
-      "assessed": true,
-      "sourceVersion": "mock-iucn-2026-07",
+      "assessed": false,
+      "sourceVersion": "quarantined-mock-iucn-2026-07",
       "lastUpdated": "2026-07-02",
-      "iucnTaxonId": 45631
+      "dataMode": "mock_sample",
+      "uncertaintyNote": "Gameplay planning label \u2014 not IUCN source-verified."
     },
     {
       "speciesId": "mammuthus_primigenius",
       "iucnCategory": "Extinct",
-      "assessed": true,
-      "sourceVersion": "mock-iucn-2026-07",
+      "assessed": false,
+      "sourceVersion": "quarantined-mock-iucn-2026-07",
       "lastUpdated": "2026-07-02",
-      "iucnTaxonId": 30681
+      "dataMode": "mock_sample",
+      "uncertaintyNote": "Gameplay planning label \u2014 not IUCN source-verified."
     },
     {
       "speciesId": "tyrannosaurus_rex",
       "iucnCategory": "Extinct",
-      "assessed": true,
-      "sourceVersion": "mock-iucn-2026-07",
+      "assessed": false,
+      "sourceVersion": "quarantined-mock-iucn-2026-07",
       "lastUpdated": "2026-07-02",
-      "iucnTaxonId": 10593
+      "dataMode": "mock_sample",
+      "uncertaintyNote": "Gameplay planning label \u2014 not IUCN source-verified."
     },
     {
       "speciesId": "trilobita_order",
       "iucnCategory": "Extinct",
-      "assessed": true,
-      "sourceVersion": "mock-iucn-2026-07",
+      "assessed": false,
+      "sourceVersion": "quarantined-mock-iucn-2026-07",
       "lastUpdated": "2026-07-02",
-      "iucnTaxonId": 48264
+      "dataMode": "mock_sample",
+      "uncertaintyNote": "Gameplay planning label \u2014 not IUCN source-verified."
     }
   ]
 }

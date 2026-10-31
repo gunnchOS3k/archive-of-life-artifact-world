@@ -1,6 +1,11 @@
 import type { SaveState, LifelingTrait } from '@/schema';
 import { Lifeling } from '@/game/companion';
 import { companionProgressSummary, ensureCompanionProgressFields } from '@/systems/companionProgression';
+import { renderLifelingHonestyHtml } from '@/systems/lifelingHonestyPresentation';
+import {
+  buildLifelingTraitJourney,
+  renderLifelingTraitJourneyHtml,
+} from '@/systems/lifelingTraitJourney';
 
 export class CompanionUI {
   private canvas: HTMLCanvasElement;
@@ -57,9 +62,25 @@ export class CompanionUI {
     if (this.progressEl) {
       this.progressEl.textContent = companionProgressSummary(this.state.companion);
     }
+    this.mountLifelingHonesty();
     this.renderTraits();
     this.renderEmotes();
     this.renderPreview();
+  }
+
+  /** Honest strip + trait unlock journey (cosmetic only while IUCN stays blocked_external). */
+  private mountLifelingHonesty() {
+    if (!this.progressEl?.parentElement) return;
+    const host =
+      (this.progressEl.parentElement.querySelector('[data-lifeling-honesty-host]') as HTMLElement | null) ??
+      (() => {
+        const el = document.createElement('div');
+        el.setAttribute('data-lifeling-honesty-host', '1');
+        this.progressEl!.parentElement!.insertBefore(el, this.progressEl!.nextSibling);
+        return el;
+      })();
+    const journey = buildLifelingTraitJourney(this.state!.companion, this.traits);
+    host.innerHTML = `${renderLifelingHonestyHtml()}\n${renderLifelingTraitJourneyHtml(journey)}`;
   }
 
   private renderPreview() {

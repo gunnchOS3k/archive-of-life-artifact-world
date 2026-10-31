@@ -1,0 +1,186 @@
+{
+  "ok": true,
+  "runtime": "vite_preview",
+  "explored": {
+    "region": "savanna",
+    "target": {
+      "type": "species",
+      "id": "panthera_leo",
+      "label": "Lion"
+    },
+    "minigame": null,
+    "speciesId": "panthera_leo",
+    "provenance": "game_authored",
+    "scientificVerification": false,
+    "clueIds": [
+      "museum-label-clue"
+    ],
+    "returnHref": "https://gunnchos.com"
+  },
+  "restored": {
+    "speciesId": "panthera_leo",
+    "scientificVerification": false,
+    "clueIds": [
+      "museum-label-clue"
+    ]
+  },
+  "era": {
+    "active": "pleistocene",
+    "viewed": [
+      "pleistocene"
+    ],
+    "provenance": [
+      "game_authored"
+    ],
+    "scientificVerification": [
+      false
+    ]
+  },
+  "eraRestored": {
+    "active": "pleistocene",
+    "viewed": [
+      "pleistocene"
+    ],
+    "scientificVerification": [
+      false
+    ],
+    "provenance": [
+      "game_authored"
+    ]
+  },
+  "notebook": {
+    "open": true,
+    "speciesId": "panthera_leo",
+    "savedSpeciesId": "panthera_leo",
+    "provenance": [
+      "game_authored"
+    ],
+    "scientificVerification": [
+      false
+    ],
+    "returnHref": "https://gunnchos.com"
+  },
+  "notebookRestored": {
+    "speciesId": "panthera_leo",
+    "scientificVerification": [
+      false
+    ],
+    "provenance": [
+      "game_authored"
+    ],
+    "returnHref": "https://gunnchos.com"
+  },
+  "dex": {
+    "open": true,
+    "scientificName": "Panthera leo",
+    "provenance": [
+      "game_authored"
+    ],
+    "scientificVerification": [
+      false
+    ],
+    "returnHref": "https://gunnchos.com"
+  },
+  "dexRestored": {
+    "discovered": "true",
+    "provenance": [
+      "game_authored"
+    ],
+    "scientificVerification": [
+      false
+    ],
+    "returnHref": "https://gunnchos.com"
+  },
+  "timeAtlas": {
+    "open": true,
+    "selected": "pleistocene",
+    "active": "pleistocene",
+    "viewed": [
+      "pleistocene"
+    ],
+    "provenance": [
+      "game_authored"
+    ],
+    "scientificVerification": [
+      false
+    ],
+    "returnHref": "https://gunnchos.com"
+  },
+  "timeAtlasRestored": {
+    "active": "pleistocene",
+    "viewed": [
+      "pleistocene"
+    ],
+    "provenance": [
+      "game_authored"
+    ],
+    "scientificVerification": [
+      false
+    ],
+    "returnHref": "https://gunnchos.com"
+  },
+  "identity": {
+    "regionId": "savanna",
+    "speciesIds": [
+      "panthera_leo",
+      "loxodonta_africana",
+      "danaus_plexippus",
+      "apis_mellifera",
+      "latrodectus_mactans",
+      "pachnoda_marginata"
+    ],
+    "horseInSavanna": false,
+    "lionIcon": {
+      "ok": true,
+      "speciesId": "panthera_leo",
+      "commonName": "Lion",
+      "scientificName": "Panthera leo",
+      "family": "Felidae",
+      "group": "Mammal",
+      "icon": "🦁",
+      "region": "savanna",
+      "continents": [
+        "Africa"
+      ]
+    }
+  },
+  "steppe": {
+    "regionId": "steppe",
+    "continents": [
+      "Asia"
+    ],
+    "speciesIds": [
+      "equus_caballus_ferus"
+    ],
+    "target": {
+      "type": "species",
+      "id": "equus_caballus_ferus",
+      "label": "Przewalski's Horse"
+    },
+    "horseIcon": {
+      "ok": true,
+      "speciesId": "equus_caballus_ferus",
+      "commonName": "Przewalski's Horse",
+      "scientificName": "Equus ferus przewalskii",
+      "family": "Equidae",
+      "group": "Mammal",
+      "icon": "🐴",
+      "region": "steppe",
+      "continents": [
+        "Asia"
+      ]
+    },
+    "interactables": [
+      {
+        "id": "equus_caballus_ferus",
+        "commonName": "Przewalski's Horse",
+        "family": "Equidae"
+      }
+    ],
+    "horse": {
+      "id": "equus_caballus_ferus",
+      "commonName": "Przewalski's Horse",
+      "family": "Equidae"
+    }
+  }
+}

@@ -21,15 +21,15 @@
       "taxonomy": {
         "family": "Elephantidae",
         "rank": "species",
-        "acceptedName": "Mammuthus primigenius",
-        "catalogueOfLifeId": "MOCK-COL-mammuthus_primigenius"
+        "acceptedName": "Mammuthus primigenius"
       },
       "conservation": {
         "iucnCategory": "Extinct",
-        "assessed": true,
-        "sourceVersion": "mock-iucn-2026-07",
+        "assessed": false,
+        "sourceVersion": "quarantined-mock-iucn-2026-07",
         "lastUpdated": "2026-07-02",
-        "iucnTaxonId": 76059
+        "dataMode": "mock_sample",
+        "uncertaintyNote": "IUCN category is a gameplay planning label from legacy authored data \u2014 not an IUCN Red List source-verified assessment."
       },
       "distribution": {
         "continents": [
@@ -40,29 +40,29 @@
           "tundra",
           "steppe"
         ],
-        "sourceVersion": "mock-gbif-2026-07",
+        "sourceVersion": "quarantined-mock-gbif-2026-07",
         "lastUpdated": "2026-07-02",
-        "gbifTaxonKey": 1926216,
         "occurrenceSummaries": [
           {
             "region": "Eurasia",
-            "occurrenceCount": 5058
+            "occurrenceCount": 0
           }
-        ]
+        ],
+        "dataMode": "mock_sample",
+        "uncertaintyNote": "Continent/habitat hints are game-authored planning twins \u2014 not GBIF occurrence-verified ranges."
       },
       "fossil": {
-        "timeRange": "Pleistocene–Holocene (extinct ~4,000 years ago)",
+        "timeRange": "Pleistocene\u2013Holocene (extinct ~4,000 years ago)",
         "fossilLocations": [
           "Siberia",
           "Alaska",
           "Yukon"
         ],
-        "paleoenvironment": "Mammoth steppe — cold grassland",
+        "paleoenvironment": "Mammoth steppe \u2014 cold grassland",
         "livingRelatives": [
           "Asian Elephant"
         ],
-        "paleobiodbTaxonNo": 612372,
-        "sourceVersion": "mock-pbdb-2026-07",
+        "sourceVersion": "quarantined-mock-pbdb-2026-07",
         "lastUpdated": "2026-07-02"
       },
       "artifactTemplates": [
@@ -93,7 +93,7 @@
         "questType": "fossil",
         "dangerLevel": 0,
         "ethicalInteraction": "excavate_carefully",
-        "timeRange": "Pleistocene–Holocene (extinct ~4,000 years ago)",
+        "timeRange": "Pleistocene\u2013Holocene (extinct ~4,000 years ago)",
         "diet": "Herbivore",
         "activity": "Diurnal",
         "size": "Up to 3.4 m shoulder height",
@@ -144,19 +144,19 @@
           "verificationStatus": "game_authored_verified"
         },
         {
-          "source": "paleobiodb",
-          "sourceVersion": "mock-sample-2026-07",
-          "sourceRecordId": "MOCK-mammuthus_primigenius",
-          "paleobiodbTaxonNo": 257354,
+          "source": "mock_sample",
+          "sourceVersion": "quarantined-mock-sample-2026-07",
+          "sourceRecordId": "QUARANTINED-MOCK-mammuthus_primigenius",
           "license": "MOCK-SAMPLE",
-          "citation": "MOCK SAMPLE — not sourced from live API; requires approved source snapshot import",
+          "citation": "QUARANTINED MOCK SAMPLE \u2014 not Catalogue of Life / GBIF / IUCN / PBDB; not source-verified. Retained for pipeline demos only until an approved snapshot import replaces it.",
           "citationRequired": true,
           "retrievedAt": "2026-07-05T03:27:29.539Z",
           "lastUpdated": "2026-07-05T03:27:29.539Z",
           "isMockData": true,
           "verificationStatus": "mock_sample"
         }
-      ]
+      ],
+      "scientificScopeStatement": "Gameplay-authored hero record. External taxonomy/conservation/distribution fields that lack an approved COL/GBIF/IUCN/PBDB snapshot remain quarantined mock samples \u2014 never source-verified. Catalog is intentionally incomplete (not Earth-complete)."
     },
     {
       "id": "tyrannosaurus_rex",
@@ -173,15 +173,15 @@
       "taxonomy": {
         "family": "Tyrannosauridae",
         "rank": "species",
-        "acceptedName": "Tyrannosaurus rex",
-        "catalogueOfLifeId": "MOCK-COL-tyrannosaurus_rex"
+        "acceptedName": "Tyrannosaurus rex"
       },
       "conservation": {
         "iucnCategory": "Extinct",
-        "assessed": true,
-        "sourceVersion": "mock-iucn-2026-07",
+        "assessed": false,
+        "sourceVersion": "quarantined-mock-iucn-2026-07",
         "lastUpdated": "2026-07-02",
-        "iucnTaxonId": 98710
+        "dataMode": "mock_sample",
+        "uncertaintyNote": "IUCN category is a gameplay planning label from legacy authored data \u2014 not an IUCN Red List source-verified assessment."
       },
       "distribution": {
         "continents": [
@@ -191,18 +191,19 @@
           "floodplain",
           "forest"
         ],
-        "sourceVersion": "mock-gbif-2026-07",
+        "sourceVersion": "quarantined-mock-gbif-2026-07",
         "lastUpdated": "2026-07-02",
-        "gbifTaxonKey": 3768675,
         "occurrenceSummaries": [
           {
             "region": "North America",
-            "occurrenceCount": 2322
+            "occurrenceCount": 0
           }
-        ]
+        ],
+        "dataMode": "mock_sample",
+        "uncertaintyNote": "Continent/habitat hints are game-authored planning twins \u2014 not GBIF occurrence-verified ranges."
       },
       "fossil": {
-        "timeRange": "Late Cretaceous (~68–66 Ma)",
+        "timeRange": "Late Cretaceous (~68\u201366 Ma)",
         "fossilLocations": [
           "Montana",
           "South Dakota",
@@ -213,8 +214,7 @@
           "Chickens",
           "All birds"
         ],
-        "paleobiodbTaxonNo": 534128,
-        "sourceVersion": "mock-pbdb-2026-07",
+        "sourceVersion": "quarantined-mock-pbdb-2026-07",
         "lastUpdated": "2026-07-02"
       },
       "artifactTemplates": [
@@ -245,7 +245,7 @@
         "questType": "fossil",
         "dangerLevel": 0,
         "ethicalInteraction": "excavate_carefully",
-        "timeRange": "Late Cretaceous (~68–66 Ma)",
+        "timeRange": "Late Cretaceous (~68\u201366 Ma)",
         "diet": "Carnivore",
         "activity": "Unknown (likely crepuscular)",
         "size": "Up to 12.3 m body length",
@@ -315,19 +315,19 @@
           "verificationStatus": "game_authored_verified"
         },
         {
-          "source": "paleobiodb",
-          "sourceVersion": "mock-sample-2026-07",
-          "sourceRecordId": "MOCK-tyrannosaurus_rex",
-          "paleobiodbTaxonNo": 305798,
+          "source": "mock_sample",
+          "sourceVersion": "quarantined-mock-sample-2026-07",
+          "sourceRecordId": "QUARANTINED-MOCK-tyrannosaurus_rex",
           "license": "MOCK-SAMPLE",
-          "citation": "MOCK SAMPLE — not sourced from live API; requires approved source snapshot import",
+          "citation": "QUARANTINED MOCK SAMPLE \u2014 not Catalogue of Life / GBIF / IUCN / PBDB; not source-verified. Retained for pipeline demos only until an approved snapshot import replaces it.",
           "citationRequired": true,
           "retrievedAt": "2026-07-05T03:27:29.539Z",
           "lastUpdated": "2026-07-05T03:27:29.539Z",
           "isMockData": true,
           "verificationStatus": "mock_sample"
         }
-      ]
+      ],
+      "scientificScopeStatement": "Gameplay-authored hero record. External taxonomy/conservation/distribution fields that lack an approved COL/GBIF/IUCN/PBDB snapshot remain quarantined mock samples \u2014 never source-verified. Catalog is intentionally incomplete (not Earth-complete)."
     },
     {
       "id": "trilobita_order",
@@ -348,15 +348,15 @@
       "taxonomy": {
         "family": "Trilobita",
         "rank": "order",
-        "acceptedName": "Trilobita (order)",
-        "catalogueOfLifeId": "MOCK-COL-trilobita_order"
+        "acceptedName": "Trilobita (order)"
       },
       "conservation": {
         "iucnCategory": "Extinct",
-        "assessed": true,
-        "sourceVersion": "mock-iucn-2026-07",
+        "assessed": false,
+        "sourceVersion": "quarantined-mock-iucn-2026-07",
         "lastUpdated": "2026-07-02",
-        "iucnTaxonId": 60887
+        "dataMode": "mock_sample",
+        "uncertaintyNote": "IUCN category is a gameplay planning label from legacy authored data \u2014 not an IUCN Red List source-verified assessment."
       },
       "distribution": {
         "continents": [
@@ -365,18 +365,19 @@
         "habitats": [
           "ancient seafloor"
         ],
-        "sourceVersion": "mock-gbif-2026-07",
+        "sourceVersion": "quarantined-mock-gbif-2026-07",
         "lastUpdated": "2026-07-02",
-        "gbifTaxonKey": 294847,
         "occurrenceSummaries": [
           {
             "region": "Global ancient oceans",
-            "occurrenceCount": 3452
+            "occurrenceCount": 0
           }
-        ]
+        ],
+        "dataMode": "mock_sample",
+        "uncertaintyNote": "Continent/habitat hints are game-authored planning twins \u2014 not GBIF occurrence-verified ranges."
       },
       "fossil": {
-        "timeRange": "Cambrian–Permian (~521–252 Ma)",
+        "timeRange": "Cambrian\u2013Permian (~521\u2013252 Ma)",
         "fossilLocations": [
           "Morocco",
           "Utah",
@@ -387,8 +388,7 @@
           "Horseshoe crabs",
           "Arachnids"
         ],
-        "paleobiodbTaxonNo": 62096,
-        "sourceVersion": "mock-pbdb-2026-07",
+        "sourceVersion": "quarantined-mock-pbdb-2026-07",
         "lastUpdated": "2026-07-02"
       },
       "artifactTemplates": [
@@ -419,7 +419,7 @@
         "questType": "fossil",
         "dangerLevel": 0,
         "ethicalInteraction": "excavate_carefully",
-        "timeRange": "Cambrian–Permian (~521–252 Ma)",
+        "timeRange": "Cambrian\u2013Permian (~521\u2013252 Ma)",
         "diet": "Varied (detritivore, predator, filter feeder)",
         "activity": "Unknown",
         "size": "1 mm to 72 cm",
@@ -470,19 +470,19 @@
           "verificationStatus": "game_authored_verified"
         },
         {
-          "source": "paleobiodb",
-          "sourceVersion": "mock-sample-2026-07",
-          "sourceRecordId": "MOCK-trilobita_order",
-          "paleobiodbTaxonNo": 447527,
+          "source": "mock_sample",
+          "sourceVersion": "quarantined-mock-sample-2026-07",
+          "sourceRecordId": "QUARANTINED-MOCK-trilobita_order",
           "license": "MOCK-SAMPLE",
-          "citation": "MOCK SAMPLE — not sourced from live API; requires approved source snapshot import",
+          "citation": "QUARANTINED MOCK SAMPLE \u2014 not Catalogue of Life / GBIF / IUCN / PBDB; not source-verified. Retained for pipeline demos only until an approved snapshot import replaces it.",
           "citationRequired": true,
           "retrievedAt": "2026-07-05T03:27:29.539Z",
           "lastUpdated": "2026-07-05T03:27:29.539Z",
           "isMockData": true,
           "verificationStatus": "mock_sample"
         }
-      ]
+      ],
+      "scientificScopeStatement": "Gameplay-authored hero record. External taxonomy/conservation/distribution fields that lack an approved COL/GBIF/IUCN/PBDB snapshot remain quarantined mock samples \u2014 never source-verified. Catalog is intentionally incomplete (not Earth-complete)."
     }
   ]
 }

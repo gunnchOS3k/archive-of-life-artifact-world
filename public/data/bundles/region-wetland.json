@@ -21,15 +21,15 @@
       "taxonomy": {
         "family": "Castoridae",
         "rank": "species",
-        "acceptedName": "Castor canadensis",
-        "catalogueOfLifeId": "MOCK-COL-castor_canadensis"
+        "acceptedName": "Castor canadensis"
       },
       "conservation": {
         "iucnCategory": "Least Concern",
-        "assessed": true,
-        "sourceVersion": "mock-iucn-2026-07",
+        "assessed": false,
+        "sourceVersion": "quarantined-mock-iucn-2026-07",
         "lastUpdated": "2026-07-02",
-        "iucnTaxonId": 67590
+        "dataMode": "mock_sample",
+        "uncertaintyNote": "IUCN category is a gameplay planning label from legacy authored data \u2014 not an IUCN Red List source-verified assessment."
       },
       "distribution": {
         "continents": [
@@ -39,15 +39,16 @@
           "wetland",
           "river"
         ],
-        "sourceVersion": "mock-gbif-2026-07",
+        "sourceVersion": "quarantined-mock-gbif-2026-07",
         "lastUpdated": "2026-07-02",
-        "gbifTaxonKey": 2633674,
         "occurrenceSummaries": [
           {
             "region": "North America",
-            "occurrenceCount": 4368
+            "occurrenceCount": 0
           }
-        ]
+        ],
+        "dataMode": "mock_sample",
+        "uncertaintyNote": "Continent/habitat hints are game-authored planning twins \u2014 not GBIF occurrence-verified ranges."
       },
       "artifactTemplates": [
         {
@@ -80,7 +81,7 @@
         "timeRange": "Present",
         "diet": "Herbivore",
         "activity": "Nocturnal",
-        "size": "0.7–1.0 m body length",
+        "size": "0.7\u20131.0 m body length",
         "behavior": "Ecosystem engineer; builds dams and lodges",
         "learningTopics": [
           "ecosystem engineering",
@@ -138,19 +139,19 @@
           "verificationStatus": "game_authored_verified"
         },
         {
-          "source": "catalogue_of_life",
-          "sourceVersion": "mock-sample-2026-07",
-          "sourceRecordId": "MOCK-castor_canadensis",
-          "catalogueOfLifeId": "MOCK-COL-castor_canadensis",
+          "source": "mock_sample",
+          "sourceVersion": "quarantined-mock-sample-2026-07",
+          "sourceRecordId": "QUARANTINED-MOCK-castor_canadensis",
           "license": "MOCK-SAMPLE",
-          "citation": "MOCK SAMPLE — not sourced from live API; requires approved source snapshot import",
+          "citation": "QUARANTINED MOCK SAMPLE \u2014 not Catalogue of Life / GBIF / IUCN / PBDB; not source-verified. Retained for pipeline demos only until an approved snapshot import replaces it.",
           "citationRequired": true,
           "retrievedAt": "2026-07-05T03:27:29.539Z",
           "lastUpdated": "2026-07-05T03:27:29.539Z",
           "isMockData": true,
           "verificationStatus": "mock_sample"
         }
-      ]
+      ],
+      "scientificScopeStatement": "Gameplay-authored hero record. External taxonomy/conservation/distribution fields that lack an approved COL/GBIF/IUCN/PBDB snapshot remain quarantined mock samples \u2014 never source-verified. Catalog is intentionally incomplete (not Earth-complete)."
     },
     {
       "id": "lontra_canadensis",
@@ -166,15 +167,15 @@
       "taxonomy": {
         "family": "Mustelidae",
         "rank": "species",
-        "acceptedName": "Lontra canadensis",
-        "catalogueOfLifeId": "MOCK-COL-lontra_canadensis"
+        "acceptedName": "Lontra canadensis"
       },
       "conservation": {
         "iucnCategory": "Least Concern",
-        "assessed": true,
-        "sourceVersion": "mock-iucn-2026-07",
+        "assessed": false,
+        "sourceVersion": "quarantined-mock-iucn-2026-07",
         "lastUpdated": "2026-07-02",
-        "iucnTaxonId": 5266
+        "dataMode": "mock_sample",
+        "uncertaintyNote": "IUCN category is a gameplay planning label from legacy authored data \u2014 not an IUCN Red List source-verified assessment."
       },
       "distribution": {
         "continents": [
@@ -185,15 +186,16 @@
           "river",
           "coastal"
         ],
-        "sourceVersion": "mock-gbif-2026-07",
+        "sourceVersion": "quarantined-mock-gbif-2026-07",
         "lastUpdated": "2026-07-02",
-        "gbifTaxonKey": 8218660,
         "occurrenceSummaries": [
           {
             "region": "North America",
-            "occurrenceCount": 594
+            "occurrenceCount": 0
           }
-        ]
+        ],
+        "dataMode": "mock_sample",
+        "uncertaintyNote": "Continent/habitat hints are game-authored planning twins \u2014 not GBIF occurrence-verified ranges."
       },
       "artifactTemplates": [
         {
@@ -226,7 +228,7 @@
         "timeRange": "Present",
         "diet": "Carnivore",
         "activity": "Diurnal",
-        "size": "0.6–1.0 m body length",
+        "size": "0.6\u20131.0 m body length",
         "behavior": "Playful swimmer; uses slides on riverbanks",
         "learningTopics": [
           "aquatic adaptation",
@@ -284,19 +286,19 @@
           "verificationStatus": "game_authored_verified"
         },
         {
-          "source": "catalogue_of_life",
-          "sourceVersion": "mock-sample-2026-07",
-          "sourceRecordId": "MOCK-lontra_canadensis",
-          "catalogueOfLifeId": "MOCK-COL-lontra_canadensis",
+          "source": "mock_sample",
+          "sourceVersion": "quarantined-mock-sample-2026-07",
+          "sourceRecordId": "QUARANTINED-MOCK-lontra_canadensis",
           "license": "MOCK-SAMPLE",
-          "citation": "MOCK SAMPLE — not sourced from live API; requires approved source snapshot import",
+          "citation": "QUARANTINED MOCK SAMPLE \u2014 not Catalogue of Life / GBIF / IUCN / PBDB; not source-verified. Retained for pipeline demos only until an approved snapshot import replaces it.",
           "citationRequired": true,
           "retrievedAt": "2026-07-05T03:27:29.539Z",
           "lastUpdated": "2026-07-05T03:27:29.539Z",
           "isMockData": true,
           "verificationStatus": "mock_sample"
         }
-      ]
+      ],
+      "scientificScopeStatement": "Gameplay-authored hero record. External taxonomy/conservation/distribution fields that lack an approved COL/GBIF/IUCN/PBDB snapshot remain quarantined mock samples \u2014 never source-verified. Catalog is intentionally incomplete (not Earth-complete)."
     },
     {
       "id": "anax_junius",
@@ -312,15 +314,15 @@
       "taxonomy": {
         "family": "Aeshnidae",
         "rank": "species",
-        "acceptedName": "Anax junius",
-        "catalogueOfLifeId": "MOCK-COL-anax_junius"
+        "acceptedName": "Anax junius"
       },
       "conservation": {
         "iucnCategory": "Least Concern",
-        "assessed": true,
-        "sourceVersion": "mock-iucn-2026-07",
+        "assessed": false,
+        "sourceVersion": "quarantined-mock-iucn-2026-07",
         "lastUpdated": "2026-07-02",
-        "iucnTaxonId": 10084
+        "dataMode": "mock_sample",
+        "uncertaintyNote": "IUCN category is a gameplay planning label from legacy authored data \u2014 not an IUCN Red List source-verified assessment."
       },
       "distribution": {
         "continents": [
@@ -331,15 +333,16 @@
           "pond",
           "river"
         ],
-        "sourceVersion": "mock-gbif-2026-07",
+        "sourceVersion": "quarantined-mock-gbif-2026-07",
         "lastUpdated": "2026-07-02",
-        "gbifTaxonKey": 4100354,
         "occurrenceSummaries": [
           {
             "region": "North America",
-            "occurrenceCount": 2562
+            "occurrenceCount": 0
           }
-        ]
+        ],
+        "dataMode": "mock_sample",
+        "uncertaintyNote": "Continent/habitat hints are game-authored planning twins \u2014 not GBIF occurrence-verified ranges."
       },
       "artifactTemplates": [
         {
@@ -372,7 +375,7 @@
         "timeRange": "Present",
         "diet": "Carnivore",
         "activity": "Diurnal",
-        "size": "Wingspan 7.0–8.0 cm",
+        "size": "Wingspan 7.0\u20138.0 cm",
         "behavior": "Aerial predator; migratory",
         "learningTopics": [
           "flight mechanics",
@@ -430,19 +433,19 @@
           "verificationStatus": "game_authored_verified"
         },
         {
-          "source": "catalogue_of_life",
-          "sourceVersion": "mock-sample-2026-07",
-          "sourceRecordId": "MOCK-anax_junius",
-          "catalogueOfLifeId": "MOCK-COL-anax_junius",
+          "source": "mock_sample",
+          "sourceVersion": "quarantined-mock-sample-2026-07",
+          "sourceRecordId": "QUARANTINED-MOCK-anax_junius",
           "license": "MOCK-SAMPLE",
-          "citation": "MOCK SAMPLE — not sourced from live API; requires approved source snapshot import",
+          "citation": "QUARANTINED MOCK SAMPLE \u2014 not Catalogue of Life / GBIF / IUCN / PBDB; not source-verified. Retained for pipeline demos only until an approved snapshot import replaces it.",
           "citationRequired": true,
           "retrievedAt": "2026-07-05T03:27:29.539Z",
           "lastUpdated": "2026-07-05T03:27:29.539Z",
           "isMockData": true,
           "verificationStatus": "mock_sample"
         }
-      ]
+      ],
+      "scientificScopeStatement": "Gameplay-authored hero record. External taxonomy/conservation/distribution fields that lack an approved COL/GBIF/IUCN/PBDB snapshot remain quarantined mock samples \u2014 never source-verified. Catalog is intentionally incomplete (not Earth-complete)."
     },
     {
       "id": "libellula_quadrimaculata",
@@ -458,15 +461,15 @@
       "taxonomy": {
         "family": "Libellulidae",
         "rank": "species",
-        "acceptedName": "Libellula quadrimaculata",
-        "catalogueOfLifeId": "MOCK-COL-libellula_quadrimaculata"
+        "acceptedName": "Libellula quadrimaculata"
       },
       "conservation": {
         "iucnCategory": "Least Concern",
-        "assessed": true,
-        "sourceVersion": "mock-iucn-2026-07",
+        "assessed": false,
+        "sourceVersion": "quarantined-mock-iucn-2026-07",
         "lastUpdated": "2026-07-02",
-        "iucnTaxonId": 64823
+        "dataMode": "mock_sample",
+        "uncertaintyNote": "IUCN category is a gameplay planning label from legacy authored data \u2014 not an IUCN Red List source-verified assessment."
       },
       "distribution": {
         "continents": [
@@ -477,15 +480,16 @@
           "wetland",
           "pond"
         ],
-        "sourceVersion": "mock-gbif-2026-07",
+        "sourceVersion": "quarantined-mock-gbif-2026-07",
         "lastUpdated": "2026-07-02",
-        "gbifTaxonKey": 1246352,
         "occurrenceSummaries": [
           {
             "region": "Europe",
-            "occurrenceCount": 1304
+            "occurrenceCount": 0
           }
-        ]
+        ],
+        "dataMode": "mock_sample",
+        "uncertaintyNote": "Continent/habitat hints are game-authored planning twins \u2014 not GBIF occurrence-verified ranges."
       },
       "artifactTemplates": [
         {
@@ -518,7 +522,7 @@
         "timeRange": "Present",
         "diet": "Carnivore",
         "activity": "Diurnal",
-        "size": "Wingspan 7.0–8.5 cm",
+        "size": "Wingspan 7.0\u20138.5 cm",
         "behavior": "Territorial perch-hunter over water",
         "learningTopics": [
           "flight",
@@ -527,7 +531,7 @@
         ],
         "funFacts": [
           "Four wings move independently",
-          "Nearly 360° vision"
+          "Nearly 360\u00b0 vision"
         ],
         "whyItMatters": "Top aerial predator in pond ecosystems."
       },
@@ -576,19 +580,19 @@
           "verificationStatus": "game_authored_verified"
         },
         {
-          "source": "catalogue_of_life",
-          "sourceVersion": "mock-sample-2026-07",
-          "sourceRecordId": "MOCK-libellula_quadrimaculata",
-          "catalogueOfLifeId": "MOCK-COL-libellula_quadrimaculata",
+          "source": "mock_sample",
+          "sourceVersion": "quarantined-mock-sample-2026-07",
+          "sourceRecordId": "QUARANTINED-MOCK-libellula_quadrimaculata",
           "license": "MOCK-SAMPLE",
-          "citation": "MOCK SAMPLE — not sourced from live API; requires approved source snapshot import",
+          "citation": "QUARANTINED MOCK SAMPLE \u2014 not Catalogue of Life / GBIF / IUCN / PBDB; not source-verified. Retained for pipeline demos only until an approved snapshot import replaces it.",
           "citationRequired": true,
           "retrievedAt": "2026-07-05T03:27:29.539Z",
           "lastUpdated": "2026-07-05T03:27:29.539Z",
           "isMockData": true,
           "verificationStatus": "mock_sample"
         }
-      ]
+      ],
+      "scientificScopeStatement": "Gameplay-authored hero record. External taxonomy/conservation/distribution fields that lack an approved COL/GBIF/IUCN/PBDB snapshot remain quarantined mock samples \u2014 never source-verified. Catalog is intentionally incomplete (not Earth-complete)."
     }
   ]
 }

@@ -46,7 +46,14 @@ function readJson<T>(path: string): T {
   return JSON.parse(readFileSync(path, 'utf-8'));
 }
 
-function mockProvenance(speciesId: string, isExtinct: boolean) {
+const HERO_SCIENTIFIC_SCOPE =
+  'Gameplay-authored hero record. External taxonomy/conservation/distribution fields that lack an approved COL/GBIF/IUCN/PBDB snapshot remain quarantined mock samples — never source-verified. Catalog is intentionally incomplete (not Earth-complete).';
+
+/**
+ * Game-authored provenance plus an explicitly quarantined mock placeholder.
+ * Never emit mock rows as catalogue_of_life / paleobiodb / source_verified.
+ */
+function mockProvenance(speciesId: string, _isExtinct: boolean) {
   const now = new Date().toISOString();
   return [
     {
@@ -62,13 +69,12 @@ function mockProvenance(speciesId: string, isExtinct: boolean) {
       verificationStatus: 'game_authored_verified' as const,
     },
     {
-      source: (isExtinct ? 'paleobiodb' : 'catalogue_of_life') as 'paleobiodb' | 'catalogue_of_life',
-      sourceVersion: 'mock-sample-2026-07',
-      sourceRecordId: `MOCK-${speciesId}`,
-      catalogueOfLifeId: isExtinct ? undefined : `MOCK-COL-${speciesId}`,
-      paleobiodbTaxonNo: isExtinct ? Math.floor(Math.random() * 900000) : undefined,
+      source: 'mock_sample' as const,
+      sourceVersion: 'quarantined-mock-sample-2026-07',
+      sourceRecordId: `QUARANTINED-MOCK-${speciesId}`,
       license: 'MOCK-SAMPLE' as const,
-      citation: 'MOCK SAMPLE — not sourced from live API; requires approved source snapshot import',
+      citation:
+        'QUARANTINED MOCK SAMPLE — not Catalogue of Life / GBIF / IUCN / PBDB; not source-verified. Retained for pipeline demos only until an approved snapshot import replaces it.',
       citationRequired: true,
       retrievedAt: now,
       lastUpdated: now,
@@ -198,24 +204,28 @@ function toArchiveSpecies(legacy: LegacySpecies, timeMap: Map<string, { timeUnit
       family: legacy.family,
       rank: legacy.rank as ArchiveSpecies['taxonomy']['rank'],
       acceptedName: legacy.scientificName,
-      catalogueOfLifeId: `MOCK-COL-${legacy.id}`,
+      // No MOCK-COL ids — only real CoL identifiers from approved imports
     },
     conservation: {
       iucnCategory: legacy.conservationStatus as never,
-      assessed: legacy.conservationStatus !== 'Not Evaluated',
-      sourceVersion: 'mock-iucn-2026-07',
+      assessed: false,
+      sourceVersion: 'quarantined-mock-iucn-2026-07',
       lastUpdated: '2026-07-02',
-      iucnTaxonId: Math.floor(Math.random() * 100000),
+      dataMode: 'mock_sample',
+      uncertaintyNote:
+        'IUCN category is a gameplay planning label from legacy authored data — not an IUCN Red List source-verified assessment.',
     },
     distribution: {
       continents: legacy.continents,
       habitats: legacy.habitats,
-      sourceVersion: 'mock-gbif-2026-07',
+      sourceVersion: 'quarantined-mock-gbif-2026-07',
       lastUpdated: '2026-07-02',
-      gbifTaxonKey: Math.floor(Math.random() * 10000000),
+      dataMode: 'mock_sample',
+      uncertaintyNote:
+        'Continent/habitat hints are game-authored planning twins — not GBIF occurrence-verified ranges.',
       occurrenceSummaries: legacy.continents.slice(0, 1).map((c) => ({
         region: c,
-        occurrenceCount: Math.floor(Math.random() * 5000) + 100,
+        occurrenceCount: 0,
       })),
     },
     fossil: isExtinct
@@ -224,8 +234,7 @@ function toArchiveSpecies(legacy: LegacySpecies, timeMap: Map<string, { timeUnit
           fossilLocations: legacy.fossilLocations ?? [],
           paleoenvironment: legacy.paleoenvironment,
           livingRelatives: legacy.livingRelatives,
-          paleobiodbTaxonNo: Math.floor(Math.random() * 900000),
-          sourceVersion: 'mock-pbdb-2026-07',
+          sourceVersion: 'quarantined-mock-pbdb-2026-07',
           lastUpdated: '2026-07-02',
         }
       : undefined,
@@ -253,6 +262,7 @@ function toArchiveSpecies(legacy: LegacySpecies, timeMap: Map<string, { timeUnit
       livingRelatives: legacy.livingRelatives,
     },
     ...nasaEnv,
+    scientificScopeStatement: HERO_SCIENTIFIC_SCOPE,
     provenance: mockProvenance(legacy.id, isExtinct),
   };
 }
@@ -344,19 +354,21 @@ function stubToArchiveSpecies(stub: StubDef): ArchiveSpecies {
         isMockData: false,
         verificationStatus: 'game_authored_verified' as const,
       },
-      ...stub.sources.map((source) => ({
-        source,
-        sourceVersion: 'mock-sample-2026-07',
-        sourceRecordId: stub.id,
+      // Quarantine: never label stub placeholders as live CoL/PBDB source rows.
+      {
+        source: 'mock_sample' as const,
+        sourceVersion: 'quarantined-mock-sample-2026-07',
+        sourceRecordId: `QUARANTINED-MOCK-${stub.id}`,
         license: 'MOCK-SAMPLE' as const,
-        citation: 'MOCK SAMPLE — tiered archive stub; requires approved source snapshot import',
+        citation: `QUARANTINED MOCK SAMPLE — intended eventual sources [${stub.sources.join(', ')}] not imported; not source-verified.`,
         citationRequired: true,
         retrievedAt: now,
         lastUpdated: now,
         isMockData: true,
         verificationStatus: 'mock_sample' as const,
-      })),
+      },
     ],
+    scientificScopeStatement: HERO_SCIENTIFIC_SCOPE,
   };
 }
 
@@ -402,7 +414,10 @@ function main() {
 
   const threatened = indexEntries.filter((e) => e.isThreatened).length;
   const extinctCount = indexEntries.filter((e) => e.isExtinct).length;
-  const iucnAssessed = indexEntries.filter((e) => e.iucnCategory && e.iucnCategory !== 'Not Evaluated').length;
+  // Only source-verified conservation.assessed=true counts — never mock gameplay category labels.
+  const iucnAssessed = allSpecies.filter(
+    (s) => s.conservation?.assessed === true && s.conservation?.dataMode !== 'mock_sample'
+  ).length;
   const playable = indexEntries.filter((e) => e.isPlayable).length;
 
   writeFileSync(join(OUT, 'hero-species.json'), JSON.stringify({ species: allSpecies }, null, 2));
@@ -422,8 +437,9 @@ function main() {
     )
   );
 
+  // Retain gameplay conservation labels (assessed may be false); coverage.iucnAssessed only counts verified.
   const conservationOverlay = allSpecies
-    .filter((s) => s.conservation?.assessed)
+    .filter((s) => s.conservation?.iucnCategory)
     .map((s) => ({ speciesId: s.id, ...s.conservation }));
   writeFileSync(join(OUT, 'conservation-overlay.json'), JSON.stringify({ records: conservationOverlay }, null, 2));
 
@@ -462,6 +478,7 @@ function main() {
     description: r.description,
     color: r.color,
     biome: r.biome,
+    continents: r.continents ?? [],
     speciesIds: r.species ?? [],
     connections: r.connections ?? [],
     bundlePath: regionBundles[r.id as string],
@@ -492,7 +509,8 @@ function main() {
     snapshotId: 'sample-2026-07',
     version: '3.0.0',
     generatedAt: new Date().toISOString(),
-    description: 'Sample biodiversity + Time Atlas snapshot — tiered representation with mock provenance',
+    description:
+      'Sample biodiversity + Time Atlas snapshot — game-authored + quarantined mock provenance (not source-verified; not Earth-complete)',
     bundles: {
       heroSpecies: { path: 'bundles/hero-species.json', kind: 'hero_species', recordCount: allSpecies.length },
       archiveStubs: { path: 'bundles/archive-stubs.json', kind: 'archive_stubs', recordCount: uniqueStubs.length },

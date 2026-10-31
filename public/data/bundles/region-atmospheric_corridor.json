@@ -68,19 +68,19 @@
           "verificationStatus": "game_authored_verified"
         },
         {
-          "source": "gbif",
-          "sourceVersion": "public-key-reference",
-          "sourceRecordId": "5231203",
-          "gbifTaxonKey": 5231203,
-          "license": "CC-BY-4.0",
-          "citation": "GBIF taxon key 5231203 referenced for Hirundo rustica; live occurrence fetch via ScientificIngestionService",
+          "source": "mock_sample",
+          "sourceVersion": "quarantined-mock-sample-2026-07",
+          "sourceRecordId": "QUARANTINED-MOCK-hirundo_rustica",
+          "license": "MOCK-SAMPLE",
+          "citation": "QUARANTINED MOCK SAMPLE \u2014 not Catalogue of Life / GBIF / IUCN / PBDB; not source-verified. Retained for pipeline demos only until an approved snapshot import replaces it.",
           "citationRequired": true,
           "retrievedAt": "2026-08-07T19:00:00.000Z",
           "lastUpdated": "2026-08-07T19:00:00.000Z",
-          "isMockData": false,
-          "verificationStatus": "needs_source_verification"
+          "isMockData": true,
+          "verificationStatus": "mock_sample"
         }
-      ]
+      ],
+      "scientificScopeStatement": "Gameplay-authored hero record. External taxonomy/conservation/distribution fields that lack an approved COL/GBIF/IUCN/PBDB snapshot remain quarantined mock samples \u2014 never source-verified. Catalog is intentionally incomplete (not Earth-complete)."
     },
     {
       "id": "falco_peregrinus",
@@ -139,19 +139,19 @@
           "verificationStatus": "game_authored_verified"
         },
         {
-          "source": "gbif",
-          "sourceVersion": "public-key-reference",
-          "sourceRecordId": "2483378",
-          "gbifTaxonKey": 2483378,
-          "license": "CC-BY-4.0",
-          "citation": "GBIF taxon key 2483378 referenced for Falco peregrinus; live occurrence fetch via ScientificIngestionService",
+          "source": "mock_sample",
+          "sourceVersion": "quarantined-mock-sample-2026-07",
+          "sourceRecordId": "QUARANTINED-MOCK-falco_peregrinus",
+          "license": "MOCK-SAMPLE",
+          "citation": "QUARANTINED MOCK SAMPLE \u2014 not Catalogue of Life / GBIF / IUCN / PBDB; not source-verified. Retained for pipeline demos only until an approved snapshot import replaces it.",
           "citationRequired": true,
           "retrievedAt": "2026-08-07T19:00:00.000Z",
           "lastUpdated": "2026-08-07T19:00:00.000Z",
-          "isMockData": false,
-          "verificationStatus": "needs_source_verification"
+          "isMockData": true,
+          "verificationStatus": "mock_sample"
         }
-      ]
+      ],
+      "scientificScopeStatement": "Gameplay-authored hero record. External taxonomy/conservation/distribution fields that lack an approved COL/GBIF/IUCN/PBDB snapshot remain quarantined mock samples \u2014 never source-verified. Catalog is intentionally incomplete (not Earth-complete)."
     },
     {
       "id": "anthus_trivialis",
@@ -209,7 +209,8 @@
           "isMockData": false,
           "verificationStatus": "game_authored_verified"
         }
-      ]
+      ],
+      "scientificScopeStatement": "Gameplay-authored hero record. External taxonomy/conservation/distribution fields that lack an approved COL/GBIF/IUCN/PBDB snapshot remain quarantined mock samples \u2014 never source-verified. Catalog is intentionally incomplete (not Earth-complete)."
     },
     {
       "id": "aedes_aegypti",
@@ -268,19 +269,19 @@
           "verificationStatus": "game_authored_verified"
         },
         {
-          "source": "gbif",
-          "sourceVersion": "public-key-reference",
-          "sourceRecordId": "1651430",
-          "gbifTaxonKey": 1651430,
-          "license": "CC-BY-4.0",
-          "citation": "GBIF taxon key 1651430 referenced for Aedes aegypti; live occurrence fetch via ScientificIngestionService",
+          "source": "mock_sample",
+          "sourceVersion": "quarantined-mock-sample-2026-07",
+          "sourceRecordId": "QUARANTINED-MOCK-aedes_aegypti",
+          "license": "MOCK-SAMPLE",
+          "citation": "QUARANTINED MOCK SAMPLE \u2014 not Catalogue of Life / GBIF / IUCN / PBDB; not source-verified. Retained for pipeline demos only until an approved snapshot import replaces it.",
           "citationRequired": true,
           "retrievedAt": "2026-08-07T19:00:00.000Z",
           "lastUpdated": "2026-08-07T19:00:00.000Z",
-          "isMockData": false,
-          "verificationStatus": "needs_source_verification"
+          "isMockData": true,
+          "verificationStatus": "mock_sample"
         }
-      ]
+      ],
+      "scientificScopeStatement": "Gameplay-authored hero record. External taxonomy/conservation/distribution fields that lack an approved COL/GBIF/IUCN/PBDB snapshot remain quarantined mock samples \u2014 never source-verified. Catalog is intentionally incomplete (not Earth-complete)."
     },
     {
       "id": "danaus_plexippus_mig",
@@ -339,19 +340,19 @@
           "verificationStatus": "game_authored_verified"
         },
         {
-          "source": "gbif",
-          "sourceVersion": "public-key-reference",
-          "sourceRecordId": "5133058",
-          "gbifTaxonKey": 5133058,
-          "license": "CC-BY-4.0",
-          "citation": "GBIF taxon key 5133058 referenced for Danaus plexippus; live occurrence fetch via ScientificIngestionService",
+          "source": "mock_sample",
+          "sourceVersion": "quarantined-mock-sample-2026-07",
+          "sourceRecordId": "QUARANTINED-MOCK-danaus_plexippus_mig",
+          "license": "MOCK-SAMPLE",
+          "citation": "QUARANTINED MOCK SAMPLE \u2014 not Catalogue of Life / GBIF / IUCN / PBDB; not source-verified. Retained for pipeline demos only until an approved snapshot import replaces it.",
           "citationRequired": true,
           "retrievedAt": "2026-08-07T19:00:00.000Z",
           "lastUpdated": "2026-08-07T19:00:00.000Z",
-          "isMockData": false,
-          "verificationStatus": "needs_source_verification"
+          "isMockData": true,
+          "verificationStatus": "mock_sample"
         }
-      ]
+      ],
+      "scientificScopeStatement": "Gameplay-authored hero record. External taxonomy/conservation/distribution fields that lack an approved COL/GBIF/IUCN/PBDB snapshot remain quarantined mock samples \u2014 never source-verified. Catalog is intentionally incomplete (not Earth-complete)."
     },
     {
       "id": "tachycineta_bicolor",
@@ -409,7 +410,8 @@
           "isMockData": false,
           "verificationStatus": "game_authored_verified"
         }
-      ]
+      ],
+      "scientificScopeStatement": "Gameplay-authored hero record. External taxonomy/conservation/distribution fields that lack an approved COL/GBIF/IUCN/PBDB snapshot remain quarantined mock samples \u2014 never source-verified. Catalog is intentionally incomplete (not Earth-complete)."
     },
     {
       "id": "archilochus_colubris",
@@ -468,19 +470,19 @@
           "verificationStatus": "game_authored_verified"
         },
         {
-          "source": "gbif",
-          "sourceVersion": "public-key-reference",
-          "sourceRecordId": "2476410",
-          "gbifTaxonKey": 2476410,
-          "license": "CC-BY-4.0",
-          "citation": "GBIF taxon key 2476410 referenced for Archilochus colubris; live occurrence fetch via ScientificIngestionService",
+          "source": "mock_sample",
+          "sourceVersion": "quarantined-mock-sample-2026-07",
+          "sourceRecordId": "QUARANTINED-MOCK-archilochus_colubris",
+          "license": "MOCK-SAMPLE",
+          "citation": "QUARANTINED MOCK SAMPLE \u2014 not Catalogue of Life / GBIF / IUCN / PBDB; not source-verified. Retained for pipeline demos only until an approved snapshot import replaces it.",
           "citationRequired": true,
           "retrievedAt": "2026-08-07T19:00:00.000Z",
           "lastUpdated": "2026-08-07T19:00:00.000Z",
-          "isMockData": false,
-          "verificationStatus": "needs_source_verification"
+          "isMockData": true,
+          "verificationStatus": "mock_sample"
         }
-      ]
+      ],
+      "scientificScopeStatement": "Gameplay-authored hero record. External taxonomy/conservation/distribution fields that lack an approved COL/GBIF/IUCN/PBDB snapshot remain quarantined mock samples \u2014 never source-verified. Catalog is intentionally incomplete (not Earth-complete)."
     },
     {
       "id": "buteo_jamaicensis",
@@ -539,19 +541,19 @@
           "verificationStatus": "game_authored_verified"
         },
         {
-          "source": "gbif",
-          "sourceVersion": "public-key-reference",
-          "sourceRecordId": "2480540",
-          "gbifTaxonKey": 2480540,
-          "license": "CC-BY-4.0",
-          "citation": "GBIF taxon key 2480540 referenced for Buteo jamaicensis; live occurrence fetch via ScientificIngestionService",
+          "source": "mock_sample",
+          "sourceVersion": "quarantined-mock-sample-2026-07",
+          "sourceRecordId": "QUARANTINED-MOCK-buteo_jamaicensis",
+          "license": "MOCK-SAMPLE",
+          "citation": "QUARANTINED MOCK SAMPLE \u2014 not Catalogue of Life / GBIF / IUCN / PBDB; not source-verified. Retained for pipeline demos only until an approved snapshot import replaces it.",
           "citationRequired": true,
           "retrievedAt": "2026-08-07T19:00:00.000Z",
           "lastUpdated": "2026-08-07T19:00:00.000Z",
-          "isMockData": false,
-          "verificationStatus": "needs_source_verification"
+          "isMockData": true,
+          "verificationStatus": "mock_sample"
         }
-      ]
+      ],
+      "scientificScopeStatement": "Gameplay-authored hero record. External taxonomy/conservation/distribution fields that lack an approved COL/GBIF/IUCN/PBDB snapshot remain quarantined mock samples \u2014 never source-verified. Catalog is intentionally incomplete (not Earth-complete)."
     }
   ]
 }

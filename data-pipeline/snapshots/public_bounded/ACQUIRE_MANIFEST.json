@@ -1,0 +1,79 @@
+{
+  "generatedAt": "2026-10-30T16:00:00Z",
+  "approvedForUse": false,
+  "anySourceVerified": false,
+  "productionReady": false,
+  "results": {
+    "col": {
+      "imported": true,
+      "recordCount": 120,
+      "verifiedRecordCount": 0,
+      "dataMode": "sample_fallback",
+      "blocked": null,
+      "path": "data-pipeline/snapshots/public_bounded/col_flagship_bounded.json",
+      "note": "Local gitignored bounded acquire; hash recorded by taxonomy reconcile when present"
+    },
+    "gbif": {
+      "imported": true,
+      "recordCount": 24,
+      "verifiedRecordCount": 0,
+      "dataMode": "sample_fallback",
+      "blocked": null,
+      "path": "data-pipeline/snapshots/public_bounded/gbif_flagship_match_bounded.json",
+      "note": "Local gitignored bounded acquire; hash recorded by taxonomy reconcile when present"
+    },
+    "pbdb": {
+      "imported": true,
+      "recordCount": 3,
+      "verifiedRecordCount": 0,
+      "dataMode": "sample_fallback",
+      "blocked": null,
+      "path": "data-pipeline/snapshots/public_bounded/pbdb_flagship_bounded.json",
+      "note": "Includes class-rank Trilobita (PBDB:19100); approvedForUse=false; not source_verified"
+    },
+    "neotoma": {
+      "imported": true,
+      "recordCount": 25,
+      "verifiedRecordCount": 0,
+      "dataMode": "sample_fallback",
+      "blocked": null,
+      "path": "data-pipeline/snapshots/public_bounded/neotoma_sites_bounded.json",
+      "note": "Local gitignored bounded acquire when present"
+    },
+    "ics": {
+      "imported": true,
+      "recordCount": 17,
+      "verifiedRecordCount": 0,
+      "dataMode": "sample_fallback",
+      "blocked": null,
+      "path": "data-pipeline/snapshots/public_bounded/ics_label_inventory.json"
+    },
+    "iucn": {
+      "imported": false,
+      "recordCount": 0,
+      "verifiedRecordCount": 0,
+      "dataMode": null,
+      "blocked": true,
+      "path": null
+    },
+    "nasa": {
+      "imported": true,
+      "recordCount": 21,
+      "verifiedRecordCount": 0,
+      "dataMode": "sample_fallback",
+      "blocked": null,
+      "path": "data-pipeline/snapshots/public_bounded/nasa/2026-10-29T05-00-58Z/nasa_metadata_manifest.json",
+      "snapshotDir": "data-pipeline/snapshots/public_bounded/nasa/2026-10-29T05-00-58Z"
+    }
+  },
+  "honesty": [
+    "Bounded public fetches do not promote mock hero provenance to source_verified",
+    "IUCN remains blocked without authorized token + rights review",
+    "ICS labels do not unlock 17 temporal maps",
+    "NASA metadata ≠ regional measurement verification",
+    "NASA historical manifest SHA is immutable; new acquires use versioned snapshots",
+    "Import record counts are not source verification",
+    "Relocated 2026-10-29 overwrite into snapshots/public_bounded/nasa/2026-10-29T05-00-58Z; restored f6d1… historical bytes",
+    "Taxonomy reconcile uses fixture + optional local bounded snapshot hashes; never sample_fallback→source_verified"
+  ]
+}

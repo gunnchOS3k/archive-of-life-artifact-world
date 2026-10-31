@@ -4,6 +4,12 @@ import type {
   ProviderConflict,
   SpeciesEvidenceResult,
 } from '@/services/providers/types';
+import {
+  formatComparisonForUi,
+  type FieldComparisonReport,
+  type TaxonFieldComparison,
+} from '@/services/ingestion/fieldLevelSourceComparison';
+import { renderIucnBlockedEvidenceStripHtml } from '@/systems/iucnBlockedPresentation';
 
 export type SourcesEvidencePanelHandle = {
   abort: () => void;
@@ -107,7 +113,7 @@ export function renderSourcesEvidencePanel(
           return;
         }
         if (result) {
-          paintResult(container, result, retry);
+          paintResult(container, result, retry, speciesId);
         } else {
           paintFatal(container, fatal ?? 'Unknown evidence lookup error', retry);
         }
@@ -158,6 +164,7 @@ function paintResult(
   container: HTMLElement,
   result: SpeciesEvidenceResult,
   retry: () => void,
+  speciesId?: string,
 ): void {
   const status = result.status;
   container.dataset.evidenceState = status;
@@ -191,24 +198,31 @@ function paintResult(
       </aside>`
     : '';
 
+  const iucnStrip = renderIucnBlockedEvidenceStripHtml();
+
   if (!result.records.length) {
     container.innerHTML =
       banner +
+      iucnStrip +
       failureHtml +
       emptyMessage(result) +
       (result.failures.length
         ? ''
-        : `<p><button type="button" class="btn-secondary evidence-retry-btn">Retry source lookup</button></p>`);
+        : `<p><button type="button" class="btn-secondary evidence-retry-btn">Retry source lookup</button></p>`) +
+      '<div class="field-level-comparison-host" data-evidence-field-compare="pending"></div>';
     bindRetry(container, retry);
+    void mountFieldLevelComparison(container, speciesId);
     return;
   }
 
   container.innerHTML =
     banner +
+    iucnStrip +
     conflictHtml +
     failureHtml +
     `<div class="evidence-card-list">${result.records.map((r) => evidenceCard(r)).join('')}</div>` +
-    '<p class="evidence-learner-note">Live cards come from public scientific services today. Cached cards were retrieved earlier. Fixture cards are sample data — never described as live. Conflicts and uncertainty are retained.</p>';
+    '<p class="evidence-learner-note">Live cards come from public scientific services today. Cached cards were retrieved earlier. Fixture cards are sample data — never described as live. Conflicts and uncertainty are retained.</p>' +
+    '<div class="field-level-comparison-host" data-evidence-field-compare="pending"></div>';
 
   if (!result.failures.length && (status === 'fixture' || status === 'cached' || status === 'partial')) {
     const actions = document.createElement('p');
@@ -217,6 +231,7 @@ function paintResult(
     container.appendChild(actions);
   }
   bindRetry(container, retry);
+  void mountFieldLevelComparison(container, speciesId);
   bindExpand(container);
 }
 
@@ -403,6 +418,45 @@ function evidenceCard(record: FederatedRecord): string {
       }
     </div>
   </article>`;
+}
+
+async function mountFieldLevelComparison(
+  container: HTMLElement,
+  speciesId?: string,
+): Promise<void> {
+  const host = container.querySelector('.field-level-comparison-host') as HTMLElement | null;
+  if (!host || !speciesId) {
+    return;
+  }
+  try {
+    const res = await fetch('/data/status/field_level_comparison.json', { cache: 'no-store' });
+    if (!res.ok) {
+      host.dataset.evidenceFieldCompare = 'absent';
+      host.innerHTML =
+        '<p class="evidence-learner-note">No field-level fixture comparison artifact yet.</p>';
+      return;
+    }
+    const report = (await res.json()) as FieldComparisonReport;
+    if (report.anySourceVerified || report.productionReady) {
+      host.dataset.evidenceFieldCompare = 'honesty_reject';
+      host.innerHTML =
+        '<p class="evidence-status-error">Honesty reject: field comparison artifact claimed source_verified/production.</p>';
+      return;
+    }
+    const comparison = report.comparisons.find(
+      (row: TaxonFieldComparison) => row.taxonId === speciesId,
+    );
+    if (!comparison) {
+      host.dataset.evidenceFieldCompare = 'no_taxon';
+      host.innerHTML = '';
+      return;
+    }
+    host.dataset.evidenceFieldCompare = 'ready';
+    host.innerHTML = formatComparisonForUi(comparison);
+  } catch {
+    host.dataset.evidenceFieldCompare = 'error';
+    host.innerHTML = '';
+  }
 }
 
 function escapeHtml(value: string): string {

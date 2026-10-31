@@ -1,0 +1,20 @@
+{
+  "schema": "aol.locked_science_surround.v1",
+  "generatedAt": "2026-10-30T16:00:00.000Z",
+  "iucnGate": "blocked_external",
+  "temporalMapsUnlocked": 0,
+  "temporalMapsExpected": 17,
+  "scienceContinuesWithoutIucn": true,
+  "mapsStayLockedWithoutAssets": true,
+  "expeditionLoopReady": true,
+  "humanRc2V1": false,
+  "playerBeats": [
+    "Museum hub honesty: authored floors, IUCN blocked, maps 0/17",
+    "Region expedition with species-specific observation (24/24 procedural briefs ≠ finished art)",
+    "ArchiveDex entry with art-progress + taxonomy-reconcile strips",
+    "Lifeling companion handling without conservation-assessment badges",
+    "Time Atlas banner: blocked/illustration honesty — no fake unlock",
+    "Save/reload preserves expedition state without claiming source_verified science"
+  ],
+  "rule": "IUCN blocked_external and 0/17 maps locked do not freeze museum → expedition → ArchiveDex → Lifeling loops; finish surrounding UX without inventing credentials or paleogeography."
+}

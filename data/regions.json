@@ -3,11 +3,18 @@
     "id": "museum",
     "name": "Archive of Life Museum",
     "type": "hub",
-    "description": "Your central hub — the living museum where artifacts become knowledge.",
+    "description": "Your central hub \u2014 the living museum where artifacts become knowledge.",
     "color": "#4A6741",
     "biome": "museum",
     "species": [],
-    "connections": ["savanna", "forest", "wetland", "coastal", "fossil_site"]
+    "connections": [
+      "savanna",
+      "forest",
+      "wetland",
+      "coastal",
+      "fossil_site",
+      "steppe"
+    ]
   },
   {
     "id": "savanna",
@@ -16,8 +23,37 @@
     "description": "Golden grasslands where lions, elephants, and pollinators share the sun.",
     "color": "#C4A35A",
     "biome": "savanna",
-    "species": ["panthera_leo", "loxodonta_africana", "equus_caballus_ferus", "danaus_plexippus", "apis_mellifera", "latrodectus_mactans", "pachnoda_marginata"],
-    "connections": ["museum"]
+    "species": [
+      "panthera_leo",
+      "loxodonta_africana",
+      "danaus_plexippus",
+      "apis_mellifera",
+      "latrodectus_mactans",
+      "pachnoda_marginata"
+    ],
+    "connections": [
+      "museum"
+    ],
+    "continents": [
+      "Africa"
+    ]
+  },
+  {
+    "id": "steppe",
+    "name": "Central Asian Steppe",
+    "type": "explore",
+    "description": "Open grasslands of Central Asia \u2014 authored home for Przewalski's horse observation loop (portal \u2192 encounter \u2192 ArchiveDex \u2192 offline integrity). Game-authored planning twin; not a surveyed or Earth-complete regional catalog.",
+    "color": "#B8A06A",
+    "biome": "steppe",
+    "continents": [
+      "Asia"
+    ],
+    "species": [
+      "equus_caballus_ferus"
+    ],
+    "connections": [
+      "museum"
+    ]
   },
   {
     "id": "forest",
@@ -26,8 +62,17 @@
     "description": "Dense woodland canopy home to deer, wolves, bears, and forest insects.",
     "color": "#2D5A27",
     "biome": "forest",
-    "species": ["canis_lupus", "odocoileus_virginianus", "ursus_americanus", "formica_rufa", "dynastes_hercules", "acanthoscurria_geniculata"],
-    "connections": ["museum"]
+    "species": [
+      "canis_lupus",
+      "odocoileus_virginianus",
+      "ursus_americanus",
+      "formica_rufa",
+      "dynastes_hercules",
+      "acanthoscurria_geniculata"
+    ],
+    "connections": [
+      "museum"
+    ]
   },
   {
     "id": "wetland",
@@ -36,8 +81,15 @@
     "description": "Marshes and rivers where beavers engineer ecosystems and dragonflies hunt.",
     "color": "#3D6B5E",
     "biome": "wetland",
-    "species": ["castor_canadensis", "lontra_canadensis", "anax_junius", "libellula_quadrimaculata"],
-    "connections": ["museum"]
+    "species": [
+      "castor_canadensis",
+      "lontra_canadensis",
+      "anax_junius",
+      "libellula_quadrimaculata"
+    ],
+    "connections": [
+      "museum"
+    ]
   },
   {
     "id": "coastal",
@@ -46,8 +98,13 @@
     "description": "Rocky shores and open ocean where seals haul out and whales migrate.",
     "color": "#2B6CB0",
     "biome": "coastal",
-    "species": ["balaenoptera_musculus", "phoca_vitulina"],
-    "connections": ["museum"]
+    "species": [
+      "balaenoptera_musculus",
+      "phoca_vitulina"
+    ],
+    "connections": [
+      "museum"
+    ]
   },
   {
     "id": "fossil_site",
@@ -56,7 +113,13 @@
     "description": "An active excavation revealing life from the Cambrian to the Ice Age.",
     "color": "#8B7355",
     "biome": "fossil_bed",
-    "species": ["mammuthus_primigenius", "tyrannosaurus_rex", "trilobita_order"],
-    "connections": ["museum"]
+    "species": [
+      "mammuthus_primigenius",
+      "tyrannosaurus_rex",
+      "trilobita_order"
+    ],
+    "connections": [
+      "museum"
+    ]
   }
 ]
