@@ -407,10 +407,10 @@
         "Native/device screen-reader + human a11y sign-off pending"
       ],
       "severity": "medium",
-      "sha": "cd8acaf1cb67ab7ab030aea7cb50998ca46adeb9",
+      "sha": "4f2638e57d4a93f6ff1fb4dc07238822df9188b2",
       "independent_review_status": "not_started",
       "cursor_complete_status": "in_progress",
-      "notes": "Specialty: accessibility. Resume Continue dock a11y focus/keyshortcut @ cd8acaf1cb67ab7ab030aea7cb50998ca46adeb9; native SR audit still EXTERNAL; maps/IUCN locked."
+      "notes": "Specialty: accessibility. Resume Continue dock a11y focus/keyshortcut @ 4f2638e; native SR audit still EXTERNAL; maps/IUCN locked."
     },
     {
       "req_id": "AOL-MUX-001",
