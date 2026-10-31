@@ -257,9 +257,12 @@ describe('museum/dex player UI wiring', () => {
     const cont = doc.getElementById('btn-continue')!;
     const begin = doc.getElementById('btn-new-game')!;
     expect(cont.dataset.resumeTitlePriority).toBe('true');
+    expect(cont.dataset.a11yResumeFocus).toBe('true');
+    expect(cont.getAttribute('aria-keyshortcuts')).toBe('Enter');
     expect(cont.className).toContain('btn-primary');
     expect(begin.className).toContain('btn-secondary');
     expect(doc.querySelector('.la-cta-group')?.getAttribute('data-resume-cta-dock')).toBe('true');
+    expect(doc.querySelector('.la-cta-group')?.getAttribute('aria-label') ?? '').toMatch(/maps and IUCN remain locked/i);
     let continued = false;
     let began = false;
     cont.addEventListener('click', () => {

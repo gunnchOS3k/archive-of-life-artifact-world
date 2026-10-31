@@ -369,7 +369,12 @@ export function syncTitleCtaPriorityForResume(root: ParentNode | null | undefine
     begin.classList.remove('btn-primary');
     cont.dataset.resumeTitlePriority = 'true';
     begin.dataset.resumeTitlePriority = 'false';
+    cont.dataset.a11yResumeFocus = 'true';
+    begin.dataset.a11yResumeFocus = 'false';
+    cont.setAttribute('aria-keyshortcuts', 'Enter');
+    begin.removeAttribute('aria-keyshortcuts');
     dock?.setAttribute('data-resume-cta-dock', 'true');
+    dock?.setAttribute('aria-label', 'Resume Continue dock — maps and IUCN remain locked');
   } else {
     begin.classList.add('btn-primary');
     begin.classList.remove('btn-secondary');
@@ -377,7 +382,12 @@ export function syncTitleCtaPriorityForResume(root: ParentNode | null | undefine
     cont.classList.remove('btn-primary');
     cont.dataset.resumeTitlePriority = 'false';
     begin.dataset.resumeTitlePriority = 'false';
+    cont.dataset.a11yResumeFocus = 'false';
+    begin.dataset.a11yResumeFocus = 'false';
+    cont.removeAttribute('aria-keyshortcuts');
+    begin.removeAttribute('aria-keyshortcuts');
     dock?.removeAttribute('data-resume-cta-dock');
+    dock?.removeAttribute('aria-label');
   }
   return true;
 }
