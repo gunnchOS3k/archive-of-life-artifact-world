@@ -290,6 +290,7 @@ export function renderMuseumHubHonestyHtml(hub: MuseumHubPresentation = buildMus
         <li>${escapeHtml(hub.temporalMapsHonesty)}</li>
         <li>${escapeHtml(hub.iucnHonesty)}</li>
         <li>Authored floors only — not Earth-complete / not production-ready</li>
+        <li>Offline pack liveClaim=false — authored/imported snapshots only; no live science invent</li>
         <li>Museum → expedition → ArchiveDex → Lifeling → save/resume stays playable without IUCN/maps unlocks</li>
       </ul>
       <div class="museum-lifeling-bridge" data-museum-lifeling-bridge="1">
