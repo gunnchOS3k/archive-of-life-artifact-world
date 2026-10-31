@@ -98,10 +98,15 @@ describe('museum/dex player UI wiring', () => {
   it('mounts museum hub honesty into title + game hosts with a11y labels', () => {
     const doc = fakeDocument();
     const hub = buildMuseumHubPresentation();
+    expect(hub.offlinePackLiveClaim).toBe(false);
     expect(mountMuseumHubPresentation(doc, hub)).toBe(true);
     const titleHost = doc.querySelector('#museum-honesty-host');
     expect(titleHost?.querySelector('[data-museum-honesty]')).toBeTruthy();
+    expect(titleHost?.querySelector('[data-museum-honesty]')?.getAttribute('data-offline-live-claim')).toBe(
+      'false',
+    );
     expect(titleHost?.getAttribute('aria-label') ?? '').toMatch(/0 of 17|0\/17/i);
+    expect(titleHost?.getAttribute('aria-label') ?? '').toMatch(/liveClaim=false/i);
     expect(doc.getElementById('title-screen')?.getAttribute('aria-label') ?? '').toMatch(/museum/i);
 
     const hud = doc.getElementById('hud-museum-honesty-host')!;
@@ -109,7 +114,10 @@ describe('museum/dex player UI wiring', () => {
     expect(mountMuseumHubPresentation(doc.getElementById('game-screen'), hub)).toBe(true);
     expect(hud.querySelector('[data-museum-honesty]')).toBeTruthy();
     expect(doc.getElementById('region-name')?.getAttribute('aria-label') ?? '').toContain('0 of 17');
-    expect(renderMuseumHubHonestyHtml(hub)).toContain('Flagship taxa');
+    const honesty = renderMuseumHubHonestyHtml(hub);
+    expect(honesty).toContain('Flagship taxa');
+    expect(honesty).toContain('data-offline-pack-honesty');
+    expect(honesty).toMatch(/liveClaim=false/);
   });
 
   it('mounts ArchiveDex honesty banner and flagship presentations stay non-finished', () => {

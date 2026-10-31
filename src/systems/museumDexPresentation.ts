@@ -51,6 +51,8 @@ export interface MuseumHubPresentation {
   earthCompleteClaim: false;
   productionReadyClaim: false;
   sourceVerifiedReleaseClaim: false;
+  /** Offline / snapshot pack never invents live science — typed floor stays false. */
+  offlinePackLiveClaim: false;
   temporalMapsHonesty: '0/17 full-Earth maps source-verified — blocked / illustration only (not unlocked)';
   iucnHonesty: 'IUCN Red List unavailable (blocked_external) — needs owner API credentials and rights review before assessed statuses appear';
   objectives: string[];
@@ -90,11 +92,12 @@ export function buildMuseumHubPresentation(): MuseumHubPresentation {
     earthCompleteClaim: false,
     productionReadyClaim: false,
     sourceVerifiedReleaseClaim: false,
+    offlinePackLiveClaim: false,
     temporalMapsHonesty: '0/17 full-Earth maps source-verified — blocked / illustration only (not unlocked)',
     iucnHonesty:
       'IUCN Red List unavailable (blocked_external) — needs owner API credentials and rights review before assessed statuses appear',
     objectives: museum?.objectives ?? [],
-    ariaLabel: `${title}. ${subtitle} Explore regions: ${exploreCount}. Flagship taxa: ${flagshipCount}. Maps: 0 of 17 source-verified. IUCN blocked_external; assessed=false.`,
+    ariaLabel: `${title}. ${subtitle} Explore regions: ${exploreCount}. Flagship taxa: ${flagshipCount}. Maps: 0 of 17 source-verified. IUCN blocked_external; assessed=false. Offline pack liveClaim=false.`,
   };
 }
 
@@ -265,6 +268,9 @@ export function assertMuseumDexHonesty(
   if (hub.earthCompleteClaim || hub.productionReadyClaim || hub.sourceVerifiedReleaseClaim) {
     throw new Error('Museum hub must not claim Earth-complete / production / source_verified release');
   }
+  if (hub.offlinePackLiveClaim !== false) {
+    throw new Error('Museum hub offline pack must keep liveClaim=false (no invent science)');
+  }
   if (!hub.temporalMapsHonesty.includes('0/17')) {
     throw new Error('Museum hub must retain 0/17 temporal map honesty');
   }
@@ -281,7 +287,7 @@ export function assertMuseumDexHonesty(
 /** HTML for museum honesty strip mounted into the live player HUD / title hub. */
 export function renderMuseumHubHonestyHtml(hub: MuseumHubPresentation = buildMuseumHubPresentation()): string {
   return `
-    <aside class="museum-honesty" data-museum-honesty="1" role="status" aria-live="polite" aria-label="${escapeAttr(hub.ariaLabel)}">
+    <aside class="museum-honesty" data-museum-honesty="1" data-offline-live-claim="${hub.offlinePackLiveClaim}" role="status" aria-live="polite" aria-label="${escapeAttr(hub.ariaLabel)}">
       <p class="museum-honesty-title">${escapeHtml(hub.title)}</p>
       <p class="museum-honesty-subtitle">${escapeHtml(hub.subtitle)}</p>
       <ul class="museum-honesty-floors">
@@ -290,7 +296,7 @@ export function renderMuseumHubHonestyHtml(hub: MuseumHubPresentation = buildMus
         <li>${escapeHtml(hub.temporalMapsHonesty)}</li>
         <li>${escapeHtml(hub.iucnHonesty)}</li>
         <li>Authored floors only — not Earth-complete / not production-ready</li>
-        <li>Offline pack liveClaim=false — authored/imported snapshots only; no live science invent</li>
+        <li data-offline-pack-honesty="1">Offline pack liveClaim=${hub.offlinePackLiveClaim} — authored/imported snapshots only; no live science invent</li>
         <li>Museum → expedition → ArchiveDex → Lifeling → save/resume stays playable without IUCN/maps unlocks</li>
       </ul>
       <div class="museum-lifeling-bridge" data-museum-lifeling-bridge="1">
@@ -313,7 +319,7 @@ export function renderArchiveDexHonestyBannerHtml(): string {
     <div class="archivedex-honesty" data-archivedex-honesty="1" role="note" aria-label="ArchiveDex honesty: authored floors, IUCN blocked_external not assessed, identity marks are not finished models">
       <p>ArchiveDex shows authored / sample floors. IUCN Red List is <strong>blocked_external</strong> (no owner credential / rights review yet) — assessed=false; no fake assessed badges.</p>
       <p>Identity marks (including emoji) are not finished models — ${escapeHtml(artNote)}. Wave-4 procedural briefs cover 24/24 flagships; human-approved finals still pending.</p>
-      <p>Maps 0/17 source-verified · production-ready=false · source_verified release=false · anySourceVerified=false</p>
+      <p>Maps 0/17 source-verified · production-ready=false · source_verified release=false · anySourceVerified=false · offline pack liveClaim=false</p>
       <p>IUCN token absence does not freeze COL/GBIF/PBDB/Neotoma/NASA science — those paths stay sample_fallback until human review.</p>
       ${renderFlagshipArtHonestyHtml()}
       ${renderFlagshipOriginalArtProgressHtml()}
