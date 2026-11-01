@@ -99,6 +99,7 @@ describe('museum/dex player UI wiring', () => {
     const doc = fakeDocument();
     const hub = buildMuseumHubPresentation();
     expect(hub.offlinePackLiveClaim).toBe(false);
+    expect(hub.engineeringTipFloor).toBe('179fe80');
     expect(mountMuseumHubPresentation(doc, hub)).toBe(true);
     const titleHost = doc.querySelector('#museum-honesty-host');
     expect(titleHost?.querySelector('[data-museum-honesty]')).toBeTruthy();

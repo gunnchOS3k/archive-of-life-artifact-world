@@ -53,6 +53,8 @@ export interface MuseumHubPresentation {
   sourceVerifiedReleaseClaim: false;
   /** Offline / snapshot pack never invents live science — typed floor stays false. */
   offlinePackLiveClaim: false;
+  /** Packet tip floor to preserve (≥); newer draft tips may exist on the PR branch. */
+  engineeringTipFloor: '179fe80';
   temporalMapsHonesty: '0/17 full-Earth maps source-verified — blocked / illustration only (not unlocked)';
   iucnHonesty: 'IUCN Red List unavailable (blocked_external) — needs owner API credentials and rights review before assessed statuses appear';
   objectives: string[];
@@ -93,11 +95,12 @@ export function buildMuseumHubPresentation(): MuseumHubPresentation {
     productionReadyClaim: false,
     sourceVerifiedReleaseClaim: false,
     offlinePackLiveClaim: false,
+    engineeringTipFloor: '179fe80',
     temporalMapsHonesty: '0/17 full-Earth maps source-verified — blocked / illustration only (not unlocked)',
     iucnHonesty:
       'IUCN Red List unavailable (blocked_external) — needs owner API credentials and rights review before assessed statuses appear',
     objectives: museum?.objectives ?? [],
-    ariaLabel: `${title}. ${subtitle} Explore regions: ${exploreCount}. Flagship taxa: ${flagshipCount}. Maps: 0 of 17 source-verified. IUCN blocked_external; assessed=false. Offline pack liveClaim=false.`,
+    ariaLabel: `${title}. ${subtitle} Explore regions: ${exploreCount}. Flagship taxa: ${flagshipCount}. Maps: 0 of 17 source-verified. IUCN blocked_external; assessed=false. Offline pack liveClaim=false. Tip floor 179fe80.`,
   };
 }
 
@@ -287,7 +290,7 @@ export function assertMuseumDexHonesty(
 /** HTML for museum honesty strip mounted into the live player HUD / title hub. */
 export function renderMuseumHubHonestyHtml(hub: MuseumHubPresentation = buildMuseumHubPresentation()): string {
   return `
-    <aside class="museum-honesty" data-museum-honesty="1" data-offline-live-claim="${hub.offlinePackLiveClaim}" role="status" aria-live="polite" aria-label="${escapeAttr(hub.ariaLabel)}">
+    <aside class="museum-honesty" data-museum-honesty="1" data-offline-live-claim="${hub.offlinePackLiveClaim}" data-engineering-tip-floor="${hub.engineeringTipFloor}" role="status" aria-live="polite" aria-label="${escapeAttr(hub.ariaLabel)}">
       <p class="museum-honesty-title">${escapeHtml(hub.title)}</p>
       <p class="museum-honesty-subtitle">${escapeHtml(hub.subtitle)}</p>
       <ul class="museum-honesty-floors">
