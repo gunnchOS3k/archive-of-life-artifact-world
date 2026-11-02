@@ -57,15 +57,20 @@ const RANGE_NOTES: Record<RangeClaimClass, string> = {
   unlabeled: 'Range provenance is not labeled in this snapshot; treat as unverified.',
 };
 
-function rangeClaimFor(mode: HabitatRangeProfile['rangeDataMode']): RangeClaimClass {
+const MOCK_SOURCE_VERSION = /mock|quarantined|sample/i;
+
+/** Launch-floor bundles omit dataMode but keep a mock sourceVersion; that is still sample data. */
+function rangeClaimFor(range: HabitatRangeProfile | undefined): RangeClaimClass {
+  const mode = range?.rangeDataMode;
   if (mode === 'source_verified') return 'source_verified';
   if (mode === 'game_authored') return 'game_authored_floor';
   if (mode === 'mock_sample') return 'sample_fallback';
+  if (range?.rangeSourceVersion && MOCK_SOURCE_VERSION.test(range.rangeSourceVersion)) return 'sample_fallback';
   return 'unlabeled';
 }
 
 export function buildHabitatExhibit(entry: ArchiveDexEntry): HabitatExhibit {
-  const rangeClaim = rangeClaimFor(entry.habitatRange?.rangeDataMode);
+  const rangeClaim = rangeClaimFor(entry.habitatRange);
   const card = entry.region ? getRegionExplorationCard(entry.region) : undefined;
   return {
     rangeClaim,

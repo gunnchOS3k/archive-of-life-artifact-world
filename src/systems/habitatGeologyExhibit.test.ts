@@ -52,10 +52,19 @@ describe('habitat exhibit depth', () => {
 
   it('mock_sample distribution stays sample_fallback with the bundle uncertainty note', () => {
     const sp = SPECIES.get('panthera_leo')!;
-    expect(sp.distribution?.dataMode).toBe('mock_sample');
     const exhibit = buildHabitatExhibit(entryFor('panthera_leo'));
     expect(exhibit.rangeClaim).toBe('sample_fallback');
-    expect(exhibit.rangeNote).toBe(sp.distribution!.uncertaintyNote);
+    if (sp.distribution?.uncertaintyNote) expect(exhibit.rangeNote).toBe(sp.distribution.uncertaintyNote);
+    else expect(exhibit.rangeNote).toMatch(/not GBIF occurrence-verified/);
+  });
+
+  it('a launch-floor range without dataMode but a mock sourceVersion is still sample_fallback', () => {
+    const sp = SPECIES.get('panthera_leo')!;
+    const floor = { ...sp, distribution: { ...sp.distribution!, dataMode: undefined, uncertaintyNote: undefined, sourceVersion: 'mock-gbif-2026-07' } };
+    const entry = mapSpeciesToArchiveDexEntry(floor, { entryStatus: 'studied' });
+    expect(buildHabitatExhibit(entry).rangeClaim).toBe('sample_fallback');
+    const unlabeled = { ...floor, distribution: { ...floor.distribution, sourceVersion: 'snapshot-2026-07' } };
+    expect(buildHabitatExhibit(mapSpeciesToArchiveDexEntry(unlabeled, { entryStatus: 'studied' })).rangeClaim).toBe('unlabeled');
   });
 
   it('links the expedition region card without an Earth-complete claim', () => {

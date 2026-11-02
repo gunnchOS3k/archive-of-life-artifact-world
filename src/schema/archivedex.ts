@@ -102,6 +102,7 @@ export interface HabitatRangeProfile {
   /** Copied from DistributionProfile.dataMode; mock_sample ranges are planning twins. */
   rangeDataMode?: 'mock_sample' | 'source_verified' | 'game_authored';
   rangeUncertaintyNote?: string;
+  rangeSourceVersion?: string;
   elevationRange?: string;
   depthRange?: string;
   migration?: string;
