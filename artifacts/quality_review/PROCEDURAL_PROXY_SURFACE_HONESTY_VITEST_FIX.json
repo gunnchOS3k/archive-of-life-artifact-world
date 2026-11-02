@@ -1,0 +1,9 @@
+{
+  "schema": "archive.procedural_proxy_surface_honesty_vitest_fix.v1",
+  "human_false": true,
+  "rc2_false": true,
+  "v1_false": true,
+  "ci_exact_head": {"sha": "d559e6c", "pr": 56, "public_actions_html": "red — No test suite found"},
+  "fix": "convert proceduralProxySurfaceHonesty.test.ts to vitest describe/it",
+  "base_tip": "d559e6c"
+}

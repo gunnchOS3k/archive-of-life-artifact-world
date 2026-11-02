@@ -41,9 +41,10 @@ export function buildVisualPackHarness(): VisualPackManifest {
       'long Godot soak (N/A — web/canvas title)',
       'repeated video capture of playthrough',
       'large asset-gen / painted remasters',
+      'museum hub finished art pass (procedural≠finished)',
       'additional QEMU device soaks',
     ],
     notes:
-      'Harness + manifest only. No invented pixel critique. VISUAL_MODEL_REVIEW stays UNAVAILABLE until live framebuffer review.',
+      'Harness + manifest only. Museum/region surfaces are PROCEDURAL_PROXY — procedural≠finished painted remaster. No invented pixel critique. VISUAL_MODEL_REVIEW stays UNAVAILABLE until live framebuffer review. HUMAN/RC2/V1 false.',
   };
 }

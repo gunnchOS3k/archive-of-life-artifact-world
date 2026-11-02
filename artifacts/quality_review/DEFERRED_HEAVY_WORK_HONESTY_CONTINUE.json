@@ -1,0 +1,11 @@
+{
+  "schema": "archive.deferred_heavy_work_honesty_continue.v1",
+  "human_false": true,
+  "rc2_false": true,
+  "v1_false": true,
+  "ci_exact_head": {"sha": "14fcbd9", "pr": 56, "public_actions_html": "green"},
+  "deferred_heavy_work": true,
+  "painted_remaster_deferred": true,
+  "procedural_neq_finished": true,
+  "base_tip": "14fcbd9"
+}
