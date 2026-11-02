@@ -59,7 +59,9 @@ export interface MuseumHubPresentation {
   /** Offline / snapshot pack never invents live science — typed floor stays false. */
   offlinePackLiveClaim: false;
   /** Packet tip floor to preserve (≥); newer draft tips may exist on the PR branch. */
-  engineeringTipFloor: '179fe80';
+  engineeringTipFloor: 'ad8b61c';
+  /** Wave-6: museum a11y bridge is mandatory in hub HTML — still ≠ IUCN/finished unlock. */
+  museumA11yBridgeRequired: true;
   temporalMapsHonesty: '0/17 full-Earth maps source-verified — blocked / illustration only (not unlocked)';
   iucnHonesty: 'IUCN Red List unavailable (blocked_external) — needs owner API credentials and rights review before assessed statuses appear';
   objectives: string[];
@@ -100,12 +102,13 @@ export function buildMuseumHubPresentation(): MuseumHubPresentation {
     productionReadyClaim: false,
     sourceVerifiedReleaseClaim: false,
     offlinePackLiveClaim: false,
-    engineeringTipFloor: '179fe80',
+    engineeringTipFloor: 'ad8b61c',
+    museumA11yBridgeRequired: true,
     temporalMapsHonesty: '0/17 full-Earth maps source-verified — blocked / illustration only (not unlocked)',
     iucnHonesty:
       'IUCN Red List unavailable (blocked_external) — needs owner API credentials and rights review before assessed statuses appear',
     objectives: museum?.objectives ?? [],
-    ariaLabel: `${title}. ${subtitle} Explore regions: ${exploreCount}. Flagship taxa: ${flagshipCount}. Maps: 0 of 17 source-verified. IUCN blocked_external; assessed=false. Offline pack liveClaim=false. Tip floor 179fe80.`,
+    ariaLabel: `${title}. ${subtitle} Explore regions: ${exploreCount}. Flagship taxa: ${flagshipCount}. Maps: 0 of 17 source-verified. IUCN blocked_external; assessed=false. Offline pack liveClaim=false. Tip floor ad8b61c. Museum a11y bridge required.`,
   };
 }
 
@@ -282,6 +285,13 @@ export function assertMuseumDexHonesty(
   if (!hub.temporalMapsHonesty.includes('0/17')) {
     throw new Error('Museum hub must retain 0/17 temporal map honesty');
   }
+  if (hub.museumA11yBridgeRequired !== true) {
+    throw new Error('Museum hub must require a11y bridge (settings ≠ IUCN/finished unlock)');
+  }
+  if (hub.engineeringTipFloor !== 'ad8b61c' && hub.engineeringTipFloor !== '179fe80') {
+    // Preserve ≥ad8b61c; legacy 179fe80 floor still recognized as ancestor minimum.
+    throw new Error('Museum hub engineering tip floor must stay ≥179fe80 (prefer ad8b61c+)');
+  }
   for (const entry of entries) {
     if (entry.iucnAssessed || entry.finishedModelClaimed) {
       throw new Error(`ArchiveDex ${entry.taxonId}: assessed/finished claims forbidden without approval`);
@@ -290,6 +300,29 @@ export function assertMuseumDexHonesty(
       throw new Error(`ArchiveDex ${entry.taxonId}: source_verified presentation forbidden for flagship floor`);
     }
   }
+}
+
+/** ArchiveDex a11y honesty — dex panel mirrors museum reduced-motion without inventing IUCN. */
+export function renderArchiveDexA11yHonestyHtml(
+  root: HTMLElement | Document | null | undefined =
+    typeof document !== 'undefined' ? document.documentElement : null,
+): string {
+  const settings = loadAccessibilitySettings();
+  const reduced =
+    isReducedMotionActive(root ?? undefined) || settings.reducedMotion === true;
+  const sr = settings.screenReaderHints !== false;
+  return [
+    `<aside class="archivedex-a11y-honesty" data-archivedex-a11y-honesty="1" data-reduced-motion="${reduced}" data-sr-hints="${sr}" data-iucn-assessed="false" data-finished-art="false" role="note" aria-label="ArchiveDex accessibility honesty — reduced motion ${reduced}; IUCN still blocked_external; procedural≠finished">`,
+    `<p><strong>ArchiveDex a11y:</strong> reducedMotion=${reduced} · screenReaderHints=${sr} — locomotion previews stay calm when reduced motion is on.</p>`,
+    '<p>Dex a11y does not invent IUCN assessments, unlock paleomaps, or approve finished art.</p>',
+    sr
+      ? screenReaderHintHtml(
+          'ArchiveDex accessibility strip active. IUCN blocked_external. Procedural silhouette briefs are not finished models.',
+          true,
+        )
+      : '',
+    '</aside>',
+  ].join('\n');
 }
 
 /** Museum a11y honesty — reduced motion / SR hints without inventing IUCN or finished art. */
@@ -350,8 +383,11 @@ export function renderArchiveDexHonestyBannerHtml(): string {
     <div class="archivedex-honesty" data-archivedex-honesty="1" role="note" aria-label="ArchiveDex honesty: authored floors, IUCN blocked_external not assessed, identity marks are not finished models">
       <p>ArchiveDex shows authored / sample floors. IUCN Red List is <strong>blocked_external</strong> (no owner credential / rights review yet) — assessed=false; no fake assessed badges.</p>
       <p>Identity marks (including emoji) are not finished models — ${escapeHtml(artNote)}. Wave-4 procedural briefs + Wave-5 turnaround key-pose notes cover 24/24 flagships; procedural≠finished; human-approved finals still pending.</p>
-      <p>Maps 0/17 source-verified · production-ready=false · source_verified release=false · anySourceVerified=false · offline pack liveClaim=false</p>
+      <p>Maps 0/17 source-verified · production-ready=false · source_verified release=false · anySourceVerified=false · offline pack liveClaim=false · tip floor ≥ad8b61c</p>
       <p>IUCN token absence does not freeze COL/GBIF/PBDB/Neotoma/NASA science — those paths stay sample_fallback until human review.</p>
+      <div class="archivedex-a11y-bridge" data-archivedex-a11y-bridge="1">
+        ${renderArchiveDexA11yHonestyHtml()}
+      </div>
       ${renderFlagshipArtHonestyHtml()}
       ${renderFlagshipOriginalArtProgressHtml()}
       ${renderPublicAlternativesHonestyHtml()}

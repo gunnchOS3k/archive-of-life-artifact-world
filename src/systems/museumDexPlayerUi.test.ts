@@ -99,7 +99,8 @@ describe('museum/dex player UI wiring', () => {
     const doc = fakeDocument();
     const hub = buildMuseumHubPresentation();
     expect(hub.offlinePackLiveClaim).toBe(false);
-    expect(hub.engineeringTipFloor).toBe('179fe80');
+    expect(hub.engineeringTipFloor).toBe('ad8b61c');
+    expect(hub.museumA11yBridgeRequired).toBe(true);
     expect(mountMuseumHubPresentation(doc, hub)).toBe(true);
     const titleHost = doc.querySelector('#museum-honesty-host');
     expect(titleHost?.querySelector('[data-museum-honesty]')).toBeTruthy();
@@ -133,6 +134,9 @@ describe('museum/dex player UI wiring', () => {
     expect(renderArchiveDexHonestyBannerHtml()).toContain('0/17');
     expect(renderArchiveDexHonestyBannerHtml()).toContain('data-keypose-wave="5"');
     expect(renderArchiveDexHonestyBannerHtml()).toMatch(/procedural≠finished|turnaround key-pose/i);
+    expect(renderArchiveDexHonestyBannerHtml()).toContain('data-archivedex-a11y-honesty');
+    expect(renderArchiveDexHonestyBannerHtml()).toMatch(/Dex a11y does not invent IUCN/i);
+    expect(renderArchiveDexHonestyBannerHtml()).toMatch(/tip floor ≥ad8b61c|ad8b61c/i);
 
     const entries = listArchiveDexFlagshipPresentations();
     expect(entries).toHaveLength(24);
