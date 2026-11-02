@@ -1,0 +1,11 @@
+{
+  "schema": "archive.procedural_proxy_surface_honesty_continue.v1",
+  "human_false": true,
+  "rc2_false": true,
+  "v1_false": true,
+  "ci_exact_head": {"sha": "377fb2c", "pr": 56, "public_actions_html": "green"},
+  "procedural_proxy_surfaces": 2,
+  "painted_remaster_claimed": false,
+  "procedural_neq_finished": true,
+  "base_tip": "377fb2c"
+}
