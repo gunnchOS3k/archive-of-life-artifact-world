@@ -23,7 +23,12 @@ import {
 import { renderPublicAlternativesHonestyHtml } from '@/services/ingestion/publicDataAlternatives';
 import { renderLockedScienceSurroundHtml } from '@/systems/lockedScienceSurroundExperience';
 import { resolveObservationMotionForTaxon } from '@/systems/observationLocomotion';
-import { screenReaderHintHtml } from '@/systems/accessibility';
+import {
+  isReducedMotionActive,
+  loadAccessibilitySettings,
+  observationReducedMotionAnnouncement,
+  screenReaderHintHtml,
+} from '@/systems/accessibility';
 import { renderLifelingHonestyHtml } from '@/systems/lifelingHonestyPresentation';
 import {
   renderSilhouetteSvgPackageHtml,
@@ -287,6 +292,26 @@ export function assertMuseumDexHonesty(
   }
 }
 
+/** Museum a11y honesty — reduced motion / SR hints without inventing IUCN or finished art. */
+export function renderMuseumA11yHonestyHtml(
+  root: HTMLElement | Document | null | undefined =
+    typeof document !== 'undefined' ? document.documentElement : null,
+): string {
+  const settings = loadAccessibilitySettings();
+  const reduced =
+    isReducedMotionActive(root ?? undefined) || settings.reducedMotion === true;
+  const sr = settings.screenReaderHints !== false;
+  const announce = reduced ? observationReducedMotionAnnouncement() : 'Motion allowed: locomotion previews may animate under authored briefs.';
+  return [
+    `<aside class="museum-a11y-honesty" data-museum-a11y-honesty="1" data-reduced-motion="${reduced}" data-sr-hints="${sr}" role="status" aria-live="polite" aria-label="Museum accessibility honesty — reduced motion ${reduced}; IUCN still blocked_external">`,
+    `<p><strong>Museum a11y:</strong> reducedMotion=${reduced} · screenReaderHints=${sr} · highContrast=${settings.highContrast} · largeText=${settings.largeText}</p>`,
+    `<p data-museum-a11y-announce="1">${escapeHtml(announce)}</p>`,
+    '<p>A11y settings do not unlock IUCN assessments, maps, or finished art approvals.</p>',
+    sr ? screenReaderHintHtml('Museum accessibility strip active. Maps remain 0 of 17. IUCN blocked_external.', true) : '',
+    '</aside>',
+  ].join('\n');
+}
+
 /** HTML for museum honesty strip mounted into the live player HUD / title hub. */
 export function renderMuseumHubHonestyHtml(hub: MuseumHubPresentation = buildMuseumHubPresentation()): string {
   return `
@@ -302,6 +327,9 @@ export function renderMuseumHubHonestyHtml(hub: MuseumHubPresentation = buildMus
         <li data-offline-pack-honesty="1">Offline pack liveClaim=${hub.offlinePackLiveClaim} — authored/imported snapshots only; no live science invent</li>
         <li>Museum → expedition → ArchiveDex → Lifeling → save/resume stays playable without IUCN/maps unlocks</li>
       </ul>
+      <div class="museum-a11y-bridge" data-museum-a11y-bridge="1">
+        ${renderMuseumA11yHonestyHtml()}
+      </div>
       <div class="museum-lifeling-bridge" data-museum-lifeling-bridge="1">
         ${renderLifelingHonestyHtml()}
       </div>
@@ -321,7 +349,7 @@ export function renderArchiveDexHonestyBannerHtml(): string {
   return `
     <div class="archivedex-honesty" data-archivedex-honesty="1" role="note" aria-label="ArchiveDex honesty: authored floors, IUCN blocked_external not assessed, identity marks are not finished models">
       <p>ArchiveDex shows authored / sample floors. IUCN Red List is <strong>blocked_external</strong> (no owner credential / rights review yet) — assessed=false; no fake assessed badges.</p>
-      <p>Identity marks (including emoji) are not finished models — ${escapeHtml(artNote)}. Wave-4 procedural briefs cover 24/24 flagships; human-approved finals still pending.</p>
+      <p>Identity marks (including emoji) are not finished models — ${escapeHtml(artNote)}. Wave-4 procedural briefs + Wave-5 turnaround key-pose notes cover 24/24 flagships; procedural≠finished; human-approved finals still pending.</p>
       <p>Maps 0/17 source-verified · production-ready=false · source_verified release=false · anySourceVerified=false · offline pack liveClaim=false</p>
       <p>IUCN token absence does not freeze COL/GBIF/PBDB/Neotoma/NASA science — those paths stay sample_fallback until human review.</p>
       ${renderFlagshipArtHonestyHtml()}

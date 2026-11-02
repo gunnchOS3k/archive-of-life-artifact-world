@@ -119,6 +119,8 @@ describe('museum/dex player UI wiring', () => {
     expect(honesty).toContain('Flagship taxa');
     expect(honesty).toContain('data-offline-pack-honesty');
     expect(honesty).toMatch(/liveClaim=false/);
+    expect(honesty).toContain('data-museum-a11y-honesty');
+    expect(honesty).toMatch(/A11y settings do not unlock IUCN/i);
   });
 
   it('mounts ArchiveDex honesty banner and flagship presentations stay non-finished', () => {
@@ -129,6 +131,8 @@ describe('museum/dex player UI wiring', () => {
     expect(banner?.textContent ?? '').toMatch(/blocked_external/i);
     expect(banner?.textContent ?? '').toMatch(/assessed=false/i);
     expect(renderArchiveDexHonestyBannerHtml()).toContain('0/17');
+    expect(renderArchiveDexHonestyBannerHtml()).toContain('data-keypose-wave="5"');
+    expect(renderArchiveDexHonestyBannerHtml()).toMatch(/procedural≠finished|turnaround key-pose/i);
 
     const entries = listArchiveDexFlagshipPresentations();
     expect(entries).toHaveLength(24);

@@ -1,9 +1,10 @@
 {
   "schema": "aol.flagship_original_art_progress.v1",
-  "generatedAt": "2026-10-30T19:00:00.000Z",
+  "generatedAt": "2026-11-02T00:00:00.000Z",
   "flagshipCount": 24,
   "proceduralCandidateCount": 24,
   "emojiIdentityCount": 0,
+  "turnaroundKeyPoseCount": 24,
   "finishedModelsClaimed": false,
   "emojiEqualsFinished": false,
   "anyHumanApprovedFinal": false,
@@ -14,7 +15,7 @@
       "representationMark": "🦁",
       "priorStatus": "emoji_identity_candidate",
       "currentStatus": "procedural_candidate",
-      "artStatusLabel": "Art status: procedural candidate (silhouette brief — not human-approved final art)",
+      "artStatusLabel": "Art status: procedural candidate (silhouette + turnaround key-pose notes — not human-approved final art)",
       "silhouetteBrief": {
         "taxonId": "panthera_leo",
         "posture": "lateral walk cycle, head slightly below withers",
@@ -27,12 +28,21 @@
         "habitatBackdrop": "open grassland / termite-mound vantage",
         "assetKind": "silhouette_brief",
         "finishedModel": false,
-        "humanApproved": false
+        "humanApproved": false,
+        "turnaroundKeyPose": {
+          "front": "Front key-pose: lateral walk cycle, head slightly below withers; emphasize mane mass (male adult candidate)",
+          "side": "Side key-pose: ambulatory stalk → short bound; habitat cue open grassland / termite-mound vantage",
+          "rear": "Rear key-pose: silhouette continuity from side; anatomyFocus remains underpaint only",
+          "assetKind": "turnaround_keypose_notes",
+          "finishedModel": false,
+          "humanApproved": false
+        }
       },
+      "turnaroundKeyPoseAuthored": true,
       "emojiEqualsFinished": false,
       "finishedModelClaimed": false,
       "originalArtApproved": false,
-      "progressNote": "Wave-1 silhouette brief authored; still not a finished model"
+      "progressNote": "Wave-1 silhouette brief + Wave-5 turnaround key-pose notes authored; still not a finished model"
     },
     {
       "taxonId": "loxodonta_africana",
@@ -40,7 +50,7 @@
       "representationMark": "🐘",
       "priorStatus": "emoji_identity_candidate",
       "currentStatus": "procedural_candidate",
-      "artStatusLabel": "Art status: procedural candidate (silhouette brief — not human-approved final art)",
+      "artStatusLabel": "Art status: procedural candidate (silhouette + turnaround key-pose notes — not human-approved final art)",
       "silhouetteBrief": {
         "taxonId": "loxodonta_africana",
         "posture": "¾ front-quarter with trunk mid-reach",
@@ -53,12 +63,21 @@
         "habitatBackdrop": "watering hole / acacia browse",
         "assetKind": "silhouette_brief",
         "finishedModel": false,
-        "humanApproved": false
+        "humanApproved": false,
+        "turnaroundKeyPose": {
+          "front": "Front key-pose: ¾ front-quarter with trunk mid-reach; emphasize large ears",
+          "side": "Side key-pose: slow amble, weight-shift honesty; habitat cue watering hole / acacia browse",
+          "rear": "Rear key-pose: silhouette continuity from side; anatomyFocus remains underpaint only",
+          "assetKind": "turnaround_keypose_notes",
+          "finishedModel": false,
+          "humanApproved": false
+        }
       },
+      "turnaroundKeyPoseAuthored": true,
       "emojiEqualsFinished": false,
       "finishedModelClaimed": false,
       "originalArtApproved": false,
-      "progressNote": "Wave-1 silhouette brief authored; still not a finished model"
+      "progressNote": "Wave-1 silhouette brief + Wave-5 turnaround key-pose notes authored; still not a finished model"
     },
     {
       "taxonId": "canis_lupus",
@@ -66,7 +85,7 @@
       "representationMark": "🐺",
       "priorStatus": "emoji_identity_candidate",
       "currentStatus": "procedural_candidate",
-      "artStatusLabel": "Art status: procedural candidate (silhouette brief — not human-approved final art)",
+      "artStatusLabel": "Art status: procedural candidate (silhouette + turnaround key-pose notes — not human-approved final art)",
       "silhouetteBrief": {
         "taxonId": "canis_lupus",
         "posture": "forward stalk, ears high",
@@ -79,12 +98,21 @@
         "habitatBackdrop": "forest-edge pack trail",
         "assetKind": "silhouette_brief",
         "finishedModel": false,
-        "humanApproved": false
+        "humanApproved": false,
+        "turnaroundKeyPose": {
+          "front": "Front key-pose: forward stalk, ears high; emphasize long legs",
+          "side": "Side key-pose: trot → brief lope; habitat cue forest-edge pack trail",
+          "rear": "Rear key-pose: silhouette continuity from side; anatomyFocus remains underpaint only",
+          "assetKind": "turnaround_keypose_notes",
+          "finishedModel": false,
+          "humanApproved": false
+        }
       },
+      "turnaroundKeyPoseAuthored": true,
       "emojiEqualsFinished": false,
       "finishedModelClaimed": false,
       "originalArtApproved": false,
-      "progressNote": "Wave-1 silhouette brief authored; still not a finished model"
+      "progressNote": "Wave-1 silhouette brief + Wave-5 turnaround key-pose notes authored; still not a finished model"
     },
     {
       "taxonId": "odocoileus_virginianus",
@@ -92,7 +120,7 @@
       "representationMark": "🦌",
       "priorStatus": "emoji_identity_candidate",
       "currentStatus": "procedural_candidate",
-      "artStatusLabel": "Art status: procedural candidate (silhouette brief — not human-approved final art)",
+      "artStatusLabel": "Art status: procedural candidate (silhouette + turnaround key-pose notes — not human-approved final art)",
       "silhouetteBrief": {
         "taxonId": "odocoileus_virginianus",
         "posture": "alert freeze, ears flared, white flag ready",
@@ -105,12 +133,21 @@
         "habitatBackdrop": "oak-edge browse / creek crossing — Nearctic forest margin",
         "assetKind": "silhouette_brief",
         "finishedModel": false,
-        "humanApproved": false
+        "humanApproved": false,
+        "turnaroundKeyPose": {
+          "front": "Front key-pose: alert freeze, ears flared, white flag ready; emphasize white rump flag",
+          "side": "Side key-pose: browse pause → explosive bound; habitat cue oak-edge browse / creek crossing — Nearctic forest margin",
+          "rear": "Rear key-pose: silhouette continuity from side; anatomyFocus remains underpaint only",
+          "assetKind": "turnaround_keypose_notes",
+          "finishedModel": false,
+          "humanApproved": false
+        }
       },
+      "turnaroundKeyPoseAuthored": true,
       "emojiEqualsFinished": false,
       "finishedModelClaimed": false,
       "originalArtApproved": false,
-      "progressNote": "Wave-2 silhouette brief authored; still not a finished model"
+      "progressNote": "Wave-2 silhouette brief + Wave-5 turnaround key-pose notes authored; still not a finished model"
     },
     {
       "taxonId": "balaenoptera_musculus",
@@ -118,7 +155,7 @@
       "representationMark": "🐋",
       "priorStatus": "emoji_identity_candidate",
       "currentStatus": "procedural_candidate",
-      "artStatusLabel": "Art status: procedural candidate (silhouette brief — not human-approved final art)",
+      "artStatusLabel": "Art status: procedural candidate (silhouette + turnaround key-pose notes — not human-approved final art)",
       "silhouetteBrief": {
         "taxonId": "balaenoptera_musculus",
         "posture": "lateral surface skim with blow",
@@ -131,12 +168,21 @@
         "habitatBackdrop": "upwelling / krill patch — pelagic",
         "assetKind": "silhouette_brief",
         "finishedModel": false,
-        "humanApproved": false
+        "humanApproved": false,
+        "turnaroundKeyPose": {
+          "front": "Front key-pose: lateral surface skim with blow; emphasize elongate body",
+          "side": "Side key-pose: slow fluke drive; habitat cue upwelling / krill patch — pelagic",
+          "rear": "Rear key-pose: silhouette continuity from side; anatomyFocus remains underpaint only",
+          "assetKind": "turnaround_keypose_notes",
+          "finishedModel": false,
+          "humanApproved": false
+        }
       },
+      "turnaroundKeyPoseAuthored": true,
       "emojiEqualsFinished": false,
       "finishedModelClaimed": false,
       "originalArtApproved": false,
-      "progressNote": "Wave-1 silhouette brief authored; still not a finished model"
+      "progressNote": "Wave-1 silhouette brief + Wave-5 turnaround key-pose notes authored; still not a finished model"
     },
     {
       "taxonId": "ursus_americanus",
@@ -144,7 +190,7 @@
       "representationMark": "🐻",
       "priorStatus": "emoji_identity_candidate",
       "currentStatus": "procedural_candidate",
-      "artStatusLabel": "Art status: procedural candidate (silhouette brief — not human-approved final art)",
+      "artStatusLabel": "Art status: procedural candidate (silhouette + turnaround key-pose notes — not human-approved final art)",
       "silhouetteBrief": {
         "taxonId": "ursus_americanus",
         "posture": "¾ rear-quarter forage stand",
@@ -157,12 +203,21 @@
         "habitatBackdrop": "mixed forest berry / mast forage — not polar substitution",
         "assetKind": "silhouette_brief",
         "finishedModel": false,
-        "humanApproved": false
+        "humanApproved": false,
+        "turnaroundKeyPose": {
+          "front": "Front key-pose: ¾ rear-quarter forage stand; emphasize rounded ear profile",
+          "side": "Side key-pose: amble → brief gallop; habitat cue mixed forest berry / mast forage — not polar substitution",
+          "rear": "Rear key-pose: silhouette continuity from side; anatomyFocus remains underpaint only",
+          "assetKind": "turnaround_keypose_notes",
+          "finishedModel": false,
+          "humanApproved": false
+        }
       },
+      "turnaroundKeyPoseAuthored": true,
       "emojiEqualsFinished": false,
       "finishedModelClaimed": false,
       "originalArtApproved": false,
-      "progressNote": "Wave-2 silhouette brief authored; still not a finished model"
+      "progressNote": "Wave-2 silhouette brief + Wave-5 turnaround key-pose notes authored; still not a finished model"
     },
     {
       "taxonId": "castor_canadensis",
@@ -170,7 +225,7 @@
       "representationMark": "🦫",
       "priorStatus": "emoji_identity_candidate",
       "currentStatus": "procedural_candidate",
-      "artStatusLabel": "Art status: procedural candidate (silhouette brief — not human-approved final art)",
+      "artStatusLabel": "Art status: procedural candidate (silhouette + turnaround key-pose notes — not human-approved final art)",
       "silhouetteBrief": {
         "taxonId": "castor_canadensis",
         "posture": "sitting haul-out with flat tail visible",
@@ -183,12 +238,21 @@
         "habitatBackdrop": "lodge pond / felled aspen shoreline",
         "assetKind": "silhouette_brief",
         "finishedModel": false,
-        "humanApproved": false
+        "humanApproved": false,
+        "turnaroundKeyPose": {
+          "front": "Front key-pose: sitting haul-out with flat tail visible; emphasize paddle tail",
+          "side": "Side key-pose: waddle → powerful swim kick; habitat cue lodge pond / felled aspen shoreline",
+          "rear": "Rear key-pose: silhouette continuity from side; anatomyFocus remains underpaint only",
+          "assetKind": "turnaround_keypose_notes",
+          "finishedModel": false,
+          "humanApproved": false
+        }
       },
+      "turnaroundKeyPoseAuthored": true,
       "emojiEqualsFinished": false,
       "finishedModelClaimed": false,
       "originalArtApproved": false,
-      "progressNote": "Wave-2 silhouette brief authored; still not a finished model"
+      "progressNote": "Wave-2 silhouette brief + Wave-5 turnaround key-pose notes authored; still not a finished model"
     },
     {
       "taxonId": "lontra_canadensis",
@@ -196,7 +260,7 @@
       "representationMark": "🦦",
       "priorStatus": "emoji_identity_candidate",
       "currentStatus": "procedural_candidate",
-      "artStatusLabel": "Art status: procedural candidate (silhouette brief — not human-approved final art)",
+      "artStatusLabel": "Art status: procedural candidate (silhouette + turnaround key-pose notes — not human-approved final art)",
       "silhouetteBrief": {
         "taxonId": "lontra_canadensis",
         "posture": "streamside stretch with arched back",
@@ -209,12 +273,21 @@
         "habitatBackdrop": "riparian pool / beaver-influenced waterway",
         "assetKind": "silhouette_brief",
         "finishedModel": false,
-        "humanApproved": false
+        "humanApproved": false,
+        "turnaroundKeyPose": {
+          "front": "Front key-pose: streamside stretch with arched back; emphasize streamlined body",
+          "side": "Side key-pose: porpoise swim → bank scramble; habitat cue riparian pool / beaver-influenced waterway",
+          "rear": "Rear key-pose: silhouette continuity from side; anatomyFocus remains underpaint only",
+          "assetKind": "turnaround_keypose_notes",
+          "finishedModel": false,
+          "humanApproved": false
+        }
       },
+      "turnaroundKeyPoseAuthored": true,
       "emojiEqualsFinished": false,
       "finishedModelClaimed": false,
       "originalArtApproved": false,
-      "progressNote": "Wave-2 silhouette brief authored; still not a finished model"
+      "progressNote": "Wave-2 silhouette brief + Wave-5 turnaround key-pose notes authored; still not a finished model"
     },
     {
       "taxonId": "phoca_vitulina",
@@ -222,7 +295,7 @@
       "representationMark": "🦭",
       "priorStatus": "emoji_identity_candidate",
       "currentStatus": "procedural_candidate",
-      "artStatusLabel": "Art status: procedural candidate (silhouette brief — not human-approved final art)",
+      "artStatusLabel": "Art status: procedural candidate (silhouette + turnaround key-pose notes — not human-approved final art)",
       "silhouetteBrief": {
         "taxonId": "phoca_vitulina",
         "posture": "haul-out side profile, head raised",
@@ -235,12 +308,21 @@
         "habitatBackdrop": "rocky intertidal / harbor haul-out",
         "assetKind": "silhouette_brief",
         "finishedModel": false,
-        "humanApproved": false
+        "humanApproved": false,
+        "turnaroundKeyPose": {
+          "front": "Front key-pose: haul-out side profile, head raised; emphasize spotted coat candidate",
+          "side": "Side key-pose: undulating swim → awkward haul-out; habitat cue rocky intertidal / harbor haul-out",
+          "rear": "Rear key-pose: silhouette continuity from side; anatomyFocus remains underpaint only",
+          "assetKind": "turnaround_keypose_notes",
+          "finishedModel": false,
+          "humanApproved": false
+        }
       },
+      "turnaroundKeyPoseAuthored": true,
       "emojiEqualsFinished": false,
       "finishedModelClaimed": false,
       "originalArtApproved": false,
-      "progressNote": "Wave-3 silhouette brief authored; still not a finished model"
+      "progressNote": "Wave-3 silhouette brief + Wave-5 turnaround key-pose notes authored; still not a finished model"
     },
     {
       "taxonId": "equus_caballus_ferus",
@@ -248,7 +330,7 @@
       "representationMark": "🐴",
       "priorStatus": "emoji_identity_candidate",
       "currentStatus": "procedural_candidate",
-      "artStatusLabel": "Art status: procedural candidate (silhouette brief — not human-approved final art)",
+      "artStatusLabel": "Art status: procedural candidate (silhouette + turnaround key-pose notes — not human-approved final art)",
       "silhouetteBrief": {
         "taxonId": "equus_caballus_ferus",
         "posture": "alert stand, erect dorsal mane",
@@ -261,12 +343,21 @@
         "habitatBackdrop": "Asian steppe — never African savanna substitution",
         "assetKind": "silhouette_brief",
         "finishedModel": false,
-        "humanApproved": false
+        "humanApproved": false,
+        "turnaroundKeyPose": {
+          "front": "Front key-pose: alert stand, erect dorsal mane; emphasize stocky Przewalski proportions",
+          "side": "Side key-pose: steppe trot readiness; habitat cue Asian steppe — never African savanna substitution",
+          "rear": "Rear key-pose: silhouette continuity from side; anatomyFocus remains underpaint only",
+          "assetKind": "turnaround_keypose_notes",
+          "finishedModel": false,
+          "humanApproved": false
+        }
       },
+      "turnaroundKeyPoseAuthored": true,
       "emojiEqualsFinished": false,
       "finishedModelClaimed": false,
       "originalArtApproved": false,
-      "progressNote": "Wave-1 silhouette brief authored; still not a finished model"
+      "progressNote": "Wave-1 silhouette brief + Wave-5 turnaround key-pose notes authored; still not a finished model"
     },
     {
       "taxonId": "danaus_plexippus",
@@ -274,7 +365,7 @@
       "representationMark": "🦋",
       "priorStatus": "emoji_identity_candidate",
       "currentStatus": "procedural_candidate",
-      "artStatusLabel": "Art status: procedural candidate (silhouette brief — not human-approved final art)",
+      "artStatusLabel": "Art status: procedural candidate (silhouette + turnaround key-pose notes — not human-approved final art)",
       "silhouetteBrief": {
         "taxonId": "danaus_plexippus",
         "posture": "open-wing glide, dorsal orange field visible",
@@ -287,12 +378,21 @@
         "habitatBackdrop": "milkweed corridor / roost cluster — migratory honesty",
         "assetKind": "silhouette_brief",
         "finishedModel": false,
-        "humanApproved": false
+        "humanApproved": false,
+        "turnaroundKeyPose": {
+          "front": "Front key-pose: open-wing glide, dorsal orange field visible; emphasize veined wing panel",
+          "side": "Side key-pose: flutter → sustained migratory glide; habitat cue milkweed corridor / roost cluster — migratory honesty",
+          "rear": "Rear key-pose: silhouette continuity from side; anatomyFocus remains underpaint only",
+          "assetKind": "turnaround_keypose_notes",
+          "finishedModel": false,
+          "humanApproved": false
+        }
       },
+      "turnaroundKeyPoseAuthored": true,
       "emojiEqualsFinished": false,
       "finishedModelClaimed": false,
       "originalArtApproved": false,
-      "progressNote": "Wave-2 silhouette brief authored; still not a finished model"
+      "progressNote": "Wave-2 silhouette brief + Wave-5 turnaround key-pose notes authored; still not a finished model"
     },
     {
       "taxonId": "apis_mellifera",
@@ -300,7 +400,7 @@
       "representationMark": "🐝",
       "priorStatus": "emoji_identity_candidate",
       "currentStatus": "procedural_candidate",
-      "artStatusLabel": "Art status: procedural candidate (silhouette brief — not human-approved final art)",
+      "artStatusLabel": "Art status: procedural candidate (silhouette + turnaround key-pose notes — not human-approved final art)",
       "silhouetteBrief": {
         "taxonId": "apis_mellifera",
         "posture": "¾ hover over blossom",
@@ -313,12 +413,21 @@
         "habitatBackdrop": "meadow blossom / hive-adjacent forage",
         "assetKind": "silhouette_brief",
         "finishedModel": false,
-        "humanApproved": false
+        "humanApproved": false,
+        "turnaroundKeyPose": {
+          "front": "Front key-pose: ¾ hover over blossom; emphasize pollen baskets",
+          "side": "Side key-pose: hover → straight-line forage flight; habitat cue meadow blossom / hive-adjacent forage",
+          "rear": "Rear key-pose: silhouette continuity from side; anatomyFocus remains underpaint only",
+          "assetKind": "turnaround_keypose_notes",
+          "finishedModel": false,
+          "humanApproved": false
+        }
       },
+      "turnaroundKeyPoseAuthored": true,
       "emojiEqualsFinished": false,
       "finishedModelClaimed": false,
       "originalArtApproved": false,
-      "progressNote": "Wave-3 silhouette brief authored; still not a finished model"
+      "progressNote": "Wave-3 silhouette brief + Wave-5 turnaround key-pose notes authored; still not a finished model"
     },
     {
       "taxonId": "formica_rufa",
@@ -326,7 +435,7 @@
       "representationMark": "🐜",
       "priorStatus": "emoji_identity_candidate",
       "currentStatus": "procedural_candidate",
-      "artStatusLabel": "Art status: procedural candidate (silhouette brief — not human-approved final art)",
+      "artStatusLabel": "Art status: procedural candidate (silhouette + turnaround key-pose notes — not human-approved final art)",
       "silhouetteBrief": {
         "taxonId": "formica_rufa",
         "posture": "lateral worker with raised antennae",
@@ -339,12 +448,21 @@
         "habitatBackdrop": "wood-ant mound / forest floor trail",
         "assetKind": "silhouette_brief",
         "finishedModel": false,
-        "humanApproved": false
+        "humanApproved": false,
+        "turnaroundKeyPose": {
+          "front": "Front key-pose: lateral worker with raised antennae; emphasize narrow waist",
+          "side": "Side key-pose: trail-follow scurries; habitat cue wood-ant mound / forest floor trail",
+          "rear": "Rear key-pose: silhouette continuity from side; anatomyFocus remains underpaint only",
+          "assetKind": "turnaround_keypose_notes",
+          "finishedModel": false,
+          "humanApproved": false
+        }
       },
+      "turnaroundKeyPoseAuthored": true,
       "emojiEqualsFinished": false,
       "finishedModelClaimed": false,
       "originalArtApproved": false,
-      "progressNote": "Wave-4 silhouette brief authored; still not a finished model"
+      "progressNote": "Wave-4 silhouette brief + Wave-5 turnaround key-pose notes authored; still not a finished model"
     },
     {
       "taxonId": "anax_junius",
@@ -352,7 +470,7 @@
       "representationMark": "🪰",
       "priorStatus": "emoji_identity_candidate",
       "currentStatus": "procedural_candidate",
-      "artStatusLabel": "Art status: procedural candidate (silhouette brief — not human-approved final art)",
+      "artStatusLabel": "Art status: procedural candidate (silhouette + turnaround key-pose notes — not human-approved final art)",
       "silhouetteBrief": {
         "taxonId": "anax_junius",
         "posture": "hover with wings horizontal",
@@ -365,12 +483,21 @@
         "habitatBackdrop": "pond margin / open water patrol lane",
         "assetKind": "silhouette_brief",
         "finishedModel": false,
-        "humanApproved": false
+        "humanApproved": false,
+        "turnaroundKeyPose": {
+          "front": "Front key-pose: hover with wings horizontal; emphasize elongate abdomen",
+          "side": "Side key-pose: patrol hover → dart intercept; habitat cue pond margin / open water patrol lane",
+          "rear": "Rear key-pose: silhouette continuity from side; anatomyFocus remains underpaint only",
+          "assetKind": "turnaround_keypose_notes",
+          "finishedModel": false,
+          "humanApproved": false
+        }
       },
+      "turnaroundKeyPoseAuthored": true,
       "emojiEqualsFinished": false,
       "finishedModelClaimed": false,
       "originalArtApproved": false,
-      "progressNote": "Wave-3 silhouette brief authored; still not a finished model"
+      "progressNote": "Wave-3 silhouette brief + Wave-5 turnaround key-pose notes authored; still not a finished model"
     },
     {
       "taxonId": "latrodectus_mactans",
@@ -378,7 +505,7 @@
       "representationMark": "🕷️",
       "priorStatus": "emoji_identity_candidate",
       "currentStatus": "procedural_candidate",
-      "artStatusLabel": "Art status: procedural candidate (silhouette brief — not human-approved final art)",
+      "artStatusLabel": "Art status: procedural candidate (silhouette + turnaround key-pose notes — not human-approved final art)",
       "silhouetteBrief": {
         "taxonId": "latrodectus_mactans",
         "posture": "inverted web sit, abdomen down",
@@ -391,12 +518,21 @@
         "habitatBackdrop": "sheltered web niche / debris overhang",
         "assetKind": "silhouette_brief",
         "finishedModel": false,
-        "humanApproved": false
+        "humanApproved": false,
+        "turnaroundKeyPose": {
+          "front": "Front key-pose: inverted web sit, abdomen down; emphasize globose abdomen",
+          "side": "Side key-pose: web-vibration wait — not a chase predator claim; habitat cue sheltered web niche / debris overhang",
+          "rear": "Rear key-pose: silhouette continuity from side; anatomyFocus remains underpaint only",
+          "assetKind": "turnaround_keypose_notes",
+          "finishedModel": false,
+          "humanApproved": false
+        }
       },
+      "turnaroundKeyPoseAuthored": true,
       "emojiEqualsFinished": false,
       "finishedModelClaimed": false,
       "originalArtApproved": false,
-      "progressNote": "Wave-4 silhouette brief authored; still not a finished model"
+      "progressNote": "Wave-4 silhouette brief + Wave-5 turnaround key-pose notes authored; still not a finished model"
     },
     {
       "taxonId": "dynastes_hercules",
@@ -404,7 +540,7 @@
       "representationMark": "🪲",
       "priorStatus": "emoji_identity_candidate",
       "currentStatus": "procedural_candidate",
-      "artStatusLabel": "Art status: procedural candidate (silhouette brief — not human-approved final art)",
+      "artStatusLabel": "Art status: procedural candidate (silhouette + turnaround key-pose notes — not human-approved final art)",
       "silhouetteBrief": {
         "taxonId": "dynastes_hercules",
         "posture": "¾ front with thoracic horn forward",
@@ -417,12 +553,21 @@
         "habitatBackdrop": "Neotropical canopy / rotting log stage",
         "assetKind": "silhouette_brief",
         "finishedModel": false,
-        "humanApproved": false
+        "humanApproved": false,
+        "turnaroundKeyPose": {
+          "front": "Front key-pose: ¾ front with thoracic horn forward; emphasize thoracic horn",
+          "side": "Side key-pose: deliberate climb on trunk; habitat cue Neotropical canopy / rotting log stage",
+          "rear": "Rear key-pose: silhouette continuity from side; anatomyFocus remains underpaint only",
+          "assetKind": "turnaround_keypose_notes",
+          "finishedModel": false,
+          "humanApproved": false
+        }
       },
+      "turnaroundKeyPoseAuthored": true,
       "emojiEqualsFinished": false,
       "finishedModelClaimed": false,
       "originalArtApproved": false,
-      "progressNote": "Wave-3 silhouette brief authored; still not a finished model"
+      "progressNote": "Wave-3 silhouette brief + Wave-5 turnaround key-pose notes authored; still not a finished model"
     },
     {
       "taxonId": "libellula_quadrimaculata",
@@ -430,7 +575,7 @@
       "representationMark": "🪰",
       "priorStatus": "emoji_identity_candidate",
       "currentStatus": "procedural_candidate",
-      "artStatusLabel": "Art status: procedural candidate (silhouette brief — not human-approved final art)",
+      "artStatusLabel": "Art status: procedural candidate (silhouette + turnaround key-pose notes — not human-approved final art)",
       "silhouetteBrief": {
         "taxonId": "libellula_quadrimaculata",
         "posture": "perch with wings outspread",
@@ -443,12 +588,21 @@
         "habitatBackdrop": "marsh edge / sunlit reed perch",
         "assetKind": "silhouette_brief",
         "finishedModel": false,
-        "humanApproved": false
+        "humanApproved": false,
+        "turnaroundKeyPose": {
+          "front": "Front key-pose: perch with wings outspread; emphasize four wing spots",
+          "side": "Side key-pose: perch → short territorial sally; habitat cue marsh edge / sunlit reed perch",
+          "rear": "Rear key-pose: silhouette continuity from side; anatomyFocus remains underpaint only",
+          "assetKind": "turnaround_keypose_notes",
+          "finishedModel": false,
+          "humanApproved": false
+        }
       },
+      "turnaroundKeyPoseAuthored": true,
       "emojiEqualsFinished": false,
       "finishedModelClaimed": false,
       "originalArtApproved": false,
-      "progressNote": "Wave-4 silhouette brief authored; still not a finished model"
+      "progressNote": "Wave-4 silhouette brief + Wave-5 turnaround key-pose notes authored; still not a finished model"
     },
     {
       "taxonId": "bombus_terrestris",
@@ -456,7 +610,7 @@
       "representationMark": "🐝",
       "priorStatus": "emoji_identity_candidate",
       "currentStatus": "procedural_candidate",
-      "artStatusLabel": "Art status: procedural candidate (silhouette brief — not human-approved final art)",
+      "artStatusLabel": "Art status: procedural candidate (silhouette + turnaround key-pose notes — not human-approved final art)",
       "silhouetteBrief": {
         "taxonId": "bombus_terrestris",
         "posture": "¾ hover at flower face",
@@ -469,12 +623,21 @@
         "habitatBackdrop": "meadow clover / nest-bank forage",
         "assetKind": "silhouette_brief",
         "finishedModel": false,
-        "humanApproved": false
+        "humanApproved": false,
+        "turnaroundKeyPose": {
+          "front": "Front key-pose: ¾ hover at flower face; emphasize fuzzy thorax",
+          "side": "Side key-pose: heavy buzz hover → short forage hop; habitat cue meadow clover / nest-bank forage",
+          "rear": "Rear key-pose: silhouette continuity from side; anatomyFocus remains underpaint only",
+          "assetKind": "turnaround_keypose_notes",
+          "finishedModel": false,
+          "humanApproved": false
+        }
       },
+      "turnaroundKeyPoseAuthored": true,
       "emojiEqualsFinished": false,
       "finishedModelClaimed": false,
       "originalArtApproved": false,
-      "progressNote": "Wave-4 silhouette brief authored; still not a finished model"
+      "progressNote": "Wave-4 silhouette brief + Wave-5 turnaround key-pose notes authored; still not a finished model"
     },
     {
       "taxonId": "acanthoscurria_geniculata",
@@ -482,7 +645,7 @@
       "representationMark": "🕷️",
       "priorStatus": "emoji_identity_candidate",
       "currentStatus": "procedural_candidate",
-      "artStatusLabel": "Art status: procedural candidate (silhouette brief — not human-approved final art)",
+      "artStatusLabel": "Art status: procedural candidate (silhouette + turnaround key-pose notes — not human-approved final art)",
       "silhouetteBrief": {
         "taxonId": "acanthoscurria_geniculata",
         "posture": "forward threat-display candidate, legs spread",
@@ -495,12 +658,21 @@
         "habitatBackdrop": "Neotropical leaf litter / burrow mouth — husbandry not wild claim",
         "assetKind": "silhouette_brief",
         "finishedModel": false,
-        "humanApproved": false
+        "humanApproved": false,
+        "turnaroundKeyPose": {
+          "front": "Front key-pose: forward threat-display candidate, legs spread; emphasize banded leg joints",
+          "side": "Side key-pose: deliberate terrestrial walk; habitat cue Neotropical leaf litter / burrow mouth — husbandry not wild claim",
+          "rear": "Rear key-pose: silhouette continuity from side; anatomyFocus remains underpaint only",
+          "assetKind": "turnaround_keypose_notes",
+          "finishedModel": false,
+          "humanApproved": false
+        }
       },
+      "turnaroundKeyPoseAuthored": true,
       "emojiEqualsFinished": false,
       "finishedModelClaimed": false,
       "originalArtApproved": false,
-      "progressNote": "Wave-4 silhouette brief authored; still not a finished model"
+      "progressNote": "Wave-4 silhouette brief + Wave-5 turnaround key-pose notes authored; still not a finished model"
     },
     {
       "taxonId": "pachnoda_marginata",
@@ -508,7 +680,7 @@
       "representationMark": "🪲",
       "priorStatus": "emoji_identity_candidate",
       "currentStatus": "procedural_candidate",
-      "artStatusLabel": "Art status: procedural candidate (silhouette brief — not human-approved final art)",
+      "artStatusLabel": "Art status: procedural candidate (silhouette + turnaround key-pose notes — not human-approved final art)",
       "silhouetteBrief": {
         "taxonId": "pachnoda_marginata",
         "posture": "¾ dorsal on fruit surface",
@@ -521,12 +693,21 @@
         "habitatBackdrop": "fruiting canopy / rotting fruit stage",
         "assetKind": "silhouette_brief",
         "finishedModel": false,
-        "humanApproved": false
+        "humanApproved": false,
+        "turnaroundKeyPose": {
+          "front": "Front key-pose: ¾ dorsal on fruit surface; emphasize shield-shaped elytra",
+          "side": "Side key-pose: clumsy climb → short buzz flight; habitat cue fruiting canopy / rotting fruit stage",
+          "rear": "Rear key-pose: silhouette continuity from side; anatomyFocus remains underpaint only",
+          "assetKind": "turnaround_keypose_notes",
+          "finishedModel": false,
+          "humanApproved": false
+        }
       },
+      "turnaroundKeyPoseAuthored": true,
       "emojiEqualsFinished": false,
       "finishedModelClaimed": false,
       "originalArtApproved": false,
-      "progressNote": "Wave-4 silhouette brief authored; still not a finished model"
+      "progressNote": "Wave-4 silhouette brief + Wave-5 turnaround key-pose notes authored; still not a finished model"
     },
     {
       "taxonId": "mammuthus_primigenius",
@@ -534,7 +715,7 @@
       "representationMark": "🦣",
       "priorStatus": "emoji_identity_candidate",
       "currentStatus": "procedural_candidate",
-      "artStatusLabel": "Art status: procedural candidate (silhouette brief — not human-approved final art)",
+      "artStatusLabel": "Art status: procedural candidate (silhouette + turnaround key-pose notes — not human-approved final art)",
       "silhouetteBrief": {
         "taxonId": "mammuthus_primigenius",
         "posture": "lateral with curved tusks forward",
@@ -547,12 +728,21 @@
         "habitatBackdrop": "Pleistocene steppe / frozen silt — reconstruction framing",
         "assetKind": "silhouette_brief",
         "finishedModel": false,
-        "humanApproved": false
+        "humanApproved": false,
+        "turnaroundKeyPose": {
+          "front": "Front key-pose: lateral with curved tusks forward; emphasize high shoulder hump",
+          "side": "Side key-pose: heavy amble on mammoth-steppe; habitat cue Pleistocene steppe / frozen silt — reconstruction framing",
+          "rear": "Rear key-pose: silhouette continuity from side; anatomyFocus remains underpaint only",
+          "assetKind": "turnaround_keypose_notes",
+          "finishedModel": false,
+          "humanApproved": false
+        }
       },
+      "turnaroundKeyPoseAuthored": true,
       "emojiEqualsFinished": false,
       "finishedModelClaimed": false,
       "originalArtApproved": false,
-      "progressNote": "Wave-1 silhouette brief authored; still not a finished model"
+      "progressNote": "Wave-1 silhouette brief + Wave-5 turnaround key-pose notes authored; still not a finished model"
     },
     {
       "taxonId": "tyrannosaurus_rex",
@@ -560,7 +750,7 @@
       "representationMark": "🦖",
       "priorStatus": "emoji_identity_candidate",
       "currentStatus": "procedural_candidate",
-      "artStatusLabel": "Art status: procedural candidate (silhouette brief — not human-approved final art)",
+      "artStatusLabel": "Art status: procedural candidate (silhouette + turnaround key-pose notes — not human-approved final art)",
       "silhouetteBrief": {
         "taxonId": "tyrannosaurus_rex",
         "posture": "lateral mid-stride, skull foreshortened",
@@ -573,12 +763,21 @@
         "habitatBackdrop": "Late Cretaceous floodplain — fossil reconstruction, not living zoo",
         "assetKind": "silhouette_brief",
         "finishedModel": false,
-        "humanApproved": false
+        "humanApproved": false,
+        "turnaroundKeyPose": {
+          "front": "Front key-pose: lateral mid-stride, skull foreshortened; emphasize massive skull",
+          "side": "Side key-pose: heavy bipedal walk — reconstruction framing; habitat cue Late Cretaceous floodplain — fossil reconstruction, not living zoo",
+          "rear": "Rear key-pose: silhouette continuity from side; anatomyFocus remains underpaint only",
+          "assetKind": "turnaround_keypose_notes",
+          "finishedModel": false,
+          "humanApproved": false
+        }
       },
+      "turnaroundKeyPoseAuthored": true,
       "emojiEqualsFinished": false,
       "finishedModelClaimed": false,
       "originalArtApproved": false,
-      "progressNote": "Wave-2 silhouette brief authored; still not a finished model"
+      "progressNote": "Wave-2 silhouette brief + Wave-5 turnaround key-pose notes authored; still not a finished model"
     },
     {
       "taxonId": "trilobita_order",
@@ -586,7 +785,7 @@
       "representationMark": "🦴",
       "priorStatus": "emoji_identity_candidate",
       "currentStatus": "procedural_candidate",
-      "artStatusLabel": "Art status: procedural candidate (silhouette brief — not human-approved final art)",
+      "artStatusLabel": "Art status: procedural candidate (silhouette + turnaround key-pose notes — not human-approved final art)",
       "silhouetteBrief": {
         "taxonId": "trilobita_order",
         "posture": "dorsal fossil plate, cephalon forward",
@@ -599,12 +798,21 @@
         "habitatBackdrop": "Paleozoic seafloor reconstruction — fossil framing only",
         "assetKind": "silhouette_brief",
         "finishedModel": false,
-        "humanApproved": false
+        "humanApproved": false,
+        "turnaroundKeyPose": {
+          "front": "Front key-pose: dorsal fossil plate, cephalon forward; emphasize cephalon shield",
+          "side": "Side key-pose: static reconstruction pose — not a living gait claim; habitat cue Paleozoic seafloor reconstruction — fossil framing only",
+          "rear": "Rear key-pose: silhouette continuity from side; anatomyFocus remains underpaint only",
+          "assetKind": "turnaround_keypose_notes",
+          "finishedModel": false,
+          "humanApproved": false
+        }
       },
+      "turnaroundKeyPoseAuthored": true,
       "emojiEqualsFinished": false,
       "finishedModelClaimed": false,
       "originalArtApproved": false,
-      "progressNote": "Wave-3 silhouette brief authored; still not a finished model"
+      "progressNote": "Wave-3 silhouette brief + Wave-5 turnaround key-pose notes authored; still not a finished model"
     },
     {
       "taxonId": "ursus_maritimus",
@@ -612,7 +820,7 @@
       "representationMark": "🐻",
       "priorStatus": "emoji_identity_candidate",
       "currentStatus": "procedural_candidate",
-      "artStatusLabel": "Art status: procedural candidate (silhouette brief — not human-approved final art)",
+      "artStatusLabel": "Art status: procedural candidate (silhouette + turnaround key-pose notes — not human-approved final art)",
       "silhouetteBrief": {
         "taxonId": "ursus_maritimus",
         "posture": "lateral walk on ice edge",
@@ -625,13 +833,22 @@
         "habitatBackdrop": "sea-ice margin / polar coastal — never temperate forest substitution",
         "assetKind": "silhouette_brief",
         "finishedModel": false,
-        "humanApproved": false
+        "humanApproved": false,
+        "turnaroundKeyPose": {
+          "front": "Front key-pose: lateral walk on ice edge; emphasize elongate neck",
+          "side": "Side key-pose: steady ice-edge amble; habitat cue sea-ice margin / polar coastal — never temperate forest substitution",
+          "rear": "Rear key-pose: silhouette continuity from side; anatomyFocus remains underpaint only",
+          "assetKind": "turnaround_keypose_notes",
+          "finishedModel": false,
+          "humanApproved": false
+        }
       },
+      "turnaroundKeyPoseAuthored": true,
       "emojiEqualsFinished": false,
       "finishedModelClaimed": false,
       "originalArtApproved": false,
-      "progressNote": "Wave-3 silhouette brief authored; still not a finished model"
+      "progressNote": "Wave-3 silhouette brief + Wave-5 turnaround key-pose notes authored; still not a finished model"
     }
   ],
-  "rule": "Original-art progress may advance emoji → procedural silhouette briefs; emoji never equals finished art; human approval still required for final assets."
+  "rule": "Original-art progress may advance emoji → procedural silhouette briefs → authored turnaround key-pose notes; procedural/keypose ≠ finished art; human approval still required for final assets."
 }

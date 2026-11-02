@@ -12,6 +12,16 @@ import {
   type FlagshipObservationProfile,
 } from '@/services/flagshipTaxonProfiles';
 
+export type TurnaroundKeyPoseNotes = {
+  /** Authored key-pose notes only — not a finished turnaround sheet. */
+  front: string;
+  side: string;
+  rear: string;
+  assetKind: 'turnaround_keypose_notes';
+  finishedModel: false;
+  humanApproved: false;
+};
+
 export type SilhouetteBrief = {
   taxonId: string;
   posture: string;
@@ -22,6 +32,8 @@ export type SilhouetteBrief = {
   assetKind: 'silhouette_brief';
   finishedModel: false;
   humanApproved: false;
+  /** Wave-5 deepen: authored front/side/rear notes — still ≠ finished art. */
+  turnaroundKeyPose?: TurnaroundKeyPoseNotes;
 };
 
 export type FlagshipArtProgressRow = {
@@ -32,6 +44,7 @@ export type FlagshipArtProgressRow = {
   currentStatus: FinalArtStatus;
   artStatusLabel: string;
   silhouetteBrief: SilhouetteBrief | null;
+  turnaroundKeyPoseAuthored: boolean;
   emojiEqualsFinished: false;
   finishedModelClaimed: false;
   originalArtApproved: false;
@@ -44,6 +57,7 @@ export type FlagshipArtProgressReport = {
   flagshipCount: number;
   proceduralCandidateCount: number;
   emojiIdentityCount: number;
+  turnaroundKeyPoseCount: number;
   finishedModelsClaimed: false;
   emojiEqualsFinished: false;
   anyHumanApprovedFinal: false;
@@ -246,17 +260,34 @@ const SILHOUETTE_BRIEFS: Record<string, Omit<SilhouetteBrief, 'taxonId' | 'asset
 };
 
 const RULE =
-  'Original-art progress may advance emoji → procedural silhouette briefs; emoji never equals finished art; human approval still required for final assets.';
+  'Original-art progress may advance emoji → procedural silhouette briefs → authored turnaround key-pose notes; procedural/keypose ≠ finished art; human approval still required for final assets.';
+
+/** Wave-5: authored turnaround key-pose notes for all briefed flagships — still not finished models. */
+export function buildTurnaroundKeyPoseNotes(taxonId: string): TurnaroundKeyPoseNotes | null {
+  const brief = SILHOUETTE_BRIEFS[taxonId];
+  if (!brief) return null;
+  const focus = brief.anatomyFocus[0] ?? 'primary silhouette mass';
+  return {
+    front: `Front key-pose: ${brief.posture}; emphasize ${focus}`,
+    side: `Side key-pose: ${brief.locomotionCue}; habitat cue ${brief.habitatBackdrop}`,
+    rear: `Rear key-pose: silhouette continuity from side; anatomyFocus remains underpaint only`,
+    assetKind: 'turnaround_keypose_notes',
+    finishedModel: false,
+    humanApproved: false,
+  };
+}
 
 export function buildSilhouetteBrief(taxonId: string): SilhouetteBrief | null {
   const brief = SILHOUETTE_BRIEFS[taxonId];
   if (!brief) return null;
+  const turnaround = buildTurnaroundKeyPoseNotes(taxonId);
   return {
     taxonId,
     ...brief,
     assetKind: 'silhouette_brief',
     finishedModel: false,
     humanApproved: false,
+    ...(turnaround ? { turnaroundKeyPose: turnaround } : {}),
   };
 }
 
@@ -283,7 +314,7 @@ export function proceduralArtWaveNumber(taxonId: string): number | null {
 function proceduralWaveNote(taxonId: string): string {
   const wave = proceduralArtWaveNumber(taxonId);
   if (wave != null) {
-    return `Wave-${wave} silhouette brief authored; still not a finished model`;
+    return `Wave-${wave} silhouette brief + Wave-5 turnaround key-pose notes authored; still not a finished model`;
   }
   return 'Remains emoji identity candidate — not finished';
 }
@@ -307,9 +338,10 @@ export function buildFlagshipOriginalArtProgressReport(
       currentStatus,
       artStatusLabel:
         currentStatus === 'procedural_candidate'
-          ? 'Art status: procedural candidate (silhouette brief — not human-approved final art)'
+          ? 'Art status: procedural candidate (silhouette + turnaround key-pose notes — not human-approved final art)'
           : flagshipArtStatusLabel(profile),
       silhouetteBrief,
+      turnaroundKeyPoseAuthored: Boolean(silhouetteBrief?.turnaroundKeyPose),
       emojiEqualsFinished: false,
       finishedModelClaimed: false,
       originalArtApproved: false,
@@ -323,6 +355,7 @@ export function buildFlagshipOriginalArtProgressReport(
     flagshipCount: rows.length,
     proceduralCandidateCount: rows.filter((r) => r.currentStatus === 'procedural_candidate').length,
     emojiIdentityCount: rows.filter((r) => r.currentStatus === 'emoji_identity_candidate').length,
+    turnaroundKeyPoseCount: rows.filter((r) => r.turnaroundKeyPoseAuthored).length,
     finishedModelsClaimed: false,
     emojiEqualsFinished: false,
     anyHumanApprovedFinal: false,
@@ -352,6 +385,10 @@ export function assertFlagshipOriginalArtProgress(report: FlagshipArtProgressRep
       if (row.silhouetteBrief.finishedModel || row.silhouetteBrief.humanApproved) {
         throw new Error(`Silhouette brief ${row.taxonId} claimed finished/approved`);
       }
+      const kp = row.silhouetteBrief.turnaroundKeyPose;
+      if (kp && (kp.finishedModel || kp.humanApproved)) {
+        throw new Error(`Turnaround key-pose ${row.taxonId} claimed finished/approved`);
+      }
     }
   }
 }
@@ -361,8 +398,8 @@ export function renderFlagshipOriginalArtProgressHtml(
 ): string {
   assertFlagshipOriginalArtProgress(report);
   return [
-    '<aside class="flagship-art-progress" data-emoji-finished="false" data-procedural-wave="4" role="note">',
-    `<p><strong>Original art progress:</strong> ${report.proceduralCandidateCount}/${report.flagshipCount} flagships have procedural silhouette briefs (waves 1–4) — emoji ≠ finished; human-approved finals still pending.</p>`,
+    '<aside class="flagship-art-progress" data-emoji-finished="false" data-procedural-wave="4" data-keypose-wave="5" role="note">',
+    `<p><strong>Original art progress:</strong> ${report.proceduralCandidateCount}/${report.flagshipCount} flagships have procedural silhouette briefs (waves 1–4) + ${report.turnaroundKeyPoseCount} turnaround key-pose note sets (wave 5) — procedural≠finished; emoji ≠ finished; human-approved finals still pending.</p>`,
     `<p>finishedModelsClaimed=false · humanApproved=false · ${escapeHtml(report.rule)}</p>`,
     '</aside>',
   ].join('');

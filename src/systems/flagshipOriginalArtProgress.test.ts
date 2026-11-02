@@ -15,13 +15,14 @@ import {
 import { buildFlagshipArtHonestyReport, assertFlagshipArtHonestyReport } from './flagshipArtHonestyPresentation';
 
 describe('flagshipOriginalArtProgress', () => {
-  it('advances waves 1–4 so all 24 flagships have procedural briefs without claiming finished art', () => {
-    const report = buildFlagshipOriginalArtProgressReport('2026-10-30T19:00:00.000Z');
+  it('advances waves 1–4 + wave-5 turnaround key-poses without claiming finished art', () => {
+    const report = buildFlagshipOriginalArtProgressReport('2026-11-02T00:00:00.000Z');
     assertFlagshipOriginalArtProgress(report);
 
     expect(report.flagshipCount).toBe(24);
     expect(report.proceduralCandidateCount).toBe(PROCEDURAL_ART_WAVES.length);
     expect(report.proceduralCandidateCount).toBe(24);
+    expect(report.turnaroundKeyPoseCount).toBe(24);
     expect(report.emojiIdentityCount).toBe(0);
     expect(report.finishedModelsClaimed).toBe(false);
     expect(report.emojiEqualsFinished).toBe(false);
@@ -32,6 +33,10 @@ describe('flagshipOriginalArtProgress', () => {
       expect(row?.currentStatus).toBe('procedural_candidate');
       expect(row?.silhouetteBrief?.assetKind).toBe('silhouette_brief');
       expect(row?.silhouetteBrief?.finishedModel).toBe(false);
+      expect(row?.silhouetteBrief?.turnaroundKeyPose?.assetKind).toBe('turnaround_keypose_notes');
+      expect(row?.silhouetteBrief?.turnaroundKeyPose?.finishedModel).toBe(false);
+      expect(row?.silhouetteBrief?.turnaroundKeyPose?.humanApproved).toBe(false);
+      expect(row?.turnaroundKeyPoseAuthored).toBe(true);
       expect(row?.emojiEqualsFinished).toBe(false);
     }
 
@@ -47,15 +52,18 @@ describe('flagshipOriginalArtProgress', () => {
     expect(buildSilhouetteBrief('trilobita_order')?.habitatBackdrop).toMatch(/fossil/i);
     expect(buildSilhouetteBrief('formica_rufa')?.habitatBackdrop).toMatch(/ant|forest/i);
     expect(buildSilhouetteBrief('pachnoda_marginata')?.locomotionCue).toMatch(/flight|climb/i);
+    expect(buildSilhouetteBrief('panthera_leo')?.turnaroundKeyPose?.front).toMatch(/Front key-pose/i);
 
     const html = renderFlagshipOriginalArtProgressHtml(report);
     expect(html).toContain('emoji ≠ finished');
     expect(html).toContain('data-emoji-finished="false"');
     expect(html).toContain('data-procedural-wave="4"');
+    expect(html).toContain('data-keypose-wave="5"');
+    expect(html).toContain('procedural≠finished');
     expect(html).toContain('human-approved finals still pending');
 
     // Honesty report still refuses finished/approved claims after procedural progress.
-    const honesty = buildFlagshipArtHonestyReport('2026-10-30T19:00:00.000Z');
+    const honesty = buildFlagshipArtHonestyReport('2026-11-02T00:00:00.000Z');
     assertFlagshipArtHonestyReport(honesty);
     expect(honesty.emojiEqualsFinished).toBe(false);
     expect(honesty.finishedModelsClaimed).toBe(false);
