@@ -11,9 +11,11 @@ describe('museum art honesty — procedural ≠ finished', () => {
     expect(report.schema).toBe('archive.museum_art_honesty/v1');
     expect(report.museumHubGameplayImplemented).toBe(true);
     expect(report.museumArtFinished).toBe(false);
+    expect(report.regionFieldArtFinished).toBe(false);
     expect(report.proceduralNeqFinished).toBe(true);
     expect(report.visual.VISUAL_MODEL_REVIEW).toBe('UNAVAILABLE');
     expect(report.visual.museumHubCapture).toBe('PROCEDURAL_PROXY');
+    expect(report.visual.regionFieldCapture).toBe('PROCEDURAL_PROXY');
     expect(report.visual.paintedRemasterClaimed).toBe(false);
     expect(report.HUMAN).toBe(false);
     expect(report.RC2).toBe(false);

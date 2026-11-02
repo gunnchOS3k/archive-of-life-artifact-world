@@ -1,0 +1,20 @@
+{
+  "schema": "archive.museum_region_art_honesty_continue.v1",
+  "human_false": true,
+  "rc2_false": true,
+  "v1_false": true,
+  "ci_exact_head": {
+    "sha": "cd6f27c",
+    "pr": 56,
+    "public_actions_html": "green (favicon-success; 0 failed /pull/56/checks)"
+  },
+  "museum": {
+    "museum_art_finished": false,
+    "region_field_art_finished": false,
+    "procedural_neq_finished": true,
+    "museum_hub_capture": "PROCEDURAL_PROXY",
+    "region_field_capture": "PROCEDURAL_PROXY"
+  },
+  "notes": "Deepen after exact-head CI green on cd6f27c; region field honesty alongside museum.",
+  "base_tip": "cd6f27c"
+}
