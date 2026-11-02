@@ -19,7 +19,8 @@
     "repeated video capture",
     "large Android/iOS export batches",
     "painted remasters / large asset-gen",
+    "museum hub finished art pass (procedural≠finished)",
     "additional QEMU soaks"
   ],
-  "notes": "Lightweight harness/manifest only. No invented pixel critique. Heavy capture deferred while Product-Use QEMU is active."
+  "notes": "Harness + manifest only. Museum/region surfaces are PROCEDURAL_PROXY — procedural≠finished painted remaster. No invented pixel critique. VISUAL_MODEL_REVIEW stays UNAVAILABLE. HUMAN/RC2/V1 false."
 }

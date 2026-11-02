@@ -1,0 +1,21 @@
+{
+  "schema": "archive.museum_art_honesty_continue.v1",
+  "human_false": true,
+  "rc2_false": true,
+  "v1_false": true,
+  "museum": {
+    "gameplay_may_be_fully_implemented": true,
+    "art_finished": false,
+    "procedural_neq_finished": true,
+    "museum_hub_capture": "PROCEDURAL_PROXY",
+    "VISUAL_MODEL_REVIEW": "UNAVAILABLE",
+    "painted_remaster_claimed": false
+  },
+  "tests": {
+    "museumArtHonesty_assert": "PASS",
+    "method": "tsx assessMuseumArtHonesty + buildVisualPackHarness (lean; no full npm install)"
+  },
+  "notes": "Art/museum honesty deepen: procedural canvas ≠ finished painted remaster. Does not invent HUMAN/RC2/V1.",
+  "base_tip": "42ce7a3",
+  "floor_preserved_newer_than": "ad8b61c"
+}
