@@ -38,6 +38,11 @@ export class TemporalMapService {
     return this.catalog;
   }
 
+  /** Non-throwing accessor for synchronous renderers that may run before boot completes. */
+  peekCatalog(): TemporalEarthMapCatalog | null {
+    return this.catalog;
+  }
+
   getMapForGate(timeGateId: string): TemporalEarthMapRecord | undefined {
     return this.mapsByGate.get(timeGateId);
   }

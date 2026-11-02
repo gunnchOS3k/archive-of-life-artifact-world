@@ -104,8 +104,10 @@ export function mapSpeciesToArchiveDexEntry(
     habitatRange: mergeDefined(
       {
         continents: sp.distribution?.continents,
-        biomes: sp.distribution?.habitats,
+        biomes: sp.distribution?.biomes,
         habitats: sp.distribution?.habitats,
+        rangeDataMode: sp.distribution?.dataMode,
+        rangeUncertaintyNote: sp.distribution?.uncertaintyNote,
         fossilLocations: sp.fossil?.fossilLocations ?? gp?.fossilLocations,
         paleoenvironment: sp.fossil?.paleoenvironment,
       },

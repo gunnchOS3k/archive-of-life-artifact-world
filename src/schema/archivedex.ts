@@ -99,6 +99,9 @@ export interface HabitatRangeProfile {
   countries?: string[];
   biomes?: string[];
   habitats?: string[];
+  /** Copied from DistributionProfile.dataMode; mock_sample ranges are planning twins. */
+  rangeDataMode?: 'mock_sample' | 'source_verified' | 'game_authored';
+  rangeUncertaintyNote?: string;
   elevationRange?: string;
   depthRange?: string;
   migration?: string;

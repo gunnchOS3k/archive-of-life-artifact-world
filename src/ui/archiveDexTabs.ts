@@ -13,6 +13,8 @@ import {
 } from '@/systems/iucnBlockedPresentation';
 import { renderTaxonomyReconcileEntryHtml } from '@/services/ingestion/taxonomyReconcile';
 import { buildArchiveDexEntryPresentation } from '@/systems/museumDexPresentation';
+import { renderGeologyExhibitHtml, renderHabitatExhibitHtml } from '@/systems/habitatGeologyExhibit';
+import { temporalMapService } from '@/services/TemporalMapService';
 
 type EmptyLabel = string;
 
@@ -152,6 +154,7 @@ export function renderArchiveDexTab(entry: ArchiveDexEntry, tab: ArchiveDexTabId
         ${field('Ancient environment', entry.time?.ancientEnvironment)}
         ${field('Confidence', entry.time?.confidence, 'Scientifically uncertain')}
         ${entry.time?.fossilRecordLimitations ? `<p class="uncertainty-note">${entry.time.fossilRecordLimitations}</p>` : field('Fossil record limitations', undefined, 'Not available in current snapshot')}
+        ${renderGeologyExhibitHtml(entry, temporalMapService.peekCatalog())}
       `;
       break;
     case 'habitat':
@@ -164,6 +167,7 @@ export function renderArchiveDexTab(entry: ArchiveDexEntry, tab: ArchiveDexTabId
         ${field('Paleoenvironment', entry.habitatRange?.paleoenvironment)}
         ${field('In-game clue', entry.habitatRange?.inGameClue, 'Not available in current snapshot')}
         ${listField('Required tools', entry.habitatRange?.requiredTools, 'None required')}
+        ${renderHabitatExhibitHtml(entry)}
       `;
       break;
     case 'body':
