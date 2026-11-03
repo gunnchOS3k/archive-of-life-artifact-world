@@ -14,6 +14,8 @@ import {
   computeEntryCompletion,
 } from './archivedexMapper';
 import { getCollectedIds } from '@/systems/artifactSystem';
+import { hasAuthoredStudy } from '@/art/organismStudies';
+import { isFieldStudyEarned } from '@/systems/fieldStudyEarned';
 
 const PROFILES_PATH = '/data/bundles/archivedex-profiles.json';
 
@@ -48,7 +50,9 @@ export class ArchiveDexService {
     if (!sp) return null;
 
     const collected = getCollectedIds(state);
-    const discovered = collected.has(id) || sp.representationTier <= 3;
+    const discovered = hasAuthoredStudy(id)
+      ? isFieldStudyEarned(state, id)
+      : collected.has(id) || sp.representationTier <= 3;
     const artifactTypes = state.artifacts.filter((a) => a.speciesId === id).map((a) => a.artifactType);
     const timeRange = this.timeAtlas.getTaxonTimeRange(id);
     const traits = this.catalog.getConfig().traits;
@@ -71,7 +75,11 @@ export class ArchiveDexService {
       };
     }
 
-    const reveal = getEntryRevealLevel(entry, discovered);
+    const reveal = hasAuthoredStudy(id)
+      ? isFieldStudyEarned(state, id)
+        ? 'studied'
+        : 'hidden'
+      : getEntryRevealLevel(entry, discovered);
     entry.overview = {
       ...entry.overview,
       completionPercent: computeEntryCompletion(entry, ['overview', 'taxonomy', 'habitat', 'artifacts']),
@@ -174,8 +182,10 @@ export class ArchiveDexService {
     if (scope.group) pool = pool.filter((e) => e.group === scope.group);
     if (scope.heroOnly) pool = pool.filter((e) => e.representationTier >= 6);
 
-    const documented = pool.filter(
-      (e) => collected.has(e.id) || e.representationTier <= 3
+    const documented = pool.filter((e) =>
+      hasAuthoredStudy(e.id)
+        ? isFieldStudyEarned(state, e.id)
+        : collected.has(e.id) || e.representationTier <= 3,
     ).length;
 
     const label = scope.region

@@ -10,6 +10,12 @@ import { formatArtifactType } from '@/systems/artifactSystem';
 import { renderSourcesEvidencePanel } from '@/ui/evidence/SourcesEvidencePanel';
 import { blueWhalePlateHtml } from '@/ui/blueWhaleStudy';
 import { mountAuthoredOrganismPanel } from '@/ui/authoredOrganismPanel';
+import { hasAuthoredStudy } from '@/art/organismStudies';
+import {
+  commitFieldStudyEarned,
+  fieldStudyDiscovered,
+  isFieldStudyEarned,
+} from '@/systems/fieldStudyEarned';
 import {
   buildArchiveDexEntryPresentation,
   mountArchiveDexHonestyBanner,
@@ -293,7 +299,11 @@ export class ArchiveDexUI {
       return true;
     }
 
-    const reveal = getEntryRevealLevel(entry, collected || entry.representationTier <= 3);
+    const reveal = hasAuthoredStudy(entry.id)
+      ? isFieldStudyEarned(this.state, entry.id)
+        ? 'studied'
+        : 'hidden'
+      : getEntryRevealLevel(entry, collected || entry.representationTier <= 3);
     const tabs = getVisibleTabs(entry, reveal);
     const presentation = buildArchiveDexEntryPresentation(entry.id);
     const icon = reveal === 'hidden'
@@ -351,7 +361,10 @@ export class ArchiveDexUI {
       });
     });
 
-    this.entryContent.innerHTML = renderArchiveDexTab(entry, this.activeTab, collected || entry.representationTier <= 3);
+    const showEntryBody = hasAuthoredStudy(entry.id)
+      ? isFieldStudyEarned(this.state, entry.id)
+      : collected || entry.representationTier <= 3;
+    this.entryContent.innerHTML = renderArchiveDexTab(entry, this.activeTab, showEntryBody);
 
     const related = this.dexService.getRelatedEntries(id);
     if (related.length) {
@@ -403,7 +416,9 @@ export class ArchiveDexUI {
     const result = this.dexService.searchEntries({ ...this.filters, page: this.page, pageSize: this.pageSize }, this.state);
 
     this.grid.innerHTML = result.entries.map((entry) => {
-      const discovered = collectedIds.has(entry.id) || entry.representationTier <= 3;
+      const discovered = hasAuthoredStudy(entry.id)
+        ? fieldStudyDiscovered(entry.id, entry.representationTier, this.state)
+        : collectedIds.has(entry.id) || entry.representationTier <= 3;
       const presentation = buildArchiveDexEntryPresentation(entry.id);
       const icon = discovered
         ? presentation?.representationMark ??
@@ -425,11 +440,12 @@ export class ArchiveDexUI {
         ? (presentation?.ariaLabel ?? entry.commonName)
         : 'Undocumented species';
       return `
-        <div class="archive-card ${discovered ? '' : 'locked'}" data-id="${entry.id}" data-discovered="${discovered}" role="button" tabindex="0" aria-label="${aria.replace(/"/g, '&quot;')}">
+        <div class="archive-card ${discovered ? '' : 'locked'}" data-id="${entry.id}" data-discovered="${discovered}"${hasAuthoredStudy(entry.id) ? ` data-earned="${discovered}" data-tier-shortcut="ignored"` : ''} role="button" tabindex="0" aria-label="${aria.replace(/"/g, '&quot;')}">
           <div class="species-icon ${discovered ? '' : 'silhouette'}" aria-hidden="true">${discovered ? icon : '❓'}</div>
           <div class="species-name">${discovered ? entry.commonName : 'Undocumented'}</div>
           <div class="species-tier">T${entry.representationTier}</div>
           ${discovered ? renderIucnPlayerStatusHtml(iucn) : '<span class="species-clue">Field documentation required</span>'}
+          ${hasAuthoredStudy(entry.id) && !discovered ? `<button type="button" class="btn-secondary" data-document-field-study="${entry.id}">Document this field study</button>` : ''}
           ${presentation && discovered ? `<span class="species-art-honesty">${presentation.artStatusLabel}</span>` : ''}
         </div>`;
     }).join('');
@@ -445,10 +461,29 @@ export class ArchiveDexUI {
     this.grid.querySelectorAll('.archive-card').forEach((card) => {
       const open = () => {
         const id = (card as HTMLElement).dataset.id!;
+        const row = result.entries.find((e) => e.id === id);
         const discovered = (card as HTMLElement).dataset.discovered === 'true';
-        if (!discovered && result.entries.find((e) => e.id === id)?.representationTier! >= 4) return;
+        if (hasAuthoredStudy(id)) {
+          if (!fieldStudyDiscovered(id, row?.representationTier ?? 0, this.state)) return;
+          void this.openEntry(id);
+          return;
+        }
+        if (!discovered && row?.representationTier! >= 4) return;
         void this.openEntry(id);
       };
+      card.querySelector('[data-document-field-study]')?.addEventListener('click', (event) => {
+        event.stopPropagation();
+        if (!this.state) return;
+        const speciesId = (event.currentTarget as HTMLElement).dataset.documentFieldStudy;
+        const row = result.entries.find((e) => e.id === speciesId);
+        if (!row) return;
+        commitFieldStudyEarned(this.state, {
+          id: row.id,
+          commonName: row.commonName,
+          scientificName: row.scientificName,
+        }, 'document');
+        this.render();
+      });
       card.addEventListener('click', open);
       card.addEventListener('keydown', (e) => {
         if ((e as KeyboardEvent).key === 'Enter') open();

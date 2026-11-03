@@ -35,6 +35,8 @@ import {
 } from '@/systems/museumDexPresentation';
 import { FossilExcavation } from '@/minigames/fossilExcavation';
 import { WildlifeObservation } from '@/minigames/wildlifeObservation';
+import { hasAuthoredStudy } from '@/art/organismStudies';
+import { noteFieldStudyEarned } from '@/systems/fieldStudyEarned';
 import { ArchiveDexUI } from '@/ui/archiveDexUI';
 import { ArchiveDexService } from '@/services/ArchiveDexService';
 import { NotebookUI } from '@/ui/notebookUI';
@@ -750,6 +752,13 @@ export class Game {
       modules,
     });
     if (result.success) {
+      if (hasAuthoredStudy(species.id)) {
+        noteFieldStudyEarned(this.state, {
+          id: species.id,
+          commonName: species.commonName,
+          scientificName: species.scientificName,
+        }, 'observe');
+      }
       this.lifeling.triggerReaction('celebrate');
       const kind = species.conservationStatus === 'Extinct' ? 'excavate_complete' : 'observe_complete';
       track(kind, {
