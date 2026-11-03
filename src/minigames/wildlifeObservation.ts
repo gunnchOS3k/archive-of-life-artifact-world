@@ -1,4 +1,17 @@
 import type { PlayableSpecies } from '@/services/DataCatalogService';
+import {
+  flagshipArtStatusLabel,
+  getFlagshipProfile,
+  type FlagshipObservationProfile,
+} from '@/services/flagshipTaxonProfiles';
+import { getSpeciesIcon } from '@/services/speciesRepresentation';
+import { isReducedMotionActive } from '@/systems/accessibility';
+import {
+  resolveObservationMotionForTaxon,
+  stepObservationPose,
+  type ObservationMotionMode,
+} from '@/systems/observationLocomotion';
+import { drawObservationSilhouetteStub } from '@/systems/observationSilhouette';
 
 export class WildlifeObservation {
   private canvas: HTMLCanvasElement;
@@ -10,9 +23,20 @@ export class WildlifeObservation {
   holding = false;
   private animalX: number;
   private animalY: number;
-  private animalDir = 1;
+  private animalDir: 1 | -1 = 1;
+  private baseY: number;
   private timer = 0;
   private complete = false;
+  private moveSpeedPx = 30;
+  private patienceGain = 25;
+  private patienceDecay = 5;
+  private alertDecayWhileHolding = 15;
+  private alertRiseIdle = 10;
+  private habitatCue = '';
+  private artStatusLabel = 'Art status: emoji identity candidate (not a finished model)';
+  private locomotionCue = '';
+  private motionMode: ObservationMotionMode = 'amble';
+  private flagshipProfile: FlagshipObservationProfile | undefined;
   private _onKeyDown: (e: KeyboardEvent) => void;
   private _onKeyUp: (e: KeyboardEvent) => void;
   private _onPointerDown: (e: PointerEvent) => void;
@@ -24,10 +48,29 @@ export class WildlifeObservation {
     this.species = species;
     this.onComplete = onComplete;
     this.animalX = canvas.width / 2;
-    this.animalY = canvas.height / 2 + 30;
+    this.baseY = canvas.height / 2 + 30;
+    this.animalY = this.baseY;
     this.animalDir = 1;
     this.timer = 0;
     this.complete = false;
+    const profile = getFlagshipProfile(species.id);
+    this.flagshipProfile = profile;
+    if (profile) {
+      this.moveSpeedPx = profile.moveSpeedPx;
+      this.alertness = profile.baseAlertness;
+      this.patienceGain = profile.patienceGain;
+      this.patienceDecay = profile.patienceDecay;
+      this.alertDecayWhileHolding = profile.alertDecayWhileHolding;
+      this.alertRiseIdle = profile.alertRiseIdle;
+      this.habitatCue = profile.habitatCues[0] ?? '';
+      this.artStatusLabel = flagshipArtStatusLabel(profile);
+    }
+    const motion = resolveObservationMotionForTaxon(species.id);
+    this.motionMode = motion.mode;
+    this.locomotionCue = motion.locomotionCue ?? '';
+    if (motion.habitatBackdrop && !this.habitatCue) {
+      this.habitatCue = motion.habitatBackdrop;
+    }
 
     this._onKeyDown = (e: KeyboardEvent) => {
       if (e.code === 'Space') {
@@ -57,17 +100,31 @@ export class WildlifeObservation {
     if (this.complete) return;
 
     this.timer += dt;
-    this.animalX += this.animalDir * 30 * dt;
-    if (this.animalX < 80 || this.animalX > this.canvas.width - 80) {
-      this.animalDir *= -1;
-    }
+    const pose = stepObservationPose(
+      this.motionMode,
+      {
+        x: this.animalX,
+        y: this.animalY,
+        facing: this.animalDir,
+        timer: this.timer,
+        moveSpeedPx: this.moveSpeedPx,
+        baseY: this.baseY,
+        canvasWidth: this.canvas.width,
+        canvasHeight: this.canvas.height,
+      },
+      dt,
+      isReducedMotionActive(),
+    );
+    this.animalX = pose.x;
+    this.animalY = pose.y;
+    this.animalDir = pose.facing;
 
     if (this.holding) {
-      this.patience = Math.min(100, this.patience + 25 * dt);
-      this.alertness = Math.max(0, this.alertness - 15 * dt);
+      this.patience = Math.min(100, this.patience + this.patienceGain * dt);
+      this.alertness = Math.max(0, this.alertness - this.alertDecayWhileHolding * dt);
     } else {
-      this.alertness = Math.min(100, this.alertness + 10 * dt);
-      this.patience = Math.max(0, this.patience - 5 * dt);
+      this.alertness = Math.min(100, this.alertness + this.alertRiseIdle * dt);
+      this.patience = Math.max(0, this.patience - this.patienceDecay * dt);
     }
 
     if (this.alertness >= 100) {
@@ -86,7 +143,6 @@ export class WildlifeObservation {
     const w = this.canvas.width;
     const h = this.canvas.height;
 
-    // Sky/ground
     const gradient = ctx.createLinearGradient(0, 0, 0, h);
     gradient.addColorStop(0, '#87CEEB');
     gradient.addColorStop(0.6, '#8BA84A');
@@ -94,23 +150,33 @@ export class WildlifeObservation {
     ctx.fillStyle = gradient;
     ctx.fillRect(0, 0, w, h);
 
-    // Bushes
     ctx.fillStyle = '#2D5A27';
     ctx.beginPath();
     ctx.ellipse(60, h - 40, 50, 30, 0, 0, Math.PI * 2);
     ctx.ellipse(w - 60, h - 50, 40, 25, 0, 0, Math.PI * 2);
     ctx.fill();
 
-    // Simple silhouette drawn for observation minigame
-    const alert = this.alertness / 100;
+    // Procedural silhouette stub under the identity mark (≠ finished model).
     ctx.save();
     ctx.translate(this.animalX, this.animalY);
-    if (this.animalDir < 0) ctx.scale(-1, 1);
+    drawObservationSilhouetteStub(ctx, this.motionMode, this.animalDir);
 
-    const icons: Record<string, string> = { Mammal: '🦁', Insect: '🦋', Arachnid: '🕷️', Reptile: '🦎' };
+    const alert = this.alertness / 100;
     ctx.font = '48px sans-serif';
     ctx.textAlign = 'center';
-    ctx.fillText(icons[this.species.group] || '🐾', 0, 0);
+    if (this.animalDir < 0) ctx.scale(-1, 1);
+    ctx.fillText(
+      getSpeciesIcon({
+        id: this.species.id,
+        commonName: this.species.commonName,
+        scientificName: this.species.scientificName,
+        family: this.species.family,
+        group: this.species.group,
+        conservationStatus: this.species.conservationStatus,
+      }),
+      0,
+      0,
+    );
 
     if (alert > 0.5) {
       ctx.font = '20px sans-serif';
@@ -119,29 +185,50 @@ export class WildlifeObservation {
 
     ctx.restore();
 
-    // Viewfinder
     ctx.strokeStyle = this.holding ? '#7EC8A3' : 'rgba(255,255,255,0.5)';
     ctx.lineWidth = 2;
     const vfSize = 80;
     ctx.strokeRect(w / 2 - vfSize / 2, h / 2 - vfSize / 2 - 20, vfSize, vfSize);
 
-    // Instructions
     ctx.fillStyle = '#fff';
     ctx.font = '12px sans-serif';
     ctx.textAlign = 'center';
+    const holdHint =
+      typeof window !== 'undefined' && window.matchMedia?.('(pointer: coarse)').matches
+        ? 'Hold on screen to observe quietly'
+        : 'Hold Space to observe quietly';
+    const habitat = this.habitatCue ? ` · ${this.habitatCue}` : '';
     ctx.fillText(
-      this.holding
-        ? 'Observing... stay still!'
-        : (typeof window !== 'undefined' && window.matchMedia?.('(pointer: coarse)').matches
-          ? 'Hold on screen to observe quietly'
-          : 'Hold Space to observe quietly'),
+      this.holding ? `Observing ${this.species.commonName}... stay still!${habitat}` : `${holdHint}${habitat}`,
       w / 2,
-      h - 15
+      h - 40,
     );
+    ctx.font = '10px sans-serif';
+    ctx.fillStyle = 'rgba(255,255,255,0.85)';
+    ctx.fillText(this.artStatusLabel, w / 2, h - 24);
+    if (this.locomotionCue) {
+      ctx.fillText(`Locomotion (authored): ${this.locomotionCue} · mode=${this.motionMode}`, w / 2, h - 10);
+    }
   }
 
   getPatience() {
     return this.patience;
+  }
+
+  getArtStatusLabel() {
+    return this.artStatusLabel;
+  }
+
+  getMotionMode() {
+    return this.motionMode;
+  }
+
+  getLocomotionCue() {
+    return this.locomotionCue;
+  }
+
+  getFlagshipProfile() {
+    return this.flagshipProfile;
   }
 
   destroy() {

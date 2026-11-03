@@ -19,15 +19,15 @@
       "taxonomy": {
         "family": "Aeshnidae",
         "rank": "species",
-        "acceptedName": "Anax junius",
-        "catalogueOfLifeId": "MOCK-COL-anax_junius"
+        "acceptedName": "Anax junius"
       },
       "conservation": {
         "iucnCategory": "Least Concern",
-        "assessed": true,
-        "sourceVersion": "mock-iucn-2026-07",
+        "assessed": false,
+        "sourceVersion": "quarantined-mock-iucn-2026-07",
         "lastUpdated": "2026-07-02",
-        "iucnTaxonId": 10084
+        "dataMode": "mock_sample",
+        "uncertaintyNote": "IUCN category is a gameplay planning label from legacy authored data \u2014 not an IUCN Red List source-verified assessment."
       },
       "distribution": {
         "continents": [
@@ -38,15 +38,16 @@
           "pond",
           "river"
         ],
-        "sourceVersion": "mock-gbif-2026-07",
+        "sourceVersion": "quarantined-mock-gbif-2026-07",
         "lastUpdated": "2026-07-02",
-        "gbifTaxonKey": 4100354,
         "occurrenceSummaries": [
           {
             "region": "North America",
-            "occurrenceCount": 2562
+            "occurrenceCount": 0
           }
-        ]
+        ],
+        "dataMode": "mock_sample",
+        "uncertaintyNote": "Continent/habitat hints are game-authored planning twins \u2014 not GBIF occurrence-verified ranges."
       },
       "artifactTemplates": [
         {
@@ -137,19 +138,19 @@
           "verificationStatus": "game_authored_verified"
         },
         {
-          "source": "catalogue_of_life",
-          "sourceVersion": "mock-sample-2026-07",
-          "sourceRecordId": "MOCK-anax_junius",
-          "catalogueOfLifeId": "MOCK-COL-anax_junius",
+          "source": "mock_sample",
+          "sourceVersion": "quarantined-mock-sample-2026-07",
+          "sourceRecordId": "QUARANTINED-MOCK-anax_junius",
           "license": "MOCK-SAMPLE",
-          "citation": "MOCK SAMPLE \u2014 not sourced from live API; requires approved source snapshot import",
+          "citation": "QUARANTINED MOCK SAMPLE \u2014 not Catalogue of Life / GBIF / IUCN / PBDB; not source-verified. Retained for pipeline demos only until an approved snapshot import replaces it.",
           "citationRequired": true,
           "retrievedAt": "2026-07-05T03:27:29.539Z",
           "lastUpdated": "2026-07-05T03:27:29.539Z",
           "isMockData": true,
           "verificationStatus": "mock_sample"
         }
-      ]
+      ],
+      "scientificScopeStatement": "Gameplay-authored hero record. External taxonomy/conservation/distribution fields that lack an approved COL/GBIF/IUCN/PBDB snapshot remain quarantined mock samples \u2014 never source-verified. Catalog is intentionally incomplete (not Earth-complete)."
     },
     {
       "id": "trilobita_order",
@@ -170,15 +171,15 @@
       "taxonomy": {
         "family": "Trilobita",
         "rank": "order",
-        "acceptedName": "Trilobita (order)",
-        "catalogueOfLifeId": "MOCK-COL-trilobita_order"
+        "acceptedName": "Trilobita (order)"
       },
       "conservation": {
         "iucnCategory": "Extinct",
-        "assessed": true,
-        "sourceVersion": "mock-iucn-2026-07",
+        "assessed": false,
+        "sourceVersion": "quarantined-mock-iucn-2026-07",
         "lastUpdated": "2026-07-02",
-        "iucnTaxonId": 60887
+        "dataMode": "mock_sample",
+        "uncertaintyNote": "IUCN category is a gameplay planning label from legacy authored data \u2014 not an IUCN Red List source-verified assessment."
       },
       "distribution": {
         "continents": [
@@ -187,15 +188,16 @@
         "habitats": [
           "ancient seafloor"
         ],
-        "sourceVersion": "mock-gbif-2026-07",
+        "sourceVersion": "quarantined-mock-gbif-2026-07",
         "lastUpdated": "2026-07-02",
-        "gbifTaxonKey": 294847,
         "occurrenceSummaries": [
           {
             "region": "Global ancient oceans",
-            "occurrenceCount": 3452
+            "occurrenceCount": 0
           }
-        ]
+        ],
+        "dataMode": "mock_sample",
+        "uncertaintyNote": "Continent/habitat hints are game-authored planning twins \u2014 not GBIF occurrence-verified ranges."
       },
       "fossil": {
         "timeRange": "Cambrian\u2013Permian (~521\u2013252 Ma)",
@@ -209,8 +211,7 @@
           "Horseshoe crabs",
           "Arachnids"
         ],
-        "paleobiodbTaxonNo": 62096,
-        "sourceVersion": "mock-pbdb-2026-07",
+        "sourceVersion": "quarantined-mock-pbdb-2026-07",
         "lastUpdated": "2026-07-02"
       },
       "artifactTemplates": [
@@ -292,19 +293,19 @@
           "verificationStatus": "game_authored_verified"
         },
         {
-          "source": "paleobiodb",
-          "sourceVersion": "mock-sample-2026-07",
-          "sourceRecordId": "MOCK-trilobita_order",
-          "paleobiodbTaxonNo": 447527,
+          "source": "mock_sample",
+          "sourceVersion": "quarantined-mock-sample-2026-07",
+          "sourceRecordId": "QUARANTINED-MOCK-trilobita_order",
           "license": "MOCK-SAMPLE",
-          "citation": "MOCK SAMPLE \u2014 not sourced from live API; requires approved source snapshot import",
+          "citation": "QUARANTINED MOCK SAMPLE \u2014 not Catalogue of Life / GBIF / IUCN / PBDB; not source-verified. Retained for pipeline demos only until an approved snapshot import replaces it.",
           "citationRequired": true,
           "retrievedAt": "2026-07-05T03:27:29.539Z",
           "lastUpdated": "2026-07-05T03:27:29.539Z",
           "isMockData": true,
           "verificationStatus": "mock_sample"
         }
-      ]
+      ],
+      "scientificScopeStatement": "Gameplay-authored hero record. External taxonomy/conservation/distribution fields that lack an approved COL/GBIF/IUCN/PBDB snapshot remain quarantined mock samples \u2014 never source-verified. Catalog is intentionally incomplete (not Earth-complete)."
     }
   ],
   "expedition": {

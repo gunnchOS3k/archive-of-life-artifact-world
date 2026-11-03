@@ -82,6 +82,39 @@ checks.push({
     : 'Hero taxon scientific fields are source-verified',
 });
 
+/** Honesty firewall: mock / MOCK-COL rows must never be labeled source_verified. */
+const mockLabeledVerified = hero.species.flatMap((species) =>
+  species.provenance
+    .filter((p) => {
+      const looksMock =
+        p.isMockData === true ||
+        p.source === 'mock_sample' ||
+        p.license === 'MOCK-SAMPLE' ||
+        String(p.sourceRecordId || '').includes('MOCK') ||
+        String(p.catalogueOfLifeId || '').startsWith('MOCK-');
+      return looksMock && p.verificationStatus === 'source_verified';
+    })
+    .map((p) => `${species.id}:${p.source}`),
+);
+checks.push({
+  name: 'mock_never_labeled_source_verified',
+  passed: mockLabeledVerified.length === 0,
+  message: mockLabeledVerified.length
+    ? `Mock provenance falsely labeled source_verified: ${mockLabeledVerified.slice(0, 5).join(', ')}`
+    : 'No mock provenance is labeled source_verified',
+});
+
+const mockColIds = hero.species.filter((species) =>
+  String(species.taxonomy?.catalogueOfLifeId || '').startsWith('MOCK-'),
+);
+checks.push({
+  name: 'hero_taxonomy_no_mock_col_ids',
+  passed: mockColIds.length === 0,
+  message: mockColIds.length
+    ? `${mockColIds.length} hero taxa still expose MOCK-COL catalogueOfLifeId values`
+    : 'Hero taxonomy does not expose MOCK-COL identifiers',
+});
+
 const blockingReasons = checks.filter((check) => !check.passed).map((check) => check.message);
 const report = {
   generatedAt: new Date().toISOString(),

@@ -68,9 +68,7 @@ describe('ScientificDb durable store', () => {
 
 describe('Runtime bridge across launch regions', () => {
   it('traverses encounter/biome/era/clue/observation/artifact/codex/companion via DB', () => {
-    if (!existsSync(TMP_DB)) {
-      buildScienceDb({ root: ROOT, dbPath: TMP_DB, clear: true });
-    }
+    buildScienceDb({ root: ROOT, dbPath: TMP_DB, clear: true });
     const regions = loadJson<Array<{ id: string; biome?: string; name?: string }>>(
       join(ROOT, 'public/data/bundles/regions.json'),
     );
@@ -108,7 +106,8 @@ describe('Runtime bridge across launch regions', () => {
     });
     db.close();
 
-    expect(report.regionsTraversed).toBe(12);
+    expect(report.regionsTraversed).toBeGreaterThanOrEqual(12);
+    expect(report.regionsTraversed).toBe(regions.length);
     expect(report.dbUsedForLookups).toBe(true);
     expect(report.observations).toBeGreaterThanOrEqual(8);
     expect(report.encounters).toBeGreaterThanOrEqual(12);

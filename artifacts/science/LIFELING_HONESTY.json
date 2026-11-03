@@ -1,0 +1,14 @@
+{
+  "schema": "aol.lifeling_honesty.v1",
+  "generatedAt": "2026-10-30T17:30:00.000Z",
+  "iucnGate": "blocked_external",
+  "conservationBadgesShown": false,
+  "assessedStatusesClaimed": false,
+  "cosmeticTraitsOnly": true,
+  "affinityModulesAllowed": true,
+  "mapsUnlockedClaim": false,
+  "sourceVerifiedScienceClaim": false,
+  "humanRc2V1": false,
+  "playerCopy": "Your Lifeling grows from observations and expeditions. Conservation assessments stay blocked until owner IUCN credentials + rights review — no fake assessed badges.",
+  "rule": "Lifeling handling continues under IUCN blocked_external: cosmetic/affinity unlocks only — no Red List assessed badges, no source_verified science claims, maps stay 0/17."
+}

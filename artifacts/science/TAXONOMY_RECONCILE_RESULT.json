@@ -1,0 +1,376 @@
+{
+  "schema": "aol.taxonomy_reconcile.v1",
+  "generatedAt": "2026-10-30T16:00:00.000Z",
+  "anySourceVerified": false,
+  "productionReady": false,
+  "iucnBlocksAllScience": false,
+  "snapshots": [
+    {
+      "sourceId": "wave008_col",
+      "snapshotId": "wave008-scientific-fixture-v1",
+      "retrievedAt": "2024-06-01T12:00:00.000Z",
+      "sha256": "934d290071d3d0fc2e6303c53f2a4cc9acf362241b1f9ce6b2804a8c8090d5c1",
+      "license": "UNVERIFIED-FIXTURE",
+      "recordCount": 6,
+      "dataMode": "sample_fallback",
+      "approvedForUse": false,
+      "sourceVerifiedRelease": false
+    },
+    {
+      "sourceId": "col_batch",
+      "snapshotId": "fixture-col-tier-r-beta-2026-08",
+      "retrievedAt": null,
+      "sha256": "a327779fe10248f4f6d5aba815850d586746df57c3046e011086f1b86b991ea0",
+      "license": "COL terms of use",
+      "recordCount": 595,
+      "dataMode": "sample_fallback",
+      "approvedForUse": false,
+      "sourceVerifiedRelease": false
+    },
+    {
+      "sourceId": "gbif_batch",
+      "snapshotId": "fixture-gbif-tier-r-beta-2026-08",
+      "retrievedAt": null,
+      "sha256": "9d8926155d8cc138e7bbf17167bc5a294721ff9b54861f0945267e895c020c74",
+      "license": "Per-dataset (fixture)",
+      "recordCount": 280,
+      "dataMode": "sample_fallback",
+      "approvedForUse": false,
+      "sourceVerifiedRelease": false
+    },
+    {
+      "sourceId": "pbdb_bounded",
+      "snapshotId": "pbdb_flagship_bounded",
+      "retrievedAt": "2026-10-30T17:40:00Z",
+      "sha256": "fe06fb1c4a7f26ed7b33908ac080a6c86da8adf8bd3a161cb5b671678f80caad",
+      "license": "CC BY 4.0 Paleobiology Database",
+      "recordCount": 3,
+      "dataMode": "sample_fallback",
+      "approvedForUse": false,
+      "sourceVerifiedRelease": false
+    },
+    {
+      "sourceId": "col_batch",
+      "snapshotId": "col_flagship_bounded.local",
+      "retrievedAt": "2026-10-29T05:00:42Z",
+      "sha256": "92b14971c1b423a26aa59c4be5bcb2eb32199c62b0972a607c2d139e2b7be3a0",
+      "license": "COL terms of use (local bounded acquire; not committed)",
+      "recordCount": 120,
+      "dataMode": "sample_fallback",
+      "approvedForUse": false,
+      "sourceVerifiedRelease": false
+    }
+  ],
+  "rows": [
+    {
+      "taxonId": "panthera_leo",
+      "gameScientificName": "Panthera leo",
+      "hits": [
+        {
+          "sourceId": "wave008_col",
+          "acceptedName": "Panthera leo",
+          "scientificName": "Panthera leo",
+          "rank": "species",
+          "synonyms": [
+            "Felis leo"
+          ],
+          "sourceRecordId": "COL:taxon:PL001",
+          "notes": "wave008 scientific fixture — sample_fallback"
+        },
+        {
+          "sourceId": "col_batch",
+          "acceptedName": "Panthera leo",
+          "scientificName": "Panthera leo",
+          "rank": "species",
+          "synonyms": [
+            "Panthera synonymus"
+          ],
+          "sourceRecordId": "COL:fixture:FIX-COL-1",
+          "notes": "COL tier-R fixture batch — sample_fallback"
+        },
+        {
+          "sourceId": "col_batch",
+          "acceptedName": "Panthera leo",
+          "scientificName": "Panthera synonymus",
+          "rank": "species",
+          "synonyms": [],
+          "sourceRecordId": "COL:fixture:FIX-COL-SYN-1",
+          "notes": "COL tier-R fixture batch — sample_fallback"
+        }
+      ],
+      "acceptedNameAgreement": "agree",
+      "synonymCoverage": [
+        "Felis leo",
+        "Panthera synonymus"
+      ],
+      "notes": "Authority hits recorded; still sample_fallback until human rights review",
+      "dataMode": "sample_fallback",
+      "verificationStatus": "needs_source_verification",
+      "sourceVerifiedRelease": false
+    },
+    {
+      "taxonId": "canis_lupus",
+      "gameScientificName": "Canis lupus",
+      "hits": [
+        {
+          "sourceId": "wave008_gbif",
+          "acceptedName": "Canis lupus",
+          "scientificName": "Canis lupus",
+          "rank": "species",
+          "synonyms": [
+            "Canis familiaris"
+          ],
+          "sourceRecordId": "GBIF:taxon:5219173",
+          "notes": "wave008 scientific fixture — sample_fallback"
+        },
+        {
+          "sourceId": "col_batch",
+          "acceptedName": "Canis lupus",
+          "scientificName": "Canis lupus",
+          "rank": "species",
+          "synonyms": [],
+          "sourceRecordId": "COL:fixture:FIX-COL-9",
+          "notes": "COL tier-R fixture batch — sample_fallback"
+        }
+      ],
+      "acceptedNameAgreement": "agree",
+      "synonymCoverage": [
+        "Canis familiaris"
+      ],
+      "notes": "Authority hits recorded; still sample_fallback until human rights review",
+      "dataMode": "sample_fallback",
+      "verificationStatus": "needs_source_verification",
+      "sourceVerifiedRelease": false
+    },
+    {
+      "taxonId": "loxodonta_africana",
+      "gameScientificName": "Loxodonta africana",
+      "hits": [
+        {
+          "sourceId": "col_batch",
+          "acceptedName": "Loxodonta africana",
+          "scientificName": "Loxodonta africana",
+          "rank": "species",
+          "synonyms": [],
+          "sourceRecordId": "COL:fixture:FIX-COL-17",
+          "notes": "COL tier-R fixture batch — sample_fallback"
+        }
+      ],
+      "acceptedNameAgreement": "single_source",
+      "synonymCoverage": [],
+      "notes": "Authority hits recorded; still sample_fallback until human rights review",
+      "dataMode": "sample_fallback",
+      "verificationStatus": "needs_source_verification",
+      "sourceVerifiedRelease": false
+    },
+    {
+      "taxonId": "ursus_maritimus",
+      "gameScientificName": "Ursus maritimus",
+      "hits": [
+        {
+          "sourceId": "col_batch",
+          "acceptedName": "Ursus maritimus",
+          "scientificName": "Ursus maritimus",
+          "rank": "species",
+          "synonyms": [],
+          "sourceRecordId": "COL:fixture:FIX-COL-7",
+          "notes": "COL tier-R fixture batch — sample_fallback"
+        },
+        {
+          "sourceId": "gbif_batch",
+          "acceptedName": "Ursus maritimus",
+          "scientificName": "Ursus maritimus",
+          "rank": null,
+          "synonyms": [],
+          "sourceRecordId": "GBIF:fixture:9000000",
+          "notes": "GBIF tier-R fixture batch — sample_fallback"
+        }
+      ],
+      "acceptedNameAgreement": "agree",
+      "synonymCoverage": [],
+      "notes": "Authority hits recorded; still sample_fallback until human rights review",
+      "dataMode": "sample_fallback",
+      "verificationStatus": "needs_source_verification",
+      "sourceVerifiedRelease": false
+    },
+    {
+      "taxonId": "balaenoptera_musculus",
+      "gameScientificName": "Balaenoptera musculus",
+      "hits": [
+        {
+          "sourceId": "col_batch",
+          "acceptedName": "Balaenoptera musculus",
+          "scientificName": "Balaenoptera musculus",
+          "rank": "species",
+          "synonyms": [],
+          "sourceRecordId": "COL:fixture:FIX-COL-39",
+          "notes": "COL tier-R fixture batch — sample_fallback"
+        }
+      ],
+      "acceptedNameAgreement": "single_source",
+      "synonymCoverage": [],
+      "notes": "Authority hits recorded; still sample_fallback until human rights review",
+      "dataMode": "sample_fallback",
+      "verificationStatus": "needs_source_verification",
+      "sourceVerifiedRelease": false
+    },
+    {
+      "taxonId": "equus_caballus_ferus",
+      "gameScientificName": "Equus ferus przewalskii",
+      "hits": [
+        {
+          "sourceId": "col_batch",
+          "acceptedName": "Equus ferus",
+          "scientificName": "Equus ferus",
+          "rank": "species",
+          "synonyms": [],
+          "sourceRecordId": "COL:fixture:FIX-COL-20",
+          "notes": "COL tier-R fixture batch — sample_fallback"
+        }
+      ],
+      "acceptedNameAgreement": "single_source",
+      "synonymCoverage": [],
+      "notes": "Authority hits recorded; still sample_fallback until human rights review",
+      "dataMode": "sample_fallback",
+      "verificationStatus": "needs_source_verification",
+      "sourceVerifiedRelease": false
+    },
+    {
+      "taxonId": "mammuthus_primigenius",
+      "gameScientificName": "Mammuthus primigenius",
+      "hits": [
+        {
+          "sourceId": "pbdb_bounded",
+          "acceptedName": "Mammuthus primigenius",
+          "scientificName": "Mammuthus primigenius",
+          "rank": "species",
+          "synonyms": [],
+          "sourceRecordId": "PBDB:47880",
+          "notes": "PBDB bounded snapshot — sample_fallback; approvedForUse=false"
+        }
+      ],
+      "acceptedNameAgreement": "single_source",
+      "synonymCoverage": [],
+      "notes": "Authority hits recorded; still sample_fallback until human rights review",
+      "dataMode": "sample_fallback",
+      "verificationStatus": "needs_source_verification",
+      "sourceVerifiedRelease": false
+    },
+    {
+      "taxonId": "tyrannosaurus_rex",
+      "gameScientificName": "Tyrannosaurus rex",
+      "hits": [
+        {
+          "sourceId": "wave008_col",
+          "acceptedName": "Tyrannosaurus rex",
+          "scientificName": "Tyrannosaurus rex",
+          "rank": "species",
+          "synonyms": [],
+          "sourceRecordId": "PBDB:taxon:54833",
+          "notes": "wave008 scientific fixture — sample_fallback"
+        },
+        {
+          "sourceId": "pbdb_bounded",
+          "acceptedName": "Tyrannosaurus rex",
+          "scientificName": "Tyrannosaurus rex",
+          "rank": "species",
+          "synonyms": [],
+          "sourceRecordId": "PBDB:54833",
+          "notes": "PBDB bounded snapshot — sample_fallback; approvedForUse=false"
+        }
+      ],
+      "acceptedNameAgreement": "agree",
+      "synonymCoverage": [],
+      "notes": "Authority hits recorded; still sample_fallback until human rights review",
+      "dataMode": "sample_fallback",
+      "verificationStatus": "needs_source_verification",
+      "sourceVerifiedRelease": false
+    },
+    {
+      "taxonId": "trilobita_order",
+      "gameScientificName": "Trilobita",
+      "hits": [
+        {
+          "sourceId": "pbdb_bounded",
+          "acceptedName": "Trilobita",
+          "scientificName": "Trilobita",
+          "rank": "class",
+          "synonyms": [],
+          "sourceRecordId": "PBDB:19100",
+          "notes": "PBDB bounded snapshot — sample_fallback; approvedForUse=false"
+        }
+      ],
+      "acceptedNameAgreement": "single_source",
+      "synonymCoverage": [],
+      "notes": "Authority hits recorded; still sample_fallback until human rights review",
+      "dataMode": "sample_fallback",
+      "verificationStatus": "needs_source_verification",
+      "sourceVerifiedRelease": false
+    },
+    {
+      "taxonId": "danaus_plexippus",
+      "gameScientificName": "Danaus plexippus",
+      "hits": [
+        {
+          "sourceId": "col_batch",
+          "acceptedName": "Danaus plexippus",
+          "scientificName": "Danaus plexippus",
+          "rank": "species",
+          "synonyms": [],
+          "sourceRecordId": "COL:fixture:FIX-COL-143",
+          "notes": "COL tier-R fixture batch — sample_fallback"
+        }
+      ],
+      "acceptedNameAgreement": "single_source",
+      "synonymCoverage": [],
+      "notes": "Authority hits recorded; still sample_fallback until human rights review",
+      "dataMode": "sample_fallback",
+      "verificationStatus": "needs_source_verification",
+      "sourceVerifiedRelease": false
+    },
+    {
+      "taxonId": "apis_mellifera",
+      "gameScientificName": "Apis mellifera",
+      "hits": [
+        {
+          "sourceId": "col_batch",
+          "acceptedName": "Apis mellifera",
+          "scientificName": "Apis mellifera",
+          "rank": "species",
+          "synonyms": [
+            "Apis synonymus"
+          ],
+          "sourceRecordId": "COL:fixture:FIX-COL-141",
+          "notes": "COL tier-R fixture batch — sample_fallback"
+        },
+        {
+          "sourceId": "col_batch",
+          "acceptedName": "Apis mellifera",
+          "scientificName": "Apis synonymus",
+          "rank": "species",
+          "synonyms": [],
+          "sourceRecordId": "COL:fixture:FIX-COL-SYN-29",
+          "notes": "COL tier-R fixture batch — sample_fallback"
+        },
+        {
+          "sourceId": "gbif_batch",
+          "acceptedName": "Apis mellifera",
+          "scientificName": "Apis mellifera",
+          "rank": null,
+          "synonyms": [],
+          "sourceRecordId": "GBIF:fixture:9000068",
+          "notes": "GBIF tier-R fixture batch — sample_fallback"
+        }
+      ],
+      "acceptedNameAgreement": "agree",
+      "synonymCoverage": [
+        "Apis synonymus"
+      ],
+      "notes": "Authority hits recorded; still sample_fallback until human rights review",
+      "dataMode": "sample_fallback",
+      "verificationStatus": "needs_source_verification",
+      "sourceVerifiedRelease": false
+    }
+  ],
+  "rule": "Taxonomy reconcile records accepted-name / synonym agreement across permitted fixtures only; never promotes sample_fallback → source_verified; IUCN token absence does not freeze this science path."
+}

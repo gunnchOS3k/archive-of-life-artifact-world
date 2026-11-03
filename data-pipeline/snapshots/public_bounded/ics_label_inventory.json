@@ -1,0 +1,95 @@
+{
+  "approvedForUse": false,
+  "citation": "International Chronostratigraphic Chart \u2014 https://stratigraphy.org/",
+  "note": "Label inventory only \u2014 does not clear time_manifest.isMockData or unlock maps",
+  "retrievedAt": "2026-10-29T05:00:56Z",
+  "source": "ics",
+  "units": [
+    {
+      "id": "hadean",
+      "name": "Hadean",
+      "rank": "eon"
+    },
+    {
+      "id": "archean",
+      "name": "Archean",
+      "rank": "eon"
+    },
+    {
+      "id": "proterozoic",
+      "name": "Proterozoic",
+      "rank": "eon"
+    },
+    {
+      "id": "cambrian",
+      "name": "Cambrian",
+      "rank": "period"
+    },
+    {
+      "id": "ordovician",
+      "name": "Ordovician",
+      "rank": "period"
+    },
+    {
+      "id": "silurian",
+      "name": "Silurian",
+      "rank": "period"
+    },
+    {
+      "id": "devonian",
+      "name": "Devonian",
+      "rank": "period"
+    },
+    {
+      "id": "carboniferous",
+      "name": "Carboniferous",
+      "rank": "period"
+    },
+    {
+      "id": "permian",
+      "name": "Permian",
+      "rank": "period"
+    },
+    {
+      "id": "triassic",
+      "name": "Triassic",
+      "rank": "period"
+    },
+    {
+      "id": "jurassic",
+      "name": "Jurassic",
+      "rank": "period"
+    },
+    {
+      "id": "cretaceous",
+      "name": "Cretaceous",
+      "rank": "period"
+    },
+    {
+      "id": "paleogene",
+      "name": "Paleogene",
+      "rank": "period"
+    },
+    {
+      "id": "neogene",
+      "name": "Neogene",
+      "rank": "period"
+    },
+    {
+      "id": "pleistocene",
+      "name": "Pleistocene",
+      "rank": "epoch"
+    },
+    {
+      "id": "holocene",
+      "name": "Holocene",
+      "rank": "epoch"
+    },
+    {
+      "id": "ediacaran",
+      "name": "Ediacaran",
+      "rank": "period"
+    }
+  ],
+  "verificationStatus": "needs_source_verification"
+}

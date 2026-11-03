@@ -67,6 +67,12 @@ jobs:
       - name: Build frontend
         run: npm run build
 
+      - name: Install Playwright Chromium
+        run: npx playwright install --with-deps chromium
+
+      - name: Vite expedition journey
+        run: node scripts/play/expedition_journey.mjs
+
       - name: Sync Python pipeline
         run: cd data-pipeline && uv sync --all-extras
 

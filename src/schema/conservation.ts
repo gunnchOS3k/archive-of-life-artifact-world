@@ -18,6 +18,9 @@ export interface ConservationProfile {
   assessed: boolean;
   sourceVersion: string;
   lastUpdated: string;
+  /** When mock_sample, iucnCategory is a gameplay label — not IUCN source-verified. */
+  dataMode?: 'mock_sample' | 'source_verified' | 'game_authored';
+  uncertaintyNote?: string;
 }
 
 export function isThreatened(category: IucnCategory): boolean {

@@ -24,15 +24,15 @@
       "taxonomy": {
         "family": "Canidae",
         "rank": "species",
-        "acceptedName": "Canis lupus",
-        "catalogueOfLifeId": "MOCK-COL-canis_lupus"
+        "acceptedName": "Canis lupus"
       },
       "conservation": {
         "iucnCategory": "Least Concern",
-        "assessed": true,
-        "sourceVersion": "mock-iucn-2026-07",
+        "assessed": false,
+        "sourceVersion": "quarantined-mock-iucn-2026-07",
         "lastUpdated": "2026-07-02",
-        "iucnTaxonId": 77909
+        "dataMode": "mock_sample",
+        "uncertaintyNote": "IUCN category is a gameplay planning label from legacy authored data \u2014 not an IUCN Red List source-verified assessment."
       },
       "distribution": {
         "continents": [
@@ -45,15 +45,16 @@
           "grassland",
           "tundra"
         ],
-        "sourceVersion": "mock-gbif-2026-07",
+        "sourceVersion": "quarantined-mock-gbif-2026-07",
         "lastUpdated": "2026-07-02",
-        "gbifTaxonKey": 6040710,
         "occurrenceSummaries": [
           {
             "region": "North America",
-            "occurrenceCount": 970
+            "occurrenceCount": 0
           }
-        ]
+        ],
+        "dataMode": "mock_sample",
+        "uncertaintyNote": "Continent/habitat hints are game-authored planning twins \u2014 not GBIF occurrence-verified ranges."
       },
       "artifactTemplates": [
         {
@@ -86,7 +87,7 @@
         "timeRange": "Present",
         "diet": "Carnivore",
         "activity": "Crepuscular",
-        "size": "1.0–1.6 m body length",
+        "size": "1.0\u20131.6 m body length",
         "behavior": "Pack hunter with complex social hierarchy",
         "learningTopics": [
           "pack behavior",
@@ -138,19 +139,19 @@
           "verificationStatus": "game_authored_verified"
         },
         {
-          "source": "catalogue_of_life",
-          "sourceVersion": "mock-sample-2026-07",
-          "sourceRecordId": "MOCK-canis_lupus",
-          "catalogueOfLifeId": "MOCK-COL-canis_lupus",
+          "source": "mock_sample",
+          "sourceVersion": "quarantined-mock-sample-2026-07",
+          "sourceRecordId": "QUARANTINED-MOCK-canis_lupus",
           "license": "MOCK-SAMPLE",
-          "citation": "MOCK SAMPLE — not sourced from live API; requires approved source snapshot import",
+          "citation": "QUARANTINED MOCK SAMPLE \u2014 not Catalogue of Life / GBIF / IUCN / PBDB; not source-verified. Retained for pipeline demos only until an approved snapshot import replaces it.",
           "citationRequired": true,
           "retrievedAt": "2026-07-05T03:27:29.539Z",
           "lastUpdated": "2026-07-05T03:27:29.539Z",
           "isMockData": true,
           "verificationStatus": "mock_sample"
         }
-      ]
+      ],
+      "scientificScopeStatement": "Gameplay-authored hero record. External taxonomy/conservation/distribution fields that lack an approved COL/GBIF/IUCN/PBDB snapshot remain quarantined mock samples \u2014 never source-verified. Catalog is intentionally incomplete (not Earth-complete)."
     },
     {
       "id": "odocoileus_virginianus",
@@ -166,15 +167,15 @@
       "taxonomy": {
         "family": "Cervidae",
         "rank": "species",
-        "acceptedName": "Odocoileus virginianus",
-        "catalogueOfLifeId": "MOCK-COL-odocoileus_virginianus"
+        "acceptedName": "Odocoileus virginianus"
       },
       "conservation": {
         "iucnCategory": "Least Concern",
-        "assessed": true,
-        "sourceVersion": "mock-iucn-2026-07",
+        "assessed": false,
+        "sourceVersion": "quarantined-mock-iucn-2026-07",
         "lastUpdated": "2026-07-02",
-        "iucnTaxonId": 39537
+        "dataMode": "mock_sample",
+        "uncertaintyNote": "IUCN category is a gameplay planning label from legacy authored data \u2014 not an IUCN Red List source-verified assessment."
       },
       "distribution": {
         "continents": [
@@ -185,15 +186,16 @@
           "grassland",
           "wetland"
         ],
-        "sourceVersion": "mock-gbif-2026-07",
+        "sourceVersion": "quarantined-mock-gbif-2026-07",
         "lastUpdated": "2026-07-02",
-        "gbifTaxonKey": 9596551,
         "occurrenceSummaries": [
           {
             "region": "North America",
-            "occurrenceCount": 4069
+            "occurrenceCount": 0
           }
-        ]
+        ],
+        "dataMode": "mock_sample",
+        "uncertaintyNote": "Continent/habitat hints are game-authored planning twins \u2014 not GBIF occurrence-verified ranges."
       },
       "artifactTemplates": [
         {
@@ -226,7 +228,7 @@
         "timeRange": "Present",
         "diet": "Herbivore",
         "activity": "Crepuscular",
-        "size": "0.9–1.1 m shoulder height",
+        "size": "0.9\u20131.1 m shoulder height",
         "behavior": "Alert grazer; seasonal antler growth in males",
         "learningTopics": [
           "herbivory",
@@ -300,19 +302,19 @@
           "verificationStatus": "game_authored_verified"
         },
         {
-          "source": "catalogue_of_life",
-          "sourceVersion": "mock-sample-2026-07",
-          "sourceRecordId": "MOCK-odocoileus_virginianus",
-          "catalogueOfLifeId": "MOCK-COL-odocoileus_virginianus",
+          "source": "mock_sample",
+          "sourceVersion": "quarantined-mock-sample-2026-07",
+          "sourceRecordId": "QUARANTINED-MOCK-odocoileus_virginianus",
           "license": "MOCK-SAMPLE",
-          "citation": "MOCK SAMPLE — not sourced from live API; requires approved source snapshot import",
+          "citation": "QUARANTINED MOCK SAMPLE \u2014 not Catalogue of Life / GBIF / IUCN / PBDB; not source-verified. Retained for pipeline demos only until an approved snapshot import replaces it.",
           "citationRequired": true,
           "retrievedAt": "2026-07-05T03:27:29.539Z",
           "lastUpdated": "2026-07-05T03:27:29.539Z",
           "isMockData": true,
           "verificationStatus": "mock_sample"
         }
-      ]
+      ],
+      "scientificScopeStatement": "Gameplay-authored hero record. External taxonomy/conservation/distribution fields that lack an approved COL/GBIF/IUCN/PBDB snapshot remain quarantined mock samples \u2014 never source-verified. Catalog is intentionally incomplete (not Earth-complete)."
     },
     {
       "id": "ursus_americanus",
@@ -328,15 +330,15 @@
       "taxonomy": {
         "family": "Ursidae",
         "rank": "species",
-        "acceptedName": "Ursus americanus",
-        "catalogueOfLifeId": "MOCK-COL-ursus_americanus"
+        "acceptedName": "Ursus americanus"
       },
       "conservation": {
         "iucnCategory": "Least Concern",
-        "assessed": true,
-        "sourceVersion": "mock-iucn-2026-07",
+        "assessed": false,
+        "sourceVersion": "quarantined-mock-iucn-2026-07",
         "lastUpdated": "2026-07-02",
-        "iucnTaxonId": 30877
+        "dataMode": "mock_sample",
+        "uncertaintyNote": "IUCN category is a gameplay planning label from legacy authored data \u2014 not an IUCN Red List source-verified assessment."
       },
       "distribution": {
         "continents": [
@@ -346,15 +348,16 @@
           "forest",
           "mountain"
         ],
-        "sourceVersion": "mock-gbif-2026-07",
+        "sourceVersion": "quarantined-mock-gbif-2026-07",
         "lastUpdated": "2026-07-02",
-        "gbifTaxonKey": 4343390,
         "occurrenceSummaries": [
           {
             "region": "North America",
-            "occurrenceCount": 4114
+            "occurrenceCount": 0
           }
-        ]
+        ],
+        "dataMode": "mock_sample",
+        "uncertaintyNote": "Continent/habitat hints are game-authored planning twins \u2014 not GBIF occurrence-verified ranges."
       },
       "artifactTemplates": [
         {
@@ -387,7 +390,7 @@
         "timeRange": "Present",
         "diet": "Omnivore",
         "activity": "Diurnal",
-        "size": "1.2–1.8 m body length",
+        "size": "1.2\u20131.8 m body length",
         "behavior": "Solitary forager; hibernates in winter",
         "learningTopics": [
           "omnivory",
@@ -396,7 +399,7 @@
         ],
         "funFacts": [
           "Can run 50 km/h despite size",
-          "Excellent sense of smell — 7x better than dogs"
+          "Excellent sense of smell \u2014 7x better than dogs"
         ],
         "whyItMatters": "Umbrella species for forest conservation planning."
       },
@@ -439,19 +442,19 @@
           "verificationStatus": "game_authored_verified"
         },
         {
-          "source": "catalogue_of_life",
-          "sourceVersion": "mock-sample-2026-07",
-          "sourceRecordId": "MOCK-ursus_americanus",
-          "catalogueOfLifeId": "MOCK-COL-ursus_americanus",
+          "source": "mock_sample",
+          "sourceVersion": "quarantined-mock-sample-2026-07",
+          "sourceRecordId": "QUARANTINED-MOCK-ursus_americanus",
           "license": "MOCK-SAMPLE",
-          "citation": "MOCK SAMPLE — not sourced from live API; requires approved source snapshot import",
+          "citation": "QUARANTINED MOCK SAMPLE \u2014 not Catalogue of Life / GBIF / IUCN / PBDB; not source-verified. Retained for pipeline demos only until an approved snapshot import replaces it.",
           "citationRequired": true,
           "retrievedAt": "2026-07-05T03:27:29.539Z",
           "lastUpdated": "2026-07-05T03:27:29.539Z",
           "isMockData": true,
           "verificationStatus": "mock_sample"
         }
-      ]
+      ],
+      "scientificScopeStatement": "Gameplay-authored hero record. External taxonomy/conservation/distribution fields that lack an approved COL/GBIF/IUCN/PBDB snapshot remain quarantined mock samples \u2014 never source-verified. Catalog is intentionally incomplete (not Earth-complete)."
     },
     {
       "id": "formica_rufa",
@@ -467,15 +470,15 @@
       "taxonomy": {
         "family": "Formicidae",
         "rank": "species",
-        "acceptedName": "Formica rufa",
-        "catalogueOfLifeId": "MOCK-COL-formica_rufa"
+        "acceptedName": "Formica rufa"
       },
       "conservation": {
         "iucnCategory": "Least Concern",
-        "assessed": true,
-        "sourceVersion": "mock-iucn-2026-07",
+        "assessed": false,
+        "sourceVersion": "quarantined-mock-iucn-2026-07",
         "lastUpdated": "2026-07-02",
-        "iucnTaxonId": 91840
+        "dataMode": "mock_sample",
+        "uncertaintyNote": "IUCN category is a gameplay planning label from legacy authored data \u2014 not an IUCN Red List source-verified assessment."
       },
       "distribution": {
         "continents": [
@@ -484,15 +487,16 @@
         "habitats": [
           "forest"
         ],
-        "sourceVersion": "mock-gbif-2026-07",
+        "sourceVersion": "quarantined-mock-gbif-2026-07",
         "lastUpdated": "2026-07-02",
-        "gbifTaxonKey": 7956046,
         "occurrenceSummaries": [
           {
             "region": "Europe",
-            "occurrenceCount": 4851
+            "occurrenceCount": 0
           }
-        ]
+        ],
+        "dataMode": "mock_sample",
+        "uncertaintyNote": "Continent/habitat hints are game-authored planning twins \u2014 not GBIF occurrence-verified ranges."
       },
       "artifactTemplates": [
         {
@@ -525,7 +529,7 @@
         "timeRange": "Present",
         "diet": "Omnivore",
         "activity": "Diurnal",
-        "size": "4.5–9 mm workers",
+        "size": "4.5\u20139 mm workers",
         "behavior": "Large mound-building colonies; chemical communication",
         "learningTopics": [
           "colony behavior",
@@ -577,19 +581,19 @@
           "verificationStatus": "game_authored_verified"
         },
         {
-          "source": "catalogue_of_life",
-          "sourceVersion": "mock-sample-2026-07",
-          "sourceRecordId": "MOCK-formica_rufa",
-          "catalogueOfLifeId": "MOCK-COL-formica_rufa",
+          "source": "mock_sample",
+          "sourceVersion": "quarantined-mock-sample-2026-07",
+          "sourceRecordId": "QUARANTINED-MOCK-formica_rufa",
           "license": "MOCK-SAMPLE",
-          "citation": "MOCK SAMPLE — not sourced from live API; requires approved source snapshot import",
+          "citation": "QUARANTINED MOCK SAMPLE \u2014 not Catalogue of Life / GBIF / IUCN / PBDB; not source-verified. Retained for pipeline demos only until an approved snapshot import replaces it.",
           "citationRequired": true,
           "retrievedAt": "2026-07-05T03:27:29.539Z",
           "lastUpdated": "2026-07-05T03:27:29.539Z",
           "isMockData": true,
           "verificationStatus": "mock_sample"
         }
-      ]
+      ],
+      "scientificScopeStatement": "Gameplay-authored hero record. External taxonomy/conservation/distribution fields that lack an approved COL/GBIF/IUCN/PBDB snapshot remain quarantined mock samples \u2014 never source-verified. Catalog is intentionally incomplete (not Earth-complete)."
     },
     {
       "id": "dynastes_hercules",
@@ -605,15 +609,15 @@
       "taxonomy": {
         "family": "Scarabaeidae",
         "rank": "species",
-        "acceptedName": "Dynastes hercules",
-        "catalogueOfLifeId": "MOCK-COL-dynastes_hercules"
+        "acceptedName": "Dynastes hercules"
       },
       "conservation": {
         "iucnCategory": "Least Concern",
-        "assessed": true,
-        "sourceVersion": "mock-iucn-2026-07",
+        "assessed": false,
+        "sourceVersion": "quarantined-mock-iucn-2026-07",
         "lastUpdated": "2026-07-02",
-        "iucnTaxonId": 33149
+        "dataMode": "mock_sample",
+        "uncertaintyNote": "IUCN category is a gameplay planning label from legacy authored data \u2014 not an IUCN Red List source-verified assessment."
       },
       "distribution": {
         "continents": [
@@ -623,15 +627,16 @@
         "habitats": [
           "rainforest"
         ],
-        "sourceVersion": "mock-gbif-2026-07",
+        "sourceVersion": "quarantined-mock-gbif-2026-07",
         "lastUpdated": "2026-07-02",
-        "gbifTaxonKey": 6144646,
         "occurrenceSummaries": [
           {
             "region": "Central America",
-            "occurrenceCount": 1157
+            "occurrenceCount": 0
           }
-        ]
+        ],
+        "dataMode": "mock_sample",
+        "uncertaintyNote": "Continent/habitat hints are game-authored planning twins \u2014 not GBIF occurrence-verified ranges."
       },
       "artifactTemplates": [
         {
@@ -732,19 +737,19 @@
           "verificationStatus": "game_authored_verified"
         },
         {
-          "source": "catalogue_of_life",
-          "sourceVersion": "mock-sample-2026-07",
-          "sourceRecordId": "MOCK-dynastes_hercules",
-          "catalogueOfLifeId": "MOCK-COL-dynastes_hercules",
+          "source": "mock_sample",
+          "sourceVersion": "quarantined-mock-sample-2026-07",
+          "sourceRecordId": "QUARANTINED-MOCK-dynastes_hercules",
           "license": "MOCK-SAMPLE",
-          "citation": "MOCK SAMPLE — not sourced from live API; requires approved source snapshot import",
+          "citation": "QUARANTINED MOCK SAMPLE \u2014 not Catalogue of Life / GBIF / IUCN / PBDB; not source-verified. Retained for pipeline demos only until an approved snapshot import replaces it.",
           "citationRequired": true,
           "retrievedAt": "2026-07-05T03:27:29.539Z",
           "lastUpdated": "2026-07-05T03:27:29.539Z",
           "isMockData": true,
           "verificationStatus": "mock_sample"
         }
-      ]
+      ],
+      "scientificScopeStatement": "Gameplay-authored hero record. External taxonomy/conservation/distribution fields that lack an approved COL/GBIF/IUCN/PBDB snapshot remain quarantined mock samples \u2014 never source-verified. Catalog is intentionally incomplete (not Earth-complete)."
     },
     {
       "id": "acanthoscurria_geniculata",
@@ -760,15 +765,15 @@
       "taxonomy": {
         "family": "Theraphosidae",
         "rank": "species",
-        "acceptedName": "Acanthoscurria geniculata",
-        "catalogueOfLifeId": "MOCK-COL-acanthoscurria_geniculata"
+        "acceptedName": "Acanthoscurria geniculata"
       },
       "conservation": {
         "iucnCategory": "Least Concern",
-        "assessed": true,
-        "sourceVersion": "mock-iucn-2026-07",
+        "assessed": false,
+        "sourceVersion": "quarantined-mock-iucn-2026-07",
         "lastUpdated": "2026-07-02",
-        "iucnTaxonId": 97897
+        "dataMode": "mock_sample",
+        "uncertaintyNote": "IUCN category is a gameplay planning label from legacy authored data \u2014 not an IUCN Red List source-verified assessment."
       },
       "distribution": {
         "continents": [
@@ -777,15 +782,16 @@
         "habitats": [
           "rainforest floor"
         ],
-        "sourceVersion": "mock-gbif-2026-07",
+        "sourceVersion": "quarantined-mock-gbif-2026-07",
         "lastUpdated": "2026-07-02",
-        "gbifTaxonKey": 2430698,
         "occurrenceSummaries": [
           {
             "region": "South America",
-            "occurrenceCount": 2505
+            "occurrenceCount": 0
           }
-        ]
+        ],
+        "dataMode": "mock_sample",
+        "uncertaintyNote": "Continent/habitat hints are game-authored planning twins \u2014 not GBIF occurrence-verified ranges."
       },
       "artifactTemplates": [
         {
@@ -852,19 +858,19 @@
           "verificationStatus": "game_authored_verified"
         },
         {
-          "source": "catalogue_of_life",
-          "sourceVersion": "mock-sample-2026-07",
-          "sourceRecordId": "MOCK-acanthoscurria_geniculata",
-          "catalogueOfLifeId": "MOCK-COL-acanthoscurria_geniculata",
+          "source": "mock_sample",
+          "sourceVersion": "quarantined-mock-sample-2026-07",
+          "sourceRecordId": "QUARANTINED-MOCK-acanthoscurria_geniculata",
           "license": "MOCK-SAMPLE",
-          "citation": "MOCK SAMPLE — not sourced from live API; requires approved source snapshot import",
+          "citation": "QUARANTINED MOCK SAMPLE \u2014 not Catalogue of Life / GBIF / IUCN / PBDB; not source-verified. Retained for pipeline demos only until an approved snapshot import replaces it.",
           "citationRequired": true,
           "retrievedAt": "2026-07-05T03:27:29.539Z",
           "lastUpdated": "2026-07-05T03:27:29.539Z",
           "isMockData": true,
           "verificationStatus": "mock_sample"
         }
-      ]
+      ],
+      "scientificScopeStatement": "Gameplay-authored hero record. External taxonomy/conservation/distribution fields that lack an approved COL/GBIF/IUCN/PBDB snapshot remain quarantined mock samples \u2014 never source-verified. Catalog is intentionally incomplete (not Earth-complete)."
     }
   ]
 }

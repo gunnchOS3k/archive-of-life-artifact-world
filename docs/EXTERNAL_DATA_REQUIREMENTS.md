@@ -44,8 +44,10 @@ Source snapshots in `public/data/coverage/source_snapshots.json` must have `appr
 | `source_verified` | Imported from approved external snapshot |
 | `mock_sample` | Illustrative pipeline data — not real coverage |
 | `derived_inferred` | Educated inference without primary source |
-| `blocked_external` | Awaiting snapshot import |
+| `blocked_external` | Awaiting snapshot import / credentials |
+| `unsupported_claim` | Claim rejected as over-broad (e.g. Earth-complete, fake map unlock) |
 
+Never promote `mock_sample` → `source_verified`. Bounded public acquires (`npm run source:acquire:public-bounded`) register as `sample_fallback` / `needs_source_verification` only.
 ## What cannot be claimed without real imports
 
 - Full Catalogue of Life species catalogue

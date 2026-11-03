@@ -55,6 +55,7 @@ const species: PlayableSpecies = {
   ethicalInteraction: 'observe_from_distance',
   timeRange: 'Present',
   habitats: ['savanna'],
+  continents: ['Africa'],
   diet: '',
   activity: '',
   size: '',
@@ -237,6 +238,8 @@ describe('Archive full product depth (digital)', () => {
       GLOBAL_DATA_COMPLETE: false,
       ALL_SPECIES_INGESTED: false,
       liveClaim: false,
+      iucn_assessed_source_verified_count: 0,
+      iucn_token_import_available: false,
       notes: [
         'Scientific data cannot be fabricated — ingestion pipelines are validated; coverage tracked honestly.',
         'Launch Tier E/F floors are playable sample/authored content, not empirical completeness of every species.',

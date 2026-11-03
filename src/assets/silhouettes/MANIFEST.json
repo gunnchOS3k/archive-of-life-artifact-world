@@ -1,0 +1,85 @@
+{
+  "schema": "aol.silhouette_svg_package.v1",
+  "generatedAt": "2026-10-30T21:00:00.000Z",
+  "packageKind": "procedural_silhouette_svg",
+  "finishedModelsClaimed": false,
+  "humanApprovedFinal": false,
+  "emojiEqualsFinished": false,
+  "sourceVerifiedRelease": false,
+  "iucnAssessed": false,
+  "mapsUnlocked": false,
+  "modeCount": 10,
+  "assets": [
+    {
+      "mode": "amble",
+      "filename": "silhouette-amble.svg",
+      "publicPath": "/assets/silhouettes/silhouette-amble.svg",
+      "finishedModel": false,
+      "humanApproved": false
+    },
+    {
+      "mode": "bound",
+      "filename": "silhouette-bound.svg",
+      "publicPath": "/assets/silhouettes/silhouette-bound.svg",
+      "finishedModel": false,
+      "humanApproved": false
+    },
+    {
+      "mode": "flutter",
+      "filename": "silhouette-flutter.svg",
+      "publicPath": "/assets/silhouettes/silhouette-flutter.svg",
+      "finishedModel": false,
+      "humanApproved": false
+    },
+    {
+      "mode": "hover_dart",
+      "filename": "silhouette-hover_dart.svg",
+      "publicPath": "/assets/silhouettes/silhouette-hover_dart.svg",
+      "finishedModel": false,
+      "humanApproved": false
+    },
+    {
+      "mode": "swim_undulate",
+      "filename": "silhouette-swim_undulate.svg",
+      "publicPath": "/assets/silhouettes/silhouette-swim_undulate.svg",
+      "finishedModel": false,
+      "humanApproved": false
+    },
+    {
+      "mode": "sit_wait",
+      "filename": "silhouette-sit_wait.svg",
+      "publicPath": "/assets/silhouettes/silhouette-sit_wait.svg",
+      "finishedModel": false,
+      "humanApproved": false
+    },
+    {
+      "mode": "scurry",
+      "filename": "silhouette-scurry.svg",
+      "publicPath": "/assets/silhouettes/silhouette-scurry.svg",
+      "finishedModel": false,
+      "humanApproved": false
+    },
+    {
+      "mode": "static_fossil",
+      "filename": "silhouette-static_fossil.svg",
+      "publicPath": "/assets/silhouettes/silhouette-static_fossil.svg",
+      "finishedModel": false,
+      "humanApproved": false
+    },
+    {
+      "mode": "bipedal",
+      "filename": "silhouette-bipedal.svg",
+      "publicPath": "/assets/silhouettes/silhouette-bipedal.svg",
+      "finishedModel": false,
+      "humanApproved": false
+    },
+    {
+      "mode": "climb",
+      "filename": "silhouette-climb.svg",
+      "publicPath": "/assets/silhouettes/silhouette-climb.svg",
+      "finishedModel": false,
+      "humanApproved": false
+    }
+  ],
+  "rule": "Procedural silhouette SVG stubs may ship for observation/Dex underpaint; they are not finished models, not human-approved finals, and do not unlock IUCN assessments or paleomaps."
+}

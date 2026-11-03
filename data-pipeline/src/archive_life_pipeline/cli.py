@@ -38,6 +38,10 @@ def main() -> None:
     sub.add_parser("source-list", help="List source import status")
     sub.add_parser("source-validate", help="Validate source configuration")
     sub.add_parser("source-audit", help="Audit source imports and write status JSON")
+    sub.add_parser(
+        "acquire-public-bounded",
+        help="Fetch bounded public COL/GBIF/PBDB/Neotoma/NASA/ICS snapshots; IUCN stays gated",
+    )
 
     from archive_life_pipeline.global_ingestion.bulk_import import SUPPORTED_SOURCES
 
@@ -165,6 +169,14 @@ def main() -> None:
         write_status_reports()
         audit = audit_sources()
         print(f"Imported: {audit['importedCount']} · Blocked: {audit['blockedCount']}")
+        sys.exit(0)
+
+    if args.command == "acquire-public-bounded":
+        from archive_life_pipeline.public_bounded_acquire import acquire_all_public_bounded
+
+        manifest = acquire_all_public_bounded(include_nasa=True)
+        print(json.dumps(manifest, indent=2))
+        # Never fail the process solely because IUCN is blocked without a token.
         sys.exit(0)
 
     if args.command == "bulk-import":

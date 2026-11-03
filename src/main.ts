@@ -17,7 +17,8 @@ import {
   hydrateLivingArchiveIcons,
   setEmotionalMode,
 } from '@/ui/livingArchive';
-import { mountPortalReturn } from '@/portalReturn';
+import { mountExpeditionPortalReturn, mountPortalReturn } from '@/portalReturn';
+import { mountMuseumHubPresentation } from '@/systems/museumDexPresentation';
 
 let game: Game | null = null;
 const archiveDexService = new ArchiveDexService(dataCatalog, timeAtlasService);
@@ -27,6 +28,7 @@ async function init() {
   document.body.classList.add('vxp4-living-archive');
   setEmotionalMode('home');
   void hydrateLivingArchiveIcons();
+  mountMuseumHubPresentation(document);
 
   const params =
     typeof window !== 'undefined' ? new URLSearchParams(window.location.search) : null;
@@ -71,6 +73,9 @@ async function init() {
       if (cmd === 'interact') {
         await g.acceptInteract();
         return g.acceptSnapshot();
+      }
+      if (cmd === 'clue') {
+        return { ...g.acceptRecordMuseumClue(), snapshot: g.acceptSnapshot() };
       }
       if (cmd === 'hold') {
         const on = arg !== '0' && arg !== 'false';
@@ -123,6 +128,7 @@ async function init() {
         g.acceptOpenAchievements();
         return g.acceptSnapshot();
       }
+      if (cmd === 'species_icon' && arg) return g.acceptSpeciesIcon(arg);
       if (cmd === 'snapshot') return g.acceptSnapshot();
       return { ok: false, error: 'unknown_cmd' };
     };
@@ -154,6 +160,7 @@ async function startGame(continuing: boolean) {
 
   document.getElementById('title-screen')!.classList.remove('active');
   document.getElementById('game-screen')!.classList.add('active');
+  mountExpeditionPortalReturn(document, import.meta.env.VITE_GUNNCHOS_PORTAL_URL);
   setEmotionalMode('explore');
   void hydrateLivingArchiveIcons();
 

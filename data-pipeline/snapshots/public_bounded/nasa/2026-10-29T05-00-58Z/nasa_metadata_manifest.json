@@ -1,0 +1,29 @@
+{
+  "generatedAt": "2026-10-29T05:00:58Z",
+  "dataMode": "real_metadata",
+  "verificationMode": "real_metadata",
+  "scope": "metadata_only",
+  "measurementDataMode": "not_ingested",
+  "layers": [
+    {
+      "id": "natural_events",
+      "mode": "REAL NASA METADATA",
+      "recordCount": 20,
+      "sourceUrl": "https://eonet.gsfc.nasa.gov/"
+    },
+    {
+      "id": "vegetation",
+      "mode": "REAL NASA METADATA",
+      "recordCount": 0,
+      "sourceUrl": "https://cmr.earthdata.nasa.gov/"
+    },
+    {
+      "id": "climate",
+      "mode": "REAL NASA METADATA",
+      "recordCount": 1,
+      "sourceUrl": "https://power.larc.nasa.gov/"
+    }
+  ],
+  "recordCount": 21,
+  "verifiedRecordCount": 0
+}

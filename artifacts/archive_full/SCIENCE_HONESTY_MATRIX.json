@@ -1,0 +1,103 @@
+{
+  "schema": "archive_science_honesty_matrix/v1",
+  "generatedAt": "2026-10-29T15:10:00Z",
+  "anySourceVerified": false,
+  "productionReady": false,
+  "humanReady": false,
+  "rcReady": false,
+  "v1Ready": false,
+  "rule": "Never promote sample_fallback / needs_source_verification / blocked_external to source_verified without legitimate evidence + human license review",
+  "temporalMaps": {
+    "supportedGateCount": 17,
+    "sourceVerifiedMapCount": 0,
+    "honestyCopy": "0/17 full-Earth maps source-verified — blocked"
+  },
+  "nasa": {
+    "historicalManifestSha256": "f6d1c4d83b3888b1cd9fd7cd1b4fed11dbd317b857d461666f6a01ea3b3265b6",
+    "historicalDataMode": "source_verified",
+    "currentBoundedDataMode": "sample_fallback",
+    "sourceVerifiedRelease": false,
+    "versionedSnapshotSeparation": true
+  },
+  "rows": [
+    {
+      "source": "col",
+      "dataMode": "sample_fallback",
+      "verificationStatus": "needs_source_verification",
+      "recordCount": 120,
+      "verifiedRecordCount": 0,
+      "approvedForUse": false,
+      "sourceVerifiedRelease": false,
+      "notes": "Bounded COL ChecklistBank fetch — sample_fallback only"
+    },
+    {
+      "source": "gbif",
+      "dataMode": "sample_fallback",
+      "verificationStatus": "needs_source_verification",
+      "recordCount": 24,
+      "verifiedRecordCount": 0,
+      "approvedForUse": false,
+      "sourceVerifiedRelease": false,
+      "notes": "Bounded GBIF species match — sample_fallback only"
+    },
+    {
+      "source": "pbdb",
+      "dataMode": "sample_fallback",
+      "verificationStatus": "needs_source_verification",
+      "recordCount": 2,
+      "verifiedRecordCount": 0,
+      "approvedForUse": false,
+      "sourceVerifiedRelease": false,
+      "notes": "Bounded PBDB taxa — sample_fallback only"
+    },
+    {
+      "source": "neotoma",
+      "dataMode": "sample_fallback",
+      "verificationStatus": "needs_source_verification",
+      "recordCount": 25,
+      "verifiedRecordCount": 0,
+      "approvedForUse": false,
+      "sourceVerifiedRelease": false,
+      "notes": "Bounded Neotoma sites — sample_fallback only"
+    },
+    {
+      "source": "nasa",
+      "dataMode": "sample_fallback",
+      "verificationStatus": "needs_source_verification",
+      "recordCount": 21,
+      "verifiedRecordCount": 0,
+      "approvedForUse": false,
+      "sourceVerifiedRelease": false,
+      "notes": "NASA historical bytes preserved separately; bounded acquires stay not source_verified"
+    },
+    {
+      "source": "ics",
+      "dataMode": "sample_fallback",
+      "verificationStatus": "needs_source_verification",
+      "recordCount": 17,
+      "verifiedRecordCount": 0,
+      "approvedForUse": false,
+      "sourceVerifiedRelease": false,
+      "notes": "ICS label inventory does not unlock 17 temporal maps or clear isMockData"
+    },
+    {
+      "source": "iucn",
+      "dataMode": "blocked_external",
+      "verificationStatus": "blocked_external",
+      "recordCount": 0,
+      "verifiedRecordCount": 0,
+      "approvedForUse": false,
+      "sourceVerifiedRelease": false,
+      "notes": "IUCN blocked without IUCN_API_TOKEN + rights review (docs/OWNER_IUCN_SETUP.md)"
+    }
+  ],
+  "floorsPreserved": {
+    "encounterTaxa": 157,
+    "flagshipHeroes": 24,
+    "exploreRegions": 12,
+    "museum": true,
+    "archiveDex": true,
+    "timeAtlas": true,
+    "lifelings": true
+  }
+}

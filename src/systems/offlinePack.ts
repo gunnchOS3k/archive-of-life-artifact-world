@@ -70,6 +70,7 @@ const DEFAULT_BUNDLES = [
   { key: 'regions', path: 'bundles/regions.json', required: true },
   { key: 'encounterTaxa', path: 'bundles/encounter-taxa.json', required: true },
   { key: 'heroSpecies', path: 'bundles/hero-species.json', required: true },
+  { key: 'regionSteppe', path: 'bundles/region-steppe.json', required: true },
   { key: 'expeditions', path: 'bundles/expeditions.json', required: false },
   { key: 'clues', path: 'bundles/clues.json', required: false },
   { key: 'companionModules', path: 'bundles/companion-modules.json', required: false },

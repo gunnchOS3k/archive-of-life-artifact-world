@@ -54,6 +54,7 @@
     "source:import:nasa": "tsx scripts/source-cli.ts import nasa",
     "source:import:neotoma": "tsx scripts/source-cli.ts import neotoma",
     "source:import:all": "tsx scripts/source-cli.ts import all",
+    "source:acquire:public-bounded": "cd data-pipeline && uv run archive-pipeline acquire-public-bounded",
     "status": "tsx scripts/status.ts",
     "verify": "npm run typecheck && npm run audit:maps && npm run build",
     "report:beta-rc": "tsx scripts/report-claim-ledger.ts",

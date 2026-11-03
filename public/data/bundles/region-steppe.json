@@ -1,0 +1,140 @@
+{
+  "regionId": "steppe",
+  "speciesIds": [
+    "equus_caballus_ferus"
+  ],
+  "species": [
+    {
+      "id": "equus_caballus_ferus",
+      "commonName": "Przewalski's Horse",
+      "scientificName": "Equus ferus przewalskii",
+      "group": "Mammal",
+      "tier": "hero",
+      "representationTier": 6,
+      "lifeStatus": "extant",
+      "timeUnitIds": [
+        "holocene"
+      ],
+      "taxonomy": {
+        "family": "Equidae",
+        "rank": "subspecies",
+        "acceptedName": "Equus ferus przewalskii"
+      },
+      "conservation": {
+        "iucnCategory": "Endangered",
+        "assessed": false,
+        "sourceVersion": "quarantined-mock-iucn-2026-07",
+        "lastUpdated": "2026-07-02",
+        "dataMode": "mock_sample",
+        "uncertaintyNote": "IUCN category is a gameplay planning label from legacy authored data \u2014 not an IUCN Red List source-verified assessment."
+      },
+      "distribution": {
+        "continents": [
+          "Asia"
+        ],
+        "habitats": [
+          "grassland",
+          "steppe"
+        ],
+        "sourceVersion": "quarantined-mock-gbif-2026-07",
+        "lastUpdated": "2026-07-02",
+        "occurrenceSummaries": [
+          {
+            "region": "Asia",
+            "occurrenceCount": 0
+          }
+        ],
+        "dataMode": "mock_sample",
+        "uncertaintyNote": "Continent/habitat hints are game-authored planning twins \u2014 not GBIF occurrence-verified ranges."
+      },
+      "artifactTemplates": [
+        {
+          "id": "equus_caballus_ferus_track_cast",
+          "artifactType": "track_cast",
+          "label": "track cast",
+          "ethical": true,
+          "description": "Ethical track cast collection"
+        },
+        {
+          "id": "equus_caballus_ferus_photo_record",
+          "artifactType": "photo_record",
+          "label": "photo record",
+          "ethical": true,
+          "description": "Ethical photo record collection"
+        },
+        {
+          "id": "equus_caballus_ferus_conservation_report",
+          "artifactType": "conservation_report",
+          "label": "conservation report",
+          "ethical": true,
+          "description": "Ethical conservation report collection"
+        }
+      ],
+      "gameplay": {
+        "region": "steppe",
+        "questType": "conservation",
+        "dangerLevel": 1,
+        "ethicalInteraction": "observe_from_distance",
+        "timeRange": "Present",
+        "diet": "Herbivore",
+        "activity": "Diurnal",
+        "size": "1.2\u20131.4 m shoulder height",
+        "behavior": "Social herd grazer; only truly wild horse",
+        "learningTopics": [
+          "conservation success",
+          "reintroduction",
+          "grassland ecology"
+        ],
+        "funFacts": [
+          "Went extinct in wild in 1960s",
+          "Successfully reintroduced to Mongolia"
+        ],
+        "whyItMatters": "Symbol of successful species recovery through captive breeding."
+      },
+      "nasaLayerDependencies": [
+        {
+          "layer": "fire",
+          "product": "firms",
+          "reason": "Fire regime influences grazer distribution and predator hunting"
+        },
+        {
+          "layer": "heat_drought",
+          "product": "ecostress",
+          "reason": "Dry-season stress affects crepuscular activity patterns"
+        },
+        {
+          "layer": "climate",
+          "product": "power",
+          "reason": "Field expedition planning uses local climate baselines"
+        }
+      ],
+      "provenance": [
+        {
+          "source": "game_authored",
+          "sourceVersion": "mvp-current",
+          "sourceRecordId": "equus_caballus_ferus",
+          "license": "GAME-ORIGINAL",
+          "citation": "Archive of Life: Artifact World authored prototype content",
+          "citationRequired": false,
+          "retrievedAt": "2026-07-05T03:27:29.539Z",
+          "lastUpdated": "2026-07-05T03:27:29.539Z",
+          "isMockData": false,
+          "verificationStatus": "game_authored_verified"
+        },
+        {
+          "source": "mock_sample",
+          "sourceVersion": "quarantined-mock-sample-2026-07",
+          "sourceRecordId": "QUARANTINED-MOCK-equus_caballus_ferus",
+          "license": "MOCK-SAMPLE",
+          "citation": "QUARANTINED MOCK SAMPLE \u2014 not Catalogue of Life / GBIF / IUCN / PBDB; not source-verified. Retained for pipeline demos only until an approved snapshot import replaces it.",
+          "citationRequired": true,
+          "retrievedAt": "2026-07-05T03:27:29.539Z",
+          "lastUpdated": "2026-07-05T03:27:29.539Z",
+          "isMockData": true,
+          "verificationStatus": "mock_sample"
+        }
+      ],
+      "scientificScopeStatement": "Gameplay-authored hero record. External taxonomy/conservation/distribution fields that lack an approved COL/GBIF/IUCN/PBDB snapshot remain quarantined mock samples \u2014 never source-verified. Catalog is intentionally incomplete (not Earth-complete)."
+    }
+  ]
+}

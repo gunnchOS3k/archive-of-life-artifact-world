@@ -19,6 +19,23 @@
       "coverageStatus": "represented"
     },
     {
+      "id": "terrestrial_steppe",
+      "name": "Temperate Steppe & Grassland",
+      "realm": "terrestrial",
+      "parentCategory": "terrestrial",
+      "description": "Open temperate grasslands of Central Asia \u2014 game-authored expedition twin for Equus ferus przewalskii; not a surveyed claim.",
+      "source": "game_authored",
+      "sourceVersion": "mvp-current",
+      "learningTopics": [
+        "conservation reintroduction",
+        "grassland ecology"
+      ],
+      "requiredCoverageMinimums": {
+        "minRepresentedTaxa": 1
+      },
+      "coverageStatus": "represented"
+    },
+    {
       "id": "terrestrial_forest",
       "name": "Temperate Broadleaf Forest",
       "realm": "terrestrial",

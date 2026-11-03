@@ -1,5 +1,7 @@
 import type { RegionBundle } from '@/schema';
 import type { PlayableSpecies } from '@/services/DataCatalogService';
+import { getSpeciesIcon, getSpeciesRepresentationLabel } from '@/services/speciesRepresentation';
+import { speciesEligibleInRegion } from '@/services/geographicEligibility';
 
 export type Interactable =
   | { type: 'portal'; id: string; label: string; target: string; x: number; y: number; radius: number; color: string }
@@ -48,8 +50,9 @@ export class World {
         { id: 'portal_forest', label: 'Forest', target: 'forest', x: 650, y: 200, color: '#2D5A27' },
         { id: 'portal_wetland', label: 'Wetland', target: 'wetland', x: 150, y: 450, color: '#3D6B5E' },
         { id: 'portal_coastal', label: 'Coast', target: 'coastal', x: 650, y: 450, color: '#2B6CB0' },
+        { id: 'portal_steppe', label: 'Asian Steppe', target: 'steppe', x: 250, y: 140, color: '#B8A06A' },
         { id: 'portal_fossil', label: 'Fossil Site', target: 'fossil_site', x: 400, y: 500, color: '#8B7355' },
-        { id: 'portal_ancient_swamp', label: 'Ancient Swamp', target: 'indiana_ancient_swamp', x: 400, y: 140, color: '#4A7C45' },
+        { id: 'portal_ancient_swamp', label: 'Ancient Swamp', target: 'indiana_ancient_swamp', x: 550, y: 140, color: '#4A7C45' },
       ];
       for (const p of portals) {
         this.interactables.push({ type: 'portal', ...p, radius: 35 });
@@ -92,7 +95,14 @@ export class World {
     } else if (regionId === 'indiana_ancient_swamp') {
       this._buildAncientSwampExpedition(w, h);
     } else {
-      const speciesIds = this.regionData.speciesIds ?? [];
+      const speciesIds = (this.regionData.speciesIds ?? []).filter((speciesId) => {
+        const sp = this.speciesById.get(speciesId);
+        if (!sp || !this.regionData) return false;
+        return speciesEligibleInRegion(
+          { id: sp.id, continents: sp.continents, habitats: sp.habitats, region: sp.region, timeRange: sp.timeRange, timeUnitIds: sp.timeUnitIds },
+          { id: this.regionData.id, biome: this.regionData.biome, continents: this.regionData.continents, speciesIds: this.regionData.speciesIds },
+        ).ok;
+      });
       const positions = this.scatterPositions(speciesIds.length, w, h);
       speciesIds.forEach((speciesId, i) => {
         const sp = this.speciesById.get(speciesId);
@@ -195,6 +205,7 @@ export class World {
   private generateDecorations(biome: string, w: number, h: number) {
     const counts = { trees: 12, rocks: 6, grass: 20 };
     if (biome === 'savanna') counts.trees = 4;
+    if (biome === 'steppe') { counts.trees = 3; counts.grass = 28; }
     if (biome === 'wetland') counts.trees = 6;
     if (biome === 'coastal') { counts.trees = 2; counts.rocks = 10; }
     if (biome === 'fossil_bed') { counts.trees = 1; counts.rocks = 15; }
@@ -356,10 +367,13 @@ export class World {
       ctx.arc(item.x, item.y, item.radius + pulse, 0, Math.PI * 2);
       ctx.stroke();
       ctx.setLineDash([]);
-      const icons: Record<string, string> = { Mammal: '🐾', Insect: '🐛', Arachnid: '🕸️' };
+      const icon = getSpeciesIcon(item.species);
       ctx.font = '24px sans-serif';
       ctx.textAlign = 'center';
-      ctx.fillText(icons[item.species.group] || '🔍', item.x, item.y + 8);
+      ctx.fillText(icon, item.x, item.y + 8);
+      ctx.font = '10px sans-serif';
+      ctx.fillStyle = '#E8E4D9';
+      ctx.fillText(getSpeciesRepresentationLabel(item.species), item.x, item.y + item.radius + 14);
     } else if (item.type === 'fossil') {
       ctx.fillStyle = '#8B7355';
       ctx.beginPath();

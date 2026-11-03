@@ -53,4 +53,45 @@ export function applyAccessibilitySettings(
   root.dataset.a11yReducedMotion = String(settings.reducedMotion);
   root.dataset.a11yHighContrast = String(settings.highContrast);
   root.dataset.a11yLargeText = String(settings.largeText);
+  root.dataset.a11ySrHints = String(settings.screenReaderHints);
+}
+
+/** True when settings or OS prefers-reduced-motion ask for stillness. */
+export function isReducedMotionActive(
+  root: HTMLElement | Document = typeof document !== 'undefined' ? document.documentElement : (undefined as unknown as HTMLElement),
+): boolean {
+  try {
+    const el =
+      root && 'documentElement' in (root as Document)
+        ? (root as Document).documentElement
+        : (root as HTMLElement | undefined);
+    if (el?.classList?.contains('a11y-reduced-motion')) return true;
+    if (el?.dataset?.a11yReducedMotion === 'true') return true;
+    if (typeof window !== 'undefined' && window.matchMedia?.('(prefers-reduced-motion: reduce)').matches) {
+      return true;
+    }
+  } catch {
+    /* ignore */
+  }
+  return false;
+}
+
+/** Visually hidden SR hint — only emitted when screenReaderHints is on. */
+export function screenReaderHintHtml(text: string, enabled?: boolean): string {
+  const on =
+    enabled ??
+    (typeof document !== 'undefined' &&
+      (document.documentElement.classList.contains('a11y-sr-hints') ||
+        document.documentElement.dataset.a11ySrHints === 'true'));
+  if (!on || !text.trim()) return '';
+  const escaped = text
+    .replace(/&/g, '&amp;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;')
+    .replace(/"/g, '&quot;');
+  return `<span class="a11y-sr-only" data-a11y-sr-hint="1">${escaped}</span>`;
+}
+
+export function observationReducedMotionAnnouncement(): string {
+  return 'Reduced motion active: organism holds a calm observe pose; locomotion animation suppressed.';
 }

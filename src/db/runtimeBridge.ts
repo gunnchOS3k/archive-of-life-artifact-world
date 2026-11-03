@@ -76,6 +76,7 @@ function toPlayable(row: TaxonRow): PlayableSpecies {
     ethicalInteraction: 'observe',
     timeRange: row.era_id ?? 'holocene',
     habitats: row.biome ? [row.biome] : [],
+    continents: [],
     diet: 'unknown',
     activity: 'diurnal',
     size: 'unknown',

@@ -1,0 +1,60 @@
+{
+  "approvedForUse": false,
+  "errors": [],
+  "records": [
+    {
+      "query": "Mammuthus primigenius",
+      "row": {
+        "accepted_name": "Mammuthus primigenius",
+        "accepted_no": "46027",
+        "accepted_rank": "species",
+        "is_extant": "extinct",
+        "n_occs": 77,
+        "orig_no": "46027",
+        "parent_no": "43266",
+        "record_type": "txn",
+        "reference_no": "92266",
+        "taxon_name": "Mammuthus primigenius",
+        "taxon_no": "47880",
+        "taxon_rank": "species"
+      }
+    },
+    {
+      "query": "Tyrannosaurus rex",
+      "row": {
+        "accepted_name": "Tyrannosaurus rex",
+        "accepted_no": "54833",
+        "accepted_rank": "species",
+        "is_extant": "extinct",
+        "n_occs": 70,
+        "orig_no": "54833",
+        "parent_no": "38613",
+        "record_type": "txn",
+        "reference_no": "9259",
+        "taxon_name": "Tyrannosaurus rex",
+        "taxon_no": "54833",
+        "taxon_rank": "species"
+      }
+    },
+    {
+      "query": "Trilobita",
+      "row": {
+        "accepted_name": "Trilobita",
+        "accepted_no": "19100",
+        "accepted_rank": "class",
+        "is_extant": "extinct",
+        "n_occs": 56571,
+        "orig_no": "19100",
+        "parent_no": "308386",
+        "record_type": "txn",
+        "reference_no": "6930",
+        "taxon_name": "Trilobita",
+        "taxon_no": "19100",
+        "taxon_rank": "class"
+      }
+    }
+  ],
+  "retrievedAt": "2026-10-30T17:40:00Z",
+  "source": "pbdb",
+  "verificationStatus": "needs_source_verification"
+}

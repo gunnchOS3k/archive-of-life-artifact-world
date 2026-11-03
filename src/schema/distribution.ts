@@ -13,4 +13,7 @@ export interface DistributionProfile {
   gbifTaxonKey?: number;
   sourceVersion: string;
   lastUpdated: string;
+  /** When mock_sample, ranges are planning twins — not GBIF source-verified. */
+  dataMode?: 'mock_sample' | 'source_verified' | 'game_authored';
+  uncertaintyNote?: string;
 }
