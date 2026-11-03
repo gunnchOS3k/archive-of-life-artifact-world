@@ -67,6 +67,7 @@ import {
   syncAchievementsFromSave,
 } from '@/systems/launchCampaign';
 import { AchievementsUI } from '@/ui/achievementsUI';
+import { closePanelModal, openPanelModal } from '@/ui/panelModal';
 import catalogJson from '../../release/ACHIEVEMENTS.json';
 
 type Minigame = FossilExcavation | WildlifeObservation;
@@ -496,6 +497,7 @@ export class Game {
         }
       }
       this.refreshUI();
+      openPanelModal(panel);
       this.paused = true;
     } else {
       this.paused = this.manualPaused || this.suspendPaused;
@@ -504,6 +506,7 @@ export class Game {
 
   closeAllPanels() {
     document.querySelectorAll('.panel').forEach((p) => p.classList.add('hidden'));
+    closePanelModal();
     this.paused = this.manualPaused || this.suspendPaused;
     setEmotionalMode('explore');
   }

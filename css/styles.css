@@ -241,6 +241,15 @@ body {
 
 .panel.hidden { display: none; }
 
+.panel-backdrop {
+  position: absolute;
+  inset: 0;
+  z-index: 49;
+  background: rgba(10, 16, 14, 0.62);
+}
+
+.panel-backdrop.hidden { display: none; }
+
 .panel-header {
   display: flex;
   justify-content: space-between;

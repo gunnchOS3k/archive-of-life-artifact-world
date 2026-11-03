@@ -60,6 +60,7 @@
   /* Mapped legacy tokens → Living Archive (player experience) */
   --bg-dark: #142018;
   --bg-panel: rgba(244, 240, 230, 0.96);
+  --bg-panel-solid: #f4f0e6;
   --bg-card: #ebe4d4;
   --accent-green: var(--mineral-jade-soft);
   --accent-gold: var(--amber-strata);
@@ -366,7 +367,7 @@ body.vxp4-living-archive #interaction-prompt {
 
 /* ——— Player panels (atlas plates) ——— */
 body.vxp4-living-archive .panel {
-  background: var(--bg-panel);
+  background: var(--bg-panel-solid);
   color: var(--archive-ink);
   border: 1px solid var(--border);
   border-radius: var(--la-radius);
