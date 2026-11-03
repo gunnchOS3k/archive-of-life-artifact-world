@@ -164,6 +164,7 @@ export function renderArchiveDexTab(entry: ArchiveDexEntry, tab: ArchiveDexTabId
         ${listField('Habitats', entry.habitatRange?.habitats)}
         ${field('Migration', entry.habitatRange?.migration, 'Unknown')}
         ${listField('Fossil locations', entry.habitatRange?.fossilLocations, 'Not available in current snapshot')}
+        ${listField('Formations', entry.habitatRange?.formations, 'Not in current snapshot — no formation-level data imported')}
         ${field('Paleoenvironment', entry.habitatRange?.paleoenvironment)}
         ${field('In-game clue', entry.habitatRange?.inGameClue, 'Not available in current snapshot')}
         ${listField('Required tools', entry.habitatRange?.requiredTools, 'None required')}

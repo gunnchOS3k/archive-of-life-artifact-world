@@ -7,7 +7,12 @@ import { mapSpeciesToArchiveDexEntry } from '@/services/archivedexMapper';
 import { getFlagshipProfile, listFlagshipTaxonIds } from '@/services/flagshipTaxonProfiles';
 import { TemporalMapService, temporalMapService } from '@/services/TemporalMapService';
 import { renderArchiveDexTab } from '@/ui/archiveDexTabs';
-import { buildGeologyExhibit, buildHabitatExhibit, renderGeologyExhibitHtml } from './habitatGeologyExhibit';
+import {
+  buildGeologyExhibit,
+  buildHabitatExhibit,
+  buildStratigraphySnapshotHonesty,
+  renderGeologyExhibitHtml,
+} from './habitatGeologyExhibit';
 
 const ROOT = process.cwd();
 const BUNDLE_DIR = join(ROOT, 'public/data/bundles');
@@ -86,6 +91,15 @@ describe('habitat exhibit depth', () => {
     expect(html).toContain('data-range-claim="sample_fallback"');
     expect(html).toContain('lodge pool');
     expect(html).toContain('Field habitat cues (authored observation hints)');
+    expect(html).toContain('Not in current snapshot — no formation-level data imported');
+  });
+
+  it('bundled flagships carry no formation names in mapped dex entries', () => {
+    for (const id of listFlagshipTaxonIds().filter((t) => SPECIES.has(t))) {
+      const honesty = buildStratigraphySnapshotHonesty(entryFor(id));
+      expect(honesty.formationNamesPresent, id).toBe(false);
+      expect(honesty.geologicPeriodLabelPresent, id).toBe(false);
+    }
   });
 });
 
@@ -130,6 +144,28 @@ describe('geology exhibit depth', () => {
     expect(html).toContain('data-time-gate="gate_pleistocene"');
     expect(html).toContain('data-paleomaps-unlocked="0"');
     expect(html).not.toMatch(/data-paleomap-state="verified"/);
+    expect(html).toContain('data-stratigraphy-snapshot="absent"');
+    expect(html).toMatch(/no formation names or geologic-period labels/i);
     expect(new TemporalMapService().peekCatalog()).toBeNull();
+  });
+
+  it('surfaces imported stratigraphy only when snapshot fields exist (does not invent)', () => {
+    const base = entryFor('tyrannosaurus_rex');
+    const absent = buildGeologyExhibit(base, CATALOG).stratigraphy;
+    expect(absent.formationNamesPresent).toBe(false);
+    expect(absent.playerNote).toMatch(/not formation-level geology/i);
+
+    const withFormation = {
+      ...base,
+      habitatRange: { ...base.habitatRange, formations: ['Hell Creek Formation'] },
+      time: { ...base.time, period: 'Cretaceous' },
+    };
+    const present = buildStratigraphySnapshotHonesty(withFormation);
+    expect(present.formationNamesPresent).toBe(true);
+    expect(present.geologicPeriodLabelPresent).toBe(true);
+    expect(present.playerNote).toMatch(/open Sources for citations/i);
+    const html = renderGeologyExhibitHtml(withFormation, CATALOG);
+    expect(html).toContain('data-stratigraphy-snapshot="present"');
+    expect(html).toMatch(/not paleomap unlocks/i);
   });
 });

@@ -48,6 +48,42 @@ export interface GeologyExhibit {
   intervals: GeologyInterval[];
   unmatchedTimeUnitIds: string[];
   scientificallyUnlockedCount: number;
+  /** Formation names / geologic-period labels are not imported in bundled snapshots unless present here. */
+  stratigraphy: StratigraphySnapshotHonesty;
+}
+
+/** Bundled dex entries may omit formation-level fields; never invent them at render time. */
+export interface StratigraphySnapshotHonesty {
+  formationNamesPresent: boolean;
+  geologicPeriodLabelPresent: boolean;
+  playerNote: string;
+}
+
+export function buildStratigraphySnapshotHonesty(entry: ArchiveDexEntry): StratigraphySnapshotHonesty {
+  const formations = entry.habitatRange?.formations ?? [];
+  const formationNamesPresent = formations.length > 0;
+  const periodFields = [
+    entry.time?.period,
+    entry.time?.era,
+    entry.time?.eon,
+    entry.time?.epoch,
+    entry.time?.age,
+  ].filter((v) => v !== undefined && v !== null && String(v).trim() !== '');
+  const geologicPeriodLabelPresent = periodFields.length > 0;
+  if (formationNamesPresent || geologicPeriodLabelPresent) {
+    return {
+      formationNamesPresent,
+      geologicPeriodLabelPresent,
+      playerNote:
+        'Formation or chronostratigraphic labels appear in this snapshot — open Sources for citations; they are not paleomap unlocks.',
+    };
+  }
+  return {
+    formationNamesPresent: false,
+    geologicPeriodLabelPresent: false,
+    playerNote:
+      'No formation names or geologic-period labels in this bundled snapshot. Time Atlas gate ages above are interval hints only — not formation-level geology.',
+  };
 }
 
 const RANGE_NOTES: Record<RangeClaimClass, string> = {
@@ -91,8 +127,15 @@ export function buildHabitatExhibit(entry: ArchiveDexEntry): HabitatExhibit {
 
 export function buildGeologyExhibit(entry: ArchiveDexEntry, catalog: TemporalEarthMapCatalog | null): GeologyExhibit {
   const units = entry.time?.timeUnitIds ?? [];
+  const stratigraphy = buildStratigraphySnapshotHonesty(entry);
   if (!catalog) {
-    return { catalogLoaded: false, intervals: [], unmatchedTimeUnitIds: [...units], scientificallyUnlockedCount: 0 };
+    return {
+      catalogLoaded: false,
+      intervals: [],
+      unmatchedTimeUnitIds: [...units],
+      scientificallyUnlockedCount: 0,
+      stratigraphy,
+    };
   }
   const seen = new Set<string>();
   const intervals: GeologyInterval[] = [];
@@ -123,7 +166,13 @@ export function buildGeologyExhibit(entry: ArchiveDexEntry, catalog: TemporalEar
     intervals,
     unmatchedTimeUnitIds: unmatched,
     scientificallyUnlockedCount: intervals.filter((i) => i.scientificallyUnlocked).length,
+    stratigraphy,
   };
+}
+
+function renderStratigraphyHonestyHtml(stratigraphy: StratigraphySnapshotHonesty): string {
+  const snapshot = stratigraphy.formationNamesPresent || stratigraphy.geologicPeriodLabelPresent ? 'present' : 'absent';
+  return `<p class="uncertainty-note dex-stratigraphy-honesty" data-stratigraphy-snapshot="${snapshot}" data-formations-present="${stratigraphy.formationNamesPresent}" data-geologic-period-present="${stratigraphy.geologicPeriodLabelPresent}">${escapeHtml(stratigraphy.playerNote)}</p>`;
 }
 
 function formatMa(value: number): string {
@@ -149,10 +198,12 @@ export function renderHabitatExhibitHtml(entry: ArchiveDexEntry): string {
 
 export function renderGeologyExhibitHtml(entry: ArchiveDexEntry, catalog: TemporalEarthMapCatalog | null): string {
   const exhibit = buildGeologyExhibit(entry, catalog);
+  const stratigraphyHtml = renderStratigraphyHonestyHtml(exhibit.stratigraphy);
   if (!exhibit.catalogLoaded) {
     return `<section class="dex-geology-exhibit" data-catalog-loaded="false" aria-label="Geologic time exhibit">
       <h4>Geologic time &amp; paleogeography</h4>
       <p class="uncertainty-note">Time Atlas map catalog not loaded; paleogeography status is unknown and not verified.</p>
+      ${stratigraphyHtml}
     </section>`;
   }
   const rows = exhibit.intervals
@@ -171,5 +222,6 @@ export function renderGeologyExhibitHtml(entry: ArchiveDexEntry, catalog: Tempor
     ${rows ? `<ul class="dex-list">${rows}</ul>` : '<p><em>No time units linked in current snapshot.</em></p>'}
     ${unmatched}
     <p class="uncertainty-note">Intervals come from the Time Atlas gate catalog. ${exhibit.scientificallyUnlockedCount}/${exhibit.intervals.length} paleogeographic reconstructions are scientifically unlocked; locked gates draw no coastlines.</p>
+    ${stratigraphyHtml}
   </section>`;
 }
