@@ -720,15 +720,44 @@ body {
   background: var(--bg-card);
   color: var(--text-secondary);
   font-size: 0.85rem;
-  max-width: 36rem;
+  max-width: min(36rem, 100%);
+  box-sizing: border-box;
+  overflow-wrap: anywhere;
 }
-.museum-honesty-title { margin: 0 0 0.25rem; color: var(--text-primary); font-weight: 600; }
-.museum-honesty-subtitle { margin: 0 0 0.4rem; }
-.museum-honesty-floors { margin: 0; padding-left: 1.1rem; }
-.museum-honesty-floors li { margin: 0.15rem 0; }
+.museum-honesty-title { margin: 0 0 0.25rem; color: var(--text-primary); font-weight: 600; max-width: 100%; overflow-wrap: anywhere; }
+.museum-honesty-subtitle { margin: 0 0 0.4rem; max-width: 100%; overflow-wrap: anywhere; }
+.museum-honesty-floors { margin: 0; padding-left: 1.1rem; max-width: 100%; overflow-wrap: anywhere; }
+.museum-honesty-floors li { margin: 0.15rem 0; max-width: 100%; overflow-wrap: anywhere; }
 #hud-museum-honesty-host:not([hidden]) {
-  max-width: min(28rem, 92vw);
+  width: 100%;
+  max-width: min(28rem, 100%);
+  min-width: 0;
+  box-sizing: border-box;
   margin: 0.35rem 0;
+}
+/* 390px phone width: the host must follow its parent, not a 28rem/36rem floor that overflowed the November runtime (host ~449px, card copy ~435px, page scrollWidth 691). */
+@media (max-width: 390px) {
+  #hud,
+  #hud-top,
+  #hud-bottom,
+  #hud-museum-honesty-host,
+  #hud-museum-honesty-host .museum-honesty {
+    max-width: 100%;
+    min-width: 0;
+    box-sizing: border-box;
+  }
+  #hud-buttons {
+    max-width: 100%;
+  }
+  #hud-museum-honesty-host .museum-honesty-title,
+  #hud-museum-honesty-host .museum-honesty-subtitle,
+  #hud-museum-honesty-host .museum-honesty-floors,
+  #hud-museum-honesty-host .museum-honesty-floors li,
+  #hud-museum-honesty-host p {
+    max-width: 100%;
+    overflow-wrap: anywhere;
+    white-space: normal;
+  }
 }
 .archivedex-honesty {
   margin-bottom: 0.5rem;

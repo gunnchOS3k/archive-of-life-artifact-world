@@ -1,0 +1,27 @@
+{
+  "upstream_sha": "ad8b61c5d150ccfdbfab10534806a0c27ece6847",
+  "authored_against_sha": "848d1152362bdfae53b56a5ac96f5f52b38f2f96",
+  "status": "production_candidate",
+  "prior_distinct_review": "outputs/continuous-production-20261101/archive-art/INDEPENDENT_ART_REVIEW.md",
+  "reconciliation": "All eight authored/integration files apply unchanged; newer museumDexPresentation and scientific data/gates preserved",
+  "sha256": {
+    "src/assets/organisms/blue-whale-field-plate.svg": "c67219b2ad1ea937726fec1481bd55ed2c87151e468fccee235076721b6d54d4",
+    "src/ui/blueWhaleStudy.ts": "f558b94818dabc23f9c024902013e99b1dab0da70f7133221a8d28c69c7ff720",
+    "css/blue-whale-study.css": "72de91cc0827cb33269cdfb1c006bcca5afbf9fab526f433d80334fd8e364efc",
+    "src/main.ts": "5c9a7e2f89b2b1bf63f2559fde04bd37e5edf976be0dba4c4ec7f90587e559be",
+    "src/ui/archiveDexUI.ts": "7fdc0f247baca756e7f4d365732c8413169545f55b96911b266f9e0bf686150c",
+    "index.html": "85763ab3b642b300769fad6fac91096f5361a8c4a2a7158dacefe364d1884e68",
+    "src/ui/blueWhaleStudy.test.ts": "d6640677b78dac0bb8f8cf75951513dabedd25eab0025a1d263f078e41726a6e",
+    "art_source/blue-whale/PROVENANCE.json": "b358aa3ff9b5e2f92a5bac273b584bc9fa89c4f150c54d2f5074aa2ced6022af"
+  },
+  "validation": {
+    "targeted_unit_tests": 3,
+    "targeted_unit_exit": 0,
+    "typescript_noEmit_exit": 0,
+    "original_patch_apply_check": 0
+  },
+  "running_product_evidence": "Earlier independently reviewed exact authored bytes; no new current-head runtime screenshot claimed",
+  "HUMAN": false,
+  "RC2": false,
+  "V1": false
+}

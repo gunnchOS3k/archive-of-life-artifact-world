@@ -2,6 +2,7 @@ import type { RegionBundle } from '@/schema';
 import type { PlayableSpecies } from '@/services/DataCatalogService';
 import { getSpeciesIcon, getSpeciesRepresentationLabel } from '@/services/speciesRepresentation';
 import { speciesEligibleInRegion } from '@/services/geographicEligibility';
+import { drawAuthoredOrganism } from '@/art/organismStudies';
 
 export type Interactable =
   | { type: 'portal'; id: string; label: string; target: string; x: number; y: number; radius: number; color: string }
@@ -367,11 +368,17 @@ export class World {
       ctx.arc(item.x, item.y, item.radius + pulse, 0, Math.PI * 2);
       ctx.stroke();
       ctx.setLineDash([]);
-      const icon = getSpeciesIcon(item.species);
-      ctx.font = '24px sans-serif';
-      ctx.textAlign = 'center';
-      ctx.fillText(icon, item.x, item.y + 8);
+      ctx.save(); ctx.translate(item.x, item.y);
+      const authored = drawAuthoredOrganism(ctx, item.speciesId, { time: 0, facing: 1, reducedMotion: true, scale: .22 });
+      ctx.restore();
+      if (!authored) {
+        const icon = getSpeciesIcon(item.species);
+        ctx.font = '24px sans-serif';
+        ctx.textAlign = 'center';
+        ctx.fillText(icon, item.x, item.y + 8);
+      }
       ctx.font = '10px sans-serif';
+      ctx.textAlign = 'center';
       ctx.fillStyle = '#E8E4D9';
       ctx.fillText(getSpeciesRepresentationLabel(item.species), item.x, item.y + item.radius + 14);
     } else if (item.type === 'fossil') {

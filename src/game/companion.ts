@@ -1,4 +1,12 @@
 import type { CompanionState } from '@/schema';
+import { isReducedMotionActive } from '@/systems/accessibility';
+
+/** Palette-only shading for the existing fictional Lifeling; no new identity. */
+function shade(color: string, factor: number): string {
+  if (!/^#[0-9a-f]{6}$/i.test(color)) return color;
+  const channels = [1, 3, 5].map(offset => Math.min(255, Math.max(0, Math.round(parseInt(color.slice(offset, offset + 2), 16) * factor))));
+  return `rgb(${channels.join(',')})`;
+}
 
 export class Lifeling {
   x = 0;
@@ -66,9 +74,10 @@ export class Lifeling {
   }
 
   draw(ctx: CanvasRenderingContext2D, companionState: CompanionState, _traits?: unknown) {
-    const bob = Math.sin(this.bobPhase) * 3;
+    const still = isReducedMotionActive();
+    const bob = still ? 0 : Math.sin(this.bobPhase) * 3;
     const hasHop = companionState.equippedTraits.includes('frog_hop');
-    const hop = hasHop ? Math.abs(Math.sin(this.hopPhase)) * 8 : 0;
+    const hop = hasHop && !still ? Math.abs(Math.sin(this.hopPhase)) * 8 : 0;
 
     ctx.save();
     ctx.translate(this.x, this.y - bob - hop);
@@ -78,7 +87,7 @@ export class Lifeling {
 
     // Aura effects
     if (companionState.equippedTraits.includes('butterfly_shimmer')) {
-      ctx.globalAlpha = 0.3 + Math.sin(this.bobPhase * 2) * 0.15;
+      ctx.globalAlpha = still ? 0.3 : 0.3 + Math.sin(this.bobPhase * 2) * 0.15;
       ctx.fillStyle = '#FF6600';
       ctx.beginPath();
       ctx.arc(0, 0, size + 8, 0, Math.PI * 2);
@@ -91,17 +100,24 @@ export class Lifeling {
       for (let i = 0; i < 3; i++) {
         ctx.globalAlpha = 0.5;
         ctx.beginPath();
-        ctx.arc(-15 - i * 8, Math.sin(this.bobPhase + i) * 5, 2, 0, Math.PI * 2);
+        ctx.arc(-15 - i * 8, still ? 0 : Math.sin(this.bobPhase + i) * 5, 2, 0, Math.PI * 2);
         ctx.fill();
       }
       ctx.globalAlpha = 1;
     }
 
-    // Body
-    ctx.fillStyle = color;
+    // Original soft bean contour, translucent belly and small paw pads.
+    const coat = ctx.createLinearGradient(-12, -15, 12, 15);
+    coat.addColorStop(0, shade(color, 1.12)); coat.addColorStop(.5, color); coat.addColorStop(1, shade(color, .7));
+    ctx.fillStyle = coat;
     ctx.beginPath();
-    ctx.ellipse(0, 0, size, size * 0.85, 0, 0, Math.PI * 2);
+    ctx.moveTo(-15, -3); ctx.bezierCurveTo(-16, -14, -7, -16, 0, -13);
+    ctx.bezierCurveTo(10, -18, 19, -5, 15, 6); ctx.bezierCurveTo(12, 16, -11, 16, -15, 6); ctx.closePath();
     ctx.fill();
+    ctx.strokeStyle = shade(color, .65); ctx.lineWidth = .8; ctx.stroke();
+    ctx.fillStyle = '#f3ebc65c'; ctx.beginPath(); ctx.ellipse(0, 6, 9.5, 6.2, 0, 0, Math.PI * 2); ctx.fill();
+    ctx.fillStyle = shade(color, 1.13); ctx.beginPath(); ctx.ellipse(-10, 10, 4.5, 3, -.3, 0, Math.PI * 2); ctx.ellipse(10, 10, 4.5, 3, .3, 0, Math.PI * 2); ctx.fill();
+    ctx.strokeStyle = '#e9f1d58a'; ctx.lineWidth = 1; ctx.beginPath(); ctx.moveTo(-10, -8); ctx.quadraticCurveTo(-5, -12, -1, -10); ctx.stroke();
 
     // Patterns
     if (companionState.equippedTraits.includes('tiger_stripes')) {
@@ -180,6 +196,13 @@ export class Lifeling {
 
     // Eyes
     const eyeColor = companionState.equippedTraits.includes('owl_eye_markings') ? '#F5E6C8' : '#1a1a1a';
+    const blinking = !still && this.bobPhase % 22 > 21.5;
+    const delighted = this.emote === 'celebrate';
+    if (blinking || delighted) {
+      ctx.strokeStyle = eyeColor; ctx.lineWidth = 2; ctx.lineCap = 'round'; ctx.beginPath();
+      ctx.moveTo(-8, -4); ctx.quadraticCurveTo(-5, delighted ? -8 : -3, -2, -4);
+      ctx.moveTo(2, -4); ctx.quadraticCurveTo(5, delighted ? -8 : -3, 8, -4); ctx.stroke();
+    } else {
     ctx.fillStyle = eyeColor;
     ctx.beginPath();
     ctx.arc(-5, -4, 4, 0, Math.PI * 2);
@@ -193,21 +216,27 @@ export class Lifeling {
       ctx.arc(5, -4, 2, 0, Math.PI * 2);
       ctx.fill();
     }
+    ctx.fillStyle = '#f4f3df'; ctx.beginPath(); ctx.arc(-6, -5.2, 1.2, 0, Math.PI * 2); ctx.arc(4, -5.2, 1.2, 0, Math.PI * 2); ctx.fill();
+    }
+    ctx.fillStyle = '#34564c'; ctx.beginPath(); ctx.ellipse(0, 1.5, 1.5, 1, 0, 0, Math.PI * 2); ctx.fill();
+    ctx.strokeStyle = '#34564c'; ctx.lineWidth = .8; ctx.beginPath(); ctx.moveTo(-2.5, 4); ctx.quadraticCurveTo(0, delighted ? 8 : 6, 2.5, 4); ctx.stroke();
 
     // Ears
     ctx.fillStyle = color;
     ctx.beginPath();
     ctx.moveTo(-10, -10);
-    ctx.lineTo(-14, -18);
-    ctx.lineTo(-6, -12);
+    ctx.quadraticCurveTo(-17, -12, -14, -20);
+    ctx.quadraticCurveTo(-7, -19, -6, -12);
     ctx.closePath();
     ctx.fill();
     ctx.beginPath();
     ctx.moveTo(10, -10);
-    ctx.lineTo(14, -18);
-    ctx.lineTo(6, -12);
+    ctx.quadraticCurveTo(17, -12, 14, -20);
+    ctx.quadraticCurveTo(7, -19, 6, -12);
     ctx.closePath();
     ctx.fill();
+    ctx.strokeStyle = shade(color, .7); ctx.lineWidth = .7; ctx.beginPath();
+    ctx.moveTo(-12, -12); ctx.lineTo(-13, -17); ctx.moveTo(12, -12); ctx.lineTo(13, -17); ctx.stroke();
 
     // Tail
     if (companionState.equippedTraits.includes('wolf_tail')) {
@@ -224,21 +253,22 @@ export class Lifeling {
 
     // Emote bubbles
     if (this.emote === 'celebrate') {
-      ctx.font = '16px sans-serif';
-      ctx.fillText('✨', 0, -size - 15);
+      ctx.strokeStyle = '#e6c65e'; ctx.lineWidth = 1.4;
+      for (const [x, y, r] of [[-7,-30,3],[5,-36,4],[14,-27,2]]) {
+        ctx.beginPath(); ctx.moveTo(x-r,y); ctx.lineTo(x+r,y); ctx.moveTo(x,y-r); ctx.lineTo(x,y+r); ctx.stroke();
+      }
     } else if (this.emote === 'sniff') {
-      ctx.font = '14px sans-serif';
-      ctx.fillText('👃', 12, -size - 10);
+      ctx.strokeStyle = '#b2d4c4'; ctx.lineWidth = 1.2; ctx.beginPath();
+      ctx.moveTo(15,-18); ctx.quadraticCurveTo(21,-23,16,-27); ctx.moveTo(21,-18); ctx.quadraticCurveTo(27,-24,22,-30); ctx.stroke();
     } else if (this.emote === 'dig') {
-      ctx.font = '14px sans-serif';
-      ctx.fillText('⛏️', 0, -size - 12);
+      ctx.fillStyle = '#c6aa79'; ctx.beginPath(); ctx.ellipse(-13,15,3,1.5,-.3,0,Math.PI*2); ctx.ellipse(9,17,2,1,.2,0,Math.PI*2); ctx.fill();
     }
 
     if (this.reactionTimer > 0) {
       ctx.strokeStyle = '#FFD700';
       ctx.lineWidth = 2;
       ctx.beginPath();
-      ctx.arc(0, 0, size + 6 + Math.sin(this.bobPhase * 3) * 2, 0, Math.PI * 2);
+      ctx.arc(0, 0, size + 6 + (still ? 0 : Math.sin(this.bobPhase * 3) * 2), 0, Math.PI * 2);
       ctx.stroke();
     }
 

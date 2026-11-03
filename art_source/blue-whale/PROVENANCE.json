@@ -1,0 +1,82 @@
+{
+  "schema": "aol.original-organism-art.v1",
+  "asset": "src/assets/organisms/blue-whale-field-plate.svg",
+  "taxonId": "balaenoptera_musculus",
+  "scientificName": "Balaenoptera musculus",
+  "author": "Codex for gunnchOS3k Archive of Life",
+  "createdDate": "2026-11-01",
+  "classification": "production_candidate",
+  "sourceFormat": "editable SVG paths, gradients, clipping and filters; no linked or embedded third-party images",
+  "exportSettings": {
+    "width": 1200,
+    "height": 480,
+    "viewBox": "0 0 1200 480",
+    "colorSpace": "sRGB",
+    "background": "opaque designed ocean field plate",
+    "fonts": "none in SVG; product typography uses existing Source Serif4/Source Sans3",
+    "rasterExports": "browser screenshots are evidence only; runtime loads SVG",
+    "pipeline": "Vite asset URL import; same original SVG emitted into production assets"
+  },
+  "references": [
+    {
+      "organization": "NOAA Fisheries",
+      "url": "https://www.fisheries.noaa.gov/species/blue-whale",
+      "sections": [
+        "Appearance",
+        "Behavior and Diet"
+      ],
+      "usedFor": [
+        "elongated slender body",
+        "blue-gray mottled skin",
+        "throat pleats during feeding"
+      ],
+      "accessed": "2026-11-01",
+      "copiedArtwork": false
+    },
+    {
+      "organization": "Fisheries and Oceans Canada",
+      "url": "https://www.canada.ca/en/environment-climate-change/services/species-risk-public-registry/recovery-strategies/blue-whale-northwest-atlantic/chapter-1.html",
+      "sections": [
+        "1.2 Description"
+      ],
+      "usedFor": [
+        "broad head",
+        "tapered form",
+        "flipper and triangular fluke anatomy"
+      ],
+      "accessed": "2026-11-01",
+      "copiedArtwork": false
+    },
+    {
+      "organization": "North Atlantic Marine Mammal Commission",
+      "url": "https://nammco.no/blue-whale/",
+      "sections": [
+        "General characteristics"
+      ],
+      "usedFor": [
+        "small dorsal fin far back",
+        "long bluntly pointed flippers",
+        "ventral throat grooves"
+      ],
+      "accessed": "2026-11-01",
+      "copiedArtwork": false
+    }
+  ],
+  "artisticInterpretations": [
+    "Skin patches are individually drawn invented markings, not the pattern of a documented whale.",
+    "Lateral/oblique stylization is not a metrically calibrated anatomical reconstruction.",
+    "Ocean field backdrop, lighting and composition are authored atmosphere, not a location-specific habitat survey.",
+    "Ventral grooves are simplified; their drawn count does not claim a biological groove count."
+  ],
+  "statusBoundaries": {
+    "independentlyReviewed": false,
+    "humanApproved": false,
+    "finished3DModel": false,
+    "locomotionAnimation": false,
+    "scientificRecordPromoted": false,
+    "HUMAN": false,
+    "RC2": false,
+    "V1": false
+  },
+  "rights": "New original project artwork; existing repository LICENSE retained. Institutional texts consulted for anatomical facts; no source imagery traced, copied, embedded or relicensed."
+}

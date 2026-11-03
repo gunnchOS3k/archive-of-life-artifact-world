@@ -1,5 +1,7 @@
 import '../css/styles.css';
 import '../css/living-archive.css';
+import '../css/blue-whale-study.css';
+import { mountBlueWhaleStudy } from '@/ui/blueWhaleStudy';
 import { dataCatalog } from '@/services/DataCatalogService';
 import { earthLayerService } from '@/services/EarthLayerService';
 import { ArchiveDexService } from '@/services/ArchiveDexService';
@@ -29,6 +31,7 @@ async function init() {
   setEmotionalMode('home');
   void hydrateLivingArchiveIcons();
   mountMuseumHubPresentation(document);
+  mountBlueWhaleStudy(document);
 
   const params =
     typeof window !== 'undefined' ? new URLSearchParams(window.location.search) : null;

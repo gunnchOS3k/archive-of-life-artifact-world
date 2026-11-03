@@ -12,6 +12,7 @@ import {
   type ObservationMotionMode,
 } from '@/systems/observationLocomotion';
 import { drawObservationSilhouetteStub } from '@/systems/observationSilhouette';
+import { authoredStudyHalfWidth, drawAuthoredHabitat, drawAuthoredOrganism, hasAuthoredStudy } from '@/art/organismStudies';
 
 export class WildlifeObservation {
   private canvas: HTMLCanvasElement;
@@ -71,6 +72,9 @@ export class WildlifeObservation {
     if (motion.habitatBackdrop && !this.habitatCue) {
       this.habitatCue = motion.habitatBackdrop;
     }
+    if (hasAuthoredStudy(species.id)) {
+      this.artStatusLabel = 'Original 2D field study · visual and human review pending';
+    }
 
     this._onKeyDown = (e: KeyboardEvent) => {
       if (e.code === 'Space') {
@@ -111,6 +115,7 @@ export class WildlifeObservation {
         baseY: this.baseY,
         canvasWidth: this.canvas.width,
         canvasHeight: this.canvas.height,
+        subjectHalfWidth: authoredStudyHalfWidth(this.species.id),
       },
       dt,
       isReducedMotionActive(),
@@ -143,44 +148,50 @@ export class WildlifeObservation {
     const w = this.canvas.width;
     const h = this.canvas.height;
 
-    const gradient = ctx.createLinearGradient(0, 0, 0, h);
-    gradient.addColorStop(0, '#87CEEB');
-    gradient.addColorStop(0.6, '#8BA84A');
-    gradient.addColorStop(1, '#5A7A3A');
-    ctx.fillStyle = gradient;
-    ctx.fillRect(0, 0, w, h);
+    const reducedMotion = isReducedMotionActive();
+    if (!drawAuthoredHabitat(ctx, this.species.id, w, h, this.timer, reducedMotion)) {
+      const gradient = ctx.createLinearGradient(0, 0, 0, h);
+      gradient.addColorStop(0, '#87CEEB');
+      gradient.addColorStop(0.6, '#8BA84A');
+      gradient.addColorStop(1, '#5A7A3A');
+      ctx.fillStyle = gradient;
+      ctx.fillRect(0, 0, w, h);
 
-    ctx.fillStyle = '#2D5A27';
-    ctx.beginPath();
-    ctx.ellipse(60, h - 40, 50, 30, 0, 0, Math.PI * 2);
-    ctx.ellipse(w - 60, h - 50, 40, 25, 0, 0, Math.PI * 2);
-    ctx.fill();
+      ctx.fillStyle = '#2D5A27';
+      ctx.beginPath();
+      ctx.ellipse(60, h - 40, 50, 30, 0, 0, Math.PI * 2);
+      ctx.ellipse(w - 60, h - 50, 40, 25, 0, 0, Math.PI * 2);
+      ctx.fill();
+    }
 
-    // Procedural silhouette stub under the identity mark (≠ finished model).
+    // Exact authored studies replace fallback marks only for supported taxon IDs.
     ctx.save();
     ctx.translate(this.animalX, this.animalY);
-    drawObservationSilhouetteStub(ctx, this.motionMode, this.animalDir);
-
     const alert = this.alertness / 100;
-    ctx.font = '48px sans-serif';
-    ctx.textAlign = 'center';
-    if (this.animalDir < 0) ctx.scale(-1, 1);
-    ctx.fillText(
-      getSpeciesIcon({
-        id: this.species.id,
-        commonName: this.species.commonName,
-        scientificName: this.species.scientificName,
-        family: this.species.family,
-        group: this.species.group,
-        conservationStatus: this.species.conservationStatus,
-      }),
-      0,
-      0,
-    );
+    if (!drawAuthoredOrganism(ctx, this.species.id, {
+      time: this.timer, facing: this.animalDir, reducedMotion,
+    })) {
+      drawObservationSilhouetteStub(ctx, this.motionMode, this.animalDir);
+      ctx.font = '48px sans-serif';
+      ctx.textAlign = 'center';
+      if (this.animalDir < 0) ctx.scale(-1, 1);
+      ctx.fillText(
+        getSpeciesIcon({
+          id: this.species.id,
+          commonName: this.species.commonName,
+          scientificName: this.species.scientificName,
+          family: this.species.family,
+          group: this.species.group,
+          conservationStatus: this.species.conservationStatus,
+        }),
+        0,
+        0,
+      );
+    }
 
     if (alert > 0.5) {
       ctx.font = '20px sans-serif';
-      ctx.fillText('!', 20, -30);
+      ctx.fillText('!', 20, hasAuthoredStudy(this.species.id) ? -65 : -30);
     }
 
     ctx.restore();

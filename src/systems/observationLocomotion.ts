@@ -111,11 +111,13 @@ export function stepObservationPose(
     baseY: number;
     canvasWidth: number;
     canvasHeight: number;
+    /** Authored art may need more room than the provisional silhouette. */
+    subjectHalfWidth?: number;
   },
   dt: number,
   reducedMotion: boolean,
 ): ObservationPose {
-  const margin = 80;
+  const margin = Math.max(80, Math.min(state.subjectHalfWidth ?? 80, state.canvasWidth / 2 - 1));
   const minX = margin;
   const maxX = Math.max(margin + 1, state.canvasWidth - margin);
   let { x, facing } = state;

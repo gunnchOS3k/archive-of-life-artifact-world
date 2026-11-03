@@ -1,0 +1,32 @@
+.whale-study { --study-target-x:17%; --study-target-y:54%; margin:30px 0; padding:26px; background:#f4f0e6; border:1px solid #d8d9c9; border-radius:20px; color:#1a2430; text-align:left; box-shadow:0 14px 40px #071b2030; }
+.whale-study-heading { display:flex; align-items:center; justify-content:space-between; gap:20px; }
+.whale-study-kicker { margin:0 0 10px; font-size:11px; font-weight:600; letter-spacing:.12em; text-transform:uppercase; color:#40665e; }
+.whale-study-kicker span { padding:0 7px; color:#8d998c; }
+body.vxp4-living-archive .whale-study h2 { margin:0; font-family:var(--font-display,Georgia,serif); font-size:clamp(25px,3.2vw,35px); font-weight:400; color:#1a2430; letter-spacing:-.02em; line-height:1.15; }
+body.vxp4-living-archive #title-screen .whale-study h2 { display:block; }
+.whale-study-name { margin:10px 0 20px; font-size:14px; color:#4b605b; }
+.whale-study-name span { padding:0 7px; }
+.whale-study-tag { flex-shrink:0; border:1px solid #bdcbbd; border-radius:30px; padding:8px 12px; color:#34594e; font-size:11px; white-space:nowrap; }
+.whale-study-image { position:relative; border-radius:12px; overflow:hidden; background:#143440; }
+.whale-study-image img,.dex-organism-plate img { display:block; width:100%; height:auto; }
+.whale-study-image-note { position:absolute; left:20px; bottom:15px; font-size:10px; letter-spacing:.09em; text-transform:uppercase; color:#c4d8d1; }
+.whale-study-marker { position:absolute; left:var(--study-target-x); top:var(--study-target-y); width:20px; height:20px; border:1.5px solid #f6e5b7; border-radius:50%; transform:translate(-50%,-50%); box-shadow:0 0 0 5px #f6e5b71c; pointer-events:none; transition:left .35s ease,top .35s ease; }
+.whale-study-marker:after { content:''; position:absolute; inset:7px; background:#f6e5b7; border-radius:50%; }
+.whale-study-observation { display:grid; grid-template-columns:minmax(145px, .7fr) 2fr; gap:26px; margin-top:22px; align-items:start; }
+.whale-study-controls { display:flex; flex-direction:column; gap:7px; }
+.whale-study-controls button { min-height:44px; padding:10px 12px; border:1px solid #cad1c3; border-radius:8px; background:transparent; color:#3b5d53; font:600 13px var(--font-main,sans-serif); text-align:left; cursor:pointer; }
+.whale-study-controls button[aria-pressed="true"] { background:#1f6b5a; border-color:#1f6b5a; color:white; }
+.whale-study-controls button:hover { border-color:#1f6b5a; }
+.whale-study-controls button:focus-visible,.whale-study summary:focus-visible,.whale-study a:focus-visible { outline:3px solid #ac6422; outline-offset:3px; }
+.whale-study-note { min-height:130px; padding:4px 0; }
+.whale-study-note h3 { margin:0 0 8px; font:600 20px var(--font-display,Georgia,serif); color:#213c36; }
+.whale-study-note p { margin:0; font-size:14px; line-height:1.65; color:#43584f; }
+.whale-study-sources { margin-top:20px; border-top:1px solid #d5d9ca; padding-top:14px; font-size:12px; line-height:1.65; color:#4b6058; }
+.whale-study-sources summary { cursor:pointer; padding:4px 0; color:#315b4e; font-weight:600; }
+.whale-study-sources a { color:#1f6b5a; text-underline-offset:3px; }
+.whale-study-status { margin:18px 0 -6px; color:#50695f; font-size:10px; letter-spacing:.03em; }
+.dex-organism-plate { margin:22px 0; }
+.dex-organism-plate img { border-radius:12px; }
+.dex-organism-plate figcaption { margin-top:8px; color:#4b6058; font-size:12px; }
+@media (max-width:600px) { .whale-study { margin:22px 0; padding:16px; border-radius:15px; } .whale-study-heading { display:block; } .whale-study-tag { display:none; } .whale-study-kicker { font-size:9px; letter-spacing:.08em; } .whale-study-observation { grid-template-columns:1fr; gap:13px; } .whale-study-controls { flex-direction:row; } .whale-study-controls button { text-align:center; font-size:11px; flex:1; padding:9px 6px; } .whale-study-note { min-height:125px; } .whale-study-image-note { font-size:7px; left:12px; bottom:9px; letter-spacing:.04em; } .whale-study-marker { width:15px; height:15px; } .whale-study-marker:after { inset:5px; } }
+@media (prefers-reduced-motion:reduce) { .whale-study-marker { transition:none; } }

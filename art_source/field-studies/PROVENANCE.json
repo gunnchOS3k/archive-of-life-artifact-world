@@ -1,0 +1,66 @@
+{
+  "schema": "aol.authored-field-studies.v1",
+  "authored_date": "2026-11-02",
+  "author": "Codex original Archive production lane",
+  "source": "src/art/organismStudies.ts",
+  "medium": "Original editable Canvas2D vector paths, gradients, clipped pigmentation and articulated transforms; not a 3D model",
+  "classification": "authored_render_candidate",
+  "reference_policy": "Institutional text descriptions consulted for anatomy and habitat; no external image was traced, embedded or copied. Existing project whale field-plate geometry is retained and adapted with its original provenance.",
+  "taxa": [
+    {
+      "id": "balaenoptera_musculus",
+      "interpretation": "Stylized lateral/oblique blue whale, invented individual mottling, simplified ventral grooves, articulated tail/flippers",
+      "owned_source_derivative": "src/assets/organisms/blue-whale-field-plate.svg",
+      "primary_references": [
+        { "url": "https://www.fisheries.noaa.gov/species/blue-whale", "sections": ["Appearance", "Behavior and Diet"], "used_for": "Slender blue-gray mottled body and baleen-whale feeding anatomy" },
+        { "url": "https://nammco.no/blue-whale/", "sections": ["General characteristics"], "used_for": "Small posterior dorsal, blunt flippers and ventral grooves" }
+      ]
+    },
+    {
+      "id": "panthera_leo",
+      "interpretation": "Adult male yellow-gold lion with declared mane variation, compact muscular body, paws, counterbalancing tail and articulated walk",
+      "primary_references": [
+        { "url": "https://nationalzoo.si.edu/animals/lion", "sections": ["Physical Description", "Native Habitat"], "used_for": "Compact body, powerful forequarters, yellow-gold coat, adult male shaggy mane and grassland setting" }
+      ]
+    },
+    {
+      "id": "loxodonta_africana",
+      "interpretation": "African savanna elephant study with large ears, swayed back, wrinkled skin, columnar feet, tusks and flexible trunk; not an Asian or forest-elephant substitute",
+      "primary_references": [
+        { "url": "https://animals.sandiegozoo.org/animals/elephant", "sections": ["About"], "used_for": "African elephant ear/back/trunk distinctions, visible tusks, wrinkled skin and ear-flapping behavior" }
+      ]
+    },
+    {
+      "id": "danaus_plexippus",
+      "interpretation": "Dorsal/oblique adult monarch, orange fore/hindwings with black venation/borders and paired white spotting; no male scent-patch claim",
+      "primary_references": [
+        { "url": "https://www.fws.gov/species/monarch-danaus-plexippus", "sections": ["Overview", "Characteristics"], "used_for": "Monarch orange/black markings, white wing-border spotting and milkweed/flower habitat relationship" }
+      ]
+    }
+  ],
+  "animation_limits": [
+    "Cycles are authored educational movement cues driven by the existing observation timer, not measured kinematics or locomotion simulation.",
+    "No claim that four supported adult interpretations represent every sex, age, population or viewing angle.",
+    "Reduced-motion freezes articulation and authored habitat drift; unsupported taxa retain their existing honest provisional representation."
+  ],
+  "habitat_limits": "Original composed ocean, savanna/watering-hole and milkweed-garden illustrations. No measured geography, occurrence density, paleogeography or habitat survey is claimed.",
+  "lifeling": {
+    "source": "src/game/companion.ts",
+    "basis": "Existing fictional mint-bodied Lifeling with pointed ears, black eyes, optional earned mane/traits and current saved name; Living Archive jade/ivory/amber palette",
+    "changes": "Original soft contour and coat shading, belly/paw details, eye glints/blink/celebration expression, and drawn sparkle/sniff/dig feedback",
+    "new_official_name": false,
+    "traits_or_progression_changed": false
+  },
+  "accessed_primary_sources_date": "2026-11-02",
+  "status": {
+    "runtime_visual_assessed": false,
+    "independently_reviewed": false,
+    "human_approved": false,
+    "scientific_record_promoted": false,
+    "finished_3d_model": false,
+    "HUMAN": false,
+    "RC2": false,
+    "V1": false
+  },
+  "rights": "Original project source under the existing repository LICENSE. Institutional descriptions supply anatomical facts; no institutional photography, illustrations, trade dress or logos are included."
+}

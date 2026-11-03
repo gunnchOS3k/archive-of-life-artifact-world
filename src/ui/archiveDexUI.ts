@@ -8,6 +8,8 @@ import { getEntryRevealLevel, getVisibleTabs } from '@/services/archivedexMapper
 import { renderArchiveDexTab } from '@/ui/archiveDexTabs';
 import { formatArtifactType } from '@/systems/artifactSystem';
 import { renderSourcesEvidencePanel } from '@/ui/evidence/SourcesEvidencePanel';
+import { blueWhalePlateHtml } from '@/ui/blueWhaleStudy';
+import { mountAuthoredOrganismPanel } from '@/ui/authoredOrganismPanel';
 import {
   buildArchiveDexEntryPresentation,
   mountArchiveDexHonestyBanner,
@@ -24,6 +26,7 @@ export class ArchiveDexUI {
   private grid: HTMLElement;
   private entryPanel: HTMLElement;
   private entryHeader: HTMLElement;
+  private entryRequest = 0;
   private entryTabs: HTMLElement;
   private entryContent: HTMLElement;
   private stats: HTMLElement;
@@ -149,6 +152,7 @@ export class ArchiveDexUI {
       this.render();
     });
     this.entryPanel?.querySelector('#archivedex-entry-back')?.addEventListener('click', () => {
+      this.entryRequest++;
       this.entryPanel.classList.add('hidden');
     });
   }
@@ -272,15 +276,22 @@ export class ArchiveDexUI {
   async openEntry(id: string) {
     if (!this.state) return;
     this.activeTab = 'overview';
-    await this.renderEntry(id);
-    this.entryPanel.classList.remove('hidden');
+    if (await this.renderEntry(id)) this.entryPanel.classList.remove('hidden');
   }
 
   private async renderEntry(id: string) {
     if (!this.state) return;
+    const request = ++this.entryRequest;
     const collected = getCollectedIds(this.state).has(id);
     const entry = await this.dexService.getEntryById(id, this.state);
-    if (!entry) return;
+    if (request !== this.entryRequest) return false;
+    this.entryPanel.dataset.entryId = id;
+    if (!entry) {
+      this.entryHeader.textContent = 'Entry details are currently unavailable.';
+      this.entryTabs.replaceChildren();
+      this.entryContent.replaceChildren();
+      return true;
+    }
 
     const reveal = getEntryRevealLevel(entry, collected || entry.representationTier <= 3);
     const tabs = getVisibleTabs(entry, reveal);
@@ -322,7 +333,9 @@ export class ArchiveDexUI {
           ${briefStrip}
         </div>
       </div>
+      ${reveal === 'hidden' ? '' : blueWhalePlateHtml(entry.id)}
     `;
+    if (reveal !== 'hidden') mountAuthoredOrganismPanel(this.entryHeader, entry);
 
     this.entryTabs.innerHTML = tabs
       .map(
@@ -356,6 +369,7 @@ export class ArchiveDexUI {
         await renderSourcesEvidencePanel(mount, entry.id, entry.scientificName).done;
       }
     }
+    return request === this.entryRequest;
   }
 
   render() {
